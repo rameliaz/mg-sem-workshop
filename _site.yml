@@ -1,0 +1,41 @@
+name: "mg-sem2019"
+author: "Rizqy Amelia Zein"
+output_dir: "docs"
+exclude: ["*.xls", "*.csv","*.R","/slides","*.pptx","*.jpg"]
+navbar:
+  title: "Multigroup Structural Equation Modeling Workshop"
+  left:
+    - text: "oleh Rizqy Amelia Zein"
+      href: https://rameliaz.github.io/
+    - icon: fa-github fa-lg
+      href: https://github.com/rameliaz/mg-sem-workshop
+  right:
+  - text: "Salindia"  
+    menu: 
+    - text: "Bagian1-HTML"
+      href: 
+    - text: "Bagian2-HTML"
+      href: 
+    - text: "Bagian1-pdf"
+      href: 
+    - text: "Bagian2-pdf"
+      href: 
+  - text: "Dataset"  
+    menu: 
+    - text: "Dataset1-Sekolah"
+      href: 
+    - text: "Dataset2-Organisasi"
+      href: 
+  - text: "Survei"  
+    menu: 
+    - text: "Evaluasi Workshop"
+      href: https://www.soscisurvey.de/invited-talk-feedback/
+    
+output:
+  html_document:
+    toc: true
+    toc_float: yes
+    toc_depth: 3
+    df_print: paged
+    theme: flatly
+    highlight: tango
