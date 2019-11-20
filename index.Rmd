@@ -38,7 +38,7 @@ Berikut adalah *outline* materi *workshop*:
 * *Correlation matrix*
 * *WARNING! Covariance/correlation matrix is not positive definite*
 * *Heywood* dan *ultra-Heywood case*
-* Asumi kausalitas dan limitasi
+* Asumsi kausalitas dan limitasi
 * Faktor-faktor yang mempengaruhi besarnya korelasi
 
 ##### **Model Jalur** (*Path Model*) dan Model Regresi
@@ -48,7 +48,6 @@ Berikut adalah *outline* materi *workshop*:
 * Koefisien jalur (*path coefficients*)
   * *X*, δ, *Y*, ε, ξ, η, λ, γ, β, φ, ζ
 * *Syntax* `lavaan` untuk spesifikasi model jalur
-* Menuliskan hasil analisis *path model* dalam laporan penelitian
 
 
 ### **Hari 2**
@@ -161,7 +160,7 @@ Berikut adalah *outline* materi *workshop*:
 
 ## Poster kegiatan
 
-<center><img src="docs/poster.jpg" style="width:70%;" class="fancyimage"/></center><br>
+<center><img src="libs/poster.jpg" style="width:70%;" class="fancyimage"/></center><br>
 
 
 
