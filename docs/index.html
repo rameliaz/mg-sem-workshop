@@ -250,6 +250,12 @@ $(document).ready(function () {
 }
 }
 
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
 
 .toc-content {
   padding-left: 30px;
@@ -359,8 +365,12 @@ div.tocify {
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
-    <li class="dropdown-header">Dataset1-Sekolah</li>
-    <li class="dropdown-header">Dataset2-Organisasi</li>
+    <li>
+      <a href="dataset-wave1.csv">Dataset Satu Kelompok</a>
+    </li>
+    <li>
+      <a href="dataset-mg.csv">Dataset Dua Kelompok</a>
+    </li>
   </ul>
 </li>
 <li class="dropdown">
@@ -388,76 +398,199 @@ div.tocify {
 </div>
 
 
+<p><br> </br></p>
 <div id="deskripsi" class="section level2">
 <h2>Deskripsi</h2>
 <p>Berikut adalah repositori yang digunakan untuk menyimpan semua materi untuk <strong>Workshop Multigroup Structural Equation Modeling (MG-SEM)</strong> yang diselenggarakan oleh Departemen Psikologi Kepribadian dan Sosial, Fakultas Psikologi Universitas Airlangga dalam rangka memperingati Dies Natalis Pendidikan Psikologi Universitas Airlangga yang ke-36.</p>
-<p>Materi berlisensi <a href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons"></i> 4.0</a>. <strong>Materi bebas digunakan kembali namun wajib menyebutkan sumber aslinya</strong>.</p>
-</div>
-<div id="waktu-dan-tempat" class="section level2">
-<h2>Waktu dan tempat</h2>
-<p><em>Workshop</em> diselenggarakan pada hari <strong>Jumat-Sabtu, 22-23 November 2019</strong>, pukul 09.00-16.00 WIB di Ruang Sidang I, Fakultas Psikologi Universitas Airlangga.</p>
-</div>
-<div id="outline-materi" class="section level2">
-<h2><em>Outline</em> materi</h2>
-<p>Berikut adalah <em>outline</em> materi <em>workshop</em>:</p>
+<p>Materi berlisensi <a href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons"></i> BY-SA 4.0</a>. <strong>Materi bebas digunakan kembali namun wajib menyebutkan sumber aslinya</strong>.</p>
+<p><br></br> ## Waktu dan tempat <em>Workshop</em> diselenggarakan pada hari <strong>Jumat-Sabtu, 22-23 November 2019</strong>, pukul 09.00-16.00 WIB di Ruang Sidang I, Fakultas Psikologi Universitas Airlangga.</p>
+<p><br></br> ## <em>Outline</em> materi</p>
+<p>Berikut adalah <em>outline</em> materi <em>workshop</em>: <br></br></p>
 <div id="hari-1" class="section level3">
 <h3><strong>Hari 1</strong></h3>
 <div id="jumat-22-november-2019" class="section level4">
 <h4>Jumat, 22 November 2019</h4>
+<div id="pengantar" class="section level5">
+<h5><strong>Pengantar</strong></h5>
+<ul>
+<li>Apa itu <em>structural equation modeling</em> (SEM)?</li>
+<li>Mengapa dan pada kondisi seperti apa SEM diperlukan?</li>
+<li>Beberapa pilihan perangkat lunak untuk mengeksekusi SEM</li>
+<li>Yang tidak dicakup dalam <em>workshop</em> serta keterbatasan JASP</li>
+</ul>
+</div>
+<div id="korelasi" class="section level5">
+<h5><strong>Korelasi</strong></h5>
+<ul>
+<li>Jenis-jenis koefisien korelasi</li>
+<li>Faktor-faktor yang membuat koefisien korelasi bervariasi</li>
+<li><em>Outliers</em></li>
+<li>Koreksi atenuasi dan <em>measurement error</em></li>
+<li>Bivariat, <em>part</em>, dan <em>partial correlation</em></li>
+<li>Variabel <em>supressor</em></li>
+<li>Korelasi vs kovarians</li>
+<li>Metrik variabel (<em>standardised</em> vs <em>unstandardised</em>)</li>
+<li><em>Variance-covariance matrix</em></li>
+<li><em>Correlation matrix</em></li>
+<li><em>WARNING! Covariance/correlation matrix is not positive definite</em></li>
+<li><em>Heywood</em> dan <em>ultra-Heywood case</em></li>
+<li>Asumi kausalitas dan limitasi</li>
+<li>Faktor-faktor yang mempengaruhi besarnya korelasi</li>
+</ul>
+</div>
+<div id="model-jalur-path-model-dan-model-regresi" class="section level5">
+<h5><strong>Model Jalur</strong> (<em>Path Model</em>) dan Model Regresi</h5>
+<ul>
+<li>Definisi <em>path model</em></li>
+<li>Representasi visual model jalur menggunakan diagram jalur (<em>path diagram</em>)</li>
+<li>Menggambarkan hubungan antar-variabel dengan menggunakan diagram jalur</li>
+<li>Koefisien jalur (<em>path coefficients</em>)
+<ul>
+<li><em>X</em>, δ, <em>Y</em>, ε, ξ, η, λ, γ, β, φ, ζ</li>
+</ul></li>
+<li><em>Syntax</em> <code>lavaan</code> untuk spesifikasi model jalur</li>
+<li>Menuliskan hasil analisis <em>path model</em> dalam laporan penelitian</li>
+</ul>
+<p><br></br> ### <strong>Hari 2</strong> #### Sabtu, 23 November 2019</p>
+</div>
+<div id="confirmatory-factor-analysis-cfa" class="section level5">
+<h5><strong>Confirmatory Factor Analysis (CFA)</strong></h5>
+<ul>
+<li>Definisi <em>factor analysis</em></li>
+<li>Jumlah faktor dan jumlah sampel</li>
+<li>Rotasi faktor dan skor faktor</li>
+<li><em>Exploratory</em> vs <em>confirmatory</em></li>
+<li>Kapan menggunakan CFA?</li>
+<li>Model pengukuran (paralel, <em>tau equivalence</em>, dan <em>congeneric</em>)</li>
+<li>Variabel indikator (reflektif vs formatif)</li>
+<li><em>Pattern matrix</em> dan <em>factor loadings</em></li>
+<li><em>Correlated error variances</em></li>
+<li><em>Measurement invariance</em></li>
+<li><em>Factor variance</em></li>
+<li>Metode estimasi</li>
+<li>Asesmen <em>model fit</em></li>
+<li>Menuliskan hasil analisis CFA dalam laporan penelitian</li>
+</ul>
+</div>
+<div id="dasar-dasar-structural-equation-modeling-sem" class="section level5">
+<h5><strong>Dasar-dasar Structural Equation Modeling (SEM)</strong></h5>
+<ul>
+<li>Pengantar SEM: model struktural vs model pengukuran (LVM)</li>
+<li>Tahapan <em>modeling</em> dengan menggunakan SEM
+<ul>
+<li>Spesifikasi model</li>
+<li>Identifikasi model</li>
+<li>Estimasi model</li>
+<li>Menguji model</li>
+<li>Memodifikasi model</li>
+</ul></li>
+<li>Jenis-jenis kriteria <em>model fit</em>
+<ul>
+<li><em>Model fit</em></li>
+<li><em>Model comparison</em></li>
+<li><em>Model parsimony</em></li>
+<li><em>Parameter fit</em></li>
+</ul></li>
+<li>Menguji hipotesis
+<ul>
+<li><em>Power</em></li>
+<li>Ukuran sampel</li>
+<li>Perbandingan model</li>
+<li><em>Effect size</em></li>
+</ul></li>
+<li>Parameter signifikansi</li>
+<li>Membandingkan antara pendekatan dua-langkah dengan empat-langkah <em>modeling</em> dengan SEM</li>
+<li>Menuliskan hasil analisis SEM dalam laporan penelitian</li>
+</ul>
+</div>
+<div id="multiple-group-sem-mg-sem" class="section level5">
+<h5><strong>Multiple-group SEM (MG-SEM)</strong></h5>
+<ul>
+<li>Kapan perlu menggunakan MG-SEM?</li>
+<li><em>Measurement invariance</em>
+<ul>
+<li><em>Configural invariance</em></li>
+<li><em>Weak invariance</em></li>
+<li><em>Strong invariance</em></li>
+<li><em>Strict invariance</em></li>
+<li><em>Homogeneity of latent variable variances</em></li>
+<li><em>Homogeneity of factor means</em></li>
+</ul></li>
+<li><em>Group equality constraints</em></li>
+<li>Menuliskan hasil analisis MG-SEM dalam laporan penelitian</li>
+</ul>
+<p><br></br> ## Referensi</p>
+<ul>
+<li>Baujean, A.A. (2014). <em>Latent Variable Modeling Using R: A step-by-step guide</em>. New York: Routledge.</li>
+<li>Schumacker, R.E. &amp; Lomax, R.G. (2016). <em>A Beginner’s Guide to Structural Equation Modeling (4th edition)</em>. New York: Routledge.</li>
+<li>Van De Schoot, R., Schmidt, P., De Beuckelaer, A., Lek, K., &amp; Zondervan-Zwijnenburg, M. (2015). <a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2015.01064/full">Measurement invariance</a>. Frontiers in psychology, 6, 1064.</li>
+</ul>
+<p><br></br> ## Contoh penelitian dengan <code>MG-SEM</code></p>
+<ul>
+<li>Rodriguez, V. J., Radusky, P. D., Kumar, M., Nemeroff, C. B., &amp; Jones, D. (2018). <a href="https://www.sciencedirect.com/science/article/abs/pii/S2468171718300085">Measurement invariance of the Childhood Trauma Questionnaire by gender, poverty level, and HIV status</a>. Personalized Medicine in Psychiatry, 11, 16-22.</li>
+<li>Liu, Y., Millsap, R. E., West, S. G., Tein, J. Y., Tanaka, R., &amp; Grimm, K. J. (2017). <a href="https://psycnet.apa.org/record/2016-25480-001">Testing measurement invariance in longitudinal data with ordered-categorical measures</a>. Psychological methods, 22(3), 486.</li>
+<li>Bowden, S. C., Saklofske, D. H., Van de Vijver, F. J. R., Sudarshan, N. J., &amp; Eysenck, S. B. G. (2016). <a href="https://www.sciencedirect.com/science/article/abs/pii/S0191886916302835">Cross-cultural measurement invariance of the Eysenck Personality Questionnaire across 33 countries</a>. Personality and Individual Differences, 103, 53-60.</li>
+<li>Bieda, A., Hirschfeld, G., Schönfeld, P., Brailovskaia, J., Zhang, X. C., &amp; Margraf, J. (2017). <a href="http://www.kli.psy.ruhr-uni-bochum.de/klipsy/public/margraf%20Journals%20with%20Peer-Review/Bieda%20et%20al%202016%20Universal%20happiness.pdf">Universal happiness? Cross-cultural measurement invariance of scales assessing positive mental health</a>. Psychological assessment, 29(4), 408.</li>
+</ul>
+<p><br></br> ## Sumber belajar lainnya</p>
+<ul>
+<li><a href="https://learnstatswithjasp.com/">Learning Statistics with JASP</a></li>
+<li><a href="https://osf.io/t56kg/">Undergraduate Statistics with JASP</a></li>
+<li><a href="http://sachaepskamp.com/SEM2019">Materi workshop SEM: Sacha Epskamp</a></li>
+</ul>
+<p><br></br> ## Sebelum mulai workshop</p>
+<ul>
+<li>Sebaiknya semua peserta sudah memasang <a href="https://jasp-stats.org/download/">JASP versi 0.11.1</a> pada perangkatnya masing-masing, untuk menghindari terlalu banyaknya waktu untuk menyelesaikan <em>troubleshooting</em> instalasi ketika <em>workshop</em>.</li>
+<li>Peserta sangat disarankan untuk menonton video tutorial JASP di bawah ini sebelum <em>workshop</em> untuk belajar menavigasikan menu dan fitur yang ada dalam JASP (total durasi kurang lebih hanya 5 menit).</li>
+</ul>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HxqB7CUA-XI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</center>
+<p><br></br> ## Video rekaman</p>
+</div>
+</div>
+</div>
+<div id="hari-1-1" class="section level3">
+<h3>Hari 1</h3>
+<div id="sesi-1-09.00-11.30" class="section level4">
+<h4>Sesi 1 (09.00-11.30)</h4>
+</div>
+<div id="sesi-2-13.00-16.00" class="section level4">
+<h4>Sesi 2 (13.00-16.00)</h4>
 </div>
 </div>
 <div id="hari-2" class="section level3">
-<h3><strong>Hari 2</strong></h3>
-<div id="sabtu-23-november-2019" class="section level4">
-<h4>Sabtu, 23 November 2019</h4>
+<h3>Hari 2</h3>
+<div id="sesi-1-09.00-12.00" class="section level4">
+<h4>Sesi 1 (09.00-12.00)</h4>
+</div>
+<div id="sesi-2-13.00-16.00-1" class="section level4">
+<h4>Sesi 2 (13.00-16.00)</h4>
+<p><br></br> ## Pembaruan dan koreksi</p>
+<p><br></br> ## Poster kegiatan</br></p>
+<center>
+<img src="docs/poster.jpg" style="width:70%;" class="fancyimage"/>
+</center>
+<p><br></p>
+<p><br></br> ## Jawaban Latihan</p>
 </div>
 </div>
-</div>
-<div id="referensi" class="section level2">
-<h2>Referensi</h2>
-</div>
-<div id="contoh-penelitian-dengan-multigroup-sem" class="section level2">
-<h2>Contoh penelitian dengan <code>multigroup SEM</code></h2>
-</div>
-<div id="sumber-belajar-lainnya" class="section level2">
-<h2>Sumber belajar lainnya</h2>
-<ul>
-<li><a href="">Learning Statistics with JASP</a></li>
-</ul>
-</div>
-<div id="sebelum-mulai-workshop" class="section level2">
-<h2>Sebelum mulai workshop</h2>
-<ul>
-<li>Sebaiknya semua peserta sudah memasang JASP pada perangkatnya masing-masing, untuk menghindari terlalu banyaknya waktu untuk menyelesaikan <em>troubleshooting</em> instalasi ketika <em>workshop</em>.</li>
-<li>Peserta sangat disarankan untuk menonton <a href="">video tutorial JASP</a> sebelum <em>workshop</em> untuk belajar menavigasikan menu dan fitur yang ada dalam jamovi. Cukup hanya dengan menonton yang bagian <em>Welcome</em>, <em>Installing jamovi</em>, dan <em>Navigating jamovi</em> (total durasi kurang lebih hanya 7 menit).</li>
-</ul>
-</div>
-<div id="video-rekaman" class="section level2">
-<h2>Video rekaman</h2>
-<div id="sesi-1-08.00-12.00" class="section level3">
-<h3>Sesi 1 (08.00-12.00)</h3>
-<p><a href="https://www.youtube.com/WwlILOtniBw">Klik disini untuk menonton video.</a></p>
-</div>
-<div id="sesi-2-13.00-16.00" class="section level3">
-<h3>Sesi 2 (13.00-16.00)</h3>
-<p><a href="https://www.youtube.com/N2O48MoMddQ">Klik disini untuk menonton video.</a></p>
-</div>
-</div>
-<div id="pembaruan-dan-koreksi" class="section level2">
-<h2>Pembaruan dan koreksi</h2>
-</div>
-<div id="poster-kegiatan" class="section level2">
-<h2>Poster kegiatan</h2>
-</div>
-<div id="jawaban-latihan" class="section level2">
-<h2>Jawaban Latihan</h2>
 <div id="latihan-mandiri-1" class="section level3">
 <h3>Latihan Mandiri (1):</h3>
 <p><a href="">Klik disini untuk melihat jawaban</a> saya atas latihan mandiri (1).</p>
 </div>
 <div id="latihan-mandiri-2" class="section level3">
 <h3>Latihan Mandiri (2):</h3>
-<p><a href="">Klik disini untuk melihat jawaban</a> saya atas latihan mandiri (1).</p>
+<p><a href="">Klik disini untuk melihat jawaban</a> saya atas latihan mandiri (2).</p>
+</div>
+<div id="latihan-mandiri-3" class="section level3">
+<h3>Latihan Mandiri (3):</h3>
+<p><a href="">Klik disini untuk melihat jawaban</a> saya atas latihan mandiri (3).</p>
+</div>
+<div id="latihan-mandiri-4" class="section level3">
+<h3>Latihan Mandiri (4):</h3>
+<p><a href="">Klik disini untuk melihat jawaban</a> saya atas latihan mandiri (4).</p>
 </div>
 </div>
 

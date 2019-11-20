@@ -1,0 +1,156 @@
+---
+title: "Workshop MG-SEM Bagian 1"
+subtitle: "Dies Natalis 36th"
+author: "Rizqy Amelia Zein"
+date: "2019/09/10 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js
+    css: ["default", "rladies", "rladies-fonts"]
+    lib_dir: libs
+    seal: false
+    nature:
+      highlightStyle: github
+      ratio: '16:9'
+      highlightLines: true
+      countIncrementalSlides: false
+vignette: >
+  %\VignetteIndexEntry{libs}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+class: inverse, middle, title-slide, spaced
+
+```{r setup, include=FALSE}
+library(fontawesome)
+library(tidyverse)
+library(emo)
+options(htmltools.dir.version = FALSE, width=120)
+```
+
+class: title-slide, spaced
+
+<img src="libs/unair.png" style="width:15%;" class="fancyimage"/> <img src="libs/STUA.png" style="width:23%;" class="fancyimage"/> <img src="libs/ina-logo.jpg" style="width:7%;" class="fancyimage"/> <img src="libs/igdore.png" style="width:23%;" class="fancyimage"/>
+
+# Multigroup Structural Equation Modeling (SEM)
+## Menggunakan `JASP` (GAMLj): Bagian 1
+<br>
+### <b>Rizqy Amelia Zein</b>
+* Dosen, [Fakultas Psikologi, Universitas Airlangga](https://psikologi.unair.ac.id)
+* Anggota, [#SainsTerbuka Airlangga](https://sainsterbukaua.github.io/) `r fa("universal-access")`
+* Relawan, [INA-Rxiv](https://inarxiv.id) 
+* Researcher-in-training, [Institute for Globally Distributed Open Research and Education (IGDORE)](https://igdore.org/)
+
+---
+
+class: center, middle
+
+# Menghubungi saya?  
+
+`r fa("paper-plane")` <a href="mailto:amelia.zein@psikologi.unair.ac.id"></i>&nbsp; amelia.zein@psikologi.unair.ac.id</a>
+`r fa("twitter")` [@ameliazein](https://twitter.com/ameliazein)
+`r fa("github")` [@rameliaz](https://github.com/rameliaz)
+`r fa("desktop")` https://rameliaz.github.io
+
+
+Materi dalam paparan ini berlisensi `r fa("creative-commons")` 4.0 dan tersedia di laman web pribadi saya **(https://rameliaz.github.io/mlm-lme-workshop/)**. 
+Kode tersedia secara terbuka di [repositori](https://github.com/rameliaz/mlm-lme-workshop) `r fa("github")` saya.
+
+---
+
+class: inverse, middle
+
+# *Outline* Sesi 1
+
+.pull-left[
+
+## Sebelum istirahat (08.00-12.00)
+
+* Berlatih menginspeksi data secara visual dengan *scatterplot*
+* Model regresi linier (*ordinary least square*)
+* Menarik garis regresi (*fitted regression lines*)
+* Varians yang dapat dan yang tidak dapat dijelaskan oleh model (*R^2*)
+* Menguji hipotesis
+* Mengecek kecocokan model dengan data (*model fit*)
+* Mengecek asumsi
+  - Distribusi (normalitas) residual
+  - Homoskedastisitas
+  - Multikolinearitas
+* Mendeteksi *outliers*
+* Menguji *interaction effects* dan *model change*
+* Menulis hasil analisis regresi linier dengan *interaction terms* dalam manuskrip
+]
+
+.pull-right[
+
+![](https://media.giphy.com/media/31lPv5L3aIvTi/giphy.gif)
+
+]
+
+---
+
+class: middle
+
+# *Outline* Sesi 2 (a)
+
+.pull-left[
+
+## Setelah istirahat (13.00-16.00)
+
+* Struktur data berjenjang/bersarang (*hierarchical/nested data*)
+* *Within* dan *between group variance*
+* Pengantar *linear mixed-effect* (`lme`)
+* *Intra-class correlation* dan *likelihood ratio test* (LRT)
+* Membandingkan garis regresi antar kelompok dengan `lme`
+* `lme` dengan prediktor level 1 (*random coefficients model*)
+  - Mengidentifikasi *intercept* (konstanta) yang berbeda antar kelompok (*random intercept model*)
+  - Mengidentifikasi *slopes* (gradien/kemiringan garis) yang berbeda antar kelompok (*random slopes model*)
+
+]
+
+.pull-right[
+
+![](https://media.giphy.com/media/rVbAzUUSUC6dO/giphy.gif)
+
+]
+
+
+---
+
+class: middle
+
+# *Outline* Sesi 2 (b)
+
+.pull-left[
+
+## Setelah istirahat (13.00-16.00)
+
+* *Explained variances* ([Nakagawa & Schielzeth, 2012](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/j.2041-210x.2012.00261.x))
+  - *Marginal R^2*
+  - *Conditional R^2*
+* *Contextual effect* dan *partitioning/centering*
+* Melaporkan analisis dengan `lme` dalam manuskrip
+
+]
+
+.pull-right[
+
+![](https://media.giphy.com/media/WUq1cg9K7uzHa/giphy.gif)
+
+]
+
+---
+
+
+---
+
+class: center, middle
+
+# Terima kasih banyak! `r emo::ji("wink")`
+
+![](https://media.giphy.com/media/hrBSJ2So6iTo4/giphy.gif)
+
+Paparan disusun dengan menggunakan `r fa("r-project")` *package* [**xaringan**](https://github.com/yihui/xaringan) dengan *template* dan *fonts* dari `R-Ladies`.
+
+*Chakra* dibuat dengan [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), dan [R Markdown](https://rmarkdown.rstudio.com).

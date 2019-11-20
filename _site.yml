@@ -1,7 +1,7 @@
 name: "mg-sem2019"
 author: "Rizqy Amelia Zein"
 output_dir: "docs"
-exclude: ["*.xls", "*.csv","*.R","/slides","*.pptx","*.jpg"]
+exclude: ["*.xls","*.R","/slides","*.pptx","*.jpg"]
 navbar:
   title: "Multigroup Structural Equation Modeling Workshop"
   left:
@@ -22,10 +22,10 @@ navbar:
       href: 
   - text: "Dataset"  
     menu: 
-    - text: "Dataset1-Sekolah"
-      href: 
-    - text: "Dataset2-Organisasi"
-      href: 
+    - text: "Dataset Satu Kelompok"
+      href: dataset-wave1.csv
+    - text: "Dataset Dua Kelompok"
+      href: dataset-mg.csv
   - text: "Survei"  
     menu: 
     - text: "Evaluasi Workshop"

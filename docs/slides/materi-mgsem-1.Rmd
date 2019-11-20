@@ -34,7 +34,7 @@ class: title-slide, spaced
 <img src="libs/unair.png" style="width:15%;" class="fancyimage"/> <img src="libs/STUA.png" style="width:23%;" class="fancyimage"/> <img src="libs/ina-logo.jpg" style="width:7%;" class="fancyimage"/> <img src="libs/igdore.png" style="width:23%;" class="fancyimage"/>
 
 # Multigroup Structural Equation Modeling (SEM)
-## Menggunakan `JASP` (GAMLj): Bagian 1
+## Menggunakan `JASP`: Bagian 1
 <br>
 ### <b>Rizqy Amelia Zein</b>
 * Dosen, [Fakultas Psikologi, Universitas Airlangga](https://psikologi.unair.ac.id)
@@ -61,25 +61,18 @@ Kode tersedia secara terbuka di [repositori](https://github.com/rameliaz/mlm-lme
 
 class: inverse, middle
 
-# *Outline* Sesi 1
+# *Outline* Hari 1: Jumat, 22 November 2019
 
 .pull-left[
 
-## Sebelum istirahat (08.00-12.00)
+## Sebelum istirahat (09.00-11.30)
 
-* Berlatih menginspeksi data secara visual dengan *scatterplot*
-* Model regresi linier (*ordinary least square*)
-* Menarik garis regresi (*fitted regression lines*)
-* Varians yang dapat dan yang tidak dapat dijelaskan oleh model (*R^2*)
-* Menguji hipotesis
-* Mengecek kecocokan model dengan data (*model fit*)
-* Mengecek asumsi
-  - Distribusi (normalitas) residual
-  - Homoskedastisitas
-  - Multikolinearitas
-* Mendeteksi *outliers*
-* Menguji *interaction effects* dan *model change*
-* Menulis hasil analisis regresi linier dengan *interaction terms* dalam manuskrip
+**Pengantar**
+* Apa itu *structural equation modeling* (SEM)?
+* Mengapa dan pada kondisi seperti apa SEM diperlukan?
+* Beberapa pilihan perangkat lunak untuk mengeksekusi SEM
+* Yang tidak dicakup dalam *workshop* serta keterbatasan JASP
+
 ]
 
 .pull-right[
@@ -92,20 +85,54 @@ class: inverse, middle
 
 class: middle
 
-# *Outline* Sesi 2 (a)
+# *Outline* Hari 1: Jumat, 22 November 2019
+
+.pull-left[
+
+## Sebelum istirahat (09.00-11.30)
+
+**Korelasi**
+* Jenis-jenis koefisien korelasi
+* Faktor-faktor yang membuat koefisien korelasi bervariasi
+* *Outliers*
+* Koreksi atenuasi dan *measurement error*
+* Bivariat, *part*, dan *partial correlation*
+* Variabel *supressor*
+* Korelasi vs kovarians
+* Metrik variabel (*standardised* vs *unstandardised*)
+* *Variance-covariance matrix*
+* *Correlation matrix*
+* *WARNING! Covariance/correlation matrix is not positive definite*
+* *Heywood* dan *ultra-Heywood case*
+* Asumi kausalitas dan limitasi
+* Faktor-faktor yang mempengaruhi besarnya korelasi
+
+]
+
+.pull-right[
+
+![](https://media.giphy.com/media/31lPv5L3aIvTi/giphy.gif)
+
+]
+
+---
+
+class: middle
+
+# *Outline* Hari 1: Jumat, 22 November 2019
 
 .pull-left[
 
 ## Setelah istirahat (13.00-16.00)
 
-* Struktur data berjenjang/bersarang (*hierarchical/nested data*)
-* *Within* dan *between group variance*
-* Pengantar *linear mixed-effect* (`lme`)
-* *Intra-class correlation* dan *likelihood ratio test* (LRT)
-* Membandingkan garis regresi antar kelompok dengan `lme`
-* `lme` dengan prediktor level 1 (*random coefficients model*)
-  - Mengidentifikasi *intercept* (konstanta) yang berbeda antar kelompok (*random intercept model*)
-  - Mengidentifikasi *slopes* (gradien/kemiringan garis) yang berbeda antar kelompok (*random slopes model*)
+**Model Jalur** (*Path Model*) dan Model Regresi
+* Definisi *path model*
+* Representasi visual model jalur menggunakan diagram jalur (*path diagram*)
+* Menggambarkan hubungan antar-variabel dengan menggunakan diagram jalur
+* Koefisien jalur (*path coefficients*)
+  - *X*,δ,*Y*,ε,ξ,η,λ,γ,β,φ,ζ
+* *Syntax* `lavaan` untuk spesifikasi model jalur
+* Membuat diagram *path model* dan melaporkannya dalam laporan penelitian
 
 ]
 
@@ -118,19 +145,29 @@ class: middle
 
 ---
 
-class: middle
+class: middle, inverse
 
-# *Outline* Sesi 2 (b)
+# *Outline* Hari 2: Sabtu, 23 November 2019
 
 .pull-left[
 
-## Setelah istirahat (13.00-16.00)
+## Sebelum istirahat (09.00-12.00)
 
-* *Explained variances* ([Nakagawa & Schielzeth, 2012](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/j.2041-210x.2012.00261.x))
-  - *Marginal R^2*
-  - *Conditional R^2*
-* *Contextual effect* dan *partitioning/centering*
-* Melaporkan analisis dengan `lme` dalam manuskrip
+**Confirmatory Factor Analysis (CFA)**
+* Definisi *factor analysis*
+* Jumlah faktor dan jumlah sampel
+* Rotasi faktor dan skor faktor
+* *Exploratory* vs *confirmatory*
+* Kapan menggunakan CFA?
+* Model pengukuran (paralel, *tau equivalence*, dan *congeneric*)
+* Variabel indikator (reflektif vs formatif)
+* *Pattern matrix* dan *factor loadings*
+* *Correlated error variances*
+* *Measurement invariance*
+* *Factor variance*
+* Metode estimasi
+* Asesmen *model fit*
+* Menuliskan hasil analisis CFA dalam laporan penelitian
 
 ]
 
@@ -141,6 +178,137 @@ class: middle
 ]
 
 ---
+
+class: middle
+
+# *Outline* Hari 2: Sabtu, 23 November 2019
+
+.pull-left[
+
+## Setelah istirahat (13.00-16.00)
+
+**Multiple-group SEM (MG-SEM)** 
+* Kapan perlu menggunakan MG-SEM?
+* *Measurement invariance*
+  * *Configural invariance*
+  * *Weak invariance*
+  * *Strong invariance*
+  * *Strict invariance*
+  * *Homogeneity of latent variable variances*
+  * *Homogeneity of factor means*
+* *Group equality constraints*
+* Menuliskan hasil analisis MG-SEM dalam laporan penelitian
+
+]
+
+.pull-right[
+
+![](https://media.giphy.com/media/rVbAzUUSUC6dO/giphy.gif)
+
+]
+
+---
+
+class: inverse, center, middle
+
+# Apa itu *structural equation modeling*?
+# Apa ekspektasi peserta *workshop*?
+# Pada saat seperti apa SEM diperlukan?
+# Bagaimana pengalaman sebelumnya?
+
+[insert a gif here]
+
+
+---
+
+# SEM adalah...
+
+* Memuat **hubungan** antara **observed** dan **latent variables** dalam berbagai bentuk model teoritis. SEM memungkinkan peneliti untuk melakukan **pengujian hipotesis** yang berkaitan dengan model tersebut.
+
+* Model SEM mengasumsikan (hipotesis) bahwa seperangkat variabel (*observed*) mendefinisikan sebuah konstruk **laten**, dan menggambarkan bagaimana hubungan antara konstruk-konnstruk laten ini.
+
+* Tujuan SEM adalah untuk mengetahui apakah model teoritik yang diuji peneliti **didukung oleh data**
+  - Apabila data memberikan **bukti yang mendukung** bahwa hubungan antar konstruk/variabel terjadi, maka **mungkin** hubungan tersebut memang benar-benar ada di populasi.
+  - Apabila data **tidak memberikan bukti yang mendukung** korelasi yang dihipotesiskan, maka peneliti dapat melakukan **re-spesifikasi model** dan menguji kembali model yang sudah dire-spesifikasi tersebut, atau **menyusun ulang model yang baru** untuk kemudian diuji kembali.
+  
+---
+
+# Jenis-jenis variabel
+
+.pull-left[
+
+* Variabel *observed*
+  - Variabel yang dapat diukur langsung dengan berbagai cara/strategi.
+  - Dalam pengukuran Psikologi, *item* pernyataan (dalam skala Psikologi - bisa dalam bentuk skala *Likert* atau yang lain) adalah variabel *observed*.
+  - Variabel *observed* dapat merefleksikan variabel *latent* atau bisa menjadi **kombinasi linear** atas variabel *observed* yang lain (*index*).
+
+* Variabel *latent*
+  - Konstruk/variabel yang **tidak dapat diukur secara langsung**.
+  - Oleh karena itu, membutuhkan variabel *observed* untuk mengukurnya.
+  - Variabel *latent* dapat berperan sebagai variabel *independent* atau *dependent*.
+
+* Contohnya
+  - Seorang peneliti ingin mengukur kepribadian seorang responden dengan menggunakan pendekatan *Five-Factor Model* (Big 5), maka aitem dalam skala tersebut adalah *observed variable*, sedangkan dimensi dari Big 5 (*neuroticism*, *agreeableness*, *conscientiousness*, dan *extraversion*) adalah *latent variable*.
+
+]
+
+.pull-right[
+
+put a gif here
+
+]
+
+---
+
+class: inverse
+
+# Contoh
+
+.pull-left[
+
+* Seorang peneliti Psikologi Pendidikan ingin tahu apakah kepercayaan orang tua bahwa anaknya dapat berkembang secara natural (*trust in organismic development* - *independent latent variable*) berkorelasi dengan tingkat kemandirian anak (*dependent latent variable*).
+
+* Dalam konteks Psikologi Klinis, seorang pakar *public mental health* ingin tahu apakah status sosio-ekonomi (*observed independent variable*) dapat berdampak pada kondisi kesehatan mental individu (*latent dependent variable*).
+
+* Dalam sebuah penelitian Psikologi Sosial, peneliti ingin tahu apakah kepribadian seseorang (*independent latent variable*) dapat menjelaskan mengapa orang merespon pelanggaran moral secara berbeda (*dependent latent variable*).
+
+]
+
+.pull-right[
+
+put a gif here
+
+]
+
+---
+
+# Model SEM
+
+.pull-left[
+
+* Model regresi (linear/OLS)
+  - Menguji hubungan antar variabel *observed*
+
+* Model jalur (*path model*)
+  - Menguji hubungan antara variabel *observed* dan *latent*
+
+* Model pengukuran (*measurement model*/*confirmatory factor analysis*)
+  - Menguji apakah aitem-aitem dari skala Psikologi (yang mengukur konstruk laten tertentu) memang betul-betul mengukur konstruk tersebut -> validitas konstruk.
+
+* SEM biasanya mengandung setidaknya dua model, yaitu model pengukuran dan model struktural (regresi/jalur).
+
+]
+
+
+.pull-right[
+
+put a gif here
+
+]
+
+---
+
+# Mengapa SEM 
 
 
 ---
