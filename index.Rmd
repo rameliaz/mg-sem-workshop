@@ -6,15 +6,15 @@ Berikut adalah repositori yang digunakan untuk menyimpan semua materi untuk **Wo
 
 Materi berlisensi [<i class="fab fa-creative-commons"></i> BY-SA 4.0](https://creativecommons.org/licenses/by/4.0/). **Materi bebas digunakan kembali namun wajib menyebutkan sumber aslinya**.
 
-<br></br>
+
 ## Waktu dan tempat
 *Workshop* diselenggarakan pada hari **Jumat-Sabtu, 22-23 November 2019**, pukul 09.00-16.00 WIB di Ruang Sidang I, Fakultas Psikologi Universitas Airlangga.
 
-<br></br>
+
 ## *Outline* materi
 
 Berikut adalah *outline* materi *workshop*: 
-<br></br>
+
 
 ### **Hari 1**
 #### Jumat, 22 November 2019
@@ -50,7 +50,7 @@ Berikut adalah *outline* materi *workshop*:
 * *Syntax* `lavaan` untuk spesifikasi model jalur
 * Menuliskan hasil analisis *path model* dalam laporan penelitian
 
-<br></br>
+
 ### **Hari 2**
 #### Sabtu, 23 November 2019
 
@@ -106,14 +106,14 @@ Berikut adalah *outline* materi *workshop*:
 * *Group equality constraints*
 * Menuliskan hasil analisis MG-SEM dalam laporan penelitian
 
-<br></br>
+
 ## Referensi
 
 * Baujean, A.A. (2014). *Latent Variable Modeling Using R: A step-by-step guide*. New York: Routledge.
 * Schumacker, R.E. & Lomax, R.G. (2016). *A Beginner's Guide to Structural Equation Modeling (4th edition)*. New York: Routledge.
 * Van De Schoot, R., Schmidt, P., De Beuckelaer, A., Lek, K., & Zondervan-Zwijnenburg, M. (2015). [Measurement invariance](https://www.frontiersin.org/articles/10.3389/fpsyg.2015.01064/full). Frontiers in psychology, 6, 1064.
 
-<br></br>
+
 ## Contoh penelitian dengan `MG-SEM`
 
 * Rodriguez, V. J., Radusky, P. D., Kumar, M., Nemeroff, C. B., & Jones, D. (2018). [Measurement invariance of the Childhood Trauma Questionnaire by gender, poverty level, and HIV status](https://www.sciencedirect.com/science/article/abs/pii/S2468171718300085). Personalized Medicine in Psychiatry, 11, 16-22.
@@ -121,14 +121,14 @@ Berikut adalah *outline* materi *workshop*:
 * Bowden, S. C., Saklofske, D. H., Van de Vijver, F. J. R., Sudarshan, N. J., & Eysenck, S. B. G. (2016). [Cross-cultural measurement invariance of the Eysenck Personality Questionnaire across 33 countries](https://www.sciencedirect.com/science/article/abs/pii/S0191886916302835). Personality and Individual Differences, 103, 53-60.
 * Bieda, A., Hirschfeld, G., Schönfeld, P., Brailovskaia, J., Zhang, X. C., & Margraf, J. (2017). [Universal happiness? Cross-cultural measurement invariance of scales assessing positive mental health](http://www.kli.psy.ruhr-uni-bochum.de/klipsy/public/margraf%20Journals%20with%20Peer-Review/Bieda%20et%20al%202016%20Universal%20happiness.pdf). Psychological assessment, 29(4), 408.
 
-<br></br>
+
 ## Sumber belajar lainnya
 
 * [Learning Statistics with JASP](https://learnstatswithjasp.com/)
 * [Undergraduate Statistics with JASP](https://osf.io/t56kg/)
 * [Materi workshop SEM: Sacha Epskamp](http://sachaepskamp.com/SEM2019)
 
-<br></br>
+
 ## Sebelum mulai workshop
 
 * Sebaiknya semua peserta sudah memasang [JASP versi 0.11.1](https://jasp-stats.org/download/) pada perangkatnya masing-masing, untuk menghindari terlalu banyaknya waktu untuk menyelesaikan *troubleshooting* instalasi ketika *workshop*.
@@ -136,7 +136,8 @@ Berikut adalah *outline* materi *workshop*:
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/HxqB7CUA-XI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
-<br></br>
+
+
 ## Video rekaman
 
 ### Hari 1
@@ -155,17 +156,15 @@ Berikut adalah *outline* materi *workshop*:
 #### Sesi 2 (13.00-16.00)
 
 
-<br></br>
 ## Pembaruan dan koreksi
 
 
-<br></br>
-## Poster kegiatan</br>
+## Poster kegiatan
 
 <center><img src="docs/poster.jpg" style="width:70%;" class="fancyimage"/></center><br>
 
 
-<br></br>
+
 ## Jawaban Latihan
 
 
