@@ -13,7 +13,7 @@ navbar:
   - text: "Salindia"  
     menu: 
     - text: "Bagian1-HTML"
-      href: 
+      href: slides/materi-mgsem-1.html
     - text: "Bagian2-HTML"
       href: 
     - text: "Bagian1-pdf"
@@ -22,8 +22,10 @@ navbar:
       href: 
   - text: "Dataset"  
     menu: 
-    - text: "Dataset Korelasi"
+    - text: "Dataset Contoh Korelasi"
       href: corr.jasp
+    - text: "Dataset Latihan Korelasi"
+      href: latihancorr.csv
     - text: "Dataset Satu Kelompok"
       href: dataset-wave1.csv
     - text: "Dataset Dua Kelompok"

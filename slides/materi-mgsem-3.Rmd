@@ -1,5 +1,5 @@
 ---
-title: "Workshop MG-SEM Bagian 2"
+title: "Workshop MG-SEM Bagian 3"
 subtitle: "Dies Natalis 36th"
 author: "Rizqy Amelia Zein"
 date: "2019/09/10 (updated: `r Sys.Date()`)"
@@ -34,7 +34,7 @@ class: title-slide, spaced
 <img src="libs/unair.png" style="width:15%;" class="fancyimage"/> <img src="libs/STUA.png" style="width:23%;" class="fancyimage"/> <img src="libs/ina-logo.jpg" style="width:7%;" class="fancyimage"/> <img src="libs/igdore.png" style="width:23%;" class="fancyimage"/>
 
 # Multigroup Structural Equation Modeling (SEM)
-## Menggunakan `JASP`: Bagian 2 - Korelasi
+## Menggunakan `JASP`: Bagian 3 - Model Jalur (*Path Model*) dan Model Regresi
 <br>
 ### <b>Rizqy Amelia Zein</b>
 * Dosen, [Fakultas Psikologi, Universitas Airlangga](https://psikologi.unair.ac.id)
@@ -44,7 +44,54 @@ class: title-slide, spaced
 
 ---
 
+class: center, middle, inverse
 
+![](https://media.giphy.com/media/MFCkrYZoqatqlJcQyh/giphy.gif)
+
+### [Klik disini dan cari tahu apa yang terjadi..](https://kahoot.it/) `r emo::ji("love")`
+
+---
+
+class: inverse
+
+# Analisis jalur
+
+* *Path model* merupakan kelanjutan dari model regresi karena terdiri dari **beberapa model regresi** sekaligus dapat digunakan untuk menguji *direct*, *indirect*, dan *correlated effects*.
+
+* *Path model* disusun secara visual dengan aturan tertentu (konsensus)
+  - Garis satu arah menggambarkan *direct effects*, yang merefleksikan *keterkaitan langsung* antara satu variabel dengan variabel lainnya. Asumsinya, **tidak ada variabel lain diluar model** yang berkorelasi dengan variabel tersebut.
+  - Garis dua arah menggambarkan *covariance*/korelasi, yang mengimplikasikan bahwa keterkaitan antar-variabel masih mungkin ditentukan oleh **variabel lain yang tidak ada di dalam model**.
+  - Garis *error terms* yang menunjukkan varians *observed variable* yang menjelaskan **variabel lain yang tidak dapat dijelaskan/di luar model**, yang juga mewakili **measurement error**.
+
+---
+
+# Diagram jalur 
+
+<center><img src="libs/path-diagram.png" style="width:30%;" class="fancyimage"/></center><br>
+
+---
+
+# Korelasi = kausalitas?
+
+.pull-left[
+
+* Analisis jalur sebenarnya adalah **bentuk yang lebih *sophisticated*** dari korelasi, dan
+
+### **Correlation does not imply causation**
+
+Yang harus dipenuhi sebagai bukti kausalitas:
+* Ada **urutan waktu** (*temporal order*) `r fa("arrow-circle-right")` maka desain penelitian *panel*/*longitudinal*/*time series* harus digunakan
+* Adanya **korelasi** antara kedua variabel
+* Peneliti harus melakukan **kontrol** atas variabel lain yang mungkin menjelaskan korelasi tsb (melakukan manipulasi, mengestimasi *part* atau *partial correlation*)
+* Peneliti melakukan **manipulasi** pada variabel X, yang menyebabkan perubahan pada variabel Y
+
+]
+
+.pull-right[
+
+![](https://media.giphy.com/media/QWvcBw9qXs9wiVypPm/giphy.gif)
+
+]
 
 ---
 
