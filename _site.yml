@@ -10,15 +10,33 @@ navbar:
     - icon: fa-github fa-lg
       href: https://github.com/rameliaz/mg-sem-workshop
   right:
-  - text: "Salindia"  
+  - text: "Salindia (HTML)"  
     menu: 
-    - text: "Bagian1-HTML"
+    - text: "Bagian 1"
       href: slides/materi-mgsem-1.html
-    - text: "Bagian2-HTML"
+    - text: "Bagian 2"
+      href: slides/materi-mgsem-2.html
+    - text: "Bagian 3"
+      href: slides/materi-mgsem-3.html
+    - text: "Bagian 4"
       href: 
-    - text: "Bagian1-pdf"
+    - text: "Bagian 5"
       href: 
-    - text: "Bagian2-pdf"
+    - text: "Bagian 6"
+      href: 
+  - text: "Salindia (PDF)"  
+    menu: 
+    - text: "Bagian 1"
+      href: 
+    - text: "Bagian 2"
+      href: 
+    - text: "Bagian 3"
+      href: 
+    - text: "Bagian 4"
+      href: 
+    - text: "Bagian 5"
+      href: 
+    - text: "Bagian 6"
       href: 
   - text: "Dataset"  
     menu: 

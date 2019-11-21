@@ -37,8 +37,8 @@ Berikut adalah *outline* materi *workshop*:
 
 ##### **Model Jalur** (*Path Model*) dan Model Regresi
 * Definisi *path model*
-* Koefisien jalur (*path coefficients*)
-  * *X*, δ (delta), *Y*, ε (epsilon), ξ (ksi), η (eta), λ (lambda), γ (gamma), β (beta), φ (phi), ζ (zeta)
+* Nama variabel dan koefisien jalur (*path coefficients*)
+  * δ (delta), ε (epsilon), ξ (ksi), η (eta), λ (lambda), γ (gamma), β (beta), φ (phi), ζ (zeta)
 * Representasi visual model jalur menggunakan diagram jalur (*path diagram*)
 * Menggambarkan hubungan antar-variabel dengan menggunakan diagram jalur
 * *Syntax* `lavaan` untuk spesifikasi model jalur

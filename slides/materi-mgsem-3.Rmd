@@ -67,7 +67,68 @@ class: inverse
 
 # Diagram jalur 
 
-<center><img src="libs/path-diagram.png" style="width:30%;" class="fancyimage"/></center><br>
+<center><img src="libs/path-diagram.png" style="width:40%;" class="fancyimage"/></center><br>
+
+---
+
+class: inverse, middle
+
+# Contoh
+
+.pull-left[
+
+Marimar adalah seorang wali murid di sebuah PAUD di Kota Surabaya. Pada suatu hari, ia mengamati seorang anak (dan orangtua) yang perilakunya menarik perhatiannya. 
+
+Ibu anak tersebut *ngotot* untuk menunggui anaknya di sekolah, padahal guru kelas meminta agar Ibu pulang saja, mempercayakan anak pada guru, dengan tujuan melatih kemandirian anaknya. 
+
+Melihat ibunya yang menggerutu karena diminta bu Guru pulang, si anak menangis meraung-raung tidak mau ditinggalkan. Akhirnya, terpaksa bu Guru membiarkan si Ibu menunggu di sekolah. 
+
+Marimar heran sekaligus penasaran, mengapa tiap anak **memberikan respon yang berbeda** ketika ditinggal orangtuanya di sekolah. Ada yang menangis meraung-raung, ada yang lebih santai dengan langsung bermain. Apakah ada kaitan antara kemandirian anak dengan karakteristik orangtuanya?
+
+]
+
+.pull-right[
+
+![](https://media.giphy.com/media/13xb3GPki9Kqdi/giphy.gif)
+
+]
+
+---
+
+# Variabel yang diukur Marimar
+
+* **trust** (variabel independen) = Kepercayaan ibu bahwa perkembangan anak dapat berlangsung secara natural ([**trust in organismic development**](https://link.springer.com/article/10.1007/s11031-008-9092-2)). Diukur dengan skala *likert* yang terdiri dari 5 aitem dengan 7 pilihan respon `r fa("arrow-circle-right")` dari **sangat tidak setuju** sampai **sangat setuju**.
+
+* **mandiri** (variabel dependen) = Tingkat kemandirian anak. Anak dengan skor yang tinggi semakin menunjukkan independensi dan lebih santai ketika ditinggal orangtuanya di sekolah. Marimar mengukurnya dengan melakukan observasi berdasarkan ada/tidaknya berbagai perilaku yang menunjukkan kemandirian. Diantaranya adalah:
+  - Menangis ketika ditinggal orangtuanya
+  - Merengek atau merajuk ketika ditinggal
+  - Masuk ke dalam kelas tanpa ditemani
+  - Menaruh tas dalam loker yang disediakan tanpa bantuan pengantar
+
+### Bagaimana bentuk diagram jalurnya?
+
+---
+
+class: center, middle
+
+<center><img src="libs/contoh-path.png" style="width:100%;" class="fancyimage"/></center><br>
+
+---
+
+# Nama variabel dan koefisien jalur
+
+| Nama Variabel/Koefisien | Huruf Yunani | Huruf Latin|
+| --------- | :------------: | :----------: |
+| *Error* pengukuran dari variabel X | δ | Delta |
+| *Error* pengukuran dari variabel Y | ε | Epsilon |
+| Variabel eksogen | ξ | Ksi |
+| Variabel endogen | η | Eta |
+| *Direct effect* antara variabel laten dan indikatornya (*loading factor*) | λ | Lambda |
+| *Direct effect* antara variabel endogen dan eksogen | γ | Gamma |
+| *Direct effect* antara dua variabel laten | β | Beta |
+| Korelasi (*covariance*) antara dua variabel laten | φ | Phi |
+| Varians *error* pengukuran dari sebuah variabel laten | ζ | Zeta |
+
 
 ---
 
