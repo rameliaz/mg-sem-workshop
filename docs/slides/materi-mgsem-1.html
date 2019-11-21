@@ -78,40 +78,14 @@ class: middle
 
 ## Sebelum istirahat (09.00-11.30)
 
-**Korelasi**
 * Jenis-jenis koefisien korelasi
-* Faktor-faktor yang membuat koefisien korelasi bervariasi
-* *Outliers*
-* Koreksi atenuasi dan *measurement error*
-* Bivariat, *part*, dan *partial correlation*
-* Variabel *supressor*
-
-]
-
-.pull-right[
-
-![](https://media.giphy.com/media/JltOMwYmi0VrO/giphy.gif)
-
-]
-
----
-
-class: middle
-
-# *Outline* Hari 1: Jumat, 22 November 2019
-
-.pull-left[
-
-## Sebelum istirahat (09.00-11.30)
-
-**Korelasi**
-* Metrik variabel (*standardised* vs *unstandardised*)
-* *Variance-covariance matrix*
-* *Correlation matrix*
+* Faktor-faktor yang membuat koefisien korelasi bervariasiK
+* [Koreksi atenuasi](https://methods.sagepub.com/reference/encyc-of-research-design/n81.xml) dan *measurement error*
+* *Variance-covariance* dan *correlation matrix*
 * *WARNING! Covariance/correlation matrix is not positive definite*
-* *Heywood* dan *ultra-Heywood case*
-* Asumi kausalitas dan limitasi
-* Faktor-faktor yang mempengaruhi besarnya korelasi
+* [*Heywood* dan *ultra-Heywood case*](https://journals.sagepub.com/doi/10.1177/0049124112442138)
+* Bivariat, *part*, dan *partial correlation*
+* Metrik variabel (*standardised* vs *unstandardised*)
 
 ]
 
@@ -131,14 +105,13 @@ class: middle
 
 ## Setelah istirahat (13.00-16.00)
 
-**Model Jalur** (*Path Model*) dan Model Regresi
 * Definisi *path model*
+* Nama variabel dan koefisien jalur (*path coefficients*)
+  * δ (delta), ε (epsilon), ξ (ksi), η (eta), λ (lambda), γ (gamma), β (beta), φ (phi), ζ (zeta)
 * Representasi visual model jalur menggunakan diagram jalur (*path diagram*)
 * Menggambarkan hubungan antar-variabel dengan menggunakan diagram jalur
-* Koefisien jalur (*path coefficients*)
-  - *X*, δ, *Y*, ε, ξ, η, λ, γ, β, φ, ζ
 * *Syntax* `lavaan` untuk spesifikasi model jalur
-* Membuat diagram *path model* dan melaporkannya dalam laporan penelitian
+* Asumsi kausalitas (?) dan limitasi
 
 ]
 
@@ -375,6 +348,8 @@ class: inverse, center, middle
 
 .pull-left[
 
+* *Exploratory factor analysis* (EFA)
+
 * *A priori power analysis*, Monte Carlo *simulation*, dan *accuracy in parameter estimation* (AIPE) &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; merupakan teknik-teknik yang digunakan untuk mengestimasi jumlah sampel
 
 * *Mixture model* (SEM untuk desain penelitian longtudinal) &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; *latent growth curve*
@@ -383,7 +358,9 @@ class: inverse, center, middle
 
 * Model SEM ketika variabel indikatornya *dichotomous*
 
-* *Hierarchical latent variable model*
+* *Hierarchical latent variable model* (*second-order CFA*, misalnya)
+
+* SEM dengan model pengukuran formatif dan *multiple indicators, multiple causes* (MIMIC)
 
 ]
 
@@ -401,7 +378,7 @@ class: inverse
 
 .pull-left[
 
-### 🔈 Data berdistribusi normal
+### 🔈 Data berdistribusi normal (*multivariate*)
 ### 🔈 Korelasi antar variabel sifatnya linear
 ]
 

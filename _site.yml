@@ -19,11 +19,11 @@ navbar:
     - text: "Bagian 3"
       href: slides/materi-mgsem-3.html
     - text: "Bagian 4"
-      href: 
+      href: slides/materi-mgsem-4.html
     - text: "Bagian 5"
-      href: 
+      href: slides/materi-mgsem-5.html
     - text: "Bagian 6"
-      href: 
+      href: slides/materi-mgsem-6.html
   - text: "Salindia (PDF)"  
     menu: 
     - text: "Bagian 1"
@@ -44,6 +44,8 @@ navbar:
       href: corr.jasp
     - text: "Dataset Latihan Korelasi"
       href: latihancorr.csv
+    - text: "Dataset Contoh CFA"
+      href: contoh-cfa.jasp
     - text: "Dataset Satu Kelompok"
       href: dataset-wave1.csv
     - text: "Dataset Dua Kelompok"

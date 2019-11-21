@@ -65,6 +65,30 @@ class: inverse
 
 ---
 
+# Korelasi = kausalitas?
+
+.pull-left[
+
+* Analisis jalur sebenarnya adalah **bentuk yang lebih *sophisticated*** dari korelasi, dan
+
+### **Correlation does not imply causation**
+
+Yang harus dipenuhi sebagai bukti kausalitas:
+* Ada **urutan waktu** (*temporal order*) `r fa("arrow-circle-right")` maka desain penelitian *panel*/*longitudinal*/*time series* harus digunakan
+* Adanya **korelasi** antara kedua variabel
+* Peneliti harus melakukan **kontrol** atas variabel lain yang mungkin menjelaskan korelasi tsb (melakukan manipulasi, mengestimasi *part* atau *partial correlation*)
+* Peneliti melakukan **manipulasi** pada variabel X, yang menyebabkan perubahan pada variabel Y
+
+]
+
+.pull-right[
+
+![](https://media.giphy.com/media/QWvcBw9qXs9wiVypPm/giphy.gif)
+
+]
+
+---
+
 # Diagram jalur 
 
 <center><img src="libs/path-diagram.png" style="width:40%;" class="fancyimage"/></center><br>
@@ -115,36 +139,202 @@ class: center, middle
 
 ---
 
-# Koefisien jalur
+# Nama variabel dan koefisien jalur
 
-| Koefisien | Huruf Yunani | Huruf Latin|
-| --------- | ------------ | ---------- |
-| Varians *error* dari variabel X | 
-
+| Nama Variabel/Koefisien | Huruf Yunani | Huruf Latin|
+| --------- | :------------: | :----------: |
+| *Error* pengukuran dari variabel X | δ | Delta |
+| *Error* pengukuran dari variabel Y | ε | Epsilon |
+| Variabel eksogen | ξ | Ksi |
+| Variabel endogen | η | Eta |
+| *Direct effect* antara variabel laten dan indikatornya (*loading factor*) | λ | Lambda |
+| *Direct effect* antara variabel endogen dan eksogen | γ | Gamma |
+| *Direct effect* antara dua variabel laten | β | Beta |
+| Korelasi (*covariance*) antara dua variabel laten | φ | Phi |
+| Varians *error* pengukuran dari sebuah variabel laten | ζ | Zeta |
 
 ---
 
-# Korelasi = kausalitas?
+## Contoh model dengan koefisien jalur
+
+<center><img src="libs/contoh-model.png" style="width:100%;" class="fancyimage"/></center><br>
+
+---
+
+## TUGAS 2: Membuat diagram jalur
 
 .pull-left[
 
-* Analisis jalur sebenarnya adalah **bentuk yang lebih *sophisticated*** dari korelasi, dan
+Fernando Jose sebal sekali karena ia kembali kehilangan pengokotnya dan ini kali ketiga ia kehilangan pengokot yang baru dibelinya seminggu yang lalu. 
 
-### **Correlation does not imply causation**
+Teman-teman kerjanya memang punya kebiasaan buruk meminjam barang tanpa seijinnya. Ia akhirnya bertanya, apa ya yang menyebabkan teman-temannya berperilaku seperti itu? 
 
-Yang harus dipenuhi sebagai bukti kausalitas:
-* Ada **urutan waktu** (*temporal order*) `r fa("arrow-circle-right")` maka desain penelitian *panel*/*longitudinal*/*time series* harus digunakan
-* Adanya **korelasi** antara kedua variabel
-* Peneliti harus melakukan **kontrol** atas variabel lain yang mungkin menjelaskan korelasi tsb (melakukan manipulasi, mengestimasi *part* atau *partial correlation*)
-* Peneliti melakukan **manipulasi** pada variabel X, yang menyebabkan perubahan pada variabel Y
+Akhirnya ia menduga, mungkin ada kaitannya dengan faktor kepribadian (*conscientiousness*) rekan kerjanya dan usia karyawan.
+
+Ia menduga temannya yang lebih *conscientious* dan lebih tua akan lebih kecil kemungkinannya melakukan perilaku tidak beradab. Ia juga mengamati bahwa semakin tua usia rekan kerjanya, biasanya mereka lebih *conscientious*.
 
 ]
 
 .pull-right[
 
-![](https://media.giphy.com/media/QWvcBw9qXs9wiVypPm/giphy.gif)
+![](https://media.giphy.com/media/OLdblIEmgpTb2/giphy.gif)
 
 ]
+
+---
+
+# Yang diukur...
+
+* **con** = Kecenderungan *conscientiousness* karyawan. Makin tinggi skornya, karyawan lebih mungkin menunjukkan kehati-hatian dan keteraturan dalam bekerja, efisien, dan bertanggung jawab. Diukur dengan skala *Likert* berisi 6 aitem dengan 10 pilihan jawaban.
+
+* **incivil** = Intensitas perilaku tidak beradab. Makin besar skornya, karyawan akan lebih mungkin *emotionally abusive*, suka mengambil barang teman tanpa ijin, dan perilaku tidak pantas yang lain. Diukur dengan skala *Likert* berisi 4 aitem dengan 10 pilihan jawaban.
+
+* **usia** = Usia partisipan
+
+### Buatlah diagram jalur beserta koefisien jalurnya. Bisa dengan PowerPoint atau *software* yang lain.
+
+[[Unggah file diagram jalur disini]](https://forms.gle/YjLLc6w5sfaUsnor8)
+
+---
+
+# `lavaan` *Syntax*
+
+* `JASP` mengadopsi *syntax* dari *package* [`lavaan`](http://lavaan.ugent.be/tutorial/index.html), sehingga untuk menjalankan programnya, kita harus memasukkan serangkaian perintah.
+
+* Meskipun begitu, *syntax* `lavaan` sangat sederhana dan familiar dengan *syntax* `lavaan` memberikan banyak keuntungan.
+
+* Menjalankan perintah dengan *syntax* juga membantu peneliti untuk mereka-ulang hasil analisis datanya, serta mempermudah kolaborasi dengan peneliti yang terbiasa menggunakan perangkat lunak yang berbeda dengan kita.
+
+---
+
+# Dasar *syntax* `lavaan`<sup>*</sup>
+
+<center><img src="libs/lavaan.png" style="width:55%;" class="fancyimage"/></center><br>
+
+.footnote[
+
+<sup>*</sup> Baujean, A.A. (2014). Latent Variable Modeling Using R: A step-by-step guide. New York: Routledge.
+
+]
+
+---
+
+# Contoh CFA (1)
+
+<center><img src="libs/path-1.png" style="width:80%;" class="fancyimage"/></center><br>
+
+---
+
+class: middle
+
+```{r eval=FALSE, tidy=FALSE}
+
+# CFA
+trust =~ trust1 + trust2 + trust3 + trust4 + trust5
+
+# Measurement error (residual)
+trust1 ~~ trust1
+trust2 ~~ trust2
+trust3 ~~ trust3
+trust4 ~~ trust4
+trust5 ~~ trust5
+trust ~~ trust
+
+```
+
+---
+  
+# Contoh CFA (2)
+
+<center><img src="libs/path-2.png" style="width:80%;" class="fancyimage"/></center><br>
+
+---
+
+class: middle
+
+```{r eval=FALSE, tidy=FALSE}
+
+# CFA
+mandiri =~ mandiri1 + mandiri2 + mandiri3 + mandiri4
+
+# Measurement error (residual)
+mandiri1 ~~ mandiri1
+mandiri2 ~~ mandiri2
+mandiri3 ~~ trust3
+mandiri4 ~~ mandiri4
+mandiri ~~ mandiri
+
+```
+
+
+---
+
+# Contoh *path analysis* (3)
+
+<center><img src="libs/path-3.png" style="width:80%;" class="fancyimage"/></center><br>
+
+---
+
+class: middle
+
+```{r eval=FALSE, tidy=FALSE}
+
+# Model Struktural
+
+mandiri ~ trust
+
+# Measurement error (residual)
+
+mandiri ~~ mandiri
+trust ~~ trust
+
+```
+
+
+---
+
+# Contoh *full model* (4)
+
+<center><img src="libs/contoh-path.png" style="width:80%;" class="fancyimage"/></center><br>
+
+---
+
+class: middle
+
+```{r eval=FALSE, tidy=FALSE}
+
+# CFA
+mandiri =~ mandiri1 + mandiri2 + mandiri3 + mandiri4
+trust =~ trust1 + trust2 + trust3 + trust4 + trust5
+
+# Measurement error (residual)
+mandiri1 ~~ mandiri1
+mandiri2 ~~ mandiri2
+mandiri3 ~~ trust3
+mandiri4 ~~ mandiri4
+
+trust1 ~~ trust1
+trust2 ~~ trust2
+trust3 ~~ trust3
+trust4 ~~ trust4
+trust5 ~~ trust5
+
+trust ~~ trust
+mandiri ~~ mandiri
+
+# Model Struktural
+mandiri ~ trust
+
+
+```
+
+---
+
+# TUGAS 3: Menulis *syntax* `lavaan`
+
+### Tulislah *syntax* `lavaan` dari diagram jalur yang sudah dibuat di TUGAS 2
+
+#### [Klik disini untuk mengisi lembar kerja](https://forms.gle/ARMzU4trUgqRv8hj9)
 
 ---
 

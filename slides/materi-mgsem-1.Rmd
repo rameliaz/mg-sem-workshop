@@ -361,6 +361,8 @@ class: inverse, center, middle
 
 .pull-left[
 
+* *Exploratory factor analysis* (EFA)
+
 * *A priori power analysis*, Monte Carlo *simulation*, dan *accuracy in parameter estimation* (AIPE) `r fa("arrow-circle-right")` merupakan teknik-teknik yang digunakan untuk mengestimasi jumlah sampel
 
 * *Mixture model* (SEM untuk desain penelitian longtudinal) `r fa("arrow-circle-right")` *latent growth curve*
@@ -389,7 +391,7 @@ class: inverse
 
 .pull-left[
 
-### `r emo::ji("speaker")` Data berdistribusi normal
+### `r emo::ji("speaker")` Data berdistribusi normal (*multivariate*)
 ### `r emo::ji("speaker")` Korelasi antar variabel sifatnya linear
 ]
 

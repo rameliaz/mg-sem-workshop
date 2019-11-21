@@ -16,8 +16,7 @@ Materi berlisensi [<i class="fab fa-creative-commons"></i> BY-SA 4.0](https://cr
 Berikut adalah *outline* materi *workshop*: 
 
 
-### **Hari 1**
-#### Jumat, 22 November 2019
+### **Hari 1**: Jumat, 22 November 2019
 
 ##### **Pengantar**
 * Apa itu *structural equation modeling* (SEM)?
@@ -45,35 +44,30 @@ Berikut adalah *outline* materi *workshop*:
 * Asumsi kausalitas (?) dan limitasi
 
 
-### **Hari 2**
-#### Sabtu, 23 November 2019
+### **Hari 2**: Sabtu, 23 November 2019
 
 ##### **Confirmatory Factor Analysis (CFA)**
 * Definisi *factor analysis*
-* Jumlah faktor dan jumlah sampel
-* Rotasi faktor dan skor faktor
-* *Exploratory* vs *confirmatory*
+* *Exploratory* vs *confirmatory factor analysis*
 * Kapan menggunakan CFA?
+* [*Constraining parameter* model](https://psycnet.apa.org/record/2008-06808-005)
 * Model pengukuran (paralel, *tau equivalence*, dan *congeneric*)
 * Variabel indikator (reflektif vs formatif)
-* *Pattern matrix* dan *factor loadings*
 * *Correlated error variances*
-* [*Constraining parameter* model](https://psycnet.apa.org/record/2008-06808-005)
-* *Measurement invariance*
-* *Factor variance*
 * Metode estimasi
-* Asesmen *model fit*
 * Menuliskan hasil analisis CFA dalam laporan penelitian
 
 
 ##### **Dasar-dasar Structural Equation Modeling (SEM)**
-* Pengantar SEM: model struktural vs model pengukuran
+* Dasar-Dasar SEM: Model struktural & pengukuran
 * Tahapan *modeling* dengan menggunakan SEM
   * Spesifikasi model
   * Identifikasi model
   * Estimasi model
   * Menguji model
   * Memodifikasi model
+* *Degree of freedom*
+* *Underidentified*, *just-identified*, dan *overidentified model*
 * Jenis-jenis kriteria kecocokan model (*model fit*)
   * [*Model fit*](http://www.ejbrm.com/issue/download.html?idArticle=183)
   * *Model comparison*
