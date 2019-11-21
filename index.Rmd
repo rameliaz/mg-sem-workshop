@@ -30,12 +30,11 @@ Berikut adalah *outline* materi *workshop*:
 * Faktor-faktor yang membuat koefisien korelasi bervariasi
 * *Outliers*
 * [Koreksi atenuasi](https://methods.sagepub.com/reference/encyc-of-research-design/n81.xml) dan *measurement error*
+* *Variance-covariance* dan *correlation matrix*
 * *WARNING! Covariance/correlation matrix is not positive definite*
 * [*Heywood* dan *ultra-Heywood case*](https://journals.sagepub.com/doi/10.1177/0049124112442138)
 * Bivariat, *part*, dan *partial correlation*
-* *Variance-covariance* dan *correlation matrix*
 * Metrik variabel (*standardised* vs *unstandardised*)
-* Asumsi kausalitas (?) dan limitasi
 
 ##### **Model Jalur** (*Path Model*) dan Model Regresi
 * Definisi *path model*
@@ -44,6 +43,7 @@ Berikut adalah *outline* materi *workshop*:
 * Representasi visual model jalur menggunakan diagram jalur (*path diagram*)
 * Menggambarkan hubungan antar-variabel dengan menggunakan diagram jalur
 * *Syntax* `lavaan` untuk spesifikasi model jalur
+* Asumsi kausalitas (?) dan limitasi
 
 
 ### **Hari 2**
