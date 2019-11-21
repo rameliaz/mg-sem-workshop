@@ -29,24 +29,20 @@ Berikut adalah *outline* materi *workshop*:
 * Jenis-jenis koefisien korelasi
 * Faktor-faktor yang membuat koefisien korelasi bervariasi
 * *Outliers*
-* Koreksi atenuasi dan *measurement error*
-* Bivariat, *part*, dan *partial correlation*
-* Variabel *supressor*
-* Korelasi vs kovarians
-* Metrik variabel (*standardised* vs *unstandardised*)
-* *Variance-covariance matrix*
-* *Correlation matrix*
+* [Koreksi atenuasi](https://methods.sagepub.com/reference/encyc-of-research-design/n81.xml) dan *measurement error*
 * *WARNING! Covariance/correlation matrix is not positive definite*
-* *Heywood* dan *ultra-Heywood case*
-* Asumsi kausalitas dan limitasi
-* Faktor-faktor yang mempengaruhi besarnya korelasi
+* [*Heywood* dan *ultra-Heywood case*](https://journals.sagepub.com/doi/10.1177/0049124112442138)
+* Bivariat, *part*, dan *partial correlation*
+* *Variance-covariance* dan *correlation matrix*
+* Metrik variabel (*standardised* vs *unstandardised*)
+* Asumsi kausalitas (?) dan limitasi
 
 ##### **Model Jalur** (*Path Model*) dan Model Regresi
 * Definisi *path model*
+* Koefisien jalur (*path coefficients*)
+  * *X*, δ (delta), *Y*, ε (epsilon), ξ (ksi), η (eta), λ (lambda), γ (gamma), β (beta), φ (phi), ζ (zeta)
 * Representasi visual model jalur menggunakan diagram jalur (*path diagram*)
 * Menggambarkan hubungan antar-variabel dengan menggunakan diagram jalur
-* Koefisien jalur (*path coefficients*)
-  * *X*, δ, *Y*, ε, ξ, η, λ, γ, β, φ, ζ
 * *Syntax* `lavaan` untuk spesifikasi model jalur
 
 
@@ -63,6 +59,7 @@ Berikut adalah *outline* materi *workshop*:
 * Variabel indikator (reflektif vs formatif)
 * *Pattern matrix* dan *factor loadings*
 * *Correlated error variances*
+* [*Constraining parameter* model](https://psycnet.apa.org/record/2008-06808-005)
 * *Measurement invariance*
 * *Factor variance*
 * Metode estimasi
@@ -71,15 +68,15 @@ Berikut adalah *outline* materi *workshop*:
 
 
 ##### **Dasar-dasar Structural Equation Modeling (SEM)**
-* Pengantar SEM: model struktural vs model pengukuran (LVM)
+* Pengantar SEM: model struktural vs model pengukuran
 * Tahapan *modeling* dengan menggunakan SEM
   * Spesifikasi model
   * Identifikasi model
   * Estimasi model
   * Menguji model
   * Memodifikasi model
-* Jenis-jenis kriteria *model fit*
-  * *Model fit*
+* Jenis-jenis kriteria kecocokan model (*model fit*)
+  * [*Model fit*](http://www.ejbrm.com/issue/download.html?idArticle=183)
   * *Model comparison*
   * *Model parsimony*
   * *Parameter fit*

@@ -22,6 +22,8 @@ navbar:
       href: 
   - text: "Dataset"  
     menu: 
+    - text: "Dataset Korelasi"
+      href: corr.jasp
     - text: "Dataset Satu Kelompok"
       href: dataset-wave1.csv
     - text: "Dataset Dua Kelompok"

@@ -1,5 +1,5 @@
 ---
-title: "Workshop MG-SEM Bagian 1"
+title: "Workshop MG-SEM Bagian 2"
 subtitle: "Dies Natalis 36th"
 author: "Rizqy Amelia Zein"
 date: "2019/09/10 (updated: `r Sys.Date()`)"
@@ -34,7 +34,7 @@ class: title-slide, spaced
 <img src="libs/unair.png" style="width:15%;" class="fancyimage"/> <img src="libs/STUA.png" style="width:23%;" class="fancyimage"/> <img src="libs/ina-logo.jpg" style="width:7%;" class="fancyimage"/> <img src="libs/igdore.png" style="width:23%;" class="fancyimage"/>
 
 # Multigroup Structural Equation Modeling (SEM)
-## Menggunakan `JASP` (GAMLj): Bagian 1
+## Menggunakan `JASP`: Bagian 2 - Korelasi
 <br>
 ### <b>Rizqy Amelia Zein</b>
 * Dosen, [Fakultas Psikologi, Universitas Airlangga](https://psikologi.unair.ac.id)
@@ -44,103 +44,133 @@ class: title-slide, spaced
 
 ---
 
-class: center, middle
+class: inverse
 
-# Menghubungi saya?  
+# Mengapa memulai dari korelasi?
 
-`r fa("paper-plane")` <a href="mailto:amelia.zein@psikologi.unair.ac.id"></i>&nbsp; amelia.zein@psikologi.unair.ac.id</a>
-`r fa("twitter")` [@ameliazein](https://twitter.com/ameliazein)
-`r fa("github")` [@rameliaz](https://github.com/rameliaz)
-`r fa("desktop")` https://rameliaz.github.io
+--
 
+#### SEM merupakan teknik yang digunakan untuk **mengestimasi korelasi** antar-variabel
 
-Materi dalam paparan ini berlisensi `r fa("creative-commons")` 4.0 dan tersedia di laman web pribadi saya **(https://rameliaz.github.io/mlm-lme-workshop/)**. 
-Kode tersedia secara terbuka di [repositori](https://github.com/rameliaz/mlm-lme-workshop) `r fa("github")` saya.
+--
 
----
+#### Untuk melakukan SEM, peneliti tidak harus meng*input* data kasar (*raw data*), tetapi ada pilihan untuk meng*input* *correlation* atau *variance-covariance matrix*.
 
-class: inverse, middle
-
-# *Outline* Sesi 1
-
-.pull-left[
-
-## Sebelum istirahat (08.00-12.00)
-
-* Berlatih menginspeksi data secara visual dengan *scatterplot*
-* Model regresi linier (*ordinary least square*)
-* Menarik garis regresi (*fitted regression lines*)
-* Varians yang dapat dan yang tidak dapat dijelaskan oleh model (*R^2*)
-* Menguji hipotesis
-* Mengecek kecocokan model dengan data (*model fit*)
-* Mengecek asumsi
-  - Distribusi (normalitas) residual
-  - Homoskedastisitas
-  - Multikolinearitas
-* Mendeteksi *outliers*
-* Menguji *interaction effects* dan *model change*
-* Menulis hasil analisis regresi linier dengan *interaction terms* dalam manuskrip
-]
-
-.pull-right[
-
-![](https://media.giphy.com/media/31lPv5L3aIvTi/giphy.gif)
-
-]
-
----
-
-class: middle
-
-# *Outline* Sesi 2 (a)
-
-.pull-left[
-
-## Setelah istirahat (13.00-16.00)
-
-* Struktur data berjenjang/bersarang (*hierarchical/nested data*)
-* *Within* dan *between group variance*
-* Pengantar *linear mixed-effect* (`lme`)
-* *Intra-class correlation* dan *likelihood ratio test* (LRT)
-* Membandingkan garis regresi antar kelompok dengan `lme`
-* `lme` dengan prediktor level 1 (*random coefficients model*)
-  - Mengidentifikasi *intercept* (konstanta) yang berbeda antar kelompok (*random intercept model*)
-  - Mengidentifikasi *slopes* (gradien/kemiringan garis) yang berbeda antar kelompok (*random slopes model*)
-
-]
-
-.pull-right[
-
-![](https://media.giphy.com/media/rVbAzUUSUC6dO/giphy.gif)
-
-]
+![](https://media.giphy.com/media/ChzfTLSi47FYc/giphy.gif)
 
 
 ---
 
-class: middle
+# Jenis-jenis korelasi
 
-# *Outline* Sesi 2 (b)
-
-.pull-left[
-
-## Setelah istirahat (13.00-16.00)
-
-* *Explained variances* ([Nakagawa & Schielzeth, 2012](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/j.2041-210x.2012.00261.x))
-  - *Marginal R^2*
-  - *Conditional R^2*
-* *Contextual effect* dan *partitioning/centering*
-* Melaporkan analisis dengan `lme` dalam manuskrip
-
-]
-
-.pull-right[
-
-![](https://media.giphy.com/media/WUq1cg9K7uzHa/giphy.gif)
-
-]
+| Koefisien Korelasi | Level Pengukuran |
+| ------------------ | ---------------- |
+| *Pearson's product moment* | Kedua variabel setidaknya interval |
+| *Spearman's rank* dan *Kendall's tau* | Kedua variabel ordinal |
+| *Phi*, *contingency table* | Kedua variabel nominal |
+| *Point biserial* | Variabel interval dengan nominal |
+| *Gamma*, *rank biserial* | Variabel ordinal dengan nominal |
+| *Biserial* | Variabel interval dengan *dummy* |
+| [*Polyserial*](https://link.springer.com/article/10.1007/BF02294164) | Variabel interval dengan variabel *underlying continuity* |
+| *Tetrachoric* | Kedua variabel *dummy* (dikotomis) |
+| *Polychoric* | Kedua variabel ordinal (dengan kontinuitas implisit) |
 
 ---
+
+# Faktor-faktor yang mempengaruhi korelasi
+
+* **Level pengukuran** (apakah variabel tersebut nominal, ordinal, interval, atau rasio)
+  - Sehingga berdampak pada **variabilitas** (*restriction range*) dan **normalitas data**
+* **Linearitas**
+  - Semua teknik korelasi mengasumsikan korelasi antar-variabel linear, sehingga korelasi yang tidak linear akan memberikan informasi **tidak adanya korelasi** (padahal tidak selalu).
+* **Adanya data *outlier* **
+* **Koreksi atenuasi**
+* **Jumlah sampel**
+  - Jumlah sampel yang terlalu sedikit akan memberikan estimasi yang kurang akurat (karena *standard error*nya besar)
+* ***Sampling variance***
+  - Yang kemudian berfek pada *confidence interval*, *effect size* (koefisien korelasi itu sendiri), dan *statistical power*
+* ***Missing data***
+  - Kalau data tidak lengkap, estimasi koefisien korelasi akan langsung terdampak.
+  - Ada beberapa pilihan yang bisa dilakukan, yaitu `r fa("arrow-circle-right")` *listwise deletion*, *pairwise deletion*, dan melakukan *data imputation*.
+  - *Listwise deletion* tidak disarankan karena membuat jumlah sampel turun drastis `r fa("arrow-circle-right")` mengurangi *statistical power*.
+  
+#### Silahkan unduh dan buka [**Dataset Korelasi**](https://rameliaz.github.io/mg-sem-workshop/corr.jasp), untuk melihat contoh.
+
+---
+
+# Koreksi Atenuasi
+
+* Asumsi dasar dalam Psikometri adalah skor kasar (*observed score*) mengandung skor murni (*true score*) dan *measurement error*, sehingga dalam mengestimasi korelasi, *measurement error* perlu dibuang agar estimasi lebih akurat.
+
+* Dengan teknik *koreksi atenuasi*, kita dapat 'membuang' *measurement error*, sehingga kita dapat mengestimasi korelasi antar-variabel menggunakan *true score*-nya.
+
+* Tetapi apabila reliabilitas skala kita kurang baik, maka setelah dikoreksi **koefisien korelasi bisa lebih dari 1** `r emo::ji("exclamation")`
+
+* Misalnya diketahui bahwa korelasi *observed scores* antar dua variabel (*r*<sub>ab</sub>) adalah 0.9 dan reliabilitas skala *a* (Cronbach's α) adalah 0.6 dan skala *b* adalah 0.7, maka:
+
+<center><img src="libs/cor-an.png" style="width:20%;" class="fancyimage"/></center><br>
+
+---
+
+class: inverse, middle, center
+
+# Apa yang terjadi?
+
+#### Perangkat lunak akan menghentikan proses estimasi
+
+#### ...dan memberikan pesan *non-positive definite*
+
+![](https://media.giphy.com/media/SDogLD4FOZMM8/giphy.gif)
+
+---
+
+class: inverse, middle, center
+
+# *WARNING! Covariance/correlation matrix is not positive definite*
+
+<center><img src="libs/gosling-corr.jpg" style="width=30%;" class="fancyimage"/></center><br>
+
+---
+
+# Matrik korelasi dengan *non-positive definite*
+
+* Koefisien korelasi yang nilainya >=1 menyebabkan matriks korelasi menjadi *non-positive definite*
+  - Artinya, parameter model tidak mungkin diestimasi
+
+* Mengapa terjadi?
+  - Data didapatkan dari observasi yang **tidak independen** (*linear dependency*)
+  - Terjadi **multikolinearitas**
+  - **Jumlah sampel** lebih **sedikit** dari jumlah variabel yang diuji dalam model
+  - Sepasang variabel berbagi **varians negatif** atau **tidak sama sekali** (0) `r fa("arrow-circle-right")` *Heywood case*
+  - Varians, kovarians, dan korelasi nilainya diluar batas kewajaran
+  - Kesalahan mengatur pembatasan (*constraint*) pada parameter tertentu yang dilakukan oleh peneliti (*user-specified model*)
+  
+---
+
+# *Heywood* dan *ultra-Heywood case*
+
+* Terjadi ketika *communalities* = 1 (*Heywood*) atau >=1 (*ultra-Heywood*), atau terjadi ketika varians *measurement error* bernilai negatif
+  - *Communalities* adalah kuadrat dari koefisien korelasi (*R*<sup>2</sup>)
+  - Apabila terjadi, maka ada yang salah dengan spesifikasi model (hipotesis)
+
+* Terjadi karena
+  - *Common factor* terlalu banyak/terlalu sedikit
+  - Ukuran sampel tidak memadai
+  - Model SEM bukan model yang cocok untuk menguji hipotesis hubungan antar-variabel (alternatifnya [*Principal Component Analysis* - PCA](https://medium.com/@aptrishu/understanding-principle-component-analysis-e32be0253ef0))
+  
+* Yang bisa dilakukan
+  - Tinjau kembali hipotesis modelnya
+  - Kurangi jumlah faktor laten dengan 'membuang' jalur/korelasi yang bermasalah
+  - Identifikasi variabel yang terlibat multikolinearitas. Masukkan salah satu saja dalam model, sisanya jangan.
+
+---
+
+# Korelasi Bivariat: *Part* dan *partial correlation*
+
+<center><img src="libs/partial-cor.png" style="width:50%;" class="fancyimage"/></center><br>
+
+---
+
 
 
 ---

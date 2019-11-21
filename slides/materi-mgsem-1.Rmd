@@ -34,7 +34,7 @@ class: title-slide, spaced
 <img src="libs/unair.png" style="width:15%;" class="fancyimage"/> <img src="libs/STUA.png" style="width:23%;" class="fancyimage"/> <img src="libs/ina-logo.jpg" style="width:7%;" class="fancyimage"/> <img src="libs/igdore.png" style="width:23%;" class="fancyimage"/>
 
 # Multigroup Structural Equation Modeling (SEM)
-## Menggunakan `JASP`: Bagian 1
+## Menggunakan `JASP`: Bagian 1 - Pengantar
 <br>
 ### <b>Rizqy Amelia Zein</b>
 * Dosen, [Fakultas Psikologi, Universitas Airlangga](https://psikologi.unair.ac.id)
@@ -98,7 +98,26 @@ class: middle
 * Koreksi atenuasi dan *measurement error*
 * Bivariat, *part*, dan *partial correlation*
 * Variabel *supressor*
-* Korelasi vs kovarians
+
+]
+
+.pull-right[
+
+![](https://media.giphy.com/media/JltOMwYmi0VrO/giphy.gif)
+
+]
+
+---
+
+class: middle
+
+# *Outline* Hari 1: Jumat, 22 November 2019
+
+.pull-left[
+
+## Sebelum istirahat (09.00-11.30)
+
+**Korelasi**
 * Metrik variabel (*standardised* vs *unstandardised*)
 * *Variance-covariance matrix*
 * *Correlation matrix*
@@ -111,7 +130,7 @@ class: middle
 
 .pull-right[
 
-![](https://media.giphy.com/media/31lPv5L3aIvTi/giphy.gif)
+![](https://media.giphy.com/media/3ornjXIIShZ2MgyyHu/giphy.gif)
 
 ]
 
@@ -130,7 +149,7 @@ class: middle
 * Representasi visual model jalur menggunakan diagram jalur (*path diagram*)
 * Menggambarkan hubungan antar-variabel dengan menggunakan diagram jalur
 * Koefisien jalur (*path coefficients*)
-  - *X*,δ,*Y*,ε,ξ,η,λ,γ,β,φ,ζ
+  - *X*, δ, *Y*, ε, ξ, η, λ, γ, β, φ, ζ
 * *Syntax* `lavaan` untuk spesifikasi model jalur
 * Membuat diagram *path model* dan melaporkannya dalam laporan penelitian
 
@@ -160,6 +179,26 @@ class: middle, inverse
 * *Exploratory* vs *confirmatory*
 * Kapan menggunakan CFA?
 * Model pengukuran (paralel, *tau equivalence*, dan *congeneric*)
+
+]
+
+.pull-right[
+
+![](https://media.giphy.com/media/WUq1cg9K7uzHa/giphy.gif)
+
+]
+
+---
+
+class: middle
+
+# *Outline* Hari 2: Sabtu, 23 November 2019
+
+.pull-left[
+
+## Sebelum istirahat (09.00-12.00)
+
+**Confirmatory Factor Analysis (CFA)**
 * Variabel indikator (reflektif vs formatif)
 * *Pattern matrix* dan *factor loadings*
 * *Correlated error variances*
@@ -173,7 +212,7 @@ class: middle, inverse
 
 .pull-right[
 
-![](https://media.giphy.com/media/WUq1cg9K7uzHa/giphy.gif)
+![](https://media.giphy.com/media/11sBLVxNs7v6WA/giphy.gif)
 
 ]
 
@@ -203,7 +242,7 @@ class: middle
 
 .pull-right[
 
-![](https://media.giphy.com/media/rVbAzUUSUC6dO/giphy.gif)
+![](https://media.giphy.com/media/PBM14uaJCbp72/giphy.gif)
 
 ]
 
@@ -211,12 +250,20 @@ class: middle
 
 class: inverse, center, middle
 
-# Apa itu *structural equation modeling*?
-# Apa ekspektasi peserta *workshop*?
-# Pada saat seperti apa SEM diperlukan?
-# Bagaimana pengalaman sebelumnya?
+.pull-left[
 
-[insert a gif here]
+# Apa itu *structural equation modeling*?
+
+## Pernahkah bapak/ibu menggunakan SEM sebelumnya?
+## Untuk apa SEM digunakan?
+
+]
+
+.pull-right[
+
+![](https://media.giphy.com/media/fvwXjE0Hf70690czE5/giphy.gif)
+
+]
 
 
 ---
@@ -247,26 +294,39 @@ class: inverse, center, middle
   - Oleh karena itu, membutuhkan variabel *observed* untuk mengukurnya.
   - Variabel *latent* dapat berperan sebagai variabel *independent* atau *dependent*.
 
-* Contohnya
-  - Seorang peneliti ingin mengukur kepribadian seorang responden dengan menggunakan pendekatan *Five-Factor Model* (Big 5), maka aitem dalam skala tersebut adalah *observed variable*, sedangkan dimensi dari Big 5 (*neuroticism*, *agreeableness*, *conscientiousness*, dan *extraversion*) adalah *latent variable*.
 
 ]
 
 .pull-right[
 
-put a gif here
+![](https://media.giphy.com/media/irClCpuJAWgRqtP73t/giphy.gif)
 
 ]
 
 ---
 
-class: inverse
-
-# Contoh
+# Contohnya...
 
 .pull-left[
 
+* Seorang peneliti ingin mengukur kepribadian seorang responden dengan menggunakan pendekatan *Five-Factor Model* (Big 5), maka aitem dalam skala tersebut adalah *observed variable*, sedangkan dimensi dari Big 5 (*neuroticism*, *agreeableness*, *conscientiousness*, dan *extraversion*) adalah *latent variable*.
+
 * Seorang peneliti Psikologi Pendidikan ingin tahu apakah kepercayaan orang tua bahwa anaknya dapat berkembang secara natural (*trust in organismic development* - *independent latent variable*) berkorelasi dengan tingkat kemandirian anak (*dependent latent variable*).
+
+
+]
+
+.pull-right[
+
+![](https://media.giphy.com/media/d5fW0J4klfwnm/giphy.gif)
+
+]
+
+---
+
+# Contohnya...
+
+.pull-left[
 
 * Dalam konteks Psikologi Klinis, seorang pakar *public mental health* ingin tahu apakah status sosio-ekonomi (*observed independent variable*) dapat berdampak pada kondisi kesehatan mental individu (*latent dependent variable*).
 
@@ -276,7 +336,7 @@ class: inverse
 
 .pull-right[
 
-put a gif here
+![](https://media.giphy.com/media/DxneCO38aK4Fi/giphy.gif)
 
 ]
 
@@ -293,23 +353,89 @@ put a gif here
   - Menguji hubungan antara variabel *observed* dan *latent*
 
 * Model pengukuran (*measurement model*/*confirmatory factor analysis*)
-  - Menguji apakah aitem-aitem dari skala Psikologi (yang mengukur konstruk laten tertentu) memang betul-betul mengukur konstruk tersebut -> validitas konstruk.
+  - Menguji apakah aitem-aitem dari skala Psikologi (yang mengukur konstruk laten tertentu) memang betul-betul mengukur konstruk tersebut `r fa("arrow-circle-right")` validitas konstruk.
 
 * SEM biasanya mengandung setidaknya dua model, yaitu model pengukuran dan model struktural (regresi/jalur).
 
 ]
 
-
 .pull-right[
 
-put a gif here
+![](https://media.giphy.com/media/SRNbNpKgJ03mOiYceA/giphy.gif)
 
 ]
 
 ---
 
-# Mengapa SEM 
+# Mengapa SEM dilakukan?
 
+* Peneliti sudah memiliki kesadaran bahwa ia harus menyelidiki **beberapa variabel penelitian** secara bersamaan untuk menginvestigasi pertanyaan penelitiannya
+
+* Ada kesadaran bahwa peneliti selama ini mengabaikan faktor inakurasi pengkuran. SEM membantu peneliti untuk **mengurangi efek measurement error** terhadap hasil analisis data. Untuk itu, peneliti dapat sekaligus menguji properti/kualitas psikometrik instrumen yang digunakan.
+
+* Selama beberapa dekade kebelakang, SEM termasuk teknik analisis data yang sudah cukup **matang pengembangannya**, dan dapat mudah dilakukan dengan bantuan perangkat lunak
+
+* Perangkat lunak SEM sudah cukup *user-friendly*
+  - `JASP` adalah perangkat lunak SEM yang hanya memerlukan *coding* yang sangat minimal.
+  - Namun `JASP` fungsinya agak terbatas, karena tidak menyediakan opsi *power analysis* (digunakan untuk merencanakan jumlah sampel) dan simulasi.
+  - Selain itu, peneliti dapat menggunakan `Onyx`, `LISREL`, `AMOS`, `EQX`, `MPLUS`, `STATA`, dsb.
+  
+* SEM adalah teknik yang lebih *sophisticated* untuk menggambarkan **hubungan antar-variabel** karena membuang **error pengukuran** dari estimasi korelasi, dan mengurangi bias estimasi model karena konstruk laten diperlakukan sebagaimana mestinya, bukan **dianggap** seolah-olah *observed variable*.
+
+---
+
+# Yang tidak dicakup oleh *workshop* ini...
+
+.pull-left[
+
+* *A priori power analysis*, Monte Carlo *simulation*, dan *accuracy in parameter estimation* (AIPE) `r fa("arrow-circle-right")` merupakan teknik-teknik yang digunakan untuk mengestimasi jumlah sampel
+
+* *Mixture model* (SEM untuk desain penelitian longtudinal) `r fa("arrow-circle-right")` *latent growth curve*
+
+* Model SEM dengan *missing data*
+
+* Model SEM ketika variabel indikatornya *dichotomous*
+
+* *Hierarchical latent variable model*
+
+]
+
+.pull-right[
+
+![](https://media.giphy.com/media/LpQuxhwDhzLCEKVYFh/giphy.gif)
+
+]
+
+---
+
+class: inverse
+
+# Ketika menggunakan SEM, maka asumsinya...
+
+.pull-left[
+
+### `r emo::ji("speaker")` Data berdistribusi normal
+### `r emo::ji("speaker")` Korelasi antar variabel sifatnya linear
+]
+
+.pull-right[
+
+![](https://media.giphy.com/media/l4pTfqyI6TCjUW4Yo/giphy.gif)
+
+]
+
+---
+
+# Normalitas data
+
+* Mengapa data **tidak berdistribusi normal?**
+  - Bisa jadi bentuk datanya ordinal/nominal, sehingga kalau menggunakan skala *Likert*, maka kemungkinan besar distribusi data menjadi tidak normal.
+  - Jumlah sampel terlalu sedikit.
+  - Distribusi data yang tidak normal akan berdampak pada *variance-covariance matrix*.
+
+* Apa yang harus dilakukan?
+  - Untuk mengkoreksi distribusi data yang juling (*skewness*), [*probit transformation*](http://methods.sagepub.com/Reference/the-sage-encyclopedia-of-educational-research-measurement-and-evaluation/i16518.xml) merupakan strategi yang terbaik.
+  - Untuk mengkoreksi *kurtosis* yang tidak sesuai membutuhkan prosedur yang agak lebih rumit. Beberapa diantaranya adalah dengan menambah jumlah responden, melakukan estimasi *standard error* dengan metode *bootstrapping*, atau bisa juga dengan menggunakan **metode estimasi** yang khusus untuk data yang tidak berdistribusi normal (*weighted least squares*).
 
 ---
 
