@@ -224,7 +224,7 @@ class: center, middle, inverse
   - Apabila variabel dalam model memiliki unit pengukuran yang berbeda, maka *standardised estimates* akan sangat membantu untuk menstandardisasi unit antar-variabel tersebut.
   
 * Ada banyak perbedaan pendapat mengenai metrik mana yang harus dilaporkan, tetapi
-  - Selalu laporkan *unstandarised solution/estimates* `r fa("arrow-circle-right")`
+  - Selalu laporkan *unstandarised solution/estimates* (boleh juga dengan *standarised solution/estimates*)
 
 ---
 
