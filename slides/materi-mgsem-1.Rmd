@@ -398,7 +398,7 @@ class: inverse, center, middle
 
 * *Exploratory factor analysis* (EFA)
 * *A priori power analysis*, Monte Carlo *simulation*, dan *accuracy in parameter estimation* (AIPE) `r fa("arrow-circle-right")` merupakan teknik-teknik yang digunakan untuk mengestimasi jumlah sampel
-* *Mixture model* (SEM untuk desain penelitian longtudinal) `r fa("arrow-circle-right")` *latent growth curve*
+* *Mixture model* (SEM untuk desain penelitian longitudinal) `r fa("arrow-circle-right")` *latent growth curve*
 * Model SEM dengan *missing data*
 * Model SEM dengan variabel moderator/mediator, atau *moderated mediation* atau *mediated moderation*
 * Model SEM ketika variabel indikatornya *dichotomous*
