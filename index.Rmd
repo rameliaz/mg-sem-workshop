@@ -68,17 +68,16 @@ Berikut adalah *outline* materi *workshop*:
   * Memodifikasi model
 * *Degree of freedom*
 * *Underidentified*, *just-identified*, dan *overidentified model*
-* Jenis-jenis kriteria kecocokan model (*model fit*)
+* Jenis-jenis kriteria untuk menilai ketepatan model (*model fit*)
   * [*Model fit*](http://www.ejbrm.com/issue/download.html?idArticle=183)
-  * *Model comparison*
+  * *Model comparison*/*Incremental fit indices*
   * *Model parsimony*
   * *Parameter fit*
 * Menguji hipotesis
-  * *Power*
+  * *Statistical power*
   * Ukuran sampel
   * Perbandingan model
   * *Effect size*
-* Parameter signifikansi
 * Membandingkan antara pendekatan dua-langkah dengan empat-langkah *modeling* dengan SEM
 * Menuliskan hasil analisis SEM dalam laporan penelitian
 
@@ -151,7 +150,6 @@ Berikut adalah *outline* materi *workshop*:
 ## Poster kegiatan
 
 <center><img src="libs/poster.jpg" style="width:70%;" class="fancyimage"/></center><br>
-
 
 
 ## Jawaban Latihan

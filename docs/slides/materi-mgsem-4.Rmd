@@ -181,6 +181,7 @@ class: center, middle
 
 * Kedua variabel indikator tersebut mengukur variabel laten lain di luar model (*unique factor*)
 * Bisa jadi karena ada aitem *unfavourable* dalam skala 
+* Kemungkinan konstruk laten **bukan konstruk tunggal** (multidimensi)
 * Perhatikan justifikasi teori ketika menambah *error covariance*
 
 ---
@@ -212,11 +213,13 @@ class: center, middle
 
 ---
 
+class: inverse, middle, center
+
 # Demonstrasi CFA
 
-![](https://media.giphy.com/media/Is1O1TWV0LEJi/giphy.gif)
+![](https://media.giphy.com/media/3oEjHZPivwdJ0syhKE/giphy.gif)
 
-### [Unduh Dataset](https://rameliaz.github.io/mg-sem-workshop/contoh-cfa.jasp)
+### [Unduh Dataset Contoh CFA](https://rameliaz.github.io/mg-sem-workshop/contoh-cfa.jasp)
 
 ---
 
@@ -224,7 +227,7 @@ class: center, middle
 
 * Unduh [Dataset Satu Kelompok](https://rameliaz.github.io/mg-sem-workshop/dataset-wave1.csv)
 
-* Unduh [Kamus Data]
+* Unduh [Kamus Data disini](https://rameliaz.github.io/mg-sem-workshop/codebook-kamusdata.csv)
 
 * Lakukan CFA pada skala *right-wing authoritarianism* 
   - Diukur dengan skala *Likert*, 15 aitem dengan 9 pilihan jawaban
@@ -233,7 +236,7 @@ class: center, middle
 
 * Lakukan penyesuaian apabila perlu
 
-### [Kumpulkan tugasnya disini]()
+### [Kumpulkan tugasnya disini](https://forms.gle/eNGD2LSzqaZc2nXM7)
 
 ---
 

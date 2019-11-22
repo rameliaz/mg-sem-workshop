@@ -1,5 +1,5 @@
 ---
-title: "Workshop MG-SEM Bagian 2"
+title: "Workshop MG-SEM Bagian 5"
 subtitle: "Dies Natalis 36th"
 author: "Rizqy Amelia Zein"
 date: "2019/09/10 (updated: `r Sys.Date()`)"
@@ -34,7 +34,7 @@ class: title-slide, spaced
 <img src="libs/unair.png" style="width:15%;" class="fancyimage"/> <img src="libs/STUA.png" style="width:23%;" class="fancyimage"/> <img src="libs/ina-logo.jpg" style="width:7%;" class="fancyimage"/> <img src="libs/igdore.png" style="width:23%;" class="fancyimage"/>
 
 # Multigroup Structural Equation Modeling (SEM)
-## Menggunakan `JASP`: Bagian 2 - Korelasi
+## Menggunakan `JASP`: Bagian 5 - Dasar-Dasar SEM
 <br>
 ### <b>Rizqy Amelia Zein</b>
 * Dosen, [Fakultas Psikologi, Universitas Airlangga](https://psikologi.unair.ac.id)
@@ -44,7 +44,313 @@ class: title-slide, spaced
 
 ---
 
+# Pengantar SEM
 
+* SEM adalah *full model* `r fa("arrow-circle-right")` menggabungkan **model pengukuran** dengan **model jalur/struktural**
+
+* Ada beberapa pendekatan dalam SEM
+  - ***Strictly confirmatory*** `r fa("arrow-circle-right")` untuk menguji apakah ***variance-covariance matrix*** yang dihipotesiskan (*implied*) sama dengan/didukung oleh data (***observed variance-covariance matrix***)
+  
+  - ***Alternative model*** `r fa("arrow-circle-right")` membuat model alternatif dari dataset yang sama, sehingga kemungkinan struktur datanya berjenjang (*nested*) `r fa("arrow-circle-right")` ***multigroup CFA/SEM***
+  
+  - ***Model generating*** `r fa("arrow-circle-right")` dilakukan ketika peneliti sudah punya hipotesis model, namun melakukan modifikasi untuk meningkatkan *fit statistics* `r fa("arrow-circle-right")` *specification search*
+  
+---
+
+class: inverse
+
+# Langkah-langkah melakukan analisis SEM
+
+.pull-left[
+
+* Spesifikasi model
+
+* Identifikasi model
+
+* Estimasi model
+
+* Menguji model
+
+* Memodifikasi model
+
+]
+
+.pull.right[
+
+![](https://media.giphy.com/media/3o752ogcifnC3MECt2/giphy.gif)
+]
+
+---
+
+# Spesifikasi model
+
+.pull-left[
+
+* Peneliti menyusun model pengukuran dan model jalur dengan menggambar diagram jalur *path diagram*
+
+* Dalam SEM, justifikasi teori adalah suatu yang **tidak bisa ditawar-tawar** karena tanpa basis teori yang kuat, *model testing* akan selalu memberikan hasil yang mengecewakan (*poor fit*)
+
+* Sebelum melakukan SEM, peneliti sangat disarankan melakukan *preliminary study*, atau setidaknya *systematic review* yang dapat membantu peneliti menyusun hipotesis model yang baik
+
+]
+
+.pull-right[
+
+![](https://media.giphy.com/media/bp5U3nfEYnl9S/giphy.gif)
+
+]
+
+---
+
+# Identifikasi model
+
+* Model dapat diidentifikasi apabila ***degree of freedom* (*df*) >=0**
+
+* Apabila *df* = 0, maka model tsb adalah *saturated model* atau *just-identified model* 
+  - Jumlah **'informasi yang diketahui'** dan **'tidak diketahui'** sama persis
+  - Tidak bisa difalsifikasi, hampir 'selalu tepat', tetapi 'selalu salah'
+
+* Apabila *df* bernilai negatif, maka model tsb *under-identified* karena jumlah parameter jalur yang harus diestimasi lebih banyak daripada jumlah parameter di *variance-covariance matrix*
+  - Lebih banyak **'informasi yang tidak diketahui'** daripada yang **'diketahui'**
+  - Model 'misterius' `r emo::ji("smile")`
+
+* Model yang dapat diidentifikasi adalah *over-identified model* dimana **jumlah parameter *variance-covariance matrix* lebih banyak daripada jumlah parameter jalur yang diestimasi** (sehingga *df* >= 1)
+  - Lebih banyak **'informasi yang diketahui'** daripada yang **'tidak diketahui'**
+
+* *Degree of freedom* `r fa("arrow-circle-right")` dihitung dengan mengurangi jumlah nilai unik (*non-redundant information*) dalam *variance-covariance matrix* dengan jumlah parameter jalur yang hendak diestimasi
+
+
+---
+
+class: middle
+
+.pull-left[
+
+<center><img src="libs/over.png" style="width=1%;" class="fancyimage"/></center><br>
+
+]
+
+.pull-right[
+
+* Pada model ini jumlah nilai unik (*non-redundant information*) dalam *variance-covariance matrix* = 5(5+1)/2 = 15
+
+* Sedangkan jumlah parameter jalur yang akan diestimasi adalah 6 (5 *factor loading*, 6 *error variance*), sehingga
+
+* *df* = 15-11 = 4 `r emo::ji("medal")`
+
+* Model dapat diidentifikasi karena memenuhi syarat (*over-identified*)
+
+]
+  
+---
+
+class: middle
+
+.pull-left[
+
+<center><img src="libs/under.png" style="width=1%;" class="fancyimage"/></center><br>
+
+]
+
+.pull-right[
+
+* Pada model ini jumlah nilai unik (*non-redundant information*) dalam *variance-covariance matrix* = 3(3+1)/2 = 6
+
+* Sedangkan jumlah parameter jalur yang akan diestimasi adalah 7 (3 *factor loading*, 4 *error variance*), sehingga
+
+* *df* = 6-7 = -1 `r emo::ji("sad")`
+
+* Model tidak dapat diidentifikasi karena tidak memenuhi syarat (*under-identified*)
+
+]
+  
+---
+
+class: middle
+
+.pull-left[
+
+<center><img src="libs/just.png" style="width=1%;" class="fancyimage"/></center><br>
+
+]
+
+.pull-right[
+
+* Pada model ini jumlah nilai unik (*non-redundant information*) dalam *variance-covariance matrix* = 2(2+1)/2 = 3
+
+* Sedangkan jumlah parameter jalur yang akan diestimasi adalah 3 (3 *factor loading*, 3 *error variance*), sehingga
+
+* *df* = 6-6 = 0 `r emo::ji("sad")`
+
+* Model tidak dapat diidentifikasi karena tidak memenuhi syarat untuk diidentifikasi karena tidak ada ruang tersisa untuk melakukan estimasi (*just-identified*/*saturated model*)
+
+]
+
+---
+
+# Kesimpulan `r emo::ji("school")`
+
+* Untuk satu faktor/variabel laten, kita perlu **sedikitnya** 4 variabel indikator karena apabila 3<=, maka model akan *just-identified* atau *under-identified*
+
+* Tapi meskipun kita punya 4 variabel indikator untuk 1 variabel laten, kita masih mungkin memiliki model yang *just-identified*, ketika *error*nya berkorelasi
+
+* Apakah bisa 1 variabel laten diukur oleh 1 *observed variable*?
+
+---
+
+# Variabel laten dengan 1 indikator
+
+.pull-left[
+
+* Masih bisa diestimasi dengan asumsi
+
+  - Aitem diasumsikan memiliki [reliabilitas](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3475500/) sempurna, sehingga varians *error* di*constraint* = 0
+  - Reliabilitas diukur dengan *test-retest*, kemudian varians *error* di*constraint* dengan mempertimbangkan reliabilitas dan standar deviasi 
+]
+
+.pull-right[
+
+<center><img src="libs/single-item.png" style="width=1%;" class="fancyimage"/></center><br>
+
+]
+
+---
+
+# Mengestimasi model
+
+* Pilih **metode estimasi** yang paling cocok dengan karakteristik data (`ML`, `ULS`, `GLS`, `WLS`, `DWLS` atau *robust* `DWLS`)
+* Metode estimasi ini yang akan menghitung *standard error*, apabila metode estimasi yang dipilih tidak tepat dan tidak sesuai dengan kompatibilitas datanya, maka estimasi *standard error* menjadi bias `r fa("arrow-circle-right")` model memberikan informasi yang menyesatkan
+
+# Menguji model
+
+* Dalam tahap ini, peneliti perlu mengetahui apakah *implied model*nya didukung oleh data atau tidak
+* Hal ini dapat dievaluasi melalui uji ketepatan model (*omnibus model fit*) dengan beberapa parameter kriteria
+  
+---
+
+# Menguji ketepatan model
+
+* Umumnya peneliti ingin mendapatkan 3 informasi
+  - ***Chi-square* sebagai *global fit measure***. *Chi-square* menguji perbedaan antara *model-implied* dengan *sample covariance matrix*. Apabila *p-value* dari *Chi-square*>=α (dengan α=0.05), maka **tidak ada perbedaan** antara keduanya `r fa("arrow-circle-right")` data mendukung model
+  
+  - ***p-value* dari *factor loading*** untuk setiap variabel dalam model. Perhitungan *p-value* untuk *factor loading* menggunakan *t-statistics* (formula yang sama dengan *t-test*). Namun **parameter yang lebih penting** adalah
+  
+  - **Besar dan arah *factor loading***. Besar *factor loading* memberikan informasi mengenai *magnitude* (besar efek/*effect size*) dan kontribusi variabel tersebut dalam menjelaskan variabel lainnya. Sedangkan arah *factor loading* (positif/negatif) memberikan informasi mengenai arah hubungan
+  
+---
+
+## Menguji ketepatan model: *Chi-square* (*X*<sup>2</sup>)
+
+.pull-left[
+* Dihitung dengan cara membandingkan *saturated model* dengan model tanpa jalur sama sekali (*baseline*, *null*, atau *independent model*)
+
+* Kok *saturated model*? Bukannya *saturated model* tidak bisa dianalisis?
+  - Iya betul, *saturated model* tidak dapat dijadikan *implied model*, tetapi berguna untuk menghitung nilai *X*<sup>2</sup>
+
+* Selain *X*<sup>2</sup>, kita bisa menggunakan *alternative fit indices* (yang penggunaannya cenderung menggunakan *rule of thumb*) yang terdiri dari
+  - *Incremental index*
+  - *Parsimony index*
+  - *Absolute (standalone) index*
+
+]
+
+.pull-right[
+  
+![](https://media.giphy.com/media/xT0xeuOy2Fcl9vDGiA/giphy.gif)
+]
+
+---
+
+# *Incremental (comparative/relative) index*
+
+* Didapatkan dengan membandingkan *implied model* dengan *baseline model*, meliputi
+  - *Comparative Fit Index* 
+
+---
+
+# *Parsimony index*
+
+* Indeks ini secara khusus memberikan pinalit pada kompleksitas model, sehingga umumnya model dengan jalur yang lebih banyak (sehingga *df*nya lebih kecil) akan mendapat pinalti
+
+---
+
+# *Absolute index*
+
+* Indeks ini dihitung tanpa melakukan perbandingan dengan *baseline* atau mempinalti kompleksitas model
+
+* Meliputi...
+  -
+
+
+---
+
+# [JARS APA](http://doi.apa.org/getdoi.cfm?doi=10.1037/amp0000191)
+
+### Apa saja yang harus dilaporkan?
+
+* **Abstrak**
+  - Laporkan setidaknya 2 global fit statistics (X<sup>2</sup> [df, p-value], RMSEA/GFI/AGFI/TLI, BIC, AIC, dll)
+
+* **Metode**
+  -Deskripsikan **variabel endogen dan eksogennya**. Berikan penjelasan apakah variabel endogen dihasilkan dari satu atau beberapa instrumen.
+  - Berikan penjelasan, untuk setiap instrumen/variabel, apakah **indikator atau total skor** diperoleh dari **aitem yang homogen (*item parceling*)**
+  - Berikan penjelasan **bagaimana skala/instrumen disusun**, laporkan **properti psikometriknya**, serta penjelasan mengenai **level pengukuran** untuk setiap variabel (kategorikal/continuous).
+  - Laporkan bagaimana cara peneliti **menentukan jumlah sampel** (rule of thumb, ketersediaan sumberdaya, hasil dari *a priori power analysis* atau simulasi (Monte Carlo), estimasi parameter model di populasi yang direncanakan)
+  
+---
+
+# [JARS APA](http://doi.apa.org/getdoi.cfm?doi=10.1037/amp0000191)
+
+* **Hasil penelitian**
+
+  - ***Data diagnostics*** `r fa("arrow-circle-right")` % data *missing*, distribusi data *missing* di semua variabel
+  
+  - ***Missingness*** `r fa("arrow-circle-right")` apabila ada data *missing*, maka peneliti harus menganalisis apakah data *missing*nya MCAR, MAR atau MNAR, kemudian bagaimana cara peneliti menangani data *missing* (*multiple imputation*, FIML, *listwise/pairwise deletion*, *deletion of cases*, dll.)
+  
+  - **Distribusi data** `r fa("arrow-circle-right")` data normal/non-normal? Kalau tidak normal, apakah peneliti melakukan **normalizing transformation data** (log linear, dll). Laporkan *multivariate normality*
+  
+  - ***Data summary*** `r fa("arrow-circle-right")` *summary statistics* yang bisa digunakan orang lain untuk melakukan replikasi, bisa ***variance-covariance*** atau ***correlation matrix*** untuk variabel ***continuous*** dan ***polychoric correlation matrix*** untuk data kategorikal
+
+---
+
+# [JARS APA](http://doi.apa.org/getdoi.cfm?doi=10.1037/amp0000191)
+
+* **Spesifikasi model**
+
+  - Jelaskan apakah model ***strictly confirmatory***, ***comparison*** atau alternative model, atau ***model generation***
+
+  - Buat diagram jalur [kalau variabel terlalu banyak, diagram jadi terlalu kompleks dan oleh karena itu, bisa diganti dengan tabel saja. Pembaca diasumsikan sebagai expert sehingga tidak menampilkan diagram *full model* seharusnya tidak masalah]. Bedakan antara variabel ***constrained***, ***fixed/free***, ***observed*** dan ***latent variables***
+
+  - Kalau model yang diuji adalah bagian dari model yang lebih besar, jelaskan rasionalisasinya dan proporsi hasilnya
+
+  - Kalau ada ***residual correlation pada error*** (*error correlation*), ***interaction effect*** atau ***nonindependence*** (pada ***nested data***), jelaskan rasionalisasinya
+
+  - Kalau membandingkan model, jelaskan parameter yang akan digunakan untuk membandingkan
+
+---
+
+# [JARS APA](http://doi.apa.org/getdoi.cfm?doi=10.1037/amp0000191)
+
+* **Estimasi**
+  - Jelaskan *software* dan versi yang digunakan, dan jelaskan **metode estimasi** yang digunakan (ML, GLS, WLS, DWLS, dll)
+  
+  - Jelaskan ***default criteria*** di *software* yang digunakan (misal *maximum number of iteration*, *bootstrapping*, dll) yang dilakukan agar model berhasil diestimasi
+
+* ***Model fit***
+  - Laporkan ***omnibus (global) fit statistics***nya dan diinterpretasikan artinya. Jangan lupa untuk menyertakan sitasi referensi terbaru atas interpretasi **fit stat** ini.
+
+ - Laporkan ***local fit*** (misal *covariance*, *standardized* atau *residuals*) dan *indicator estimates* (*factor loading*)
+ - Kalau membandingkan antara dua model, jelaskan parameter yang digunakan untuk membandingkan model (misal BIC, AIC, dll)
+
+---
+
+# [JARS APA](http://doi.apa.org/getdoi.cfm?doi=10.1037/amp0000191)
+
+* **Respesifikasi**
+
+  - Jelaskan prosedur modifikasi model, jelaskan juga metode yang digunakan untuk melakukan modifikasi
+
+  - Jelaskan rasionalisasi teorinya ketika peneliti melakukan modifikasi dan bandingkan dengan model yang sebelumnya
 
 ---
 

@@ -105,8 +105,9 @@ class: inverse
 
 <center><img src="libs/varcovarmatrix.png" style="width:50%;" class="fancyimage"/></center><br>
 
-* Jumlah *variance-covariance* yang diestimasi adalah ***p*(*p*+1)/2**
-  - Sehingga dengan contoh di atas maka jumlah *variance-covariance* yang diestimasi adalah 3(3+1)/2=6, yaitu **3 varians (diagonal)** dan **3 *covariance* (sisanya)**.
+* Jumlah nilai unik (*non-redundant information*) dalam *variance-covariance matrix* adalah ***p*(*p*+1)/2**
+  - dimana *p* adalah jumlah *observed variable*
+  - Sehingga dengan contoh di atas maka jumlah nilai unik (*non-redundant information*) di *variance-covariance matrix* adalah 3(3+1)/2=6, yaitu **3 varians (diagonal)** dan **3 *covariance* (sisanya)**.
 
 ---
 
@@ -219,7 +220,7 @@ class: center, middle, inverse
   
 * *Standarised solution/estimates*
   - Hanya *interpretable* untuk kelompok sampel yang diuji - tidak bisa dibandingkan dengan kelompok sampel yang lain.
-  - Berguna untuk membandingkan *loading factor* antar-variabel di dalam model - peneliti dapat mengidentifikasi, variabel mana yang paling berkontribusi menjelaskan *dependent variable*.
+  - Berguna untuk membandingkan *factor loading* antar-variabel di dalam model - peneliti dapat mengidentifikasi, variabel mana yang paling berkontribusi menjelaskan *dependent variable*.
   - Apabila variabel dalam model memiliki unit pengukuran yang berbeda, maka *standardised estimates* akan sangat membantu untuk menstandardisasi unit antar-variabel tersebut.
   
 * Ada banyak perbedaan pendapat mengenai metrik mana yang harus dilaporkan, tetapi

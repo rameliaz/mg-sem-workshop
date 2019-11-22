@@ -168,6 +168,7 @@ class: center, middle
 
 * Kedua variabel indikator tersebut mengukur variabel laten lain di luar model (*unique factor*)
 * Bisa jadi karena ada aitem *unfavourable* dalam skala 
+* Kemungkinan konstruk laten **bukan konstruk tunggal** (multidimensi)
 * Perhatikan justifikasi teori ketika menambah *error covariance*
 
 ---
@@ -196,6 +197,33 @@ class: center, middle
 * *Weighted least squares* &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; dapat digunakan pada data kategorikal (nominal dan ordinal), estimasi menggunakan *polychoric correlation matrix*
 
 * *Diagonally weighted least squares* &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; dapat digunakan pada data kategorikal, estimasi menggunakan *polychoric correlation matrix* yang kemudian dikonversi menjadi *asymptotic covariance matrix*, berkerja dengan baik pada sampel yang relatif kecil dan data yang tidak berdistribusi normal
+
+---
+
+class: inverse, middle, center
+
+# Demonstrasi CFA
+
+![](https://media.giphy.com/media/3oEjHZPivwdJ0syhKE/giphy.gif)
+
+### [Unduh Dataset Contoh CFA](https://rameliaz.github.io/mg-sem-workshop/contoh-cfa.jasp)
+
+---
+
+# TUGAS 4: Mencoba *confirmatory factor analysis*
+
+* Unduh [Dataset Satu Kelompok](https://rameliaz.github.io/mg-sem-workshop/dataset-wave1.csv)
+
+* Unduh [Kamus Data disini](https://rameliaz.github.io/mg-sem-workshop/codebook-kamusdata.csv)
+
+* Lakukan CFA pada skala *right-wing authoritarianism* 
+  - Diukur dengan skala *Likert*, 15 aitem dengan 9 pilihan jawaban
+
+* Laporkan *model fit*, *factor loading*, dan *multivariate normality*
+
+* Lakukan penyesuaian apabila perlu
+
+### [Kumpulkan tugasnya disini](https://forms.gle/eNGD2LSzqaZc2nXM7)
 
 ---
 

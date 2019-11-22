@@ -369,6 +369,8 @@ class: inverse, center, middle
 
 * Model SEM dengan *missing data*
 
+* Model SEM dengan variabel moderator/mediator, atau *moderated mediation* atau *mediated moderation*
+
 * Model SEM ketika variabel indikatornya *dichotomous*
 
 * *Hierarchical latent variable model* (*second-order CFA*, misalnya)
