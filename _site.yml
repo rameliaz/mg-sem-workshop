@@ -44,8 +44,10 @@ navbar:
       href: corr.jasp
     - text: "Dataset Latihan Korelasi"
       href: latihancorr.csv
-    - text: "Dataset Contoh CFA"
+    - text: "Dataset Contoh CFA (*.jasp)"
       href: contoh-cfa.jasp
+    - text: "Dataset Contoh CFA (*.csv)"
+      href: contoh-cfa.csv
     - text: "Dataset Contoh SEM"
       href: contoh-sem.jasp
     - text: "Dataset Satu Kelompok"
