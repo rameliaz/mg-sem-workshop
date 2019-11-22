@@ -264,7 +264,9 @@ class: middle
 # *Incremental (comparative/relative) index*
 
 * Didapatkan dengan membandingkan *implied model* dengan *baseline model*, meliputi
-  - *Comparative Fit Index* 
+  - *Comparative Fit Index* `r fa("arrow-circle-right")` mendekati 1 = *closer fit*
+  - *Normed Fit Index* `r fa("arrow-circle-right")` mendekati 1 = *better fit*
+  - *Parsimonious Normed Fit Index* `r fa("arrow-circle-right")` NFI yang mempertimbangkan *parsimony* model, mendekati 1 = *
 
 ---
 
@@ -279,7 +281,7 @@ class: middle
 * Indeks ini dihitung tanpa melakukan perbandingan dengan *baseline* atau mempinalti kompleksitas model
 
 * Meliputi...
-  -
+  - 
 
 
 ---
