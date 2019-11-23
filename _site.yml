@@ -48,12 +48,10 @@ navbar:
       href: contoh-cfa.jasp
     - text: "Dataset Contoh CFA (*.csv)"
       href: contoh-cfa.csv
-    - text: "Dataset Contoh SEM"
-      href: contoh-sem.jasp
-    - text: "Dataset Satu Kelompok"
-      href: dataset-wave1.csv
-    - text: "Dataset Dua Kelompok"
+    - text: "Dataset Contoh Multigroup SEM"
       href: dataset-mg.csv
+    - text: "Dataset Latihan SEM"
+      href: dataset-wave1.csv
   - text: "Survei"  
     menu: 
     - text: "Evaluasi Workshop"

@@ -76,9 +76,7 @@ Berikut adalah *outline* materi *workshop*:
 * Menguji hipotesis
   * *Statistical power*
   * Ukuran sampel
-  * Perbandingan model
-  * *Effect size*
-* Membandingkan antara pendekatan dua-langkah dengan empat-langkah *modeling* dengan SEM
+* Membedakan antara pendekatan dua-langkah dengan empat-langkah *modeling* dengan SEM
 * Menuliskan hasil analisis SEM dalam laporan penelitian
 
 
@@ -91,7 +89,7 @@ Berikut adalah *outline* materi *workshop*:
   * *Strict invariance*
   * *Homogeneity of latent variable variances*
   * *Homogeneity of factor means*
-* *Group equality constraints*
+* Mengevaluasi *measurement invariance*
 * Menuliskan hasil analisis MG-SEM dalam laporan penelitian
 
 

@@ -104,7 +104,7 @@ class: inverse
 
 # Identifikasi model
 
-* Model dapat diidentifikasi apabila ***degree of freedom* (*df*) >=0**
+* Model dapat diidentifikasi apabila ***degree of freedom* (*df*) ≥0**
 
 * Apabila *df* = 0, maka model tsb adalah *saturated model* atau *just-identified model* 
   - Jumlah **'informasi yang diketahui'** dan **'tidak diketahui'** sama persis
@@ -190,7 +190,7 @@ class: middle
 
 # Kesimpulan `r emo::ji("school")`
 
-* Untuk satu faktor/variabel laten, kita perlu **sedikitnya** 4 variabel indikator karena apabila 3<=, maka model akan *just-identified* atau *under-identified*
+* Untuk satu faktor/variabel laten, kita perlu **sedikitnya** 4 variabel indikator karena apabila ≤3, maka model akan *just-identified* atau *under-identified*
 
 * Tapi meskipun kita punya 4 variabel indikator untuk 1 variabel laten, kita masih mungkin memiliki model yang *just-identified*, ketika *error*nya berkorelasi
 
@@ -265,24 +265,116 @@ class: middle
 
 * Didapatkan dengan membandingkan *implied model* dengan *baseline model*, meliputi
   - *Comparative Fit Index* `r fa("arrow-circle-right")` mendekati 1 = *closer fit*
+  
   - *Normed Fit Index* `r fa("arrow-circle-right")` mendekati 1 = *better fit*
-  - *Parsimonious Normed Fit Index* `r fa("arrow-circle-right")` NFI yang mempertimbangkan *parsimony* model, mendekati 1 = *
+  
+  - *Parsimonious Normed Fit Index* `r fa("arrow-circle-right")` NFI yang mempertimbangkan *parsimony* model, mendekati 1 = *better fit*
+  
+  - *Incremental Fit Index*/*Bollen's Nonnormed Fit Index* `r fa("arrow-circle-right")` NFI yang mempertimbangkan *parsimony* model, mendekati 1 = *better fit*
+  
+  - *Tucker Lewis Index*/*Bentler-Bonnet Non-Normed Fit Index* `r fa("arrow-circle-right")` mendekati 1 = *better fit*
 
 ---
 
 # *Parsimony index*
 
-* Indeks ini secara khusus memberikan pinalit pada kompleksitas model, sehingga umumnya model dengan jalur yang lebih banyak (sehingga *df*nya lebih kecil) akan mendapat pinalti
+* Indeks ini secara khusus memberikan pinalti pada kompleksitas model, sehingga umumnya model dengan jalur yang lebih banyak (sehingga *df*nya lebih kecil) akan mendapat pinalti
+
+* Indeks-indeksnya meliputi
+  - *Expected Cross Validation* `r fa("arrow-circle-right")` digunakan untuk membandingkan dua model atau lebih. Nilai yang lebih kecil menunjukkan model yang lebih baik
+  - *Information-Theoretic Criterion* `r fa("arrow-circle-right")` meliputi *Akaike's Information Criterion*, *Schwarz'a Bayesian Information Criteria* dan *Sample-size Adjusted Bayesian Information Criteria*. Nilai yang kecil menunjukkan model yang lebih baik
+  - *Noncentrality Parameter-based Indexes* `r fa("arrow-circle-right")` mendekati 1 = *better fit*
+  - *McDonald's Noncentrality Index* `r fa("arrow-circle-right")` mendekati 1 = *better fit*
+  
+* **Yang paling sering digunakan adalah**
+
+* *Root Mean Square Error of Approximation* (RMSEA) `r fa("arrow-circle-right")` menilai apakah model secara umum tepat menggambarkan data dan biasanya berkisar antara 0.0-1.0, meskipun dapat lebih dari 1. Model ***close fit*** ketika 0.05 - 0.08
+  - Ada beberapa perangkat lunak (termasuk `JASP`) yang bisa mengkalkulasi *confidence interval* dan *p-value*nya.
+  - *P-value* ini dapat digunakan untuk menolak *H*<sub>0</sub>: RMSEA = 0.05
+  - Oleh karena itu, **menolak *H*<sub>0</sub>** menunjukkan bahwa model "*close-fitting*"
 
 ---
 
 # *Absolute index*
 
-* Indeks ini dihitung tanpa melakukan perbandingan dengan *baseline* atau mempinalti kompleksitas model
+* Indeks ini dihitung tanpa melakukan perbandingan dengan *baseline*
 
-* Meliputi...
-  - 
+* Meliputi
+  - *Chi-square* (*X*<sup>2</sup>)/*df* ratio
+  - *Goodness of Fit Index* `r fa("arrow-circle-right")` mendekati 1 = *better fit*
+  - *Adjusted Goodness of Fit Index* `r fa("arrow-circle-right")` merupakan *parsimony adjustment* dari GFI, mendekati 1 = *better fit*
+  - *Parsimony Goodness of Fit Index* `r fa("arrow-circle-right")` mendekati 1 = *better fit*
+  - *Hoelter's Critical n* `r fa("arrow-circle-right")` nilainya sebaiknya > 200
+  - *Standardized Root Mean Square Residual* (SRMR/RMR) `r fa("arrow-circle-right")` paling baik digunakan untuk membandingkan dua model yang diuji di satu kelompok sampel yang sama, nilai < 0.05 menunjukkan *good fit*
 
+---
+
+# *Parameter fit*
+
+* Parameter jalur bisa ditolak meskipun hasil *omnibus test* memuaskan, sehingga menginterpretasi koefisien jalur adalah proses yang juga harus dilakukan.
+
+* Berikut ini adalah beberapa prosedur yang direkomendasikan:
+  - Lihat tanda *factor loading*, apakah arahnya sudah benar (negatif/positif)
+  
+  - Lihat *standardised parameter estimates* untuk tahu apakah ada *factor loading* yang nilainya diatas kewajaran
+  
+  - Lihat *p-value* untuk mempertimbangan *rejecting* *H*<sub>0</sub> (bahwa tidak ada korelasi atau *direct effect* antara dua variabel)
+  
+  - Lakukan pengujian *measurement invariance* dengan mengasumsikan beberapa *factor loading* sama di berbagai kelompok yang berbeda (misal gender, dll), kemudian buat perbandingan relatif antara *factor loading* di kelompok yang berbeda tersebut.
+  
+  - Apabila *error variance* mendekati nol (yang menyiratkan bahwa variabel *observed* adalah indikator yang 'nyaris sempurna' bagi variabel laten -- **tapi ini tidak mungkin**), lebih mungkin disebabkan oleh adanya *outlier*, kurangnya jumlah sampel, atau kurangnya jumlah indikator
+  
+---
+
+# *Statistical power*
+
+* *Statistical power* dalam pengujian hipotesis dalam SEM `r fa("arrow-circle-right")` peluang mempertahankan *H*<sub>0</sub> apabila *H*<sub>0</sub> benar
+  - Peluang peneliti secara tepat menyimpulkan bahwa **tidak ada perbedaan antara implied model dengan observed model** ketika memang **benar-benar tidak ada perbedaan** diantara keduanya
+
+* Mengestimasi *statistical power* dalam SEM cenderung lebih rumit karena melibatkan beberapa korelasi dan regresi sekaligus.
+
+* *Statistical power* ditentukan oleh
+  - **true population model** (yang kita tidak mungkin tahu)
+  - **probabilitas melakukan kesalahan tipe 1** (α)
+  - ***degree of freedom*** model
+  - **jumlah sampel**
+
+---
+
+class: middle
+
+## Mengestimasi jumlah sampel dengan *package* [`semTools`](https://github.com/simsem/semTools/wiki/Functions)
+
+.pull-left[
+
+<center><img src="libs/over.png" style="width=1%;" class="fancyimage"/></center><br>
+
+]
+
+.pull-right[
+
+```{r}
+
+semTools::findRMSEAsamplesize(rmsea0 = 0.05, rmseaA = 0.08, df=4, power=0.90, alpha = 0.05)
+
+```
+
+
+]
+
+---
+
+# Dua vs empat langkah
+
+* Dua langkah menyusun model [(Anderson & Gerbing, 1988)](https://psycnet.apa.org/record/1989-14190-001)
+  - *Measurement* model
+  - *Structural* model
+
+* Empat langkah menyusun model [(Mulaik & Millsap, 2000)](https://www.tandfonline.com/doi/abs/10.1207/S15328007SEM0701_02)
+  - Menspesifikasikan model pengukuran yang *unrestricted* dengan melakukan EFA untuk mengidentifikasi jumlah faktor yang akan dicocokkan dengan *variance-covariance matrix* dari data
+  - Spesifikasikan model CFA yang menguji model pengukuran sebuah konstruk laten
+  - Spesifikasikan hubungan antara variabel laten di dalam model (model struktural)
+  - Tentukan parameter *acceptable fit* untuk model struktural, misalnya CFI > .95 dan RMSEA < 0.05, kemudian menentukan *free parameter* dalam modelnya
 
 ---
 
@@ -353,6 +445,39 @@ class: middle
   - Jelaskan prosedur modifikasi model, jelaskan juga metode yang digunakan untuk melakukan modifikasi
 
   - Jelaskan rasionalisasi teorinya ketika peneliti melakukan modifikasi dan bandingkan dengan model yang sebelumnya
+
+---
+
+# Demonstrasi SEM
+
+.pull-left[
+
+* Buka `JASP` dan buka dataset **Political Democracy**
+
+* `Data Library` `r fa("arrow-circle-right")` SEM `r fa("arrow-circle-right")` pilih **Political Democracy**
+
+
+]
+
+.pull-right[
+
+![](https://media.giphy.com/media/PlQ5TTRt1IhsA/giphy.gif)
+
+]
+
+---
+
+# TUGAS 5: Membuat dan melaporkan SEM
+
+* Unduh [Dataset Latihan SEM](https://rameliaz.github.io/mg-sem-workshop/dataset-wave1.csv)
+
+* Unduh [Kamus Data disini](https://rameliaz.github.io/mg-sem-workshop/codebook-kamusdata.xlsx)
+
+* Silahkan spesifikasi model SEM dari variabel yang tersedia di dataset. Satu model sedikitnya mengandung 2 variabel laten.
+
+* *Export* datasetnya menjadi `.htm` kemudian 
+
+### [**Unggah tugasnya di sini**](https://forms.gle/4cMP9s3HPPvGPwg47)
 
 ---
 

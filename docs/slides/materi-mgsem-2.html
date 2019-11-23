@@ -85,6 +85,14 @@ class: inverse
 
 ---
 
+class: center, middle
+
+![](https://i2.wp.com/peterjamesthomas.com/wp-content/uploads/2019/09/xkcd-extrapolating.png)
+  
+
+
+---
+
 # *Variance-covariance* dan *correlation matrix* (1)
 
 * Untuk melakukan SEM, maka perangkat lunak membutuhkan *variance-covariance matrix* untuk mengestimasi parameter model
@@ -156,7 +164,7 @@ class: inverse, middle, center
 
 # Matrik korelasi dengan *non-positive definite*
 
-* Koefisien korelasi yang nilainya &gt;=1 menyebabkan matriks korelasi menjadi *non-positive definite*
+* Koefisien korelasi yang nilainya ≥1 menyebabkan matriks korelasi menjadi *non-positive definite*
   - Artinya, parameter model tidak mungkin diestimasi
 
 * Mengapa terjadi?
@@ -169,15 +177,9 @@ class: inverse, middle, center
 
 ---
 
-class: center, middle, inverse
-
-![](https://i2.wp.com/peterjamesthomas.com/wp-content/uploads/2019/09/xkcd-extrapolating.png)
-  
----
-
 # *Heywood* dan *ultra-Heywood case*
 
-* Terjadi ketika *communalities* = 1 (*Heywood*) atau &gt;=1 (*ultra-Heywood*), atau terjadi ketika varians *measurement error* bernilai negatif
+* Terjadi ketika *communalities* = 1 (*Heywood*) atau ≥1 (*ultra-Heywood*), atau terjadi ketika varians *measurement error* bernilai negatif
   - *Communalities* adalah kuadrat dari koefisien korelasi (*R*&lt;sup&gt;2&lt;/sup&gt;)
   - Apabila terjadi, maka ada yang salah dengan spesifikasi model (hipotesis)
 
@@ -211,7 +213,7 @@ class: center, middle, inverse
   - Apabila variabel dalam model memiliki unit pengukuran yang berbeda, maka *standardised estimates* akan sangat membantu untuk menstandardisasi unit antar-variabel tersebut.
   
 * Ada banyak perbedaan pendapat mengenai metrik mana yang harus dilaporkan, tetapi
-  - Selalu laporkan *unstandarised solution/estimates* &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt;
+  - Selalu laporkan *unstandarised solution/estimates* (boleh juga dengan *standarised solution/estimates*)
 
 ---
 

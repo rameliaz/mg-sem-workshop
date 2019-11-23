@@ -211,8 +211,6 @@ class: middle
 * Menguji hipotesis
   * *Statistical power*
   * Ukuran sampel
-  * Perbandingan model
-  * *Effect size*
 * Membandingkan antara pendekatan dua-langkah dengan empat-langkah *modeling* dengan SEM
 * Menuliskan hasil analisis SEM dalam laporan penelitian
 
@@ -243,7 +241,7 @@ class: middle
   * *Strict invariance*
   * *Homogeneity of latent variable variances*
   * *Homogeneity of factor means*
-* *Group equality constraints*
+* Mengevaluasi *measurement invariance*
 * Menuliskan hasil analisis MG-SEM dalam laporan penelitian
 
 ]
@@ -302,6 +300,9 @@ class: inverse, center, middle
   - Oleh karena itu, membutuhkan variabel *observed* untuk mengukurnya.
   - Variabel *latent* dapat berperan sebagai variabel *independent* atau *dependent*.
 
+* Variabel Eksogen dan Endogen
+  - Variabel eksogen `r fa("arrow-circle-right")` variabel yang memberikan *direct effect* saja
+  - Variabel endogen `r fa("arrow-circle-right")` variabel yang menerima *direct effect* saja
 
 ]
 
@@ -312,6 +313,26 @@ class: inverse, center, middle
 ]
 
 ---
+
+# Jenis-jenis variabel
+
+.pull-left[
+
+
+* Variabel Eksogen dan Endogen
+  - Variabel eksogen `r fa("arrow-circle-right")` variabel yang **memberikan** *direct effect* saja
+  - Variabel endogen `r fa("arrow-circle-right")` variabel yang **menerima** *direct effect* saja
+
+]
+
+.pull-right[
+
+![](https://media.giphy.com/media/yBFOH8Ux7nHQA/giphy.gif)
+
+]
+
+---
+
 
 # Contohnya...
 

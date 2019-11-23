@@ -106,8 +106,9 @@ class: middle, center
   - Dilakukan untuk mengeluarkan *standardised estimates*
   - ...yang interpretasinya sama seperti *standardised estimates* di regresi linear
   - *Factor loading* di *z-score*kan
+  - Sehingga *default*nya, *mean* variabel laten = 0, *variance* = 1
 
-* Membatasi/menentukan **satu** *error covariance* untuk setiap variabel/faktor laten
+* Membatasi/menentukan *error covariance* untuk setiap variabel/faktor laten
   - Dilakukan untuk menentukan *error covariance* yang lain
 
 ---
@@ -225,9 +226,9 @@ class: inverse, middle, center
 
 # TUGAS 4: Mencoba *confirmatory factor analysis*
 
-* Unduh [Dataset Satu Kelompok](https://rameliaz.github.io/mg-sem-workshop/dataset-wave1.csv)
+* Unduh [Dataset Latihan SEM](https://rameliaz.github.io/mg-sem-workshop/dataset-wave1.csv)
 
-* Unduh [Kamus Data disini](https://rameliaz.github.io/mg-sem-workshop/codebook-kamusdata.csv)
+* Unduh [Kamus Data disini](https://rameliaz.github.io/mg-sem-workshop/codebook-kamusdata.xlsx)
 
 * Lakukan CFA pada skala *right-wing authoritarianism* 
   - Diukur dengan skala *Likert*, 15 aitem dengan 9 pilihan jawaban
