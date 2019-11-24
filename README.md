@@ -117,10 +117,7 @@ Berikut adalah *outline* materi *workshop*:
 ## Sebelum mulai workshop
 
 * Sebaiknya semua peserta sudah memasang [JASP versi 0.11.1](https://jasp-stats.org/download/) pada perangkatnya masing-masing, untuk menghindari terlalu banyaknya waktu untuk menyelesaikan *troubleshooting* instalasi ketika *workshop*.
-* Peserta sangat disarankan untuk menonton video tutorial JASP di bawah ini sebelum *workshop* untuk belajar menavigasikan menu dan fitur yang ada dalam JASP (total durasi kurang lebih hanya 5 menit).
-
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/HxqB7CUA-XI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-
+* Peserta sangat disarankan untuk [menonton video tutorial JASP](https://www.youtube.com/embed/HxqB7CUA-XI) sebelum *workshop* untuk belajar menavigasikan menu dan fitur yang ada dalam JASP (total durasi kurang lebih hanya 5 menit).
 
 
 ## Video rekaman
@@ -153,7 +150,7 @@ Referensi untuk poin terakhir: Cho, E. (2016). [Making Reliability Reliable: A S
 
 ## Poster kegiatan
 
-<center><img src="libs/poster.jpg" style="width:70%;" class="fancyimage"/></center><br>
+<center><img src="libs/poster.png" style="width:70%;" class="fancyimage"/></center><br>
 
 
 ## Jawaban Latihan
