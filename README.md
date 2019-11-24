@@ -24,7 +24,7 @@ Berikut adalah *outline* materi *workshop*:
 
 ##### **Korelasi**
 * Jenis-jenis koefisien korelasi
-* Faktor-faktor yang membuat koefisien korelasi bervariasiK
+* Faktor-faktor yang membuat koefisien korelasi bervariasi
 * [Koreksi atenuasi](https://methods.sagepub.com/reference/encyc-of-research-design/n81.xml) dan *measurement error*
 * *Variance-covariance* dan *correlation matrix*
 * *WARNING! Covariance/correlation matrix is not positive definite*
