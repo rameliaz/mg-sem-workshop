@@ -31,8 +31,6 @@ class: title-slide, spaced
 
 ---
 
-class: inverse
-
 # Analisis faktor
 
 .pull-left[
@@ -73,7 +71,7 @@ class: inverse
 
 * Cara kerjanya adalah dengan membandingkan *variance-covariance matrix* yang dihipotesiskan dengan *variance-covariance matrix* pada data (sampel)
 
-* **Perhatian**📢
+* **Perhatian**🔊
   - **Sangat tidak disarankan** untuk melakukan EFA kemudian CFA pada **sampel yang sama**
   - Karena *generating hypothesis* dengan *testing hypothesis* adalah dua proses yang berbeda yang **tidak seharusnya** dilakukan pada sampel yang sama
   - Kalau hal tsb dilakukan, maka tentu saja peneliti akan mendapatkan hasil yang 'sesuai prediksinya'
@@ -89,14 +87,14 @@ class: middle, center
 
 # [*Constraining parameter* model](https://psycnet.apa.org/record/2008-06808-005)
 
-* Membatasi/menentukan varians untuk setiap variabel/faktor laten
-  - Dilakukan untuk mengeluarkan *standardised estimates*
+* **Membatasi/menentukan varians** untuk setiap **variabel/faktor laten**
+  - Dilakukan untuk mengeluarkan ***standardised estimates***
   - ...yang interpretasinya sama seperti *standardised estimates* di regresi linear
   - *Factor loading* di *z-score*kan
   - Sehingga *default*nya, *mean* variabel laten = 0, *variance* = 1
 
-* Membatasi/menentukan *error covariance* untuk setiap variabel/faktor laten
-  - Dilakukan untuk menentukan *error covariance* yang lain
+* Membatasi/menentukan ***error covariance*** untuk setiap variabel/faktor laten
+  - Dilakukan untuk **menentukan *error variance***
 
 ---
 
@@ -104,17 +102,20 @@ class: middle, center
 
 * *Congeneric*
   - Model yang paling moderat dan *default* di berbagai perangkat lunak SEM
-  - Asumsinya, skala, *error variance*, dan *factor loading* **boleh berbeda (dibebaskan)**
+  - Asumsinya, **skala, *error variance*, dan *factor loading* boleh berbeda (dibebaskan)**
+  - **Teknik reliabilitas skala** yang mengasumsikan model pengukuran *congeneric* &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; ω, McDonald's ω, ω total (ω&lt;sub&gt;*t*&lt;/sub&gt;), Revelle's ω, Raju's *coefficient*, *composite reliability*.
 
 * *Tau equivalence*
   - Model yang sedikit lebih rigid daripada *congeneric*
-  - Asumsinya, skala dan *error variance* **boleh berbeda (dibebaskan)**, namun *factor loading* **harus sama (dibatasi)**
+  - Asumsinya, **skala dan *error variance* boleh berbeda (dibebaskan)**, namun ***factor loading* harus sama (dibatasi)**
   - Ketika asumsi *tau equivalence* dipenuhi, maka [Cronbach's α dapat digunakan](https://www.ncbi.nlm.nih.gov/pubmed/28557467)
+  - Selain Cronbach's α, **teknik reliabilitas skala** yang mengasumsikan model pengukuran *tau equivalence* &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; Formula Rulon, KR-20, Flanagan-Rulon Formula, Guttman's λ&lt;sub&gt;3&lt;/sub&gt;, Guttman's λ&lt;sub&gt;4&lt;/sub&gt; dan Hoyt *method*.
 
 * Paralel
   - Model yang paling rigid
-  - Asumsinya, skala, *error variance*, dan *factor loading* **harus sama (dibatasi)**
-  
+  - Asumsinya, **skala, *error variance*, dan *factor loading* harus sama (dibatasi)**
+  - **Teknik reliabilitas skala** yang mengasumsikan model pengukuran paralel &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; Spearman-Brown's Formula, Standardised α.
+    
 ---
 
 class: center, middle
@@ -138,13 +139,13 @@ class: center, middle
 # Reflektif vs Formatif
 
 * Reflektif
-  - Variabel laten **menjelaskan** mengapa **variabel indikator bervariasi**
+  - **Variabel laten menjelaskan** mengapa **variabel indikator bervariasi**
   - Misalnya &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; individu dengan intelegensi yang tinggi akan mendapatkan nilai yang berbeda dalam tes matematika
   - Dalam hal ini, variasi **intelegensi**lah yang menjelaskan mengapa nilai tes matematika bervariasi
-  - Biasanya mengasumsikan bahwa korelasi antar-variabel indikator = 0, karena seharusnya ketika (misalnya) nilai tes matematika dan fisika berkorelasi, korelasi tersebut dijelaskan oleh determinan yang sama (intelegensi)
+  - Biasanya mengasumsikan bahwa **korelasi antar-variabel indikator = 0**, karena seharusnya ketika (misalnya) nilai tes matematika dan fisika berkorelasi, korelasi tersebut **dijelaskan oleh faktor laten yang sama (intelegensi)**
 
 * Formatif
-  - Variabel *observed* menjelaskan mengapa variabel laten bervariasi
+  - **Variabel *observed* menjelaskan** mengapa **variabel laten bervariasi**
   - Misalnya &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; gengsi sebuah mobil ditentukan oleh usia mobil, kondisi, harga, dan intensitas pemakaian
   - Korelasi antara variabel *observed* tidak diketahui. Bisa jadi = 0, positif, atau negatif
   - Biasanya digunakan untuk menentukan indeks pada konstruk yang *orthogonal* (contoh &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; kepribadian pada *Five Factor model*)
@@ -170,22 +171,22 @@ class: center, middle
 * Kedua variabel indikator tersebut mengukur variabel laten lain di luar model (*unique factor*)
 * Bisa jadi karena ada aitem *unfavourable* dalam skala 
 * Kemungkinan konstruk laten **bukan konstruk tunggal** (multidimensi)
-* Perhatikan justifikasi teori ketika menambah *error covariance*
+* Perhatikan justifikasi teori ketika menambah *error covariance* (korelasi antar-varians *error*)
 
 ---
 
 # Skor faktor (*factor scores*)
 
-* Apabila kita memiliki informasi tentang *factor loading*, maka kita bisa menghitung *factor scores*
+* Apabila kita memiliki informasi tentang *factor loading*, maka kita bisa menghitung *factor scores* &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; **estimasi** (*fitted*) skor variabel laten
 
 * Caranya dengan mengali *factor loading* dengan skor kasar &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; metode regresi
 
-* Namun ingat, mengalikan *factor loading* dengan skor kasar berisiko mendapatkan estimasi yang bias, karena kedua parameter berasal dari distribusi data yang berbeda. Selain itu, *factor scores* akan berubah pada kelompok sampel yang berbeda.
+* Namun ingat, mengalikan *factor loading* dengan skor kasar **masih berisiko mendapatkan estimasi yang bias**, karena kedua parameter berasal dari distribusi data yang berbeda, sehingga ***standard error*nya akan berbeda di berbagai kelompok sampel**. Itulah yang menyebabkan *factor scores* akan berubah, ketika model diujikan pada kelompok sampel yang berbeda.
 
 * Ada tiga cara yang bisa digunakan untuk meghitung *factor scores*:
-  - Metode regresi &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; dengan mengoptimalisasi validitas konstruk (*variance explained*)
-  - Metode Bartlett &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; mengasumsikan variabel indikator **tidak saling berkorelasi**
-  - Metode Anderson-Rubin &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; mengasumsikan variabel indikator **saling berkorelasi**
+  - **Metode Regresi** &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; dengan mengoptimalisasi validitas konstruk (*variance explained*)
+  - **Metode Bartlett** &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; mengasumsikan variabel indikator **tidak saling berkorelasi**
+  - **Metode Anderson-Rubin** &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; mengasumsikan variabel indikator **saling berkorelasi**
 
 ---
 
@@ -193,7 +194,7 @@ class: center, middle
 
 * *Maximum Likelihood* &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; distribusi data (*multivariate*) normal, level pengukuran harus interval, tidak ada data *missing*
 
-* *Generalized least squares* &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; menggunakan asumsi yang sama dengan `ML` namun performanya kurang baik apabila dibandingkan dengan `ML`.
+* *Generalized least squares* &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; menggunakan asumsi yang sama dengan `ML` namun performanya kurang baik apabila dibandingkan dengan `ML`
 
 * *Weighted least squares* &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/&gt;&lt;/svg&gt; dapat digunakan pada data kategorikal (nominal dan ordinal), estimasi menggunakan *polychoric correlation matrix*
 
@@ -223,6 +224,8 @@ class: inverse, middle, center
 * Laporkan *model fit*, *factor loading*, dan *multivariate normality*
 
 * Lakukan penyesuaian apabila perlu
+
+* *Export* datasetnya menjadi `.htm` kemudian 
 
 ### [Kumpulkan tugasnya disini](https://forms.gle/eNGD2LSzqaZc2nXM7)
 

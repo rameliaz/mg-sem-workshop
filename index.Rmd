@@ -84,9 +84,9 @@ Berikut adalah *outline* materi *workshop*:
 * Kapan perlu menggunakan MG-SEM?
 * *Measurement invariance*
   * *Configural invariance*
-  * *Weak invariance*
-  * *Strong invariance*
-  * *Strict invariance*
+  * *Weak/metric invariance*
+  * *Strong/scalar invariance*
+  * *Strict/residual invariance*
   * *Homogeneity of latent variable variances*
   * *Homogeneity of factor means*
 * Mengevaluasi *measurement invariance*
@@ -98,6 +98,7 @@ Berikut adalah *outline* materi *workshop*:
 * Baujean, A.A. (2014). *Latent Variable Modeling Using R: A step-by-step guide*. New York: Routledge.
 * Schumacker, R.E. & Lomax, R.G. (2016). *A Beginner's Guide to Structural Equation Modeling (4th edition)*. New York: Routledge.
 * Van De Schoot, R., Schmidt, P., De Beuckelaer, A., Lek, K., & Zondervan-Zwijnenburg, M. (2015). [Measurement invariance](https://www.frontiersin.org/articles/10.3389/fpsyg.2015.01064/full). Frontiers in psychology, 6, 1064.
+* Putnick, D. L., & Bornstein, M. H. (2016). [Measurement invariance conventions and reporting: The state of the art and future directions for psychological research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5145197/). Developmental review, 41, 71-90.
 
 
 ## Contoh penelitian dengan `MG-SEM`
@@ -144,6 +145,13 @@ Berikut adalah *outline* materi *workshop*:
 
 ## Pembaruan dan koreksi
 
+* Di dalam video, saya menyebutkan bahwa variabel endogen dan eksogen hanya ada masing-masing 1 variabel dalam model, padahal yang betul adalah variabel endogen dan eksogen bisa lebih dari satu dalam model yang sama. Sesuai definisinya, variabel endogen adalah variabel yang **hanya menerima** *direct effect* dari variabel lainnya di dalam model, sedangkan variabel eksogen adalah variabel yang **hanya memberi** *direct effect* kepada variabel lainnya di dalam model yang sama.
+* Saya merevisi gambar *part correlation* di [Bagian 2](https://rameliaz.github.io/mg-sem-workshop/slides/materi-mgsem-2.html) dimana versi sebelumnya (yang ada di dalam video) sangat membingungkan.
+* Saya menambahkan keterangan bahwa di beberapa literatur yang lain *weak invariance* juga disebut *metric invariance*, *strong invariance* disebut *scalar invariance*, sedangkan *strict invariance* juga disebut sebagai *residual invariance*.
+* Saya menyebutkan bahwa formula *composite reliability* adalah Cronbach's α. Padahal *composite reliability* (yang dikeluarkan oleh AMOS) mengikuti model pengukuran *congeneric*. Saya menjelaskan di bagian video yang lain (di sesi terakhir) apa perbedaan *composite reliability* dengan Cronbach's α, serta teknik reliabilitas apa yang cocok untuk digunakan pada model pengukuran tertentu.
+
+Referensi untuk poin terakhir: Cho, E. (2016). [Making Reliability Reliable: A Systematic approach to reliability coefficients](https://rameliaz.github.io/mg-sem-workshop/cho2016.pdf). Organizational Research Methods, 19(4), 651-682.
+
 
 ## Poster kegiatan
 
@@ -171,3 +179,13 @@ Berikut adalah *outline* materi *workshop*:
 ### Latihan Mandiri (4):
 
 [Klik disini untuk melihat jawaban]() saya atas latihan mandiri (4).
+
+
+### Latihan Mandiri (5):
+
+[Klik disini untuk melihat jawaban]() saya atas latihan mandiri (5).
+
+
+### Latihan Mandiri (6):
+
+[Klik disini untuk melihat jawaban]() saya atas latihan mandiri (6).

@@ -50,7 +50,7 @@ class: title-slide, spaced
 
 * *Measuremet invariance* `r fa("arrow-circle-right")` dua atau lebih kelompok memiliki model pengukuran yang sama, yaitu variabel laten dalam model pengukuran adalah konstruk yang sama
 
-* Ketika membandingkan model pengukuran di dua atau lebih kelompok yang berbeda, untuk menyimpulkan terjadinya *invariance*, maka peneliti akan menginginkan *chi-square* (*X*<sup>2</sup>) yang *p-value*nya ≤ α*df* ratio
+* Ketika membandingkan model pengukuran di dua atau lebih kelompok yang berbeda, untuk menyimpulkan terjadinya *invariance*, maka peneliti akan menginginkan *chi-square* (*X*<sup>2</sup>) yang *p-value*nya ≤ α
 
 * Kalau kita berniat melakukan perbandingan performa alat ukur di dua kelompok sampel yang berbeda, maka kita lebih baik menggunakan ***means-covariance matrix*** bukan *variance-covariance matrix* `r fa("arrow-circle-right")` ingat *t-test* dan *anova*
 
@@ -59,14 +59,14 @@ class: title-slide, spaced
 # *Means* dan *intercept*
 
 .pull-left[
-* Kalau kita masukkan *mean* variabel laten ke dalam model, maka *intercept*nya juga harus dimasukkan dalam model
+* Kalau kita masukkan *mean* variabel laten ke dalam model, maka ***intercept*nya juga harus dimasukkan dalam model**
 
-* *Mean* dan *intercept* adalah ukuran *lokasi variabel*, dimana
-  - *Mean* adalah komponen *common factor*
-  - *Intercept* adalah komponen *unique factor*
+* *Mean* dan *intercept* adalah ukuran *lokasi variabel*, dimana...
+  - ***Mean*** adalah komponen ***common factor***
+  - ***Intercept*** adalah komponen ***unique factor***
 
 * *Intercept* disimbolkan dengan segitiga dan
-  - Hanya boleh "ketemu" dengan panah *directional* dan sifatnya *backwards*
+  - **Hanya boleh "ketemu"** dengan panah *uni-directional* dan sifatnya *backwards*
 ]
 
 .pull-right[
@@ -80,13 +80,13 @@ class: title-slide, spaced
 # Jenis-jenis *measurement invariance*
 
 * *Configural* 
-  - Jenis ini adalah yang paling dasar, yang mengasumsikan bahwa model memiliki struktur yang sama di semua kelompok.
-  - Oleh karena itu, semua kelompok **harus** memiliki jumlah faktor/variabel laten dan jumlah variabel indikator/*observed* yang sama dengan pola *constrained* dan *estimated parameters* yang sama
-  - Tidak ada ketentuan bahwa paramter di dalam model harus setara di semua kelompok, sehingga dengan *configural invariance* saja memang sulit disimpulkan bahwa faktor/variabel laten adalah konstruk yang sama pada semua kelompok `r fa("arrow-circle-right")` tidak ada *between-group comparison*
-  - Untuk mengeksekusi *configural variance* tinggal menambahkan `grouping variable` di `JASP` caranya pada bagian **options** masukkan variabel yang mengindikasikan kelompok
+  - Jenis ini adalah yang paling dasar, yang mengasumsikan bahwa **model memiliki struktur yang sama** di **semua kelompok**
+  - Oleh karena itu, semua kelompok **harus** memiliki **jumlah faktor/variabel laten** dan **jumlah variabel indikator/*observed* yang sama** dengan pola *constrained* dan *estimated parameters* yang sama
+  - **Tidak ada ketentuan** bahwa parameter di dalam model harus setara di semua kelompok, sehingga dengan *configural invariance* saja memang sulit disimpulkan bahwa faktor/variabel laten adalah konstruk yang sama pada semua kelompok `r fa("arrow-circle-right")` tidak ada *between-group comparison*
+  - Untuk mengeksekusi *configural variance* tinggal menambahkan `grouping variable` di `JASP` caranya pada bagian **options**, masukkan variabel yang mengindikasikan kelompok
   
-* *Weak*
-  - *Factor loading* **harus sama** pada setiap kelompok, tetapi varians variabel laten **boleh bervariasi**
+* *Weak*/*metric*
+  - ***Factor loading* harus sama** pada setiap kelompok, tetapi **varians variabel laten boleh bervariasi**
   - Dinamai *weak* karena asumsinya masih lemah untuk menyimpulkan bahwa faktor laten **ekuivalen** di semua kelompok, karena membolehkan varians variabel laten yang berbeda di masing-masing kelompok
   - Untuk mengeksekusi *weak variance* tambahkan `grouping variable` di `JASP` dan tik pilihan `loadings` pada `equality constraints`
 
@@ -94,15 +94,15 @@ class: title-slide, spaced
 
 # Jenis-jenis *measurement invariance*
 
-* *Strong*
-  - Selain *factor loading* harus sama, *strong invariance* mensyaratkan *intercept* **sama juga**
+* *Strong*/*scalar*
+  - **Selain *factor loading* harus sama**, *strong invariance* mensyaratkan ***intercept* harus sama juga**
   - Ketika membatasi/*constraining* *intercept*, maka *means* boleh bervariasi di berbagai kelompok
   - Dengan asumsi *strong invariance* ekuivalensi variabel laten lebih didukung bukti yang kuat (daripada *configural* dan *weak invariance*)
   - Untuk mengeksekusi *strong variance* tambahkan `grouping variable` di `JASP` dan tik pilihan `loadings` dan `intercept` pada `equality constraints`
 
-* *Strict*
-  - Selain *factor loading* dan *intercept* harus sama, *strict invariance* mensyaratkan *varians error*/*residual* **sama juga**
-  - Biasanya asumsi ini tidak terlalu diperlukan untuk membandingkan variabel laten di masing-masing kelompok, karena residual/*measurement error* di setiap kelompok **sangat wajar apabila berbeda** secara acak (*random error variance*) atau bisa jadi spesifik pada setiap indikator/*observed variable* (*indicator-specific variance*)
+* *Strict*/*residuals*
+  - **Selain *factor loading* dan *intercept* harus sama**, *strict invariance* mensyaratkan ***varians error*/*residual* sama juga**
+  - Biasanya asumsi ini **tidak terlalu diperlukan** untuk membandingkan variabel laten di masing-masing kelompok, karena residual/*measurement error* di setiap kelompok **sangat wajar apabila berbeda** secara acak (*random error variance*) atau bisa jadi spesifik pada setiap indikator/*observed variable* (*indicator-specific variance*)
   - Untuk mengeksekusi *strict variance* tambahkan `grouping variable` di `JASP` dan tik pilihan `loadings`, `intercept`, dan `residuals` pada `equality constraints`
 
 ---
@@ -115,7 +115,7 @@ class: title-slide, spaced
   - Untuk mengeksekusinya `grouping variable` di `JASP` dan tik pilihan `latent variances`
   
 * Homogenitas *factor means*
-  - Untuk melihat apakah ada perbedaan *mean* variabel laten di masing-masing kelompok
+  - Untuk melihat **apakah ada perbedaan *mean* variabel laten** di masing-masing kelompok
   - Perosedur yang sama dengan `anova` atau `t-test`
   - Untuk mengeksekusinya `grouping variable` di `JASP` dan tik pilihan `means`
   
@@ -125,12 +125,12 @@ class: title-slide, spaced
 
 #### Umumnya ada dua cara yaitu
 
-* Pendekatan statistik
+* **Pendekatan statistik**
   - Karena struktur data yang hirarkis, maka untuk mengevaluasi *invariance* perlu beberapa langkah 
   - Dalam pendekatan statistik, peneliti dapat mengevaluasi **perubahan *X*<sup>2</sup>** (Δ*X*<sup>2</sup>) ketika membandingkan model antar kelompok
   - Seharusnya ketika pembatasan model ditambah, maka Δ*X*<sup>2</sup>, sehingga seharusnya *p-value* dari Δ*X*<sup>2</sup> > α (misalnya 0.05)
 
-* Pendekatan *modeling*
+* **Pendekatan *modeling***
   - Pendekatan *modeling* menggunakan *approximate fit indices* (AFI) untuk menyimpulkan *invariance*
   - Yang bisa digunakan adalah *comparative fit index* (CFI) dan *McDonald's noncentrality fit index* (MFI), sehingga ketika **keduanya mendekati 1**, kita dapat simpulkan *invariance* `r emo::ji("ok")`
 
@@ -160,13 +160,14 @@ class: inverse
 
 .pull-right[
 
-![](https://media.giphy.com/media/PlQ5TTRt1IhsA/giphy.gif)
+
+![](https://media.giphy.com/media/l4pLXMFYQmTM2se7m/giphy.gifK)
 
 ]
 
 ---
 
-# TUGAS (Terakhir) 6: Mencoba *multigroup* SEM
+# TUGAS 6 (**terakhir**`r emo::ji("folded")`): Mencoba *multigroup* SEM
 
 .pull-left[
 

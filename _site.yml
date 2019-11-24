@@ -27,17 +27,17 @@ navbar:
   - text: "Salindia (PDF)"  
     menu: 
     - text: "Bagian 1"
-      href: 
+      href: slides/materi-mgsem-1.pdf
     - text: "Bagian 2"
-      href: 
+      href: slides/materi-mgsem-2.pdf
     - text: "Bagian 3"
-      href: 
+      href: slides/materi-mgsem-3.pdf
     - text: "Bagian 4"
-      href: 
+      href: slides/materi-mgsem-4.pdf
     - text: "Bagian 5"
-      href: 
+      href: slides/materi-mgsem-5.pdf
     - text: "Bagian 6"
-      href: 
+      href: slides/materi-mgsem-6.pdf
   - text: "Dataset"  
     menu: 
     - text: "Dataset Contoh Korelasi"
@@ -49,7 +49,7 @@ navbar:
     - text: "Dataset Contoh CFA (*.csv)"
       href: contoh-cfa.csv
     - text: "Dataset Contoh Multigroup SEM"
-      href: dataset-mg.csv
+      href: data-contoh-mg-sem.csv
     - text: "Dataset Latihan SEM"
       href: dataset-wave1.csv
   - text: "Survei"  

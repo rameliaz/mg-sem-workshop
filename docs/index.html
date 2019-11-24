@@ -379,12 +379,24 @@ div.tocify {
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
-    <li class="dropdown-header">Bagian 1</li>
-    <li class="dropdown-header">Bagian 2</li>
-    <li class="dropdown-header">Bagian 3</li>
-    <li class="dropdown-header">Bagian 4</li>
-    <li class="dropdown-header">Bagian 5</li>
-    <li class="dropdown-header">Bagian 6</li>
+    <li>
+      <a href="slides/materi-mgsem-1.pdf">Bagian 1</a>
+    </li>
+    <li>
+      <a href="slides/materi-mgsem-2.pdf">Bagian 2</a>
+    </li>
+    <li>
+      <a href="slides/materi-mgsem-3.pdf">Bagian 3</a>
+    </li>
+    <li>
+      <a href="slides/materi-mgsem-4.pdf">Bagian 4</a>
+    </li>
+    <li>
+      <a href="slides/materi-mgsem-5.pdf">Bagian 5</a>
+    </li>
+    <li>
+      <a href="slides/materi-mgsem-6.pdf">Bagian 6</a>
+    </li>
   </ul>
 </li>
 <li class="dropdown">
@@ -407,7 +419,7 @@ div.tocify {
       <a href="contoh-cfa.csv">Dataset Contoh CFA (*.csv)</a>
     </li>
     <li>
-      <a href="dataset-mg.csv">Dataset Contoh Multigroup SEM</a>
+      <a href="data-contoh-mg-sem.csv">Dataset Contoh Multigroup SEM</a>
     </li>
     <li>
       <a href="dataset-wave1.csv">Dataset Latihan SEM</a>
@@ -544,9 +556,9 @@ div.tocify {
 <li><em>Measurement invariance</em>
 <ul>
 <li><em>Configural invariance</em></li>
-<li><em>Weak invariance</em></li>
-<li><em>Strong invariance</em></li>
-<li><em>Strict invariance</em></li>
+<li><em>Weak/metric invariance</em></li>
+<li><em>Strong/scalar invariance</em></li>
+<li><em>Strict/residual invariance</em></li>
 <li><em>Homogeneity of latent variable variances</em></li>
 <li><em>Homogeneity of factor means</em></li>
 </ul></li>
@@ -562,6 +574,7 @@ div.tocify {
 <li>Baujean, A.A. (2014). <em>Latent Variable Modeling Using R: A step-by-step guide</em>. New York: Routledge.</li>
 <li>Schumacker, R.E. &amp; Lomax, R.G. (2016). <em>A Beginner’s Guide to Structural Equation Modeling (4th edition)</em>. New York: Routledge.</li>
 <li>Van De Schoot, R., Schmidt, P., De Beuckelaer, A., Lek, K., &amp; Zondervan-Zwijnenburg, M. (2015). <a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2015.01064/full">Measurement invariance</a>. Frontiers in psychology, 6, 1064.</li>
+<li>Putnick, D. L., &amp; Bornstein, M. H. (2016). <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5145197/">Measurement invariance conventions and reporting: The state of the art and future directions for psychological research</a>. Developmental review, 41, 71-90.</li>
 </ul>
 </div>
 <div id="contoh-penelitian-dengan-mg-sem" class="section level2">
@@ -615,6 +628,13 @@ div.tocify {
 </div>
 <div id="pembaruan-dan-koreksi" class="section level2">
 <h2>Pembaruan dan koreksi</h2>
+<ul>
+<li>Di dalam video, saya menyebutkan bahwa variabel endogen dan eksogen hanya ada masing-masing 1 variabel dalam model, padahal yang betul adalah variabel endogen dan eksogen bisa lebih dari satu dalam model yang sama. Sesuai definisinya, variabel endogen adalah variabel yang <strong>hanya menerima</strong> <em>direct effect</em> dari variabel lainnya di dalam model, sedangkan variabel eksogen adalah variabel yang <strong>hanya memberi</strong> <em>direct effect</em> kepada variabel lainnya di dalam model yang sama.</li>
+<li>Saya merevisi gambar <em>part correlation</em> di <a href="https://rameliaz.github.io/mg-sem-workshop/slides/materi-mgsem-2.html">Bagian 2</a> dimana versi sebelumnya (yang ada di dalam video) sangat membingungkan.</li>
+<li>Saya menambahkan keterangan bahwa di beberapa literatur yang lain <em>weak invariance</em> juga disebut <em>metric invariance</em>, <em>strong invariance</em> disebut <em>scalar invariance</em>, sedangkan <em>strict invariance</em> juga disebut sebagai <em>residual invariance</em>.</li>
+<li>Saya menyebutkan bahwa formula <em>composite reliability</em> adalah Cronbach’s α. Padahal <em>composite reliability</em> (yang dikeluarkan oleh AMOS) mengikuti model pengukuran <em>congeneric</em>. Saya menjelaskan di bagian video yang lain (di sesi terakhir) apa perbedaan <em>composite reliability</em> dengan Cronbach’s α, serta teknik reliabilitas apa yang cocok untuk digunakan pada model pengukuran tertentu.</li>
+</ul>
+<p>Referensi untuk poin terakhir: Cho, E. (2016). <a href="https://rameliaz.github.io/mg-sem-workshop/cho2016.pdf">Making Reliability Reliable: A Systematic approach to reliability coefficients</a>. Organizational Research Methods, 19(4), 651-682.</p>
 </div>
 <div id="poster-kegiatan" class="section level2">
 <h2>Poster kegiatan</h2>
@@ -640,6 +660,14 @@ div.tocify {
 <div id="latihan-mandiri-4" class="section level3">
 <h3>Latihan Mandiri (4):</h3>
 <p><a href="">Klik disini untuk melihat jawaban</a> saya atas latihan mandiri (4).</p>
+</div>
+<div id="latihan-mandiri-5" class="section level3">
+<h3>Latihan Mandiri (5):</h3>
+<p><a href="">Klik disini untuk melihat jawaban</a> saya atas latihan mandiri (5).</p>
+</div>
+<div id="latihan-mandiri-6" class="section level3">
+<h3>Latihan Mandiri (6):</h3>
+<p><a href="">Klik disini untuk melihat jawaban</a> saya atas latihan mandiri (6).</p>
 </div>
 </div>
 

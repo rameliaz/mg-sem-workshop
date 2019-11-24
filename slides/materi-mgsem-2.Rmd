@@ -115,7 +115,7 @@ class: center, middle
 
 * Jumlah nilai unik (*non-redundant information*) dalam *variance-covariance matrix* adalah ***p*(*p*+1)/2**
   - dimana *p* adalah jumlah *observed variable*
-  - Sehingga dengan contoh di atas maka jumlah nilai unik (*non-redundant information*) di *variance-covariance matrix* adalah 3(3+1)/2=6, yaitu **3 varians (diagonal)** dan **3 *covariance* (sisanya)**.
+  - Sehingga dengan contoh di atas maka jumlah nilai unik (*non-redundant information*) di *variance-covariance matrix* adalah 3(3+1)/2=6, yaitu **3 varians (diagonal)** dan **3 *covariance* (sisanya)**
 
 ---
 
@@ -123,10 +123,10 @@ class: center, middle
 
 .pull-left[
 
-* Sebagian besar perangkat lunak SEM menggunakan *variance-covariance matrix* bukan **correlation matrix**
+* Sebagian besar perangkat lunak SEM menggunakan ***variance-covariance matrix*** bukan *correlation matrix*
   - Ingat `r emo::ji("exclamation")` korelasi adalah *standardised covariance*.
 
-* Menggunakan *correlation matrix* biasanya lebih sering menghasilkan parameter yang *statistically significant* tapi *standard error* yang tidak akurat.
+* Menggunakan *correlation matrix* biasanya lebih sering menghasilkan **parameter yang *statistically significant* tapi *standard error* yang tidak akurat**.
 
 * Oleh karena itu, meskipun *user* meng*input* *correlation matrix*, maka perangkat lunak akan mengubahnya dulu menjadi *variance-covariance matrix* dulu, baru parameter model dapat diestimasi.
 
@@ -199,7 +199,7 @@ class: inverse, middle, center
 * Terjadi karena
   - *Common factor* terlalu banyak/terlalu sedikit
   - Ukuran sampel tidak memadai
-  - Model SEM bukan model yang cocok untuk menguji hipotesis hubungan antar-variabel (alternatifnya [*Principal Component Analysis* - PCA](https://medium.com/@aptrishu/understanding-principle-component-analysis-e32be0253ef0))
+  - Model SEM (*common factor model*) bukan model yang cocok untuk menguji hipotesis hubungan antar-variabel (alternatifnya [*Principal Component Analysis* - PCA](https://medium.com/@aptrishu/understanding-principle-component-analysis-e32be0253ef0))
   
 * Yang bisa dilakukan
   - Tinjau kembali hipotesis modelnya
@@ -217,16 +217,17 @@ class: inverse, middle, center
 # Metrik variabel (*standardised* vs *unstandardised*)
 
 * *Unstandarised solution/estimates*
-  - Dapat dibandingkan antar kelompok sampel
+  - Dapat **dibandingkan** antar kelompok sampel
   - Merupakan parameter yang digunakan oleh perangkat lunak untuk menghitung *standard error* dan *taraf signifikansi (p-value)*)
+  - Membandingkan *unstandardised factor loading* **harus melihat *standard error*nya juga** karena mereka seharusnya sepaket
   
 * *Standarised solution/estimates*
   - Hanya *interpretable* untuk kelompok sampel yang diuji - tidak bisa dibandingkan dengan kelompok sampel yang lain.
-  - Berguna untuk membandingkan *factor loading* antar-variabel di dalam model - peneliti dapat mengidentifikasi, variabel mana yang paling berkontribusi menjelaskan *dependent variable*.
-  - Apabila variabel dalam model memiliki unit pengukuran yang berbeda, maka *standardised estimates* akan sangat membantu untuk menstandardisasi unit antar-variabel tersebut.
+  - Berguna untuk membandingkan *factor loading* antar-variabel di dalam model - peneliti dapat **mengidentifikasi variabel mana yang paling berkontribusi** menjelaskan *dependent variable*
+  - Apabila variabel dalam model memiliki unit pengukuran yang berbeda, maka *standardised estimates* akan sangat membantu untuk menstandardisasi unit antar-variabel tersebut
   
-* Ada banyak perbedaan pendapat mengenai metrik mana yang harus dilaporkan, tetapi
-  - Selalu laporkan *unstandarised solution/estimates* (boleh juga dengan *standarised solution/estimates*)
+* Ada banyak perbedaan pendapat mengenai metrik mana yang harus dilaporkan, tetapi...
+  - **Selalu laporkan *unstandarised solution/estimates* dan *standard error*nya** (boleh juga dengan *standarised solution/estimates*, boleh juga tidak)
 
 ---
 
