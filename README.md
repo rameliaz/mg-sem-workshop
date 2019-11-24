@@ -2,7 +2,7 @@
 ## Deskripsi
 Berikut adalah repositori yang digunakan untuk menyimpan semua materi untuk **Workshop Multigroup Structural Equation Modeling (MG-SEM)** yang diselenggarakan oleh Departemen Psikologi Kepribadian dan Sosial, Fakultas Psikologi Universitas Airlangga dalam rangka memperingati Dies Natalis Pendidikan Psikologi Universitas Airlangga yang ke-36. 
 
-Materi berlisensi [*Creative Commons*](https://creativecommons.org/licenses/by/4.0/). **Materi bebas digunakan kembali namun wajib menyebutkan sumber aslinya**.
+Materi berlisensi [*Creative Commons* BY 4.0](https://creativecommons.org/licenses/by/4.0/). **Materi bebas digunakan kembali namun wajib menyebutkan sumber aslinya**.
 
 
 ## Waktu dan tempat
