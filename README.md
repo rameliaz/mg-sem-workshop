@@ -150,7 +150,7 @@ Referensi untuk poin terakhir: Cho, E. (2016). [Making Reliability Reliable: A S
 
 ## Poster kegiatan
 
-<center><img src="poster.png" style="width:70%;" class="fancyimage"/></center><br>
+<center><img src="slides/libs/poster.jpg" style="width:70%;" class="fancyimage"/></center><br>
 
 
 ## Jawaban Latihan
