@@ -124,19 +124,19 @@ Berikut adalah *outline* materi *workshop*:
 
 ### Hari 1
 
-#### Sesi 1 (09.00-11.30)
-
-
-#### Sesi 2 (13.00-16.00)
+**Mohon maaf sebesar-besarnya. Saya gagal menyimpan video rekaman untuk seluruh sesi di hari pertama dengan baik karena khilaf tidak menyalakan opsi merekam suara, sehingga yang terekam hanya layar laptop saya saja tanpa ada suara sama sekali**
 
 
 ### Hari 2
 
 #### Sesi 1 (09.00-12.00)
 
+[Klik untuk melihat video](https://www.youtube.com/watch?v=FB-e48e_UtQ&t=1s)
+
 
 #### Sesi 2 (13.00-16.00)
 
+[Klik untuk melihat video](https://www.youtube.com/watch?v=ibgXwu3S8m8)
 
 ## Pembaruan dan koreksi
 
