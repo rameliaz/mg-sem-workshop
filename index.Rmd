@@ -131,6 +131,8 @@ Berikut adalah *outline* materi *workshop*:
 
 **Mohon maaf sebesar-besarnya. Saya gagal menyimpan video rekaman untuk seluruh sesi di hari pertama dengan baik karena khilaf tidak menyalakan opsi merekam suara, sehingga yang terekam hanya layar laptop saya saja tanpa ada suara sama sekali**
 
+**Saya menyampaikan materi yang sama pada kesempatan yang lain. [Silakan mengakses videonya disini](https://rameliaz.github.io/lvm-cfa/).**
+
 ### Hari 2
 
 #### Sesi 1 (09.00-12.00)
