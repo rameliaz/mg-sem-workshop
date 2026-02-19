@@ -18,13 +18,13 @@ Materi berlisensi [Creative Commons BY-SA 4.0](https://creativecommons.org/licen
 
 ### **Hari 1**: Jumat, 22 November 2019
 
-##### **Pengantar**
+#### **Pengantar**
 * Apa itu *structural equation modeling* (SEM)?
 * Mengapa dan pada kondisi seperti apa SEM diperlukan?
 * Beberapa pilihan perangkat lunak untuk mengeksekusi SEM
 * Yang tidak dicakup dalam *workshop* serta keterbatasan JASP
 
-##### **Korelasi**
+#### **Korelasi**
 * Jenis-jenis koefisien korelasi
 * Faktor-faktor yang membuat koefisien korelasi bervariasi
 * [Koreksi atenuasi](https://methods.sagepub.com/reference/encyc-of-research-design/n81.xml) dan *measurement error*
@@ -34,7 +34,7 @@ Materi berlisensi [Creative Commons BY-SA 4.0](https://creativecommons.org/licen
 * Bivariat, *part*, dan *partial correlation*
 * Metrik variabel (*standardised* vs *unstandardised*)
 
-##### **Model Jalur** (*Path Model*) dan Model Regresi
+#### **Model Jalur** (*Path Model*) dan Model Regresi
 * Definisi *path model*
 * Nama variabel dan koefisien jalur (*path coefficients*)
   * δ (delta), ε (epsilon), ξ (ksi), η (eta), λ (lambda), γ (gamma), β (beta), φ (phi), ζ (zeta)
@@ -46,7 +46,7 @@ Materi berlisensi [Creative Commons BY-SA 4.0](https://creativecommons.org/licen
 
 ### **Hari 2**: Sabtu, 23 November 2019
 
-##### **Confirmatory Factor Analysis (CFA)**
+#### **Confirmatory Factor Analysis (CFA)**
 * Definisi *factor analysis*
 * *Exploratory* vs *confirmatory factor analysis*
 * Kapan menggunakan CFA?
@@ -58,7 +58,7 @@ Materi berlisensi [Creative Commons BY-SA 4.0](https://creativecommons.org/licen
 * Menuliskan hasil analisis CFA dalam laporan penelitian
 
 
-##### **Dasar-dasar Structural Equation Modeling (SEM)**
+#### **Dasar-dasar Structural Equation Modeling (SEM)**
 * Dasar-Dasar SEM: Model struktural & pengukuran
 * Tahapan *modeling* dengan menggunakan SEM
   * Spesifikasi model
@@ -80,7 +80,7 @@ Materi berlisensi [Creative Commons BY-SA 4.0](https://creativecommons.org/licen
 * Menuliskan hasil analisis SEM dalam laporan penelitian
 
 
-##### **Multiple-group SEM (MG-SEM)**
+#### **Multiple-group SEM (MG-SEM)**
 * Kapan perlu menggunakan MG-SEM?
 * *Measurement invariance*
   * *Configural invariance*
