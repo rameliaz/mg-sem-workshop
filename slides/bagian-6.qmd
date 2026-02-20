@@ -1,0 +1,168 @@
+---
+title: "Workshop MG-SEM Bagian 6"
+subtitle: "Dies Natalis 36th — Multigroup SEM"
+author: "Rizqy Amelia Zein"
+institute: "Universitas Airlangga"
+date: today
+format:
+  unair-revealjs:
+    slide-number: true
+    progress: true
+    transition: slide
+    center: false
+---
+
+## *Multigroup* SEM: untuk apa?
+
+* *Invariance* {{< fa circle-arrow-right >}} apakah dalam kondisi yang beragam ketika melakukan pengukuran, alat ukur selalu mengukur atribut ukur yang sama
+
+* *Measurement invariance* {{< fa circle-arrow-right >}} dua atau lebih kelompok memiliki model pengukuran yang sama, yaitu variabel laten dalam model pengukuran adalah konstruk yang sama
+
+* Ketika membandingkan model pengukuran di dua atau lebih kelompok yang berbeda, untuk menyimpulkan terjadinya *invariance*, maka peneliti akan menginginkan *chi-square* (*X*^2^) yang *p-value*nya ≤ α
+
+* Kalau kita berniat melakukan perbandingan performa alat ukur di dua kelompok sampel yang berbeda, maka kita lebih baik menggunakan ***means-covariance matrix*** bukan *variance-covariance matrix* {{< fa circle-arrow-right >}} ingat *t-test* dan *anova*
+
+---
+
+## *Means* dan *intercept*
+
+::: {.columns}
+::: {.column width="50%"}
+
+* Kalau kita masukkan *mean* variabel laten ke dalam model, maka ***intercept*nya juga harus dimasukkan dalam model**
+
+* *Mean* dan *intercept* adalah ukuran *lokasi variabel*, dimana...
+  - ***Mean*** adalah komponen ***common factor***
+  - ***Intercept*** adalah komponen ***unique factor***
+
+* *Intercept* disimbolkan dengan segitiga dan
+  - **Hanya boleh "ketemu"** dengan panah *uni-directional* dan sifatnya *backwards*
+
+:::
+::: {.column width="50%"}
+
+![](libs/meansintercept.png){fig-align="center"}
+
+:::
+:::
+
+---
+
+## Jenis-jenis *measurement invariance*
+
+* *Configural*
+  - Jenis ini adalah yang paling dasar, yang mengasumsikan bahwa **model memiliki struktur yang sama** di **semua kelompok**
+  - Oleh karena itu, semua kelompok **harus** memiliki **jumlah faktor/variabel laten** dan **jumlah variabel indikator/*observed* yang sama**
+  - **Tidak ada ketentuan** bahwa parameter di dalam model harus setara di semua kelompok {{< fa circle-arrow-right >}} tidak ada *between-group comparison*
+  - Untuk mengeksekusi *configural invariance* tinggal menambahkan `grouping variable` di `JASP` pada bagian **options**
+
+* *Weak*/*metric*
+  - ***Factor loading* harus sama** pada setiap kelompok, tetapi **varians variabel laten boleh bervariasi**
+  - Dinamai *weak* karena asumsinya masih lemah untuk menyimpulkan bahwa faktor laten **ekuivalen** di semua kelompok
+  - Untuk mengeksekusinya tambahkan `grouping variable` di `JASP` dan tik pilihan `loadings` pada `equality constraints`
+
+---
+
+## Jenis-jenis *measurement invariance*
+
+* *Strong*/*scalar*
+  - **Selain *factor loading* harus sama**, *strong invariance* mensyaratkan ***intercept* harus sama juga**
+  - Ketika membatasi/*constraining* *intercept*, maka *means* boleh bervariasi di berbagai kelompok
+  - Dengan asumsi *strong invariance* ekuivalensi variabel laten lebih didukung bukti yang kuat
+  - Untuk mengeksekusinya tambahkan `grouping variable` di `JASP` dan tik pilihan `loadings` dan `intercept` pada `equality constraints`
+
+* *Strict*/*residuals*
+  - **Selain *factor loading* dan *intercept* harus sama**, *strict invariance* mensyaratkan ***varians error*/*residual* sama juga**
+  - Biasanya asumsi ini **tidak terlalu diperlukan** untuk membandingkan variabel laten di masing-masing kelompok
+  - Untuk mengeksekusinya tambahkan `grouping variable` di `JASP` dan tik pilihan `loadings`, `intercept`, dan `residuals` pada `equality constraints`
+
+---
+
+## Jenis-jenis *measurement invariance*
+
+* Homogenitas varians variabel laten
+  - Untuk melihat apakah **varians variabel laten setara** di masing-masing kelompok
+  - Kalau tidak terpenuhi berarti kelompok dengan varians variabel laten yang **lebih kecil** menggunakan **rentang konstruk yang lebih sempit**
+  - Untuk mengeksekusinya pada `grouping variable` di `JASP` tik pilihan `latent variances`
+
+* Homogenitas *factor means*
+  - Untuk melihat **apakah ada perbedaan *mean* variabel laten** di masing-masing kelompok
+  - Prosedur yang sama dengan `anova` atau `t-test`
+  - Untuk mengeksekusinya pada `grouping variable` di `JASP` tik pilihan `means`
+
+---
+
+## Evaluasi *measurement invariance*
+
+#### Umumnya ada dua cara yaitu
+
+* **Pendekatan statistik**
+  - Karena struktur data yang hirarkis, maka untuk mengevaluasi *invariance* perlu beberapa langkah
+  - Dalam pendekatan statistik, peneliti dapat mengevaluasi **perubahan *X*^2^** (Δ*X*^2^) ketika membandingkan model antar kelompok
+  - Seharusnya ketika pembatasan model ditambah, maka Δ*X*^2^ tidak signifikan, sehingga seharusnya *p-value* dari Δ*X*^2^ > α (misalnya 0.05)
+
+* **Pendekatan *modeling***
+  - Pendekatan *modeling* menggunakan *approximate fit indices* (AFI) untuk menyimpulkan *invariance*
+  - Yang bisa digunakan adalah *comparative fit index* (CFI) dan *McDonald's noncentrality fit index* (MFI), sehingga ketika **keduanya mendekati 1**, kita dapat simpulkan *invariance* ✅
+
+---
+
+## {.center}
+
+![](libs/invariance.png){fig-align="center" width="80%"}
+
+::: {.aside}
+Baujean, A.A. (2014). Latent Variable Modeling Using R: A step-by-step guide. New York: Routledge.
+:::
+
+---
+
+## Demonstrasi *multigroup SEM* {background-color="#14497F"}
+
+::: {.columns}
+::: {.column width="50%"}
+
+### [Klik untuk unduh datasetnya disini](https://rameliaz.github.io/mg-sem-workshop/dataset-mg.csv)
+
+### Atau pada repositori, unduh [**Dataset Contoh Multigroup SEM**](https://rameliaz.github.io/mg-sem-workshop/dataset-mg.csv)
+
+:::
+::: {.column width="50%"}
+
+![](https://media.giphy.com/media/l4pLXMFYQmTM2se7m/giphy.gif)
+
+:::
+:::
+
+---
+
+## TUGAS 6 (terakhir 🙏): Mencoba *multigroup* SEM
+
+::: {.columns}
+::: {.column width="50%"}
+
+* Unduh [Dataset Latihan SEM](https://rameliaz.github.io/mg-sem-workshop/dataset-wave1.csv)
+
+* Unduh [Kamus Data disini](https://rameliaz.github.io/mg-sem-workshop/codebook-kamusdata.xlsx)
+
+* Cek *measurement invariance* pada skala *right-wing authoritarianism* antara laki-laki dan perempuan
+
+* *Export* datasetnya menjadi `.htm` kemudian
+
+### [**Unggah tugasnya di sini**](https://forms.gle/6tdDH7Fin4xp7aL96)
+
+:::
+::: {.column width="50%"}
+
+![](https://media.giphy.com/media/l1KVaj5UcbHwrBMqI/giphy.gif)
+
+:::
+:::
+
+---
+
+## Terima kasih banyak! 😉 {.center}
+
+![](https://media.giphy.com/media/hrBSJ2So6iTo4/giphy.gif)
+
+Paparan disusun dengan menggunakan {{< fa brands r-project >}} dan [**Quarto**](https://quarto.org) dengan template dari [UNAIR Theme](https://github.com/rameliaz/quarto-unair-theme).
