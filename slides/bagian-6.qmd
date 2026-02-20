@@ -29,7 +29,7 @@ format:
 ::: {.columns}
 ::: {.column width="50%"}
 
-* Kalau kita masukkan *mean* variabel laten ke dalam model, maka ***intercept*nya juga harus dimasukkan dalam model**
+* Kalau kita masukkan *mean* variabel laten ke dalam model, maka **_intercept_nya juga harus dimasukkan dalam model**
 
 * *Mean* dan *intercept* adalah ukuran *lokasi variabel*, dimana...
   - ***Mean*** adalah komponen ***common factor***
@@ -41,7 +41,7 @@ format:
 :::
 ::: {.column width="50%"}
 
-![](libs/meansintercept.png){fig-align="center"}
+![](libs/meansintercept.png){fig-align="center" width="100%"}
 
 :::
 :::
@@ -57,7 +57,7 @@ format:
   - Untuk mengeksekusi *configural invariance* tinggal menambahkan `grouping variable` di `JASP` pada bagian **options**
 
 * *Weak*/*metric*
-  - ***Factor loading* harus sama** pada setiap kelompok, tetapi **varians variabel laten boleh bervariasi**
+  - **_Factor loading_ harus sama** pada setiap kelompok, tetapi **varians variabel laten boleh bervariasi**
   - Dinamai *weak* karena asumsinya masih lemah untuk menyimpulkan bahwa faktor laten **ekuivalen** di semua kelompok
   - Untuk mengeksekusinya tambahkan `grouping variable` di `JASP` dan tik pilihan `loadings` pada `equality constraints`
 
@@ -66,13 +66,13 @@ format:
 ## Jenis-jenis *measurement invariance*
 
 * *Strong*/*scalar*
-  - **Selain *factor loading* harus sama**, *strong invariance* mensyaratkan ***intercept* harus sama juga**
+  - **Selain *factor loading* harus sama**, *strong invariance* mensyaratkan **_intercept_ harus sama juga**
   - Ketika membatasi/*constraining* *intercept*, maka *means* boleh bervariasi di berbagai kelompok
   - Dengan asumsi *strong invariance* ekuivalensi variabel laten lebih didukung bukti yang kuat
   - Untuk mengeksekusinya tambahkan `grouping variable` di `JASP` dan tik pilihan `loadings` dan `intercept` pada `equality constraints`
 
 * *Strict*/*residuals*
-  - **Selain *factor loading* dan *intercept* harus sama**, *strict invariance* mensyaratkan ***varians error*/*residual* sama juga**
+  - **Selain *factor loading* dan *intercept* harus sama**, *strict invariance* mensyaratkan **_varians error_/_residual_ sama juga**
   - Biasanya asumsi ini **tidak terlalu diperlukan** untuk membandingkan variabel laten di masing-masing kelompok
   - Untuk mengeksekusinya tambahkan `grouping variable` di `JASP` dan tik pilihan `loadings`, `intercept`, dan `residuals` pada `equality constraints`
 
