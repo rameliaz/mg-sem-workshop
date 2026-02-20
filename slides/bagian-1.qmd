@@ -19,9 +19,9 @@ execute:
 
 {{< fa paper-plane >}} <amelia.zein@psikologi.unair.ac.id>
 
-{{< fa brands twitter >}} [\@ameliazein](https://twitter.com/ameliazein)
+{{< fa brands twitter >}} [@ameliazein](https://twitter.com/ameliazein)
 
-{{< fa brands github >}} [\@rameliaz](https://github.com/rameliaz)
+{{< fa brands github >}} [@rameliaz](https://github.com/rameliaz)
 
 {{< fa desktop >}} <https://rameliaz.github.io>
 
