@@ -1,6 +1,14 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - index.qmd
+    - slides/bagian-1.qmd
+    - slides/bagian-2.qmd
+    - slides/bagian-3.qmd
+    - slides/bagian-4.qmd
+    - slides/bagian-5.qmd
+    - slides/bagian-6.qmd
 
 website:
   title: "Multigroup SEM Workshop"
