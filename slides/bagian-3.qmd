@@ -163,7 +163,7 @@ Ia menduga temannya yang lebih *conscientious* dan lebih tua akan lebih kecil ke
 
 ### Buatlah diagram jalur beserta koefisien jalurnya. Bisa dengan PowerPoint atau *software* yang lain.
 
-[[Unggah file diagram jalur disini]](https://forms.gle/VpBzNxT26zXsBBAJ6)
+[Unggah file diagram jalur disini](https://forms.gle/VpBzNxT26zXsBBAJ6)
 
 ---
 
@@ -229,7 +229,7 @@ mandiri =~ mandiri1 + mandiri2 + mandiri3 + mandiri4
 # Measurement error (residual)
 mandiri1 ~~ mandiri1
 mandiri2 ~~ mandiri2
-mandiri3 ~~ trust3
+mandiri3 ~~ mandiri3
 mandiri4 ~~ mandiri4
 mandiri ~~ mandiri
 ```
@@ -275,7 +275,7 @@ trust =~ trust1 + trust2 + trust3 + trust4 + trust5
 # Measurement error (residual)
 mandiri1 ~~ mandiri1
 mandiri2 ~~ mandiri2
-mandiri3 ~~ trust3
+mandiri3 ~~ mandiri3
 mandiri4 ~~ mandiri4
 
 trust1 ~~ trust1
