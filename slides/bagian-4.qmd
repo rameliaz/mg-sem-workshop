@@ -1,0 +1,216 @@
+---
+title: "Workshop MG-SEM Bagian 4"
+subtitle: "Dies Natalis 36th — Confirmatory Factor Analysis"
+author: "Rizqy Amelia Zein"
+institute: "Universitas Airlangga"
+date: today
+format:
+  unair-revealjs:
+    slide-number: true
+    progress: true
+    transition: slide
+    center: false
+---
+
+## Analisis faktor
+
+::: {.columns}
+::: {.column width="50%"}
+
+* Awalnya dikembangkan oleh Charles Spearman (1904) untuk menyelidiki [*g factor theory of intelligence*](https://en.wikipedia.org/wiki/G_factor_(psychometrics))
+
+* Terdiri dari:
+  - *Exploratory factor analysis* (EFA)
+  - *Confirmatory factor analysis* (CFA)
+
+* Analisis faktor digunakan untuk menguji model *common variance*
+
+* Mengasumsikan bahwa dua atau lebih *observed variable* memiliki *shared/common variance* (*commonality* atau *common factor*) {{< fa circle-arrow-right >}} ditunjukkan dengan ***factor loading***
+
+:::
+::: {.column width="50%"}
+
+![](https://media.giphy.com/media/l0IyjeA5mmMZjhyPm/giphy.gif)
+
+:::
+:::
+
+---
+
+## EFA vs CFA
+
+| EFA | CFA |
+| --- | --- |
+| Mencari model yang cocok menggambarkan data, sehingga peneliti **mengeksplorasi berbagai pilihan model** yang cocok kemudian mencari rasionalisasi teoritisnya | Menguji hipotesis yang **sudah ditentukan sebelumnya**, sehingga peneliti ingin tahu apakah hipotesisnya didukung oleh data |
+| Jumlah faktor belum diketahui sampai peneliti melakukan analisisnya | Jumlah faktor sudah ditentukan sebelum mengambil data |
+| Peneliti **tidak memiliki** model yang dihipotesiskan *a priori* | Peneliti **sudah memiliki** model hipotesis yang ditentukan *a priori* |
+
+---
+
+## *Confirmatory factor analysis*
+
+* Menyediakan solusi untuk mengkoreksi bias karena *measurement error* ketika mengestimasi korelasi antar-variabel
+
+* Cara kerjanya adalah dengan membandingkan *variance-covariance matrix* yang dihipotesiskan dengan *variance-covariance matrix* pada data (sampel)
+
+* **Perhatian** 📢
+  - **Sangat tidak disarankan** untuk melakukan EFA kemudian CFA pada **sampel yang sama**
+  - Karena *generating hypothesis* dengan *testing hypothesis* adalah dua proses yang berbeda yang **tidak seharusnya** dilakukan pada sampel yang sama
+  - Kalau hal tsb dilakukan, maka tentu saja peneliti akan mendapatkan hasil yang 'sesuai prediksinya'
+  - Ingat [Texas Sharpshooter Fallacy](https://en.wikipedia.org/wiki/Texas_sharpshooter_fallacy)
+
+---
+
+## {.center}
+
+![](https://i0.wp.com/www.bayesianspectacles.org/wp-content/uploads/2018/01/TexasSharpShooter.png?fit=357%2C300&ssl=1)
+
+---
+
+## [*Constraining parameter* model](https://psycnet.apa.org/record/2008-06808-005)
+
+* **Membatasi/menentukan varians** untuk setiap **variabel/faktor laten**
+  - Dilakukan untuk mengeluarkan ***standardised estimates***
+  - *Factor loading* di *z-score*kan
+  - Sehingga *default*nya, *mean* variabel laten = 0, *variance* = 1
+
+* Membatasi/menentukan ***error covariance*** untuk setiap variabel/faktor laten
+  - Dilakukan untuk **menentukan *error variance***
+
+---
+
+## Jenis-jenis model pengukuran
+
+* *Congeneric*
+  - Model yang paling moderat dan *default* di berbagai perangkat lunak SEM
+  - Asumsinya, **skala, *error variance*, dan *factor loading* boleh berbeda (dibebaskan)**
+  - **Teknik reliabilitas skala** yang mengasumsikan model pengukuran *congeneric* {{< fa circle-arrow-right >}} ω, McDonald's ω, ω total (ω~*t*~), Revelle's ω, *composite reliability*.
+
+* *Tau equivalence*
+  - Model yang sedikit lebih rigid daripada *congeneric*
+  - Asumsinya, **skala dan *error variance* boleh berbeda (dibebaskan)**, namun ***factor loading* harus sama (dibatasi)**
+  - Ketika asumsi *tau equivalence* dipenuhi, maka [Cronbach's α dapat digunakan](https://www.ncbi.nlm.nih.gov/pubmed/28557467)
+  - **Teknik reliabilitas**: Formula Rulon, KR-20, Flanagan-Rulon, Guttman's λ~3~, λ~4~, Hoyt *method*.
+
+* Paralel
+  - Model yang paling rigid
+  - Asumsinya, **skala, *error variance*, dan *factor loading* harus sama (dibatasi)**
+  - **Teknik reliabilitas**: Spearman-Brown's Formula, Standardised α.
+
+---
+
+## {.center}
+
+![](libs/congeneric.png){fig-align="center"}
+
+---
+
+## {.center}
+
+![](libs/tau.png){fig-align="center"}
+
+---
+
+## {.center}
+
+![](libs/paralel.png){fig-align="center"}
+
+---
+
+## Reflektif vs Formatif
+
+* Reflektif
+  - **Variabel laten menjelaskan** mengapa **variabel indikator bervariasi**
+  - Misalnya {{< fa circle-arrow-right >}} individu dengan intelegensi yang tinggi akan mendapatkan nilai yang berbeda dalam tes matematika
+  - Biasanya mengasumsikan bahwa **korelasi antar-variabel indikator = 0**
+
+* Formatif
+  - **Variabel *observed* menjelaskan** mengapa **variabel laten bervariasi**
+  - Misalnya {{< fa circle-arrow-right >}} gengsi sebuah mobil ditentukan oleh usia mobil, kondisi, harga, dan intensitas pemakaian
+  - Korelasi antara variabel *observed* tidak diketahui
+  - Biasanya digunakan untuk menentukan indeks pada konstruk yang *orthogonal* (contoh {{< fa circle-arrow-right >}} kepribadian pada *Five Factor model*)
+
+---
+
+## {.center}
+
+![](libs/reflektif.png){fig-align="center"}
+
+---
+
+## {.center}
+
+![](libs/formatif.png){fig-align="center" width="60%"}
+
+---
+
+## Apa yang terjadi ketika *error variance* berkorelasi?
+
+![](libs/correlated-error.png){fig-align="center"}
+
+* Kedua variabel indikator tersebut mengukur variabel laten lain di luar model (*unique factor*)
+* Bisa jadi karena ada aitem *unfavourable* dalam skala
+* Kemungkinan konstruk laten **bukan konstruk tunggal** (multidimensi)
+* Perhatikan justifikasi teori ketika menambah *error covariance*
+
+---
+
+## Skor faktor (*factor scores*)
+
+* Apabila kita memiliki informasi tentang *factor loading*, maka kita bisa menghitung *factor scores* {{< fa circle-arrow-right >}} **estimasi** (*fitted*) skor variabel laten
+
+* Caranya dengan mengali *factor loading* dengan skor kasar {{< fa circle-arrow-right >}} metode regresi
+
+* Namun ingat, mengalikan *factor loading* dengan skor kasar **masih berisiko mendapatkan estimasi yang bias**. Itulah yang menyebabkan *factor scores* akan berubah ketika model diujikan pada kelompok sampel yang berbeda.
+
+* Ada tiga cara yang bisa digunakan untuk menghitung *factor scores*:
+  - **Metode Regresi** {{< fa circle-arrow-right >}} dengan mengoptimalisasi validitas konstruk (*variance explained*)
+  - **Metode Bartlett** {{< fa circle-arrow-right >}} mengasumsikan variabel indikator **tidak saling berkorelasi**
+  - **Metode Anderson-Rubin** {{< fa circle-arrow-right >}} mengasumsikan variabel indikator **saling berkorelasi**
+
+---
+
+## Memilih metode estimasi
+
+* *Maximum Likelihood* {{< fa circle-arrow-right >}} distribusi data (*multivariate*) normal, level pengukuran harus interval, tidak ada data *missing*
+
+* *Generalized least squares* {{< fa circle-arrow-right >}} menggunakan asumsi yang sama dengan `ML` namun performanya kurang baik apabila dibandingkan dengan `ML`
+
+* *Weighted least squares* {{< fa circle-arrow-right >}} dapat digunakan pada data kategorikal (nominal dan ordinal), estimasi menggunakan *polychoric correlation matrix*
+
+* *Diagonally weighted least squares* {{< fa circle-arrow-right >}} dapat digunakan pada data kategorikal, bekerja dengan baik pada sampel yang relatif kecil dan data yang tidak berdistribusi normal
+
+---
+
+## Demonstrasi CFA {background-color="#14497F" .center}
+
+![](https://media.giphy.com/media/3oEjHZPivwdJ0syhKE/giphy.gif)
+
+### [Unduh Dataset Contoh CFA](https://rameliaz.github.io/mg-sem-workshop/contoh-cfa.jasp)
+
+---
+
+## TUGAS 4: Mencoba *confirmatory factor analysis*
+
+* Unduh [Dataset Latihan SEM](https://rameliaz.github.io/mg-sem-workshop/dataset-wave1.csv)
+
+* Unduh [Kamus Data disini](https://rameliaz.github.io/mg-sem-workshop/codebook-kamusdata.xlsx)
+
+* Lakukan CFA pada skala *right-wing authoritarianism*
+  - Diukur dengan skala *Likert*, 15 aitem dengan 9 pilihan jawaban
+
+* Laporkan *model fit*, *factor loading*, dan *multivariate normality*
+
+* Lakukan penyesuaian apabila perlu
+
+* *Export* datasetnya menjadi `.htm` kemudian
+
+### [Kumpulkan tugasnya disini](https://forms.gle/eNGD2LSzqaZc2nXM7)
+
+---
+
+## Terima kasih banyak! 😉 {.center}
+
+![](https://media.giphy.com/media/hrBSJ2So6iTo4/giphy.gif)
+
+Paparan disusun dengan menggunakan {{< fa brands r-project >}} dan [**Quarto**](https://quarto.org) dengan template dari [UNAIR Theme](https://github.com/rameliaz/quarto-unair-theme).
