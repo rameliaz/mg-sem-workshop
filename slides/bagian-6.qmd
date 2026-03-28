@@ -1,6 +1,6 @@
 ---
-title: "Workshop MG-SEM Bagian 6"
-subtitle: "Dies Natalis 36th — Multigroup SEM"
+title: "Multigroup Structural Equation Modeling: Bagian 6"
+subtitle: "Teknik Analisis Data: Program Doktor Psikologi"
 author: "Rizqy Amelia Zein"
 institute: "Universitas Airlangga"
 date: today

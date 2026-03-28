@@ -2,12 +2,21 @@ local function ensureLatexDeps()
   quarto.doc.use_latex_package("fontawesome6")
 end
 
+local fontawesome_cdn_loaded = false
+
 local function ensureHtmlDeps()
   quarto.doc.add_html_dependency({
     name = 'fontawesome6',
     version = '6.7.2',
-    stylesheets = {'assets/css/all.min.css', 'assets/css/latex-fontsize.css'}
+    stylesheets = {'assets/css/latex-fontsize.css'}
   })
+  if not fontawesome_cdn_loaded then
+    fontawesome_cdn_loaded = true
+    quarto.doc.include_text(
+      'in-header',
+      '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />\n'
+    )
+  end
 end
 
 local function isEmpty(s)

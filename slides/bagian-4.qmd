@@ -1,6 +1,6 @@
 ---
-title: "Workshop MG-SEM Bagian 4"
-subtitle: "Dies Natalis 36th — Confirmatory Factor Analysis"
+title: "Multigroup Structural Equation Modeling: Bagian 4"
+subtitle: "Teknik Analisis Data: Program Doktor Psikologi"
 author: "Rizqy Amelia Zein"
 institute: "Universitas Airlangga"
 date: today

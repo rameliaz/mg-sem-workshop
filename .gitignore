@@ -4,3 +4,6 @@
 /.quarto/
 .claude/
 ~$*
+
+**/*.quarto_ipynb
+CLAUDE.md

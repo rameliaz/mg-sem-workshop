@@ -1,6 +1,6 @@
 ---
-title: "Workshop MG-SEM Bagian 2"
-subtitle: "Dies Natalis 36th — Korelasi"
+title: "Multigroup Structural Equation Modeling: Bagian 2"
+subtitle: "Teknik Analisis Data: Program Doktor Psikologi"
 author: "Rizqy Amelia Zein"
 institute: "Universitas Airlangga"
 date: today

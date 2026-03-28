@@ -1,6 +1,6 @@
 ---
-title: "Workshop MG-SEM Bagian 1"
-subtitle: "Dies Natalis 36th — Pengantar"
+title: "Multigroup Structural Equation Modeling: Bagian 1"
+subtitle: "Teknik Analisis Data: Program Doktor Psikologi"
 author: "Rizqy Amelia Zein"
 institute: "Universitas Airlangga"
 date: today
@@ -29,7 +29,7 @@ Materi dalam paparan ini berlisensi CC 4.0 dan tersedia di <https://rameliaz.git
 
 ---
 
-## *Outline* Hari 1: Jumat, 22 November 2019 {background-color="#14497F"}
+## *Outline* Hari 1: Jumat, 22 November 2019
 
 ::: {.columns}
 ::: {.column width="50%"}
@@ -104,7 +104,7 @@ Materi dalam paparan ini berlisensi CC 4.0 dan tersedia di <https://rameliaz.git
 
 ---
 
-## *Outline* Hari 2: Sabtu, 23 November 2019 {background-color="#14497F"}
+## *Outline* Hari 2: Sabtu, 23 November 2019
 
 ::: {.columns}
 ::: {.column width="50%"}
@@ -419,8 +419,8 @@ Materi dalam paparan ini berlisensi CC 4.0 dan tersedia di <https://rameliaz.git
 
 ---
 
-## Terima kasih banyak! 😉 {.center}
+## Terima kasih banyak! 😉
 
 ![](https://media.giphy.com/media/hrBSJ2So6iTo4/giphy.gif)
 
-Paparan disusun dengan menggunakan {{< fa brands r-project >}} dan [**Quarto**](https://quarto.org) dengan template dari [UNAIR Theme](https://github.com/rameliaz/quarto-unair-theme).
+Paparan disusun dengan menggunakan {{< fa brands r-project >}} dan [**Quarto**](https://quarto.org) dengan *template* dari [UNAIR Theme](https://github.com/rameliaz/quarto-unair-theme).

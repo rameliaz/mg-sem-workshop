@@ -1,6 +1,6 @@
 ---
-title: "Workshop MG-SEM Bagian 3"
-subtitle: "Dies Natalis 36th — Model Jalur & lavaan"
+title: "Multigroup Structural Equation Modeling: Bagian 3"
+subtitle: "Teknik Analisis Data: Program Doktor Psikologi"
 author: "Rizqy Amelia Zein"
 institute: "Universitas Airlangga"
 date: today
