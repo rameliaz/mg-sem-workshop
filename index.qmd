@@ -8,7 +8,7 @@ title: "Multigroup Structural Equation Modeling"
 
 Laman web berikut ini merupakan laman web untuk **Workshop Multigroup Structural Equation Modeling** yang diselenggarakan oleh program studi Doktor (S3) Psikologi, Fakultas Psikologi, Universitas Airlangga.
 
-Materi berlisensi [<i class="fab fa-creative-commons"></i> BY 4.0](https://creativecommons.org/licenses/by/4.0/). **Materi bebas digunakan kembali namun wajib mengatribusi sumber aslinya**.
+Materi berlisensi [<i class="fab fa-creative-commons"><i class="fa-solid fa-universal-access"></i> BY 4.0](https://creativecommons.org/licenses/by/4.0/). **Materi bebas digunakan kembali namun wajib mengatribusi sumber aslinya**.
 
 ## Waktu dan tempat
 
@@ -125,7 +125,7 @@ Namun, apabila peserta ingin menyimpan atau mengakses _history chat_ setelah _wo
 
 Gunakan **jamovi versi stabil yang terbaru** (2.6.44) [untuk Windows](https://www.jamovi.org/downloads/jamovi-2.6.44.0-win-x64.exe) atau [MacOS](https://www.jamovi.org/download.html).
 
-Mohon untuk menyimak video cara mengelola *modules* di jamovi berikut ini. Di video ini saya mencontohkan cara instalasi _module_ GAMLj. Instalasi _modules_ SEMj mengikuti prosedur yang persis sama.
+Mohon untuk menyimak video cara mengelola *modules* di jamovi berikut ini. Di video ini saya mencontohkan cara instalasi _module_ GAMLj. Instalasi _modules_ SEMj v1.2.5 mengikuti prosedur yang persis sama.
 
 {{< video https://www.youtube.com/watch?v=XWavBKgTEuU >}}
 
