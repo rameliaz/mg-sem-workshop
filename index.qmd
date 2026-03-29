@@ -25,13 +25,13 @@ Namun, apabila peserta ingin menyimpan atau mengakses _history chat_ setelah _wo
 
 ## *Outline* materi
 
-#### **Pengantar**
+#### Bagian 1️⃣: **Pengantar**
 * Apa itu *structural equation modeling* (SEM)?
 * Mengapa dan pada kondisi seperti apa SEM diperlukan?
 * Beberapa pilihan perangkat lunak untuk mengeksekusi SEM
 * Yang tidak dicakup dalam *workshop* serta keterbatasan jamovi
 
-#### **Korelasi**
+#### Bagian 2️⃣: **Korelasi**
 * Jenis-jenis koefisien korelasi
 * Faktor-faktor yang membuat koefisien korelasi bervariasi
 * [Koreksi atenuasi](https://methods.sagepub.com/reference/encyc-of-research-design/n81.xml) dan *measurement error*
@@ -39,22 +39,22 @@ Namun, apabila peserta ingin menyimpan atau mengakses _history chat_ setelah _wo
 * *WARNING! Covariance/correlation matrix is not positive definite*
 * [*Heywood* dan *ultra-Heywood case*](https://journals.sagepub.com/doi/10.1177/0049124112442138)
 * Bivariat, *part*, dan *partial correlation*
-* Metrik variabel (*standardised* vs *unstandardised*)
+* Metrik variabel (*standardized* vs *unstandardized*)
 
 ::: {.callout-important}
-Karena keterbatasan waktu, bagian **Korelasi** tidak akan diajarkan di _workshop_, tetapi **harus dikuasai** oleh peserta terlebih dahulu sebelum memulai _workshop_. Materi ini (seharusnya) sudah diberikan di MK Psikometri/Pengukuran Psikolog/Statistik Dasar di jenjang S1, sehingga asumsinya peserta sudah familiar dengan materi ini. Materi akan tersedia di laman web ini dan dapat dipelajari secara mandiri.
+Karena keterbatasan waktu, bagian **Korelasi** tidak akan diajarkan di _workshop_, tetapi **harus dikuasai** oleh peserta terlebih dahulu sebelum memulai _workshop_. Materi ini (seharusnya) sudah diberikan di MK Psikometri/Pengukuran Psikolog/Statistik Dasar di jenjang S1, sehingga asumsinya peserta sudah familiar dengan materi ini. Materi tersedia di laman web ini dan dapat dipelajari secara mandiri.
 :::
 
-#### **Model Jalur** (*Path Model*) dan Model Regresi
+#### Bagian 3️⃣: **Model Jalur** (*Path Model*) dan Model Regresi
 * Definisi *path model*
 * Nama variabel dan koefisien jalur (*path coefficients*)
   * δ (delta), ε (epsilon), ξ (ksi), η (eta), λ (lambda), γ (gamma), β (beta), φ (phi), ζ (zeta)
 * Representasi visual model jalur menggunakan diagram jalur (*path diagram*)
 * Menggambarkan hubungan antar-variabel dengan menggunakan diagram jalur
-* *Syntax* `lavaan` untuk spesifikasi model jalur
+* Spesifikasi model dengan _syntax_ `lavaan` untuk spesifikasi model jalur di _module_ SEMLj
 * Asumsi kausalitas (?) dan limitasi
 
-#### **Confirmatory Factor Analysis (CFA)**
+#### Bagian 4️⃣: **_Confirmatory Factor Analysis_ (CFA)**
 * Definisi *factor analysis*
 * *Exploratory* vs *confirmatory factor analysis*
 * Kapan menggunakan CFA?
@@ -66,10 +66,10 @@ Karena keterbatasan waktu, bagian **Korelasi** tidak akan diajarkan di _workshop
 * Menuliskan hasil analisis CFA dalam laporan penelitian
 
 ::: {.callout-important}
-Karena keterbatasan waktu, bagian **_Confirmatory Factor Analysis_** tidak akan diajarkan di _workshop_, tetapi **harus dibaca cepat** oleh peserta terlebih dahulu sebelum sesi _workshop_. Materi akan tersedia di laman web ini dan dapat dipelajari secara mandiri.
+Karena keterbatasan waktu, bagian **_Confirmatory Factor Analysis_** tidak akan diajarkan di _workshop_, tetapi **harus dibaca cepat** oleh peserta terlebih dahulu sebelum sesi _workshop_. Materi tersedia di laman web ini dan dapat dipelajari secara mandiri.
 :::
 
-#### **Dasar-dasar Structural Equation Modeling (SEM)**
+#### Bagian 5️⃣: **Dasar-dasar Structural Equation Modeling (SEM)**
 * Dasar-Dasar SEM: Model struktural & pengukuran
 * Tahapan *modeling* dengan menggunakan SEM
   * Spesifikasi model
@@ -90,7 +90,7 @@ Karena keterbatasan waktu, bagian **_Confirmatory Factor Analysis_** tidak akan 
 * Membedakan antara pendekatan dua-langkah dengan empat-langkah *modeling* dengan SEM
 * Menuliskan hasil analisis SEM dalam laporan penelitian
 
-#### **Multigroup SEM (MG-SEM)**
+#### Bagian 6️⃣: **Multigroup SEM (MG-SEM)**
 * Kapan perlu menggunakan MG-SEM?
 * *Measurement invariance*
   * *Configural invariance*
@@ -119,7 +119,7 @@ Karena keterbatasan waktu, bagian **_Confirmatory Factor Analysis_** tidak akan 
 
 ## Sumber belajar lainnya
 
-* [Learning Statistics with jamovi](https://sites.google.com/brookes.ac.uk/learning-stats-with-jamovi)
+* [Learning Statistics with jamovi](https://www.learnstatswithjamovi.com/)
 * [Video tutorial jamovi dari Datalab](https://datalab.cc/tools/jamovi)
 * [Materi workshop SEM: Sacha Epskamp](http://sachaepskamp.com/workshop-materials/Psych_rstats_Club.zip)
 * Cho, E. (2016). [Making Reliability Reliable: A Systematic approach to reliability coefficients](articles/cho2016.pdf). _Organizational Research Methods, 19_(4), 651-682.
