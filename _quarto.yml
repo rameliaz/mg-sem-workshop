@@ -27,40 +27,40 @@ website:
     right:
       - text: "Materi (html)"
         menu:
-          - text: "Bagian 1"
+          - text: "Bagian 1: Pengantar"
             href: slides/bagian-1.html
-          - text: "Bagian 2"
+          - text: "Bagian 2: Korelasi"
             href: slides/bagian-2.html
-          - text: "Bagian 3"
+          - text: "Bagian 3: Model Jalur"
             href: slides/bagian-3.html
-          - text: "Bagian 4"
+          - text: "Bagian 4: CFA"
             href: slides/bagian-4.html
-          - text: "Bagian 5"
+          - text: "Bagian 5: Dasar SEM"
             href: slides/bagian-5.html
-          - text: "Bagian 6"
+          - text: "Bagian 6: MG SEM"
             href: slides/bagian-6.html
       - text: "Materi (pdf)"
         menu:
-          - text: "Bagian 1"
+          - text: "Bagian 1: Pengantar"
             href: "slides/bagian-1.html?print-pdf"
-          - text: "Bagian 2"
+          - text: "Bagian 2: Korelasi"
             href: "slides/bagian-2.html?print-pdf"
-          - text: "Bagian 3"
+          - text: "Bagian 3: Model Jalur"
             href: "slides/bagian-3.html?print-pdf"
-          - text: "Bagian 4"
+          - text: "Bagian 4: CFA"
             href: "slides/bagian-4.html?print-pdf"
-          - text: "Bagian 5"
+          - text: "Bagian 5: Dasar SEM"
             href: "slides/bagian-5.html?print-pdf"
-          - text: "Bagian 6"
+          - text: "Bagian 6: MG SEM"
             href: "slides/bagian-6.html?print-pdf"
       - text: "Dataset"
         menu:
           - text: "Dataset Contoh Korelasi"
-            href: materials/corr.jasp
+            href: materials/corr.omv
           - text: "Dataset Latihan Korelasi"
             href: materials/latihancorr.csv
-          - text: "Dataset Contoh CFA (*.jasp)"
-            href: materials/contoh-cfa.jasp
+          - text: "Dataset Contoh CFA (*.omv)"
+            href: materials/contoh-cfa.omv
           - text: "Dataset Contoh CFA (*.csv)"
             href: materials/contoh-cfa.csv
           - text: "Dataset Contoh Multigroup SEM"
