@@ -1,8 +1,10 @@
 ---
-title: "Multigroup Structural Equation Modeling: Bagian 6"
-subtitle: "Teknik Analisis Data: Program Doktor Psikologi"
+title: "Multi-Group Structural Equation Modeling (SEM)"
+subtitle: "Multigroup Structural Equation Modeling: Bagian 6️⃣"
 author: "Rizqy Amelia Zein"
-institute: "Universitas Airlangga"
+institute:
+  - "Departemen Psikologi, Universitas Airlangga"
+  - "Research Data & Methods Team, Center for Advanced Internet Studies"
 date: today
 format:
   unair-revealjs:
@@ -10,6 +12,9 @@ format:
     progress: true
     transition: slide
     center: false
+execute:
+  eval: false
+  echo: true
 ---
 
 ## *Multigroup* SEM: untuk apa?

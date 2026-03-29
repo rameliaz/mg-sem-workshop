@@ -12,7 +12,7 @@
 
   <meta name="author" content="Rizqy Amelia Zein">
   <meta name="dcterms.date" content="2026-03-29">
-  <title>Multigroup SEM Workshop – Multigroup Structural Equation Modeling: Bagian 4</title>
+  <title>Multigroup SEM Workshop – Confirmatory Factor Analysis (CFA)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -31,7 +31,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-a34fe8a8ceb863ae7323e319d33dffc4.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-6f4a79ec7e0e51d91ee72072a2720184.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -130,8 +130,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Multigroup Structural Equation Modeling: Bagian 4</h1>
-  <p class="subtitle">Teknik Analisis Data: Program Doktor Psikologi</p>
+  <h1 class="title">Confirmatory Factor Analysis (CFA)</h1>
+  <p class="subtitle">Multigroup Structural Equation Modeling: Bagian 4️⃣</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -139,7 +139,10 @@
 Rizqy Amelia Zein 
 </div>
         <p class="quarto-title-affiliation">
-            Universitas Airlangga
+            Departemen Psikologi, Universitas Airlangga
+          </p>
+        <p class="quarto-title-affiliation">
+            Research Data &amp; Methods Team, Center for Advanced Internet Studies
           </p>
     </div>
 </div>
@@ -578,7 +581,7 @@ Rizqy Amelia Zein
           // Add centered logo if it doesn't exist
           if (!slide.querySelector('.title-slide-logo')) {
             const titleLogo = document.createElement('img');
-            titleLogo.src = 'img/logo.png';
+            titleLogo.src = 'libs/logo.png';
             titleLogo.className = 'title-slide-logo';
             titleLogo.alt = 'Universitas Airlangga Logo';
             slide.insertBefore(titleLogo, slide.firstChild);
@@ -597,8 +600,8 @@ Rizqy Amelia Zein
         // Check background color
         const bgColor = slide.getAttribute('data-background-color');
         const logoSrc = (bgColor === '#14497F' || bgColor === '#14497f') 
-          ? 'img/logo_white.png' 
-          : 'img/logo.png';
+          ? 'libs/logo_white.png' 
+          : 'libs/logo.png';
         
         // If exactly one logo exists, just update its source
         if (existingLogos.length === 1) {

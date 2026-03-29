@@ -1,8 +1,10 @@
 ---
-title: "Multigroup Structural Equation Modeling: Bagian 5"
-subtitle: "Teknik Analisis Data: Program Doktor Psikologi"
+title: "Dasar-Dasar Structural Equation Modeling (SEM)"
+subtitle: "Multigroup Structural Equation Modeling: Bagian 5️⃣"
 author: "Rizqy Amelia Zein"
-institute: "Universitas Airlangga"
+institute:
+  - "Departemen Psikologi, Universitas Airlangga"
+  - "Research Data & Methods Team, Center for Advanced Internet Studies"
 date: today
 format:
   unair-revealjs:

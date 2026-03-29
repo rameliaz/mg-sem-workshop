@@ -13,7 +13,7 @@ function manageLogos() {
       // Add centered logo if it doesn't exist
       if (!slide.querySelector('.title-slide-logo')) {
         const titleLogo = document.createElement('img');
-        titleLogo.src = 'img/logo.png';
+        titleLogo.src = 'libs/logo.png';
         titleLogo.className = 'title-slide-logo';
         titleLogo.alt = 'Universitas Airlangga Logo';
         slide.insertBefore(titleLogo, slide.firstChild);
@@ -32,8 +32,8 @@ function manageLogos() {
     // Check background color
     const bgColor = slide.getAttribute('data-background-color');
     const logoSrc = (bgColor === '#14497F' || bgColor === '#14497f') 
-      ? 'img/logo_white.png' 
-      : 'img/logo.png';
+      ? 'libs/logo_white.png' 
+      : 'libs/logo.png';
     
     // If exactly one logo exists, just update its source
     if (existingLogos.length === 1) {
