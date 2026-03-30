@@ -389,7 +389,7 @@
     "href": "slides/bagian-1.html#model-sem-terdiri-atas",
     "title": "Pengantar",
     "section": "Model SEM terdiri atas…",
-    "text": "Model SEM terdiri atas…\n\nModel regresi (linear/OLS)\n\nMenguji hubungan antar variabel observed\n\nModel jalur (path model)\n\nMenguji hubungan antara variabel observed dan latent\n\nModel pengukuran (measurement model/confirmatory factor analysis)\n\nMenguji apakah aitem-aitem dari skala Psikologi memang mengukur konstruk tersebut  validitas konstruk.\n\nSEM biasanya mengandung setidaknya dua model, yaitu model pengukuran dan model struktural (regresi/jalur)."
+    "text": "Model SEM terdiri atas…\n\nModel regresi (linear/OLS)\n\nMenguji hubungan antar variabel observed\n\nModel jalur (path model)\n\nMenguji hubungan antara variabel observed dan latent\n\nModel pengukuran (measurement model/confirmatory factor analysis)\n\nMenguji apakah item-item dari skala Psikologi memang mengukur konstruk tersebut  validitas konstruk.\n\nSEM biasanya mengandung setidaknya dua model, yaitu model pengukuran dan model struktural (regresi/jalur)."
   },
   {
     "objectID": "slides/bagian-1.html#contoh-model-sem",

@@ -107,9 +107,8 @@ execute:
 
 * Model jalur (*path model*)
   - Menguji hubungan antara variabel *observed* dan *latent*
-
 * Model pengukuran (*measurement model*/*confirmatory factor analysis*)
-  - Menguji apakah aitem-aitem dari skala Psikologi memang mengukur konstruk tersebut {{< fa circle-arrow-right >}} validitas konstruk.
+  - Menguji apakah item-item dari skala Psikologi memang mengukur konstruk tersebut {{< fa circle-arrow-right >}} validitas konstruk.
 
 * SEM biasanya mengandung setidaknya **dua model**, yaitu model pengukuran dan model struktural (regresi/jalur).
 :::
