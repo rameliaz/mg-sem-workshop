@@ -17,18 +17,6 @@ execute:
   echo: true
 ---
 
-## _Outline_
-
-* Definisi *factor analysis*
-* *Exploratory* vs *confirmatory factor analysis*
-* Kapan menggunakan CFA?
-* [*Constraining parameter* model](https://psycnet.apa.org/record/2008-06808-005)
-* Model pengukuran (paralel, *tau equivalence*, dan *congeneric*)
-* Variabel indikator (reflektif vs formatif)
-* *Correlated error variances*
-* Metode estimasi
-* Menuliskan hasil analisis CFA dalam laporan penelitian
-
 ## Analisis faktor
 
 ::: {.columns}
@@ -224,11 +212,10 @@ execute:
 
 ### [Kumpulkan tugasnya disini](https://forms.gle/eNGD2LSzqaZc2nXM7)
 
-## Ada pertanyaan❓
+---
 
-![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDFtaDh5ZjZ2eXJ3dmJmZmFmYzBtNHEwdzlqZmZtdGtmbnE0bXZidiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/igB2Th9e4nW6s/giphy.gif){fig-align="center"}
+## Terima kasih banyak! 😉 {.center}
 
-::: {.callout-note}
-* Paparan disusun dengan menggunakan {{< fa brands r-project >}} dan [**Quarto**](https://quarto.org) dengan *template* dari [UNAIR Theme](https://github.com/rameliaz/quarto-unair-theme).
-* Kontak saya via <i class="fas fa-paper-plane"></i> <a href="mailto:amelia.zein@psikologi.unair.ac.id">amelia.zein@psikologi.unair.ac.id</a>
-:::
+![](https://media.giphy.com/media/hrBSJ2So6iTo4/giphy.gif)
+
+Paparan disusun dengan menggunakan {{< fa brands r-project >}} dan [**Quarto**](https://quarto.org) dengan template dari [UNAIR Theme](https://github.com/rameliaz/quarto-unair-theme).

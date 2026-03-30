@@ -25,13 +25,14 @@ Namun, apabila peserta ingin menyimpan atau mengakses _history chat_ setelah _wo
 
 ## *Outline* materi
 
-### **Bagian 1️⃣: Pengantar**
+### Bagian 1️⃣: Pengantar
 * Apa itu *structural equation modeling* (SEM)?
 * Mengapa dan pada kondisi seperti apa SEM diperlukan?
 * Beberapa pilihan perangkat lunak untuk mengeksekusi SEM
+* SEM atau PLS?
 * Yang tidak dicakup dalam *workshop* serta keterbatasan jamovi
 
-### **Bagian 2️⃣: Korelasi**
+### Bagian 2️⃣: Korelasi
 * Jenis-jenis koefisien korelasi
 * Faktor-faktor yang membuat koefisien korelasi bervariasi
 * [Koreksi atenuasi](https://methods.sagepub.com/reference/encyc-of-research-design/n81.xml) dan *measurement error*
@@ -45,7 +46,7 @@ Namun, apabila peserta ingin menyimpan atau mengakses _history chat_ setelah _wo
 Karena keterbatasan waktu, bagian **Korelasi** **_tidak diajarkan_** di _workshop_, tetapi **harus dikuasai** oleh peserta terlebih dahulu sebelum memulai _workshop_. Materi ini (seharusnya) sudah diberikan di MK Psikometri/Pengukuran Psikolog/Statistik Dasar di jenjang S1, sehingga asumsinya peserta sudah familiar dengan materi ini. Materi tersedia di laman web ini dan dapat dipelajari secara mandiri.
 :::
 
-### **Bagian 3️⃣: Model Jalur** (*Path Model*) dan Model Regresi
+### Bagian 3️⃣: Model Jalur** (*Path Model*) dan Model Regresi
 * Definisi *path model*
 * Nama variabel dan koefisien jalur (*path coefficients*)
   * δ (delta), ε (epsilon), ξ (ksi), η (eta), λ (lambda), γ (gamma), β (beta), φ (phi), ζ (zeta)
@@ -54,7 +55,7 @@ Karena keterbatasan waktu, bagian **Korelasi** **_tidak diajarkan_** di _worksho
 * Spesifikasi model dengan _syntax_ `lavaan` untuk spesifikasi model jalur di _module_ SEMLj
 * Asumsi kausalitas (?) dan limitasi
 
-### **Bagian 4️⃣: _Confirmatory Factor Analysis_ (CFA)**
+### Bagian 4️⃣: _Confirmatory Factor Analysis_ (CFA)
 * Definisi *factor analysis*
 * *Exploratory* vs *confirmatory factor analysis*
 * Kapan menggunakan CFA?
@@ -69,7 +70,7 @@ Karena keterbatasan waktu, bagian **Korelasi** **_tidak diajarkan_** di _worksho
 Karena keterbatasan waktu, bagian **_Confirmatory Factor Analysis_** **_tidak diajarkan_** di _workshop_, tetapi **harus dibaca cepat** oleh peserta terlebih dahulu sebelum sesi _workshop_. Materi tersedia di laman web ini dan dapat dipelajari secara mandiri.
 :::
 
-### **Bagian 5️⃣: Dasar-dasar _Structural Equation Modeling_ (SEM)**
+### Bagian 5️⃣: Dasar-dasar _Structural Equation Modeling_ (SEM)
 * Dasar-Dasar SEM: Model struktural & pengukuran
 * Tahapan *modeling* dengan menggunakan SEM
   * Spesifikasi model
@@ -90,7 +91,7 @@ Karena keterbatasan waktu, bagian **_Confirmatory Factor Analysis_** **_tidak di
 * Membedakan antara pendekatan dua-langkah dengan empat-langkah *modeling* dengan SEM
 * Menuliskan hasil analisis SEM dalam laporan penelitian
 
-### **Bagian 6️⃣: _Multigroup_ SEM (MG-SEM)**
+### Bagian 6️⃣: _Multigroup_ SEM (MG-SEM)
 * Kapan perlu menggunakan MG-SEM?
 * *Measurement invariance*
   * *Configural invariance*

@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.8.14">
 
   <meta name="author" content="Rizqy Amelia Zein">
-  <meta name="dcterms.date" content="2026-03-29">
+  <meta name="dcterms.date" content="2026-03-30">
   <title>Multigroup SEM Workshop – Pengantar</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -147,319 +147,313 @@ Rizqy Amelia Zein
     </div>
 </div>
 
-  <p class="date">2026-03-29</p>
+  <p class="date">2026-03-30</p>
 </section>
-<section id="menghubungi-saya" class="slide level2 center">
-<h2>Menghubungi saya?</h2>
-<p><i class="fa-solid fa-paper-plane" aria-label="paper-plane"></i> <a href="mailto:amelia.zein@psikologi.unair.ac.id" class="email">amelia.zein@psikologi.unair.ac.id</a></p>
-<p><i class="fa-brands fa-twitter" aria-label="twitter"></i> <a href="https://twitter.com/ameliazein"><span class="citation" data-cites="ameliazein">@ameliazein</span></a></p>
-<p><i class="fa-brands fa-github" aria-label="github"></i> <a href="https://github.com/rameliaz"><span class="citation" data-cites="rameliaz">@rameliaz</span></a></p>
-<p><i class="fa-solid fa-desktop" aria-label="desktop"></i> <a href="https://rameliaz.github.io" class="uri">https://rameliaz.github.io</a></p>
-<p>Materi dalam paparan ini berlisensi CC 4.0 dan tersedia di <a href="https://rameliaz.github.io/mg-sem-workshop/" class="uri">https://rameliaz.github.io/mg-sem-workshop/</a>.</p>
-</section>
-<section id="outline-hari-1-jumat-22-november-2019" class="slide level2">
-<h2><em>Outline</em> Hari 1: Jumat, 22 November 2019</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="sebelum-istirahat-09.00-11.30">Sebelum istirahat (09.00-11.30)</h3>
-<p><strong>Pengantar</strong></p>
+<section id="outline" class="slide level2">
+<h2><em>Outline</em></h2>
 <ul>
 <li>Apa itu <em>structural equation modeling</em> (SEM)?</li>
 <li>Mengapa dan pada kondisi seperti apa SEM diperlukan?</li>
 <li>Beberapa pilihan perangkat lunak untuk mengeksekusi SEM</li>
-<li>Yang tidak dicakup dalam <em>workshop</em> serta keterbatasan JASP</li>
+<li>SEM atau PLS?</li>
+<li>Yang tidak dicakup dalam <em>workshop</em> serta keterbatasan <code>jamovi</code></li>
 </ul>
-</div><div class="column" style="width:50%;">
-<p><img data-src="https://media.giphy.com/media/31lPv5L3aIvTi/giphy.gif"></p>
-</div></div>
 </section>
-<section id="outline-hari-1-jumat-22-november-2019-1" class="slide level2">
-<h2><em>Outline</em> Hari 1: Jumat, 22 November 2019</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="sebelum-istirahat-09.00-11.30-1">Sebelum istirahat (09.00-11.30)</h3>
+<section>
+<section id="apa-itu-structural-equation-modeling" class="title-slide slide level1 center" data-background-color="#14497F">
+<h1>Apa itu structural equation modeling?</h1>
+
+</section>
+<section id="penggunaan-sem" class="slide level2">
+<h2>Penggunaan SEM <i class="fa-solid fa-trophy"></i></h2>
 <ul>
-<li>Jenis-jenis koefisien korelasi</li>
-<li>Faktor-faktor yang membuat koefisien korelasi bervariasi</li>
-<li><a href="https://methods.sagepub.com/reference/encyc-of-research-design/n81.xml">Koreksi atenuasi</a> dan <em>measurement error</em></li>
-<li><em>Variance-covariance</em> dan <em>correlation matrix</em></li>
-<li><em>WARNING! Covariance/correlation matrix is not positive definite</em></li>
-<li><a href="https://journals.sagepub.com/doi/10.1177/0049124112442138"><em>Heywood</em> dan <em>ultra-Heywood case</em></a></li>
-<li>Bivariat, <em>part</em>, dan <em>partial correlation</em></li>
-<li>Metrik variabel (<em>standardised</em> vs <em>unstandardised</em>)</li>
+<li class="fragment">Pernahkah ibu/bapak menggunakan SEM sebelumnya?</li>
+<li class="fragment">Untuk apa SEM digunakan?</li>
 </ul>
-</div><div class="column" style="width:50%;">
-<p><img data-src="https://media.giphy.com/media/3ornjXIIShZ2MgyyHu/giphy.gif"></p>
-</div></div>
 </section>
-<section id="outline-hari-1-jumat-22-november-2019-2" class="slide level2">
-<h2><em>Outline</em> Hari 1: Jumat, 22 November 2019</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="setelah-istirahat-13.00-16.00">Setelah istirahat (13.00-16.00)</h3>
+<section id="sem-adalah-1" class="slide level2">
+<h2>SEM adalah… 1️⃣</h2>
 <ul>
-<li>Definisi <em>path model</em></li>
-<li>Nama variabel dan koefisien jalur (<em>path coefficients</em>)
-<ul>
-<li>δ (delta), ε (epsilon), ξ (ksi), η (eta), λ (lambda), γ (gamma), β (beta), φ (phi), ζ (zeta)</li>
-</ul></li>
-<li>Representasi visual model jalur menggunakan diagram jalur (<em>path diagram</em>)</li>
-<li>Menggambarkan hubungan antar-variabel dengan menggunakan diagram jalur</li>
-<li><em>Syntax</em> <code>lavaan</code> untuk spesifikasi model jalur</li>
-<li>Asumsi kausalitas (?) dan limitasi</li>
+<li class="fragment"><p>Model yang mencakup <strong>hubungan</strong> antara <em>observed</em> dan <em>latent variables</em> dalam berbagai bentuk model teoritis.</p></li>
+<li class="fragment"><p>SEM memungkinkan peneliti untuk melakukan <strong>pengujian hipotesis</strong> yang berkaitan dengan model tersebut.</p></li>
+<li class="fragment"><p>Model SEM mengasumsikan (hipotesis) bahwa seperangkat variabel (<em>observed</em>) mendefinisikan sebuah konstruk <strong>laten</strong>, dan menggambarkan bagaimana hubungan antara konstruk-konstruk laten ini.</p></li>
+<li class="fragment"><p>SEM adalah teknik yang lebih <em>sophisticated</em> untuk menggambarkan <strong>hubungan antar-variabel</strong> karena mengontrol <strong>error pengukuran</strong> dari estimasi korelasi.</p></li>
 </ul>
-</div><div class="column" style="width:50%;">
-<p><img data-src="https://media.giphy.com/media/rVbAzUUSUC6dO/giphy.gif"></p>
-</div></div>
 </section>
-<section id="outline-hari-2-sabtu-23-november-2019" class="slide level2">
-<h2><em>Outline</em> Hari 2: Sabtu, 23 November 2019</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="sebelum-istirahat-09.00-12.00">Sebelum istirahat (09.00-12.00)</h3>
+<section id="sem-adalah-2" class="slide level2">
+<h2>SEM adalah… 2️⃣</h2>
 <ul>
-<li>Definisi <em>factor analysis</em></li>
-<li><em>Exploratory</em> vs <em>confirmatory factor analysis</em></li>
-<li>Kapan menggunakan CFA?</li>
-<li><a href="https://psycnet.apa.org/record/2008-06808-005"><em>Constraining parameter</em> model</a></li>
-<li>Model pengukuran (paralel, <em>tau equivalence</em>, dan <em>congeneric</em>)</li>
-<li>Variabel indikator (reflektif vs formatif)</li>
-<li><em>Correlated error variances</em></li>
-<li>Metode estimasi</li>
-<li>Menuliskan hasil analisis CFA dalam laporan penelitian</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><img data-src="https://media.giphy.com/media/WUq1cg9K7uzHa/giphy.gif"></p>
-</div></div>
-</section>
-<section id="outline-hari-2-sabtu-23-november-2019-1" class="slide level2">
-<h2><em>Outline</em> Hari 2: Sabtu, 23 November 2019</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="setelah-istirahat-13.00-16.00-1">Setelah istirahat (13.00-16.00)</h3>
-<p><strong>Dasar-dasar Structural Equation Modeling (SEM)</strong></p>
-<ul>
-<li>Dasar-Dasar SEM: Model struktural &amp; pengukuran</li>
-<li>Tahapan <em>modeling</em> dengan menggunakan SEM</li>
-<li><em>Degree of freedom</em></li>
-<li><em>Underidentified</em>, <em>just-identified</em>, dan <em>overidentified model</em></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><img data-src="https://media.giphy.com/media/11sBLVxNs7v6WA/giphy.gif"></p>
-</div></div>
-</section>
-<section id="outline-hari-2-sabtu-23-november-2019-2" class="slide level2">
-<h2><em>Outline</em> Hari 2: Sabtu, 23 November 2019</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="setelah-istirahat-13.00-16.00-2">Setelah istirahat (13.00-16.00)</h3>
-<p><strong>Dasar-dasar Structural Equation Modeling (SEM)</strong></p>
-<ul>
-<li>Jenis-jenis kriteria untuk menilai ketepatan model (<em>model fit</em>)</li>
-<li>Menguji hipotesis (<em>statistical power</em>, ukuran sampel)</li>
-<li>Membandingkan pendekatan dua-langkah vs empat-langkah</li>
-<li>Menuliskan hasil analisis SEM dalam laporan penelitian</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><img data-src="https://media.giphy.com/media/LNE01Z89j9gis/giphy.gif"></p>
-</div></div>
-</section>
-<section id="outline-hari-2-sabtu-23-november-2019-3" class="slide level2">
-<h2><em>Outline</em> Hari 2: Sabtu, 23 November 2019</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="setelah-istirahat-13.00-16.00-3">Setelah istirahat (13.00-16.00)</h3>
-<p><strong>Multiple-group SEM (MG-SEM)</strong></p>
-<ul>
-<li>Kapan perlu menggunakan MG-SEM?</li>
-<li><em>Measurement invariance</em>
-<ul>
-<li><em>Configural invariance</em></li>
-<li><em>Weak/metric invariance</em></li>
-<li><em>Strong/scalar invariance</em></li>
-<li><em>Strict/residual invariance</em></li>
-<li><em>Homogeneity of latent variable variances</em></li>
-<li><em>Homogeneity of factor means</em></li>
-</ul></li>
-<li>Mengevaluasi <em>measurement invariance</em></li>
-<li>Menuliskan hasil analisis MG-SEM dalam laporan penelitian</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><img data-src="https://media.giphy.com/media/PBM14uaJCbp72/giphy.gif"></p>
-</div></div>
-</section>
-<section id="apa-itu-structural-equation-modeling" class="slide level2 center" data-background-color="#14497F">
-<h2>Apa itu <em>structural equation modeling</em>?</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="pernahkah-bapakibu-menggunakan-sem-sebelumnya">Pernahkah bapak/ibu menggunakan SEM sebelumnya?</h3>
-<h3 id="untuk-apa-sem-digunakan">Untuk apa SEM digunakan?</h3>
-</div><div class="column" style="width:50%;">
-<p><img data-src="https://media.giphy.com/media/fvwXjE0Hf70690czE5/giphy.gif"></p>
-</div></div>
-</section>
-<section id="sem-adalah" class="slide level2">
-<h2>SEM adalah…</h2>
-<ul>
-<li><p>Memuat <strong>hubungan</strong> antara <strong>observed</strong> dan <strong>latent variables</strong> dalam berbagai bentuk model teoritis. SEM memungkinkan peneliti untuk melakukan <strong>pengujian hipotesis</strong> yang berkaitan dengan model tersebut.</p></li>
-<li><p>Model SEM mengasumsikan (hipotesis) bahwa seperangkat variabel (<em>observed</em>) mendefinisikan sebuah konstruk <strong>laten</strong>, dan menggambarkan bagaimana hubungan antara konstruk-konstruk laten ini.</p></li>
-<li><p>Tujuan SEM adalah untuk mengetahui apakah model teoritik yang diuji peneliti <strong>didukung oleh data</strong></p>
+<li>Tujuan SEM adalah untuk mengetahui apakah model teoritik yang diuji peneliti <strong>didukung oleh data</strong>
 <ul>
 <li>Apabila data memberikan <strong>bukti yang mendukung</strong> bahwa hubungan antar konstruk/variabel terjadi, maka <strong>mungkin</strong> hubungan tersebut memang benar-benar ada di populasi.</li>
 <li>Apabila data <strong>tidak memberikan bukti yang mendukung</strong> korelasi yang dihipotesiskan, maka peneliti dapat melakukan <strong>re-spesifikasi model</strong> dan menguji kembali model yang sudah dire-spesifikasi tersebut, atau <strong>menyusun ulang model yang baru</strong> untuk kemudian diuji kembali.</li>
 </ul></li>
 </ul>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Penting</strong>: SEM adalah teknik yang <em>theory-driven</em> sehingga modifikasi/re-spesifikasi model harus memiliki alasan teoritis.</p>
+</div>
+</div>
+</div>
 </section>
-<section id="jenis-jenis-variabel" class="slide level2">
-<h2>Jenis-jenis variabel</h2>
+<section id="jenis-jenis-variabel-dalam-model-sem-1" class="slide level2">
+<h2>Jenis-jenis variabel dalam model SEM 1️</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column">
 <ul>
-<li>Variabel <em>observed</em>
+<li class="fragment"><strong>Variabel <em>observed</em></strong>
 <ul>
-<li>Variabel yang dapat diukur langsung dengan berbagai cara/strategi.</li>
-<li>Dalam pengukuran Psikologi, <em>item</em> pernyataan (dalam skala Psikologi) adalah variabel <em>observed</em>.</li>
-<li>Variabel <em>observed</em> dapat merefleksikan variabel <em>latent</em> atau bisa menjadi <strong>kombinasi linear</strong> atas variabel <em>observed</em> yang lain (<em>index</em>).</li>
+<li class="fragment">Variabel yang dapat diukur langsung dengan berbagai cara/strategi.</li>
+<li class="fragment">Dalam pengukuran Psikologi, <em>item</em> pernyataan (dalam skala Psikologi) adalah variabel <em>observed</em>.</li>
 </ul></li>
-<li>Variabel <em>latent</em>
+<li class="fragment"><strong>Variabel <em>latent</em></strong>
 <ul>
-<li>Konstruk/variabel yang <strong>tidak dapat diukur secara langsung</strong>.</li>
-<li>Oleh karena itu, membutuhkan variabel <em>observed</em> untuk mengukurnya.</li>
-<li>Variabel <em>latent</em> dapat berperan sebagai variabel <em>independent</em> atau <em>dependent</em>.</li>
-</ul></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><img data-src="https://media.giphy.com/media/irClCpuJAWgRqtP73t/giphy.gif"></p>
-</div></div>
-</section>
-<section id="jenis-jenis-variabel-1" class="slide level2">
-<h2>Jenis-jenis variabel</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li>Variabel Eksogen dan Endogen
-<ul>
-<li>Variabel eksogen <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> variabel yang <strong>hanya memberi</strong> <em>direct effect</em> pada variabel lain di dalam model yang sama</li>
-<li>Variabel endogen <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> variabel yang <strong>hanya menerima</strong> <em>direct effect</em> pada variabel lain di dalam model yang sama</li>
+<li class="fragment">Konstruk/variabel yang <strong>tidak dapat diukur/diamati secara langsung</strong>.</li>
+<li class="fragment">Oleh karena itu, membutuhkan variabel <em>observed</em> untuk mengukurnya.</li>
 </ul></li>
 </ul>
-</div><div class="column" style="width:50%;">
-<p><img data-src="https://media.giphy.com/media/yBFOH8Ux7nHQA/giphy.gif"></p>
+</div><div class="column">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="libs/observed-latent.png" class="quarto-figure quarto-figure-right" style="width:60.0%"></p>
+</figure>
+</div>
 </div></div>
 </section>
-<section id="contohnya" class="slide level2">
-<h2>Contohnya…</h2>
+<section id="jenis-jenis-variabel-dalam-model-sem-2" class="slide level2">
+<h2>Jenis-jenis variabel dalam model SEM 2️⃣</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column">
 <ul>
-<li><p>Seorang peneliti ingin <strong>mengukur kepribadian</strong> seorang responden dengan menggunakan pendekatan <em>Five-Factor Model</em> (Big 5), maka aitem dalam skala tersebut adalah <em>observed variable</em>, sedangkan dimensi dari Big 5 adalah <em>latent variable</em>.</p></li>
-<li><p>Seorang peneliti Psikologi Pendidikan ingin tahu apakah <strong>kepercayaan orang tua bahwa anaknya dapat berkembang secara natural</strong> (<em>trust in organismic development</em> — <em>independent latent variable</em>) berkorelasi dengan <strong>tingkat kemandirian anak</strong> (<em>dependent latent variable</em>).</p></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><img data-src="https://media.giphy.com/media/d5fW0J4klfwnm/giphy.gif"></p>
-</div></div>
-</section>
-<section id="contohnya-1" class="slide level2">
-<h2>Contohnya…</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
+<li class="fragment"><strong>Variabel eksogen</strong>
 <ul>
-<li><p>Dalam konteks Psikologi Klinis, seorang pakar <em>public mental health</em> ingin tahu apakah <strong>status sosio-ekonomi</strong> (<em>observed independent variable</em>) dapat berdampak pada <strong>kondisi kesehatan mental</strong> individu (<em>latent dependent variable</em>).</p></li>
-<li><p>Dalam sebuah penelitian Psikologi Sosial, peneliti ingin tahu apakah <strong>kepribadian seseorang</strong> (<em>independent latent variable</em>) dapat menjelaskan mengapa orang <strong>merespon pelanggaran moral</strong> secara berbeda (<em>dependent latent variable</em>).</p></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><img data-src="https://media.giphy.com/media/DxneCO38aK4Fi/giphy.gif"></p>
-</div></div>
-</section>
-<section id="model-sem" class="slide level2">
-<h2>Model SEM</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li>Model regresi (linear/OLS)
-<ul>
-<li>Menguji hubungan antar variabel <em>observed</em></li>
+<li class="fragment">Variabel yang <strong>hanya memberi</strong> <em>direct effect</em> pada variabel lain di dalam model yang sama</li>
 </ul></li>
-<li>Model jalur (<em>path model</em>)
+<li class="fragment"><strong>Variabel endogen</strong>
 <ul>
-<li>Menguji hubungan antara variabel <em>observed</em> dan <em>latent</em></li>
+<li class="fragment">Variabel yang <strong>hanya menerima</strong> <em>direct effect</em> pada variabel lain di dalam model yang sama</li>
 </ul></li>
-<li>Model pengukuran (<em>measurement model</em>/<em>confirmatory factor analysis</em>)
-<ul>
-<li>Menguji apakah aitem-aitem dari skala Psikologi memang mengukur konstruk tersebut <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> validitas konstruk.</li>
-</ul></li>
-<li>SEM biasanya mengandung setidaknya dua model, yaitu model pengukuran dan model struktural (regresi/jalur).</li>
 </ul>
-</div><div class="column" style="width:50%;">
-<p><img data-src="https://media.giphy.com/media/SRNbNpKgJ03mOiYceA/giphy.gif"></p>
+</div><div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="libs/endo-exo.png" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
+</figure>
+</div>
 </div></div>
 </section>
-<section id="mengapa-sem-dilakukan" class="slide level2">
-<h2>Mengapa SEM dilakukan?</h2>
+<section id="model-sem-terdiri-atas" class="slide level2">
+<h2>Model SEM terdiri atas…</h2>
 <ul>
-<li><p>Peneliti sudah memiliki kesadaran bahwa ia harus menyelidiki <strong>beberapa variabel penelitian</strong> secara bersamaan untuk menjawab pertanyaan penelitiannya.</p></li>
-<li><p>Ada kesadaran bahwa peneliti selama ini mengabaikan faktor <em>error</em> pengukuran. SEM membantu peneliti untuk <strong>mengurangi efek <em>measurement error</em></strong> terhadap hasil analisis data.</p></li>
-<li><p>Selama beberapa dekade kebelakang, SEM termasuk teknik analisis data yang sudah cukup <strong>matang pengembangannya</strong>, dan dapat mudah dilakukan dengan bantuan perangkat lunak.</p></li>
-<li><p>Perangkat lunak SEM sudah cukup <em>user-friendly</em></p>
+<li class="fragment">Model regresi (linear/OLS)
 <ul>
-<li><code>JASP</code> adalah perangkat lunak SEM yang hanya memerlukan <em>coding</em> yang sangat minimal.</li>
-<li>Namun <code>JASP</code> fungsinya agak terbatas, karena tidak menyediakan opsi <em>power analysis</em> dan simulasi.</li>
-<li>Selain itu, peneliti dapat menggunakan <code>Onyx</code>, <code>LISREL</code>, <code>AMOS</code>, <code>EQX</code>, <code>Mplus</code>, <code>STATA</code>, dsb.</li>
+<li class="fragment">Menguji hubungan antar variabel <em>observed</em></li>
 </ul></li>
-<li><p>SEM adalah teknik yang lebih <em>sophisticated</em> untuk menggambarkan <strong>hubungan antar-variabel</strong> karena membuang <strong>error pengukuran</strong> dari estimasi korelasi.</p></li>
-</ul>
-</section>
-<section id="yang-tidak-dicakup-oleh-workshop-ini" class="slide level2">
-<h2>Yang tidak dicakup oleh <em>workshop</em> ini…</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
+<li class="fragment">Model jalur (<em>path model</em>)
 <ul>
-<li><em>Exploratory factor analysis</em> (EFA)</li>
-<li><em>A priori power analysis</em>, Monte Carlo <em>simulation</em>, dan <em>accuracy in parameter estimation</em> (AIPE)</li>
-<li><em>Mixture model</em> (SEM untuk desain penelitian longitudinal) <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> <em>latent growth curve</em></li>
-<li>Model SEM dengan <em>missing data</em></li>
-<li>Model SEM dengan variabel moderator/mediator</li>
-<li>Model SEM ketika variabel indikatornya <em>dichotomous</em></li>
-<li><em>Hierarchical latent variable model</em> (<em>second-order CFA</em>)</li>
-<li>SEM dengan model pengukuran formatif dan MIMIC</li>
+<li class="fragment">Menguji hubungan antara variabel <em>observed</em> dan <em>latent</em></li>
+</ul></li>
+<li class="fragment">Model pengukuran (<em>measurement model</em>/<em>confirmatory factor analysis</em>)
+<ul>
+<li class="fragment">Menguji apakah aitem-aitem dari skala Psikologi memang mengukur konstruk tersebut <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> validitas konstruk.</li>
+</ul></li>
+<li class="fragment">SEM biasanya mengandung setidaknya <strong>dua model</strong>, yaitu model pengukuran dan model struktural (regresi/jalur).</li>
 </ul>
-</div><div class="column" style="width:50%;">
-<p><img data-src="https://media.giphy.com/media/LpQuxhwDhzLCEKVYFh/giphy.gif"></p>
-</div></div>
 </section>
-<section id="ketika-menggunakan-sem-maka-asumsinya" class="slide level2" data-background-color="#14497F">
-<h2>Ketika menggunakan SEM, maka asumsinya…</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="data-berdistribusi-normal-multivariate">📢 Data berdistribusi normal (<em>multivariate</em>)</h3>
-<h3 id="korelasi-antar-variabel-sifatnya-linear">📢 Korelasi antar variabel sifatnya linear</h3>
-</div><div class="column" style="width:50%;">
-<p><img data-src="https://media.giphy.com/media/l4pTfqyI6TCjUW4Yo/giphy.gif"></p>
-</div></div>
+<section id="contoh-model-sem" class="slide level2">
+<h2>Contoh model SEM</h2>
+
+<img data-src="libs/contoh-model.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="model-struktural" class="slide level2">
+<h2>Model struktural</h2>
+
+<img data-src="libs/model-struktural.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="model-pengukuran" class="slide level2">
+<h2>Model pengukuran</h2>
+
+<img data-src="libs/model-pengukuran2.png" class="quarto-figure quarto-figure-center r-stretch"></section></section>
+<section>
+<section id="mengapa-sem-dilakukan" class="title-slide slide level1 center" data-background-color="#14497F">
+<h1>Mengapa SEM dilakukan?</h1>
+
+</section>
+<section id="mengapa-sem" class="slide level2">
+<h2>Mengapa SEM?</h2>
+<ul>
+<li class="fragment"><p>Peneliti sudah memiliki kesadaran bahwa ia harus menyelidiki <strong>beberapa variabel penelitian</strong> secara bersamaan untuk menjawab pertanyaan penelitiannya.</p></li>
+<li class="fragment"><p>Ada kesadaran bahwa peneliti selama ini mengabaikan faktor <em>error</em> pengukuran. SEM membantu peneliti untuk <strong>mengurangi efek <em>measurement error</em></strong> terhadap hasil analisis data.</p></li>
+<li class="fragment"><p>Selama beberapa dekade kebelakang, SEM termasuk teknik analisis data yang sudah cukup <strong>matang pengembangannya</strong>, dan dapat mudah dilakukan dengan bantuan perangkat lunak.</p></li>
+</ul>
+</section>
+<section id="contoh-aplikasi-sem" class="slide level2">
+<h2>Contoh aplikasi SEM</h2>
+<ul>
+<li class="fragment"><p>Seorang peneliti psikometri ingin <strong>mengukur kepribadian</strong> partisipan dengan menggunakan pendekatan <em>Five-Factor Model</em> (Big 5), maka item dalam skala tersebut adalah <em>observed variable</em>, sedangkan dimensi dari Big 5 adalah <em>latent variable</em>.</p></li>
+<li class="fragment"><p>Seorang peneliti psikologi pendidikan ingin tahu apakah <strong>kepercayaan orang tua bahwa anaknya dapat berkembang secara natural</strong> (<em>trust in organismic development</em> — <em>independent latent variable</em>) berkorelasi dengan <strong>tingkat kemandirian anak</strong> (<em>dependent latent variable</em>).</p></li>
+<li class="fragment"><p>Dalam konteks psikologi klinis, seorang psikolog klinis ingin tahu apakah <strong><em>personality trait</em></strong> (<em>independent latent variable</em>) dan status sosioekonomi (<em>observed independent variable</em>) dapat berdampak pada kecenderungan <strong>depresi</strong> dan <strong>kecemasan</strong> pada individu (<em>dependent latent variable</em>).</p></li>
+<li class="fragment"><p>Dalam sebuah penelitian psikologi sosial, peneliti ingin tahu apakah <strong><em>personality trait</em></strong> (<em>independent latent variable</em>) dapat menjelaskan mengapa orang <strong>merespon pelanggaran moral</strong> secara berbeda (<em>dependent latent variable</em>).</p></li>
+</ul>
+</section>
+<section id="perangkat-lunak-untuk-mengeksekusi-sem" class="slide level2">
+<h2>Perangkat lunak untuk mengeksekusi SEM</h2>
+<ul>
+<li class="fragment">Perangkat lunak SEM sudah cukup <em>user-friendly</em>
+<ul>
+<li class="fragment"><code>jamovi</code> dan <code>JASP</code> adalah perangkat lunak SEM yang hanya memerlukan <em>coding</em> yang sangat minimal.</li>
+<li class="fragment">Namun <code>jamovi</code> dan <code>JASP</code> fungsinya agak terbatas, karena tidak menyediakan opsi <em>power analysis</em> dan simulasi.</li>
+<li class="fragment">Selain itu, peneliti dapat menggunakan <code>Onyx</code>, <code>LISREL</code>, <code>SPSS AMOS</code>, <code>EQX</code>, <code>Mplus</code>, <code>STATA</code>, <code>lavaan</code> di <i class="fa-brands fa-r-project" aria-label="r-project"></i> dan <code>semopy</code> di <i class="fa-brands fa-python" aria-label="python"></i> dsb.</li>
+</ul></li>
+</ul>
+</section></section>
+<section>
+<section id="asumsi-sem" class="title-slide slide level1 center" data-background-color="#14497F">
+<h1>Asumsi SEM</h1>
+
+</section>
+<section id="asumsi-sem-1" class="slide level2">
+<h2>Asumsi SEM</h2>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Penting</strong>: SEM merupakan teknik statistik yang <em>theory-driven</em>, sehingga asumsi teoritis yang melandasi model <strong>jauh lebih penting</strong> daripada asumsi statistiknya.</p>
+</div>
+</div>
+</div>
+<ul>
+<li class="fragment">Variabel endogen berdistribusi normal (<em>multivariate normality</em>)</li>
+<li class="fragment">Korelasi antar variabel sifatnya linier</li>
+</ul>
 </section>
 <section id="normalitas-data" class="slide level2">
 <h2>Normalitas data</h2>
 <ul>
-<li>Mengapa data <strong>tidak berdistribusi normal?</strong>
+<li>Mengapa distribusi variabel endogen <strong>tidak berdistribusi normal?</strong>
 <ul>
 <li>Bisa jadi <strong>bentuk datanya ordinal/nominal</strong>, sehingga kalau menggunakan skala <em>Likert</em>, maka kemungkinan besar distribusi data menjadi tidak normal.</li>
 <li>Jumlah sampel <strong>terlalu sedikit</strong>.</li>
 <li>Distribusi data yang tidak normal akan berdampak pada <em>variance-covariance matrix</em>.</li>
 </ul></li>
-<li>Apa yang harus dilakukan?
+</ul>
+
+<img data-src="libs/normal.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="apa-yang-harus-dilakukan" class="slide level2">
+<h2>Apa yang harus dilakukan?</h2>
 <ul>
-<li>Untuk <strong>mengkoreksi distribusi data</strong> yang juling (<em>skewness</em>), <a href="http://methods.sagepub.com/Reference/the-sage-encyclopedia-of-educational-research-measurement-and-evaluation/i16518.xml"><strong><em>probit transformation</em></strong></a> merupakan strategi yang terbaik.</li>
-<li>Untuk mengkoreksi <em>kurtosis</em> yang tidak sesuai, membutuhkan prosedur yang agak lebih rumit. Beberapa diantaranya adalah dengan menambah jumlah responden, melakukan estimasi <em>standard error</em> dengan metode <em>bootstrapping</em>, atau bisa juga dengan menggunakan <strong>metode estimasi</strong> yang khusus untuk data yang tidak berdistribusi normal (<em>weighted least squares</em>).</li>
+<li><p>Untuk <strong>mengkoreksi distribusi data</strong> yang juling (<em>skewness</em>), <a href="http://methods.sagepub.com/Reference/the-sage-encyclopedia-of-educational-research-measurement-and-evaluation/i16518.xml"><strong><em>probit transformation</em></strong></a> merupakan strategi yang terbaik.</p></li>
+<li><p>Untuk mengkoreksi <em>kurtosis</em> yang tidak sesuai, membutuhkan prosedur yang agak lebih rumit.</p>
+<ul>
+<li>Beberapa diantaranya adalah dengan menambah jumlah responden, melakukan estimasi <em>standard error</em> dengan metode <em>bootstrapping</em></li>
+<li>Bisa juga dengan menggunakan <strong>metode estimasi model parameter</strong> yang khusus untuk data yang tidak berdistribusi normal (e.g., <em>robust methods</em> seperti <a href="http://doi.apa.org/getdoi.cfm?doi=10.1037/met0000093"><em>robust maximum likelihood</em> (ML)</a>, atau <a href="https://link.springer.com/article/10.3758/s13428-015-0619-7"><em>weighted least squares</em></a>).</li>
 </ul></li>
 </ul>
+<div class="callout callout-caution callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Caution</strong></p>
+</div>
+<div class="callout-content">
+<p>Estimator <em>weighted least squares</em> biasanya membutuhkan jumlah sampel lebih besar.</p>
+</div>
+</div>
+</div>
 </section>
-<section id="terima-kasih-banyak" class="slide level2">
-<h2>Terima kasih banyak! 😉</h2>
-
-<img data-src="https://media.giphy.com/media/hrBSJ2So6iTo4/giphy.gif" class="r-stretch"><p>Paparan disusun dengan menggunakan <i class="fa-brands fa-r-project" aria-label="r-project"></i> dan <a href="https://quarto.org"><strong>Quarto</strong></a> dengan <em>template</em> dari <a href="https://github.com/rameliaz/quarto-unair-theme">UNAIR Theme</a>.</p>
-
+<section id="sem-atau-pls-1" class="slide level2">
+<h2>SEM atau PLS? 1️⃣</h2>
+<ul>
+<li class="fragment"><em>Covariance-based</em> SEM (yang kita pelajari saat ini) merupakan teknik statistik yang mengestimasi parameter model dengan cara meminimalisasi diskrepansi antara data (<em>observed covariance matrix</em>) dengan spesifikasi model yang dihipotesiskan (<em>implied model</em>).</li>
+<li class="fragment">CB-SEM berakar dari tradisi <strong><em>common factor theory</em></strong>, bahwa variabel <strong>laten</strong> (konstruk psikologis) <em>yang menyebabkan</em> indikator (item di skala psikologis) bervariasi, dan indikator-indikator ini berbagi varians <strong><em>hanya melalui</em></strong> variabel laten tsb.</li>
+<li class="fragment">CB-SEM menggunakan model pengukuran <strong>reflektif</strong>.</li>
+<li class="fragment">Mayoritas konstruk psikologi menggunakan model pengukuran <strong>reflektif</strong>, bukan formatif.</li>
+</ul>
+</section>
+<section id="sem-atau-pls-2" class="slide level2">
+<h2>SEM atau PLS? 2️⃣</h2>
+<ul>
+<li class="fragment"><em>Partial least squares</em> (PLS) mengestimasi skor variabel endogen dengan asumsi bahwa variabel endogen adalah <em>weighted composite</em>, kemudian melakukan regresi atas komposit-komposit tersebut satu sama lain.</li>
+<li class="fragment">Asumsi PLS <strong><em>sangat berbeda</em></strong> dengan CB-SEM - variabel endogen adalah <strong>komposit</strong> bukan faktor laten.</li>
+<li class="fragment">PLS menggunakan model pengukuran <strong>formatif</strong>.</li>
+<li class="fragment">PLS sering “dijual” sebagai teknik alternatif dari CB-SEM yang lebih praktis karena bisa dieksekusi dengan sampel kecil, mampu menangani variabel endogen yang tidak berdistribusi normal, atau ketika menangani model yang sangat kompleks.</li>
+<li class="fragment">Padahal sebenarnya, CB-SEM dan PLS adalah dua teknik dengan <strong><em>asumsi ontologis yang berbeda</em></strong> (<a href="https://doi.org/10.1177/1094428112474693">Rönkkö &amp; Everman, 2013</a>; <a href="https://doi.org/10.1177/1094428114526928">Henseler, et al., 2014</a>), sehingga membandingkan kedua teknik ini saja sudah <em>misleading</em> (<a href="https://www.jstor.org/stable/26426850">Rigdon et al., 2017</a>).</li>
+</ul>
+</section>
+<section id="reflektif-vs.-formatif" class="slide level2">
+<h2>Reflektif vs.&nbsp;Formatif</h2>
+<div class="columns">
+<div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="libs/reflektif.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="libs/formatif.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div></div>
+<!-- end columns -->
+<p>Selengkapnya, baca di materi <a href="https://rameliaz.github.io/mg-sem-workshop/slides/bagian-4.html"><em>confirmatory factor analysis</em></a>.</p>
+</section></section>
+<section>
+<section id="cakupan-workshop" class="title-slide slide level1 center" data-background-color="#14497F">
+<h1>Cakupan workshop</h1>
 
 </section>
+<section id="yang-tidak-dicakup-oleh-workshop-ini" class="slide level2">
+<h2>Yang tidak dicakup oleh <em>workshop</em> ini</h2>
+<ul>
+<li><em>Exploratory factor analysis</em> (EFA)</li>
+<li><em>A priori power analysis</em>, Monte Carlo <em>simulation</em>, dan <em>accuracy in parameter estimation</em> (AIPE) untuk merencanakan jumlah sampel</li>
+<li><em>Sensitivity analysis</em> untuk SEM</li>
+<li><em>Mixture model</em> (SEM untuk desain penelitian longitudinal) <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2888524/"><em>latent growth curve</em></a></li>
+<li>Model SEM dengan <em>missing data</em></li>
+<li>Model SEM dengan variabel moderator/mediator</li>
+<li>Model SEM ketika variabel eksogen (indikator) <em>dichotomous</em></li>
+<li><em>Hierarchical latent variable model</em> (<em>second-order</em> CFA)</li>
+<li><a href="http://www.annualreviews.org/doi/10.1146/annurev-clinpsy-032813-153700"><em>Exploratory</em> SEM (ESEM)</a></li>
+<li><em>Partial least square</em> (PLS)</li>
+<li><a href="https://journals.sagepub.com/doi/10.1177/23328584251388032"><em>Multiple indicators, multiple causes</em> model (MIMIC)</a></li>
+</ul>
+</section>
+<section id="ada-pertanyaan" class="slide level2">
+<h2>Ada pertanyaan❓</h2>
+
+<img data-src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDFtaDh5ZjZ2eXJ3dmJmZmFmYzBtNHEwdzlqZmZtdGtmbnE0bXZidiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/igB2Th9e4nW6s/giphy.gif" class="quarto-figure quarto-figure-center r-stretch"><div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>Paparan disusun dengan menggunakan <i class="fa-brands fa-r-project" aria-label="r-project"></i> dan <a href="https://quarto.org"><strong>Quarto</strong></a> dengan <em>template</em> dari <a href="https://github.com/rameliaz/quarto-unair-theme">UNAIR Theme</a>.</li>
+<li>Kontak saya via <i class="fas fa-paper-plane"></i> <a href="mailto:amelia.zein@psikologi.unair.ac.id">amelia.zein@psikologi.unair.ac.id</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

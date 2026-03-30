@@ -17,17 +17,6 @@ execute:
   echo: true
 ---
 
-## _Outline_
-
-* Dasar-Dasar SEM: Model struktural & pengukuran
-* Tahapan *modeling* dengan menggunakan SEM
-* *Degree of freedom*
-* *Underidentified*, *just-identified*, dan *overidentified model*
-* Jenis-jenis kriteria untuk menilai ketepatan model (*model fit*)
-* Menguji hipotesis (*statistical power*, ukuran sampel)
-* Membandingkan pendekatan dua-langkah vs empat-langkah
-* Menuliskan hasil analisis SEM dalam laporan penelitian
-
 ## Pengantar SEM
 
 * SEM adalah *full model* {{< fa circle-arrow-right >}} menggabungkan **model pengukuran** dengan **model jalur/struktural**
@@ -457,11 +446,10 @@ semTools::findRMSEAsamplesize(
 
 ### [**Unggah tugasnya di sini**](https://forms.gle/4cMP9s3HPPvGPwg47)
 
-## Ada pertanyaan❓
+---
 
-![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDFtaDh5ZjZ2eXJ3dmJmZmFmYzBtNHEwdzlqZmZtdGtmbnE0bXZidiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/igB2Th9e4nW6s/giphy.gif){fig-align="center"}
+## Terima kasih banyak! 😉 {.center}
 
-::: {.callout-note}
-* Paparan disusun dengan menggunakan {{< fa brands r-project >}} dan [**Quarto**](https://quarto.org) dengan *template* dari [UNAIR Theme](https://github.com/rameliaz/quarto-unair-theme).
-* Kontak saya via <i class="fas fa-paper-plane"></i> <a href="mailto:amelia.zein@psikologi.unair.ac.id">amelia.zein@psikologi.unair.ac.id</a>
-:::
+![](https://media.giphy.com/media/hrBSJ2So6iTo4/giphy.gif)
+
+Paparan disusun dengan menggunakan {{< fa brands r-project >}} dan [**Quarto**](https://quarto.org) dengan template dari [UNAIR Theme](https://github.com/rameliaz/quarto-unair-theme).

@@ -17,17 +17,6 @@ execute:
   echo: true
 ---
 
-## _Outline_
-
-* Jenis-jenis koefisien korelasi
-* Faktor-faktor yang membuat koefisien korelasi bervariasi
-* [Koreksi atenuasi](https://methods.sagepub.com/reference/encyc-of-research-design/n81.xml) dan *measurement error*
-* *Variance-covariance* dan *correlation matrix*
-* *WARNING! Covariance/correlation matrix is not positive definite*
-* [*Heywood* dan *ultra-Heywood case*](https://journals.sagepub.com/doi/10.1177/0049124112442138)
-* Bivariat, *part*, dan *partial correlation*
-* Metrik variabel (*standardized* vs *unstandardized*)
-
 ## Mengapa memulai dari korelasi? {background-color="#14497F"}
 
 . . .
@@ -63,7 +52,7 @@ execute:
 * **Level pengukuran** (apakah variabel tersebut nominal, ordinal, interval, atau rasio)
   - Sehingga berdampak pada **variabilitas** (*restriction range*) dan **normalitas data**
 * **Linearitas**
-  - Semua teknik korelasi mengasumsikan korelasi antar-variabel linier, sehingga korelasi yang tidak linier akan memberikan informasi **tidak adanya korelasi** (padahal tidak selalu).
+  - Semua teknik korelasi mengasumsikan korelasi antar-variabel linear, sehingga korelasi yang tidak linear akan memberikan informasi **tidak adanya korelasi** (padahal tidak selalu).
 * **Adanya data *outlier***
 * **Koreksi atenuasi**
 * **Jumlah sampel**
@@ -104,7 +93,7 @@ execute:
 ::: {.column width="50%"}
 
 * Sebagian besar perangkat lunak SEM menggunakan ***variance-covariance matrix*** bukan *correlation matrix*
-  - Ingat ❗ korelasi adalah *standardized covariance*.
+  - Ingat ❗ korelasi adalah *standardised covariance*.
 
 * Menggunakan *correlation matrix* biasanya lebih sering menghasilkan **parameter yang *statistically significant* tapi *standard error* yang tidak akurat**.
 
@@ -223,11 +212,10 @@ Menggunakan [Dataset Contoh Korelasi](https://rameliaz.github.io/mg-sem-workshop
 
 [[Unduh Dataset]](https://rameliaz.github.io/mg-sem-workshop/latihancorr.csv) [[Kumpulkan Tugasnya Disini]](https://forms.gle/rS5HjhTAFBJnRYRA6)
 
-## Ada pertanyaan❓
+---
 
-![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDFtaDh5ZjZ2eXJ3dmJmZmFmYzBtNHEwdzlqZmZtdGtmbnE0bXZidiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/igB2Th9e4nW6s/giphy.gif){fig-align="center"}
+## Terima kasih banyak! 😉 {.center}
 
-::: {.callout-note}
-* Paparan disusun dengan menggunakan {{< fa brands r-project >}} dan [**Quarto**](https://quarto.org) dengan *template* dari [UNAIR Theme](https://github.com/rameliaz/quarto-unair-theme).
-* Kontak saya via <i class="fas fa-paper-plane"></i> <a href="mailto:amelia.zein@psikologi.unair.ac.id">amelia.zein@psikologi.unair.ac.id</a>
-:::
+![](https://media.giphy.com/media/hrBSJ2So6iTo4/giphy.gif)
+
+Paparan disusun dengan menggunakan {{< fa brands r-project >}} dan [**Quarto**](https://quarto.org) dengan template dari [UNAIR Theme](https://github.com/rameliaz/quarto-unair-theme).

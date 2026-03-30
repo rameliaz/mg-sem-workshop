@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.8.14">
 
   <meta name="author" content="Rizqy Amelia Zein">
-  <meta name="dcterms.date" content="2026-03-29">
+  <meta name="dcterms.date" content="2026-03-30">
   <title>Multigroup SEM Workshop – Korelasi</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -147,7 +147,20 @@ Rizqy Amelia Zein
     </div>
 </div>
 
-  <p class="date">2026-03-29</p>
+  <p class="date">2026-03-30</p>
+</section>
+<section id="outline" class="slide level2">
+<h2><em>Outline</em></h2>
+<ul>
+<li>Jenis-jenis koefisien korelasi</li>
+<li>Faktor-faktor yang membuat koefisien korelasi bervariasi</li>
+<li><a href="https://methods.sagepub.com/reference/encyc-of-research-design/n81.xml">Koreksi atenuasi</a> dan <em>measurement error</em></li>
+<li><em>Variance-covariance</em> dan <em>correlation matrix</em></li>
+<li><em>WARNING! Covariance/correlation matrix is not positive definite</em></li>
+<li><a href="https://journals.sagepub.com/doi/10.1177/0049124112442138"><em>Heywood</em> dan <em>ultra-Heywood case</em></a></li>
+<li>Bivariat, <em>part</em>, dan <em>partial correlation</em></li>
+<li>Metrik variabel (<em>standardized</em> vs <em>unstandardized</em>)</li>
+</ul>
 </section>
 <section id="mengapa-memulai-dari-korelasi" class="slide level2" data-background-color="#14497F">
 <h2>Mengapa memulai dari korelasi?</h2>
@@ -216,7 +229,7 @@ Rizqy Amelia Zein
 </ul></li>
 <li><strong>Linearitas</strong>
 <ul>
-<li>Semua teknik korelasi mengasumsikan korelasi antar-variabel linear, sehingga korelasi yang tidak linear akan memberikan informasi <strong>tidak adanya korelasi</strong> (padahal tidak selalu).</li>
+<li>Semua teknik korelasi mengasumsikan korelasi antar-variabel linier, sehingga korelasi yang tidak linier akan memberikan informasi <strong>tidak adanya korelasi</strong> (padahal tidak selalu).</li>
 </ul></li>
 <li><strong>Adanya data <em>outlier</em></strong></li>
 <li><strong>Koreksi atenuasi</strong></li>
@@ -263,7 +276,7 @@ Rizqy Amelia Zein
 <ul>
 <li><p>Sebagian besar perangkat lunak SEM menggunakan <strong><em>variance-covariance matrix</em></strong> bukan <em>correlation matrix</em></p>
 <ul>
-<li>Ingat ❗ korelasi adalah <em>standardised covariance</em>.</li>
+<li>Ingat ❗ korelasi adalah <em>standardized covariance</em>.</li>
 </ul></li>
 <li><p>Menggunakan <em>correlation matrix</em> biasanya lebih sering menghasilkan <strong>parameter yang <em>statistically significant</em> tapi <em>standard error</em> yang tidak akurat</strong>.</p></li>
 <li><p>Oleh karena itu, meskipun <em>user</em> meng<em>input</em> <em>correlation matrix</em>, maka perangkat lunak akan mengubahnya dulu menjadi <em>variance-covariance matrix</em>, baru parameter model dapat diestimasi.</p></li>
@@ -371,10 +384,25 @@ Rizqy Amelia Zein
 </ul>
 <p><a href="https://rameliaz.github.io/mg-sem-workshop/latihancorr.csv">[Unduh Dataset]</a> <a href="https://forms.gle/rS5HjhTAFBJnRYRA6">[Kumpulkan Tugasnya Disini]</a></p>
 </section>
-<section id="terima-kasih-banyak" class="slide level2 center">
-<h2>Terima kasih banyak! 😉</h2>
+<section id="ada-pertanyaan" class="slide level2">
+<h2>Ada pertanyaan❓</h2>
 
-<img data-src="https://media.giphy.com/media/hrBSJ2So6iTo4/giphy.gif" class="r-stretch"><p>Paparan disusun dengan menggunakan <i class="fa-brands fa-r-project" aria-label="r-project"></i> dan <a href="https://quarto.org"><strong>Quarto</strong></a> dengan template dari <a href="https://github.com/rameliaz/quarto-unair-theme">UNAIR Theme</a>.</p>
+<img data-src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDFtaDh5ZjZ2eXJ3dmJmZmFmYzBtNHEwdzlqZmZtdGtmbnE0bXZidiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/igB2Th9e4nW6s/giphy.gif" class="quarto-figure quarto-figure-center r-stretch"><div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>Paparan disusun dengan menggunakan <i class="fa-brands fa-r-project" aria-label="r-project"></i> dan <a href="https://quarto.org"><strong>Quarto</strong></a> dengan <em>template</em> dari <a href="https://github.com/rameliaz/quarto-unair-theme">UNAIR Theme</a>.</li>
+<li>Kontak saya via <i class="fas fa-paper-plane"></i> <a href="mailto:amelia.zein@psikologi.unair.ac.id">amelia.zein@psikologi.unair.ac.id</a></li>
+</ul>
+</div>
+</div>
+</div>
 
 
 </section>
