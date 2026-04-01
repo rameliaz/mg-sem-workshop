@@ -46,7 +46,7 @@ Namun, apabila peserta ingin menyimpan atau mengakses _history chat_ setelah _wo
 Karena keterbatasan waktu, bagian **Korelasi** **_tidak diajarkan_** di _workshop_, tetapi **harus dikuasai** oleh peserta terlebih dahulu sebelum memulai _workshop_. Materi ini (seharusnya) sudah diberikan di MK Psikometri/Pengukuran Psikolog/Statistik Dasar di jenjang S1, sehingga asumsinya peserta sudah familiar dengan materi ini. Materi tersedia di laman web ini dan dapat dipelajari secara mandiri.
 :::
 
-### Bagian 3️⃣: Model Jalur** (*Path Model*) dan Model Regresi
+### Bagian 3️⃣: Model Jalur (*Path Model*) dan Model Regresi
 * Definisi *path model*
 * Nama variabel dan koefisien jalur (*path coefficients*)
   * δ (delta), ε (epsilon), ξ (ksi), η (eta), λ (lambda), γ (gamma), β (beta), φ (phi), ζ (zeta)
@@ -102,6 +102,10 @@ Karena keterbatasan waktu, bagian **_Confirmatory Factor Analysis_** **_tidak di
   * *Homogeneity of factor means*
 * Mengevaluasi *measurement invariance*
 * Menuliskan hasil analisis MG-SEM dalam laporan penelitian
+
+::: {.callout-note}
+**Unduh materi dalam bentuk PDF**: Klik _navigation bar_ yang mengarah pada PDF materi, kemudian tekan `ctrl` dan `p` bersamaan. Setelah _window_ untuk _print_ muncul, pilih `Save to PDF` dan klik `Save`.
+:::
 
 ## Referensi
 
