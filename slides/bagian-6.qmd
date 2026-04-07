@@ -1,10 +1,10 @@
 ---
-title: "Multi-Group Structural Equation Modeling (SEM)"
-subtitle: "Multigroup Structural Equation Modeling: Bagian 6️⃣"
+title: "_Multigroup Structural Equation Modeling_ (MGSEM)"
+subtitle: "_Multigroup Structural Equation Modeling_: Bagian 6️⃣"
 author: "Rizqy Amelia Zein"
 institute:
-  - "Departemen Psikologi, Universitas Airlangga"
-  - "Research Data & Methods Team, Center for Advanced Internet Studies"
+  - "[_Departemen Psikologi, Universitas Airlangga_](https://psikologi.unair.ac.id/dosen-rizqy-amelia-zein/)"
+  - "[Research Data & Methods Team, Center for Advanced Internet Studies](https://www.cais-research.de/team/rizqy-amelia-zein/)"
 date: today
 format:
   unair-revealjs:
@@ -40,7 +40,6 @@ execute:
 
 * Kalau kita berniat melakukan perbandingan performa alat ukur di dua kelompok sampel yang berbeda, maka kita lebih baik menggunakan ***means-covariance matrix*** bukan *variance-covariance matrix* {{< fa circle-arrow-right >}} ingat *t-test* dan *anova*
 
----
 
 ## *Means* dan *intercept*
 
@@ -64,7 +63,6 @@ execute:
 :::
 :::
 
----
 
 ## Jenis-jenis *measurement invariance*
 
@@ -79,7 +77,6 @@ execute:
   - Dinamai *weak* karena asumsinya masih lemah untuk menyimpulkan bahwa faktor laten **ekuivalen** di semua kelompok
   - Untuk mengeksekusinya tambahkan `grouping variable` di `JASP` dan tik pilihan `loadings` pada `equality constraints`
 
----
 
 ## Jenis-jenis *measurement invariance*
 
@@ -94,7 +91,6 @@ execute:
   - Biasanya asumsi ini **tidak terlalu diperlukan** untuk membandingkan variabel laten di masing-masing kelompok
   - Untuk mengeksekusinya tambahkan `grouping variable` di `JASP` dan tik pilihan `loadings`, `intercept`, dan `residuals` pada `equality constraints`
 
----
 
 ## Jenis-jenis *measurement invariance*
 
@@ -108,7 +104,6 @@ execute:
   - Prosedur yang sama dengan `anova` atau `t-test`
   - Untuk mengeksekusinya pada `grouping variable` di `JASP` tik pilihan `means`
 
----
 
 ## Evaluasi *measurement invariance*
 
@@ -123,7 +118,6 @@ execute:
   - Pendekatan *modeling* menggunakan *approximate fit indices* (AFI) untuk menyimpulkan *invariance*
   - Yang bisa digunakan adalah *comparative fit index* (CFI) dan *McDonald's noncentrality fit index* (MFI), sehingga ketika **keduanya mendekati 1**, kita dapat simpulkan *invariance* ✅
 
----
 
 ## {.center}
 
@@ -133,28 +127,15 @@ execute:
 Baujean, A.A. (2014). Latent Variable Modeling Using R: A step-by-step guide. New York: Routledge.
 :::
 
----
 
-## Demonstrasi *multigroup SEM* {background-color="#14497F"}
+## Demonstrasi *multigroup SEM*
 
-::: {.columns}
-::: {.column width="50%"}
+* Mari kita lihat contoh penggunaan MGSEM pada data Ambivalence Sexism Inventory 
 
-### [Klik untuk unduh datasetnya disini](https://rameliaz.github.io/mg-sem-workshop/dataset-mg.csv)
+* [Unduh datasetnya disini](https://rameliaz.github.io/mg-sem-workshop/materials/dataset-asi.omv)
 
-### Atau pada repositori, unduh [**Dataset Contoh Multigroup SEM**](https://rameliaz.github.io/mg-sem-workshop/dataset-mg.csv)
 
-:::
-::: {.column width="50%"}
-
-![](https://media.giphy.com/media/l4pLXMFYQmTM2se7m/giphy.gif)
-
-:::
-:::
-
----
-
-## TUGAS 6 (terakhir 🙏): Mencoba *multigroup* SEM
+## Latihan mandiri 6️⃣ (terakhir 🙏): Mencoba *multigroup* SEM
 
 ::: {.columns}
 ::: {.column width="50%"}
@@ -164,10 +145,6 @@ Baujean, A.A. (2014). Latent Variable Modeling Using R: A step-by-step guide. Ne
 * Unduh [Kamus Data disini](https://rameliaz.github.io/mg-sem-workshop/codebook-kamusdata.xlsx)
 
 * Cek *measurement invariance* pada skala *right-wing authoritarianism* antara laki-laki dan perempuan
-
-* *Export* datasetnya menjadi `.htm` kemudian
-
-### [**Unggah tugasnya di sini**](https://forms.gle/6tdDH7Fin4xp7aL96)
 
 :::
 ::: {.column width="50%"}

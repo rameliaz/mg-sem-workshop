@@ -6,12 +6,12 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-8f1af79587c2686b78fe4e1fbadd71ab.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.14">
+  <meta name="generator" content="quarto-1.8.27">
 
   <meta name="author" content="Rizqy Amelia Zein">
-  <meta name="dcterms.date" content="2026-04-01">
+  <meta name="dcterms.date" content="2026-04-07">
   <title>Multigroup SEM Workshop – Confirmatory Factor Analysis (CFA)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -31,7 +31,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-6f4a79ec7e0e51d91ee72072a2720184.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-b88fc607bb0f0970b04a6010b14008f9.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -130,8 +130,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Confirmatory Factor Analysis (CFA)</h1>
-  <p class="subtitle">Multigroup Structural Equation Modeling: Bagian 4️⃣</p>
+  <h1 class="title"><em>Confirmatory Factor Analysis</em> (CFA)</h1>
+  <p class="subtitle"><em>Multigroup Structural Equation Modeling</em>: Bagian 4️⃣</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -139,15 +139,15 @@
 Rizqy Amelia Zein 
 </div>
         <p class="quarto-title-affiliation">
-            Departemen Psikologi, Universitas Airlangga
+            <a href="https://psikologi.unair.ac.id/dosen-rizqy-amelia-zein/"><em>Departemen Psikologi, Universitas Airlangga</em></a>
           </p>
         <p class="quarto-title-affiliation">
-            Research Data &amp; Methods Team, Center for Advanced Internet Studies
+            <a href="https://www.cais-research.de/team/rizqy-amelia-zein/">Research Data &amp; Methods Team, Center for Advanced Internet Studies</a>
           </p>
     </div>
 </div>
 
-  <p class="date">2026-04-01</p>
+  <p class="date">2026-04-07</p>
 </section>
 <section id="outline" class="slide level2">
 <h2><em>Outline</em></h2>
@@ -190,22 +190,22 @@ Rizqy Amelia Zein
 </colgroup>
 <thead>
 <tr class="header">
-<th>EFA</th>
-<th>CFA</th>
+<th style="text-align: left;">EFA</th>
+<th style="text-align: left;">CFA</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Mencari model yang cocok menggambarkan data, sehingga peneliti <strong>mengeksplorasi berbagai pilihan model</strong> yang cocok kemudian mencari rasionalisasi teoritisnya</td>
-<td>Menguji hipotesis yang <strong>sudah ditentukan sebelumnya</strong>, sehingga peneliti ingin tahu apakah hipotesisnya didukung oleh data</td>
+<td style="text-align: left;">Mencari model yang cocok menggambarkan data, sehingga peneliti <strong>mengeksplorasi berbagai pilihan model</strong> yang cocok kemudian mencari rasionalisasi teoritisnya</td>
+<td style="text-align: left;">Menguji hipotesis yang <strong>sudah ditentukan sebelumnya</strong>, sehingga peneliti ingin tahu apakah hipotesisnya didukung oleh data</td>
 </tr>
 <tr class="even">
-<td>Jumlah faktor belum diketahui sampai peneliti melakukan analisisnya</td>
-<td>Jumlah faktor sudah ditentukan sebelum mengambil data</td>
+<td style="text-align: left;">Jumlah faktor belum diketahui sampai peneliti melakukan analisisnya</td>
+<td style="text-align: left;">Jumlah faktor sudah ditentukan sebelum mengambil data</td>
 </tr>
 <tr class="odd">
-<td>Peneliti <strong>tidak memiliki</strong> model yang dihipotesiskan <em>a priori</em></td>
-<td>Peneliti <strong>sudah memiliki</strong> model hipotesis yang ditentukan <em>a priori</em></td>
+<td style="text-align: left;">Peneliti <strong>tidak memiliki</strong> model yang dihipotesiskan <em>a priori</em></td>
+<td style="text-align: left;">Peneliti <strong>sudah memiliki</strong> model hipotesis yang ditentukan <em>a priori</em></td>
 </tr>
 </tbody>
 </table>
@@ -224,16 +224,16 @@ Rizqy Amelia Zein
 </ul></li>
 </ul>
 </section>
-<section id="section" class="slide level2 center">
-<h2></h2>
+<section id="texas-sharpshooter-fallacy" class="slide level2">
+<h2><em>Texas sharpshooter fallacy</em></h2>
 
-<img data-src="https://i0.wp.com/www.bayesianspectacles.org/wp-content/uploads/2018/01/TexasSharpShooter.png?fit=357%2C300&amp;ssl=1" class="r-stretch"></section>
+<img data-src="https://i0.wp.com/www.bayesianspectacles.org/wp-content/uploads/2018/01/TexasSharpShooter.png?fit=357%2C300&amp;ssl=1" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="constraining-parameter-model" class="slide level2">
 <h2><a href="https://psycnet.apa.org/record/2008-06808-005"><em>Constraining parameter</em> model</a></h2>
 <ul>
 <li><strong>Membatasi/menentukan varians</strong> untuk setiap <strong>variabel/faktor laten</strong>
 <ul>
-<li>Dilakukan untuk mengeluarkan <strong><em>standardised estimates</em></strong></li>
+<li>Dilakukan untuk mengeluarkan <strong><em>standardized estimates</em></strong></li>
 <li><em>Factor loading</em> di <em>z-score</em>kan</li>
 <li>Sehingga <em>default</em>nya, <em>mean</em> variabel laten = 0, <em>variance</em> = 1</li>
 </ul></li>
@@ -245,40 +245,70 @@ Rizqy Amelia Zein
 </section>
 <section id="jenis-jenis-model-pengukuran" class="slide level2">
 <h2>Jenis-jenis model pengukuran</h2>
+<p>Ada tiga macam model pengukuran:</p>
 <ul>
-<li><em>Congeneric</em>
+<li>Model <em>congeneric</em></li>
+<li>Model <em>tau equivalence</em></li>
+<li>Model <em>parallel</em></li>
+</ul>
+</section>
+<section id="model-congeneric" class="slide level2">
+<h2>Model <em>congeneric</em></h2>
+<div class="columns">
+<div class="column">
 <ul>
 <li>Model yang paling moderat dan <em>default</em> di berbagai perangkat lunak SEM</li>
 <li>Asumsinya, <strong>skala, <em>error variance</em>, dan <em>factor loading</em> boleh berbeda (dibebaskan)</strong></li>
-<li><strong>Teknik reliabilitas skala</strong> yang mengasumsikan model pengukuran <em>congeneric</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> ω, McDonald’s ω, ω total (ω<sub><em>t</em></sub>), Revelle’s ω, <em>composite reliability</em>.</li>
-</ul></li>
-<li><em>Tau equivalence</em>
+<li><strong>Koefisien reliabilitas skala</strong> yang mengasumsikan model pengukuran <em>congeneric</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> ω, McDonald’s ω, ω total (ω<sub><em>t</em></sub>), Revelle’s ω, <em>composite reliability</em>.</li>
+</ul>
+</div><div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="libs/congeneric.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="model-tau-equivalence" class="slide level2">
+<h2>Model <em>tau equivalence</em></h2>
+<div class="columns">
+<div class="column">
 <ul>
 <li>Model yang sedikit lebih rigid daripada <em>congeneric</em></li>
 <li>Asumsinya, <strong>skala dan <em>error variance</em> boleh berbeda (dibebaskan)</strong>, namun <strong><em>factor loading</em> harus sama (dibatasi)</strong></li>
 <li>Ketika asumsi <em>tau equivalence</em> dipenuhi, maka <a href="https://www.ncbi.nlm.nih.gov/pubmed/28557467">Cronbach’s α dapat digunakan</a></li>
-<li><strong>Teknik reliabilitas</strong>: Formula Rulon, KR-20, Flanagan-Rulon, Guttman’s λ<sub>3</sub>, λ<sub>4</sub>, Hoyt <em>method</em>.</li>
-</ul></li>
-<li>Paralel
+<li><strong>Koefisien reliabilitas</strong>: Formula Rulon, KR-20, Flanagan-Rulon, Guttman’s λ<sub>3</sub>, λ<sub>4</sub>, Hoyt <em>method</em>
 <ul>
-<li>Model yang paling rigid</li>
-<li>Asumsinya, <strong>skala, <em>error variance</em>, dan <em>factor loading</em> harus sama (dibatasi)</strong></li>
-<li><strong>Teknik reliabilitas</strong>: Spearman-Brown’s Formula, Standardised α.</li>
+<li>Pada kebanyakan kasus, jarang sekali ada kosntruk psikologi yang memenuhi asumsi <em>tau equivalence</em>, sehingga <strong>sangat disarankan</strong> untuk tidak menggunakan koefisien reliabilitas yang mengasumsikan <em>tau equivalence</em></li>
 </ul></li>
 </ul>
+</div><div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="libs/tau.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div></div>
 </section>
-<section id="section-1" class="slide level2 center">
-<h2></h2>
-
-<img data-src="libs/congeneric.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="section-2" class="slide level2 center">
-<h2></h2>
-
-<img data-src="libs/tau.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="section-3" class="slide level2 center">
-<h2></h2>
-
-<img data-src="libs/paralel.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="model-parallel" class="slide level2">
+<h2>Model <em>parallel</em></h2>
+<div class="columns">
+<div class="column">
+<ul>
+<li>Model yang paling rigid</li>
+<li>Asumsinya, <strong>skala, <em>error variance</em>, dan <em>factor loading</em> harus sama (dibatasi)</strong>
+<ul>
+<li><strong>Koefisien reliabilitas</strong>: Spearman-Brown’s Formula, Standardized α.</li>
+</ul></li>
+</ul>
+</div><div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="libs/paralel.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div></div>
+</section>
 <section id="reflektif-vs-formatif" class="slide level2">
 <h2>Reflektif vs Formatif</h2>
 <ul>
@@ -297,12 +327,12 @@ Rizqy Amelia Zein
 </ul></li>
 </ul>
 </section>
-<section id="section-4" class="slide level2 center">
-<h2></h2>
+<section id="model-reflektif" class="slide level2">
+<h2>Model Reflektif</h2>
 
 <img data-src="libs/reflektif.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="section-5" class="slide level2 center">
-<h2></h2>
+<section id="model-formatif" class="slide level2">
+<h2>Model Formatif</h2>
 
 <img data-src="libs/formatif.png" class="quarto-figure quarto-figure-center r-stretch" style="width:60.0%"></section>
 <section id="apa-yang-terjadi-ketika-error-variance-berkorelasi" class="slide level2">
@@ -310,7 +340,7 @@ Rizqy Amelia Zein
 
 <img data-src="libs/correlated-error.png" class="quarto-figure quarto-figure-center r-stretch"><ul>
 <li>Kedua variabel indikator tersebut mengukur variabel laten lain di luar model (<em>unique factor</em>)</li>
-<li>Bisa jadi karena ada aitem <em>unfavourable</em> dalam skala</li>
+<li>Bisa jadi karena ada <em>item</em> <em>unfavourable</em> dalam skala</li>
 <li>Kemungkinan konstruk laten <strong>bukan konstruk tunggal</strong> (multidimensi)</li>
 <li>Perhatikan justifikasi teori ketika menambah <em>error covariance</em></li>
 </ul>
@@ -332,31 +362,45 @@ Rizqy Amelia Zein
 <section id="memilih-metode-estimasi" class="slide level2">
 <h2>Memilih metode estimasi</h2>
 <ul>
-<li><p><em>Maximum Likelihood</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> distribusi data (<em>multivariate</em>) normal, level pengukuran harus interval, tidak ada data <em>missing</em></p></li>
-<li><p><em>Generalized least squares</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> menggunakan asumsi yang sama dengan <code>ML</code> namun performanya kurang baik apabila dibandingkan dengan <code>ML</code></p></li>
-<li><p><em>Weighted least squares</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> dapat digunakan pada data kategorikal (nominal dan ordinal), estimasi menggunakan <em>polychoric correlation matrix</em></p></li>
-<li><p><em>Diagonally weighted least squares</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> dapat digunakan pada data kategorikal, bekerja dengan baik pada sampel yang relatif kecil dan data yang tidak berdistribusi normal</p></li>
+<li><p><em>Maximum Likelihood</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> distribusi data (<em>multivariate</em>) normal, level pengukuran harus interval/<em>continuous</em>, tidak ada data <em>missing</em></p>
+<ul>
+<li>Gunakan <em>Robust Maximum Likelihood</em> (MLR) ketika asumsi <em>multivariate normality</em> tidak terpenuhi</li>
+</ul></li>
+<li><p><em>Generalized-least squares</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> menggunakan asumsi yang sama dengan <code>ML</code> namun performanya kurang baik apabila dibandingkan dengan <code>ML</code></p></li>
+<li><p><em>Weighted-least squares</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> dapat digunakan pada data kategorikal (nominal dan ordinal), estimasi menggunakan <em>polychoric correlation matrix</em>. Varian WLS, misalnya: WLSM, WLSMV, WLSMVS.</p></li>
+<li><p><em>Diagonally weighted-least squares</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> dapat digunakan pada data kategorikal, bekerja dengan baik pada sampel yang relatif kecil dan data yang tidak berdistribusi normal</p></li>
 </ul>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tips memilih estimator</strong></p>
+</div>
+<div class="callout-content">
+<p>Untuk <strong>skala <em>Likert</em> dengan 6–7 pilihan</strong>, dengan respons yang relatif simetris, <strong>MLR sudah baik performanya</strong>. Untuk <strong>skala <em>Likert</em> 4 pilihan</strong> dengan distribusi yang sangat juling (<em>skew</em>), <strong>WLSMV merupakan pilihan yang lebih aman</strong> (<a href="https://psycnet.apa.org/record/2012-18631-001">Rhemtulla, Brosseau-Liard &amp; Savalei</a>, 2012).</p>
+</div>
+</div>
+</div>
 </section>
-<section id="demonstrasi-cfa" class="slide level2 center" data-background-color="#14497F">
-<h2>Demonstrasi CFA</h2>
-
-<img data-src="https://media.giphy.com/media/3oEjHZPivwdJ0syhKE/giphy.gif" class="r-stretch"><h3 id="unduh-dataset-contoh-cfa"><a href="https://rameliaz.github.io/mg-sem-workshop/contoh-cfa.jasp">Unduh Dataset Contoh CFA</a></h3>
+<section>
+<section id="demonstrasi-cfa" class="title-slide slide level1 center" data-background-color="#14497F">
+<h1>Demonstrasi CFA</h1>
+<p><a href="https://rameliaz.github.io/mg-sem-workshop/contoh-cfa.omv"><strong>Unduh Dataset Contoh CFA</strong></a></p>
 </section>
-<section id="tugas-4-mencoba-confirmatory-factor-analysis" class="slide level2">
-<h2>TUGAS 4: Mencoba <em>confirmatory factor analysis</em></h2>
+<section id="latihan-mandiri-4-mencoba-confirmatory-factor-analysis" class="slide level2">
+<h2>Latihan mandiri 4️⃣: Mencoba <em>confirmatory factor analysis</em></h2>
 <ul>
-<li><p>Unduh <a href="https://rameliaz.github.io/mg-sem-workshop/dataset-wave1.csv">Dataset Latihan SEM</a></p></li>
-<li><p>Unduh <a href="https://rameliaz.github.io/mg-sem-workshop/codebook-kamusdata.xlsx">Kamus Data disini</a></p></li>
-<li><p>Lakukan CFA pada skala <em>right-wing authoritarianism</em></p>
+<li><p>Unduh <a href="https://rameliaz.github.io/mg-sem-workshop/materials/dataset-pilpres2024.csv">Dataset Latihan SEM</a></p></li>
+<li><p>Unduh <a href="https://rameliaz.github.io/mg-sem-workshop/materials/codebook-pilpres2024.csv">Kamus Data disini</a></p></li>
+<li><p>Lakukan CFA pada skala <em>social dominance orientation</em></p>
 <ul>
-<li>Diukur dengan skala <em>Likert</em>, 15 aitem dengan 9 pilihan jawaban</li>
+<li>Diukur dengan skala <em>Likert</em>, 6 <em>item</em> dengan 7 pilihan jawaban</li>
 </ul></li>
 <li><p>Laporkan <em>model fit</em>, <em>factor loading</em>, dan <em>multivariate normality</em></p></li>
 <li><p>Lakukan penyesuaian apabila perlu</p></li>
-<li><p><em>Export</em> datasetnya menjadi <code>.htm</code> kemudian</p></li>
 </ul>
-<h3 id="kumpulkan-tugasnya-disini"><a href="https://forms.gle/eNGD2LSzqaZc2nXM7">Kumpulkan tugasnya disini</a></h3>
 </section>
 <section id="ada-pertanyaan" class="slide level2">
 <h2>Ada pertanyaan❓</h2>
@@ -379,7 +423,7 @@ Rizqy Amelia Zein
 </div>
 
 
-</section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -569,7 +613,7 @@ Rizqy Amelia Zein
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -737,13 +781,14 @@ Rizqy Amelia Zein
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

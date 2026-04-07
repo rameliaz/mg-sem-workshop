@@ -1,10 +1,10 @@
 ---
-title: "Dasar-Dasar Structural Equation Modeling (SEM)"
-subtitle: "Multigroup Structural Equation Modeling: Bagian 5️⃣"
+title: "Dasar-Dasar _Structural Equation Modeling_ (SEM)"
+subtitle: "_Multigroup Structural Equation Modeling_: Bagian 5️⃣"
 author: "Rizqy Amelia Zein"
 institute:
-  - "Departemen Psikologi, Universitas Airlangga"
-  - "Research Data & Methods Team, Center for Advanced Internet Studies"
+  - "[_Departemen Psikologi, Universitas Airlangga_](https://psikologi.unair.ac.id/dosen-rizqy-amelia-zein/)"
+  - "[Research Data & Methods Team, Center for Advanced Internet Studies](https://www.cais-research.de/team/rizqy-amelia-zein/)"
 date: today
 format:
   unair-revealjs:
@@ -30,6 +30,8 @@ execute:
 
 ## Pengantar SEM
 
+::: {.incremental}
+
 * SEM adalah *full model* {{< fa circle-arrow-right >}} menggabungkan **model pengukuran** dengan **model jalur/struktural**
 
 * Ada beberapa pendekatan dalam SEM
@@ -39,13 +41,14 @@ execute:
 
   - ***Model generating*** {{< fa circle-arrow-right >}} dilakukan ketika peneliti sudah punya hipotesis model, namun melakukan modifikasi untuk meningkatkan *fit statistics* {{< fa circle-arrow-right >}} *specification search*
 
----
+:::
 
-## Langkah-langkah melakukan analisis SEM {background-color="#14497F"}
+## Langkah-langkah melakukan analisis SEM
 
 ::: {.columns}
 ::: {.column width="50%"}
 
+::: {.incremental}
 * Spesifikasi model
 
 * Identifikasi model
@@ -55,6 +58,7 @@ execute:
 * Menguji model
 
 * Memodifikasi model
+:::
 
 :::
 ::: {.column width="50%"}
@@ -64,12 +68,10 @@ execute:
 :::
 :::
 
----
 
 ## Spesifikasi model
 
-::: {.columns}
-::: {.column width="50%"}
+::: {.incremental}
 
 * Peneliti menyusun model pengukuran dan model jalur dengan menggambar diagram jalur *path diagram*
 
@@ -78,16 +80,10 @@ execute:
 * Sebelum melakukan SEM, peneliti sangat disarankan melakukan *preliminary study*, atau setidaknya *systematic review* yang dapat membantu peneliti menyusun hipotesis model yang baik
 
 :::
-::: {.column width="50%"}
-
-![](https://media.giphy.com/media/bp5U3nfEYnl9S/giphy.gif)
-
-:::
-:::
-
----
 
 ## Identifikasi model
+
+::: {.incremental}
 
 * Model dapat diidentifikasi apabila ***degree of freedom* (*df*) ≥ 0**
 
@@ -104,9 +100,9 @@ execute:
 
 * *Degree of freedom* {{< fa circle-arrow-right >}} dihitung dengan mengurangi jumlah nilai unik (*non-redundant information*) dalam *variance-covariance matrix* dengan jumlah parameter jalur yang hendak diestimasi
 
----
+:::
 
-## Over-identified model
+## _Over-identified model_
 
 ::: {.columns}
 ::: {.column width="50%"}
@@ -127,9 +123,7 @@ execute:
 :::
 :::
 
----
-
-## Under-identified model
+## _Under-identified model_
 
 ::: {.columns}
 ::: {.column width="50%"}
@@ -150,9 +144,7 @@ execute:
 :::
 :::
 
----
-
-## Just-identified model
+## _Just-identified model_
 
 ::: {.columns}
 ::: {.column width="50%"}
@@ -173,7 +165,6 @@ execute:
 :::
 :::
 
----
 
 ## Kesimpulan 🏫
 
@@ -183,7 +174,6 @@ execute:
 
 * Apakah bisa 1 variabel laten diukur oleh 1 *observed variable*?
 
----
 
 ## Variabel laten dengan 1 indikator
 
@@ -192,7 +182,7 @@ execute:
 
 * Masih bisa diestimasi dengan asumsi
 
-  - Aitem diasumsikan memiliki [reliabilitas](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3475500/) sempurna, sehingga varians *error* di*constraint* = 0
+  - _Item_ diasumsikan memiliki [reliabilitas](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3475500/) sempurna, sehingga varians *error* di*constraint* = 0
   - Reliabilitas diukur dengan *test-retest*, kemudian varians *error* di*constraint* dengan mempertimbangkan reliabilitas dan standar deviasi
 
 :::
@@ -203,7 +193,6 @@ execute:
 :::
 :::
 
----
 
 ## Mengestimasi & Menguji model
 
@@ -211,9 +200,10 @@ execute:
 
 * Metode estimasi ini yang akan menghitung *standard error*, apabila metode estimasi yang dipilih tidak tepat dan tidak sesuai dengan kompatibilitas datanya, maka estimasi *standard error* menjadi bias {{< fa circle-arrow-right >}} model memberikan informasi yang menyesatkan
 
----
 
 ## Menguji ketepatan model
+
+::: {.incremental}
 
 * Umumnya peneliti ingin mendapatkan 3 informasi
   - ***Chi-square* sebagai *global fit measure***. *Chi-square* menguji perbedaan antara *model-implied* dengan *sample covariance matrix*. Apabila *p-value* dari *Chi-square* ≥ α (dengan α=0.05), maka **tidak ada perbedaan** antara keduanya {{< fa circle-arrow-right >}} data mendukung model
@@ -222,7 +212,7 @@ execute:
 
   - **Besar dan arah *factor loading***. Besar *factor loading* memberikan informasi mengenai *magnitude* dan kontribusi variabel tersebut dalam menjelaskan variabel lainnya. Sedangkan arah *factor loading* (positif/negatif) memberikan informasi mengenai arah hubungan
 
----
+:::
 
 ## Menguji ketepatan model: *Chi-square* (*X*^2^)
 
@@ -244,7 +234,6 @@ execute:
 :::
 :::
 
----
 
 ## *Incremental (comparative/relative) index*
 
@@ -259,7 +248,6 @@ execute:
 
   - ***Tucker Lewis Index*/*Bentler-Bonnet Non-Normed Fit Index*** {{< fa circle-arrow-right >}} mendekati 1 = *better fit*
 
----
 
 ## *Parsimony index*
 
@@ -277,7 +265,6 @@ execute:
   - *P-value* dapat digunakan untuk menolak *H*~0~: RMSEA = 0.05
   - Oleh karena itu, **menolak *H*~0~** menunjukkan bahwa model "*close-fitting*"
 
----
 
 ## *Absolute index*
 
@@ -291,7 +278,6 @@ execute:
   - ***Hoelter's Critical n*** {{< fa circle-arrow-right >}} nilainya sebaiknya > 200
   - ***Standardized Root Mean Square Residual*** (SRMR/RMR) {{< fa circle-arrow-right >}} nilai < 0.05 menunjukkan *good fit*
 
----
 
 ## *Parameter fit*
 
@@ -308,7 +294,6 @@ execute:
 
   - Apabila *error variance* mendekati nol, hal tsb lebih mungkin disebabkan oleh adanya *outlier*, kurangnya jumlah sampel, atau kurangnya jumlah indikator
 
----
 
 ## *Statistical power*
 
@@ -321,7 +306,6 @@ execute:
   - ***degree of freedom*** model
   - **jumlah sampel**
 
----
 
 ## Mengestimasi jumlah sampel dengan `semTools`
 
@@ -348,7 +332,6 @@ semTools::findRMSEAsamplesize(
 :::
 :::
 
----
 
 ## Dua vs empat langkah
 
@@ -362,7 +345,6 @@ semTools::findRMSEAsamplesize(
   - Spesifikasikan **hubungan antar-variabel laten** di dalam model (model struktural)
   - Tentukan **parameter *acceptable fit*** untuk model struktural, misalnya CFI > .95 dan RMSEA < 0.05
 
----
 
 ## [JARS APA](http://doi.apa.org/getdoi.cfm?doi=10.1037/amp0000191): Apa saja yang harus dilaporkan?
 
@@ -371,11 +353,10 @@ semTools::findRMSEAsamplesize(
 
 * **Metode**
   - Deskripsikan **variabel endogen dan eksogennya**
-  - Berikan penjelasan, untuk setiap instrumen/variabel, apakah **indikator atau total skor** diperoleh dari **aitem yang homogen (*item parceling*)**
+  - Berikan penjelasan, untuk setiap instrumen/variabel, apakah **indikator atau total skor** diperoleh dari **_item_ yang homogen (*item parceling*)**
   - Berikan penjelasan **bagaimana skala/instrumen disusun**, laporkan **properti psikometriknya**, serta penjelasan mengenai **level pengukuran**
-  - Laporkan bagaimana cara peneliti **menentukan jumlah sampel** (*rule of thumb*, *a priori power analysis* atau simulasi Monte Carlo)
+  - Laporkan bagaimana cara peneliti **menentukan jumlah sampel** (misalnya, dengan *rule of thumb*, *a priori power analysis* atau simulasi Monte Carlo)
 
----
 
 ## [JARS APA](http://doi.apa.org/getdoi.cfm?doi=10.1037/amp0000191)
 
@@ -385,11 +366,10 @@ semTools::findRMSEAsamplesize(
 
   - ***Missingness*** {{< fa circle-arrow-right >}} apabila ada data *missing*, maka peneliti harus menganalisis apakah data *missing*nya MCAR, MAR atau MNAR, kemudian bagaimana cara peneliti menangani data *missing*
 
-  - **Distribusi data** {{< fa circle-arrow-right >}} data normal/non-normal? Laporkan *multivariate normality*
+  - **Distribusi data** {{< fa circle-arrow-right >}} data normal/non-normal? Laporkan *multivariate normality* (_Mardia's coefficient_)
 
   - ***Data summary*** {{< fa circle-arrow-right >}} *summary statistics* yang bisa digunakan orang lain untuk melakukan replikasi, bisa ***variance-covariance*** atau ***correlation matrix***
 
----
 
 ## [JARS APA](http://doi.apa.org/getdoi.cfm?doi=10.1037/amp0000191)
 
@@ -405,7 +385,6 @@ semTools::findRMSEAsamplesize(
 
   - Kalau membandingkan model, jelaskan parameter yang akan digunakan untuk membandingkan
 
----
 
 ## [JARS APA](http://doi.apa.org/getdoi.cfm?doi=10.1037/amp0000191)
 
@@ -424,38 +403,19 @@ semTools::findRMSEAsamplesize(
   - Jelaskan prosedur modifikasi model
   - Jelaskan rasionalisasi teorinya ketika peneliti melakukan modifikasi dan bandingkan dengan model yang sebelumnya
 
----
-
 ## Demonstrasi SEM
 
-::: {.columns}
-::: {.column width="50%"}
+* Mari kita lihat contoh penggunaan SEM pada data Ambivalence Sexism Inventory 
 
-* Buka `JASP` dan buka dataset **Political Democracy**
+* [Unduh datasetnya disini](https://rameliaz.github.io/mg-sem-workshop/materials/dataset-asi.omv)
 
-* `Data Library` {{< fa circle-arrow-right >}} SEM {{< fa circle-arrow-right >}} pilih **Political Democracy**
-
-:::
-::: {.column width="50%"}
-
-![](https://media.giphy.com/media/PlQ5TTRt1IhsA/giphy.gif)
-
-:::
-:::
-
----
-
-## TUGAS 5: Membuat dan melaporkan SEM
+## Latihan mandiri 5️⃣: Membuat dan melaporkan SEM
 
 * Unduh [Dataset Latihan SEM](https://rameliaz.github.io/mg-sem-workshop/dataset-wave1.csv)
 
 * Unduh [Kamus Data disini](https://rameliaz.github.io/mg-sem-workshop/codebook-kamusdata.xlsx)
 
-* Silahkan spesifikasi model SEM dari variabel yang tersedia di dataset. Satu model sedikitnya mengandung 2 variabel laten.
-
-* *Export* datasetnya menjadi `.htm` kemudian
-
-### [**Unggah tugasnya di sini**](https://forms.gle/4cMP9s3HPPvGPwg47)
+* Silahkan buat hipotesisnya, lalu spesifikasi model SEM dari variabel yang tersedia di dataset. Satu model sedikitnya mengandung 2 variabel laten.
 
 ## Ada pertanyaan❓
 

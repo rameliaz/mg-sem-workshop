@@ -6,12 +6,12 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-8f1af79587c2686b78fe4e1fbadd71ab.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.14">
+  <meta name="generator" content="quarto-1.8.27">
 
   <meta name="author" content="Rizqy Amelia Zein">
-  <meta name="dcterms.date" content="2026-04-01">
+  <meta name="dcterms.date" content="2026-04-07">
   <title>Multigroup SEM Workshop – Korelasi</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -31,7 +31,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-6f4a79ec7e0e51d91ee72072a2720184.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-b88fc607bb0f0970b04a6010b14008f9.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -131,7 +131,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Korelasi</h1>
-  <p class="subtitle">Multigroup Structural Equation Modeling: Bagian 2️⃣</p>
+  <p class="subtitle"><em>Multigroup Structural Equation Modeling</em>: Bagian 2️⃣</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -139,15 +139,15 @@
 Rizqy Amelia Zein 
 </div>
         <p class="quarto-title-affiliation">
-            Departemen Psikologi, Universitas Airlangga
+            <a href="https://psikologi.unair.ac.id/dosen-rizqy-amelia-zein/"><em>Departemen Psikologi, Universitas Airlangga</em></a>
           </p>
         <p class="quarto-title-affiliation">
-            Research Data &amp; Methods Team, Center for Advanced Internet Studies
+            <a href="https://www.cais-research.de/team/rizqy-amelia-zein/">Research Data &amp; Methods Team, Center for Advanced Internet Studies</a>
           </p>
     </div>
 </div>
 
-  <p class="date">2026-04-01</p>
+  <p class="date">2026-04-07</p>
 </section>
 <section id="outline" class="slide level2">
 <h2><em>Outline</em></h2>
@@ -164,12 +164,14 @@ Rizqy Amelia Zein
 </section>
 <section id="mengapa-memulai-dari-korelasi" class="slide level2" data-background-color="#14497F">
 <h2>Mengapa memulai dari korelasi?</h2>
-<div class="fragment">
-<h4 id="sem-merupakan-teknik-yang-digunakan-untuk-mengestimasi-korelasi-antar-variabel">SEM merupakan teknik yang digunakan untuk <strong>mengestimasi korelasi</strong> antar-variabel</h4>
-<p>. . .</p>
-<h4 id="untuk-melakukan-sem-peneliti-tidak-harus-menginput-data-kasar-raw-data-tetapi-ada-pilihan-untuk-menginput-correlation-atau-variance-covariance-matrix.">Untuk melakukan SEM, peneliti tidak harus meng<em>input</em> data kasar (<em>raw data</em>), tetapi ada pilihan untuk meng<em>input</em> <em>correlation</em> atau <em>variance-covariance matrix</em>.</h4>
-<p><img data-src="https://media.giphy.com/media/ChzfTLSi47FYc/giphy.gif"></p>
-</div>
+</section>
+<section id="mengapa-memulai-dari-korelasi-1" class="slide level2">
+<h2>Mengapa memulai dari korelasi?</h2>
+<ul>
+<li>SEM merupakan teknik yang digunakan untuk <strong>mengestimasi korelasi</strong> antar-variabel</li>
+<li>Untuk melakukan SEM, peneliti tidak harus meng<em>input</em> data kasar (<em>raw data</em>), tetapi ada pilihan untuk meng<em>input</em> <em>correlation</em> atau matriks <em>variance-covariance</em>.</li>
+<li>Kalaupun yang tersedia adalah <em>raw data</em>, maka <em>software</em> akan membuat matriks <em>variance-covariance</em> sebelum mengestimasi parameter model.</li>
+</ul>
 </section>
 <section id="jenis-jenis-korelasi" class="slide level2">
 <h2>Jenis-jenis korelasi</h2>
@@ -220,8 +222,8 @@ Rizqy Amelia Zein
 </tbody>
 </table>
 </section>
-<section id="faktor-faktor-yang-mempengaruhi-korelasi" class="slide level2">
-<h2>Faktor-faktor yang mempengaruhi korelasi</h2>
+<section id="faktor-faktor-yang-mempengaruhi-arah-dan-magnitude-korelasi-1" class="slide level2">
+<h2>Faktor-faktor yang mempengaruhi arah dan <em>magnitude</em> korelasi 1️⃣</h2>
 <ul>
 <li><strong>Level pengukuran</strong> (apakah variabel tersebut nominal, ordinal, interval, atau rasio)
 <ul>
@@ -233,13 +235,18 @@ Rizqy Amelia Zein
 </ul></li>
 <li><strong>Adanya data <em>outlier</em></strong></li>
 <li><strong>Koreksi atenuasi</strong></li>
+</ul>
+</section>
+<section id="faktor-faktor-yang-mempengaruhi-arah-dan-magnitude-korelasi-2" class="slide level2">
+<h2>Faktor-faktor yang mempengaruhi arah dan <em>magnitude</em> korelasi 2️⃣</h2>
+<ul>
 <li><strong>Jumlah sampel</strong>
 <ul>
 <li>Jumlah sampel yang terlalu sedikit akan memberikan estimasi yang kurang akurat (karena <em>standard error</em>nya besar)</li>
 </ul></li>
 <li><strong><em>Sampling variance</em></strong>
 <ul>
-<li>Yang kemudian bereffek pada <em>confidence interval</em>, <em>effect size</em>, dan <em>statistical power</em></li>
+<li>Yang kemudian berefek pada <em>confidence interval</em>, <em>effect size</em>, dan <em>statistical power</em></li>
 </ul></li>
 <li><strong><em>Missing data</em></strong>
 <ul>
@@ -248,14 +255,13 @@ Rizqy Amelia Zein
 <li><em>Listwise deletion</em> tidak disarankan karena membuat jumlah sampel turun drastis <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> mengurangi <em>statistical power</em>.</li>
 </ul></li>
 </ul>
-<h4 id="silahkan-unduh-dan-buka-dataset-korelasi-untuk-melihat-contoh.">Silahkan unduh dan buka <a href="https://rameliaz.github.io/mg-sem-workshop/corr.jasp"><strong>Dataset Korelasi</strong></a>, untuk melihat contoh.</h4>
 </section>
-<section id="section" class="slide level2 center">
+<section id="section" class="slide level2">
 <h2></h2>
-
-<img data-src="https://i2.wp.com/peterjamesthomas.com/wp-content/uploads/2019/09/xkcd-extrapolating.png" class="r-stretch"></section>
+<p>Silahkan unduh dan buka <a href="https://rameliaz.github.io/mg-sem-workshop/corr.jasp"><strong>Dataset Korelasi</strong></a>, untuk melihat contoh.</p>
+</section>
 <section id="variance-covariance-dan-correlation-matrix-1" class="slide level2">
-<h2><em>Variance-covariance</em> dan <em>correlation matrix</em> (1)</h2>
+<h2><em>Variance-covariance</em> dan <em>correlation matrix</em> 1️⃣</h2>
 <ul>
 <li>Untuk melakukan SEM, maka perangkat lunak membutuhkan <em>variance-covariance matrix</em> untuk mengestimasi parameter model</li>
 <li>Pada bagian diagonal <em>variance-covariance matrix</em> menunjukkan varians, sedangkan sisanya adalah <em>covariance</em></li>
@@ -270,20 +276,15 @@ Rizqy Amelia Zein
 </ul>
 </section>
 <section id="variance-covariance-dan-correlation-matrix-2" class="slide level2">
-<h2><em>Variance-covariance</em> dan <em>correlation matrix</em> (2)</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
+<h2><em>Variance-covariance</em> dan <em>correlation matrix</em> 2️⃣</h2>
 <ul>
 <li><p>Sebagian besar perangkat lunak SEM menggunakan <strong><em>variance-covariance matrix</em></strong> bukan <em>correlation matrix</em></p>
 <ul>
-<li>Ingat ❗ korelasi adalah <em>standardized covariance</em>.</li>
+<li>Ingat❗ korelasi pada dasarnya adalah <em>standardized covariance</em>.</li>
 </ul></li>
 <li><p>Menggunakan <em>correlation matrix</em> biasanya lebih sering menghasilkan <strong>parameter yang <em>statistically significant</em> tapi <em>standard error</em> yang tidak akurat</strong>.</p></li>
 <li><p>Oleh karena itu, meskipun <em>user</em> meng<em>input</em> <em>correlation matrix</em>, maka perangkat lunak akan mengubahnya dulu menjadi <em>variance-covariance matrix</em>, baru parameter model dapat diestimasi.</p></li>
 </ul>
-</div><div class="column" style="width:50%;">
-<p><img data-src="https://media.giphy.com/media/l2Je34w7WkZ84f3os/giphy.gif"></p>
-</div></div>
 </section>
 <section id="koreksi-atenuasi" class="slide level2">
 <h2>Koreksi Atenuasi</h2>
@@ -295,16 +296,13 @@ Rizqy Amelia Zein
 </ul>
 
 <img data-src="libs/cor-an.png" class="quarto-figure quarto-figure-center r-stretch" style="width:20.0%"></section>
-<section id="warning-covariancecorrelation-matrix-is-not-positive-definite" class="slide level2 center" data-background-color="#14497F">
-<h2>WARNING! Covariance/correlation matrix is not positive definite</h2>
-
-<img data-src="libs/gosling-corr.jpg" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="apa-yang-terjadi" class="slide level2 center" data-background-color="#14497F">
-<h2>Apa yang terjadi?</h2>
-<h4 id="perangkat-lunak-akan-menghentikan-proses-estimasi">Perangkat lunak akan menghentikan proses estimasi</h4>
-<h4 id="dan-memberikan-pesan-non-positive-definite">…dan memberikan pesan <em>non-positive definite</em></h4>
-
-<img data-src="https://media.giphy.com/media/SDogLD4FOZMM8/giphy.gif" class="r-stretch"></section>
+<section id="warning-covariancecorrelation-matrix-is-not-positive-definite" class="slide level2">
+<h2><em>WARNING! Covariance/correlation matrix is not positive definite</em></h2>
+<ul>
+<li>Apa yang terjadi?</li>
+<li>Perangkat lunak akan menghentikan proses estimasi dan memberikan pesan <em>non-positive definite</em></li>
+</ul>
+</section>
 <section id="matrik-korelasi-dengan-non-positive-definite" class="slide level2">
 <h2>Matrik korelasi dengan <em>non-positive definite</em></h2>
 <ul>
@@ -349,40 +347,40 @@ Rizqy Amelia Zein
 <h2>Korelasi Bivariat: <em>Part</em> dan <em>partial correlation</em></h2>
 
 <img data-src="libs/partial-cor.png" class="quarto-figure quarto-figure-center r-stretch" style="width:50.0%"></section>
-<section id="metrik-variabel-standardised-vs-unstandardised" class="slide level2">
-<h2>Metrik variabel (<em>standardised</em> vs <em>unstandardised</em>)</h2>
+<section id="metrik-variabel-standardized-vs-unstandardized" class="slide level2">
+<h2>Metrik variabel (<em>standardized</em> vs <em>unstandardized</em>)</h2>
 <ul>
-<li><em>Unstandardised solution/estimates</em>
+<li><em>Unstandardized solution/estimates</em>
 <ul>
 <li>Dapat <strong>dibandingkan</strong> antar kelompok sampel</li>
 <li>Merupakan parameter yang digunakan oleh perangkat lunak untuk menghitung <em>standard error</em> dan <em>taraf signifikansi (p-value)</em></li>
 <li>Membandingkan <em>unstandardised factor loading</em> <strong>harus melihat <em>standard error</em>nya juga</strong></li>
 </ul></li>
-<li><em>Standardised solution/estimates</em>
+<li><em>Standardized solution/estimates</em>
 <ul>
 <li>Hanya <em>interpretable</em> untuk kelompok sampel yang diuji — tidak bisa dibandingkan dengan kelompok sampel yang lain.</li>
 <li>Berguna untuk membandingkan <em>factor loading</em> antar-variabel di dalam model</li>
-<li>Apabila variabel dalam model memiliki unit pengukuran yang berbeda, maka <em>standardised estimates</em> akan sangat membantu</li>
+<li>Apabila variabel dalam model memiliki unit pengukuran yang berbeda, maka <em>standardized estimates</em> akan sangat membantu</li>
 </ul></li>
 <li>Ada banyak perbedaan pendapat mengenai metrik mana yang harus dilaporkan, tetapi…
 <ul>
-<li><strong>Selalu laporkan <em>unstandardised solution/estimates</em> dan <em>standard error</em>nya</strong></li>
+<li><strong>Selalu laporkan <em>unstandardized solution/estimates</em> dan <em>standard error</em>nya</strong></li>
 </ul></li>
 </ul>
 </section>
 <section id="tugas-1-membuat-correlation-matrix-dan-melakukan-koreksi-atenuasi" class="slide level2">
 <h2>TUGAS 1: Membuat <em>correlation matrix</em> dan melakukan <em>koreksi atenuasi</em></h2>
 <h3 id="demonstrasi">Demonstrasi</h3>
-<p>Menggunakan <a href="https://rameliaz.github.io/mg-sem-workshop/corr.jasp">Dataset Contoh Korelasi</a></p>
-<p><a href="https://rameliaz.github.io/mg-sem-workshop/corr.jasp">[Dataset]</a> <a href="https://rameliaz.github.io/mg-sem-workshop/contoh-atenuasi.xlsx">[Matriks di Excel]</a></p>
-<h3 id="tugas">TUGAS</h3>
+<p>Menggunakan <a href="https://rameliaz.github.io/mg-sem-workshop/corr.csv">Dataset Contoh Korelasi</a></p>
+<p><a href="https://rameliaz.github.io/mg-sem-workshop/corr.omv">[Dataset]</a> <a href="https://rameliaz.github.io/mg-sem-workshop/contoh-atenuasi.xlsx">[Matriks di Excel]</a></p>
+<h3 id="latihan-mandiri-1-koreksi-atenuasi">Latihan mandiri 1️⃣: Koreksi Atenuasi</h3>
 <ul>
 <li>Apabila diketahui <strong>reliabilitas skala</strong> masing-masing dimensi Big 5 (neu=0.78, con=0.76, agr=0.34, ext=0.45, op=0.67), buatkan matriks korelasi antar-dimensi</li>
 <li>Lakukan koreksi atenuasi</li>
 <li>Apakah matriksnya <em>non-positive definite</em>? Variabel apa saja yang terlibat?</li>
 <li>Apa kira-kira yang menyebabkan kedua variabel tsb korelasinya <em>non-positive definite</em>?</li>
 </ul>
-<p><a href="https://rameliaz.github.io/mg-sem-workshop/latihancorr.csv">[Unduh Dataset]</a> <a href="https://forms.gle/rS5HjhTAFBJnRYRA6">[Kumpulkan Tugasnya Disini]</a></p>
+<p><a href="https://rameliaz.github.io/mg-sem-workshop/latihancorr.csv">[Unduh Dataset]</a></p>
 </section>
 <section id="ada-pertanyaan" class="slide level2">
 <h2>Ada pertanyaan❓</h2>
@@ -595,7 +593,7 @@ Rizqy Amelia Zein
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -763,13 +761,14 @@ Rizqy Amelia Zein
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

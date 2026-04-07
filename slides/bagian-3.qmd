@@ -1,10 +1,10 @@
 ---
 title: "Model Jalur"
-subtitle: "Multigroup Structural Equation Modeling: Bagian 3️⃣"
+subtitle: "_Multigroup Structural Equation Modeling_: Bagian 3️⃣"
 author: "Rizqy Amelia Zein"
 institute:
-  - "Departemen Psikologi, Universitas Airlangga"
-  - "Research Data & Methods Team, Center for Advanced Internet Studies"
+  - "[_Departemen Psikologi, Universitas Airlangga_](https://psikologi.unair.ac.id/dosen-rizqy-amelia-zein/)"
+  - "[Research Data & Methods Team, Center for Advanced Internet Studies](https://www.cais-research.de/team/rizqy-amelia-zein/)"
 date: today
 format:
   unair-revealjs:
@@ -27,15 +27,9 @@ execute:
 * *Syntax* `lavaan` untuk spesifikasi model jalur
 * Asumsi kausalitas dan limitasi
 
-## {background-color="#14497F" .center}
+## Analisis jalur
 
-![](https://media.giphy.com/media/MFCkrYZoqatqlJcQyh/giphy.gif)
-
-### [Klik disini dan cari tahu apa yang terjadi..](https://kahoot.it/) ❤️
-
----
-
-## Analisis jalur {background-color="#14497F"}
+::: {.incremental}
 
 * *Path model* merupakan kelanjutan dari model regresi karena terdiri dari **beberapa model regresi** sekaligus dapat digunakan untuk menguji *direct*, *indirect*, dan *correlated effects*.
 
@@ -44,150 +38,143 @@ execute:
   - Garis dua arah menggambarkan *covariance*/korelasi, yang mengimplikasikan bahwa keterkaitan antar-variabel masih mungkin ditentukan oleh **variabel lain yang tidak ada di dalam model**.
   - Garis *error terms* yang menunjukkan varians *observed variable* yang menjelaskan **variabel lain yang tidak dapat dijelaskan/di luar model**, yang juga mewakili **measurement error**.
 
----
+:::
 
 ## Korelasi = kausalitas?
 
-::: {.columns}
-::: {.column width="50%"}
-
 * Analisis jalur sebenarnya adalah **bentuk yang lebih *sophisticated*** dari korelasi, dan
 
-### **Correlation does not imply causation**
+::: {.callout-important}
+#### Penting
+
+**Correlation does not imply causation**
+:::
 
 Yang harus dipenuhi sebagai bukti kausalitas:
+
 * Ada **urutan waktu** (*temporal order*) {{< fa circle-arrow-right >}} desain penelitian *panel*/*longitudinal*/*time series*
 * Adanya **korelasi** antara kedua variabel
-* Peneliti harus melakukan **kontrol** atas variabel lain
-* Peneliti melakukan **manipulasi** pada variabel X
-
-:::
-::: {.column width="50%"}
-
-![](https://media.giphy.com/media/QWvcBw9qXs9wiVypPm/giphy.gif)
-
-:::
-:::
-
----
+* Peneliti harus melakukan **kontrol** atas variabel lain (_confounding_)
+* Peneliti melakukan **manipulasi** (_random assignment_) pada variabel X
 
 ## Diagram jalur
 
 ![](libs/path-diagram.png){fig-align="center" width="40%"}
 
----
+## Ilustrasi _use case_
 
-## Contoh {background-color="#14497F"}
-
-::: {.columns}
-::: {.column width="50%"}
+:::: {.columns}
+::: {.column width="70%"}
 
 Marimar adalah seorang wali murid di sebuah PAUD di Kota Surabaya. Pada suatu hari, ia mengamati seorang anak (dan orangtua) yang perilakunya menarik perhatiannya.
 
-Ibu anak tersebut *ngotot* untuk menunggui anaknya di sekolah, padahal guru kelas meminta agar Ibu pulang saja, mempercayakan anak pada guru, dengan tujuan melatih kemandirian anaknya.
+Ibu anak tersebut bersikeras untuk menunggui anaknya di sekolah, padahal guru kelas meminta agar Ibu pulang saja, mempercayakan anak pada guru, dengan tujuan melatih kemandirian anaknya.
 
 Melihat ibunya yang menggerutu karena diminta bu Guru pulang, si anak menangis meraung-raung tidak mau ditinggalkan. Akhirnya, terpaksa bu Guru membiarkan si Ibu menunggu di sekolah.
 
-Marimar heran sekaligus penasaran, mengapa tiap anak **memberikan respon yang berbeda** ketika ditinggal orangtuanya di sekolah. Apakah ada kaitan antara kemandirian anak dengan karakteristik orangtuanya?
+Marimar heran sekaligus penasaran, mengapa tiap anak **memberikan respon yang berbeda** ketika ditinggal orangtuanya di sekolah. Ada yang menangis meraung-raung, ada yang lebih santai dengan langsung bermain. Apakah ada kaitan antara kemandirian anak dengan karakteristik orangtuanya?
 
 :::
-::: {.column width="50%"}
+::: {.column width="30%"}
 
-![](https://media.giphy.com/media/13xb3GPki9Kqdi/giphy.gif)
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZW5kdDlocmllN3dscTl6N2Yyd2pvdjNqZGZ4OW5xZzIzdXowc2o2ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lv86aOL3XkZC0EadmR/giphy.gif)
 
 :::
-:::
-
----
+::::
 
 ## Variabel yang diukur Marimar
 
-* **trust** (variabel independen) = Kepercayaan ibu bahwa perkembangan anak dapat berlangsung secara natural ([**trust in organismic development**](https://link.springer.com/article/10.1007/s11031-008-9092-2)). Diukur dengan skala *likert* yang terdiri dari 5 aitem dengan 7 pilihan respon {{< fa circle-arrow-right >}} dari **sangat tidak setuju** sampai **sangat setuju**.
+* **trust** (variabel independen) = Kepercayaan ibu bahwa perkembangan anak dapat berlangsung secara natural ([**trust in organismic development**](https://link.springer.com/article/10.1007/s11031-008-9092-2)). 
+  - Makin tinggi skor, ibu makin percaya anaknya bisa berkembang secara natural. 
+  - Diukur dengan skala *likert* yang terdiri dari 5 _item_ dengan 7 pilihan respon {{< fa circle-arrow-right >}} dari **sangat tidak setuju** sampai **sangat setuju**.
 
-* **mandiri** (variabel dependen) = Tingkat kemandirian anak. Anak dengan skor yang tinggi semakin menunjukkan independensi dan lebih santai ketika ditinggal orangtuanya di sekolah. Diantaranya adalah:
-  - Menangis ketika ditinggal orangtuanya
-  - Merengek atau merajuk ketika ditinggal
+* **mandiri** (variabel dependen) = Tingkat kemandirian anak. Anak dengan skor yang tinggi semakin menunjukkan independensi dan lebih santai ketika ditinggal orangtuanya di sekolah. Beberapa indikator perilakunya adalah:
+  - Tidak menangis ketika ditinggal orangtuanya
+  - Tidak merengek atau merajuk ketika ditinggal
   - Masuk ke dalam kelas tanpa ditemani
-  - Menaruh tas dalam loker yang disediakan tanpa bantuan pengantar
+  - Menaruh tas dalam loker yang disediakan tanpa bantuan orangtua
 
-### Bagaimana bentuk diagram jalurnya?
-
----
-
-## {.center}
+## Bagaimana bentuk diagram jalurnya?
 
 ![](libs/contoh-path.png){fig-align="center" width="100%"}
-
----
 
 ## Nama variabel dan koefisien jalur
 
 | Nama Variabel/Koefisien | Huruf Yunani | Huruf Latin |
-| --------- | :------------: | :----------: |
+| :-------------------------------------- | :------------: | :----------: |
 | *Error* pengukuran dari variabel X | δ | Delta |
 | *Error* pengukuran dari variabel Y | ε | Epsilon |
 | Variabel eksogen | ξ | Ksi |
 | Variabel endogen | η | Eta |
+
+: {tbl-colwidths="[70,15,15]"}
+
+## Nama variabel dan koefisien jalur
+
+| Nama Variabel/Koefisien | Huruf Yunani | Huruf Latin |
+| :-------------------------------------- | :------------: | :----------: |
 | *Direct effect* antara variabel laten dan indikatornya (*loading factor*) | λ | Lambda |
 | *Direct effect* antara variabel endogen dan eksogen | γ | Gamma |
 | *Direct effect* antara dua variabel laten | β | Beta |
 | Korelasi (*covariance*) antara dua variabel laten | φ | Phi |
 | Varians *error* pengukuran dari sebuah variabel laten | ζ | Zeta |
 
----
+: {tbl-colwidths="[70,15,15]"}
 
 ## Contoh model dengan koefisien jalur
 
 ![](libs/contoh-model.png){fig-align="center" width="100%"}
 
----
+## Latihan mandiri 2️⃣: Membuat diagram jalur
 
-## TUGAS 2: Membuat diagram jalur
-
-::: {.columns}
-::: {.column width="50%"}
-
+:::: {.columns}
+::: {.column width="70%"}
 Fernando Jose sebal sekali karena ia kembali kehilangan pengokotnya dan ini kali ketiga ia kehilangan pengokot yang baru dibelinya seminggu yang lalu.
 
-Teman-teman kerjanya memang punya kebiasaan buruk meminjam barang tanpa seijinnya. Ia akhirnya bertanya, apa yang menyebabkan teman-temannya berperilaku seperti itu?
+Teman-teman kerjanya memang punya kebiasaan buruk meminjam barang tanpa seijinnya. Ia akhirnya bertanya, apa ya yang menyebabkan teman-temannya berperilaku seperti itu?
 
-Akhirnya ia menduga, mungkin ada kaitannya dengan faktor kepribadian (*conscientiousness*) rekan kerjanya dan usia karyawan.
+Akhirnya ia menduga, mungkin ada kaitannya dengan faktor kepribadian (_conscientiousness_) dan faktor situasional di tempat kerjanya.
 
-Ia menduga temannya yang lebih *conscientious* dan lebih tua akan lebih kecil kemungkinannya melakukan perilaku tidak beradab. Ia juga mengamati bahwa semakin tua usia rekan kerjanya, biasanya mereka lebih *conscientious*.
-
-:::
-::: {.column width="50%"}
-
-![](https://media.giphy.com/media/OLdblIEmgpTb2/giphy.gif)
-
-:::
+Untuk faktor situasi, ia mengamati sepertinya persepsi atas kondisi kerja yang informal dan relasi formal antara senior-junior mungkin juga berkaitan dengan timbulnya perilaku tersebut.
 :::
 
----
+::: {.column width="30%"}
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmE4MG9zbW0wcGhzOHZ6YmV2NzdleWtwaW1mcHo3amZ2ODV2NnQ5OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ggsPCNJznX7nX2RC6i/giphy.gif)
+:::
+::::
 
-## Yang diukur...
+## Yang diukur 📏
 
-* **con** = Kecenderungan *conscientiousness* karyawan. Makin tinggi skornya, karyawan lebih mungkin menunjukkan kehati-hatian dan keteraturan dalam bekerja. Diukur dengan skala *Likert* berisi 6 aitem dengan 10 pilihan jawaban.
+* **con** = Kecenderungan *conscientiousness* karyawan. Makin tinggi skornya, karyawan lebih mungkin menunjukkan kehati-hatian dan keteraturan dalam bekerja. Diukur dengan skala *Likert* berisi 6 _item_ dengan 10 pilihan jawaban.
 
-* **incivil** = Intensitas perilaku tidak beradab. Makin besar skornya, karyawan akan lebih mungkin *emotionally abusive*, suka mengambil barang teman tanpa ijin, dan perilaku tidak pantas yang lain. Diukur dengan skala *Likert* berisi 4 aitem dengan 10 pilihan jawaban.
+* **incivil** = Intensitas perilaku tidak beradab. Makin besar skornya, karyawan akan lebih mungkin *emotionally abusive*, suka mengambil barang teman tanpa ijin, dan perilaku tidak pantas yang lain. Diukur dengan skala *Likert* berisi 4 _item_ dengan 10 pilihan jawaban.
 
 * **usia** = Usia partisipan
 
-### Buatlah diagram jalur beserta koefisien jalurnya. Bisa dengan PowerPoint atau *software* yang lain.
+::: {.callout-note}
+#### Tugas
+Rumuskan **hipotesis** penelitiannya kemudian buatlah **diagram jalur** beserta **koefisien jalurnya**. Bisa dengan MS Power Point atau *software* yang lain (misalnya, [draw.io](https://app.diagrams.net/)).
+:::
 
-[Unggah file diagram jalur disini](https://forms.gle/VpBzNxT26zXsBBAJ6)
-
----
+#### [Klik disini untuk mengumpulkan tugas](https://padlet.com/ameliazein/tugas-mandiri-workshop-multigroup-sem-8p34daek2641aic8)
 
 ## `lavaan` *Syntax*
 
-* `JASP` mengadopsi *syntax* dari *package* [`lavaan`](http://lavaan.ugent.be/tutorial/index.html), sehingga untuk menjalankan programnya, kita harus memasukkan serangkaian perintah.
+::: {.incremental}
 
-* Meskipun begitu, *syntax* `lavaan` sangat sederhana dan familiar dengan *syntax* `lavaan` memberikan banyak keuntungan.
+* `GAMLj` menyediakan dua opsi: fitur _syntax_ atau _interactive_
+  - Kalau memilih fitur _interactive_, maka tampilan antarmukanya berupa _drag & drop_ (seperti SPSS).
+  - Untuk fitur _syntax_, maka tampilan antarmukanya meminta pengguna untuk menspesifikasi model dengan _syntax_.
+
+* `jamovi` dan `JASP` mengadopsi *syntax* dari *package* [`lavaan`](http://lavaan.ugent.be/tutorial/index.html), sehingga untuk menspesifikasi model, kita harus memasukkan **serangkaian perintah**.
+
+* Meskipun begitu, *syntax* `lavaan` **sangat sederhana** dan familiar dengan *syntax* `lavaan` memberikan **banyak keuntungan**.
 
 * Menjalankan perintah dengan *syntax* juga membantu peneliti untuk mereka-ulang hasil analisis datanya, serta mempermudah kolaborasi dengan peneliti yang terbiasa menggunakan perangkat lunak yang berbeda dengan kita.
 
----
+* Oleh karena itu, dalam _workshop_ ini peserta juga harus berlatih menulis _syntax_.
+
+:::
 
 ## Dasar *syntax* `lavaan`
 
@@ -197,15 +184,9 @@ Ia menduga temannya yang lebih *conscientious* dan lebih tua akan lebih kecil ke
 Baujean, A.A. (2014). Latent Variable Modeling Using R: A step-by-step guide. New York: Routledge.
 :::
 
----
-
 ## Contoh CFA (1)
 
 ![](libs/path-1.png){fig-align="center" width="80%"}
-
----
-
-## {.center}
 
 ```{r}
 #| eval: false
@@ -221,17 +202,11 @@ trust4 ~~ trust4
 trust5 ~~ trust5
 trust ~~ trust
 ```
-
----
 
 ## Contoh CFA (2)
 
 ![](libs/path-2.png){fig-align="center" width="80%"}
 
----
-
-## {.center}
-
 ```{r}
 #| eval: false
 
@@ -246,15 +221,9 @@ mandiri4 ~~ mandiri4
 mandiri ~~ mandiri
 ```
 
----
-
 ## Contoh *path analysis* (3)
 
 ![](libs/path-3.png){fig-align="center" width="80%"}
-
----
-
-## {.center}
 
 ```{r}
 #| eval: false
@@ -267,15 +236,9 @@ mandiri ~~ mandiri
 trust ~~ trust
 ```
 
----
-
 ## Contoh *full model* (4)
 
 ![](libs/contoh-path.png){fig-align="center" width="80%"}
-
----
-
-## {.center}
 
 ```{r}
 #| eval: false
@@ -303,13 +266,11 @@ mandiri ~~ mandiri
 mandiri ~ trust
 ```
 
----
+## Latihan mandiri 3️⃣: Menulis *syntax* `lavaan`
 
-## TUGAS 3: Menulis *syntax* `lavaan`
+Tulislah *syntax* `lavaan` dari diagram jalur yang sudah dibuat di Latihan mandiri 2️⃣
 
-### Tulislah *syntax* `lavaan` dari diagram jalur yang sudah dibuat di TUGAS 2
-
-#### [Klik disini untuk mengisi lembar kerja](https://forms.gle/ARMzU4trUgqRv8hj9)
+#### [Klik disini untuk mengumpulkan tugas](https://padlet.com/ameliazein/tugas-mandiri-workshop-multigroup-sem-8p34daek2641aic8)
 
 ## Ada pertanyaan❓
 

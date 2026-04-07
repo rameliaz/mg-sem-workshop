@@ -1,10 +1,10 @@
 ---
-title: "Confirmatory Factor Analysis (CFA)"
-subtitle: "Multigroup Structural Equation Modeling: Bagian 4️⃣"
+title: "_Confirmatory Factor Analysis_ (CFA)"
+subtitle: "_Multigroup Structural Equation Modeling_: Bagian 4️⃣"
 author: "Rizqy Amelia Zein"
 institute:
-  - "Departemen Psikologi, Universitas Airlangga"
-  - "Research Data & Methods Team, Center for Advanced Internet Studies"
+  - "[_Departemen Psikologi, Universitas Airlangga_](https://psikologi.unair.ac.id/dosen-rizqy-amelia-zein/)"
+  - "[Research Data & Methods Team, Center for Advanced Internet Studies](https://www.cais-research.de/team/rizqy-amelia-zein/)"
 date: today
 format:
   unair-revealjs:
@@ -52,17 +52,16 @@ execute:
 :::
 :::
 
----
-
 ## EFA vs CFA
 
 | EFA | CFA |
-| --- | --- |
+| :--- | :--- |
 | Mencari model yang cocok menggambarkan data, sehingga peneliti **mengeksplorasi berbagai pilihan model** yang cocok kemudian mencari rasionalisasi teoritisnya | Menguji hipotesis yang **sudah ditentukan sebelumnya**, sehingga peneliti ingin tahu apakah hipotesisnya didukung oleh data |
 | Jumlah faktor belum diketahui sampai peneliti melakukan analisisnya | Jumlah faktor sudah ditentukan sebelum mengambil data |
 | Peneliti **tidak memiliki** model yang dihipotesiskan *a priori* | Peneliti **sudah memiliki** model hipotesis yang ditentukan *a priori* |
 
----
+: {tbl-colwidths="[50,50]"}
+
 
 ## *Confirmatory factor analysis*
 
@@ -76,63 +75,80 @@ execute:
   - Kalau hal tsb dilakukan, maka tentu saja peneliti akan mendapatkan hasil yang 'sesuai prediksinya'
   - Ingat [Texas Sharpshooter Fallacy](https://en.wikipedia.org/wiki/Texas_sharpshooter_fallacy)
 
----
+## _Texas sharpshooter fallacy_
 
-## {.center}
-
-![](https://i0.wp.com/www.bayesianspectacles.org/wp-content/uploads/2018/01/TexasSharpShooter.png?fit=357%2C300&ssl=1)
-
----
+![](https://i0.wp.com/www.bayesianspectacles.org/wp-content/uploads/2018/01/TexasSharpShooter.png?fit=357%2C300&ssl=1){fig-align="center"}
 
 ## [*Constraining parameter* model](https://psycnet.apa.org/record/2008-06808-005)
 
 * **Membatasi/menentukan varians** untuk setiap **variabel/faktor laten**
-  - Dilakukan untuk mengeluarkan ***standardised estimates***
+  - Dilakukan untuk mengeluarkan ***standardized estimates***
   - *Factor loading* di *z-score*kan
   - Sehingga *default*nya, *mean* variabel laten = 0, *variance* = 1
 
 * Membatasi/menentukan ***error covariance*** untuk setiap variabel/faktor laten
   - Dilakukan untuk **menentukan *error variance***
 
----
 
 ## Jenis-jenis model pengukuran
 
-* *Congeneric*
-  - Model yang paling moderat dan *default* di berbagai perangkat lunak SEM
-  - Asumsinya, **skala, *error variance*, dan *factor loading* boleh berbeda (dibebaskan)**
-  - **Teknik reliabilitas skala** yang mengasumsikan model pengukuran *congeneric* {{< fa circle-arrow-right >}} ω, McDonald's ω, ω total (ω~*t*~), Revelle's ω, *composite reliability*.
+Ada tiga macam model pengukuran:
 
-* *Tau equivalence*
-  - Model yang sedikit lebih rigid daripada *congeneric*
-  - Asumsinya, **skala dan *error variance* boleh berbeda (dibebaskan)**, namun ***factor loading* harus sama (dibatasi)**
-  - Ketika asumsi *tau equivalence* dipenuhi, maka [Cronbach's α dapat digunakan](https://www.ncbi.nlm.nih.gov/pubmed/28557467)
-  - **Teknik reliabilitas**: Formula Rulon, KR-20, Flanagan-Rulon, Guttman's λ~3~, λ~4~, Hoyt *method*.
+* Model _congeneric_
+* Model _tau equivalence_
+* Model _parallel_
 
-* Paralel
-  - Model yang paling rigid
-  - Asumsinya, **skala, *error variance*, dan *factor loading* harus sama (dibatasi)**
-  - **Teknik reliabilitas**: Spearman-Brown's Formula, Standardised α.
+## Model _congeneric_
 
----
+:::: {.columns}
+::: {.column}
 
-## {.center}
+* Model yang paling moderat dan *default* di berbagai perangkat lunak SEM
+* Asumsinya, **skala, *error variance*, dan *factor loading* boleh berbeda (dibebaskan)**
+* **Koefisien reliabilitas skala** yang mengasumsikan model pengukuran *congeneric* {{< fa circle-arrow-right >}} ω, McDonald's ω, ω total (ω~*t*~), Revelle's ω, *composite reliability*.
+
+:::
+::: {.column}
 
 ![](libs/congeneric.png){fig-align="center"}
 
----
+:::
+::::
 
-## {.center}
+## Model _tau equivalence_
+
+:::: {.columns}
+::: {.column}
+
+* Model yang sedikit lebih rigid daripada *congeneric*
+* Asumsinya, **skala dan *error variance* boleh berbeda (dibebaskan)**, namun ***factor loading* harus sama (dibatasi)**
+* Ketika asumsi *tau equivalence* dipenuhi, maka [Cronbach's α dapat digunakan](https://www.ncbi.nlm.nih.gov/pubmed/28557467)
+* **Koefisien reliabilitas**: Formula Rulon, KR-20, Flanagan-Rulon, Guttman's λ~3~, λ~4~, Hoyt *method*
+  - Pada kebanyakan kasus, jarang sekali ada kosntruk psikologi yang memenuhi asumsi _tau equivalence_, sehingga **sangat disarankan** untuk tidak menggunakan koefisien reliabilitas yang mengasumsikan _tau equivalence_
+
+:::
+::: {.column}
 
 ![](libs/tau.png){fig-align="center"}
 
----
+:::
+::::
 
-## {.center}
+## Model _parallel_  
+
+:::: {.columns}
+::: {.column}
+
+* Model yang paling rigid
+* Asumsinya, **skala, *error variance*, dan *factor loading* harus sama (dibatasi)**
+  - **Koefisien reliabilitas**: Spearman-Brown's Formula, Standardized α.
+:::
+::: {.column}
 
 ![](libs/paralel.png){fig-align="center"}
 
----
+:::
+::::
 
 ## Reflektif vs Formatif
 
@@ -147,30 +163,23 @@ execute:
   - Korelasi antara variabel *observed* tidak diketahui
   - Biasanya digunakan untuk menentukan indeks pada konstruk yang *orthogonal* (contoh {{< fa circle-arrow-right >}} kepribadian pada *Five Factor model*)
 
----
 
-## {.center}
+## Model Reflektif
 
 ![](libs/reflektif.png){fig-align="center"}
 
----
-
-## {.center}
+## Model Formatif
 
 ![](libs/formatif.png){fig-align="center" width="60%"}
-
----
 
 ## Apa yang terjadi ketika *error variance* berkorelasi?
 
 ![](libs/correlated-error.png){fig-align="center"}
 
 * Kedua variabel indikator tersebut mengukur variabel laten lain di luar model (*unique factor*)
-* Bisa jadi karena ada aitem *unfavourable* dalam skala
+* Bisa jadi karena ada _item_ *unfavourable* dalam skala
 * Kemungkinan konstruk laten **bukan konstruk tunggal** (multidimensi)
 * Perhatikan justifikasi teori ketika menambah *error covariance*
-
----
 
 ## Skor faktor (*factor scores*)
 
@@ -185,44 +194,38 @@ execute:
   - **Metode Bartlett** {{< fa circle-arrow-right >}} mengasumsikan variabel indikator **tidak saling berkorelasi**
   - **Metode Anderson-Rubin** {{< fa circle-arrow-right >}} mengasumsikan variabel indikator **saling berkorelasi**
 
----
-
 ## Memilih metode estimasi
 
-* *Maximum Likelihood* {{< fa circle-arrow-right >}} distribusi data (*multivariate*) normal, level pengukuran harus interval, tidak ada data *missing*
+* *Maximum Likelihood* {{< fa circle-arrow-right >}} distribusi data (*multivariate*) normal, level pengukuran harus interval/*continuous*, tidak ada data *missing*
+  - Gunakan _Robust Maximum Likelihood_ (MLR) ketika asumsi _multivariate normality_ tidak terpenuhi
 
-* *Generalized least squares* {{< fa circle-arrow-right >}} menggunakan asumsi yang sama dengan `ML` namun performanya kurang baik apabila dibandingkan dengan `ML`
+* *Generalized-least squares* {{< fa circle-arrow-right >}} menggunakan asumsi yang sama dengan `ML` namun performanya kurang baik apabila dibandingkan dengan `ML`
 
-* *Weighted least squares* {{< fa circle-arrow-right >}} dapat digunakan pada data kategorikal (nominal dan ordinal), estimasi menggunakan *polychoric correlation matrix*
+* *Weighted-least squares* {{< fa circle-arrow-right >}} dapat digunakan pada data kategorikal (nominal dan ordinal), estimasi menggunakan *polychoric correlation matrix*. Varian WLS, misalnya: WLSM, WLSMV, WLSMVS.
 
-* *Diagonally weighted least squares* {{< fa circle-arrow-right >}} dapat digunakan pada data kategorikal, bekerja dengan baik pada sampel yang relatif kecil dan data yang tidak berdistribusi normal
+* *Diagonally weighted-least squares* {{< fa circle-arrow-right >}} dapat digunakan pada data kategorikal, bekerja dengan baik pada sampel yang relatif kecil dan data yang tidak berdistribusi normal
 
----
+::: {.callout-tip}
+#### Tips memilih estimator
+Untuk **skala _Likert_ dengan 6–7 pilihan**, dengan respons yang relatif simetris, **MLR sudah baik performanya**. Untuk **skala _Likert_ 4 pilihan** dengan distribusi yang sangat juling (_skew_), **WLSMV merupakan pilihan yang lebih aman** ([Rhemtulla, Brosseau-Liard & Savalei](https://psycnet.apa.org/record/2012-18631-001), 2012).
+:::
 
-## Demonstrasi CFA {background-color="#14497F" .center}
+# Demonstrasi CFA {background-color="#14497F" .center}
 
-![](https://media.giphy.com/media/3oEjHZPivwdJ0syhKE/giphy.gif)
+[**Unduh Dataset Contoh CFA**](https://rameliaz.github.io/mg-sem-workshop/contoh-cfa.omv)
 
-### [Unduh Dataset Contoh CFA](https://rameliaz.github.io/mg-sem-workshop/contoh-cfa.jasp)
+## Latihan mandiri 4️⃣: Mencoba *confirmatory factor analysis*
 
----
+* Unduh [Dataset Latihan SEM](https://rameliaz.github.io/mg-sem-workshop/materials/dataset-pilpres2024.csv)
 
-## TUGAS 4: Mencoba *confirmatory factor analysis*
+* Unduh [Kamus Data disini](https://rameliaz.github.io/mg-sem-workshop/materials/codebook-pilpres2024.csv)
 
-* Unduh [Dataset Latihan SEM](https://rameliaz.github.io/mg-sem-workshop/dataset-wave1.csv)
-
-* Unduh [Kamus Data disini](https://rameliaz.github.io/mg-sem-workshop/codebook-kamusdata.xlsx)
-
-* Lakukan CFA pada skala *right-wing authoritarianism*
-  - Diukur dengan skala *Likert*, 15 aitem dengan 9 pilihan jawaban
+* Lakukan CFA pada skala *social dominance orientation*
+  - Diukur dengan skala *Likert*, 6 _item_ dengan 7 pilihan jawaban
 
 * Laporkan *model fit*, *factor loading*, dan *multivariate normality*
 
 * Lakukan penyesuaian apabila perlu
-
-* *Export* datasetnya menjadi `.htm` kemudian
-
-### [Kumpulkan tugasnya disini](https://forms.gle/eNGD2LSzqaZc2nXM7)
 
 ## Ada pertanyaan❓
 

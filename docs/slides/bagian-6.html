@@ -6,13 +6,13 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-8f1af79587c2686b78fe4e1fbadd71ab.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.14">
+  <meta name="generator" content="quarto-1.8.27">
 
   <meta name="author" content="Rizqy Amelia Zein">
-  <meta name="dcterms.date" content="2026-04-01">
-  <title>Multigroup SEM Workshop – Multi-Group Structural Equation Modeling (SEM)</title>
+  <meta name="dcterms.date" content="2026-04-07">
+  <title>Multigroup SEM Workshop – Multigroup Structural Equation Modeling (MGSEM)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -31,7 +31,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-6f4a79ec7e0e51d91ee72072a2720184.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-b88fc607bb0f0970b04a6010b14008f9.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -130,8 +130,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Multi-Group Structural Equation Modeling (SEM)</h1>
-  <p class="subtitle">Multigroup Structural Equation Modeling: Bagian 6️⃣</p>
+  <h1 class="title"><em>Multigroup Structural Equation Modeling</em> (MGSEM)</h1>
+  <p class="subtitle"><em>Multigroup Structural Equation Modeling</em>: Bagian 6️⃣</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -139,15 +139,15 @@
 Rizqy Amelia Zein 
 </div>
         <p class="quarto-title-affiliation">
-            Departemen Psikologi, Universitas Airlangga
+            <a href="https://psikologi.unair.ac.id/dosen-rizqy-amelia-zein/"><em>Departemen Psikologi, Universitas Airlangga</em></a>
           </p>
         <p class="quarto-title-affiliation">
-            Research Data &amp; Methods Team, Center for Advanced Internet Studies
+            <a href="https://www.cais-research.de/team/rizqy-amelia-zein/">Research Data &amp; Methods Team, Center for Advanced Internet Studies</a>
           </p>
     </div>
 </div>
 
-  <p class="date">2026-04-01</p>
+  <p class="date">2026-04-07</p>
 </section>
 <section id="outline" class="slide level2">
 <h2><em>Outline</em></h2>
@@ -280,27 +280,19 @@ Rizqy Amelia Zein
 <aside><div>
 <p>Baujean, A.A. (2014). Latent Variable Modeling Using R: A step-by-step guide. New York: Routledge.</p>
 </div></aside></section>
-<section id="demonstrasi-multigroup-sem" class="slide level2" data-background-color="#14497F">
+<section id="demonstrasi-multigroup-sem" class="slide level2">
 <h2>Demonstrasi <em>multigroup SEM</em></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
 <h3 id="klik-untuk-unduh-datasetnya-disini"><a href="https://rameliaz.github.io/mg-sem-workshop/dataset-mg.csv">Klik untuk unduh datasetnya disini</a></h3>
-<h3 id="atau-pada-repositori-unduh-dataset-contoh-multigroup-sem">Atau pada repositori, unduh <a href="https://rameliaz.github.io/mg-sem-workshop/dataset-mg.csv"><strong>Dataset Contoh Multigroup SEM</strong></a></h3>
-</div><div class="column" style="width:50%;">
-<p><img data-src="https://media.giphy.com/media/l4pLXMFYQmTM2se7m/giphy.gif"></p>
-</div></div>
 </section>
-<section id="tugas-6-terakhir-mencoba-multigroup-sem" class="slide level2">
-<h2>TUGAS 6 (terakhir 🙏): Mencoba <em>multigroup</em> SEM</h2>
+<section id="latihan-mandiri-6-terakhir-mencoba-multigroup-sem" class="slide level2">
+<h2>Latihan mandiri 6️⃣ (terakhir 🙏): Mencoba <em>multigroup</em> SEM</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
 <li><p>Unduh <a href="https://rameliaz.github.io/mg-sem-workshop/dataset-wave1.csv">Dataset Latihan SEM</a></p></li>
 <li><p>Unduh <a href="https://rameliaz.github.io/mg-sem-workshop/codebook-kamusdata.xlsx">Kamus Data disini</a></p></li>
 <li><p>Cek <em>measurement invariance</em> pada skala <em>right-wing authoritarianism</em> antara laki-laki dan perempuan</p></li>
-<li><p><em>Export</em> datasetnya menjadi <code>.htm</code> kemudian</p></li>
 </ul>
-<h3 id="unggah-tugasnya-di-sini"><a href="https://forms.gle/6tdDH7Fin4xp7aL96"><strong>Unggah tugasnya di sini</strong></a></h3>
 </div><div class="column" style="width:50%;">
 <p><img data-src="https://media.giphy.com/media/l1KVaj5UcbHwrBMqI/giphy.gif"></p>
 </div></div>
@@ -516,7 +508,7 @@ Rizqy Amelia Zein
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -684,13 +676,14 @@ Rizqy Amelia Zein
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

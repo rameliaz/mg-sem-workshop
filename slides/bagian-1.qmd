@@ -1,10 +1,10 @@
 ---
 title: "Pengantar"
-subtitle: "Multigroup Structural Equation Modeling: Bagian 1️⃣"
+subtitle: "_Multigroup Structural Equation Modeling_: Bagian 1️⃣"
 author: "Rizqy Amelia Zein"
 institute:
-  - "Departemen Psikologi, Universitas Airlangga"
-  - "Research Data & Methods Team, Center for Advanced Internet Studies"
+  - "[_Departemen Psikologi, Universitas Airlangga_](https://psikologi.unair.ac.id/dosen-rizqy-amelia-zein/)"
+  - "[Research Data & Methods Team, Center for Advanced Internet Studies](https://www.cais-research.de/team/rizqy-amelia-zein/)"
 date: today
 format:
   unair-revealjs:
@@ -58,7 +58,7 @@ execute:
 **Penting**: SEM adalah teknik yang _theory-driven_ sehingga modifikasi/re-spesifikasi model harus memiliki alasan teoritis.
 :::
 
-## Jenis-jenis variabel dalam model SEM 1️
+## Jenis-jenis variabel dalam model SEM 1️⃣
 
 :::: {.columns}
 ::: {.column}
@@ -77,7 +77,7 @@ execute:
 ::: {.column}
 ![](libs/observed-latent.png){fig-align="right" width="60%"}
 :::
-:::
+::::
 
 ## Jenis-jenis variabel dalam model SEM 2️⃣
 
@@ -94,10 +94,10 @@ execute:
 :::
 
 ::: {.column}
-![](libs/endo-exo.png){fig-align="center" width=80%}
+![](libs/endo-exo.png){fig-align="center" width="80%"}
 :::
 
-:::
+::::
 
 ## Model SEM terdiri atas...
 
@@ -227,7 +227,6 @@ Estimator _weighted least squares_ biasanya membutuhkan jumlah sampel lebih besa
 
 :::
 :::
-<!-- end columns -->
 
 Selengkapnya, baca di materi [_confirmatory factor analysis_](https://rameliaz.github.io/mg-sem-workshop/slides/bagian-4.html).
 

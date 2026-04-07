@@ -59,14 +59,14 @@ website:
             href: materials/corr.omv
           - text: "Dataset Latihan Korelasi"
             href: materials/latihancorr.csv
-          - text: "Dataset Contoh CFA (*.omv)"
+          - text: "Dataset Contoh CFA"
             href: materials/contoh-cfa.omv
-          - text: "Dataset Contoh CFA (*.csv)"
-            href: materials/contoh-cfa.csv
-          - text: "Dataset Contoh Multigroup SEM"
-            href: materials/data-contoh-mg-sem.csv
-          - text: "Dataset Latihan SEM"
-            href: materials/dataset-wave1.csv
+          - text: "Dataset Contoh SEM dan MGSEM"
+            href: materials/dataset-asi.omv
+          - text: "Dataset Latihan SEM dan MGSEM"
+            href: materials/dataset-pilpres2024.csv
+          - text: "Kamus Data Dataset Latihan"
+            href: materials/codebook-pilpres2024.csv
       - text: "Survei"
         menu:
           - text: "Evaluasi Workshop"
