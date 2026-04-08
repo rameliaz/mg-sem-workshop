@@ -46,7 +46,7 @@ execute:
 ::: {.columns}
 ::: {.column width="50%"}
 
-* Kalau kita masukkan *mean* variabel laten ke dalam model, maka **_intercept_nya juga harus dimasukkan dalam model**
+* Kalau kita masukkan *mean* variabel laten ke dalam model, maka **_intercept_-nya juga harus dimasukkan dalam model**
 
 * *Mean* dan *intercept* adalah ukuran *lokasi variabel*, dimana...
   - ***Mean*** adalah komponen ***common factor***
@@ -63,33 +63,34 @@ execute:
 :::
 :::
 
-
 ## Jenis-jenis *measurement invariance*
 
 * *Configural*
   - Jenis ini adalah yang paling dasar, yang mengasumsikan bahwa **model memiliki struktur yang sama** di **semua kelompok**
+  - Karena hanya struktur faktor yang sama, sehingga belum ada yang bisa dibandingkan secara bermakna antar kelompok.
   - Oleh karena itu, semua kelompok **harus** memiliki **jumlah faktor/variabel laten** dan **jumlah variabel indikator/*observed* yang sama**
   - **Tidak ada ketentuan** bahwa parameter di dalam model harus setara di semua kelompok {{< fa circle-arrow-right >}} tidak ada *between-group comparison*
-  - Untuk mengeksekusi *configural invariance* tinggal menambahkan `grouping variable` di `JASP` pada bagian **options**
+  - Untuk mengeksekusi *configural invariance* tinggal menambahkan `grouping variable` di `jamovi` pada bagian **options**
 
 * *Weak*/*metric*
   - **_Factor loading_ harus sama** pada setiap kelompok, tetapi **varians variabel laten boleh bervariasi**
   - Dinamai *weak* karena asumsinya masih lemah untuk menyimpulkan bahwa faktor laten **ekuivalen** di semua kelompok
-  - Untuk mengeksekusinya tambahkan `grouping variable` di `JASP` dan tik pilihan `loadings` pada `equality constraints`
+  - Hubungan antar variabel laten (misalnya korelasi atau regresi) bisa dibandingkan
+  - Untuk mengeksekusinya di `jamovi`, klik opsi `Multi-group analysis`, tambahkan data pengelompokan di `factor for multi-group analysis` dan centang pilihan `loadings` pada `equality constraints`
 
 
 ## Jenis-jenis *measurement invariance*
 
 * *Strong*/*scalar*
   - **Selain *factor loading* harus sama**, *strong invariance* mensyaratkan **_intercept_ harus sama juga**
-  - Ketika membatasi/*constraining* *intercept*, maka *means* boleh bervariasi di berbagai kelompok
+  - Ketika membatasi/*constraining* *intercept*, maka *latent means* boleh bervariasi (dan dibandingkan) di berbagai kelompok
   - Dengan asumsi *strong invariance* ekuivalensi variabel laten lebih didukung bukti yang kuat
-  - Untuk mengeksekusinya tambahkan `grouping variable` di `JASP` dan tik pilihan `loadings` dan `intercept` pada `equality constraints`
+  - Untuk mengeksekusinya di `jamovi`, klik opsi `Multi-group analysis`, tambahkan data pengelompokan di `factor for multi-group analysis` dan centang pilihan `loadings` dan `intercepts` pada `equality constraints`
 
 * *Strict*/*residuals*
   - **Selain *factor loading* dan *intercept* harus sama**, *strict invariance* mensyaratkan **_varians error_/_residual_ sama juga**
   - Biasanya asumsi ini **tidak terlalu diperlukan** untuk membandingkan variabel laten di masing-masing kelompok
-  - Untuk mengeksekusinya tambahkan `grouping variable` di `JASP` dan tik pilihan `loadings`, `intercept`, dan `residuals` pada `equality constraints`
+  - Untuk mengeksekusinya di `jamovi`, klik opsi `Multi-group analysis`, tambahkan data pengelompokan di `factor for multi-group analysis` dan centang pilihan `loadings`, `intercepts` dan `residuals` pada `equality constraints`
 
 
 ## Jenis-jenis *measurement invariance*
@@ -97,12 +98,12 @@ execute:
 * Homogenitas varians variabel laten
   - Untuk melihat apakah **varians variabel laten setara** di masing-masing kelompok
   - Kalau tidak terpenuhi berarti kelompok dengan varians variabel laten yang **lebih kecil** menggunakan **rentang konstruk yang lebih sempit**
-  - Untuk mengeksekusinya pada `grouping variable` di `JASP` tik pilihan `latent variances`
+  - Untuk mengeksekusinya klik opsi `Multi-group analysis`, tambahkan data pengelompokan di `factor for multi-group analysis` dan centang pilihan `latent variances` pada `equality constraints`
 
 * Homogenitas *factor means*
   - Untuk melihat **apakah ada perbedaan *mean* variabel laten** di masing-masing kelompok
   - Prosedur yang sama dengan `anova` atau `t-test`
-  - Untuk mengeksekusinya pada `grouping variable` di `JASP` tik pilihan `means`
+  - Untuk mengeksekusinya klik opsi `Multi-group analysis`, tambahkan data pengelompokan di `factor for multi-group analysis` dan centang pilihan `means` pada `equality constraints`
 
 
 ## Evaluasi *measurement invariance*
@@ -118,8 +119,7 @@ execute:
   - Pendekatan *modeling* menggunakan *approximate fit indices* (AFI) untuk menyimpulkan *invariance*
   - Yang bisa digunakan adalah *comparative fit index* (CFI) dan *McDonald's noncentrality fit index* (MFI), sehingga ketika **keduanya mendekati 1**, kita dapat simpulkan *invariance* ✅
 
-
-## {.center}
+## Perbandingannya
 
 ![](libs/invariance.png){fig-align="center" width="80%"}
 
@@ -127,10 +127,9 @@ execute:
 Baujean, A.A. (2014). Latent Variable Modeling Using R: A step-by-step guide. New York: Routledge.
 :::
 
-
 ## Demonstrasi *multigroup SEM*
 
-* Mari kita lihat contoh penggunaan MGSEM pada data Ambivalence Sexism Inventory 
+* Mari kita lihat contoh penggunaan MGSEM
 
 * [Unduh datasetnya disini](https://rameliaz.github.io/mg-sem-workshop/materials/dataset-asi.omv)
 
@@ -140,11 +139,13 @@ Baujean, A.A. (2014). Latent Variable Modeling Using R: A step-by-step guide. Ne
 ::: {.columns}
 ::: {.column width="50%"}
 
-* Unduh [Dataset Latihan SEM](https://rameliaz.github.io/mg-sem-workshop/dataset-wave1.csv)
+* Unduh [Dataset Latihan SEM](https://rameliaz.github.io/mg-sem-workshop/materials/dataset-pilpres2024.csv)
 
-* Unduh [Kamus Data disini](https://rameliaz.github.io/mg-sem-workshop/codebook-kamusdata.xlsx)
+* Unduh [Kamus Data disini](https://rameliaz.github.io/mg-sem-workshop/materials/codebook-pilpres2024.xlsx)
 
-* Cek *measurement invariance* pada skala *right-wing authoritarianism* antara laki-laki dan perempuan
+* Silahkan buat hipotesisnya, lalu spesifikasi model SEM dari variabel yang tersedia di dataset. Satu model sedikitnya mengandung 2 variabel laten.
+
+* Lakukan MGSEM dengan membandingkan model laki-laki dan perempuan
 
 :::
 ::: {.column width="50%"}

@@ -405,15 +405,15 @@ semTools::findRMSEAsamplesize(
 
 ## Demonstrasi SEM
 
-* Mari kita lihat contoh penggunaan SEM pada data Ambivalence Sexism Inventory 
+* Mari kita lihat contoh penggunaan SEM
 
 * [Unduh datasetnya disini](https://rameliaz.github.io/mg-sem-workshop/materials/dataset-asi.omv)
 
 ## Latihan mandiri 5️⃣: Membuat dan melaporkan SEM
 
-* Unduh [Dataset Latihan SEM](https://rameliaz.github.io/mg-sem-workshop/dataset-wave1.csv)
+* Unduh [Dataset Latihan SEM](https://rameliaz.github.io/mg-sem-workshop/materials/dataset-pilpres2024.csv)
 
-* Unduh [Kamus Data disini](https://rameliaz.github.io/mg-sem-workshop/codebook-kamusdata.xlsx)
+* Unduh [Kamus Data disini](https://rameliaz.github.io/mg-sem-workshop/materials/codebook-pilpres2024.xlsx)
 
 * Silahkan buat hipotesisnya, lalu spesifikasi model SEM dari variabel yang tersedia di dataset. Satu model sedikitnya mengandung 2 variabel laten.
 

@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.8.27">
 
   <meta name="author" content="Rizqy Amelia Zein">
-  <meta name="dcterms.date" content="2026-04-07">
+  <meta name="dcterms.date" content="2026-04-08">
   <title>Multigroup SEM Workshop – Multigroup Structural Equation Modeling (MGSEM)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -147,7 +147,7 @@ Rizqy Amelia Zein
     </div>
 </div>
 
-  <p class="date">2026-04-07</p>
+  <p class="date">2026-04-08</p>
 </section>
 <section id="outline" class="slide level2">
 <h2><em>Outline</em></h2>
@@ -180,7 +180,7 @@ Rizqy Amelia Zein
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
-<li><p>Kalau kita masukkan <em>mean</em> variabel laten ke dalam model, maka **_intercept_nya juga harus dimasukkan dalam model**</p></li>
+<li><p>Kalau kita masukkan <em>mean</em> variabel laten ke dalam model, maka <strong><em>intercept</em>-nya juga harus dimasukkan dalam model</strong></p></li>
 <li><p><em>Mean</em> dan <em>intercept</em> adalah ukuran <em>lokasi variabel</em>, dimana…</p>
 <ul>
 <li><strong><em>Mean</em></strong> adalah komponen <strong><em>common factor</em></strong></li>
@@ -205,15 +205,17 @@ Rizqy Amelia Zein
 <li><em>Configural</em>
 <ul>
 <li>Jenis ini adalah yang paling dasar, yang mengasumsikan bahwa <strong>model memiliki struktur yang sama</strong> di <strong>semua kelompok</strong></li>
+<li>Karena hanya struktur faktor yang sama, sehingga belum ada yang bisa dibandingkan secara bermakna antar kelompok.</li>
 <li>Oleh karena itu, semua kelompok <strong>harus</strong> memiliki <strong>jumlah faktor/variabel laten</strong> dan <strong>jumlah variabel indikator/<em>observed</em> yang sama</strong></li>
 <li><strong>Tidak ada ketentuan</strong> bahwa parameter di dalam model harus setara di semua kelompok <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> tidak ada <em>between-group comparison</em></li>
-<li>Untuk mengeksekusi <em>configural invariance</em> tinggal menambahkan <code>grouping variable</code> di <code>JASP</code> pada bagian <strong>options</strong></li>
+<li>Untuk mengeksekusi <em>configural invariance</em> tinggal menambahkan <code>grouping variable</code> di <code>jamovi</code> pada bagian <strong>options</strong></li>
 </ul></li>
 <li><em>Weak</em>/<em>metric</em>
 <ul>
 <li><strong><em>Factor loading</em> harus sama</strong> pada setiap kelompok, tetapi <strong>varians variabel laten boleh bervariasi</strong></li>
 <li>Dinamai <em>weak</em> karena asumsinya masih lemah untuk menyimpulkan bahwa faktor laten <strong>ekuivalen</strong> di semua kelompok</li>
-<li>Untuk mengeksekusinya tambahkan <code>grouping variable</code> di <code>JASP</code> dan tik pilihan <code>loadings</code> pada <code>equality constraints</code></li>
+<li>Hubungan antar variabel laten (misalnya korelasi atau regresi) bisa dibandingkan</li>
+<li>Untuk mengeksekusinya di <code>jamovi</code>, klik opsi <code>Multi-group analysis</code>, tambahkan data pengelompokan di <code>factor for multi-group analysis</code> dan centang pilihan <code>loadings</code> pada <code>equality constraints</code></li>
 </ul></li>
 </ul>
 </section>
@@ -223,15 +225,15 @@ Rizqy Amelia Zein
 <li><em>Strong</em>/<em>scalar</em>
 <ul>
 <li><strong>Selain <em>factor loading</em> harus sama</strong>, <em>strong invariance</em> mensyaratkan <strong><em>intercept</em> harus sama juga</strong></li>
-<li>Ketika membatasi/<em>constraining</em> <em>intercept</em>, maka <em>means</em> boleh bervariasi di berbagai kelompok</li>
+<li>Ketika membatasi/<em>constraining</em> <em>intercept</em>, maka <em>latent means</em> boleh bervariasi (dan dibandingkan) di berbagai kelompok</li>
 <li>Dengan asumsi <em>strong invariance</em> ekuivalensi variabel laten lebih didukung bukti yang kuat</li>
-<li>Untuk mengeksekusinya tambahkan <code>grouping variable</code> di <code>JASP</code> dan tik pilihan <code>loadings</code> dan <code>intercept</code> pada <code>equality constraints</code></li>
+<li>Untuk mengeksekusinya di <code>jamovi</code>, klik opsi <code>Multi-group analysis</code>, tambahkan data pengelompokan di <code>factor for multi-group analysis</code> dan centang pilihan <code>loadings</code> dan <code>intercepts</code> pada <code>equality constraints</code></li>
 </ul></li>
 <li><em>Strict</em>/<em>residuals</em>
 <ul>
 <li><strong>Selain <em>factor loading</em> dan <em>intercept</em> harus sama</strong>, <em>strict invariance</em> mensyaratkan <strong><em>varians error</em>/<em>residual</em> sama juga</strong></li>
 <li>Biasanya asumsi ini <strong>tidak terlalu diperlukan</strong> untuk membandingkan variabel laten di masing-masing kelompok</li>
-<li>Untuk mengeksekusinya tambahkan <code>grouping variable</code> di <code>JASP</code> dan tik pilihan <code>loadings</code>, <code>intercept</code>, dan <code>residuals</code> pada <code>equality constraints</code></li>
+<li>Untuk mengeksekusinya di <code>jamovi</code>, klik opsi <code>Multi-group analysis</code>, tambahkan data pengelompokan di <code>factor for multi-group analysis</code> dan centang pilihan <code>loadings</code>, <code>intercepts</code> dan <code>residuals</code> pada <code>equality constraints</code></li>
 </ul></li>
 </ul>
 </section>
@@ -242,13 +244,13 @@ Rizqy Amelia Zein
 <ul>
 <li>Untuk melihat apakah <strong>varians variabel laten setara</strong> di masing-masing kelompok</li>
 <li>Kalau tidak terpenuhi berarti kelompok dengan varians variabel laten yang <strong>lebih kecil</strong> menggunakan <strong>rentang konstruk yang lebih sempit</strong></li>
-<li>Untuk mengeksekusinya pada <code>grouping variable</code> di <code>JASP</code> tik pilihan <code>latent variances</code></li>
+<li>Untuk mengeksekusinya klik opsi <code>Multi-group analysis</code>, tambahkan data pengelompokan di <code>factor for multi-group analysis</code> dan centang pilihan <code>latent variances</code> pada <code>equality constraints</code></li>
 </ul></li>
 <li>Homogenitas <em>factor means</em>
 <ul>
 <li>Untuk melihat <strong>apakah ada perbedaan <em>mean</em> variabel laten</strong> di masing-masing kelompok</li>
 <li>Prosedur yang sama dengan <code>anova</code> atau <code>t-test</code></li>
-<li>Untuk mengeksekusinya pada <code>grouping variable</code> di <code>JASP</code> tik pilihan <code>means</code></li>
+<li>Untuk mengeksekusinya klik opsi <code>Multi-group analysis</code>, tambahkan data pengelompokan di <code>factor for multi-group analysis</code> dan centang pilihan <code>means</code> pada <code>equality constraints</code></li>
 </ul></li>
 </ul>
 </section>
@@ -269,8 +271,8 @@ Rizqy Amelia Zein
 </ul></li>
 </ul>
 </section>
-<section id="section" class="slide level2 center">
-<h2></h2>
+<section id="perbandingannya" class="slide level2">
+<h2>Perbandingannya</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="libs/invariance.png" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
@@ -282,16 +284,20 @@ Rizqy Amelia Zein
 </div></aside></section>
 <section id="demonstrasi-multigroup-sem" class="slide level2">
 <h2>Demonstrasi <em>multigroup SEM</em></h2>
-<h3 id="klik-untuk-unduh-datasetnya-disini"><a href="https://rameliaz.github.io/mg-sem-workshop/dataset-mg.csv">Klik untuk unduh datasetnya disini</a></h3>
+<ul>
+<li><p>Mari kita lihat contoh penggunaan MGSEM</p></li>
+<li><p><a href="https://rameliaz.github.io/mg-sem-workshop/materials/dataset-asi.omv">Unduh datasetnya disini</a></p></li>
+</ul>
 </section>
 <section id="latihan-mandiri-6-terakhir-mencoba-multigroup-sem" class="slide level2">
 <h2>Latihan mandiri 6️⃣ (terakhir 🙏): Mencoba <em>multigroup</em> SEM</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
-<li><p>Unduh <a href="https://rameliaz.github.io/mg-sem-workshop/dataset-wave1.csv">Dataset Latihan SEM</a></p></li>
-<li><p>Unduh <a href="https://rameliaz.github.io/mg-sem-workshop/codebook-kamusdata.xlsx">Kamus Data disini</a></p></li>
-<li><p>Cek <em>measurement invariance</em> pada skala <em>right-wing authoritarianism</em> antara laki-laki dan perempuan</p></li>
+<li><p>Unduh <a href="https://rameliaz.github.io/mg-sem-workshop/materials/dataset-pilpres2024.csv">Dataset Latihan SEM</a></p></li>
+<li><p>Unduh <a href="https://rameliaz.github.io/mg-sem-workshop/materials/codebook-pilpres2024.xlsx">Kamus Data disini</a></p></li>
+<li><p>Silahkan buat hipotesisnya, lalu spesifikasi model SEM dari variabel yang tersedia di dataset. Satu model sedikitnya mengandung 2 variabel laten.</p></li>
+<li><p>Lakukan MGSEM dengan membandingkan model laki-laki dan perempuan</p></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <p><img data-src="https://media.giphy.com/media/l1KVaj5UcbHwrBMqI/giphy.gif"></p>
