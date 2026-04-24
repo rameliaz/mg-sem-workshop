@@ -33,6 +33,7 @@ execute:
 
 ::: {.columns}
 ::: {.column width="50%"}
+::: {.incremental}
 
 * Awalnya dikembangkan oleh Charles Spearman (1904) untuk menyelidiki [*g factor theory of intelligence*](https://en.wikipedia.org/wiki/G_factor_(psychometrics))
 
@@ -45,6 +46,7 @@ execute:
 * Mengasumsikan bahwa dua atau lebih *observed variable* memiliki *shared/common variance* (*commonality* atau *common factor*) {{< fa circle-arrow-right >}} ditunjukkan dengan ***factor loading***
 
 :::
+:::
 ::: {.column width="50%"}
 
 ![](https://media.giphy.com/media/l0IyjeA5mmMZjhyPm/giphy.gif)
@@ -52,9 +54,9 @@ execute:
 :::
 :::
 
-## EFA vs CFA
+## EFA vs. CFA
 
-| EFA | CFA |
+| Exploratory Factor Analysis | Confirmatory Factor Analysis |
 | :--- | :--- |
 | Mencari model yang cocok menggambarkan data, sehingga peneliti **mengeksplorasi berbagai pilihan model** yang cocok kemudian mencari rasionalisasi teoritisnya | Menguji hipotesis yang **sudah ditentukan sebelumnya**, sehingga peneliti ingin tahu apakah hipotesisnya didukung oleh data |
 | Jumlah faktor belum diketahui sampai peneliti melakukan analisisnya | Jumlah faktor sudah ditentukan sebelum mengambil data |
@@ -64,6 +66,8 @@ execute:
 
 
 ## *Confirmatory factor analysis*
+
+::: {.incremental}
 
 * Menyediakan solusi untuk mengkoreksi bias karena *measurement error* ketika mengestimasi korelasi antar-variabel
 
@@ -75,20 +79,25 @@ execute:
   - Kalau hal tsb dilakukan, maka tentu saja peneliti akan mendapatkan hasil yang 'sesuai prediksinya'
   - Ingat [Texas Sharpshooter Fallacy](https://en.wikipedia.org/wiki/Texas_sharpshooter_fallacy)
 
+:::
+
 ## _Texas sharpshooter fallacy_
 
 ![](https://i0.wp.com/www.bayesianspectacles.org/wp-content/uploads/2018/01/TexasSharpShooter.png?fit=357%2C300&ssl=1){fig-align="center"}
 
 ## [*Constraining parameter* model](https://psycnet.apa.org/record/2008-06808-005)
 
+::: {.incremental}
+
 * **Membatasi/menentukan varians** untuk setiap **variabel/faktor laten**
   - Dilakukan untuk mengeluarkan ***standardized estimates***
   - *Factor loading* di *z-score*kan
   - Sehingga *default*nya, *mean* variabel laten = 0, *variance* = 1
 
-* Membatasi/menentukan ***error covariance*** untuk setiap variabel/faktor laten
-  - Dilakukan untuk **menentukan *error variance***
+* Membatasi/menentukan ***error covariance*** untuk setiap variabel/faktor laten = 0
+  - Dilakukan agar *error variance* bebas diestimasi
 
+:::
 
 ## Jenis-jenis model pengukuran
 
@@ -102,11 +111,13 @@ Ada tiga macam model pengukuran:
 
 :::: {.columns}
 ::: {.column}
+::: {.incremental}
 
 * Model yang paling moderat dan *default* di berbagai perangkat lunak SEM
 * Asumsinya, **skala, *error variance*, dan *factor loading* boleh berbeda (dibebaskan)**
 * **Koefisien reliabilitas skala** yang mengasumsikan model pengukuran *congeneric* {{< fa circle-arrow-right >}} ω, McDonald's ω, ω total (ω~*t*~), Revelle's ω, *composite reliability*.
 
+:::
 :::
 ::: {.column}
 
@@ -119,6 +130,7 @@ Ada tiga macam model pengukuran:
 
 :::: {.columns}
 ::: {.column}
+::: {.incremental}
 
 * Model yang sedikit lebih rigid daripada *congeneric*
 * Asumsinya, **skala dan *error variance* boleh berbeda (dibebaskan)**, namun ***factor loading* harus sama (dibatasi)**
@@ -126,6 +138,7 @@ Ada tiga macam model pengukuran:
 * **Koefisien reliabilitas**: Formula Rulon, KR-20, Flanagan-Rulon, Guttman's λ~3~, λ~4~, Hoyt *method*
   - Pada kebanyakan kasus, jarang sekali ada kosntruk psikologi yang memenuhi asumsi _tau equivalence_, sehingga **sangat disarankan** untuk tidak menggunakan koefisien reliabilitas yang mengasumsikan _tau equivalence_
 
+:::
 :::
 ::: {.column}
 
@@ -150,19 +163,24 @@ Ada tiga macam model pengukuran:
 :::
 ::::
 
-## Reflektif vs Formatif
+## Model Reflektif vs. Formatif
+
+::: {.incremental}
 
 * Reflektif
   - **Variabel laten menjelaskan** mengapa **variabel indikator bervariasi**
   - Misalnya {{< fa circle-arrow-right >}} individu dengan intelegensi yang tinggi akan mendapatkan nilai yang berbeda dalam tes matematika
-  - Biasanya mengasumsikan bahwa **korelasi antar-variabel indikator = 0**
+  - Biasanya mengasumsikan bahwa **korelasi antar-variabel indikator = 0** {{< fa circle-arrow-right >}} artinya, tiap indikator mengukur aspek yang unik dari variabel laten, tidak tumpang tindih
+  - Mayoritas konstruk psikologis mengasumsikan model pengukuran reflektif
 
 * Formatif
   - **Variabel *observed* menjelaskan** mengapa **variabel laten bervariasi**
   - Misalnya {{< fa circle-arrow-right >}} gengsi sebuah mobil ditentukan oleh usia mobil, kondisi, harga, dan intensitas pemakaian
   - Korelasi antara variabel *observed* tidak diketahui
   - Biasanya digunakan untuk menentukan indeks pada konstruk yang *orthogonal* (contoh {{< fa circle-arrow-right >}} kepribadian pada *Five Factor model*)
+  - Tetapi, **sangat jarang** konstruk psikologi yang mengasumsikan model formatif
 
+:::
 
 ## Model Reflektif
 
@@ -183,6 +201,8 @@ Ada tiga macam model pengukuran:
 
 ## Skor faktor (*factor scores*)
 
+::: {.incremental}
+
 * Apabila kita memiliki informasi tentang *factor loading*, maka kita bisa menghitung *factor scores* {{< fa circle-arrow-right >}} **estimasi** (*fitted*) skor variabel laten
 
 * Caranya dengan mengali *factor loading* dengan skor kasar {{< fa circle-arrow-right >}} metode regresi
@@ -194,7 +214,11 @@ Ada tiga macam model pengukuran:
   - **Metode Bartlett** {{< fa circle-arrow-right >}} mengasumsikan variabel indikator **tidak saling berkorelasi**
   - **Metode Anderson-Rubin** {{< fa circle-arrow-right >}} mengasumsikan variabel indikator **saling berkorelasi**
 
+:::
+
 ## Memilih metode estimasi
+
+::: {.incremental}
 
 * *Maximum Likelihood* {{< fa circle-arrow-right >}} distribusi data (*multivariate*) normal, level pengukuran harus interval/*continuous*, tidak ada data *missing*
   - Gunakan _Robust Maximum Likelihood_ (MLR) ketika asumsi _multivariate normality_ tidak terpenuhi
@@ -204,6 +228,8 @@ Ada tiga macam model pengukuran:
 * *Weighted-least squares* {{< fa circle-arrow-right >}} dapat digunakan pada data kategorikal (nominal dan ordinal), estimasi menggunakan *polychoric correlation matrix*. Varian WLS, misalnya: WLSM, WLSMV, WLSMVS.
 
 * *Diagonally weighted-least squares* {{< fa circle-arrow-right >}} dapat digunakan pada data kategorikal, bekerja dengan baik pada sampel yang relatif kecil dan data yang tidak berdistribusi normal
+
+:::
 
 ::: {.callout-tip}
 #### Tips memilih estimator

@@ -6,12 +6,12 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-8f1af79587c2686b78fe4e1fbadd71ab.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e44360b8a8db1e130c7792fece1c8032.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.14">
+  <meta name="generator" content="quarto-1.10.3">
 
   <meta name="author" content="Rizqy Amelia Zein">
-  <meta name="dcterms.date" content="2026-04-09">
+  <meta name="dcterms.date" content="2026-04-24">
   <title>Multigroup SEM Workshop – Confirmatory Factor Analysis (CFA)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -19,6 +19,9 @@
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -31,7 +34,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-6f4a79ec7e0e51d91ee72072a2720184.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-14c7313e0bd1a6ac1391ac8d6dd3db46.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -147,7 +150,7 @@ Rizqy Amelia Zein
     </div>
 </div>
 
-  <p class="date">2026-04-09</p>
+  <p class="date">2026-04-24</p>
 </section>
 <section id="outline" class="slide level2">
 <h2><em>Outline</em></h2>
@@ -168,21 +171,21 @@ Rizqy Amelia Zein
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
-<li><p>Awalnya dikembangkan oleh Charles Spearman (1904) untuk menyelidiki <a href="https://en.wikipedia.org/wiki/G_factor_(psychometrics)"><em>g factor theory of intelligence</em></a></p></li>
-<li><p>Terdiri dari:</p>
+<li class="fragment"><p>Awalnya dikembangkan oleh Charles Spearman (1904) untuk menyelidiki <a href="https://en.wikipedia.org/wiki/G_factor_(psychometrics)"><em>g factor theory of intelligence</em></a></p></li>
+<li class="fragment"><p>Terdiri dari:</p>
 <ul>
-<li><em>Exploratory factor analysis</em> (EFA)</li>
-<li><em>Confirmatory factor analysis</em> (CFA)</li>
+<li class="fragment"><em>Exploratory factor analysis</em> (EFA)</li>
+<li class="fragment"><em>Confirmatory factor analysis</em> (CFA)</li>
 </ul></li>
-<li><p>Analisis faktor digunakan untuk menguji model <em>common variance</em></p></li>
-<li><p>Mengasumsikan bahwa dua atau lebih <em>observed variable</em> memiliki <em>shared/common variance</em> (<em>commonality</em> atau <em>common factor</em>) <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> ditunjukkan dengan <strong><em>factor loading</em></strong></p></li>
+<li class="fragment"><p>Analisis faktor digunakan untuk menguji model <em>common variance</em></p></li>
+<li class="fragment"><p>Mengasumsikan bahwa dua atau lebih <em>observed variable</em> memiliki <em>shared/common variance</em> (<em>commonality</em> atau <em>common factor</em>) <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> ditunjukkan dengan <strong><em>factor loading</em></strong></p></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <p><img data-src="https://media.giphy.com/media/l0IyjeA5mmMZjhyPm/giphy.gif"></p>
 </div></div>
 </section>
-<section id="efa-vs-cfa" class="slide level2">
-<h2>EFA vs CFA</h2>
+<section id="efa-vs.-cfa" class="slide level2">
+<h2>EFA vs.&nbsp;CFA</h2>
 <table class="caption-top">
 <colgroup>
 <col style="width: 50%">
@@ -190,8 +193,8 @@ Rizqy Amelia Zein
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">EFA</th>
-<th style="text-align: left;">CFA</th>
+<th style="text-align: left;">Exploratory Factor Analysis</th>
+<th style="text-align: left;">Confirmatory Factor Analysis</th>
 </tr>
 </thead>
 <tbody>
@@ -213,14 +216,14 @@ Rizqy Amelia Zein
 <section id="confirmatory-factor-analysis" class="slide level2">
 <h2><em>Confirmatory factor analysis</em></h2>
 <ul>
-<li><p>Menyediakan solusi untuk mengkoreksi bias karena <em>measurement error</em> ketika mengestimasi korelasi antar-variabel</p></li>
-<li><p>Cara kerjanya adalah dengan membandingkan <em>variance-covariance matrix</em> yang dihipotesiskan dengan <em>variance-covariance matrix</em> pada data (sampel)</p></li>
-<li><p><strong>Perhatian</strong> 📢</p>
+<li class="fragment"><p>Menyediakan solusi untuk mengkoreksi bias karena <em>measurement error</em> ketika mengestimasi korelasi antar-variabel</p></li>
+<li class="fragment"><p>Cara kerjanya adalah dengan membandingkan <em>variance-covariance matrix</em> yang dihipotesiskan dengan <em>variance-covariance matrix</em> pada data (sampel)</p></li>
+<li class="fragment"><p><strong>Perhatian</strong> 📢</p>
 <ul>
-<li><strong>Sangat tidak disarankan</strong> untuk melakukan EFA kemudian CFA pada <strong>sampel yang sama</strong></li>
-<li>Karena <em>generating hypothesis</em> dengan <em>testing hypothesis</em> adalah dua proses yang berbeda yang <strong>tidak seharusnya</strong> dilakukan pada sampel yang sama</li>
-<li>Kalau hal tsb dilakukan, maka tentu saja peneliti akan mendapatkan hasil yang ‘sesuai prediksinya’</li>
-<li>Ingat <a href="https://en.wikipedia.org/wiki/Texas_sharpshooter_fallacy">Texas Sharpshooter Fallacy</a></li>
+<li class="fragment"><strong>Sangat tidak disarankan</strong> untuk melakukan EFA kemudian CFA pada <strong>sampel yang sama</strong></li>
+<li class="fragment">Karena <em>generating hypothesis</em> dengan <em>testing hypothesis</em> adalah dua proses yang berbeda yang <strong>tidak seharusnya</strong> dilakukan pada sampel yang sama</li>
+<li class="fragment">Kalau hal tsb dilakukan, maka tentu saja peneliti akan mendapatkan hasil yang ‘sesuai prediksinya’</li>
+<li class="fragment">Ingat <a href="https://en.wikipedia.org/wiki/Texas_sharpshooter_fallacy">Texas Sharpshooter Fallacy</a></li>
 </ul></li>
 </ul>
 </section>
@@ -231,15 +234,15 @@ Rizqy Amelia Zein
 <section id="constraining-parameter-model" class="slide level2">
 <h2><a href="https://psycnet.apa.org/record/2008-06808-005"><em>Constraining parameter</em> model</a></h2>
 <ul>
-<li><strong>Membatasi/menentukan varians</strong> untuk setiap <strong>variabel/faktor laten</strong>
+<li class="fragment"><strong>Membatasi/menentukan varians</strong> untuk setiap <strong>variabel/faktor laten</strong>
 <ul>
-<li>Dilakukan untuk mengeluarkan <strong><em>standardized estimates</em></strong></li>
-<li><em>Factor loading</em> di <em>z-score</em>kan</li>
-<li>Sehingga <em>default</em>nya, <em>mean</em> variabel laten = 0, <em>variance</em> = 1</li>
+<li class="fragment">Dilakukan untuk mengeluarkan <strong><em>standardized estimates</em></strong></li>
+<li class="fragment"><em>Factor loading</em> di <em>z-score</em>kan</li>
+<li class="fragment">Sehingga <em>default</em>nya, <em>mean</em> variabel laten = 0, <em>variance</em> = 1</li>
 </ul></li>
-<li>Membatasi/menentukan <strong><em>error covariance</em></strong> untuk setiap variabel/faktor laten
+<li class="fragment">Membatasi/menentukan <strong><em>error covariance</em></strong> untuk setiap variabel/faktor laten = 0
 <ul>
-<li>Dilakukan untuk <strong>menentukan <em>error variance</em></strong></li>
+<li class="fragment">Dilakukan agar <em>error variance</em> bebas diestimasi</li>
 </ul></li>
 </ul>
 </section>
@@ -257,9 +260,9 @@ Rizqy Amelia Zein
 <div class="columns">
 <div class="column">
 <ul>
-<li>Model yang paling moderat dan <em>default</em> di berbagai perangkat lunak SEM</li>
-<li>Asumsinya, <strong>skala, <em>error variance</em>, dan <em>factor loading</em> boleh berbeda (dibebaskan)</strong></li>
-<li><strong>Koefisien reliabilitas skala</strong> yang mengasumsikan model pengukuran <em>congeneric</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> ω, McDonald’s ω, ω total (ω<sub><em>t</em></sub>), Revelle’s ω, <em>composite reliability</em>.</li>
+<li class="fragment">Model yang paling moderat dan <em>default</em> di berbagai perangkat lunak SEM</li>
+<li class="fragment">Asumsinya, <strong>skala, <em>error variance</em>, dan <em>factor loading</em> boleh berbeda (dibebaskan)</strong></li>
+<li class="fragment"><strong>Koefisien reliabilitas skala</strong> yang mengasumsikan model pengukuran <em>congeneric</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> ω, McDonald’s ω, ω total (ω<sub><em>t</em></sub>), Revelle’s ω, <em>composite reliability</em>.</li>
 </ul>
 </div><div class="column">
 <div class="quarto-figure quarto-figure-center">
@@ -274,12 +277,12 @@ Rizqy Amelia Zein
 <div class="columns">
 <div class="column">
 <ul>
-<li>Model yang sedikit lebih rigid daripada <em>congeneric</em></li>
-<li>Asumsinya, <strong>skala dan <em>error variance</em> boleh berbeda (dibebaskan)</strong>, namun <strong><em>factor loading</em> harus sama (dibatasi)</strong></li>
-<li>Ketika asumsi <em>tau equivalence</em> dipenuhi, maka <a href="https://www.ncbi.nlm.nih.gov/pubmed/28557467">Cronbach’s α dapat digunakan</a></li>
-<li><strong>Koefisien reliabilitas</strong>: Formula Rulon, KR-20, Flanagan-Rulon, Guttman’s λ<sub>3</sub>, λ<sub>4</sub>, Hoyt <em>method</em>
+<li class="fragment">Model yang sedikit lebih rigid daripada <em>congeneric</em></li>
+<li class="fragment">Asumsinya, <strong>skala dan <em>error variance</em> boleh berbeda (dibebaskan)</strong>, namun <strong><em>factor loading</em> harus sama (dibatasi)</strong></li>
+<li class="fragment">Ketika asumsi <em>tau equivalence</em> dipenuhi, maka <a href="https://www.ncbi.nlm.nih.gov/pubmed/28557467">Cronbach’s α dapat digunakan</a></li>
+<li class="fragment"><strong>Koefisien reliabilitas</strong>: Formula Rulon, KR-20, Flanagan-Rulon, Guttman’s λ<sub>3</sub>, λ<sub>4</sub>, Hoyt <em>method</em>
 <ul>
-<li>Pada kebanyakan kasus, jarang sekali ada kosntruk psikologi yang memenuhi asumsi <em>tau equivalence</em>, sehingga <strong>sangat disarankan</strong> untuk tidak menggunakan koefisien reliabilitas yang mengasumsikan <em>tau equivalence</em></li>
+<li class="fragment">Pada kebanyakan kasus, jarang sekali ada kosntruk psikologi yang memenuhi asumsi <em>tau equivalence</em>, sehingga <strong>sangat disarankan</strong> untuk tidak menggunakan koefisien reliabilitas yang mengasumsikan <em>tau equivalence</em></li>
 </ul></li>
 </ul>
 </div><div class="column">
@@ -309,21 +312,23 @@ Rizqy Amelia Zein
 </div>
 </div></div>
 </section>
-<section id="reflektif-vs-formatif" class="slide level2">
-<h2>Reflektif vs Formatif</h2>
+<section id="model-reflektif-vs.-formatif" class="slide level2">
+<h2>Model Reflektif vs.&nbsp;Formatif</h2>
 <ul>
-<li>Reflektif
+<li class="fragment">Reflektif
 <ul>
-<li><strong>Variabel laten menjelaskan</strong> mengapa <strong>variabel indikator bervariasi</strong></li>
-<li>Misalnya <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> individu dengan intelegensi yang tinggi akan mendapatkan nilai yang berbeda dalam tes matematika</li>
-<li>Biasanya mengasumsikan bahwa <strong>korelasi antar-variabel indikator = 0</strong></li>
+<li class="fragment"><strong>Variabel laten menjelaskan</strong> mengapa <strong>variabel indikator bervariasi</strong></li>
+<li class="fragment">Misalnya <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> individu dengan intelegensi yang tinggi akan mendapatkan nilai yang berbeda dalam tes matematika</li>
+<li class="fragment">Biasanya mengasumsikan bahwa <strong>korelasi antar-variabel indikator = 0</strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> artinya, tiap indikator mengukur aspek yang unik dari variabel laten, tidak tumpang tindih</li>
+<li class="fragment">Mayoritas konstruk psikologis mengasumsikan model pengukuran reflektif</li>
 </ul></li>
-<li>Formatif
+<li class="fragment">Formatif
 <ul>
-<li><strong>Variabel <em>observed</em> menjelaskan</strong> mengapa <strong>variabel laten bervariasi</strong></li>
-<li>Misalnya <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> gengsi sebuah mobil ditentukan oleh usia mobil, kondisi, harga, dan intensitas pemakaian</li>
-<li>Korelasi antara variabel <em>observed</em> tidak diketahui</li>
-<li>Biasanya digunakan untuk menentukan indeks pada konstruk yang <em>orthogonal</em> (contoh <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> kepribadian pada <em>Five Factor model</em>)</li>
+<li class="fragment"><strong>Variabel <em>observed</em> menjelaskan</strong> mengapa <strong>variabel laten bervariasi</strong></li>
+<li class="fragment">Misalnya <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> gengsi sebuah mobil ditentukan oleh usia mobil, kondisi, harga, dan intensitas pemakaian</li>
+<li class="fragment">Korelasi antara variabel <em>observed</em> tidak diketahui</li>
+<li class="fragment">Biasanya digunakan untuk menentukan indeks pada konstruk yang <em>orthogonal</em> (contoh <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> kepribadian pada <em>Five Factor model</em>)</li>
+<li class="fragment">Tetapi, <strong>sangat jarang</strong> konstruk psikologi yang mengasumsikan model formatif</li>
 </ul></li>
 </ul>
 </section>
@@ -348,27 +353,27 @@ Rizqy Amelia Zein
 <section id="skor-faktor-factor-scores" class="slide level2">
 <h2>Skor faktor (<em>factor scores</em>)</h2>
 <ul>
-<li><p>Apabila kita memiliki informasi tentang <em>factor loading</em>, maka kita bisa menghitung <em>factor scores</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> <strong>estimasi</strong> (<em>fitted</em>) skor variabel laten</p></li>
-<li><p>Caranya dengan mengali <em>factor loading</em> dengan skor kasar <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> metode regresi</p></li>
-<li><p>Namun ingat, mengalikan <em>factor loading</em> dengan skor kasar <strong>masih berisiko mendapatkan estimasi yang bias</strong>. Itulah yang menyebabkan <em>factor scores</em> akan berubah ketika model diujikan pada kelompok sampel yang berbeda.</p></li>
-<li><p>Ada tiga cara yang bisa digunakan untuk menghitung <em>factor scores</em>:</p>
+<li class="fragment"><p>Apabila kita memiliki informasi tentang <em>factor loading</em>, maka kita bisa menghitung <em>factor scores</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> <strong>estimasi</strong> (<em>fitted</em>) skor variabel laten</p></li>
+<li class="fragment"><p>Caranya dengan mengali <em>factor loading</em> dengan skor kasar <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> metode regresi</p></li>
+<li class="fragment"><p>Namun ingat, mengalikan <em>factor loading</em> dengan skor kasar <strong>masih berisiko mendapatkan estimasi yang bias</strong>. Itulah yang menyebabkan <em>factor scores</em> akan berubah ketika model diujikan pada kelompok sampel yang berbeda.</p></li>
+<li class="fragment"><p>Ada tiga cara yang bisa digunakan untuk menghitung <em>factor scores</em>:</p>
 <ul>
-<li><strong>Metode Regresi</strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> dengan mengoptimalisasi validitas konstruk (<em>variance explained</em>)</li>
-<li><strong>Metode Bartlett</strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> mengasumsikan variabel indikator <strong>tidak saling berkorelasi</strong></li>
-<li><strong>Metode Anderson-Rubin</strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> mengasumsikan variabel indikator <strong>saling berkorelasi</strong></li>
+<li class="fragment"><strong>Metode Regresi</strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> dengan mengoptimalisasi validitas konstruk (<em>variance explained</em>)</li>
+<li class="fragment"><strong>Metode Bartlett</strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> mengasumsikan variabel indikator <strong>tidak saling berkorelasi</strong></li>
+<li class="fragment"><strong>Metode Anderson-Rubin</strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> mengasumsikan variabel indikator <strong>saling berkorelasi</strong></li>
 </ul></li>
 </ul>
 </section>
 <section id="memilih-metode-estimasi" class="slide level2">
 <h2>Memilih metode estimasi</h2>
 <ul>
-<li><p><em>Maximum Likelihood</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> distribusi data (<em>multivariate</em>) normal, level pengukuran harus interval/<em>continuous</em>, tidak ada data <em>missing</em></p>
+<li class="fragment"><p><em>Maximum Likelihood</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> distribusi data (<em>multivariate</em>) normal, level pengukuran harus interval/<em>continuous</em>, tidak ada data <em>missing</em></p>
 <ul>
-<li>Gunakan <em>Robust Maximum Likelihood</em> (MLR) ketika asumsi <em>multivariate normality</em> tidak terpenuhi</li>
+<li class="fragment">Gunakan <em>Robust Maximum Likelihood</em> (MLR) ketika asumsi <em>multivariate normality</em> tidak terpenuhi</li>
 </ul></li>
-<li><p><em>Generalized-least squares</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> menggunakan asumsi yang sama dengan <code>ML</code> namun performanya kurang baik apabila dibandingkan dengan <code>ML</code></p></li>
-<li><p><em>Weighted-least squares</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> dapat digunakan pada data kategorikal (nominal dan ordinal), estimasi menggunakan <em>polychoric correlation matrix</em>. Varian WLS, misalnya: WLSM, WLSMV, WLSMVS.</p></li>
-<li><p><em>Diagonally weighted-least squares</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> dapat digunakan pada data kategorikal, bekerja dengan baik pada sampel yang relatif kecil dan data yang tidak berdistribusi normal</p></li>
+<li class="fragment"><p><em>Generalized-least squares</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> menggunakan asumsi yang sama dengan <code>ML</code> namun performanya kurang baik apabila dibandingkan dengan <code>ML</code></p></li>
+<li class="fragment"><p><em>Weighted-least squares</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> dapat digunakan pada data kategorikal (nominal dan ordinal), estimasi menggunakan <em>polychoric correlation matrix</em>. Varian WLS, misalnya: WLSM, WLSMV, WLSMVS.</p></li>
+<li class="fragment"><p><em>Diagonally weighted-least squares</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> dapat digunakan pada data kategorikal, bekerja dengan baik pada sampel yang relatif kecil dan data yang tidak berdistribusi normal</p></li>
 </ul>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
@@ -613,7 +618,7 @@ Rizqy Amelia Zein
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -781,13 +786,14 @@ Rizqy Amelia Zein
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

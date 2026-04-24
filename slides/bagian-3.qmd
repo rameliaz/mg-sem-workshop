@@ -33,33 +33,33 @@ execute:
 
 * *Path model* merupakan kelanjutan dari model regresi karena terdiri dari **beberapa model regresi** sekaligus dapat digunakan untuk menguji *direct*, *indirect*, dan *correlated effects*.
 
-* *Path model* disusun secara visual dengan aturan tertentu (konsensus)
+* *Path model* disusun secara visual dengan aturan tertentu, yang mengikuti konsensus
   - Garis satu arah menggambarkan *direct effects*, yang merefleksikan *keterkaitan langsung* antara satu variabel dengan variabel lainnya. Asumsinya, **tidak ada variabel lain diluar model** yang berkorelasi dengan variabel tersebut.
   - Garis dua arah menggambarkan *covariance*/korelasi, yang mengimplikasikan bahwa keterkaitan antar-variabel masih mungkin ditentukan oleh **variabel lain yang tidak ada di dalam model**.
-  - Garis *error terms* yang menunjukkan varians *observed variable* yang menjelaskan **variabel lain yang tidak dapat dijelaskan/di luar model**, yang juga mewakili **measurement error**.
+  - Garis *error terms* yang menunjukkan varians *observed variable* yang menjelaskan **variabel lain yang tidak dapat dijelaskan/di luar model**, yang juga mewakili ***measurement error***.
 
 :::
-
-## Korelasi = kausalitas?
-
-* Analisis jalur sebenarnya adalah **bentuk yang lebih *sophisticated*** dari korelasi, dan
-
-::: {.callout-important}
-#### Penting
-
-**Correlation does not imply causation**
-:::
-
-Yang harus dipenuhi sebagai bukti kausalitas:
-
-* Ada **urutan waktu** (*temporal order*) {{< fa circle-arrow-right >}} desain penelitian *panel*/*longitudinal*/*time series*
-* Adanya **korelasi** antara kedua variabel
-* Peneliti harus melakukan **kontrol** atas variabel lain (_confounding_)
-* Peneliti melakukan **manipulasi** (_random assignment_) pada variabel X
 
 ## Diagram jalur
 
 ![](libs/path-diagram.png){fig-align="center" width="40%"}
+
+## Korelasi = kausalitas?
+
+* Analisis jalur sebenarnya adalah **bentuk yang lebih *sophisticated*** dari korelasi, sehingga
+
+::: {.callout-important}
+#### Penting diingat
+
+**Correlation does not imply causation**
+:::
+
+Yang harus dipenuhi sebagai bukti kausalitas (X {{< fa circle-arrow-right >}} Y):
+
+* Ada **urut-urutan waktu kejadian** (*temporal order*) {{< fa circle-arrow-right >}} desain penelitian *panel*/*longitudinal*/*time series*
+* Adanya **korelasi** antara kedua variabel
+* Peneliti harus melakukan **kontrol** atas variabel lain (_confounding_)
+  - ...yaitu dengan cara melakukan **manipulasi** (_random assignment_) pada prediktor (X)
 
 ## Ilustrasi _use case_
 
@@ -96,7 +96,7 @@ Marimar heran sekaligus penasaran, mengapa tiap anak **memberikan respon yang be
 
 ## Bagaimana bentuk diagram jalurnya?
 
-![](libs/contoh-path.png){fig-align="center" width="100%"}
+![](libs/contoh-path.png){fig-align="center"}
 
 ## Nama variabel dan koefisien jalur
 
@@ -117,7 +117,7 @@ Marimar heran sekaligus penasaran, mengapa tiap anak **memberikan respon yang be
 | *Direct effect* antara variabel endogen dan eksogen | γ | Gamma |
 | *Direct effect* antara dua variabel laten | β | Beta |
 | Korelasi (*covariance*) antara dua variabel laten | φ | Phi |
-| Varians *error* pengukuran dari sebuah variabel laten | ζ | Zeta |
+| Residual/*disturbance* dari variabel laten endogen (varians yang tidak dijelaskan oleh prediktornya) | ζ | Zeta |
 
 : {tbl-colwidths="[70,15,15]"}
 
@@ -152,8 +152,9 @@ Untuk faktor situasi, ia mengamati sepertinya persepsi atas kondisi kerja yang i
 * **usia** = Usia partisipan
 
 ::: {.callout-note}
-#### Tugas
-Rumuskan **hipotesis** penelitiannya kemudian buatlah **diagram jalur** beserta **koefisien jalurnya**. Bisa dengan MS Power Point atau *software* yang lain (misalnya, [draw.io](https://app.diagrams.net/)).
+#### Tugas Mandiri
+Rumuskan **hipotesis** penelitiannya kemudian buatlah **diagram jalur** beserta **koefisien jalurnya**. 
+Anda bisa menggunakan MS Power Point atau *software* yang lain (misalnya, [draw.io](https://app.diagrams.net/) atau [Canva](https://www.canva.com/)).
 :::
 
 #### [Klik disini untuk mengumpulkan tugas](https://padlet.com/ameliazein/tugas-mandiri-workshop-multigroup-sem-8p34daek2641aic8)
@@ -166,7 +167,7 @@ Rumuskan **hipotesis** penelitiannya kemudian buatlah **diagram jalur** beserta 
   - Kalau memilih fitur _interactive_, maka tampilan antarmukanya berupa _drag & drop_ (seperti SPSS).
   - Untuk fitur _syntax_, maka tampilan antarmukanya meminta pengguna untuk menspesifikasi model dengan _syntax_.
 
-* `jamovi` dan `JASP` mengadopsi *syntax* dari *package* [`lavaan`](http://lavaan.ugent.be/tutorial/index.html), sehingga untuk menspesifikasi model, kita harus memasukkan **serangkaian perintah**.
+* `jamovi` dan `JASP` mengadopsi *syntax* dari {{< fa brands r-project >}} *package* [`lavaan`](http://lavaan.ugent.be/tutorial/index.html), sehingga untuk menspesifikasi model, kita harus memasukkan **serangkaian perintah**.
 
 * Meskipun begitu, *syntax* `lavaan` **sangat sederhana** dan familiar dengan *syntax* `lavaan` memberikan **banyak keuntungan**.
 
@@ -195,6 +196,7 @@ Baujean, A.A. (2014). Latent Variable Modeling Using R: A step-by-step guide. Ne
 trust =~ trust1 + trust2 + trust3 + trust4 + trust5
 
 # Measurement error (residual)
+# Bagian ini biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit
 trust1 ~~ trust1
 trust2 ~~ trust2
 trust3 ~~ trust3
@@ -214,6 +216,7 @@ trust ~~ trust
 mandiri =~ mandiri1 + mandiri2 + mandiri3 + mandiri4
 
 # Measurement error (residual)
+# Bagian ini biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit
 mandiri1 ~~ mandiri1
 mandiri2 ~~ mandiri2
 mandiri3 ~~ mandiri3
@@ -232,6 +235,7 @@ mandiri ~~ mandiri
 mandiri ~ trust
 
 # Measurement error (residual)
+# Bagian ini biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit
 mandiri ~~ mandiri
 trust ~~ trust
 ```

@@ -6,12 +6,12 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-8f1af79587c2686b78fe4e1fbadd71ab.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e44360b8a8db1e130c7792fece1c8032.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.14">
+  <meta name="generator" content="quarto-1.10.3">
 
   <meta name="author" content="Rizqy Amelia Zein">
-  <meta name="dcterms.date" content="2026-04-09">
+  <meta name="dcterms.date" content="2026-04-24">
   <title>Multigroup SEM Workshop – Dasar-Dasar Structural Equation Modeling (SEM)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -19,6 +19,9 @@
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -97,7 +100,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-6f4a79ec7e0e51d91ee72072a2720184.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-14c7313e0bd1a6ac1391ac8d6dd3db46.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -213,7 +216,7 @@ Rizqy Amelia Zein
     </div>
 </div>
 
-  <p class="date">2026-04-09</p>
+  <p class="date">2026-04-24</p>
 </section>
 <section id="outline" class="slide level2">
 <h2><em>Outline</em></h2>
@@ -331,8 +334,8 @@ Rizqy Amelia Zein
 </div>
 </div><div class="column" style="width:50%;">
 <ul>
-<li><p>Pada model ini <strong>jumlah nilai unik (<em>non-redundant information</em>)</strong> dalam <em>variance-covariance matrix</em> = 2(2+1)/2 = 3</p></li>
-<li><p>Sedangkan <strong>jumlah parameter jalur</strong> yang akan diestimasi adalah 3 (3 <em>factor loading</em>, 3 <em>error variance</em>), sehingga</p></li>
+<li><p>Pada model ini <strong>jumlah nilai unik (<em>non-redundant information</em>)</strong> dalam <em>variance-covariance matrix</em> = 3(3+1)/2 = 6</p></li>
+<li><p>Sedangkan <strong>jumlah parameter jalur</strong> yang akan diestimasi adalah 6 (3 <em>factor loading</em>, 3 <em>error variance</em>), sehingga</p></li>
 <li><p><em>df</em> = 6-6 = 0 😢</p></li>
 <li><p>Model <strong>tidak dapat diidentifikasi</strong> karena tidak ada ruang tersisa untuk melakukan estimasi (<em>just-identified</em>/<em>saturated model</em>)</p></li>
 </ul>
@@ -369,7 +372,8 @@ Rizqy Amelia Zein
 <h2>Mengestimasi &amp; Menguji model</h2>
 <ul>
 <li><p>Pilih <strong>metode estimasi</strong> yang paling cocok dengan karakteristik data (<code>ML</code>, <code>ULS</code>, <code>GLS</code>, <code>WLS</code>, <code>DWLS</code> atau <em>robust</em> <code>DWLS</code>)</p></li>
-<li><p>Metode estimasi ini yang akan menghitung <em>standard error</em>, apabila metode estimasi yang dipilih tidak tepat dan tidak sesuai dengan kompatibilitas datanya, maka estimasi <em>standard error</em> menjadi bias <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> model memberikan informasi yang menyesatkan</p></li>
+<li><p>Metode estimasi ini yang akan menghitung <em>standard error</em> yang tepat sesuai dengan karakteristik model</p></li>
+<li><p>Apabila metode estimasi yang dipilih tidak tepat dan tidak sesuai dengan kompatibilitas datanya, maka estimasi <em>standard error</em> menjadi bias <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> sehingga model parameter memberikan informasi yang menyesatkan</p></li>
 </ul>
 </section>
 <section id="menguji-ketepatan-model" class="slide level2">
@@ -383,13 +387,13 @@ Rizqy Amelia Zein
 </ul></li>
 </ul>
 </section>
-<section id="menguji-ketepatan-model-chi-square-x2" class="slide level2">
-<h2>Menguji ketepatan model: <em>Chi-square</em> (<em>X</em><sup>2</sup>)</h2>
+<section id="menguji-ketepatan-model-chi-square-χ²" class="slide level2">
+<h2>Menguji ketepatan model: <em>Chi-square</em> (χ²)</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
 <li><p>Dihitung dengan cara membandingkan <strong><em>saturated model</em> dengan model tanpa jalur sama sekali</strong> (<em>baseline</em>, <em>null</em>, atau <em>independent model</em>)</p></li>
-<li><p>Selain <em>X</em><sup>2</sup>, kita bisa menggunakan <em>alternative fit indices</em> yang terdiri dari</p>
+<li><p>Selain χ², kita bisa menggunakan <em>alternative fit indices</em> yang terdiri dari</p>
 <ul>
 <li><em>Incremental index</em></li>
 <li><em>Parsimony index</em></li>
@@ -413,8 +417,8 @@ Rizqy Amelia Zein
 </ul></li>
 </ul>
 </section>
-<section id="parsimony-index" class="slide level2">
-<h2><em>Parsimony index</em></h2>
+<section id="parsimony-index-1" class="slide level2">
+<h2><em>Parsimony index</em> 1️⃣</h2>
 <ul>
 <li><p>Indeks ini secara khusus memberikan pinalti pada kompleksitas model</p></li>
 <li><p>Indeks-indeksnya meliputi</p>
@@ -424,11 +428,20 @@ Rizqy Amelia Zein
 <li><strong><em>Noncentrality Parameter-based Index</em></strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> mendekati 1 = <em>better fit</em></li>
 <li><strong><em>McDonald’s Noncentrality Index</em></strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> mendekati 1 = <em>better fit</em></li>
 </ul></li>
-<li><p><strong>Yang paling sering digunakan adalah</strong>…</p></li>
-<li><p><strong><em>Root Mean Square Error of Approximation</em> (RMSEA)</strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> Model <strong><em>close fit</em></strong> ketika nilainya <strong>0.05 - 0.08</strong></p>
+</ul>
+</section>
+<section id="parsimony-index-2" class="slide level2">
+<h2><em>Parsimony index</em> 2️⃣</h2>
 <ul>
-<li><em>P-value</em> dapat digunakan untuk menolak <em>H</em><sub>0</sub>: RMSEA = 0.05</li>
-<li>Oleh karena itu, <strong>menolak <em>H</em><sub>0</sub></strong> menunjukkan bahwa model “<em>close-fitting</em>”</li>
+<li><strong><em>Root Mean Square Error of Approximation</em> (RMSEA)</strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> <em>close fit</em> ketika nilainya <strong>&lt; 0.05</strong>, <em>acceptable fit</em> ketika <strong>0.05 – 0.08</strong>, <em>poor fit</em> ketika <strong>&gt; 0.10</strong>
+<ul>
+<li><em>P-value</em> dapat digunakan untuk menguji <em>H</em><sub>0</sub>: RMSEA ≤ 0.05 (<em>close fit</em>)</li>
+<li>Oleh karena itu, <strong>gagal menolak <em>H</em><sub>0</sub></strong> (<em>p</em> &gt; 0.05) menunjukkan bahwa model “<em>close-fitting</em>”</li>
+</ul></li>
+<li><strong><em>Standardized Root Mean Square Residual</em> (SRMR)</strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> rata-rata perbedaan antara <em>observed</em> dan <em>model-implied correlation matrix</em>, nilai <strong>&lt; 0.08</strong> menunjukkan <em>acceptable fit</em>
+<ul>
+<li>Penting diperhatikan karena RMSEA sensitif terhadap jumlah sampel yang besar (cenderung menolak model yang sebenarnya baik), sedangkan SRMR <strong>tidak bergantung pada jumlah sampel</strong> dan langsung mencerminkan seberapa jauh <em>implied model</em> mereproduksi data observasi</li>
+<li><a href="https://www.tandfonline.com/doi/abs/10.1080/10705519909540118">Hu &amp; Bentler (1999)</a> merekomendasikan melaporkan <strong>keduanya</strong> (<em>dual cutoff</em>): CFI ≥ 0.95 <strong>dan</strong> SRMR ≤ 0.08</li>
 </ul></li>
 </ul>
 </section>
@@ -438,7 +451,7 @@ Rizqy Amelia Zein
 <li><p>Indeks ini dihitung tanpa melakukan perbandingan dengan <em>baseline</em></p></li>
 <li><p>Meliputi</p>
 <ul>
-<li><strong><em>Chi-square</em></strong> (<em>X</em><sup>2</sup>)/<em>df</em> ratio</li>
+<li><strong><em>Chi-square</em></strong> (χ²)/<em>df</em> ratio</li>
 <li><strong><em>Goodness of Fit Index</em></strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> mendekati 1 = <em>better fit</em></li>
 <li><strong><em>Adjusted Goodness of Fit Index</em></strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> merupakan <em>parsimony adjustment</em> dari GFI, mendekati 1 = <em>better fit</em></li>
 <li><strong><em>Parsimony Goodness of Fit Index</em></strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> mendekati 1 = <em>better fit</em></li>
@@ -447,33 +460,33 @@ Rizqy Amelia Zein
 </ul></li>
 </ul>
 </section>
-<section id="parameter-fit" class="slide level2">
-<h2><em>Parameter fit</em></h2>
+<section id="global-vs.-local-fit" class="slide level2">
+<h2><em>Global</em> vs.&nbsp;<em>local fit</em></h2>
 <ul>
-<li><p>Parameter jalur bisa ditolak meskipun hasil <em>omnibus test</em> memuaskan, sehingga menginterpretasi koefisien jalur adalah proses yang juga harus dilakukan.</p></li>
-<li><p>Berikut ini adalah beberapa prosedur yang direkomendasikan:</p>
+<li class="fragment"><p>Parameter jalur bisa ditolak meskipun hasil <em>omnibus test</em>/<em>global fit</em> memuaskan, sehingga menginterpretasi koefisien jalur adalah proses yang juga harus dilakukan.</p></li>
+<li class="fragment"><p>Berikut ini adalah beberapa prosedur yang direkomendasikan:</p>
 <ul>
-<li><p>Lihat tanda <em>factor loading</em>, apakah <strong>arahnya sudah benar</strong> (negatif/positif)</p></li>
-<li><p>Lihat <em>standardised parameter estimates</em> untuk tahu apakah ada <em>factor loading</em> yang <strong>nilainya diatas kewajaran</strong></p></li>
-<li><p>Lihat <em>p-value</em> untuk mempertimbangkan <strong>menolak <em>H</em><sub>0</sub></strong></p></li>
-<li><p>Lakukan pengujian <em>measurement invariance</em> dengan mengasumsikan beberapa <em>factor loading</em> sama di berbagai kelompok yang berbeda</p></li>
-<li><p>Apabila <em>error variance</em> mendekati nol, hal tsb lebih mungkin disebabkan oleh adanya <em>outlier</em>, kurangnya jumlah sampel, atau kurangnya jumlah indikator</p></li>
+<li class="fragment"><p>Lihat tanda <em>factor loading</em>, apakah <strong>arahnya sudah benar</strong> (negatif/positif)</p></li>
+<li class="fragment"><p>Lihat <em>standardized parameter estimates</em> untuk tahu apakah ada <em>factor loading</em> yang <strong>nilainya diatas kewajaran</strong></p></li>
+<li class="fragment"><p>Lihat <em>p-value</em> untuk mempertimbangkan <strong>menolak <em>H</em><sub>0</sub></strong></p></li>
+<li class="fragment"><p>Lakukan pengujian <em>measurement invariance</em> dengan mengasumsikan beberapa <em>factor loading</em> sama di berbagai kelompok yang berbeda <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> akan kita lakukan di <a href="slides/bagian-6.html">Bagian 6</a></p></li>
+<li class="fragment"><p>Apabila <em>error variance</em> mendekati nol, hal tsb lebih mungkin disebabkan oleh adanya <em>outlier</em>, kurangnya jumlah sampel, atau kurangnya jumlah indikator</p></li>
 </ul></li>
 </ul>
 </section>
 <section id="statistical-power" class="slide level2">
 <h2><em>Statistical power</em></h2>
 <ul>
-<li><em>Statistical power</em> dalam pengujian hipotesis dalam SEM <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> peluang mempertahankan <em>H</em><sub>0</sub> apabila <em>H</em><sub>0</sub> benar
+<li class="fragment"><em>Statistical power</em> dalam pengujian hipotesis dalam SEM <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> peluang <strong>menolak <em>H</em><sub>0</sub></strong> apabila <em>H</em><sub>0</sub> <strong>salah</strong> (power = 1 − β)
 <ul>
-<li>Peluang peneliti secara tepat menyimpulkan bahwa <strong>tidak ada perbedaan antara <em>implied model</em> dengan <em>observed model</em></strong> ketika memang <strong>benar-benar tidak ada perbedaan</strong> diantara keduanya</li>
+<li class="fragment">Peluang peneliti secara tepat menyimpulkan bahwa <strong>ada perbedaan antara <em>implied model</em> dengan <em>observed model</em></strong> ketika memang <strong>benar-benar ada perbedaan</strong> diantara keduanya</li>
 </ul></li>
-<li><em>Statistical power</em> ditentukan oleh
+<li class="fragment"><em>Statistical power</em> ditentukan oleh
 <ul>
-<li><strong>true population model</strong> (yang kita tidak mungkin tahu)</li>
-<li><strong>probabilitas melakukan kesalahan tipe 1</strong> (α)</li>
-<li><strong><em>degree of freedom</em></strong> model</li>
-<li><strong>jumlah sampel</strong></li>
+<li class="fragment"><strong><em>true population model</em></strong> (yang kita tidak mungkin tahu, karena sifatnya selalu <em>unknown parameter</em>) <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> sehingga untuk mengestimasi jumlah sampel, kita asumsikan bahwa model memang “tepat” menggambarkan data</li>
+<li class="fragment"><strong>probabilitas melakukan kesalahan tipe 1</strong> (α)</li>
+<li class="fragment"><strong><em>degree of freedom</em></strong> model</li>
+<li class="fragment"><strong>jumlah sampel</strong></li>
 </ul></li>
 </ul>
 </section>
@@ -488,13 +501,13 @@ Rizqy Amelia Zein
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>semTools<span class="sc">::</span><span class="fu">findRMSEAsamplesize</span>(</span>
-<span id="cb1-2"><a></a>  <span class="at">rmsea0 =</span> <span class="fl">0.05</span>,</span>
-<span id="cb1-3"><a></a>  <span class="at">rmseaA =</span> <span class="fl">0.08</span>,</span>
-<span id="cb1-4"><a></a>  <span class="at">df =</span> <span class="dv">4</span>,</span>
-<span id="cb1-5"><a></a>  <span class="at">power =</span> <span class="fl">0.90</span>,</span>
-<span id="cb1-6"><a></a>  <span class="at">alpha =</span> <span class="fl">0.05</span></span>
-<span id="cb1-7"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>semTools<span class="sc">::</span><span class="fu">findRMSEAsamplesize</span>(</span>
+<span id="cb1-2"><a></a>  <span class="at">rmsea0 =</span> <span class="fl">0.05</span>,  <span class="co"># RMSEA di bawah H0 (batas close fit)</span></span>
+<span id="cb1-3"><a></a>  <span class="at">rmseaA =</span> <span class="fl">0.08</span>,  <span class="co"># RMSEA sesungguhnya (true model, acceptable fit)</span></span>
+<span id="cb1-4"><a></a>  <span class="at">df =</span> <span class="dv">4</span>,         <span class="co"># df model yang dihipotesiskan</span></span>
+<span id="cb1-5"><a></a>  <span class="at">power =</span> <span class="fl">0.90</span>,   <span class="co"># power yang diinginkan (1 - β)</span></span>
+<span id="cb1-6"><a></a>  <span class="at">alpha =</span> <span class="fl">0.05</span>    <span class="co"># probabilitas kesalahan tipe 1 (α)</span></span>
+<span id="cb1-7"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div></div>
 </section>
@@ -516,23 +529,23 @@ Rizqy Amelia Zein
 </ul>
 </section>
 <section id="jars-apa-apa-saja-yang-harus-dilaporkan" class="slide level2">
-<h2><a href="http://doi.apa.org/getdoi.cfm?doi=10.1037/amp0000191">JARS APA</a>: Apa saja yang harus dilaporkan?</h2>
+<h2><a href="https://apastyle.apa.org/jars/quant-table-7.pdf">JARS APA</a>: Apa saja yang harus dilaporkan?</h2>
 <ul>
 <li><strong>Abstrak</strong>
 <ul>
-<li>Laporkan setidaknya <strong>2 <em>global fit statistics</em></strong> (X<sup>2</sup> [df, <em>p-value</em>], RMSEA/GFI/AGFI/TLI, BIC, AIC, dll)</li>
+<li>Laporkan setidaknya <strong>2 <em>global fit statistics</em></strong> (χ² [df, <em>p-value</em>], RMSEA/GFI/AGFI/TLI, BIC, AIC, dll)</li>
 </ul></li>
 <li><strong>Metode</strong>
 <ul>
 <li>Deskripsikan <strong>variabel endogen dan eksogennya</strong></li>
-<li>Berikan penjelasan, untuk setiap instrumen/variabel, apakah <strong>indikator atau total skor</strong> diperoleh dari <strong><em>item</em> yang homogen (<em>item parceling</em>)</strong></li>
+<li>Berikan penjelasan, untuk setiap instrumen/variabel, apakah <strong>indikator</strong> atau kalaupun <strong>total skor</strong>, apakah skor diperoleh dari <strong><em>item</em> yang homogen</strong> (e.g., dengan <em>item parceling</em>)</li>
 <li>Berikan penjelasan <strong>bagaimana skala/instrumen disusun</strong>, laporkan <strong>properti psikometriknya</strong>, serta penjelasan mengenai <strong>level pengukuran</strong></li>
 <li>Laporkan bagaimana cara peneliti <strong>menentukan jumlah sampel</strong> (misalnya, dengan <em>rule of thumb</em>, <em>a priori power analysis</em> atau simulasi Monte Carlo)</li>
 </ul></li>
 </ul>
 </section>
 <section id="jars-apa" class="slide level2">
-<h2><a href="http://doi.apa.org/getdoi.cfm?doi=10.1037/amp0000191">JARS APA</a></h2>
+<h2><a href="https://apastyle.apa.org/jars/quant-table-7.pdf">JARS APA</a></h2>
 <ul>
 <li><p><strong>Hasil penelitian</strong></p>
 <ul>
@@ -544,7 +557,7 @@ Rizqy Amelia Zein
 </ul>
 </section>
 <section id="jars-apa-1" class="slide level2">
-<h2><a href="http://doi.apa.org/getdoi.cfm?doi=10.1037/amp0000191">JARS APA</a></h2>
+<h2><a href="https://apastyle.apa.org/jars/quant-table-7.pdf">JARS APA</a></h2>
 <ul>
 <li><p><strong>Spesifikasi model</strong></p>
 <ul>
@@ -557,7 +570,7 @@ Rizqy Amelia Zein
 </ul>
 </section>
 <section id="jars-apa-2" class="slide level2">
-<h2><a href="http://doi.apa.org/getdoi.cfm?doi=10.1037/amp0000191">JARS APA</a></h2>
+<h2><a href="https://apastyle.apa.org/jars/quant-table-7.pdf">JARS APA</a></h2>
 <ul>
 <li><strong>Estimasi</strong>
 <ul>
@@ -803,7 +816,7 @@ Rizqy Amelia Zein
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -1047,13 +1060,14 @@ Rizqy Amelia Zein
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

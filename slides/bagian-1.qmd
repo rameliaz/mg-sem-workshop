@@ -43,7 +43,7 @@ execute:
 
 * Model SEM mengasumsikan (hipotesis) bahwa seperangkat variabel (*observed*) mendefinisikan sebuah konstruk **laten**, dan menggambarkan bagaimana hubungan antara konstruk-konstruk laten ini.
 
-* SEM adalah teknik yang lebih *sophisticated* untuk menggambarkan **hubungan antar-variabel** karena mengontrol **error pengukuran** dari estimasi korelasi.
+* SEM adalah teknik yang lebih *sophisticated* untuk menggambarkan **hubungan antar-variabel** karena mengontrol ***error* pengukuran** dari estimasi korelasi.
 
 :::
 
@@ -55,7 +55,8 @@ execute:
 
 
 ::: {.callout-warning}
-**Penting**: SEM adalah teknik yang _theory-driven_ sehingga modifikasi/re-spesifikasi model harus memiliki alasan teoritis.
+#### Penting
+SEM adalah teknik yang _theory-driven_ sehingga modifikasi/re-spesifikasi model harus memiliki alasan teoritis.
 :::
 
 ## Jenis-jenis variabel dalam model SEM 1️⃣
@@ -65,7 +66,7 @@ execute:
 
 ::: {.incremental}
 * **Variabel _observed_**
-  - Variabel yang dapat diukur langsung dengan berbagai cara/strategi.
+  - Variabel yang dapat diukur langsung dengan berbagai cara/strategi (e.g., *self-report*, *behavioral checklist*, dsb.).
   - Dalam pengukuran Psikologi, _item_ pernyataan (dalam skala Psikologi) adalah variabel _observed_.
 
 * **Variabel _latent_**
@@ -106,9 +107,10 @@ execute:
   - Menguji hubungan antar variabel *observed*
 
 * Model jalur (*path model*)
-  - Menguji hubungan antara variabel *observed* dan *latent*
+  - Menguji hubungan antara dua (atau lebih) variabel *observed* dan *latent*
+  - Bisa juga menguji hubungan antara dua (atau lebih) variabel *latent*
 * Model pengukuran (*measurement model*/*confirmatory factor analysis*)
-  - Menguji apakah item-item dari skala Psikologi memang mengukur konstruk tersebut {{< fa circle-arrow-right >}} validitas konstruk.
+  - Menguji apakah item-item dari skala Psikologi (biasanya variabel *observed*) memang mengukur konstruk yang dihipotesiskan (biasanya variabel *latent*) {{< fa circle-arrow-right >}} validitas konstruk.
 
 * SEM biasanya mengandung setidaknya **dua model**, yaitu model pengukuran dan model struktural (regresi/jalur).
 :::
@@ -132,7 +134,7 @@ execute:
 ::: {.incremental}
 * Peneliti sudah memiliki kesadaran bahwa ia harus menyelidiki **beberapa variabel penelitian** secara bersamaan untuk menjawab pertanyaan penelitiannya.
 
-* Ada kesadaran bahwa peneliti selama ini mengabaikan faktor *error* pengukuran. SEM membantu peneliti untuk **mengurangi efek *measurement error*** terhadap hasil analisis data.
+* Ada kesadaran bahwa peneliti selama ini mengabaikan faktor *error* pengukuran. SEM membantu peneliti untuk **mengurangi efek *measurement error*** terhadap estimasi korelasi antar dua (atau lebih) variabel yang diteliti.
 
 * Selama beberapa dekade kebelakang, SEM termasuk teknik analisis data yang sudah cukup **matang pengembangannya**, dan dapat mudah dilakukan dengan bantuan perangkat lunak.
 :::
@@ -140,7 +142,7 @@ execute:
 ## Contoh aplikasi SEM
 
 ::: {.incremental}
-* Seorang peneliti psikometri ingin **mengukur kepribadian** partisipan dengan menggunakan pendekatan _Five-Factor Model_ (Big 5), maka item dalam skala tersebut adalah _observed variable_, sedangkan dimensi dari Big 5 adalah _latent variable_.
+* Seorang peneliti psikometri ingin **melihat efek latar belakang sosioekonomi terhadap kepribadian** partisipan dengan menggunakan pendekatan _Five-Factor Model_ (Big 5). Maka, jenis kelamin, tingkat pendidikan, dan item dalam skala kepribadian adalah _observed variable_, sedangkan dimensi dari Big 5 adalah _latent variable_.
 
 * Seorang peneliti psikologi pendidikan ingin tahu apakah **kepercayaan orang tua bahwa anaknya dapat berkembang secara natural** (_trust in organismic development_ — _independent latent variable_) berkorelasi dengan **tingkat kemandirian anak** (_dependent latent variable_).
 
@@ -155,7 +157,7 @@ execute:
 * Perangkat lunak SEM sudah cukup *user-friendly*
   - `jamovi` dan `JASP` adalah perangkat lunak SEM yang hanya memerlukan *coding* yang sangat minimal.
   - Namun `jamovi` dan `JASP` fungsinya agak terbatas, karena tidak menyediakan opsi *power analysis* dan simulasi.
-  - Selain itu, peneliti dapat menggunakan `Onyx`, `LISREL`, `SPSS AMOS`, `EQX`, `Mplus`, `STATA`, `lavaan` di {{< fa brands r-project >}} dan `semopy` di {{< fa brands python >}} dsb.
+  - Selain itu, peneliti dapat menggunakan `Onyx`, `LISREL`, `SPSS AMOS`, `EQX`, `Mplus`, `STATA`, [`lavaan`](http://lavaan.ugent.be/tutorial/index.html) di {{< fa brands r-project >}} atau `semopy` di {{< fa brands python >}} dsb.
 ::: 
 
 # Asumsi SEM {background-color="#14497F"}
@@ -163,7 +165,8 @@ execute:
 ## Asumsi SEM
 
 ::: {.callout-warning}
-**Penting**: SEM merupakan teknik statistik yang _theory-driven_, sehingga asumsi teoritis yang melandasi model **jauh lebih penting** daripada asumsi statistiknya.
+#### Penting
+SEM merupakan teknik statistik yang _theory-driven_, sehingga asumsi teoritis yang melandasi model **jauh lebih penting** daripada asumsi statistiknya.
 :::
 
 ::: {.incremental}
@@ -191,6 +194,7 @@ execute:
   - Bisa juga dengan menggunakan **metode estimasi model parameter** yang khusus untuk data yang tidak berdistribusi normal (e.g., _robust methods_ seperti [_robust maximum likelihood_ (ML)](http://doi.apa.org/getdoi.cfm?doi=10.1037/met0000093), atau [*weighted least squares*](https://link.springer.com/article/10.3758/s13428-015-0619-7)).
 
 ::: {.callout-caution}
+#### Hati-hati
 Estimator _weighted least squares_ biasanya membutuhkan jumlah sampel lebih besar.
 :::
 
@@ -209,8 +213,8 @@ Estimator _weighted least squares_ biasanya membutuhkan jumlah sampel lebih besa
 * _Partial least squares_ (PLS) mengestimasi skor variabel endogen dengan asumsi bahwa variabel endogen adalah _weighted composite_, kemudian melakukan regresi atas komposit-komposit tersebut satu sama lain.
 * Asumsi PLS **_sangat berbeda_** dengan CB-SEM - variabel endogen adalah **komposit** bukan faktor laten.
 * PLS menggunakan model pengukuran **formatif**.
-* PLS sering "dijual" sebagai teknik alternatif dari CB-SEM yang lebih praktis karena bisa dieksekusi dengan sampel kecil, mampu menangani variabel endogen yang tidak berdistribusi normal, atau ketika menangani model yang sangat kompleks.
-* Padahal sebenarnya, CB-SEM dan PLS adalah dua teknik dengan **_asumsi ontologis yang berbeda_** ([Rönkkö & Everman, 2013](https://doi.org/10.1177/1094428112474693); [Henseler, et al., 2014](https://doi.org/10.1177/1094428114526928)), sehingga membandingkan kedua teknik ini saja sudah _misleading_ ([Rigdon et al., 2017](https://www.jstor.org/stable/26426850)).
+* PLS sering "dijual" sebagai teknik alternatif dari CB-SEM yang "lebih praktis" karena bisa dieksekusi dengan sampel kecil, mampu menangani variabel endogen yang tidak berdistribusi normal, atau ketika menangani model yang sangat kompleks.
+* Padahal sebenarnya, CB-SEM dan PLS adalah dua teknik dengan **_asumsi ontologis yang berbeda_** ([Rönkkö & Everman, 2013](https://doi.org/10.1177/1094428112474693); [Henseler, et al., 2014](https://doi.org/10.1177/1094428114526928)), sehingga membandingkan kedua teknik ini saja sudah sangat **tidak tepat** ([Rigdon et al., 2017](https://www.jstor.org/stable/26426850)).
 :::
 
 ## Reflektif vs. Formatif

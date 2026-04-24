@@ -28,13 +28,17 @@ execute:
 * Bivariat, *part*, dan *partial correlation*
 * Metrik variabel (*standardized* vs *unstandardized*)
 
-## Mengapa memulai dari korelasi? {background-color="#14497F"}
+# Mengapa memulai dari korelasi? {background-color="#14497F"}
 
 ## Mengapa memulai dari korelasi?
+
+::: {.incremental}
 
 * SEM merupakan teknik yang digunakan untuk **mengestimasi korelasi** antar-variabel
 * Untuk melakukan SEM, peneliti tidak harus meng*input* data kasar (*raw data*), tetapi ada pilihan untuk meng*input* *correlation* atau matriks *variance-covariance*.
 * Kalaupun yang tersedia adalah _raw data_, maka _software_ akan membuat matriks _variance-covariance_ sebelum mengestimasi parameter model.
+
+:::
 
 ## Jenis-jenis korelasi
 
@@ -56,8 +60,8 @@ execute:
   - Sehingga berdampak pada **variabilitas** (*restriction range*) dan **normalitas data**
 * **Linearitas**
   - Semua teknik korelasi mengasumsikan korelasi antar-variabel linier, sehingga korelasi yang tidak linier akan memberikan informasi **tidak adanya korelasi** (padahal tidak selalu).
-* **Adanya data *outlier***
-* **Koreksi atenuasi**
+* **Adanya data *outlier*** {{< fa circle-arrow-right >}} adanya data yang *outlier* membuat estimasi korelasi menjadi *inflated*.
+* **Koreksi atenuasi** {{< fa circle-arrow-right >}} akan dibahas di bagian selanjutnya.
 
 ## Faktor-faktor yang mempengaruhi arah dan _magnitude_ korelasi 2️⃣
 
@@ -70,11 +74,11 @@ execute:
   - Ada beberapa pilihan: {{< fa circle-arrow-right >}} *listwise deletion*, *pairwise deletion*, dan *data imputation*.
   - *Listwise deletion* tidak disarankan karena membuat jumlah sampel turun drastis {{< fa circle-arrow-right >}} mengurangi *statistical power*.
 
-## 
+# Unduh dataset contoh {background-color="#14497F"}
 
 Silahkan unduh dan buka [**Dataset Korelasi**](https://rameliaz.github.io/mg-sem-workshop/corr.jasp), untuk melihat contoh.
 
-## *Variance-covariance* dan *correlation matrix* 1️⃣
+## *Variance-covariance* & *correlation matrix* 1️⃣
 
 * Untuk melakukan SEM, maka perangkat lunak membutuhkan *variance-covariance matrix* untuk mengestimasi parameter model
 * Pada bagian diagonal *variance-covariance matrix* menunjukkan varians, sedangkan sisanya adalah *covariance*
@@ -85,20 +89,24 @@ Silahkan unduh dan buka [**Dataset Korelasi**](https://rameliaz.github.io/mg-sem
   - dimana *p* adalah jumlah *observed variable*
   - Sehingga dengan contoh di atas maka jumlah nilai unik adalah 3(3+1)/2=6, yaitu **3 varians (diagonal)** dan **3 *covariance* (sisanya)**
 
-## *Variance-covariance* dan *correlation matrix* 2️⃣
+## *Variance-covariance* & *correlation matrix* 2️⃣
+
+::: {.incremental}
 
 * Sebagian besar perangkat lunak SEM menggunakan ***variance-covariance matrix*** bukan *correlation matrix*
   - Ingat❗ korelasi pada dasarnya adalah *standardized covariance*.
 
-* Menggunakan *correlation matrix* biasanya lebih sering menghasilkan **parameter yang *statistically significant* tapi *standard error* yang tidak akurat**.
+* TETAPI, menggunakan *correlation matrix* sebagai *input* SEM biasanya lebih sering menghasilkan **parameter yang *statistically significant* tapi *standard error*-nya tidak akurat**.
 
 * Oleh karena itu, meskipun *user* meng*input* *correlation matrix*, maka perangkat lunak akan mengubahnya dulu menjadi *variance-covariance matrix*, baru parameter model dapat diestimasi.
 
+:::
+
 ## Koreksi Atenuasi
 
-* Asumsi dasar dalam Psikometri adalah skor kasar (*observed score*) mengandung skor murni (*true score*) dan *measurement error*, sehingga dalam mengestimasi korelasi, *measurement error* perlu dibuang agar estimasi lebih akurat.
+* Asumsi dasar dalam Psikometri adalah skor kasar (*observed score*) mengandung skor murni (*true score*) dan *measurement error*, sehingga dalam mengestimasi korelasi, *measurement error* perlu "dikontrol secara statistik" agar estimasi korelasi lebih akurat.
 
-* Dengan teknik *koreksi atenuasi*, kita dapat 'membuang' *measurement error*, sehingga kita dapat mengestimasi korelasi antar-variabel menggunakan *true score*-nya.
+* Dengan teknik *koreksi atenuasi*, kita dapat 'mengontrol' *measurement error*, sehingga kita dapat mengestimasi korelasi antar-variabel menggunakan *true score*-nya.
 
 * Tetapi apabila reliabilitas skala kita kurang baik, maka setelah dikoreksi **koefisien korelasi bisa lebih dari 1** ❗
 
@@ -113,6 +121,8 @@ Silahkan unduh dan buka [**Dataset Korelasi**](https://rameliaz.github.io/mg-sem
 
 ## Matrik korelasi dengan *non-positive definite*
 
+::: {.incremental}
+
 * Koefisien korelasi yang nilainya ≥1 menyebabkan matriks korelasi menjadi *non-positive definite*
   - Artinya, parameter model tidak mungkin diestimasi
 
@@ -124,7 +134,11 @@ Silahkan unduh dan buka [**Dataset Korelasi**](https://rameliaz.github.io/mg-sem
   - Varians, kovarians, dan korelasi nilainya diluar batas kewajaran
   - Kesalahan mengatur pembatasan (*constraint*) pada parameter tertentu
 
+:::
+
 ## *Heywood* dan *ultra-Heywood case*
+
+::: {.incremental}
 
 * Terjadi ketika *communalities* = 1 (*Heywood*) atau ≥1 (*ultra-Heywood*), atau terjadi ketika varians *measurement error* bernilai negatif
   - *Communalities* adalah kuadrat dari koefisien korelasi (*R*^2^)
@@ -140,24 +154,30 @@ Silahkan unduh dan buka [**Dataset Korelasi**](https://rameliaz.github.io/mg-sem
   - Kurangi jumlah faktor laten dengan 'membuang' jalur/korelasi yang bermasalah
   - Identifikasi variabel yang terlibat multikolinearitas
 
+:::
+
 ## Korelasi Bivariat: *Part* dan *partial correlation*
 
 ![](libs/partial-cor.png){fig-align="center" width="50%"}
 
-## Metrik variabel (*standardized* vs *unstandardized*)
+## Parameter model (*standardized* vs *unstandardized*)
+
+::: {.incremental}
 
 * *Unstandardized solution/estimates*
   - Dapat **dibandingkan** antar kelompok sampel
   - Merupakan parameter yang digunakan oleh perangkat lunak untuk menghitung *standard error* dan *taraf signifikansi (p-value)*
-  - Membandingkan *unstandardised factor loading* **harus melihat *standard error*nya juga**
+  - Membandingkan *unstandardized factor loading* **harus melihat *standard error*nya juga**
 
 * *Standardized solution/estimates*
   - Hanya *interpretable* untuk kelompok sampel yang diuji — tidak bisa dibandingkan dengan kelompok sampel yang lain.
   - Berguna untuk membandingkan *factor loading* antar-variabel di dalam model
   - Apabila variabel dalam model memiliki unit pengukuran yang berbeda, maka *standardized estimates* akan sangat membantu
 
-* Ada banyak perbedaan pendapat mengenai metrik mana yang harus dilaporkan, tetapi...
+* Ada banyak perbedaan pendapat mengenai parameter mana yang harus dilaporkan, tetapi...
   - **Selalu laporkan *unstandardized solution/estimates* dan *standard error*nya**
+
+:::
 
 ## TUGAS 1: Membuat *correlation matrix* dan melakukan *koreksi atenuasi*
 

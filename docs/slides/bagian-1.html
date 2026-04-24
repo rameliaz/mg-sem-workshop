@@ -6,12 +6,12 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-8f1af79587c2686b78fe4e1fbadd71ab.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e44360b8a8db1e130c7792fece1c8032.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.14">
+  <meta name="generator" content="quarto-1.10.3">
 
   <meta name="author" content="Rizqy Amelia Zein">
-  <meta name="dcterms.date" content="2026-04-09">
+  <meta name="dcterms.date" content="2026-04-24">
   <title>Multigroup SEM Workshop – Pengantar</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -19,6 +19,9 @@
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -31,7 +34,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-6f4a79ec7e0e51d91ee72072a2720184.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-14c7313e0bd1a6ac1391ac8d6dd3db46.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -147,7 +150,7 @@ Rizqy Amelia Zein
     </div>
 </div>
 
-  <p class="date">2026-04-09</p>
+  <p class="date">2026-04-24</p>
 </section>
 <section id="outline" class="slide level2">
 <h2><em>Outline</em></h2>
@@ -177,7 +180,7 @@ Rizqy Amelia Zein
 <li class="fragment"><p>Model yang mencakup <strong>hubungan</strong> antara <em>observed</em> dan <em>latent variables</em> dalam berbagai bentuk model teoritis.</p></li>
 <li class="fragment"><p>SEM memungkinkan peneliti untuk melakukan <strong>pengujian hipotesis</strong> yang berkaitan dengan model tersebut.</p></li>
 <li class="fragment"><p>Model SEM mengasumsikan (hipotesis) bahwa seperangkat variabel (<em>observed</em>) mendefinisikan sebuah konstruk <strong>laten</strong>, dan menggambarkan bagaimana hubungan antara konstruk-konstruk laten ini.</p></li>
-<li class="fragment"><p>SEM adalah teknik yang lebih <em>sophisticated</em> untuk menggambarkan <strong>hubungan antar-variabel</strong> karena mengontrol <strong>error pengukuran</strong> dari estimasi korelasi.</p></li>
+<li class="fragment"><p>SEM adalah teknik yang lebih <em>sophisticated</em> untuk menggambarkan <strong>hubungan antar-variabel</strong> karena mengontrol <strong><em>error</em> pengukuran</strong> dari estimasi korelasi.</p></li>
 </ul>
 </section>
 <section id="sem-adalah-2" class="slide level2">
@@ -195,10 +198,10 @@ Rizqy Amelia Zein
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Warning</strong></p>
+<p><strong>Penting</strong></p>
 </div>
 <div class="callout-content">
-<p><strong>Penting</strong>: SEM adalah teknik yang <em>theory-driven</em> sehingga modifikasi/re-spesifikasi model harus memiliki alasan teoritis.</p>
+<p>SEM adalah teknik yang <em>theory-driven</em> sehingga modifikasi/re-spesifikasi model harus memiliki alasan teoritis.</p>
 </div>
 </div>
 </div>
@@ -210,7 +213,7 @@ Rizqy Amelia Zein
 <ul>
 <li class="fragment"><strong>Variabel <em>observed</em></strong>
 <ul>
-<li class="fragment">Variabel yang dapat diukur langsung dengan berbagai cara/strategi.</li>
+<li class="fragment">Variabel yang dapat diukur langsung dengan berbagai cara/strategi (e.g., <em>self-report</em>, <em>behavioral checklist</em>, dsb.).</li>
 <li class="fragment">Dalam pengukuran Psikologi, <em>item</em> pernyataan (dalam skala Psikologi) adalah variabel <em>observed</em>.</li>
 </ul></li>
 <li class="fragment"><strong>Variabel <em>latent</em></strong>
@@ -258,11 +261,12 @@ Rizqy Amelia Zein
 </ul></li>
 <li class="fragment">Model jalur (<em>path model</em>)
 <ul>
-<li class="fragment">Menguji hubungan antara variabel <em>observed</em> dan <em>latent</em></li>
+<li class="fragment">Menguji hubungan antara dua (atau lebih) variabel <em>observed</em> dan <em>latent</em></li>
+<li class="fragment">Bisa juga menguji hubungan antara dua (atau lebih) variabel <em>latent</em></li>
 </ul></li>
 <li class="fragment">Model pengukuran (<em>measurement model</em>/<em>confirmatory factor analysis</em>)
 <ul>
-<li class="fragment">Menguji apakah item-item dari skala Psikologi memang mengukur konstruk tersebut <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> validitas konstruk.</li>
+<li class="fragment">Menguji apakah item-item dari skala Psikologi (biasanya variabel <em>observed</em>) memang mengukur konstruk yang dihipotesiskan (biasanya variabel <em>latent</em>) <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> validitas konstruk.</li>
 </ul></li>
 <li class="fragment">SEM biasanya mengandung setidaknya <strong>dua model</strong>, yaitu model pengukuran dan model struktural (regresi/jalur).</li>
 </ul>
@@ -288,14 +292,14 @@ Rizqy Amelia Zein
 <h2>Mengapa SEM?</h2>
 <ul>
 <li class="fragment"><p>Peneliti sudah memiliki kesadaran bahwa ia harus menyelidiki <strong>beberapa variabel penelitian</strong> secara bersamaan untuk menjawab pertanyaan penelitiannya.</p></li>
-<li class="fragment"><p>Ada kesadaran bahwa peneliti selama ini mengabaikan faktor <em>error</em> pengukuran. SEM membantu peneliti untuk <strong>mengurangi efek <em>measurement error</em></strong> terhadap hasil analisis data.</p></li>
+<li class="fragment"><p>Ada kesadaran bahwa peneliti selama ini mengabaikan faktor <em>error</em> pengukuran. SEM membantu peneliti untuk <strong>mengurangi efek <em>measurement error</em></strong> terhadap estimasi korelasi antar dua (atau lebih) variabel yang diteliti.</p></li>
 <li class="fragment"><p>Selama beberapa dekade kebelakang, SEM termasuk teknik analisis data yang sudah cukup <strong>matang pengembangannya</strong>, dan dapat mudah dilakukan dengan bantuan perangkat lunak.</p></li>
 </ul>
 </section>
 <section id="contoh-aplikasi-sem" class="slide level2">
 <h2>Contoh aplikasi SEM</h2>
 <ul>
-<li class="fragment"><p>Seorang peneliti psikometri ingin <strong>mengukur kepribadian</strong> partisipan dengan menggunakan pendekatan <em>Five-Factor Model</em> (Big 5), maka item dalam skala tersebut adalah <em>observed variable</em>, sedangkan dimensi dari Big 5 adalah <em>latent variable</em>.</p></li>
+<li class="fragment"><p>Seorang peneliti psikometri ingin <strong>melihat efek latar belakang sosioekonomi terhadap kepribadian</strong> partisipan dengan menggunakan pendekatan <em>Five-Factor Model</em> (Big 5). Maka, jenis kelamin, tingkat pendidikan, dan item dalam skala kepribadian adalah <em>observed variable</em>, sedangkan dimensi dari Big 5 adalah <em>latent variable</em>.</p></li>
 <li class="fragment"><p>Seorang peneliti psikologi pendidikan ingin tahu apakah <strong>kepercayaan orang tua bahwa anaknya dapat berkembang secara natural</strong> (<em>trust in organismic development</em> — <em>independent latent variable</em>) berkorelasi dengan <strong>tingkat kemandirian anak</strong> (<em>dependent latent variable</em>).</p></li>
 <li class="fragment"><p>Dalam konteks psikologi klinis, seorang psikolog klinis ingin tahu apakah <strong><em>personality trait</em></strong> (<em>independent latent variable</em>) dan status sosioekonomi (<em>observed independent variable</em>) dapat berdampak pada kecenderungan <strong>depresi</strong> dan <strong>kecemasan</strong> pada individu (<em>dependent latent variable</em>).</p></li>
 <li class="fragment"><p>Dalam sebuah penelitian psikologi sosial, peneliti ingin tahu apakah <strong><em>personality trait</em></strong> (<em>independent latent variable</em>) dapat menjelaskan mengapa orang <strong>merespon pelanggaran moral</strong> secara berbeda (<em>dependent latent variable</em>).</p></li>
@@ -308,7 +312,7 @@ Rizqy Amelia Zein
 <ul>
 <li class="fragment"><code>jamovi</code> dan <code>JASP</code> adalah perangkat lunak SEM yang hanya memerlukan <em>coding</em> yang sangat minimal.</li>
 <li class="fragment">Namun <code>jamovi</code> dan <code>JASP</code> fungsinya agak terbatas, karena tidak menyediakan opsi <em>power analysis</em> dan simulasi.</li>
-<li class="fragment">Selain itu, peneliti dapat menggunakan <code>Onyx</code>, <code>LISREL</code>, <code>SPSS AMOS</code>, <code>EQX</code>, <code>Mplus</code>, <code>STATA</code>, <code>lavaan</code> di <i class="fa-brands fa-r-project" aria-label="r-project"></i> dan <code>semopy</code> di <i class="fa-brands fa-python" aria-label="python"></i> dsb.</li>
+<li class="fragment">Selain itu, peneliti dapat menggunakan <code>Onyx</code>, <code>LISREL</code>, <code>SPSS AMOS</code>, <code>EQX</code>, <code>Mplus</code>, <code>STATA</code>, <a href="http://lavaan.ugent.be/tutorial/index.html"><code>lavaan</code></a> di <i class="fa-brands fa-r-project" aria-label="r-project"></i> atau <code>semopy</code> di <i class="fa-brands fa-python" aria-label="python"></i> dsb.</li>
 </ul></li>
 </ul>
 </section></section>
@@ -325,10 +329,10 @@ Rizqy Amelia Zein
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Warning</strong></p>
+<p><strong>Penting</strong></p>
 </div>
 <div class="callout-content">
-<p><strong>Penting</strong>: SEM merupakan teknik statistik yang <em>theory-driven</em>, sehingga asumsi teoritis yang melandasi model <strong>jauh lebih penting</strong> daripada asumsi statistiknya.</p>
+<p>SEM merupakan teknik statistik yang <em>theory-driven</em>, sehingga asumsi teoritis yang melandasi model <strong>jauh lebih penting</strong> daripada asumsi statistiknya.</p>
 </div>
 </div>
 </div>
@@ -365,7 +369,7 @@ Rizqy Amelia Zein
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Caution</strong></p>
+<p><strong>Hati-hati</strong></p>
 </div>
 <div class="callout-content">
 <p>Estimator <em>weighted least squares</em> biasanya membutuhkan jumlah sampel lebih besar.</p>
@@ -388,8 +392,8 @@ Rizqy Amelia Zein
 <li class="fragment"><em>Partial least squares</em> (PLS) mengestimasi skor variabel endogen dengan asumsi bahwa variabel endogen adalah <em>weighted composite</em>, kemudian melakukan regresi atas komposit-komposit tersebut satu sama lain.</li>
 <li class="fragment">Asumsi PLS <strong><em>sangat berbeda</em></strong> dengan CB-SEM - variabel endogen adalah <strong>komposit</strong> bukan faktor laten.</li>
 <li class="fragment">PLS menggunakan model pengukuran <strong>formatif</strong>.</li>
-<li class="fragment">PLS sering “dijual” sebagai teknik alternatif dari CB-SEM yang lebih praktis karena bisa dieksekusi dengan sampel kecil, mampu menangani variabel endogen yang tidak berdistribusi normal, atau ketika menangani model yang sangat kompleks.</li>
-<li class="fragment">Padahal sebenarnya, CB-SEM dan PLS adalah dua teknik dengan <strong><em>asumsi ontologis yang berbeda</em></strong> (<a href="https://doi.org/10.1177/1094428112474693">Rönkkö &amp; Everman, 2013</a>; <a href="https://doi.org/10.1177/1094428114526928">Henseler, et al., 2014</a>), sehingga membandingkan kedua teknik ini saja sudah <em>misleading</em> (<a href="https://www.jstor.org/stable/26426850">Rigdon et al., 2017</a>).</li>
+<li class="fragment">PLS sering “dijual” sebagai teknik alternatif dari CB-SEM yang “lebih praktis” karena bisa dieksekusi dengan sampel kecil, mampu menangani variabel endogen yang tidak berdistribusi normal, atau ketika menangani model yang sangat kompleks.</li>
+<li class="fragment">Padahal sebenarnya, CB-SEM dan PLS adalah dua teknik dengan <strong><em>asumsi ontologis yang berbeda</em></strong> (<a href="https://doi.org/10.1177/1094428112474693">Rönkkö &amp; Everman, 2013</a>; <a href="https://doi.org/10.1177/1094428114526928">Henseler, et al., 2014</a>), sehingga membandingkan kedua teknik ini saja sudah sangat <strong>tidak tepat</strong> (<a href="https://www.jstor.org/stable/26426850">Rigdon et al., 2017</a>).</li>
 </ul>
 </section>
 <section id="reflektif-vs.-formatif" class="slide level2">
@@ -642,7 +646,7 @@ Rizqy Amelia Zein
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -810,13 +814,14 @@ Rizqy Amelia Zein
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

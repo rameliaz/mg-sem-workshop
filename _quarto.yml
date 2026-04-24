@@ -6,6 +6,7 @@ project:
     - img/
     - materials/
     - articles/
+    - _extensions/
   render:
     - index.qmd
     - slides/bagian-1.qmd

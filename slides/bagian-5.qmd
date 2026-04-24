@@ -154,9 +154,9 @@ execute:
 :::
 ::: {.column width="50%"}
 
-* Pada model ini **jumlah nilai unik (*non-redundant information*)** dalam *variance-covariance matrix* = 2(2+1)/2 = 3
+* Pada model ini **jumlah nilai unik (*non-redundant information*)** dalam *variance-covariance matrix* = 3(3+1)/2 = 6
 
-* Sedangkan **jumlah parameter jalur** yang akan diestimasi adalah 3 (3 *factor loading*, 3 *error variance*), sehingga
+* Sedangkan **jumlah parameter jalur** yang akan diestimasi adalah 6 (3 *factor loading*, 3 *error variance*), sehingga
 
 * *df* = 6-6 = 0 😢
 
@@ -198,8 +198,9 @@ execute:
 
 * Pilih **metode estimasi** yang paling cocok dengan karakteristik data (`ML`, `ULS`, `GLS`, `WLS`, `DWLS` atau *robust* `DWLS`)
 
-* Metode estimasi ini yang akan menghitung *standard error*, apabila metode estimasi yang dipilih tidak tepat dan tidak sesuai dengan kompatibilitas datanya, maka estimasi *standard error* menjadi bias {{< fa circle-arrow-right >}} model memberikan informasi yang menyesatkan
+* Metode estimasi ini yang akan menghitung *standard error* yang tepat sesuai dengan karakteristik model
 
+* Apabila metode estimasi yang dipilih tidak tepat dan tidak sesuai dengan kompatibilitas datanya, maka estimasi *standard error* menjadi bias {{< fa circle-arrow-right >}} sehingga model parameter memberikan informasi yang menyesatkan
 
 ## Menguji ketepatan model
 
@@ -214,14 +215,14 @@ execute:
 
 :::
 
-## Menguji ketepatan model: *Chi-square* (*X*^2^)
+## Menguji ketepatan model: *Chi-square* (χ²)
 
 ::: {.columns}
 ::: {.column width="50%"}
 
 * Dihitung dengan cara membandingkan ***saturated model* dengan model tanpa jalur sama sekali** (*baseline*, *null*, atau *independent model*)
 
-* Selain *X*^2^, kita bisa menggunakan *alternative fit indices* yang terdiri dari
+* Selain χ², kita bisa menggunakan *alternative fit indices* yang terdiri dari
   - *Incremental index*
   - *Parsimony index*
   - *Absolute (standalone) index*
@@ -249,7 +250,7 @@ execute:
   - ***Tucker Lewis Index*/*Bentler-Bonnet Non-Normed Fit Index*** {{< fa circle-arrow-right >}} mendekati 1 = *better fit*
 
 
-## *Parsimony index*
+## *Parsimony index* 1️⃣
 
 * Indeks ini secara khusus memberikan pinalti pada kompleksitas model
 
@@ -259,19 +260,21 @@ execute:
   - ***Noncentrality Parameter-based Index*** {{< fa circle-arrow-right >}} mendekati 1 = *better fit*
   - ***McDonald's Noncentrality Index*** {{< fa circle-arrow-right >}} mendekati 1 = *better fit*
 
-* **Yang paling sering digunakan adalah**...
+## *Parsimony index* 2️⃣
 
-* ***Root Mean Square Error of Approximation* (RMSEA)** {{< fa circle-arrow-right >}} Model ***close fit*** ketika nilainya **0.05 - 0.08**
-  - *P-value* dapat digunakan untuk menolak *H*~0~: RMSEA = 0.05
-  - Oleh karena itu, **menolak *H*~0~** menunjukkan bahwa model "*close-fitting*"
-
+* ***Root Mean Square Error of Approximation* (RMSEA)** {{< fa circle-arrow-right >}} *close fit* ketika nilainya **< 0.05**, *acceptable fit* ketika **0.05 – 0.08**, *poor fit* ketika **> 0.10**
+  - *P-value* dapat digunakan untuk menguji *H*~0~: RMSEA ≤ 0.05 (*close fit*)
+  - Oleh karena itu, **gagal menolak *H*~0~** (*p* > 0.05) menunjukkan bahwa model "*close-fitting*"
+* ***Standardized Root Mean Square Residual* (SRMR)** {{< fa circle-arrow-right >}} rata-rata perbedaan antara *observed* dan *model-implied correlation matrix*, nilai **< 0.08** menunjukkan *acceptable fit*
+  - Penting diperhatikan karena RMSEA sensitif terhadap jumlah sampel yang besar (cenderung menolak model yang sebenarnya baik), sedangkan SRMR **tidak bergantung pada jumlah sampel** dan langsung mencerminkan seberapa jauh *implied model* mereproduksi data observasi
+  - [Hu & Bentler (1999)](https://www.tandfonline.com/doi/abs/10.1080/10705519909540118) merekomendasikan melaporkan **keduanya** (*dual cutoff*): CFI ≥ 0.95 **dan** SRMR ≤ 0.08
 
 ## *Absolute index*
 
 * Indeks ini dihitung tanpa melakukan perbandingan dengan *baseline*
 
 * Meliputi
-  - ***Chi-square*** (*X*^2^)/*df* ratio
+  - ***Chi-square*** (χ²)/*df* ratio
   - ***Goodness of Fit Index*** {{< fa circle-arrow-right >}} mendekati 1 = *better fit*
   - ***Adjusted Goodness of Fit Index*** {{< fa circle-arrow-right >}} merupakan *parsimony adjustment* dari GFI, mendekati 1 = *better fit*
   - ***Parsimony Goodness of Fit Index*** {{< fa circle-arrow-right >}} mendekati 1 = *better fit*
@@ -279,33 +282,39 @@ execute:
   - ***Standardized Root Mean Square Residual*** (SRMR/RMR) {{< fa circle-arrow-right >}} nilai < 0.05 menunjukkan *good fit*
 
 
-## *Parameter fit*
+## *Global* vs. *local fit*
 
-* Parameter jalur bisa ditolak meskipun hasil *omnibus test* memuaskan, sehingga menginterpretasi koefisien jalur adalah proses yang juga harus dilakukan.
+::: {.incremental}
+
+* Parameter jalur bisa ditolak meskipun hasil *omnibus test*/*global fit* memuaskan, sehingga menginterpretasi koefisien jalur adalah proses yang juga harus dilakukan.
 
 * Berikut ini adalah beberapa prosedur yang direkomendasikan:
   - Lihat tanda *factor loading*, apakah **arahnya sudah benar** (negatif/positif)
 
-  - Lihat *standardised parameter estimates* untuk tahu apakah ada *factor loading* yang **nilainya diatas kewajaran**
+  - Lihat *standardized parameter estimates* untuk tahu apakah ada *factor loading* yang **nilainya diatas kewajaran**
 
   - Lihat *p-value* untuk mempertimbangkan **menolak *H*~0~**
 
-  - Lakukan pengujian *measurement invariance* dengan mengasumsikan beberapa *factor loading* sama di berbagai kelompok yang berbeda
+  - Lakukan pengujian *measurement invariance* dengan mengasumsikan beberapa *factor loading* sama di berbagai kelompok yang berbeda {{< fa circle-arrow-right >}} akan kita lakukan di [Bagian 6](slides/bagian-6.html)
 
   - Apabila *error variance* mendekati nol, hal tsb lebih mungkin disebabkan oleh adanya *outlier*, kurangnya jumlah sampel, atau kurangnya jumlah indikator
 
+:::
 
 ## *Statistical power*
 
-* *Statistical power* dalam pengujian hipotesis dalam SEM {{< fa circle-arrow-right >}} peluang mempertahankan *H*~0~ apabila *H*~0~ benar
-  - Peluang peneliti secara tepat menyimpulkan bahwa **tidak ada perbedaan antara *implied model* dengan *observed model*** ketika memang **benar-benar tidak ada perbedaan** diantara keduanya
+::: {.incremental}
+
+* *Statistical power* dalam pengujian hipotesis dalam SEM {{< fa circle-arrow-right >}} peluang **menolak *H*~0~** apabila *H*~0~ **salah** (power = 1 − β)
+  - Peluang peneliti secara tepat menyimpulkan bahwa **ada perbedaan antara *implied model* dengan *observed model*** ketika memang **benar-benar ada perbedaan** diantara keduanya
 
 * *Statistical power* ditentukan oleh
-  - **true population model** (yang kita tidak mungkin tahu)
+  - ***true population model*** (yang kita tidak mungkin tahu, karena sifatnya selalu *unknown parameter*) {{< fa circle-arrow-right >}} sehingga untuk mengestimasi jumlah sampel, kita asumsikan bahwa model memang "tepat" menggambarkan data
   - **probabilitas melakukan kesalahan tipe 1** (α)
   - ***degree of freedom*** model
   - **jumlah sampel**
 
+:::
 
 ## Mengestimasi jumlah sampel dengan `semTools`
 
@@ -321,11 +330,11 @@ execute:
 #| eval: false
 
 semTools::findRMSEAsamplesize(
-  rmsea0 = 0.05,
-  rmseaA = 0.08,
-  df = 4,
-  power = 0.90,
-  alpha = 0.05
+  rmsea0 = 0.05,  # RMSEA di bawah H0 (batas close fit)
+  rmseaA = 0.08,  # RMSEA sesungguhnya (true model, acceptable fit)
+  df = 4,         # df model yang dihipotesiskan
+  power = 0.90,   # power yang diinginkan (1 - β)
+  alpha = 0.05    # probabilitas kesalahan tipe 1 (α)
 )
 ```
 
@@ -346,19 +355,19 @@ semTools::findRMSEAsamplesize(
   - Tentukan **parameter *acceptable fit*** untuk model struktural, misalnya CFI > .95 dan RMSEA < 0.05
 
 
-## [JARS APA](http://doi.apa.org/getdoi.cfm?doi=10.1037/amp0000191): Apa saja yang harus dilaporkan?
+## [JARS APA](https://apastyle.apa.org/jars/quant-table-7.pdf): Apa saja yang harus dilaporkan?
 
 * **Abstrak**
-  - Laporkan setidaknya **2 *global fit statistics*** (X^2^ [df, *p-value*], RMSEA/GFI/AGFI/TLI, BIC, AIC, dll)
+  - Laporkan setidaknya **2 *global fit statistics*** (χ² [df, *p-value*], RMSEA/GFI/AGFI/TLI, BIC, AIC, dll)
 
 * **Metode**
   - Deskripsikan **variabel endogen dan eksogennya**
-  - Berikan penjelasan, untuk setiap instrumen/variabel, apakah **indikator atau total skor** diperoleh dari **_item_ yang homogen (*item parceling*)**
+  - Berikan penjelasan, untuk setiap instrumen/variabel, apakah **indikator** atau kalaupun **total skor**, apakah skor diperoleh dari **_item_ yang homogen** (e.g., dengan *item parceling*)
   - Berikan penjelasan **bagaimana skala/instrumen disusun**, laporkan **properti psikometriknya**, serta penjelasan mengenai **level pengukuran**
   - Laporkan bagaimana cara peneliti **menentukan jumlah sampel** (misalnya, dengan *rule of thumb*, *a priori power analysis* atau simulasi Monte Carlo)
 
 
-## [JARS APA](http://doi.apa.org/getdoi.cfm?doi=10.1037/amp0000191)
+## [JARS APA](https://apastyle.apa.org/jars/quant-table-7.pdf)
 
 * **Hasil penelitian**
 
@@ -371,7 +380,7 @@ semTools::findRMSEAsamplesize(
   - ***Data summary*** {{< fa circle-arrow-right >}} *summary statistics* yang bisa digunakan orang lain untuk melakukan replikasi, bisa ***variance-covariance*** atau ***correlation matrix***
 
 
-## [JARS APA](http://doi.apa.org/getdoi.cfm?doi=10.1037/amp0000191)
+## [JARS APA](https://apastyle.apa.org/jars/quant-table-7.pdf)
 
 * **Spesifikasi model**
 
@@ -386,7 +395,7 @@ semTools::findRMSEAsamplesize(
   - Kalau membandingkan model, jelaskan parameter yang akan digunakan untuk membandingkan
 
 
-## [JARS APA](http://doi.apa.org/getdoi.cfm?doi=10.1037/amp0000191)
+## [JARS APA](https://apastyle.apa.org/jars/quant-table-7.pdf)
 
 * **Estimasi**
   - Jelaskan *software* dan versi yang digunakan, dan jelaskan **metode estimasi** yang digunakan

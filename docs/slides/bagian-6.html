@@ -6,12 +6,12 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-8f1af79587c2686b78fe4e1fbadd71ab.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e44360b8a8db1e130c7792fece1c8032.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.14">
+  <meta name="generator" content="quarto-1.10.3">
 
   <meta name="author" content="Rizqy Amelia Zein">
-  <meta name="dcterms.date" content="2026-04-09">
+  <meta name="dcterms.date" content="2026-04-24">
   <title>Multigroup SEM Workshop – Multigroup Structural Equation Modeling (MGSEM)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -19,6 +19,9 @@
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -31,7 +34,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-6f4a79ec7e0e51d91ee72072a2720184.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-14c7313e0bd1a6ac1391ac8d6dd3db46.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -147,7 +150,7 @@ Rizqy Amelia Zein
     </div>
 </div>
 
-  <p class="date">2026-04-09</p>
+  <p class="date">2026-04-24</p>
 </section>
 <section id="outline" class="slide level2">
 <h2><em>Outline</em></h2>
@@ -169,10 +172,10 @@ Rizqy Amelia Zein
 <section id="multigroup-sem-untuk-apa" class="slide level2">
 <h2><em>Multigroup</em> SEM: untuk apa?</h2>
 <ul>
-<li><p><em>Invariance</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> apakah dalam kondisi yang beragam ketika melakukan pengukuran, alat ukur selalu mengukur atribut ukur yang sama</p></li>
-<li><p><em>Measurement invariance</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> dua atau lebih kelompok memiliki model pengukuran yang sama, yaitu variabel laten dalam model pengukuran adalah konstruk yang sama</p></li>
-<li><p>Ketika membandingkan model pengukuran di dua atau lebih kelompok yang berbeda, untuk menyimpulkan terjadinya <em>invariance</em>, maka peneliti akan menginginkan <em>chi-square</em> (<em>X</em><sup>2</sup>) yang <em>p-value</em>nya ≤ α</p></li>
-<li><p>Kalau kita berniat melakukan perbandingan performa alat ukur di dua kelompok sampel yang berbeda, maka kita lebih baik menggunakan <strong><em>means-covariance matrix</em></strong> bukan <em>variance-covariance matrix</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> ingat <em>t-test</em> dan <em>anova</em></p></li>
+<li class="fragment"><p><em>Invariance</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> apakah dalam kondisi di subkelompok yang beragam ketika melakukan pengukuran, alat ukur selalu mengukur atribut ukur yang sama</p></li>
+<li class="fragment"><p><em>Measurement invariance</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> dua atau lebih kelompok memiliki properti psikometrik yang sama, yaitu variabel laten dalam model pengukuran adalah konstruk yang sama</p></li>
+<li class="fragment"><p>Ketika membandingkan model pengukuran di dua atau lebih kelompok yang berbeda, untuk menyimpulkan terjadinya <em>invariance</em>, maka peneliti akan menginginkan <em>chi-square</em> (χ²) yang <em>p-value</em>nya ≤ α</p></li>
+<li class="fragment"><p>Kalau kita berniat melakukan perbandingan performa alat ukur di dua kelompok sampel yang berbeda, maka kita lebih baik menggunakan <strong><em>means-covariance matrix</em></strong> bukan <em>variance-covariance matrix</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> ingat <em>t-test</em> dan <em>anova</em></p></li>
 </ul>
 </section>
 <section id="means-dan-intercept" class="slide level2">
@@ -199,8 +202,8 @@ Rizqy Amelia Zein
 </div>
 </div></div>
 </section>
-<section id="jenis-jenis-measurement-invariance" class="slide level2">
-<h2>Jenis-jenis <em>measurement invariance</em></h2>
+<section id="jenis-jenis-measurement-invariance-1" class="slide level2">
+<h2>Jenis-jenis <em>measurement invariance</em> 1️⃣</h2>
 <ul>
 <li><em>Configural</em>
 <ul>
@@ -210,6 +213,11 @@ Rizqy Amelia Zein
 <li><strong>Tidak ada ketentuan</strong> bahwa parameter di dalam model harus setara di semua kelompok <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> tidak ada <em>between-group comparison</em></li>
 <li>Untuk mengeksekusi <em>configural invariance</em> tinggal menambahkan <code>grouping variable</code> di <code>jamovi</code> pada bagian <strong>options</strong></li>
 </ul></li>
+</ul>
+</section>
+<section id="jenis-jenis-measurement-invariance-2" class="slide level2">
+<h2>Jenis-jenis <em>measurement invariance</em> 2️⃣</h2>
+<ul>
 <li><em>Weak</em>/<em>metric</em>
 <ul>
 <li><strong><em>Factor loading</em> harus sama</strong> pada setiap kelompok, tetapi <strong>varians variabel laten boleh bervariasi</strong></li>
@@ -219,8 +227,8 @@ Rizqy Amelia Zein
 </ul></li>
 </ul>
 </section>
-<section id="jenis-jenis-measurement-invariance-1" class="slide level2">
-<h2>Jenis-jenis <em>measurement invariance</em></h2>
+<section id="jenis-jenis-measurement-invariance-3" class="slide level2">
+<h2>Jenis-jenis <em>measurement invariance</em> 3️⃣</h2>
 <ul>
 <li><em>Strong</em>/<em>scalar</em>
 <ul>
@@ -229,6 +237,11 @@ Rizqy Amelia Zein
 <li>Dengan asumsi <em>strong invariance</em> ekuivalensi variabel laten lebih didukung bukti yang kuat</li>
 <li>Untuk mengeksekusinya di <code>jamovi</code>, klik opsi <code>Multi-group analysis</code>, tambahkan data pengelompokan di <code>factor for multi-group analysis</code> dan centang pilihan <code>loadings</code> dan <code>intercepts</code> pada <code>equality constraints</code></li>
 </ul></li>
+</ul>
+</section>
+<section id="jenis-jenis-measurement-invariance-4" class="slide level2">
+<h2>Jenis-jenis <em>measurement invariance</em> 4️⃣</h2>
+<ul>
 <li><em>Strict</em>/<em>residuals</em>
 <ul>
 <li><strong>Selain <em>factor loading</em> dan <em>intercept</em> harus sama</strong>, <em>strict invariance</em> mensyaratkan <strong><em>varians error</em>/<em>residual</em> sama juga</strong></li>
@@ -237,20 +250,20 @@ Rizqy Amelia Zein
 </ul></li>
 </ul>
 </section>
-<section id="jenis-jenis-measurement-invariance-2" class="slide level2">
+<section id="jenis-jenis-measurement-invariance" class="slide level2">
 <h2>Jenis-jenis <em>measurement invariance</em></h2>
 <ul>
-<li>Homogenitas varians variabel laten
+<li class="fragment">Homogenitas varians variabel laten
 <ul>
-<li>Untuk melihat apakah <strong>varians variabel laten setara</strong> di masing-masing kelompok</li>
-<li>Kalau tidak terpenuhi berarti kelompok dengan varians variabel laten yang <strong>lebih kecil</strong> menggunakan <strong>rentang konstruk yang lebih sempit</strong></li>
-<li>Untuk mengeksekusinya klik opsi <code>Multi-group analysis</code>, tambahkan data pengelompokan di <code>factor for multi-group analysis</code> dan centang pilihan <code>latent variances</code> pada <code>equality constraints</code></li>
+<li class="fragment">Untuk melihat apakah <strong>varians variabel laten setara</strong> di masing-masing kelompok</li>
+<li class="fragment">Kalau tidak terpenuhi berarti kelompok dengan varians variabel laten yang <strong>lebih kecil</strong> menggunakan <strong>rentang konstruk yang lebih sempit</strong></li>
+<li class="fragment">Untuk mengeksekusinya klik opsi <code>Multi-group analysis</code>, tambahkan data pengelompokan di <code>factor for multi-group analysis</code> dan centang pilihan <code>latent variances</code> pada <code>equality constraints</code></li>
 </ul></li>
-<li>Homogenitas <em>factor means</em>
+<li class="fragment">Homogenitas <em>factor means</em>
 <ul>
-<li>Untuk melihat <strong>apakah ada perbedaan <em>mean</em> variabel laten</strong> di masing-masing kelompok</li>
-<li>Prosedur yang sama dengan <code>anova</code> atau <code>t-test</code></li>
-<li>Untuk mengeksekusinya klik opsi <code>Multi-group analysis</code>, tambahkan data pengelompokan di <code>factor for multi-group analysis</code> dan centang pilihan <code>means</code> pada <code>equality constraints</code></li>
+<li class="fragment">Untuk melihat <strong>apakah ada perbedaan <em>mean</em> variabel laten</strong> di masing-masing kelompok</li>
+<li class="fragment">Prosedur yang sama dengan <code>anova</code> atau <code>t-test</code></li>
+<li class="fragment">Untuk mengeksekusinya klik opsi <code>Multi-group analysis</code>, tambahkan data pengelompokan di <code>factor for multi-group analysis</code> dan centang pilihan <code>means</code> pada <code>equality constraints</code></li>
 </ul></li>
 </ul>
 </section>
@@ -258,16 +271,16 @@ Rizqy Amelia Zein
 <h2>Evaluasi <em>measurement invariance</em></h2>
 <h4 id="umumnya-ada-dua-cara-yaitu">Umumnya ada dua cara yaitu</h4>
 <ul>
-<li><strong>Pendekatan statistik</strong>
+<li class="fragment"><strong>Pendekatan statistik</strong>
 <ul>
-<li>Karena struktur data yang hirarkis, maka untuk mengevaluasi <em>invariance</em> perlu beberapa langkah</li>
-<li>Dalam pendekatan statistik, peneliti dapat mengevaluasi <strong>perubahan <em>X</em><sup>2</sup></strong> (Δ<em>X</em><sup>2</sup>) ketika membandingkan model antar kelompok</li>
-<li>Seharusnya ketika pembatasan model ditambah, maka Δ<em>X</em><sup>2</sup> tidak signifikan, sehingga seharusnya <em>p-value</em> dari Δ<em>X</em><sup>2</sup> &gt; α (misalnya 0.05)</li>
+<li class="fragment">Karena struktur data yang hirarkis, maka untuk mengevaluasi <em>invariance</em> perlu beberapa langkah</li>
+<li class="fragment">Dalam pendekatan statistik, peneliti dapat mengevaluasi <strong>perubahan χ²</strong> (Δχ²) ketika membandingkan model antar kelompok</li>
+<li class="fragment">Seharusnya ketika <em>constraint</em> model ditambah, maka Δχ² tidak signifikan, sehingga diperoleh <em>p-value</em> dari Δχ² &gt; α (misalnya 0.05)</li>
 </ul></li>
-<li><strong>Pendekatan <em>modeling</em></strong>
+<li class="fragment"><strong>Pendekatan <em>modeling</em></strong>
 <ul>
-<li>Pendekatan <em>modeling</em> menggunakan <em>approximate fit indices</em> (AFI) untuk menyimpulkan <em>invariance</em></li>
-<li>Yang bisa digunakan adalah <em>comparative fit index</em> (CFI) dan <em>McDonald’s noncentrality fit index</em> (MFI), sehingga ketika <strong>keduanya mendekati 1</strong>, kita dapat simpulkan <em>invariance</em> ✅</li>
+<li class="fragment">Pendekatan <em>modeling</em> menggunakan <em>approximate fit indices</em> (AFI) untuk menyimpulkan <em>invariance</em></li>
+<li class="fragment">Yang bisa digunakan adalah <em>comparative fit index</em> (CFI) dan <em>McDonald’s noncentrality fit index</em> (MFI), sehingga ketika <strong>perubahan (Δ) CFI dan MFI antar model sangat kecil</strong> (ΔCFI ≤ 0.01; <a href="https://doi.org/10.1177/1094428102005002005">Cheung &amp; Rensvold, 2002</a>), kita dapat simpulkan model <em>invariance</em> ✅</li>
 </ul></li>
 </ul>
 </section>
@@ -514,7 +527,7 @@ Rizqy Amelia Zein
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -682,13 +695,14 @@ Rizqy Amelia Zein
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

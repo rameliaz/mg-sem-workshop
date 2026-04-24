@@ -6,12 +6,12 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-8f1af79587c2686b78fe4e1fbadd71ab.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e44360b8a8db1e130c7792fece1c8032.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.14">
+  <meta name="generator" content="quarto-1.10.3">
 
   <meta name="author" content="Rizqy Amelia Zein">
-  <meta name="dcterms.date" content="2026-04-09">
+  <meta name="dcterms.date" content="2026-04-24">
   <title>Multigroup SEM Workshop – Model Jalur</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -19,6 +19,9 @@
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -97,7 +100,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-6f4a79ec7e0e51d91ee72072a2720184.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-14c7313e0bd1a6ac1391ac8d6dd3db46.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -213,7 +216,7 @@ Rizqy Amelia Zein
     </div>
 </div>
 
-  <p class="date">2026-04-09</p>
+  <p class="date">2026-04-24</p>
 </section>
 <section id="outline" class="slide level2">
 <h2><em>Outline</em></h2>
@@ -233,18 +236,22 @@ Rizqy Amelia Zein
 <h2>Analisis jalur</h2>
 <ul>
 <li class="fragment"><p><em>Path model</em> merupakan kelanjutan dari model regresi karena terdiri dari <strong>beberapa model regresi</strong> sekaligus dapat digunakan untuk menguji <em>direct</em>, <em>indirect</em>, dan <em>correlated effects</em>.</p></li>
-<li class="fragment"><p><em>Path model</em> disusun secara visual dengan aturan tertentu (konsensus)</p>
+<li class="fragment"><p><em>Path model</em> disusun secara visual dengan aturan tertentu, yang mengikuti konsensus</p>
 <ul>
 <li class="fragment">Garis satu arah menggambarkan <em>direct effects</em>, yang merefleksikan <em>keterkaitan langsung</em> antara satu variabel dengan variabel lainnya. Asumsinya, <strong>tidak ada variabel lain diluar model</strong> yang berkorelasi dengan variabel tersebut.</li>
 <li class="fragment">Garis dua arah menggambarkan <em>covariance</em>/korelasi, yang mengimplikasikan bahwa keterkaitan antar-variabel masih mungkin ditentukan oleh <strong>variabel lain yang tidak ada di dalam model</strong>.</li>
-<li class="fragment">Garis <em>error terms</em> yang menunjukkan varians <em>observed variable</em> yang menjelaskan <strong>variabel lain yang tidak dapat dijelaskan/di luar model</strong>, yang juga mewakili <strong>measurement error</strong>.</li>
+<li class="fragment">Garis <em>error terms</em> yang menunjukkan varians <em>observed variable</em> yang menjelaskan <strong>variabel lain yang tidak dapat dijelaskan/di luar model</strong>, yang juga mewakili <strong><em>measurement error</em></strong>.</li>
 </ul></li>
 </ul>
 </section>
+<section id="diagram-jalur" class="slide level2">
+<h2>Diagram jalur</h2>
+
+<img data-src="libs/path-diagram.png" class="quarto-figure quarto-figure-center r-stretch" style="width:40.0%"></section>
 <section id="korelasi-kausalitas" class="slide level2">
 <h2>Korelasi = kausalitas?</h2>
 <ul>
-<li>Analisis jalur sebenarnya adalah <strong>bentuk yang lebih <em>sophisticated</em></strong> dari korelasi, dan</li>
+<li>Analisis jalur sebenarnya adalah <strong>bentuk yang lebih <em>sophisticated</em></strong> dari korelasi, sehingga</li>
 </ul>
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
@@ -252,25 +259,23 @@ Rizqy Amelia Zein
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Penting</strong></p>
+<p><strong>Penting diingat</strong></p>
 </div>
 <div class="callout-content">
 <p><strong>Correlation does not imply causation</strong></p>
 </div>
 </div>
 </div>
-<p>Yang harus dipenuhi sebagai bukti kausalitas:</p>
+<p>Yang harus dipenuhi sebagai bukti kausalitas (X <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> Y):</p>
 <ul>
-<li>Ada <strong>urutan waktu</strong> (<em>temporal order</em>) <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> desain penelitian <em>panel</em>/<em>longitudinal</em>/<em>time series</em></li>
+<li>Ada <strong>urut-urutan waktu kejadian</strong> (<em>temporal order</em>) <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> desain penelitian <em>panel</em>/<em>longitudinal</em>/<em>time series</em></li>
 <li>Adanya <strong>korelasi</strong> antara kedua variabel</li>
-<li>Peneliti harus melakukan <strong>kontrol</strong> atas variabel lain (<em>confounding</em>)</li>
-<li>Peneliti melakukan <strong>manipulasi</strong> (<em>random assignment</em>) pada variabel X</li>
+<li>Peneliti harus melakukan <strong>kontrol</strong> atas variabel lain (<em>confounding</em>)
+<ul>
+<li>…yaitu dengan cara melakukan <strong>manipulasi</strong> (<em>random assignment</em>) pada prediktor (X)</li>
+</ul></li>
 </ul>
 </section>
-<section id="diagram-jalur" class="slide level2">
-<h2>Diagram jalur</h2>
-
-<img data-src="libs/path-diagram.png" class="quarto-figure quarto-figure-center r-stretch" style="width:40.0%"></section>
 <section id="ilustrasi-use-case" class="slide level2">
 <h2>Ilustrasi <em>use case</em></h2>
 <div class="columns">
@@ -303,7 +308,7 @@ Rizqy Amelia Zein
 <section id="bagaimana-bentuk-diagram-jalurnya" class="slide level2">
 <h2>Bagaimana bentuk diagram jalurnya?</h2>
 
-<img data-src="libs/contoh-path.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
+<img data-src="libs/contoh-path.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="nama-variabel-dan-koefisien-jalur" class="slide level2">
 <h2>Nama variabel dan koefisien jalur</h2>
 <table class="caption-top">
@@ -380,7 +385,7 @@ Rizqy Amelia Zein
 <td style="text-align: center;">Phi</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Varians <em>error</em> pengukuran dari sebuah variabel laten</td>
+<td style="text-align: left;">Residual/<em>disturbance</em> dari variabel laten endogen (varians yang tidak dijelaskan oleh prediktornya)</td>
 <td style="text-align: center;">ζ</td>
 <td style="text-align: center;">Zeta</td>
 </tr>
@@ -416,10 +421,10 @@ Rizqy Amelia Zein
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Tugas</strong></p>
+<p><strong>Tugas Mandiri</strong></p>
 </div>
 <div class="callout-content">
-<p>Rumuskan <strong>hipotesis</strong> penelitiannya kemudian buatlah <strong>diagram jalur</strong> beserta <strong>koefisien jalurnya</strong>. Bisa dengan MS Power Point atau <em>software</em> yang lain (misalnya, <a href="https://app.diagrams.net/">draw.io</a>).</p>
+<p>Rumuskan <strong>hipotesis</strong> penelitiannya kemudian buatlah <strong>diagram jalur</strong> beserta <strong>koefisien jalurnya</strong>. Anda bisa menggunakan MS Power Point atau <em>software</em> yang lain (misalnya, <a href="https://app.diagrams.net/">draw.io</a> atau <a href="https://www.canva.com/">Canva</a>).</p>
 </div>
 </div>
 </div>
@@ -433,7 +438,7 @@ Rizqy Amelia Zein
 <li class="fragment">Kalau memilih fitur <em>interactive</em>, maka tampilan antarmukanya berupa <em>drag &amp; drop</em> (seperti SPSS).</li>
 <li class="fragment">Untuk fitur <em>syntax</em>, maka tampilan antarmukanya meminta pengguna untuk menspesifikasi model dengan <em>syntax</em>.</li>
 </ul></li>
-<li class="fragment"><p><code>jamovi</code> dan <code>JASP</code> mengadopsi <em>syntax</em> dari <em>package</em> <a href="http://lavaan.ugent.be/tutorial/index.html"><code>lavaan</code></a>, sehingga untuk menspesifikasi model, kita harus memasukkan <strong>serangkaian perintah</strong>.</p></li>
+<li class="fragment"><p><code>jamovi</code> dan <code>JASP</code> mengadopsi <em>syntax</em> dari <i class="fa-brands fa-r-project" aria-label="r-project"></i> <em>package</em> <a href="http://lavaan.ugent.be/tutorial/index.html"><code>lavaan</code></a>, sehingga untuk menspesifikasi model, kita harus memasukkan <strong>serangkaian perintah</strong>.</p></li>
 <li class="fragment"><p>Meskipun begitu, <em>syntax</em> <code>lavaan</code> <strong>sangat sederhana</strong> dan familiar dengan <em>syntax</em> <code>lavaan</code> memberikan <strong>banyak keuntungan</strong>.</p></li>
 <li class="fragment"><p>Menjalankan perintah dengan <em>syntax</em> juga membantu peneliti untuk mereka-ulang hasil analisis datanya, serta mempermudah kolaborasi dengan peneliti yang terbiasa menggunakan perangkat lunak yang berbeda dengan kita.</p></li>
 <li class="fragment"><p>Oleh karena itu, dalam <em>workshop</em> ini peserta juga harus berlatih menulis <em>syntax</em>.</p></li>
@@ -454,50 +459,53 @@ Rizqy Amelia Zein
 <h2>Contoh CFA (1)</h2>
 
 <img data-src="libs/path-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># CFA</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># CFA</span></span>
 <span id="cb1-2"><a></a>trust <span class="ot">=</span><span class="er">~</span> trust1 <span class="sc">+</span> trust2 <span class="sc">+</span> trust3 <span class="sc">+</span> trust4 <span class="sc">+</span> trust5</span>
 <span id="cb1-3"><a></a></span>
 <span id="cb1-4"><a></a><span class="co"># Measurement error (residual)</span></span>
-<span id="cb1-5"><a></a>trust1 <span class="sc">~</span><span class="er">~</span> trust1</span>
-<span id="cb1-6"><a></a>trust2 <span class="sc">~</span><span class="er">~</span> trust2</span>
-<span id="cb1-7"><a></a>trust3 <span class="sc">~</span><span class="er">~</span> trust3</span>
-<span id="cb1-8"><a></a>trust4 <span class="sc">~</span><span class="er">~</span> trust4</span>
-<span id="cb1-9"><a></a>trust5 <span class="sc">~</span><span class="er">~</span> trust5</span>
-<span id="cb1-10"><a></a>trust <span class="sc">~</span><span class="er">~</span> trust</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-5"><a></a><span class="co"># Bagian ini biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit</span></span>
+<span id="cb1-6"><a></a>trust1 <span class="sc">~</span><span class="er">~</span> trust1</span>
+<span id="cb1-7"><a></a>trust2 <span class="sc">~</span><span class="er">~</span> trust2</span>
+<span id="cb1-8"><a></a>trust3 <span class="sc">~</span><span class="er">~</span> trust3</span>
+<span id="cb1-9"><a></a>trust4 <span class="sc">~</span><span class="er">~</span> trust4</span>
+<span id="cb1-10"><a></a>trust5 <span class="sc">~</span><span class="er">~</span> trust5</span>
+<span id="cb1-11"><a></a>trust <span class="sc">~</span><span class="er">~</span> trust</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="contoh-cfa-2" class="slide level2">
 <h2>Contoh CFA (2)</h2>
 
 <img data-src="libs/path-2.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># CFA</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># CFA</span></span>
 <span id="cb2-2"><a></a>mandiri <span class="ot">=</span><span class="er">~</span> mandiri1 <span class="sc">+</span> mandiri2 <span class="sc">+</span> mandiri3 <span class="sc">+</span> mandiri4</span>
 <span id="cb2-3"><a></a></span>
 <span id="cb2-4"><a></a><span class="co"># Measurement error (residual)</span></span>
-<span id="cb2-5"><a></a>mandiri1 <span class="sc">~</span><span class="er">~</span> mandiri1</span>
-<span id="cb2-6"><a></a>mandiri2 <span class="sc">~</span><span class="er">~</span> mandiri2</span>
-<span id="cb2-7"><a></a>mandiri3 <span class="sc">~</span><span class="er">~</span> mandiri3</span>
-<span id="cb2-8"><a></a>mandiri4 <span class="sc">~</span><span class="er">~</span> mandiri4</span>
-<span id="cb2-9"><a></a>mandiri <span class="sc">~</span><span class="er">~</span> mandiri</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-5"><a></a><span class="co"># Bagian ini biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit</span></span>
+<span id="cb2-6"><a></a>mandiri1 <span class="sc">~</span><span class="er">~</span> mandiri1</span>
+<span id="cb2-7"><a></a>mandiri2 <span class="sc">~</span><span class="er">~</span> mandiri2</span>
+<span id="cb2-8"><a></a>mandiri3 <span class="sc">~</span><span class="er">~</span> mandiri3</span>
+<span id="cb2-9"><a></a>mandiri4 <span class="sc">~</span><span class="er">~</span> mandiri4</span>
+<span id="cb2-10"><a></a>mandiri <span class="sc">~</span><span class="er">~</span> mandiri</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="contoh-path-analysis-3" class="slide level2">
 <h2>Contoh <em>path analysis</em> (3)</h2>
 
 <img data-src="libs/path-3.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># Model Struktural</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># Model Struktural</span></span>
 <span id="cb3-2"><a></a>mandiri <span class="sc">~</span> trust</span>
 <span id="cb3-3"><a></a></span>
 <span id="cb3-4"><a></a><span class="co"># Measurement error (residual)</span></span>
-<span id="cb3-5"><a></a>mandiri <span class="sc">~</span><span class="er">~</span> mandiri</span>
-<span id="cb3-6"><a></a>trust <span class="sc">~</span><span class="er">~</span> trust</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-5"><a></a><span class="co"># Bagian ini biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit</span></span>
+<span id="cb3-6"><a></a>mandiri <span class="sc">~</span><span class="er">~</span> mandiri</span>
+<span id="cb3-7"><a></a>trust <span class="sc">~</span><span class="er">~</span> trust</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="contoh-full-model-4" class="slide level2">
 <h2>Contoh <em>full model</em> (4)</h2>
 
 <img data-src="libs/contoh-path.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># CFA</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># CFA</span></span>
 <span id="cb4-2"><a></a>mandiri <span class="ot">=</span><span class="er">~</span> mandiri1 <span class="sc">+</span> mandiri2 <span class="sc">+</span> mandiri3 <span class="sc">+</span> mandiri4</span>
 <span id="cb4-3"><a></a>trust <span class="ot">=</span><span class="er">~</span> trust1 <span class="sc">+</span> trust2 <span class="sc">+</span> trust3 <span class="sc">+</span> trust4 <span class="sc">+</span> trust5</span>
 <span id="cb4-4"><a></a></span>
@@ -517,7 +525,7 @@ Rizqy Amelia Zein
 <span id="cb4-18"><a></a>mandiri <span class="sc">~</span><span class="er">~</span> mandiri</span>
 <span id="cb4-19"><a></a></span>
 <span id="cb4-20"><a></a><span class="co"># Model Struktural</span></span>
-<span id="cb4-21"><a></a>mandiri <span class="sc">~</span> trust</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-21"><a></a>mandiri <span class="sc">~</span> trust</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="latihan-mandiri-3-menulis-syntax-lavaan" class="slide level2">
@@ -736,7 +744,7 @@ Rizqy Amelia Zein
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -980,13 +988,14 @@ Rizqy Amelia Zein
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

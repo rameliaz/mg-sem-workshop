@@ -6,12 +6,12 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-8f1af79587c2686b78fe4e1fbadd71ab.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e44360b8a8db1e130c7792fece1c8032.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.14">
+  <meta name="generator" content="quarto-1.10.3">
 
   <meta name="author" content="Rizqy Amelia Zein">
-  <meta name="dcterms.date" content="2026-04-09">
+  <meta name="dcterms.date" content="2026-04-24">
   <title>Multigroup SEM Workshop – Korelasi</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -19,6 +19,9 @@
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -31,7 +34,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-6f4a79ec7e0e51d91ee72072a2720184.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-14c7313e0bd1a6ac1391ac8d6dd3db46.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -147,7 +150,7 @@ Rizqy Amelia Zein
     </div>
 </div>
 
-  <p class="date">2026-04-09</p>
+  <p class="date">2026-04-24</p>
 </section>
 <section id="outline" class="slide level2">
 <h2><em>Outline</em></h2>
@@ -162,15 +165,17 @@ Rizqy Amelia Zein
 <li>Metrik variabel (<em>standardized</em> vs <em>unstandardized</em>)</li>
 </ul>
 </section>
-<section id="mengapa-memulai-dari-korelasi" class="slide level2" data-background-color="#14497F">
-<h2>Mengapa memulai dari korelasi?</h2>
+<section>
+<section id="mengapa-memulai-dari-korelasi" class="title-slide slide level1 center" data-background-color="#14497F">
+<h1>Mengapa memulai dari korelasi?</h1>
+
 </section>
 <section id="mengapa-memulai-dari-korelasi-1" class="slide level2">
 <h2>Mengapa memulai dari korelasi?</h2>
 <ul>
-<li>SEM merupakan teknik yang digunakan untuk <strong>mengestimasi korelasi</strong> antar-variabel</li>
-<li>Untuk melakukan SEM, peneliti tidak harus meng<em>input</em> data kasar (<em>raw data</em>), tetapi ada pilihan untuk meng<em>input</em> <em>correlation</em> atau matriks <em>variance-covariance</em>.</li>
-<li>Kalaupun yang tersedia adalah <em>raw data</em>, maka <em>software</em> akan membuat matriks <em>variance-covariance</em> sebelum mengestimasi parameter model.</li>
+<li class="fragment">SEM merupakan teknik yang digunakan untuk <strong>mengestimasi korelasi</strong> antar-variabel</li>
+<li class="fragment">Untuk melakukan SEM, peneliti tidak harus meng<em>input</em> data kasar (<em>raw data</em>), tetapi ada pilihan untuk meng<em>input</em> <em>correlation</em> atau matriks <em>variance-covariance</em>.</li>
+<li class="fragment">Kalaupun yang tersedia adalah <em>raw data</em>, maka <em>software</em> akan membuat matriks <em>variance-covariance</em> sebelum mengestimasi parameter model.</li>
 </ul>
 </section>
 <section id="jenis-jenis-korelasi" class="slide level2">
@@ -233,8 +238,8 @@ Rizqy Amelia Zein
 <ul>
 <li>Semua teknik korelasi mengasumsikan korelasi antar-variabel linier, sehingga korelasi yang tidak linier akan memberikan informasi <strong>tidak adanya korelasi</strong> (padahal tidak selalu).</li>
 </ul></li>
-<li><strong>Adanya data <em>outlier</em></strong></li>
-<li><strong>Koreksi atenuasi</strong></li>
+<li><strong>Adanya data <em>outlier</em></strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> adanya data yang <em>outlier</em> membuat estimasi korelasi menjadi <em>inflated</em>.</li>
+<li><strong>Koreksi atenuasi</strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> akan dibahas di bagian selanjutnya.</li>
 </ul>
 </section>
 <section id="faktor-faktor-yang-mempengaruhi-arah-dan-magnitude-korelasi-2" class="slide level2">
@@ -255,13 +260,14 @@ Rizqy Amelia Zein
 <li><em>Listwise deletion</em> tidak disarankan karena membuat jumlah sampel turun drastis <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> mengurangi <em>statistical power</em>.</li>
 </ul></li>
 </ul>
-</section>
-<section id="section" class="slide level2">
-<h2></h2>
+</section></section>
+<section>
+<section id="unduh-dataset-contoh" class="title-slide slide level1 center" data-background-color="#14497F">
+<h1>Unduh dataset contoh</h1>
 <p>Silahkan unduh dan buka <a href="https://rameliaz.github.io/mg-sem-workshop/corr.jasp"><strong>Dataset Korelasi</strong></a>, untuk melihat contoh.</p>
 </section>
-<section id="variance-covariance-dan-correlation-matrix-1" class="slide level2">
-<h2><em>Variance-covariance</em> dan <em>correlation matrix</em> 1️⃣</h2>
+<section id="variance-covariance-correlation-matrix-1" class="slide level2">
+<h2><em>Variance-covariance</em> &amp; <em>correlation matrix</em> 1️⃣</h2>
 <ul>
 <li>Untuk melakukan SEM, maka perangkat lunak membutuhkan <em>variance-covariance matrix</em> untuk mengestimasi parameter model</li>
 <li>Pada bagian diagonal <em>variance-covariance matrix</em> menunjukkan varians, sedangkan sisanya adalah <em>covariance</em></li>
@@ -275,22 +281,22 @@ Rizqy Amelia Zein
 </ul></li>
 </ul>
 </section>
-<section id="variance-covariance-dan-correlation-matrix-2" class="slide level2">
-<h2><em>Variance-covariance</em> dan <em>correlation matrix</em> 2️⃣</h2>
+<section id="variance-covariance-correlation-matrix-2" class="slide level2">
+<h2><em>Variance-covariance</em> &amp; <em>correlation matrix</em> 2️⃣</h2>
 <ul>
-<li><p>Sebagian besar perangkat lunak SEM menggunakan <strong><em>variance-covariance matrix</em></strong> bukan <em>correlation matrix</em></p>
+<li class="fragment"><p>Sebagian besar perangkat lunak SEM menggunakan <strong><em>variance-covariance matrix</em></strong> bukan <em>correlation matrix</em></p>
 <ul>
-<li>Ingat❗ korelasi pada dasarnya adalah <em>standardized covariance</em>.</li>
+<li class="fragment">Ingat❗ korelasi pada dasarnya adalah <em>standardized covariance</em>.</li>
 </ul></li>
-<li><p>Menggunakan <em>correlation matrix</em> biasanya lebih sering menghasilkan <strong>parameter yang <em>statistically significant</em> tapi <em>standard error</em> yang tidak akurat</strong>.</p></li>
-<li><p>Oleh karena itu, meskipun <em>user</em> meng<em>input</em> <em>correlation matrix</em>, maka perangkat lunak akan mengubahnya dulu menjadi <em>variance-covariance matrix</em>, baru parameter model dapat diestimasi.</p></li>
+<li class="fragment"><p>TETAPI, menggunakan <em>correlation matrix</em> sebagai <em>input</em> SEM biasanya lebih sering menghasilkan <strong>parameter yang <em>statistically significant</em> tapi <em>standard error</em>-nya tidak akurat</strong>.</p></li>
+<li class="fragment"><p>Oleh karena itu, meskipun <em>user</em> meng<em>input</em> <em>correlation matrix</em>, maka perangkat lunak akan mengubahnya dulu menjadi <em>variance-covariance matrix</em>, baru parameter model dapat diestimasi.</p></li>
 </ul>
 </section>
 <section id="koreksi-atenuasi" class="slide level2">
 <h2>Koreksi Atenuasi</h2>
 <ul>
-<li><p>Asumsi dasar dalam Psikometri adalah skor kasar (<em>observed score</em>) mengandung skor murni (<em>true score</em>) dan <em>measurement error</em>, sehingga dalam mengestimasi korelasi, <em>measurement error</em> perlu dibuang agar estimasi lebih akurat.</p></li>
-<li><p>Dengan teknik <em>koreksi atenuasi</em>, kita dapat ‘membuang’ <em>measurement error</em>, sehingga kita dapat mengestimasi korelasi antar-variabel menggunakan <em>true score</em>-nya.</p></li>
+<li><p>Asumsi dasar dalam Psikometri adalah skor kasar (<em>observed score</em>) mengandung skor murni (<em>true score</em>) dan <em>measurement error</em>, sehingga dalam mengestimasi korelasi, <em>measurement error</em> perlu “dikontrol secara statistik” agar estimasi korelasi lebih akurat.</p></li>
+<li><p>Dengan teknik <em>koreksi atenuasi</em>, kita dapat ‘mengontrol’ <em>measurement error</em>, sehingga kita dapat mengestimasi korelasi antar-variabel menggunakan <em>true score</em>-nya.</p></li>
 <li><p>Tetapi apabila reliabilitas skala kita kurang baik, maka setelah dikoreksi <strong>koefisien korelasi bisa lebih dari 1</strong> ❗</p></li>
 <li><p>Misalnya diketahui bahwa korelasi <em>observed scores</em> antar dua variabel (<em>r</em><sub>ab</sub>) adalah 0.9 dan reliabilitas skala <em>a</em> (Cronbach’s α) adalah 0.6 dan skala <em>b</em> adalah 0.7, maka:</p></li>
 </ul>
@@ -306,40 +312,40 @@ Rizqy Amelia Zein
 <section id="matrik-korelasi-dengan-non-positive-definite" class="slide level2">
 <h2>Matrik korelasi dengan <em>non-positive definite</em></h2>
 <ul>
-<li>Koefisien korelasi yang nilainya ≥1 menyebabkan matriks korelasi menjadi <em>non-positive definite</em>
+<li class="fragment">Koefisien korelasi yang nilainya ≥1 menyebabkan matriks korelasi menjadi <em>non-positive definite</em>
 <ul>
-<li>Artinya, parameter model tidak mungkin diestimasi</li>
+<li class="fragment">Artinya, parameter model tidak mungkin diestimasi</li>
 </ul></li>
-<li>Mengapa terjadi?
+<li class="fragment">Mengapa terjadi?
 <ul>
-<li>Data didapatkan dari observasi yang <strong>tidak independen</strong> (<em>linear dependency</em>)</li>
-<li>Terjadi <strong>multikolinearitas</strong></li>
-<li><strong>Jumlah sampel</strong> lebih <strong>sedikit</strong> dari jumlah variabel yang diuji dalam model</li>
-<li>Sepasang variabel berbagi <strong>varians negatif</strong> atau <strong>tidak sama sekali</strong> (0) <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> <em>Heywood case</em></li>
-<li>Varians, kovarians, dan korelasi nilainya diluar batas kewajaran</li>
-<li>Kesalahan mengatur pembatasan (<em>constraint</em>) pada parameter tertentu</li>
+<li class="fragment">Data didapatkan dari observasi yang <strong>tidak independen</strong> (<em>linear dependency</em>)</li>
+<li class="fragment">Terjadi <strong>multikolinearitas</strong></li>
+<li class="fragment"><strong>Jumlah sampel</strong> lebih <strong>sedikit</strong> dari jumlah variabel yang diuji dalam model</li>
+<li class="fragment">Sepasang variabel berbagi <strong>varians negatif</strong> atau <strong>tidak sama sekali</strong> (0) <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> <em>Heywood case</em></li>
+<li class="fragment">Varians, kovarians, dan korelasi nilainya diluar batas kewajaran</li>
+<li class="fragment">Kesalahan mengatur pembatasan (<em>constraint</em>) pada parameter tertentu</li>
 </ul></li>
 </ul>
 </section>
 <section id="heywood-dan-ultra-heywood-case" class="slide level2">
 <h2><em>Heywood</em> dan <em>ultra-Heywood case</em></h2>
 <ul>
-<li>Terjadi ketika <em>communalities</em> = 1 (<em>Heywood</em>) atau ≥1 (<em>ultra-Heywood</em>), atau terjadi ketika varians <em>measurement error</em> bernilai negatif
+<li class="fragment">Terjadi ketika <em>communalities</em> = 1 (<em>Heywood</em>) atau ≥1 (<em>ultra-Heywood</em>), atau terjadi ketika varians <em>measurement error</em> bernilai negatif
 <ul>
-<li><em>Communalities</em> adalah kuadrat dari koefisien korelasi (<em>R</em><sup>2</sup>)</li>
-<li>Apabila terjadi, maka ada yang salah dengan spesifikasi model (hipotesis)</li>
+<li class="fragment"><em>Communalities</em> adalah kuadrat dari koefisien korelasi (<em>R</em><sup>2</sup>)</li>
+<li class="fragment">Apabila terjadi, maka ada yang salah dengan spesifikasi model (hipotesis)</li>
 </ul></li>
-<li>Terjadi karena
+<li class="fragment">Terjadi karena
 <ul>
-<li><em>Common factor</em> terlalu banyak/terlalu sedikit</li>
-<li>Ukuran sampel tidak memadai</li>
-<li>Model SEM bukan model yang cocok untuk menguji hipotesis (alternatifnya <a href="https://medium.com/@aptrishu/understanding-principle-component-analysis-e32be0253ef0"><em>Principal Component Analysis</em></a>)</li>
+<li class="fragment"><em>Common factor</em> terlalu banyak/terlalu sedikit</li>
+<li class="fragment">Ukuran sampel tidak memadai</li>
+<li class="fragment">Model SEM bukan model yang cocok untuk menguji hipotesis (alternatifnya <a href="https://medium.com/@aptrishu/understanding-principle-component-analysis-e32be0253ef0"><em>Principal Component Analysis</em></a>)</li>
 </ul></li>
-<li>Yang bisa dilakukan
+<li class="fragment">Yang bisa dilakukan
 <ul>
-<li>Tinjau kembali hipotesis modelnya</li>
-<li>Kurangi jumlah faktor laten dengan ‘membuang’ jalur/korelasi yang bermasalah</li>
-<li>Identifikasi variabel yang terlibat multikolinearitas</li>
+<li class="fragment">Tinjau kembali hipotesis modelnya</li>
+<li class="fragment">Kurangi jumlah faktor laten dengan ‘membuang’ jalur/korelasi yang bermasalah</li>
+<li class="fragment">Identifikasi variabel yang terlibat multikolinearitas</li>
 </ul></li>
 </ul>
 </section>
@@ -347,24 +353,24 @@ Rizqy Amelia Zein
 <h2>Korelasi Bivariat: <em>Part</em> dan <em>partial correlation</em></h2>
 
 <img data-src="libs/partial-cor.png" class="quarto-figure quarto-figure-center r-stretch" style="width:50.0%"></section>
-<section id="metrik-variabel-standardized-vs-unstandardized" class="slide level2">
-<h2>Metrik variabel (<em>standardized</em> vs <em>unstandardized</em>)</h2>
+<section id="parameter-model-standardized-vs-unstandardized" class="slide level2">
+<h2>Parameter model (<em>standardized</em> vs <em>unstandardized</em>)</h2>
 <ul>
-<li><em>Unstandardized solution/estimates</em>
+<li class="fragment"><em>Unstandardized solution/estimates</em>
 <ul>
-<li>Dapat <strong>dibandingkan</strong> antar kelompok sampel</li>
-<li>Merupakan parameter yang digunakan oleh perangkat lunak untuk menghitung <em>standard error</em> dan <em>taraf signifikansi (p-value)</em></li>
-<li>Membandingkan <em>unstandardised factor loading</em> <strong>harus melihat <em>standard error</em>nya juga</strong></li>
+<li class="fragment">Dapat <strong>dibandingkan</strong> antar kelompok sampel</li>
+<li class="fragment">Merupakan parameter yang digunakan oleh perangkat lunak untuk menghitung <em>standard error</em> dan <em>taraf signifikansi (p-value)</em></li>
+<li class="fragment">Membandingkan <em>unstandardized factor loading</em> <strong>harus melihat <em>standard error</em>nya juga</strong></li>
 </ul></li>
-<li><em>Standardized solution/estimates</em>
+<li class="fragment"><em>Standardized solution/estimates</em>
 <ul>
-<li>Hanya <em>interpretable</em> untuk kelompok sampel yang diuji — tidak bisa dibandingkan dengan kelompok sampel yang lain.</li>
-<li>Berguna untuk membandingkan <em>factor loading</em> antar-variabel di dalam model</li>
-<li>Apabila variabel dalam model memiliki unit pengukuran yang berbeda, maka <em>standardized estimates</em> akan sangat membantu</li>
+<li class="fragment">Hanya <em>interpretable</em> untuk kelompok sampel yang diuji — tidak bisa dibandingkan dengan kelompok sampel yang lain.</li>
+<li class="fragment">Berguna untuk membandingkan <em>factor loading</em> antar-variabel di dalam model</li>
+<li class="fragment">Apabila variabel dalam model memiliki unit pengukuran yang berbeda, maka <em>standardized estimates</em> akan sangat membantu</li>
 </ul></li>
-<li>Ada banyak perbedaan pendapat mengenai metrik mana yang harus dilaporkan, tetapi…
+<li class="fragment">Ada banyak perbedaan pendapat mengenai parameter mana yang harus dilaporkan, tetapi…
 <ul>
-<li><strong>Selalu laporkan <em>unstandardized solution/estimates</em> dan <em>standard error</em>nya</strong></li>
+<li class="fragment"><strong>Selalu laporkan <em>unstandardized solution/estimates</em> dan <em>standard error</em>nya</strong></li>
 </ul></li>
 </ul>
 </section>
@@ -403,7 +409,7 @@ Rizqy Amelia Zein
 </div>
 
 
-</section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -593,7 +599,7 @@ Rizqy Amelia Zein
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -761,13 +767,14 @@ Rizqy Amelia Zein
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

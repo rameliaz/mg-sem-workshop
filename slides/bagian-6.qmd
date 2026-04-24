@@ -32,14 +32,17 @@ execute:
 
 ## *Multigroup* SEM: untuk apa?
 
-* *Invariance* {{< fa circle-arrow-right >}} apakah dalam kondisi yang beragam ketika melakukan pengukuran, alat ukur selalu mengukur atribut ukur yang sama
+::: {.incremental}
 
-* *Measurement invariance* {{< fa circle-arrow-right >}} dua atau lebih kelompok memiliki model pengukuran yang sama, yaitu variabel laten dalam model pengukuran adalah konstruk yang sama
+* *Invariance* {{< fa circle-arrow-right >}} apakah dalam kondisi di subkelompok yang beragam ketika melakukan pengukuran, alat ukur selalu mengukur atribut ukur yang sama
 
-* Ketika membandingkan model pengukuran di dua atau lebih kelompok yang berbeda, untuk menyimpulkan terjadinya *invariance*, maka peneliti akan menginginkan *chi-square* (*X*^2^) yang *p-value*nya ≤ α
+* *Measurement invariance* {{< fa circle-arrow-right >}} dua atau lebih kelompok memiliki properti psikometrik yang sama, yaitu variabel laten dalam model pengukuran adalah konstruk yang sama
+
+* Ketika membandingkan model pengukuran di dua atau lebih kelompok yang berbeda, untuk menyimpulkan terjadinya *invariance*, maka peneliti akan menginginkan *chi-square* (χ²) yang *p-value*nya ≤ α
 
 * Kalau kita berniat melakukan perbandingan performa alat ukur di dua kelompok sampel yang berbeda, maka kita lebih baik menggunakan ***means-covariance matrix*** bukan *variance-covariance matrix* {{< fa circle-arrow-right >}} ingat *t-test* dan *anova*
 
+:::
 
 ## *Means* dan *intercept*
 
@@ -63,7 +66,7 @@ execute:
 :::
 :::
 
-## Jenis-jenis *measurement invariance*
+## Jenis-jenis *measurement invariance* 1️⃣
 
 * *Configural*
   - Jenis ini adalah yang paling dasar, yang mengasumsikan bahwa **model memiliki struktur yang sama** di **semua kelompok**
@@ -72,14 +75,15 @@ execute:
   - **Tidak ada ketentuan** bahwa parameter di dalam model harus setara di semua kelompok {{< fa circle-arrow-right >}} tidak ada *between-group comparison*
   - Untuk mengeksekusi *configural invariance* tinggal menambahkan `grouping variable` di `jamovi` pada bagian **options**
 
+## Jenis-jenis *measurement invariance* 2️⃣
+
 * *Weak*/*metric*
   - **_Factor loading_ harus sama** pada setiap kelompok, tetapi **varians variabel laten boleh bervariasi**
   - Dinamai *weak* karena asumsinya masih lemah untuk menyimpulkan bahwa faktor laten **ekuivalen** di semua kelompok
   - Hubungan antar variabel laten (misalnya korelasi atau regresi) bisa dibandingkan
   - Untuk mengeksekusinya di `jamovi`, klik opsi `Multi-group analysis`, tambahkan data pengelompokan di `factor for multi-group analysis` dan centang pilihan `loadings` pada `equality constraints`
 
-
-## Jenis-jenis *measurement invariance*
+## Jenis-jenis *measurement invariance* 3️⃣
 
 * *Strong*/*scalar*
   - **Selain *factor loading* harus sama**, *strong invariance* mensyaratkan **_intercept_ harus sama juga**
@@ -87,13 +91,16 @@ execute:
   - Dengan asumsi *strong invariance* ekuivalensi variabel laten lebih didukung bukti yang kuat
   - Untuk mengeksekusinya di `jamovi`, klik opsi `Multi-group analysis`, tambahkan data pengelompokan di `factor for multi-group analysis` dan centang pilihan `loadings` dan `intercepts` pada `equality constraints`
 
+## Jenis-jenis *measurement invariance* 4️⃣
+
 * *Strict*/*residuals*
   - **Selain *factor loading* dan *intercept* harus sama**, *strict invariance* mensyaratkan **_varians error_/_residual_ sama juga**
   - Biasanya asumsi ini **tidak terlalu diperlukan** untuk membandingkan variabel laten di masing-masing kelompok
   - Untuk mengeksekusinya di `jamovi`, klik opsi `Multi-group analysis`, tambahkan data pengelompokan di `factor for multi-group analysis` dan centang pilihan `loadings`, `intercepts` dan `residuals` pada `equality constraints`
 
-
 ## Jenis-jenis *measurement invariance*
+
+::: {.incremental}
 
 * Homogenitas varians variabel laten
   - Untuk melihat apakah **varians variabel laten setara** di masing-masing kelompok
@@ -105,19 +112,24 @@ execute:
   - Prosedur yang sama dengan `anova` atau `t-test`
   - Untuk mengeksekusinya klik opsi `Multi-group analysis`, tambahkan data pengelompokan di `factor for multi-group analysis` dan centang pilihan `means` pada `equality constraints`
 
+:::
 
 ## Evaluasi *measurement invariance*
 
 #### Umumnya ada dua cara yaitu
 
+::: {.incremental}
+
 * **Pendekatan statistik**
   - Karena struktur data yang hirarkis, maka untuk mengevaluasi *invariance* perlu beberapa langkah
-  - Dalam pendekatan statistik, peneliti dapat mengevaluasi **perubahan *X*^2^** (Δ*X*^2^) ketika membandingkan model antar kelompok
-  - Seharusnya ketika pembatasan model ditambah, maka Δ*X*^2^ tidak signifikan, sehingga seharusnya *p-value* dari Δ*X*^2^ > α (misalnya 0.05)
+  - Dalam pendekatan statistik, peneliti dapat mengevaluasi **perubahan χ²** (Δχ²) ketika membandingkan model antar kelompok
+  - Seharusnya ketika *constraint* model ditambah, maka Δχ² tidak signifikan, sehingga diperoleh *p-value* dari Δχ² > α (misalnya 0.05)
 
 * **Pendekatan *modeling***
   - Pendekatan *modeling* menggunakan *approximate fit indices* (AFI) untuk menyimpulkan *invariance*
-  - Yang bisa digunakan adalah *comparative fit index* (CFI) dan *McDonald's noncentrality fit index* (MFI), sehingga ketika **keduanya mendekati 1**, kita dapat simpulkan *invariance* ✅
+  - Yang bisa digunakan adalah *comparative fit index* (CFI) dan *McDonald's noncentrality fit index* (MFI), sehingga ketika **perubahan (Δ) CFI dan MFI antar model sangat kecil** (ΔCFI ≤ 0.01; [Cheung & Rensvold, 2002](https://doi.org/10.1177/1094428102005002005)), kita dapat simpulkan model *invariance* ✅
+
+:::
 
 ## Perbandingannya
 
