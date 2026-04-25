@@ -95,7 +95,7 @@
     "href": "slides/bagian-4.html#outline",
     "title": "Confirmatory Factor Analysis (CFA)",
     "section": "Outline",
-    "text": "Outline\n\nDefinisi factor analysis\nExploratory vs confirmatory factor analysis\nKapan menggunakan CFA?\nConstraining parameter model\nModel pengukuran (paralel, tau equivalence, dan congeneric)\nVariabel indikator (reflektif vs formatif)\nCorrelated error variances\nMetode estimasi\nMenuliskan hasil analisis CFA dalam laporan penelitian"
+    "text": "Outline\n\nDefinisi factor analysis\nExploratory vs confirmatory factor analysis\nKapan menggunakan CFA?\nConstraining parameter model\nModel pengukuran (paralel, tau equivalence, dan congeneric)\nVariabel indikator (reflektif vs formatif)\nCorrelated error variances\nMetode estimasi\nAverage Variance Extracted (AVE) dan validitas diskriminan\nMenuliskan hasil analisis CFA dalam laporan penelitian"
   },
   {
     "objectID": "slides/bagian-4.html#analisis-faktor",
@@ -201,6 +201,34 @@
     "title": "Confirmatory Factor Analysis (CFA)",
     "section": "Memilih metode estimasi",
     "text": "Memilih metode estimasi\n\nMaximum Likelihood  distribusi data (multivariate) normal, level pengukuran harus interval/continuous, tidak ada data missing\n\nGunakan Robust Maximum Likelihood (MLR) ketika asumsi multivariate normality tidak terpenuhi\n\nGeneralized-least squares  menggunakan asumsi yang sama dengan ML namun performanya kurang baik apabila dibandingkan dengan ML\nWeighted-least squares  dapat digunakan pada data kategorikal (nominal dan ordinal), estimasi menggunakan polychoric correlation matrix. Varian WLS, misalnya: WLSM, WLSMV, WLSMVS.\nDiagonally weighted-least squares  dapat digunakan pada data kategorikal, bekerja dengan baik pada sampel yang relatif kecil dan data yang tidak berdistribusi normal\n\n\n\n\n\n\n\nTips memilih estimator\n\n\nUntuk skala Likert dengan 6–7 pilihan, dengan respons yang relatif simetris, MLR sudah baik performanya. Untuk skala Likert 4 pilihan dengan distribusi yang sangat juling (skew), WLSMV merupakan pilihan yang lebih aman (Rhemtulla, Brosseau-Liard & Savalei, 2012)."
+  },
+  {
+    "objectID": "slides/bagian-4.html#average-variance-extracted-ave",
+    "href": "slides/bagian-4.html#average-variance-extracted-ave",
+    "title": "Confirmatory Factor Analysis (CFA)",
+    "section": "Average Variance Extracted (AVE)",
+    "text": "Average Variance Extracted (AVE)\n\nAVE mengukur seberapa besar varians pada variabel indikator yang dijelaskan oleh faktor laten, dibandingkan dengan varians yang berasal dari error\nFormula AVE (dengan λᵢ = standardized factor loading tiap indikator):\n\n\\[AVE = \\frac{\\sum \\lambda_i^2}{\\sum \\lambda_i^2 + \\sum (1 - \\lambda_i^2)}\\]\n\nIntinya: dari seluruh varians indikator, berapa proporsinya yang merupakan benar-benar “sinyal” dari konstruk dan bukan noise?\nKriteria  AVE ≥ 0.50 (Fornell & Larcker, 1981)\n\nAVE &lt; 0.50 berarti error variance lebih besar daripada construct variance  validitas konvergen tidak terpenuhi"
+  },
+  {
+    "objectID": "slides/bagian-4.html#ave-vs.-composite-reliability-cr",
+    "href": "slides/bagian-4.html#ave-vs.-composite-reliability-cr",
+    "title": "Confirmatory Factor Analysis (CFA)",
+    "section": "AVE vs. Composite Reliability (CR)",
+    "text": "AVE vs. Composite Reliability (CR)\n\n\n\n\n\n\n\n\n\nAVE\nComposite Reliability\n\n\n\n\nYang diukur\nRasio sinyal-terhadap-total per indikator\nKonsistensi internal skala\n\n\nSensitif terhadap\nLoading rendah sangat menekan nilai AVE\nKurang sensitif — loading tinggi dapat mengompensasi\n\n\nKriteria\n≥ 0.50\n≥ 0.70\n\n\nKegunaan utama\nValiditas konvergen & diskriminan\nReliabilitas (alternatif Cronbach’s α)\n\n\n\n\n\n\n\n\n\nCR tinggi belum tentu AVE tinggi\n\n\nSkala dengan loading sedang (misalnya semua λ = 0.60, 5 item) bisa menghasilkan CR ≈ 0.78 namun AVE ≈ 0.36. CR fokus pada “apakah item-item saling berkaitan?”; AVE fokus pada “apakah item-item benar-benar mewakili konstruknya?”"
+  },
+  {
+    "objectID": "slides/bagian-4.html#validitas-diskriminan-kriteria-fornell-larcker",
+    "href": "slides/bagian-4.html#validitas-diskriminan-kriteria-fornell-larcker",
+    "title": "Confirmatory Factor Analysis (CFA)",
+    "section": "Validitas Diskriminan: Kriteria Fornell-Larcker",
+    "text": "Validitas Diskriminan: Kriteria Fornell-Larcker\n\nSelain validitas konvergen, AVE juga digunakan untuk menguji validitas diskriminan — apakah setiap konstruk benar-benar berbeda dari konstruk lainnya\nKriteria Fornell-Larcker: AVE setiap konstruk harus lebih besar dari kuadrat korelasi antara konstruk tersebut dengan konstruk lain mana pun\n\n\\[AVE_A &gt; r^2_{AB} \\quad \\text{dan} \\quad AVE_B &gt; r^2_{AB}\\]\n\nArtinya: konstruk A berbagi lebih banyak varians dengan indikatornya sendiri daripada dengan konstruk B\nApabila kriteria ini tidak terpenuhi  kemungkinan dua konstruk terlalu mirip dan tidak dapat dibedakan secara empiris\n\n\n\n\n\n\n\nCara membaca tabel Fornell-Larcker\n\n\nLetakkan √AVE tiap konstruk di diagonal tabel korelasi antar-konstruk. Validitas diskriminan terpenuhi apabila nilai diagonal (√AVE) lebih besar dari semua nilai di baris dan kolom yang sama."
+  },
+  {
+    "objectID": "slides/bagian-4.html#contoh-sintaks-lavaan-menghitung-ave",
+    "href": "slides/bagian-4.html#contoh-sintaks-lavaan-menghitung-ave",
+    "title": "Confirmatory Factor Analysis (CFA)",
+    "section": "Contoh Sintaks lavaan: Menghitung AVE",
+    "text": "Contoh Sintaks lavaan: Menghitung AVE\nSetelah menjalankan model CFA, AVE dapat dihitung dari standardized loading:\n\nlibrary(lavaan)\n\nfit &lt;- cfa(model, data = data_anda, estimator = \"MLR\")\n\n# Ambil standardized loading\nsl &lt;- lavInspect(fit, \"std\")$lambda\n\n# Hitung AVE per faktor\nave &lt;- apply(sl, 2, function(x) {\n  x2 &lt;- x[x != 0]^2\n  sum(x2) / (sum(x2) + sum(1 - x2))\n})\n\nave\n\n\n\n\n\n\n\nTips\n\n\nPaket semTools menyediakan fungsi reliability() yang menghitung AVE dan CR sekaligus dalam satu langkah."
   },
   {
     "objectID": "slides/bagian-4.html#latihan-mandiri-4-mencoba-confirmatory-factor-analysis",

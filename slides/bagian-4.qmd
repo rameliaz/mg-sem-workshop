@@ -27,6 +27,7 @@ execute:
 * Variabel indikator (reflektif vs formatif)
 * *Correlated error variances*
 * Metode estimasi
+* *Average Variance Extracted* (AVE) dan validitas diskriminan
 * Menuliskan hasil analisis CFA dalam laporan penelitian
 
 ## Analisis faktor
@@ -234,6 +235,86 @@ Ada tiga macam model pengukuran:
 ::: {.callout-tip}
 #### Tips memilih estimator
 Untuk **skala _Likert_ dengan 6–7 pilihan**, dengan respons yang relatif simetris, **MLR sudah baik performanya**. Untuk **skala _Likert_ 4 pilihan** dengan distribusi yang sangat juling (_skew_), **WLSMV merupakan pilihan yang lebih aman** ([Rhemtulla, Brosseau-Liard & Savalei](https://psycnet.apa.org/record/2012-18631-001), 2012).
+:::
+
+## *Average Variance Extracted* (AVE)
+
+::: {.incremental}
+
+* AVE mengukur **seberapa besar varians pada variabel indikator yang dijelaskan oleh faktor laten**, dibandingkan dengan varians yang berasal dari *error*
+
+* Formula AVE (dengan λᵢ = *standardized factor loading* tiap indikator):
+
+$$AVE = \frac{\sum \lambda_i^2}{\sum \lambda_i^2 + \sum (1 - \lambda_i^2)}$$
+
+* Intinya: dari seluruh varians indikator, berapa proporsinya yang merupakan benar-benar "sinyal" dari konstruk dan bukan *noise*?
+
+* **Kriteria** {{< fa circle-arrow-right >}} AVE ≥ 0.50 ([Fornell & Larcker, 1981](https://doi.org/10.2307/3151312))
+  - AVE < 0.50 berarti *error variance* lebih besar daripada *construct variance* {{< fa circle-arrow-right >}} validitas konvergen **tidak terpenuhi**
+
+:::
+
+## AVE vs. *Composite Reliability* (CR)
+
+| | AVE | *Composite Reliability* |
+| :--- | :--- | :--- |
+| **Yang diukur** | Rasio sinyal-terhadap-total per indikator | Konsistensi internal skala |
+| **Sensitif terhadap** | *Loading* rendah sangat menekan nilai AVE | Kurang sensitif — *loading* tinggi dapat mengompensasi |
+| **Kriteria** | ≥ 0.50 | ≥ 0.70 |
+| **Kegunaan utama** | Validitas konvergen & diskriminan | Reliabilitas (alternatif Cronbach's α) |
+
+: {tbl-colwidths="[30,35,35]"}
+
+::: {.callout-warning}
+#### CR tinggi belum tentu AVE tinggi
+Skala dengan *loading* sedang (misalnya semua λ = 0.60, 5 item) bisa menghasilkan CR ≈ 0.78 namun AVE ≈ 0.36. CR fokus pada *"apakah item-item saling berkaitan?"*; AVE fokus pada *"apakah item-item benar-benar mewakili konstruknya?"*
+:::
+
+## Validitas Diskriminan: Kriteria Fornell-Larcker
+
+::: {.incremental}
+
+* Selain validitas konvergen, AVE juga digunakan untuk menguji **validitas diskriminan** — apakah setiap konstruk benar-benar berbeda dari konstruk lainnya
+
+* **Kriteria Fornell-Larcker**: AVE setiap konstruk harus **lebih besar** dari kuadrat korelasi antara konstruk tersebut dengan konstruk lain mana pun
+
+$$AVE_A > r^2_{AB} \quad \text{dan} \quad AVE_B > r^2_{AB}$$
+
+* Artinya: konstruk A **berbagi lebih banyak varians dengan indikatornya sendiri** daripada dengan konstruk B
+
+* Apabila kriteria ini tidak terpenuhi {{< fa circle-arrow-right >}} kemungkinan dua konstruk terlalu mirip dan **tidak dapat dibedakan** secara empiris
+
+:::
+
+::: {.callout-tip}
+#### Cara membaca tabel Fornell-Larcker
+Letakkan √AVE tiap konstruk di diagonal tabel korelasi antar-konstruk. Validitas diskriminan terpenuhi apabila **nilai diagonal (√AVE) lebih besar dari semua nilai di baris dan kolom yang sama**.
+:::
+
+## Contoh Sintaks `lavaan`: Menghitung AVE
+
+Setelah menjalankan model CFA, AVE dapat dihitung dari *standardized loading*:
+
+```{r}
+library(lavaan)
+
+fit <- cfa(model, data = data_anda, estimator = "MLR")
+
+# Ambil standardized loading
+sl <- lavInspect(fit, "std")$lambda
+
+# Hitung AVE per faktor
+ave <- apply(sl, 2, function(x) {
+  x2 <- x[x != 0]^2
+  sum(x2) / (sum(x2) + sum(1 - x2))
+})
+
+ave
+```
+
+::: {.callout-note}
+#### Tips
+Paket `semTools` menyediakan fungsi `reliability()` yang menghitung AVE dan CR sekaligus dalam satu langkah.
 :::
 
 # Demonstrasi CFA {background-color="#14497F" .center}
