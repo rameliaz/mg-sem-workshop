@@ -291,30 +291,33 @@ $$AVE_A > r^2_{AB} \quad \text{dan} \quad AVE_B > r^2_{AB}$$
 Letakkan √AVE tiap konstruk di diagonal tabel korelasi antar-konstruk. Validitas diskriminan terpenuhi apabila **nilai diagonal (√AVE) lebih besar dari semua nilai di baris dan kolom yang sama**.
 :::
 
-## Contoh Sintaks `lavaan`: Menghitung AVE
+## Contoh *syntax* `semTools`{{< fa brands r-project >}}: Menghitung AVE
 
-Setelah menjalankan model CFA, AVE dapat dihitung dari *standardized loading*:
+Setelah menjalankan model CFA, gunakan `semTools::reliability()` untuk menghitung AVE dan CR sekaligus:
 
 ```{r}
 library(lavaan)
+library(semTools)
 
 fit <- cfa(model, data = data_anda, estimator = "MLR")
 
-# Ambil standardized loading
-sl <- lavInspect(fit, "std")$lambda
-
-# Hitung AVE per faktor
-ave <- apply(sl, 2, function(x) {
-  x2 <- x[x != 0]^2
-  sum(x2) / (sum(x2) + sum(1 - x2))
-})
-
-ave
+reliability(fit)
 ```
 
-::: {.callout-note}
-#### Tips
-Paket `semTools` menyediakan fungsi `reliability()` yang menghitung AVE dan CR sekaligus dalam satu langkah.
+Output yang dihasilkan mencakup baris-baris berikut:
+
+| Baris output | Keterangan |
+| :--- | :--- |
+| `alpha` | Cronbach's α (mengasumsikan *tau equivalence*) |
+| `omega` | McDonald's ω (*congeneric*) |
+| `omega2` / `omega3` | Varian ω untuk model yang lebih kompleks |
+| **`ave`** | **AVE per faktor laten** |
+
+: {tbl-colwidths="[30,70]"}
+
+::: {.callout-tip}
+#### `jamovi` menyediakan perhitungan AVE + *composite reliability*
+Karena `SEMLj` juga menggunakan `semTools`, maka AVE tersedia bersama *composite reliability*.
 :::
 
 # Demonstrasi CFA {background-color="#14497F" .center}

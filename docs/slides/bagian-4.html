@@ -548,35 +548,58 @@ Rizqy Amelia Zein
 </div>
 </div>
 </section>
-<section id="contoh-sintaks-lavaan-menghitung-ave" class="slide level2">
-<h2>Contoh Sintaks <code>lavaan</code>: Menghitung AVE</h2>
-<p>Setelah menjalankan model CFA, AVE dapat dihitung dari <em>standardized loading</em>:</p>
+<section id="contoh-syntax-semtoolsb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206272616e647320722d70726f6a656374203e7d7d-menghitung-ave" class="slide level2">
+<h2>Contoh <em>syntax</em> <code>semTools</code><i class="fa-brands fa-r-project" aria-label="r-project"></i>: Menghitung AVE</h2>
+<p>Setelah menjalankan model CFA, gunakan <code>semTools::reliability()</code> untuk menghitung AVE dan CR sekaligus:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(lavaan)</span>
-<span id="cb1-2"><a></a></span>
-<span id="cb1-3"><a></a>fit <span class="ot">&lt;-</span> <span class="fu">cfa</span>(model, <span class="at">data =</span> data_anda, <span class="at">estimator =</span> <span class="st">"MLR"</span>)</span>
-<span id="cb1-4"><a></a></span>
-<span id="cb1-5"><a></a><span class="co"># Ambil standardized loading</span></span>
-<span id="cb1-6"><a></a>sl <span class="ot">&lt;-</span> <span class="fu">lavInspect</span>(fit, <span class="st">"std"</span>)<span class="sc">$</span>lambda</span>
-<span id="cb1-7"><a></a></span>
-<span id="cb1-8"><a></a><span class="co"># Hitung AVE per faktor</span></span>
-<span id="cb1-9"><a></a>ave <span class="ot">&lt;-</span> <span class="fu">apply</span>(sl, <span class="dv">2</span>, <span class="cf">function</span>(x) {</span>
-<span id="cb1-10"><a></a>  x2 <span class="ot">&lt;-</span> x[x <span class="sc">!=</span> <span class="dv">0</span>]<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb1-11"><a></a>  <span class="fu">sum</span>(x2) <span class="sc">/</span> (<span class="fu">sum</span>(x2) <span class="sc">+</span> <span class="fu">sum</span>(<span class="dv">1</span> <span class="sc">-</span> x2))</span>
-<span id="cb1-12"><a></a>})</span>
-<span id="cb1-13"><a></a></span>
-<span id="cb1-14"><a></a>ave</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-2"><a></a><span class="fu">library</span>(semTools)</span>
+<span id="cb1-3"><a></a></span>
+<span id="cb1-4"><a></a>fit <span class="ot">&lt;-</span> <span class="fu">cfa</span>(model, <span class="at">data =</span> data_anda, <span class="at">estimator =</span> <span class="st">"MLR"</span>)</span>
+<span id="cb1-5"><a></a></span>
+<span id="cb1-6"><a></a><span class="fu">reliability</span>(fit)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div class="callout callout-note callout-titled callout-style-default">
+<p>Output yang dihasilkan mencakup baris-baris berikut:</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 70%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Baris output</th>
+<th style="text-align: left;">Keterangan</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>alpha</code></td>
+<td style="text-align: left;">Cronbach’s α (mengasumsikan <em>tau equivalence</em>)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>omega</code></td>
+<td style="text-align: left;">McDonald’s ω (<em>congeneric</em>)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>omega2</code> / <code>omega3</code></td>
+<td style="text-align: left;">Varian ω untuk model yang lebih kompleks</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong><code>ave</code></strong></td>
+<td style="text-align: left;"><strong>AVE per faktor laten</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Tips</strong></p>
+<p><strong><code>jamovi</code> menyediakan perhitungan AVE + <em>composite reliability</em></strong></p>
 </div>
 <div class="callout-content">
-<p>Paket <code>semTools</code> menyediakan fungsi <code>reliability()</code> yang menghitung AVE dan CR sekaligus dalam satu langkah.</p>
+<p>Karena <code>SEMLj</code> juga menggunakan <code>semTools</code>, maka AVE tersedia bersama <em>composite reliability</em>.</p>
 </div>
 </div>
 </div>

@@ -74,6 +74,7 @@ Untuk menggambar diagram jalur, peserta dapat menggunakan MS Power Point, Canva,
 * Variabel indikator (reflektif vs formatif)
 * *Correlated error variances*
 * Metode estimasi
+* _Average variance extracted_ (AVE)
 * Menuliskan hasil analisis CFA dalam laporan penelitian
 
 ::: {.callout-important}
