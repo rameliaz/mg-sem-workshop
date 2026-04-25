@@ -256,7 +256,7 @@ $$AVE = \frac{\sum \lambda_i^2}{\sum \lambda_i^2 + \sum (1 - \lambda_i^2)}$$
 
 ## AVE vs. *Composite Reliability* (CR)
 
-| | AVE | *Composite Reliability* |
+| | AVE | CR |
 | :--- | :--- | :--- |
 | **Yang diukur** | Rasio sinyal-terhadap-total per indikator | Konsistensi internal skala |
 | **Sensitif terhadap** | *Loading* rendah sangat menekan nilai AVE | Kurang sensitif — *loading* tinggi dapat mengompensasi |
@@ -270,7 +270,7 @@ $$AVE = \frac{\sum \lambda_i^2}{\sum \lambda_i^2 + \sum (1 - \lambda_i^2)}$$
 Skala dengan *loading* sedang (misalnya semua λ = 0.60, 5 item) bisa menghasilkan CR ≈ 0.78 namun AVE ≈ 0.36. CR fokus pada *"apakah item-item saling berkaitan?"*; AVE fokus pada *"apakah item-item benar-benar mewakili konstruknya?"*
 :::
 
-## Validitas Diskriminan: Kriteria Fornell-Larcker
+## Validitas Diskriminan
 
 ::: {.incremental}
 
@@ -291,20 +291,22 @@ $$AVE_A > r^2_{AB} \quad \text{dan} \quad AVE_B > r^2_{AB}$$
 Letakkan √AVE tiap konstruk di diagonal tabel korelasi antar-konstruk. Validitas diskriminan terpenuhi apabila **nilai diagonal (√AVE) lebih besar dari semua nilai di baris dan kolom yang sama**.
 :::
 
-## Contoh *syntax* `semTools`{{< fa brands r-project >}}: Menghitung AVE
+## Menggunakan `semTools`{{< fa brands r-project >}} untuk menghitung AVE
 
 Setelah menjalankan model CFA, gunakan `semTools::reliability()` untuk menghitung AVE dan CR sekaligus:
 
 ```{r}
-library(lavaan)
-library(semTools)
+#| eval: false
+library(lavaan); library(semTools)
 
 fit <- cfa(model, data = data_anda, estimator = "MLR")
 
 reliability(fit)
 ```
 
-Output yang dihasilkan mencakup baris-baris berikut:
+## Menggunakan `semTools`{{< fa brands r-project >}} untuk menghitung AVE
+
+Output yang dihasilkan mencakup informasi berikut ini:
 
 | Baris output | Keterangan |
 | :--- | :--- |
