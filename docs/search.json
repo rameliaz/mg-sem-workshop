@@ -675,29 +675,29 @@
     "objectID": "slides/bagian-3.html#contoh-cfa-1",
     "href": "slides/bagian-3.html#contoh-cfa-1",
     "title": "Model Jalur",
-    "section": "Contoh CFA (1)",
-    "text": "Contoh CFA (1)\n\n\n# CFA\ntrust =~ trust1 + trust2 + trust3 + trust4 + trust5\n\n# Measurement error (residual)\n# Bagian ini biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit\ntrust1 ~~ trust1\ntrust2 ~~ trust2\ntrust3 ~~ trust3\ntrust4 ~~ trust4\ntrust5 ~~ trust5\ntrust ~~ trust"
+    "section": "Contoh CFA 1️⃣",
+    "text": "Contoh CFA 1️⃣\n\n\n# CFA\ntrust =~ trust1 + trust2 + trust3 + trust4 + trust5\n\n# Measurement error (residual)\n# Residual biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit\ntrust1 ~~ trust1\ntrust2 ~~ trust2\ntrust3 ~~ trust3\ntrust4 ~~ trust4\ntrust5 ~~ trust5\ntrust ~~ trust"
   },
   {
     "objectID": "slides/bagian-3.html#contoh-cfa-2",
     "href": "slides/bagian-3.html#contoh-cfa-2",
     "title": "Model Jalur",
-    "section": "Contoh CFA (2)",
-    "text": "Contoh CFA (2)\n\n\n# CFA\nmandiri =~ mandiri1 + mandiri2 + mandiri3 + mandiri4\n\n# Measurement error (residual)\n# Bagian ini biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit\nmandiri1 ~~ mandiri1\nmandiri2 ~~ mandiri2\nmandiri3 ~~ mandiri3\nmandiri4 ~~ mandiri4\nmandiri ~~ mandiri"
+    "section": "Contoh CFA 2️⃣",
+    "text": "Contoh CFA 2️⃣\n\n\n# CFA\nmandiri =~ mandiri1 + mandiri2 + mandiri3 + mandiri4\n\n# Measurement error (residual)\n# Residual biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit\nmandiri1 ~~ mandiri1\nmandiri2 ~~ mandiri2\nmandiri3 ~~ mandiri3\nmandiri4 ~~ mandiri4\nmandiri ~~ mandiri"
   },
   {
-    "objectID": "slides/bagian-3.html#contoh-path-analysis-3",
-    "href": "slides/bagian-3.html#contoh-path-analysis-3",
+    "objectID": "slides/bagian-3.html#contoh-path-analysis",
+    "href": "slides/bagian-3.html#contoh-path-analysis",
     "title": "Model Jalur",
-    "section": "Contoh path analysis (3)",
-    "text": "Contoh path analysis (3)\n\n\n# Model Struktural\nmandiri ~ trust\n\n# Measurement error (residual)\n# Bagian ini biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit\nmandiri ~~ mandiri\ntrust ~~ trust"
+    "section": "Contoh path analysis",
+    "text": "Contoh path analysis\n\n\n# Model Struktural\nmandiri ~ trust\n\n# Measurement error (residual)\n# Bagian ini biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit\nmandiri ~~ mandiri\ntrust ~~ trust"
   },
   {
-    "objectID": "slides/bagian-3.html#contoh-full-model-4",
-    "href": "slides/bagian-3.html#contoh-full-model-4",
+    "objectID": "slides/bagian-3.html#contoh-full-model",
+    "href": "slides/bagian-3.html#contoh-full-model",
     "title": "Model Jalur",
-    "section": "Contoh full model (4)",
-    "text": "Contoh full model (4)\n\n\n# CFA\nmandiri =~ mandiri1 + mandiri2 + mandiri3 + mandiri4\ntrust =~ trust1 + trust2 + trust3 + trust4 + trust5\n\n# Measurement error (residual)\nmandiri1 ~~ mandiri1\nmandiri2 ~~ mandiri2\nmandiri3 ~~ mandiri3\nmandiri4 ~~ mandiri4\n\ntrust1 ~~ trust1\ntrust2 ~~ trust2\ntrust3 ~~ trust3\ntrust4 ~~ trust4\ntrust5 ~~ trust5\n\ntrust ~~ trust\nmandiri ~~ mandiri\n\n# Model Struktural\nmandiri ~ trust"
+    "section": "Contoh full model",
+    "text": "Contoh full model\n\n\n# CFA\nmandiri =~ mandiri1 + mandiri2 + mandiri3 + mandiri4\ntrust =~ trust1 + trust2 + trust3 + trust4 + trust5\n\n# Model Struktural\nmandiri ~ trust\n\n# Measurement error (residual)\n# Residual biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit\nmandiri1 ~~ mandiri1\nmandiri2 ~~ mandiri2\nmandiri3 ~~ mandiri3\nmandiri4 ~~ mandiri4\ntrust1 ~~ trust1\ntrust2 ~~ trust2\ntrust3 ~~ trust3\ntrust4 ~~ trust4\ntrust5 ~~ trust5\ntrust ~~ trust\nmandiri ~~ mandiri"
   },
   {
     "objectID": "slides/bagian-3.html#latihan-mandiri-3-menulis-syntax-lavaan",

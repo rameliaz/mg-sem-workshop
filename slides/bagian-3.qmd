@@ -4,7 +4,7 @@ subtitle: "_Multigroup Structural Equation Modeling_: Bagian 3️⃣"
 author: "Rizqy Amelia Zein"
 institute:
   - "[_Departemen Psikologi, Universitas Airlangga_](https://psikologi.unair.ac.id/dosen-rizqy-amelia-zein/)"
-  - "[Research Data & Methods Team, Center for Advanced Internet Studies](https://www.cais-research.de/team/rizqy-amelia-zein/)"
+  - "[_Research Data & Methods Team, Center for Advanced Internet Studies_](https://www.cais-research.de/team/rizqy-amelia-zein/)"
 date: today
 format:
   unair-revealjs:
@@ -164,7 +164,7 @@ Anda bisa menggunakan MS Power Point atau *software* yang lain (misalnya, [draw.
 ::: {.incremental}
 
 * `GAMLj` menyediakan dua opsi: fitur _syntax_ atau _interactive_
-  - Kalau memilih fitur _interactive_, maka tampilan antarmukanya berupa _drag & drop_ (seperti SPSS).
+  - Kalau memilih fitur _interactive_, maka tampilan antarmukanya berupa _drag & drop_ (seperti `SPSS`).
   - Untuk fitur _syntax_, maka tampilan antarmukanya meminta pengguna untuk menspesifikasi model dengan _syntax_.
 
 * `jamovi` dan `JASP` mengadopsi *syntax* dari {{< fa brands r-project >}} *package* [`lavaan`](http://lavaan.ugent.be/tutorial/index.html), sehingga untuk menspesifikasi model, kita harus memasukkan **serangkaian perintah**.
@@ -185,7 +185,7 @@ Anda bisa menggunakan MS Power Point atau *software* yang lain (misalnya, [draw.
 Baujean, A.A. (2014). Latent Variable Modeling Using R: A step-by-step guide. New York: Routledge.
 :::
 
-## Contoh CFA (1)
+## Contoh CFA 1️⃣
 
 ![](libs/path-1.png){fig-align="center" width="80%"}
 
@@ -196,7 +196,7 @@ Baujean, A.A. (2014). Latent Variable Modeling Using R: A step-by-step guide. Ne
 trust =~ trust1 + trust2 + trust3 + trust4 + trust5
 
 # Measurement error (residual)
-# Bagian ini biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit
+# Residual biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit
 trust1 ~~ trust1
 trust2 ~~ trust2
 trust3 ~~ trust3
@@ -205,7 +205,7 @@ trust5 ~~ trust5
 trust ~~ trust
 ```
 
-## Contoh CFA (2)
+## Contoh CFA 2️⃣
 
 ![](libs/path-2.png){fig-align="center" width="80%"}
 
@@ -216,7 +216,7 @@ trust ~~ trust
 mandiri =~ mandiri1 + mandiri2 + mandiri3 + mandiri4
 
 # Measurement error (residual)
-# Bagian ini biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit
+# Residual biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit
 mandiri1 ~~ mandiri1
 mandiri2 ~~ mandiri2
 mandiri3 ~~ mandiri3
@@ -224,7 +224,7 @@ mandiri4 ~~ mandiri4
 mandiri ~~ mandiri
 ```
 
-## Contoh *path analysis* (3)
+## Contoh *path analysis*
 
 ![](libs/path-3.png){fig-align="center" width="80%"}
 
@@ -240,7 +240,7 @@ mandiri ~~ mandiri
 trust ~~ trust
 ```
 
-## Contoh *full model* (4)
+## Contoh *full model*
 
 ![](libs/contoh-path.png){fig-align="center" width="80%"}
 
@@ -251,23 +251,22 @@ trust ~~ trust
 mandiri =~ mandiri1 + mandiri2 + mandiri3 + mandiri4
 trust =~ trust1 + trust2 + trust3 + trust4 + trust5
 
+# Model Struktural
+mandiri ~ trust
+
 # Measurement error (residual)
+# Residual biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit
 mandiri1 ~~ mandiri1
 mandiri2 ~~ mandiri2
 mandiri3 ~~ mandiri3
 mandiri4 ~~ mandiri4
-
 trust1 ~~ trust1
 trust2 ~~ trust2
 trust3 ~~ trust3
 trust4 ~~ trust4
 trust5 ~~ trust5
-
 trust ~~ trust
 mandiri ~~ mandiri
-
-# Model Struktural
-mandiri ~ trust
 ```
 
 ## Latihan mandiri 3️⃣: Menulis *syntax* `lavaan`
