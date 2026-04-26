@@ -433,14 +433,15 @@ Rizqy Amelia Zein
 <section id="parsimony-index-2" class="slide level2">
 <h2><em>Parsimony index</em> 2️⃣</h2>
 <ul>
-<li><strong><em>Root Mean Square Error of Approximation</em> (RMSEA)</strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> <em>close fit</em> ketika nilainya <strong>&lt; 0.05</strong>, <em>acceptable fit</em> ketika <strong>0.05 – 0.08</strong>, <em>poor fit</em> ketika <strong>&gt; 0.10</strong>
+<li><strong><em>Root Mean Square Error of Approximation</em> (<code>RMSEA</code>)</strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> merupakan estimasi seberapa besar <em>approximation error</em> per <em>degree of freedom</em> yang diperkirakan terjadi di populasi — <em>close fit</em> ketika nilainya <strong>&lt; 0.05</strong>, <em>acceptable fit</em> ketika <strong>0.05 – 0.08</strong>, <em>poor fit</em> ketika <strong>&gt; 0.10</strong>
 <ul>
-<li><em>P-value</em> dapat digunakan untuk menguji <em>H</em><sub>0</sub>: RMSEA ≤ 0.05 (<em>close fit</em>)</li>
+<li><em>P-value</em> dapat digunakan untuk menguji <em>H</em><sub>0</sub>: <code>RMSEA</code> ≤ 0.05 (<em>close fit</em>)</li>
 <li>Oleh karena itu, <strong>gagal menolak <em>H</em><sub>0</sub></strong> (<em>p</em> &gt; 0.05) menunjukkan bahwa model “<em>close-fitting</em>”</li>
+<li><code>RMSEA</code> sangat dipengaruhi oleh kompleksitas model dan <em>sample size</em>, dan dapat menunjukkan <em>misfiting</em> bahkan untuk kesalahan spesifikasi yang kecil ketika sampelnya besar</li>
 </ul></li>
-<li><strong><em>Standardized Root Mean Square Residual</em> (SRMR)</strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> rata-rata perbedaan antara <em>observed</em> dan <em>model-implied correlation matrix</em>, nilai <strong>&lt; 0.08</strong> menunjukkan <em>acceptable fit</em>
+<li><strong><em>Standardized Root Mean Square Residual</em> (<code>SRMR</code>)</strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> akar kuadrat dari rata-rata kuadrat selisih antara <em>observed</em> dan <em>model-implied correlation matrix</em>, nilai <strong>&lt; 0.08</strong> menunjukkan <em>acceptable fit</em>
 <ul>
-<li>Penting diperhatikan karena RMSEA sensitif terhadap jumlah sampel yang besar (cenderung menolak model yang sebenarnya baik), sedangkan SRMR <strong>tidak bergantung pada jumlah sampel</strong> dan langsung mencerminkan seberapa jauh <em>implied model</em> mereproduksi data observasi</li>
+<li><code>SRMR</code> (vs.&nbsp;<code>RMSEA</code>) relatif kurang dipengaruhi oleh <em>sample size</em> dan secara langsung mencerminkan selisih rata-rata antara -<em>observed</em> dan <em>model-implied correlation matrix</em></li>
 <li><a href="https://www.tandfonline.com/doi/abs/10.1080/10705519909540118">Hu &amp; Bentler (1999)</a> merekomendasikan melaporkan <strong>keduanya</strong> (<em>dual cutoff</em>): CFI ≥ 0.95 <strong>dan</strong> SRMR ≤ 0.08</li>
 </ul></li>
 </ul>
@@ -569,6 +570,10 @@ Rizqy Amelia Zein
 <li class="fragment"><p>Dalam praktiknya, apabila hanya tersedia satu dataset, peneliti dapat membaginya secara acak menjadi tiga bagian (tiga <em>holdout sample</em>) — meskipun tentu saja ada risiko mengurangi <em>statistical power</em> di setiap tahapannya</p></li>
 </ul>
 </section>
+<section id="mari-kita-renungkan" class="slide level2">
+<h2>Mari kita renungkan 🧘</h2>
+
+<img data-src="libs/quote.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="jars-apa-apa-saja-yang-harus-dilaporkan" class="slide level2">
 <h2><a href="https://apastyle.apa.org/jars/quant-table-7.pdf">JARS APA</a>: Apa saja yang harus dilaporkan?</h2>
 <ul>

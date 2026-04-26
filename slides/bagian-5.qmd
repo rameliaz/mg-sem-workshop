@@ -262,11 +262,12 @@ execute:
 
 ## *Parsimony index* 2️⃣
 
-* ***Root Mean Square Error of Approximation* (RMSEA)** {{< fa circle-arrow-right >}} *close fit* ketika nilainya **< 0.05**, *acceptable fit* ketika **0.05 – 0.08**, *poor fit* ketika **> 0.10**
-  - *P-value* dapat digunakan untuk menguji *H*~0~: RMSEA ≤ 0.05 (*close fit*)
+* ***Root Mean Square Error of Approximation* (`RMSEA`)** {{< fa circle-arrow-right >}} merupakan estimasi seberapa besar *approximation error* per *degree of freedom* yang diperkirakan terjadi di populasi — *close fit* ketika nilainya **< 0.05**, *acceptable fit* ketika **0.05 – 0.08**, *poor fit* ketika **> 0.10**
+  - *P-value* dapat digunakan untuk menguji *H*~0~: `RMSEA` ≤ 0.05 (*close fit*)
   - Oleh karena itu, **gagal menolak *H*~0~** (*p* > 0.05) menunjukkan bahwa model "*close-fitting*"
-* ***Standardized Root Mean Square Residual* (SRMR)** {{< fa circle-arrow-right >}} rata-rata perbedaan antara *observed* dan *model-implied correlation matrix*, nilai **< 0.08** menunjukkan *acceptable fit*
-  - Penting diperhatikan karena RMSEA sensitif terhadap jumlah sampel yang besar (cenderung menolak model yang sebenarnya baik), sedangkan SRMR **tidak bergantung pada jumlah sampel** dan langsung mencerminkan seberapa jauh *implied model* mereproduksi data observasi
+  - `RMSEA` sangat dipengaruhi oleh kompleksitas model dan *sample size*, dan dapat menunjukkan *misfiting* bahkan untuk kesalahan spesifikasi yang kecil ketika sampelnya besar
+* ***Standardized Root Mean Square Residual* (`SRMR`)** {{< fa circle-arrow-right >}} akar kuadrat dari rata-rata kuadrat selisih antara *observed* dan *model-implied correlation matrix*, nilai **< 0.08** menunjukkan *acceptable fit*
+  - `SRMR` (vs. `RMSEA`) relatif kurang dipengaruhi oleh *sample size* dan secara langsung mencerminkan selisih rata-rata antara -*observed* dan *model-implied correlation matrix*
   - [Hu & Bentler (1999)](https://www.tandfonline.com/doi/abs/10.1080/10705519909540118) merekomendasikan melaporkan **keduanya** (*dual cutoff*): CFI ≥ 0.95 **dan** SRMR ≤ 0.08
 
 ## *Absolute index*
@@ -388,6 +389,10 @@ Pendekatan `findRMSEAsamplesize` dengan `semTools` di atas menguji kecocokan mod
 * Dalam praktiknya, apabila hanya tersedia satu dataset, peneliti dapat membaginya secara acak menjadi tiga bagian (tiga _holdout sample_) — meskipun tentu saja ada risiko mengurangi *statistical power* di setiap tahapannya
 
 :::
+
+## Mari kita renungkan 🧘
+
+![](libs/quote.png){fig-align="center"}
 
 ## [JARS APA](https://apastyle.apa.org/jars/quant-table-7.pdf): Apa saja yang harus dilaporkan?
 

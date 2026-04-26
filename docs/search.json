@@ -823,7 +823,7 @@
     "href": "slides/bagian-5.html#parsimony-index-2",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Parsimony index 2️⃣",
-    "text": "Parsimony index 2️⃣\n\nRoot Mean Square Error of Approximation (RMSEA)  close fit ketika nilainya &lt; 0.05, acceptable fit ketika 0.05 – 0.08, poor fit ketika &gt; 0.10\n\nP-value dapat digunakan untuk menguji H0: RMSEA ≤ 0.05 (close fit)\nOleh karena itu, gagal menolak H0 (p &gt; 0.05) menunjukkan bahwa model “close-fitting”\n\nStandardized Root Mean Square Residual (SRMR)  rata-rata perbedaan antara observed dan model-implied correlation matrix, nilai &lt; 0.08 menunjukkan acceptable fit\n\nPenting diperhatikan karena RMSEA sensitif terhadap jumlah sampel yang besar (cenderung menolak model yang sebenarnya baik), sedangkan SRMR tidak bergantung pada jumlah sampel dan langsung mencerminkan seberapa jauh implied model mereproduksi data observasi\nHu & Bentler (1999) merekomendasikan melaporkan keduanya (dual cutoff): CFI ≥ 0.95 dan SRMR ≤ 0.08"
+    "text": "Parsimony index 2️⃣\n\nRoot Mean Square Error of Approximation (RMSEA)  merupakan estimasi seberapa besar approximation error per degree of freedom yang diperkirakan terjadi di populasi — close fit ketika nilainya &lt; 0.05, acceptable fit ketika 0.05 – 0.08, poor fit ketika &gt; 0.10\n\nP-value dapat digunakan untuk menguji H0: RMSEA ≤ 0.05 (close fit)\nOleh karena itu, gagal menolak H0 (p &gt; 0.05) menunjukkan bahwa model “close-fitting”\nRMSEA sangat dipengaruhi oleh kompleksitas model dan sample size, dan dapat menunjukkan misfiting bahkan untuk kesalahan spesifikasi yang kecil ketika sampelnya besar\n\nStandardized Root Mean Square Residual (SRMR)  akar kuadrat dari rata-rata kuadrat selisih antara observed dan model-implied correlation matrix, nilai &lt; 0.08 menunjukkan acceptable fit\n\nSRMR (vs. RMSEA) relatif kurang dipengaruhi oleh sample size dan secara langsung mencerminkan selisih rata-rata antara -observed dan model-implied correlation matrix\nHu & Bentler (1999) merekomendasikan melaporkan keduanya (dual cutoff): CFI ≥ 0.95 dan SRMR ≤ 0.08"
   },
   {
     "objectID": "slides/bagian-5.html#absolute-index",
@@ -866,6 +866,13 @@
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Apakah keempat langkah bisa menggunakan dataset yang sama?",
     "text": "Apakah keempat langkah bisa menggunakan dataset yang sama?\n\nSeharusnya, tidak.\nPendekatan 4️⃣ langkah idealnya dieksekusi dengan tiga dataset yang berbeda untuk menghindari capitalization on chance — karena setiap tahap yang melibatkan respesifikasi atau modifikasi akan “menghabiskan” dataset tersebut (MacCallum, Roznowski & Necowitz, 1992):\n\nLangkah 1 (EFA)  dataset pertama: mengeksplorasi struktur faktor secara bebas. Langkah ini penting utamanya ketika model melibatkan konstruk yang belum established bukti empiriknya\nLangkah 2 (CFA)  dataset kedua: mengkonfirmasi dan merespesifikasi model pengukuran, memastikan construct validity — hasilnya (df, struktur faktor, indeks fit) menjadi dasar a priori power analysis sebelum pengujian model lengkap\nLangkah 3–4 (model struktural)  dataset ketiga: karena dataset kedua sudah “terpakai” untuk respesifikasi pengukuran, pengujian model struktural (unrestricted lalu restricted) dilakukan pada data yang benar-benar independen\n\nDalam praktiknya, apabila hanya tersedia satu dataset, peneliti dapat membaginya secara acak menjadi tiga bagian (tiga holdout sample) — meskipun tentu saja ada risiko mengurangi statistical power di setiap tahapannya"
+  },
+  {
+    "objectID": "slides/bagian-5.html#mari-kita-renungkan",
+    "href": "slides/bagian-5.html#mari-kita-renungkan",
+    "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
+    "section": "Mari kita renungkan 🧘",
+    "text": "Mari kita renungkan 🧘"
   },
   {
     "objectID": "slides/bagian-5.html#jars-apa-apa-saja-yang-harus-dilaporkan",
