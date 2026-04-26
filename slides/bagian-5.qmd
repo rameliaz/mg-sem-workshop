@@ -307,7 +307,7 @@ execute:
 
 * *Statistical power* dalam pengujian hipotesis dalam SEM {{< fa circle-arrow-right >}} peluang **menolak *H*~0~** apabila *H*~0~ **salah** (power = 1 − β)
   - Peluang peneliti secara tepat menyimpulkan bahwa **ada perbedaan antara *implied model* dengan *observed model*** ketika memang **benar-benar ada perbedaan** diantara keduanya
-  - _Power_ dalam konteks SEM yang lebih spesifik adalah peluang peneliti secara tepat menyimpulkan bahwa suatu koefisien (misalnya koefisien jalur struktural) berbeda dari nol, ketika memang benar-benar berbeda dari nol di populasi.
+  - _Power_ yang lebih spesifik dalam konteks SEM adalah peluang peneliti secara tepat menyimpulkan bahwa **suatu koefisien** (misalnya koefisien jalur struktural) **berbeda dari nol**, ketika **memang benar-benar berbeda dari nol di populasi**.
 
 * *Statistical power* ditentukan oleh
   - ***true population model*** (yang kita tidak mungkin tahu, karena sifatnya selalu *unknown parameter*) {{< fa circle-arrow-right >}} sehingga untuk mengestimasi jumlah sampel, kita asumsikan bahwa model memang "tepat" menggambarkan data
@@ -354,19 +354,40 @@ Pendekatan `findRMSEAsamplesize` dengan `semTools` di atas menguji kecocokan mod
 :::
 :::
 
+## 2️⃣ vs. 4️⃣ langkah estimasi model
 
-## Dua vs empat langkah
+::: {.incremental}
 
-* Dua langkah menyusun model [(Anderson & Gerbing, 1988)](https://psycnet.apa.org/record/1989-14190-001)
-  - *Measurement* model
-  - *Structural* model
+* 2️⃣ langkah menyusun model [(Anderson & Gerbing, 1988)](https://psycnet.apa.org/record/1989-14190-001)
+  - Estimasi dulu *measurement* model
+  - Kemudian baru *structural* model
+  - ...pada dataset yang sama
 
-* Empat langkah menyusun model [(Mulaik & Millsap, 2000)](https://www.tandfonline.com/doi/abs/10.1207/S15328007SEM0701_02)
-  - Menspesifikasikan **model pengukuran** yang *unrestricted* dengan **melakukan EFA** untuk **mengidentifikasi jumlah faktor**
-  - Spesifikasikan **model CFA yang menguji model pengukuran** sebuah konstruk laten pada **kelompok sampel yang berbeda**
-  - Spesifikasikan **hubungan antar-variabel laten** di dalam model (model struktural)
-  - Tentukan **parameter *acceptable fit*** untuk model struktural, misalnya CFI > .95 dan RMSEA < 0.05
+* 4️⃣ langkah menyusun model [(Mulaik & Millsap, 2000)](https://www.tandfonline.com/doi/abs/10.1207/S15328007SEM0701_02)
+  - Spesifikasikan **model pengukuran yang *unrestricted*** dengan **melakukan EFA** untuk **mengidentifikasi jumlah faktor** (sepenuhnya bebas, tanpa asumsi teori apapun - utamanya ketika asumsi teori masih rapuh)
+  - Spesifikasikan **model CFA yang *restricted*** (*confirmatory*) — tentukan indikator mana yang mengukur faktor mana, lalu **uji apakah model pengukuran sudah cocok** dengan data
+  - Spesifikasikan **model struktural yang *unrestricted*** — semua jalur antar-variabel laten dibiarkan bebas (*saturated structural model*) untuk memeriksa apakah model pengukuran tetap *fit* sebelum hipotesis jalur struktural diterapkan
+  - Spesifikasikan **model struktural yang *restricted*** — terapkan batasan sesuai hipotesis teori (jalur mana yang ada/tidak ada), kemudian uji apakah model yang telah di-*constraint* ini masih tepat menggambarkan data
 
+:::
+
+## Apakah keempat langkah bisa menggunakan dataset yang sama?
+
+::: {.incremental}
+
+* **Seharusnya, tidak**.
+
+* **Pendekatan 4️⃣ langkah** idealnya dieksekusi dengan **tiga dataset yang berbeda** untuk menghindari [*capitalization on chance*](https://pubmed.ncbi.nlm.nih.gov/16250105/) — karena setiap tahap yang melibatkan respesifikasi atau modifikasi akan "menghabiskan" dataset tersebut [(MacCallum, Roznowski & Necowitz, 1992)](https://pubmed.ncbi.nlm.nih.gov/16250105/):
+
+  - **Langkah 1 (EFA)** {{< fa circle-arrow-right >}} **dataset pertama**: mengeksplorasi struktur faktor secara bebas. Langkah ini penting utamanya ketika model melibatkan konstruk yang belum _established_ bukti empiriknya
+
+  - **Langkah 2 (CFA)** {{< fa circle-arrow-right >}} **dataset kedua**: mengkonfirmasi dan merespesifikasi model pengukuran, memastikan *construct validity* — hasilnya (*df*, struktur faktor, indeks *fit*) menjadi dasar *a priori power analysis* sebelum pengujian model lengkap
+
+  - **Langkah 3–4 (model struktural)** {{< fa circle-arrow-right >}} **dataset ketiga**: karena dataset kedua sudah "terpakai" untuk respesifikasi pengukuran, pengujian model struktural (*unrestricted* lalu *restricted*) dilakukan pada data yang benar-benar independen
+
+* Dalam praktiknya, apabila hanya tersedia satu dataset, peneliti dapat membaginya secara acak menjadi tiga bagian (tiga _holdout sample_) — meskipun tentu saja ada risiko mengurangi *statistical power* di setiap tahapannya
+
+:::
 
 ## [JARS APA](https://apastyle.apa.org/jars/quant-table-7.pdf): Apa saja yang harus dilaporkan?
 

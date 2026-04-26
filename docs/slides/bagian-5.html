@@ -480,7 +480,7 @@ Rizqy Amelia Zein
 <li class="fragment"><em>Statistical power</em> dalam pengujian hipotesis dalam SEM <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> peluang <strong>menolak <em>H</em><sub>0</sub></strong> apabila <em>H</em><sub>0</sub> <strong>salah</strong> (power = 1 − β)
 <ul>
 <li class="fragment">Peluang peneliti secara tepat menyimpulkan bahwa <strong>ada perbedaan antara <em>implied model</em> dengan <em>observed model</em></strong> ketika memang <strong>benar-benar ada perbedaan</strong> diantara keduanya</li>
-<li class="fragment"><em>Power</em> dalam konteks SEM yang lebih spesifik adalah peluang peneliti secara tepat menyimpulkan bahwa suatu koefisien (misalnya koefisien jalur struktural) berbeda dari nol, ketika memang benar-benar berbeda dari nol di populasi.</li>
+<li class="fragment"><em>Power</em> yang lebih spesifik dalam konteks SEM adalah peluang peneliti secara tepat menyimpulkan bahwa <strong>suatu koefisien</strong> (misalnya koefisien jalur struktural) <strong>berbeda dari nol</strong>, ketika <strong>memang benar-benar berbeda dari nol di populasi</strong>.</li>
 </ul></li>
 <li class="fragment"><em>Statistical power</em> ditentukan oleh
 <ul>
@@ -538,21 +538,35 @@ Rizqy Amelia Zein
 </div>
 </div></div>
 </section>
-<section id="dua-vs-empat-langkah" class="slide level2">
-<h2>Dua vs empat langkah</h2>
+<section id="vs.-4-langkah-estimasi-model" class="slide level2">
+<h2>2️⃣ vs.&nbsp;4️⃣ langkah estimasi model</h2>
 <ul>
-<li>Dua langkah menyusun model <a href="https://psycnet.apa.org/record/1989-14190-001">(Anderson &amp; Gerbing, 1988)</a>
+<li class="fragment">2️⃣ langkah menyusun model <a href="https://psycnet.apa.org/record/1989-14190-001">(Anderson &amp; Gerbing, 1988)</a>
 <ul>
-<li><em>Measurement</em> model</li>
-<li><em>Structural</em> model</li>
+<li class="fragment">Estimasi dulu <em>measurement</em> model</li>
+<li class="fragment">Kemudian baru <em>structural</em> model</li>
+<li class="fragment">…pada dataset yang sama</li>
 </ul></li>
-<li>Empat langkah menyusun model <a href="https://www.tandfonline.com/doi/abs/10.1207/S15328007SEM0701_02">(Mulaik &amp; Millsap, 2000)</a>
+<li class="fragment">4️⃣ langkah menyusun model <a href="https://www.tandfonline.com/doi/abs/10.1207/S15328007SEM0701_02">(Mulaik &amp; Millsap, 2000)</a>
 <ul>
-<li>Menspesifikasikan <strong>model pengukuran</strong> yang <em>unrestricted</em> dengan <strong>melakukan EFA</strong> untuk <strong>mengidentifikasi jumlah faktor</strong></li>
-<li>Spesifikasikan <strong>model CFA yang menguji model pengukuran</strong> sebuah konstruk laten pada <strong>kelompok sampel yang berbeda</strong></li>
-<li>Spesifikasikan <strong>hubungan antar-variabel laten</strong> di dalam model (model struktural)</li>
-<li>Tentukan <strong>parameter <em>acceptable fit</em></strong> untuk model struktural, misalnya CFI &gt; .95 dan RMSEA &lt; 0.05</li>
+<li class="fragment">Spesifikasikan <strong>model pengukuran yang <em>unrestricted</em></strong> dengan <strong>melakukan EFA</strong> untuk <strong>mengidentifikasi jumlah faktor</strong> (sepenuhnya bebas, tanpa asumsi teori apapun - utamanya ketika asumsi teori masih rapuh)</li>
+<li class="fragment">Spesifikasikan <strong>model CFA yang <em>restricted</em></strong> (<em>confirmatory</em>) — tentukan indikator mana yang mengukur faktor mana, lalu <strong>uji apakah model pengukuran sudah cocok</strong> dengan data</li>
+<li class="fragment">Spesifikasikan <strong>model struktural yang <em>unrestricted</em></strong> — semua jalur antar-variabel laten dibiarkan bebas (<em>saturated structural model</em>) untuk memeriksa apakah model pengukuran tetap <em>fit</em> sebelum hipotesis jalur struktural diterapkan</li>
+<li class="fragment">Spesifikasikan <strong>model struktural yang <em>restricted</em></strong> — terapkan batasan sesuai hipotesis teori (jalur mana yang ada/tidak ada), kemudian uji apakah model yang telah di-<em>constraint</em> ini masih tepat menggambarkan data</li>
 </ul></li>
+</ul>
+</section>
+<section id="apakah-keempat-langkah-bisa-menggunakan-dataset-yang-sama" class="slide level2">
+<h2>Apakah keempat langkah bisa menggunakan dataset yang sama?</h2>
+<ul>
+<li class="fragment"><p><strong>Seharusnya, tidak</strong>.</p></li>
+<li class="fragment"><p><strong>Pendekatan 4️⃣ langkah</strong> idealnya dieksekusi dengan <strong>tiga dataset yang berbeda</strong> untuk menghindari <a href="https://pubmed.ncbi.nlm.nih.gov/16250105/"><em>capitalization on chance</em></a> — karena setiap tahap yang melibatkan respesifikasi atau modifikasi akan “menghabiskan” dataset tersebut <a href="https://pubmed.ncbi.nlm.nih.gov/16250105/">(MacCallum, Roznowski &amp; Necowitz, 1992)</a>:</p>
+<ul>
+<li class="fragment"><p><strong>Langkah 1 (EFA)</strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> <strong>dataset pertama</strong>: mengeksplorasi struktur faktor secara bebas. Langkah ini penting utamanya ketika model melibatkan konstruk yang belum <em>established</em> bukti empiriknya</p></li>
+<li class="fragment"><p><strong>Langkah 2 (CFA)</strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> <strong>dataset kedua</strong>: mengkonfirmasi dan merespesifikasi model pengukuran, memastikan <em>construct validity</em> — hasilnya (<em>df</em>, struktur faktor, indeks <em>fit</em>) menjadi dasar <em>a priori power analysis</em> sebelum pengujian model lengkap</p></li>
+<li class="fragment"><p><strong>Langkah 3–4 (model struktural)</strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> <strong>dataset ketiga</strong>: karena dataset kedua sudah “terpakai” untuk respesifikasi pengukuran, pengujian model struktural (<em>unrestricted</em> lalu <em>restricted</em>) dilakukan pada data yang benar-benar independen</p></li>
+</ul></li>
+<li class="fragment"><p>Dalam praktiknya, apabila hanya tersedia satu dataset, peneliti dapat membaginya secara acak menjadi tiga bagian (tiga <em>holdout sample</em>) — meskipun tentu saja ada risiko mengurangi <em>statistical power</em> di setiap tahapannya</p></li>
 </ul>
 </section>
 <section id="jars-apa-apa-saja-yang-harus-dilaporkan" class="slide level2">
