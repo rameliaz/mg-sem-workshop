@@ -317,7 +317,7 @@ execute:
 
 :::
 
-## Mengestimasi jumlah sampel dengan `semTools`
+## Mengestimasi jumlah sampel (`semTools` {{< fa brands r-project >}})
 
 ::: {.columns}
 ::: {.column width="50%"}
@@ -339,7 +339,11 @@ semTools::findRMSEAsamplesize(
 )
 ```
 
+::: {.callout-caution}
+#### Peringatan
 Pendekatan `findRMSEAsamplesize` dengan `semTools` di atas menguji kecocokan model secara global, yaitu apakah model kita secara keseluruhan cukup baik merepresentasikan data, dengan membandingkan dua nilai `RMSEA` (misalnya, 0.05 vs 0.08), tanpa memperhatikan parameter spesifik dalam model.
+
+:::
 
 ::: {.callout-tip}
 #### Demonstrasi *power analysis* dengan [`PAMLj`](https://pamlj.github.io/index.html)
