@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.10.3">
 
   <meta name="author" content="Rizqy Amelia Zein">
-  <meta name="dcterms.date" content="2026-04-25">
+  <meta name="dcterms.date" content="2026-04-26">
   <title>Multigroup SEM Workshop – Dasar-Dasar Structural Equation Modeling (SEM)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -216,7 +216,7 @@ Rizqy Amelia Zein
     </div>
 </div>
 
-  <p class="date">2026-04-25</p>
+  <p class="date">2026-04-26</p>
 </section>
 <section id="outline" class="slide level2">
 <h2><em>Outline</em></h2>
@@ -480,6 +480,7 @@ Rizqy Amelia Zein
 <li class="fragment"><em>Statistical power</em> dalam pengujian hipotesis dalam SEM <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> peluang <strong>menolak <em>H</em><sub>0</sub></strong> apabila <em>H</em><sub>0</sub> <strong>salah</strong> (power = 1 − β)
 <ul>
 <li class="fragment">Peluang peneliti secara tepat menyimpulkan bahwa <strong>ada perbedaan antara <em>implied model</em> dengan <em>observed model</em></strong> ketika memang <strong>benar-benar ada perbedaan</strong> diantara keduanya</li>
+<li class="fragment"><em>Power</em> dalam konteks SEM yang lebih spesifik adalah peluang peneliti secara tepat menyimpulkan bahwa suatu koefisien (misalnya koefisien jalur struktural) berbeda dari nol, ketika memang benar-benar berbeda dari nol di populasi.</li>
 </ul></li>
 <li class="fragment"><em>Statistical power</em> ditentukan oleh
 <ul>
@@ -508,6 +509,20 @@ Rizqy Amelia Zein
 <span id="cb1-5"><a></a>  <span class="at">power =</span> <span class="fl">0.90</span>,   <span class="co"># power yang diinginkan (1 - β)</span></span>
 <span id="cb1-6"><a></a>  <span class="at">alpha =</span> <span class="fl">0.05</span>    <span class="co"># probabilitas kesalahan tipe 1 (α)</span></span>
 <span id="cb1-7"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Pendekatan <code>findRMSEAsamplesize</code> menguji kecocokan model secara global, yaitu apakah model kita secara keseluruhan cukup baik merepresentasikan data, dengan membandingkan dua nilai <code>RMSEA</code> (misalnya, 0.05 vs 0.08), tanpa memperhatikan parameter spesifik dalam model.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Demonstrasi <em>power analysis</em> dengan <a href="https://pamlj.github.io/index.html"><code>PAMLj</code></a></strong></p>
+</div>
+<div class="callout-content">
+<p><em>A priori power analysis</em> dengan mempertimbangkan parameter spesifik dalam model dapat dilakukan dengan <em>module</em> <a href="https://pamlj.github.io/index.html"><code>PAMLj</code></a>. <a href="..\materials/power.omv">Unduh demonstrasinya di sini</a>.</p>
+</div>
+</div>
 </div>
 </div></div>
 </section>

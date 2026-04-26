@@ -69,6 +69,8 @@ website:
             href: materials/dataset-pilpres2024.csv
           - text: "Kamus Data Dataset Latihan"
             href: materials/codebook-pilpres2024.csv
+          - text: "Demonstrasi _Power Analysis_"
+            href: materials/power.omv
       - text: "Survei"
         menu:
           - text: "Evaluasi Workshop"

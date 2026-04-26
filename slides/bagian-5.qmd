@@ -307,6 +307,7 @@ execute:
 
 * *Statistical power* dalam pengujian hipotesis dalam SEM {{< fa circle-arrow-right >}} peluang **menolak *H*~0~** apabila *H*~0~ **salah** (power = 1 − β)
   - Peluang peneliti secara tepat menyimpulkan bahwa **ada perbedaan antara *implied model* dengan *observed model*** ketika memang **benar-benar ada perbedaan** diantara keduanya
+  - _Power_ dalam konteks SEM yang lebih spesifik adalah peluang peneliti secara tepat menyimpulkan bahwa suatu koefisien (misalnya koefisien jalur struktural) berbeda dari nol, ketika memang benar-benar berbeda dari nol di populasi.
 
 * *Statistical power* ditentukan oleh
   - ***true population model*** (yang kita tidak mungkin tahu, karena sifatnya selalu *unknown parameter*) {{< fa circle-arrow-right >}} sehingga untuk mengestimasi jumlah sampel, kita asumsikan bahwa model memang "tepat" menggambarkan data
@@ -337,6 +338,14 @@ semTools::findRMSEAsamplesize(
   alpha = 0.05    # probabilitas kesalahan tipe 1 (α)
 )
 ```
+
+Pendekatan `findRMSEAsamplesize` dengan `semTools` di atas menguji kecocokan model secara global, yaitu apakah model kita secara keseluruhan cukup baik merepresentasikan data, dengan membandingkan dua nilai `RMSEA` (misalnya, 0.05 vs 0.08), tanpa memperhatikan parameter spesifik dalam model.
+
+::: {.callout-tip}
+#### Demonstrasi *power analysis* dengan [`PAMLj`](https://pamlj.github.io/index.html)
+*A priori power analysis* dengan mempertimbangkan parameter spesifik dalam model dapat dilakukan dengan *module* [`PAMLj`](https://pamlj.github.io/index.html). [Unduh demonstrasinya di sini](/materials/power.omv).
+
+:::
 
 :::
 :::
