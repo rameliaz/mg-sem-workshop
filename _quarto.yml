@@ -71,6 +71,10 @@ website:
             href: materials/codebook-pilpres2024.csv
           - text: "Demonstrasi _Power Analysis_"
             href: materials/power.omv
+      - text: "Interaksi dalam SEM"
+        menu:
+          - text: "Tabel Perbandingan Pendekatan"
+            href: materials/latent_interaction_SEM.xlsx
       - text: "Survei"
         menu:
           - text: "Evaluasi Workshop"
