@@ -130,7 +130,7 @@ Karena keterbatasan waktu, bagian **_Confirmatory Factor Analysis_** **_tidak di
 * Mengevaluasi *measurement invariance*
 * Menuliskan hasil analisis MG-SEM dalam laporan penelitian
 
-[{{< fa file-powerpoint >}} Buka Materi Korelasi](slides/bagian-6.html){.btn .btn-primary}
+[{{< fa file-powerpoint >}} Buka Materi _Multi-group_ SEM](slides/bagian-6.html){.btn .btn-primary}
 
 ## Referensi
 

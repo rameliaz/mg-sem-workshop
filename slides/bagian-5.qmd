@@ -34,13 +34,18 @@ execute:
 
 * SEM adalah *full model* {{< fa circle-arrow-right >}} menggabungkan **model pengukuran** dengan **model jalur/struktural**
 
-* Ada beberapa pendekatan dalam SEM
-  - ***Strictly confirmatory*** {{< fa circle-arrow-right >}} untuk menguji apakah ***variance-covariance matrix*** yang dihipotesiskan (*implied*) sama dengan/didukung oleh data (***observed variance-covariance matrix***)
+* Ada beberapa pendekatan dalam SEM [(Jöreskog, 1993)](https://psycnet.apa.org/record/1993-97481-000)
+  - ***Strictly confirmatory*** {{< fa circle-arrow-right >}} menguji apakah ***variance-covariance matrix*** yang dihipotesiskan (*implied*) sama dengan/didukung oleh data (***observed variance-covariance matrix***)
 
-  - ***Alternative model*** {{< fa circle-arrow-right >}} membuat model alternatif dari dataset yang sama, sehingga kemungkinan struktur datanya berjenjang (*nested*) {{< fa circle-arrow-right >}} ***multigroup CFA/SEM***
+  - ***Alternative model*** {{< fa circle-arrow-right >}} menguji beberapa **model yang saling bersaing** (*competing models*) pada dataset yang sama, kemudian memilih yang paling baik menggambarkan data — model-model tersebut bisa berjenjang (*nested*) maupun tidak (*non-nested*)
 
-  - ***Model generating*** {{< fa circle-arrow-right >}} dilakukan ketika peneliti sudah punya hipotesis model, namun melakukan modifikasi untuk meningkatkan *fit statistics* {{< fa circle-arrow-right >}} *specification search*
+  - ***Model generating*** {{< fa circle-arrow-right >}} dimulai dari model yang dihipotesiskan, kemudian **dimodifikasi secara iteratif** berdasarkan indikasi data (*specification search*) hingga *fit statistics* membaik
 
+:::
+
+::: {.callout-caution}
+#### *Model generating* harus dilakukan dengan sangat hati-hati
+Setiap modifikasi **harus dijustifikasi secara teori**, bukan semata-mata didorong oleh data. Pendekatan ini rentan terhadap [*capitalization on chance*](https://pubmed.ncbi.nlm.nih.gov/16250105/). Model yang tampak *fit* di satu sampel sering kali gagal direplikasi di sampel lain [(MacCallum, Roznowski & Necowitz, 1992)](https://pubmed.ncbi.nlm.nih.gov/16250105/). Apabila modifikasi dilakukan, **validasi hasilnya pada sampel yang berbeda**.
 :::
 
 ## Langkah-langkah melakukan analisis SEM
@@ -394,6 +399,14 @@ Pendekatan `findRMSEAsamplesize` dengan `semTools` di atas menguji kecocokan mod
 
 ![](libs/quote.png){fig-align="center"}
 
+## Mari kita renungkan 🧘
+
+![](libs/feynman.png){fig-align="center"}
+
+::: {style="text-align: center;"}
+[Baca "Cargo Cult Science" (Feynman, 1974) di sini](https://calteches.library.caltech.edu/3043/1/CargoCult.pdf)
+:::
+
 ## [JARS APA](https://apastyle.apa.org/jars/quant-table-7.pdf): Apa saja yang harus dilaporkan?
 
 * **Abstrak**
@@ -467,7 +480,7 @@ Pendekatan `findRMSEAsamplesize` dengan `semTools` di atas menguji kecocokan mod
 
 ## Ada pertanyaan❓
 
-![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDFtaDh5ZjZ2eXJ3dmJmZmFmYzBtNHEwdzlqZmZtdGtmbnE0bXZidiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/igB2Th9e4nW6s/giphy.gif){fig-align="center"}
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDFtaDh5ZjZ2eXJ3dmJmZmFmYzBtNHEwdzlqZmZtdGtmbnE0bXZidiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zws/giphy.gif){fig-align="center"}
 
 ::: {.callout-note}
 * Paparan disusun dengan menggunakan {{< fa brands r-project >}} dan [**Quarto**](https://quarto.org) dengan *template* dari [UNAIR Theme](https://github.com/rameliaz/quarto-unair-theme).
