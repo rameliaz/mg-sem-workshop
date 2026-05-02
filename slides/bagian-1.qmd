@@ -155,9 +155,9 @@ SEM adalah teknik yang _theory-driven_ sehingga modifikasi/re-spesifikasi model 
 
 ::: {.incremental}
 * Perangkat lunak SEM sudah cukup *user-friendly*
-  - `jamovi` dan `JASP` adalah perangkat lunak SEM yang hanya memerlukan *coding* yang sangat minimal.
-  - Namun `jamovi` dan `JASP` fungsinya agak terbatas, karena tidak menyediakan opsi *power analysis* dan simulasi.
-  - Selain itu, peneliti dapat menggunakan `Onyx`, `LISREL`, `SPSS AMOS`, `EQX`, `Mplus`, `STATA`, [`lavaan`](http://lavaan.ugent.be/tutorial/index.html) (+ [`semTools`](https://cran.r-project.org/web/packages/semTools/index.html)) di {{< fa brands r-project >}} atau `semopy` di {{< fa brands python >}} dsb.
+  - `jamovi` dan [`JASP`](https://jasp-stats.org/) adalah perangkat lunak SEM yang hanya memerlukan *coding* yang sangat minimal.
+  - Namun `jamovi` dan `JASP` fungsinya terbatas, terutama ketika peneliti menguji model yang sangat kompleks.
+  - Selain itu, peneliti dapat menggunakan [`Ωnyx`](https://onyx-sem.com/), `LISREL`, [`SPSS AMOS`](https://www.ibm.com/products/structural-equation-modeling-sem), `EQX`, [`Mplus`](https://www.statmodel.com/), [`STATA`](https://www.stata.com/features/structural-equation-modeling/), [`lavaan`](http://lavaan.ugent.be/tutorial/index.html) (+ [`semTools`](https://cran.r-project.org/web/packages/semTools/index.html)) di {{< fa brands r-project >}} atau [`semopy`](https://semopy.com) di {{< fa brands python >}} dsb.
 ::: 
 
 # Asumsi SEM {background-color="#14497F"}

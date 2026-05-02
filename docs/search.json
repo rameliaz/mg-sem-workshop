@@ -382,7 +382,7 @@
     "href": "index.html#referensi",
     "title": "Multigroup Structural Equation Modeling",
     "section": "Referensi",
-    "text": "Referensi\n\nBaujean, A.A. (2014). Latent Variable Modeling Using R: A step-by-step guide. New York: Routledge.\nGalluci, M. (2025). SEMLj: A Suite for Structural Equation Models for jamovi (v1.2.5). https://semlj.github.io/index.html\nSchumacker, R.E. & Lomax, R.G. (2016). A Beginner’s Guide to Structural Equation Modeling (4th edition). New York: Routledge.\nVan De Schoot, R., Schmidt, P., De Beuckelaer, A., Lek, K., & Zondervan-Zwijnenburg, M. (2015). Measurement invariance. Frontiers in psychology, 6, 1064.\nPutnick, D. L., & Bornstein, M. H. (2016). Measurement invariance conventions and reporting: The state of the art and future directions for psychological research. Developmental review, 41, 71-90."
+    "text": "Referensi\n\nBaujean, A.A. (2014). Latent Variable Modeling Using R: A step-by-step guide. New York: Routledge.\nGalluci, M. (2025). SEMLj: A Suite for Structural Equation Models for jamovi (v1.2.5). https://semlj.github.io/index.html\nKline, R.B. (2023). Principles and practice of structural equation modeling 5^th edition. New York: The Guildford Press.\nSchumacker, R.E. & Lomax, R.G. (2016). A Beginner’s Guide to Structural Equation Modeling (4th edition). New York: Routledge.\nVan De Schoot, R., Schmidt, P., De Beuckelaer, A., Lek, K., & Zondervan-Zwijnenburg, M. (2015). Measurement invariance. Frontiers in psychology, 6, 1064.\nPutnick, D. L., & Bornstein, M. H. (2016). Measurement invariance conventions and reporting: The state of the art and future directions for psychological research. Developmental review, 41, 71-90."
   },
   {
     "objectID": "index.html#contoh-penelitian-dengan-mg-sem",
@@ -515,7 +515,7 @@
     "href": "slides/bagian-1.html#perangkat-lunak-untuk-mengeksekusi-sem",
     "title": "Pengantar",
     "section": "Perangkat lunak untuk mengeksekusi SEM",
-    "text": "Perangkat lunak untuk mengeksekusi SEM\n\nPerangkat lunak SEM sudah cukup user-friendly\n\njamovi dan JASP adalah perangkat lunak SEM yang hanya memerlukan coding yang sangat minimal.\nNamun jamovi dan JASP fungsinya agak terbatas, karena tidak menyediakan opsi power analysis dan simulasi.\nSelain itu, peneliti dapat menggunakan Onyx, LISREL, SPSS AMOS, EQX, Mplus, STATA, lavaan (+ semTools) di  atau semopy di  dsb."
+    "text": "Perangkat lunak untuk mengeksekusi SEM\n\nPerangkat lunak SEM sudah cukup user-friendly\n\njamovi dan JASP adalah perangkat lunak SEM yang hanya memerlukan coding yang sangat minimal.\nNamun jamovi dan JASP fungsinya terbatas, terutama ketika peneliti menguji model yang sangat kompleks.\nSelain itu, peneliti dapat menggunakan Ωnyx, LISREL, SPSS AMOS, EQX, Mplus, STATA, lavaan (+ semTools) di  atau semopy di  dsb."
   },
   {
     "objectID": "slides/bagian-1.html#asumsi-sem-1",

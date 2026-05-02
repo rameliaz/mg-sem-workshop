@@ -137,6 +137,7 @@ Karena keterbatasan waktu, bagian **_Confirmatory Factor Analysis_** **_tidak di
 
 * Baujean, A.A. (2014). *Latent Variable Modeling Using R: A step-by-step guide*. New York: Routledge.
 * Galluci, M. (2025). SEMLj: A Suite for Structural Equation Models for jamovi (v1.2.5). <https://semlj.github.io/index.html>
+* Kline, R.B. (2023). *Principles and practice of structural equation modeling 5^th edition*. New York: The Guildford Press.
 * Schumacker, R.E. & Lomax, R.G. (2016). *A Beginner's Guide to Structural Equation Modeling (4th edition)*. New York: Routledge.
 * Van De Schoot, R., Schmidt, P., De Beuckelaer, A., Lek, K., & Zondervan-Zwijnenburg, M. (2015). [Measurement invariance](https://www.frontiersin.org/articles/10.3389/fpsyg.2015.01064/full). _Frontiers in psychology, 6_, 1064.
 * Putnick, D. L., & Bornstein, M. H. (2016). [Measurement invariance conventions and reporting: The state of the art and future directions for psychological research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5145197/). _Developmental review, 41_, 71-90.
