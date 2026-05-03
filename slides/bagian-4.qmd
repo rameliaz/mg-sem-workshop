@@ -171,7 +171,7 @@ Ada tiga macam model pengukuran:
 * Reflektif
   - **Variabel laten menjelaskan** mengapa **variabel indikator bervariasi**
   - Misalnya {{< fa circle-arrow-right >}} individu dengan intelegensi yang tinggi akan mendapatkan nilai yang berbeda dalam tes matematika
-  - Biasanya mengasumsikan bahwa **korelasi antar-variabel indikator = 0** {{< fa circle-arrow-right >}} artinya, tiap indikator mengukur aspek yang unik dari variabel laten, tidak tumpang tindih
+  - Biasanya mengasumsikan bahwa **kovariansi antar-*error* (*residual*) variabel indikator = 0** (*local independence*) {{< fa circle-arrow-right >}} artinya, korelasi antar-indikator sepenuhnya dijelaskan oleh variabel laten, tidak ada sumber varians bersama lain di luar model
   - Mayoritas konstruk psikologis mengasumsikan model pengukuran reflektif
 
 * Formatif

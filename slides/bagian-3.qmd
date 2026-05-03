@@ -115,8 +115,8 @@ Marimar heran sekaligus penasaran, mengapa tiap anak **memberikan respon yang be
 | :-------------------------------------- | :------------: | :----------: |
 | *Direct effect* antara variabel laten dan indikatornya (*loading factor*) | λ | Lambda |
 | *Direct effect* antara variabel endogen dan eksogen | γ | Gamma |
-| *Direct effect* antara dua variabel laten | β | Beta |
-| Korelasi (*covariance*) antara dua variabel laten | φ | Phi |
+| *Direct effect* antara dua variabel laten **endogen** | β | Beta |
+| Korelasi (*covariance*) antara dua variabel laten **eksogen** | φ | Phi |
 | Residual/*disturbance* dari variabel laten endogen (varians yang tidak dijelaskan oleh prediktornya) | ζ | Zeta |
 
 : {tbl-colwidths="[70,15,15]"}
@@ -163,7 +163,7 @@ Anda bisa menggunakan MS Power Point atau *software* yang lain (misalnya, [draw.
 
 ::: {.incremental}
 
-* `GAMLj` menyediakan dua opsi: fitur _syntax_ atau _interactive_
+* [`SEMLj`](https://semlj.github.io/) menyediakan dua opsi: fitur _syntax_ atau _interactive_
   - Kalau memilih fitur _interactive_, maka tampilan antarmukanya berupa _drag & drop_ (seperti `SPSS`).
   - Untuk fitur _syntax_, maka tampilan antarmukanya meminta pengguna untuk menspesifikasi model dengan _syntax_.
 

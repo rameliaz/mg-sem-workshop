@@ -86,11 +86,11 @@ SEM adalah teknik yang _theory-driven_ sehingga modifikasi/re-spesifikasi model 
 ::: {.column}
 
 ::: {.incremental}
-* **Variabel eksogen** 
-  - Variabel yang **hanya memberi** _direct effect_ pada variabel lain di dalam model yang sama
-  
-* **Variabel endogen** 
-  - Variabel yang **hanya menerima** _direct effect_ pada variabel lain di dalam model yang sama
+* **Variabel eksogen**
+  - Variabel yang **tidak menerima** _direct effect_ dari variabel lain di dalam model — hanya memberi efek pada variabel lain
+
+* **Variabel endogen**
+  - Variabel yang **menerima** _direct effect_ dari variabel lain di dalam model — bisa sekaligus memberi efek pada variabel endogen lainnya (misalnya variabel mediator)
 :::
 :::
 
@@ -241,7 +241,8 @@ Selengkapnya, baca di materi [_confirmatory factor analysis_](https://rameliaz.g
 * _Exploratory factor analysis_ (EFA)
 * _A priori power analysis_, Monte Carlo _simulation_, dan _accuracy in parameter estimation_ (AIPE) untuk merencanakan jumlah sampel
 * _Sensitivity analysis_ untuk SEM
-* _Mixture model_ (SEM untuk desain penelitian longitudinal) {{< fa circle-arrow-right >}} [_latent growth curve_](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2888524/)
+* [_Mixture model_](https://daob.nl/wp-content/uploads/2015/06/oberski-LCA.pdf) {{< fa circle-arrow-right >}} untuk mengungkap subpopulasi berdasarkan distribusi variabel laten (*person-centered methods*, e.g., [*latent categorical analysis* (LCA) dan *latent profile analysis* (LPA)](https://osf.io/preprints/psyarxiv/97uab_v1))
+* [_Latent growth curve_](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2888524/)
 * Model SEM dengan _missing data_
 * Model SEM dengan variabel moderator/mediator
 * Model SEM ketika variabel eksogen (indikator) _dichotomous_

@@ -225,7 +225,8 @@ Setiap modifikasi **harus dijustifikasi secara teori**, bukan semata-mata didoro
 ::: {.columns}
 ::: {.column width="50%"}
 
-* Dihitung dengan cara membandingkan ***saturated model* dengan model tanpa jalur sama sekali** (*baseline*, *null*, atau *independent model*)
+* Dihitung dengan cara membandingkan **model yang dihipotesiskan (*implied model*)** dengan ***saturated model*** (model dengan *fit* sempurna — semua parameter dibebaskan)
+  - *Indeks inkremental* seperti CFI dan NFI-lah yang membandingkan *implied model* dengan *baseline*/*null model* (model tanpa jalur sama sekali)
 
 * Selain χ², kita bisa menggunakan *alternative fit indices* yang terdiri dari
   - *Incremental index*
@@ -285,7 +286,7 @@ Setiap modifikasi **harus dijustifikasi secara teori**, bukan semata-mata didoro
   - ***Adjusted Goodness of Fit Index*** {{< fa circle-arrow-right >}} merupakan *parsimony adjustment* dari GFI, mendekati 1 = *better fit*
   - ***Parsimony Goodness of Fit Index*** {{< fa circle-arrow-right >}} mendekati 1 = *better fit*
   - ***Hoelter's Critical n*** {{< fa circle-arrow-right >}} nilainya sebaiknya > 200
-  - ***Standardized Root Mean Square Residual*** (SRMR/RMR) {{< fa circle-arrow-right >}} nilai < 0.05 menunjukkan *good fit*
+  - ***Standardized Root Mean Square Residual*** (SRMR/RMR) {{< fa circle-arrow-right >}} nilai **< 0.08** menunjukkan *acceptable fit* (konsisten dengan kriteria pada *parsimony index* di atas)
 
 
 ## *Global* vs. *local fit*

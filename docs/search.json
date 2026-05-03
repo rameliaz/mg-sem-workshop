@@ -11,14 +11,14 @@
     "href": "slides/bagian-6.html#multigroup-sem-untuk-apa",
     "title": "Multigroup Structural Equation Modeling (MGSEM)",
     "section": "Multigroup SEM: untuk apa?",
-    "text": "Multigroup SEM: untuk apa?\n\nInvariance  apakah dalam kondisi di subkelompok yang beragam ketika melakukan pengukuran, alat ukur selalu mengukur atribut ukur yang sama\nMeasurement invariance  dua atau lebih kelompok memiliki properti psikometrik yang sama, yaitu variabel laten dalam model pengukuran adalah konstruk yang sama\nKetika membandingkan model pengukuran di dua atau lebih kelompok yang berbeda, untuk menyimpulkan terjadinya invariance, maka peneliti akan menginginkan chi-square (χ²) yang p-valuenya ≤ α\nKalau kita berniat melakukan perbandingan performa alat ukur di dua kelompok sampel yang berbeda, maka kita lebih baik menggunakan means-covariance matrix bukan variance-covariance matrix  ingat t-test dan anova"
+    "text": "Multigroup SEM: untuk apa?\n\nInvariance  apakah dalam kondisi di subkelompok yang beragam ketika melakukan pengukuran, alat ukur selalu mengukur atribut ukur yang sama\nMeasurement invariance  dua atau lebih kelompok memiliki properti psikometrik yang sama, yaitu variabel laten dalam model pengukuran adalah konstruk yang sama\nKetika membandingkan model pengukuran di dua atau lebih kelompok yang berbeda, untuk menyimpulkan terjadinya invariance, maka peneliti akan menginginkan perubahan chi-square (Δχ²) yang p-valuenya &gt; α — artinya, menambah constraint tidak memperburuk fit model secara signifikan\nKalau kita berniat melakukan perbandingan performa alat ukur di dua kelompok sampel yang berbeda, maka kita lebih baik menggunakan means-covariance matrix bukan variance-covariance matrix  ingat t-test dan anova"
   },
   {
     "objectID": "slides/bagian-6.html#means-dan-intercept",
     "href": "slides/bagian-6.html#means-dan-intercept",
     "title": "Multigroup Structural Equation Modeling (MGSEM)",
     "section": "Means dan intercept",
-    "text": "Means dan intercept\n\n\n\nKalau kita masukkan mean variabel laten ke dalam model, maka intercept-nya juga harus dimasukkan dalam model\nMean dan intercept adalah ukuran lokasi variabel, dimana…\n\nMean adalah komponen common factor\nIntercept adalah komponen unique factor\n\nIntercept disimbolkan dengan segitiga dan\n\nHanya boleh “ketemu” dengan panah uni-directional dan sifatnya backwards"
+    "text": "Means dan intercept\n\n\n\nKalau kita masukkan mean variabel laten ke dalam model, maka intercept-nya juga harus dimasukkan dalam model\nMean dan intercept adalah ukuran lokasi variabel, dimana…\n\nMean variabel laten adalah komponen yang dibagi bersama oleh semua indikator\nIntercept adalah nilai dasar/baseline yang berbeda untuk masing-masing item — yaitu expected score ketika nilai variabel laten = 0\n\nDalam model pengukuran: skor kasar (observed) = intercept + (factor loading × mean variabel laten) + error\n\nArtinya, skor yang kita ukur dipengaruhi dua hal sekaligus: intercept item dan mean variabel laten — keduanya harus dimasukkan bersama agar model bisa memisahkan kontribusi masing-masing\n\nIntercept disimbolkan dengan segitiga dan\n\nHanya boleh “ketemu” dengan panah uni-directional dan sifatnya backwards"
   },
   {
     "objectID": "slides/bagian-6.html#jenis-jenis-measurement-invariance-1",
@@ -39,7 +39,7 @@
     "href": "slides/bagian-6.html#jenis-jenis-measurement-invariance-3",
     "title": "Multigroup Structural Equation Modeling (MGSEM)",
     "section": "Jenis-jenis measurement invariance 3️⃣",
-    "text": "Jenis-jenis measurement invariance 3️⃣\n\nStrong/scalar\n\nSelain factor loading harus sama, strong invariance mensyaratkan intercept harus sama juga\nKetika membatasi/constraining intercept, maka latent means boleh bervariasi (dan dibandingkan) di berbagai kelompok\nDengan asumsi strong invariance ekuivalensi variabel laten lebih didukung bukti yang kuat\nUntuk mengeksekusinya di jamovi, klik opsi Multi-group analysis, tambahkan data pengelompokan di factor for multi-group analysis dan centang pilihan loadings dan intercepts pada equality constraints"
+    "text": "Jenis-jenis measurement invariance 3️⃣\n\nStrong/scalar\n\nSelain factor loading harus sama, strong invariance mensyaratkan intercept harus sama juga\nKetika membatasi/constraining intercept, maka latent means boleh bervariasi (dan dibandingkan) di berbagai kelompok\nMengapa?\n\nBayangkan dua termometer mengukur suhu ruangan yang sama (e.g., termometer celcius dan fahrenheit).\nJika termometer fahrenheit dikalibrasi 32° lebih tinggi dari celcius (intercept berbeda), keduanya menunjukkan angka berbeda — bukan karena suhunya beda, tapi karena baseline-nya beda.\nJika intercept tidak disetarakan antar kelompok, perbedaan skor bisa berasal dari perbedaan baseline item, bukan perbedaan konstruk yang sebenarnya\n\nDengan asumsi strong invariance ekuivalensi variabel laten lebih didukung bukti yang kuat\nUntuk mengeksekusinya di jamovi, klik opsi Multi-group analysis, tambahkan data pengelompokan di factor for multi-group analysis dan centang pilihan loadings dan intercepts pada equality constraints"
   },
   {
     "objectID": "slides/bagian-6.html#jenis-jenis-measurement-invariance-4",
@@ -165,7 +165,7 @@
     "href": "slides/bagian-4.html#model-reflektif-vs.-formatif",
     "title": "Confirmatory Factor Analysis (CFA)",
     "section": "Model Reflektif vs. Formatif",
-    "text": "Model Reflektif vs. Formatif\n\nReflektif\n\nVariabel laten menjelaskan mengapa variabel indikator bervariasi\nMisalnya  individu dengan intelegensi yang tinggi akan mendapatkan nilai yang berbeda dalam tes matematika\nBiasanya mengasumsikan bahwa korelasi antar-variabel indikator = 0  artinya, tiap indikator mengukur aspek yang unik dari variabel laten, tidak tumpang tindih\nMayoritas konstruk psikologis mengasumsikan model pengukuran reflektif\n\nFormatif\n\nVariabel observed menjelaskan mengapa variabel laten bervariasi\nMisalnya  gengsi sebuah mobil ditentukan oleh usia mobil, kondisi, harga, dan intensitas pemakaian\nKorelasi antara variabel observed tidak diketahui\nBiasanya digunakan untuk menentukan indeks pada konstruk yang orthogonal (contoh  kepribadian pada Five Factor model)\nTetapi, sangat jarang konstruk psikologi yang mengasumsikan model formatif"
+    "text": "Model Reflektif vs. Formatif\n\nReflektif\n\nVariabel laten menjelaskan mengapa variabel indikator bervariasi\nMisalnya  individu dengan intelegensi yang tinggi akan mendapatkan nilai yang berbeda dalam tes matematika\nBiasanya mengasumsikan bahwa kovariansi antar-error (residual) variabel indikator = 0 (local independence)  artinya, korelasi antar-indikator sepenuhnya dijelaskan oleh variabel laten, tidak ada sumber varians bersama lain di luar model\nMayoritas konstruk psikologis mengasumsikan model pengukuran reflektif\n\nFormatif\n\nVariabel observed menjelaskan mengapa variabel laten bervariasi\nMisalnya  gengsi sebuah mobil ditentukan oleh usia mobil, kondisi, harga, dan intensitas pemakaian\nKorelasi antara variabel observed tidak diketahui\nBiasanya digunakan untuk menentukan indeks pada konstruk yang orthogonal (contoh  kepribadian pada Five Factor model)\nTetapi, sangat jarang konstruk psikologi yang mengasumsikan model formatif"
   },
   {
     "objectID": "slides/bagian-4.html#model-reflektif",
@@ -466,7 +466,7 @@
     "href": "slides/bagian-1.html#jenis-jenis-variabel-dalam-model-sem-2",
     "title": "Pengantar",
     "section": "Jenis-jenis variabel dalam model SEM 2️⃣",
-    "text": "Jenis-jenis variabel dalam model SEM 2️⃣\n\n\n\nVariabel eksogen\n\nVariabel yang hanya memberi direct effect pada variabel lain di dalam model yang sama\n\nVariabel endogen\n\nVariabel yang hanya menerima direct effect pada variabel lain di dalam model yang sama"
+    "text": "Jenis-jenis variabel dalam model SEM 2️⃣\n\n\n\nVariabel eksogen\n\nVariabel yang tidak menerima direct effect dari variabel lain di dalam model — hanya memberi efek pada variabel lain\n\nVariabel endogen\n\nVariabel yang menerima direct effect dari variabel lain di dalam model — bisa sekaligus memberi efek pada variabel endogen lainnya (misalnya variabel mediator)"
   },
   {
     "objectID": "slides/bagian-1.html#model-sem-terdiri-atas",
@@ -564,7 +564,7 @@
     "href": "slides/bagian-1.html#yang-tidak-dicakup-oleh-workshop-ini",
     "title": "Pengantar",
     "section": "Yang tidak dicakup oleh workshop ini",
-    "text": "Yang tidak dicakup oleh workshop ini\n\nExploratory factor analysis (EFA)\nA priori power analysis, Monte Carlo simulation, dan accuracy in parameter estimation (AIPE) untuk merencanakan jumlah sampel\nSensitivity analysis untuk SEM\nMixture model (SEM untuk desain penelitian longitudinal)  latent growth curve\nModel SEM dengan missing data\nModel SEM dengan variabel moderator/mediator\nModel SEM ketika variabel eksogen (indikator) dichotomous\nHierarchical latent variable model (second-order CFA)\nExploratory SEM (ESEM)\nPartial least square (PLS)\nMultiple indicators, multiple causes model (MIMIC)"
+    "text": "Yang tidak dicakup oleh workshop ini\n\nExploratory factor analysis (EFA)\nA priori power analysis, Monte Carlo simulation, dan accuracy in parameter estimation (AIPE) untuk merencanakan jumlah sampel\nSensitivity analysis untuk SEM\nMixture model  untuk mengungkap subpopulasi berdasarkan distribusi variabel laten (person-centered methods, e.g., latent categorical analysis (LCA) dan latent profile analysis (LPA))\nLatent growth curve\nModel SEM dengan missing data\nModel SEM dengan variabel moderator/mediator\nModel SEM ketika variabel eksogen (indikator) dichotomous\nHierarchical latent variable model (second-order CFA)\nExploratory SEM (ESEM)\nPartial least square (PLS)\nMultiple indicators, multiple causes model (MIMIC)"
   },
   {
     "objectID": "slides/bagian-1.html#ada-pertanyaan",
@@ -634,7 +634,7 @@
     "href": "slides/bagian-3.html#nama-variabel-dan-koefisien-jalur-1",
     "title": "Model Jalur",
     "section": "Nama variabel dan koefisien jalur",
-    "text": "Nama variabel dan koefisien jalur\n\n\n\n\n\n\n\n\nNama Variabel/Koefisien\nHuruf Yunani\nHuruf Latin\n\n\n\n\nDirect effect antara variabel laten dan indikatornya (loading factor)\nλ\nLambda\n\n\nDirect effect antara variabel endogen dan eksogen\nγ\nGamma\n\n\nDirect effect antara dua variabel laten\nβ\nBeta\n\n\nKorelasi (covariance) antara dua variabel laten\nφ\nPhi\n\n\nResidual/disturbance dari variabel laten endogen (varians yang tidak dijelaskan oleh prediktornya)\nζ\nZeta"
+    "text": "Nama variabel dan koefisien jalur\n\n\n\n\n\n\n\n\nNama Variabel/Koefisien\nHuruf Yunani\nHuruf Latin\n\n\n\n\nDirect effect antara variabel laten dan indikatornya (loading factor)\nλ\nLambda\n\n\nDirect effect antara variabel endogen dan eksogen\nγ\nGamma\n\n\nDirect effect antara dua variabel laten endogen\nβ\nBeta\n\n\nKorelasi (covariance) antara dua variabel laten eksogen\nφ\nPhi\n\n\nResidual/disturbance dari variabel laten endogen (varians yang tidak dijelaskan oleh prediktornya)\nζ\nZeta"
   },
   {
     "objectID": "slides/bagian-3.html#contoh-model-dengan-koefisien-jalur",
@@ -662,7 +662,7 @@
     "href": "slides/bagian-3.html#lavaan-syntax",
     "title": "Model Jalur",
     "section": "lavaan Syntax",
-    "text": "lavaan Syntax\n\nGAMLj menyediakan dua opsi: fitur syntax atau interactive\n\nKalau memilih fitur interactive, maka tampilan antarmukanya berupa drag & drop (seperti SPSS).\nUntuk fitur syntax, maka tampilan antarmukanya meminta pengguna untuk menspesifikasi model dengan syntax.\n\njamovi dan JASP mengadopsi syntax dari  package lavaan, sehingga untuk menspesifikasi model, kita harus memasukkan serangkaian perintah.\nMeskipun begitu, syntax lavaan sangat sederhana dan familiar dengan syntax lavaan memberikan banyak keuntungan.\nMenjalankan perintah dengan syntax juga membantu peneliti untuk mereka-ulang hasil analisis datanya, serta mempermudah kolaborasi dengan peneliti yang terbiasa menggunakan perangkat lunak yang berbeda dengan kita.\nOleh karena itu, dalam workshop ini peserta juga harus berlatih menulis syntax."
+    "text": "lavaan Syntax\n\nSEMLj menyediakan dua opsi: fitur syntax atau interactive\n\nKalau memilih fitur interactive, maka tampilan antarmukanya berupa drag & drop (seperti SPSS).\nUntuk fitur syntax, maka tampilan antarmukanya meminta pengguna untuk menspesifikasi model dengan syntax.\n\njamovi dan JASP mengadopsi syntax dari  package lavaan, sehingga untuk menspesifikasi model, kita harus memasukkan serangkaian perintah.\nMeskipun begitu, syntax lavaan sangat sederhana dan familiar dengan syntax lavaan memberikan banyak keuntungan.\nMenjalankan perintah dengan syntax juga membantu peneliti untuk mereka-ulang hasil analisis datanya, serta mempermudah kolaborasi dengan peneliti yang terbiasa menggunakan perangkat lunak yang berbeda dengan kita.\nOleh karena itu, dalam workshop ini peserta juga harus berlatih menulis syntax."
   },
   {
     "objectID": "slides/bagian-3.html#dasar-syntax-lavaan",
@@ -802,7 +802,7 @@
     "href": "slides/bagian-5.html#menguji-ketepatan-model-chi-square-χ²",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Menguji ketepatan model: Chi-square (χ²)",
-    "text": "Menguji ketepatan model: Chi-square (χ²)\n\n\n\nDihitung dengan cara membandingkan saturated model dengan model tanpa jalur sama sekali (baseline, null, atau independent model)\nSelain χ², kita bisa menggunakan alternative fit indices yang terdiri dari\n\nIncremental index\nParsimony index\nAbsolute (standalone) index"
+    "text": "Menguji ketepatan model: Chi-square (χ²)\n\n\n\nDihitung dengan cara membandingkan model yang dihipotesiskan (implied model) dengan saturated model (model dengan fit sempurna — semua parameter dibebaskan)\n\nIndeks inkremental seperti CFI dan NFI-lah yang membandingkan implied model dengan baseline/null model (model tanpa jalur sama sekali)\n\nSelain χ², kita bisa menggunakan alternative fit indices yang terdiri dari\n\nIncremental index\nParsimony index\nAbsolute (standalone) index"
   },
   {
     "objectID": "slides/bagian-5.html#incremental-comparativerelative-index",
@@ -830,7 +830,7 @@
     "href": "slides/bagian-5.html#absolute-index",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Absolute index",
-    "text": "Absolute index\n\nIndeks ini dihitung tanpa melakukan perbandingan dengan baseline\nMeliputi\n\nChi-square (χ²)/df ratio\nGoodness of Fit Index  mendekati 1 = better fit\nAdjusted Goodness of Fit Index  merupakan parsimony adjustment dari GFI, mendekati 1 = better fit\nParsimony Goodness of Fit Index  mendekati 1 = better fit\nHoelter’s Critical n  nilainya sebaiknya &gt; 200\nStandardized Root Mean Square Residual (SRMR/RMR)  nilai &lt; 0.05 menunjukkan good fit"
+    "text": "Absolute index\n\nIndeks ini dihitung tanpa melakukan perbandingan dengan baseline\nMeliputi\n\nChi-square (χ²)/df ratio\nGoodness of Fit Index  mendekati 1 = better fit\nAdjusted Goodness of Fit Index  merupakan parsimony adjustment dari GFI, mendekati 1 = better fit\nParsimony Goodness of Fit Index  mendekati 1 = better fit\nHoelter’s Critical n  nilainya sebaiknya &gt; 200\nStandardized Root Mean Square Residual (SRMR/RMR)  nilai &lt; 0.08 menunjukkan acceptable fit (konsisten dengan kriteria pada parsimony index di atas)"
   },
   {
     "objectID": "slides/bagian-5.html#global-vs.-local-fit",

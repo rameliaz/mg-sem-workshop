@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.10.3">
 
   <meta name="author" content="Rizqy Amelia Zein">
-  <meta name="dcterms.date" content="2026-05-02">
+  <meta name="dcterms.date" content="2026-05-03">
   <title>Multigroup SEM Workshop – Multigroup Structural Equation Modeling (MGSEM)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -150,7 +150,7 @@ Rizqy Amelia Zein
     </div>
 </div>
 
-  <p class="date">2026-05-02</p>
+  <p class="date">2026-05-03</p>
 </section>
 <section id="outline" class="slide level2">
 <h2><em>Outline</em></h2>
@@ -174,7 +174,7 @@ Rizqy Amelia Zein
 <ul>
 <li class="fragment"><p><em>Invariance</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> apakah dalam kondisi di subkelompok yang beragam ketika melakukan pengukuran, alat ukur selalu mengukur atribut ukur yang sama</p></li>
 <li class="fragment"><p><em>Measurement invariance</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> dua atau lebih kelompok memiliki properti psikometrik yang sama, yaitu variabel laten dalam model pengukuran adalah konstruk yang sama</p></li>
-<li class="fragment"><p>Ketika membandingkan model pengukuran di dua atau lebih kelompok yang berbeda, untuk menyimpulkan terjadinya <em>invariance</em>, maka peneliti akan menginginkan <em>chi-square</em> (χ²) yang <em>p-value</em>nya ≤ α</p></li>
+<li class="fragment"><p>Ketika membandingkan model pengukuran di dua atau lebih kelompok yang berbeda, untuk menyimpulkan terjadinya <em>invariance</em>, maka peneliti akan menginginkan <strong>perubahan <em>chi-square</em></strong> (Δχ²) yang <em>p-value</em>nya <strong>&gt; α</strong> — artinya, menambah <em>constraint</em> tidak memperburuk <em>fit</em> model secara signifikan</p></li>
 <li class="fragment"><p>Kalau kita berniat melakukan perbandingan performa alat ukur di dua kelompok sampel yang berbeda, maka kita lebih baik menggunakan <strong><em>means-covariance matrix</em></strong> bukan <em>variance-covariance matrix</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> ingat <em>t-test</em> dan <em>anova</em></p></li>
 </ul>
 </section>
@@ -186,8 +186,12 @@ Rizqy Amelia Zein
 <li><p>Kalau kita masukkan <em>mean</em> variabel laten ke dalam model, maka <strong><em>intercept</em>-nya juga harus dimasukkan dalam model</strong></p></li>
 <li><p><em>Mean</em> dan <em>intercept</em> adalah ukuran <em>lokasi variabel</em>, dimana…</p>
 <ul>
-<li><strong><em>Mean</em></strong> adalah komponen <strong><em>common factor</em></strong></li>
-<li><strong><em>Intercept</em></strong> adalah komponen <strong><em>unique factor</em></strong></li>
+<li><strong><em>Mean</em></strong> variabel laten adalah komponen yang <strong>dibagi bersama</strong> oleh semua indikator</li>
+<li><strong><em>Intercept</em></strong> adalah <strong>nilai dasar/<em>baseline</em></strong> yang berbeda untuk masing-masing item — yaitu <em>expected score</em> ketika nilai variabel laten = 0</li>
+</ul></li>
+<li><p>Dalam model pengukuran: <strong>skor kasar (<em>observed</em>) = <em>intercept</em> + (<em>factor loading</em> × <em>mean</em> variabel laten) + <em>error</em></strong></p>
+<ul>
+<li>Artinya, skor yang kita ukur dipengaruhi <strong>dua hal sekaligus</strong>: <em>intercept</em> item dan <em>mean</em> variabel laten — keduanya harus dimasukkan bersama agar model bisa memisahkan kontribusi masing-masing</li>
 </ul></li>
 <li><p><em>Intercept</em> disimbolkan dengan segitiga dan</p>
 <ul>
@@ -234,6 +238,12 @@ Rizqy Amelia Zein
 <ul>
 <li><strong>Selain <em>factor loading</em> harus sama</strong>, <em>strong invariance</em> mensyaratkan <strong><em>intercept</em> harus sama juga</strong></li>
 <li>Ketika membatasi/<em>constraining</em> <em>intercept</em>, maka <em>latent means</em> boleh bervariasi (dan dibandingkan) di berbagai kelompok</li>
+<li><strong>Mengapa?</strong>
+<ul>
+<li>Bayangkan dua termometer mengukur suhu ruangan yang sama (e.g., termometer celcius dan fahrenheit).</li>
+<li>Jika termometer fahrenheit dikalibrasi 32° lebih tinggi dari celcius (<em>intercept</em> berbeda), keduanya menunjukkan angka berbeda — bukan karena suhunya beda, tapi karena <em>baseline</em>-nya beda.</li>
+<li>Jika <em>intercept</em> tidak disetarakan antar kelompok, perbedaan skor bisa berasal dari perbedaan <em>baseline item</em>, bukan perbedaan konstruk yang sebenarnya</li>
+</ul></li>
 <li>Dengan asumsi <em>strong invariance</em> ekuivalensi variabel laten lebih didukung bukti yang kuat</li>
 <li>Untuk mengeksekusinya di <code>jamovi</code>, klik opsi <code>Multi-group analysis</code>, tambahkan data pengelompokan di <code>factor for multi-group analysis</code> dan centang pilihan <code>loadings</code> dan <code>intercepts</code> pada <code>equality constraints</code></li>
 </ul></li>
