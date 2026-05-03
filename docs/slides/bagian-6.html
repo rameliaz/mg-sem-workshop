@@ -183,19 +183,33 @@ Rizqy Amelia Zein
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
-<li><p>Kalau kita masukkan <em>mean</em> variabel laten ke dalam model, maka <strong><em>intercept</em>-nya juga harus dimasukkan dalam model</strong></p></li>
-<li><p><em>Mean</em> dan <em>intercept</em> adalah ukuran <em>lokasi variabel</em>, dimana…</p>
+<li class="fragment"><p>Kalau kita masukkan <em>mean</em> variabel laten ke dalam model, maka <strong><em>intercept</em>-nya juga harus dimasukkan dalam model</strong></p></li>
+<li class="fragment"><p><em>Mean</em> dan <em>intercept</em> adalah ukuran <em>lokasi variabel</em>, dimana…</p>
 <ul>
-<li><strong><em>Mean</em></strong> variabel laten adalah komponen yang <strong>dibagi bersama</strong> oleh semua indikator</li>
-<li><strong><em>Intercept</em></strong> adalah <strong>nilai dasar/<em>baseline</em></strong> yang berbeda untuk masing-masing item — yaitu <em>expected score</em> ketika nilai variabel laten = 0</li>
+<li class="fragment"><strong><em>Mean</em></strong> variabel laten adalah komponen yang <strong>dibagi bersama</strong> oleh semua indikator</li>
+<li class="fragment"><strong><em>Intercept</em></strong> adalah <strong>nilai dasar/<em>baseline</em></strong> yang berbeda untuk masing-masing item — yaitu <em>expected score</em> ketika nilai variabel laten = 0</li>
 </ul></li>
-<li><p>Dalam model pengukuran: <strong>skor kasar (<em>observed</em>) = <em>intercept</em> + (<em>factor loading</em> × <em>mean</em> variabel laten) + <em>error</em></strong></p>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="libs/meansintercept.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="means-dan-intercept-1" class="slide level2">
+<h2><em>Means</em> dan <em>intercept</em></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
-<li>Artinya, skor yang kita ukur dipengaruhi <strong>dua hal sekaligus</strong>: <em>intercept</em> item dan <em>mean</em> variabel laten — keduanya harus dimasukkan bersama agar model bisa memisahkan kontribusi masing-masing</li>
+<li class="fragment">Dalam model pengukuran: <strong>skor kasar (<em>observed</em>) = <em>intercept</em> + (<em>factor loading</em> × <em>mean</em> variabel laten) + <em>error</em></strong>
+<ul>
+<li class="fragment">Artinya, skor yang kita ukur dipengaruhi <strong>dua hal sekaligus</strong>: <em>intercept</em> item dan <em>mean</em> variabel laten — keduanya harus dimasukkan bersama agar model bisa memisahkan kontribusi masing-masing</li>
 </ul></li>
-<li><p><em>Intercept</em> disimbolkan dengan segitiga dan</p>
+<li class="fragment"><em>Intercept</em> disimbolkan dengan segitiga dan
 <ul>
-<li><strong>Hanya boleh “ketemu”</strong> dengan panah <em>uni-directional</em> dan sifatnya <em>backwards</em></li>
+<li class="fragment"><strong>Hanya boleh “ketemu”</strong> dengan panah <em>uni-directional</em> dan sifatnya <em>backwards</em></li>
 </ul></li>
 </ul>
 </div><div class="column" style="width:50%;">
@@ -209,54 +223,53 @@ Rizqy Amelia Zein
 <section id="jenis-jenis-measurement-invariance-1" class="slide level2">
 <h2>Jenis-jenis <em>measurement invariance</em> 1️⃣</h2>
 <ul>
-<li><em>Configural</em>
+<li class="fragment"><em>Configural</em>
 <ul>
-<li>Jenis ini adalah yang paling dasar, yang mengasumsikan bahwa <strong>model memiliki struktur yang sama</strong> di <strong>semua kelompok</strong></li>
-<li>Karena hanya struktur faktor yang sama, sehingga belum ada yang bisa dibandingkan secara bermakna antar kelompok.</li>
-<li>Oleh karena itu, semua kelompok <strong>harus</strong> memiliki <strong>jumlah faktor/variabel laten</strong> dan <strong>jumlah variabel indikator/<em>observed</em> yang sama</strong></li>
-<li><strong>Tidak ada ketentuan</strong> bahwa parameter di dalam model harus setara di semua kelompok <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> tidak ada <em>between-group comparison</em></li>
-<li>Untuk mengeksekusi <em>configural invariance</em> tinggal menambahkan <code>grouping variable</code> di <code>jamovi</code> pada bagian <strong>options</strong></li>
+<li class="fragment">Jenis ini adalah yang paling dasar, yang mengasumsikan bahwa <strong>model memiliki struktur yang sama</strong> di <strong>semua kelompok</strong></li>
+<li class="fragment">Karena hanya struktur faktor yang sama, sehingga belum ada yang bisa dibandingkan secara bermakna antar kelompok.</li>
+<li class="fragment">Oleh karena itu, semua kelompok <strong>harus</strong> memiliki <strong>jumlah faktor/variabel laten</strong> dan <strong>jumlah variabel indikator/<em>observed</em> yang sama</strong></li>
+<li class="fragment"><strong>Tidak ada ketentuan</strong> bahwa parameter di dalam model harus setara di semua kelompok <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> tidak ada <em>between-group comparison</em></li>
+<li class="fragment">Untuk mengeksekusi <em>configural invariance</em> tinggal menambahkan <code>grouping variable</code> di <code>jamovi</code> pada bagian <strong>options</strong></li>
 </ul></li>
 </ul>
 </section>
 <section id="jenis-jenis-measurement-invariance-2" class="slide level2">
 <h2>Jenis-jenis <em>measurement invariance</em> 2️⃣</h2>
 <ul>
-<li><em>Weak</em>/<em>metric</em>
+<li class="fragment"><em>Weak</em>/<em>metric</em>
 <ul>
-<li><strong><em>Factor loading</em> harus sama</strong> pada setiap kelompok, tetapi <strong>varians variabel laten boleh bervariasi</strong></li>
-<li>Dinamai <em>weak</em> karena asumsinya masih lemah untuk menyimpulkan bahwa faktor laten <strong>ekuivalen</strong> di semua kelompok</li>
-<li>Hubungan antar variabel laten (misalnya korelasi atau regresi) bisa dibandingkan</li>
-<li>Untuk mengeksekusinya di <code>jamovi</code>, klik opsi <code>Multi-group analysis</code>, tambahkan data pengelompokan di <code>factor for multi-group analysis</code> dan centang pilihan <code>loadings</code> pada <code>equality constraints</code></li>
+<li class="fragment"><strong><em>Factor loading</em> harus sama</strong> pada setiap kelompok, tetapi <strong>varians variabel laten boleh bervariasi</strong></li>
+<li class="fragment">Dinamai <em>weak</em> karena asumsinya masih lemah untuk menyimpulkan bahwa faktor laten <strong>ekuivalen</strong> di semua kelompok</li>
+<li class="fragment">Hubungan antar variabel laten (misalnya korelasi atau regresi) bisa dibandingkan</li>
+<li class="fragment">Untuk mengeksekusinya di <code>jamovi</code>, klik opsi <code>Multi-group analysis</code>, tambahkan data pengelompokan di <code>factor for multi-group analysis</code> dan centang pilihan <code>loadings</code> pada <code>equality constraints</code></li>
 </ul></li>
 </ul>
 </section>
 <section id="jenis-jenis-measurement-invariance-3" class="slide level2">
 <h2>Jenis-jenis <em>measurement invariance</em> 3️⃣</h2>
 <ul>
-<li><em>Strong</em>/<em>scalar</em>
+<li class="fragment"><em>Strong</em>/<em>scalar</em>
 <ul>
-<li><strong>Selain <em>factor loading</em> harus sama</strong>, <em>strong invariance</em> mensyaratkan <strong><em>intercept</em> harus sama juga</strong></li>
-<li>Ketika membatasi/<em>constraining</em> <em>intercept</em>, maka <em>latent means</em> boleh bervariasi (dan dibandingkan) di berbagai kelompok</li>
-<li><strong>Mengapa?</strong>
+<li class="fragment"><strong>Selain <em>factor loading</em> harus sama</strong>, <em>strong invariance</em> mensyaratkan <strong><em>intercept</em> harus sama juga</strong></li>
+<li class="fragment">Ketika membatasi/<em>constraining</em> <em>intercept</em>, maka <em>latent means</em> boleh bervariasi (dan dibandingkan) di berbagai kelompok</li>
+<li class="fragment"><strong>Mengapa?</strong> Bayangkan dua termometer mengukur suhu ruangan yang sama (e.g., termometer celcius dan fahrenheit).
 <ul>
-<li>Bayangkan dua termometer mengukur suhu ruangan yang sama (e.g., termometer celcius dan fahrenheit).</li>
-<li>Jika termometer fahrenheit dikalibrasi 32° lebih tinggi dari celcius (<em>intercept</em> berbeda), keduanya menunjukkan angka berbeda — bukan karena suhunya beda, tapi karena <em>baseline</em>-nya beda.</li>
-<li>Jika <em>intercept</em> tidak disetarakan antar kelompok, perbedaan skor bisa berasal dari perbedaan <em>baseline item</em>, bukan perbedaan konstruk yang sebenarnya</li>
+<li class="fragment">Jika termometer fahrenheit dikalibrasi 32° lebih tinggi dari celcius (<em>intercept</em> berbeda), keduanya menunjukkan angka berbeda — bukan karena suhunya beda, tapi karena <em>baseline</em>-nya beda.</li>
+<li class="fragment">Jika <em>intercept</em> tidak disetarakan antar kelompok, perbedaan skor bisa berasal dari perbedaan <em>baseline item</em>, bukan perbedaan konstruk yang sebenarnya</li>
 </ul></li>
-<li>Dengan asumsi <em>strong invariance</em> ekuivalensi variabel laten lebih didukung bukti yang kuat</li>
-<li>Untuk mengeksekusinya di <code>jamovi</code>, klik opsi <code>Multi-group analysis</code>, tambahkan data pengelompokan di <code>factor for multi-group analysis</code> dan centang pilihan <code>loadings</code> dan <code>intercepts</code> pada <code>equality constraints</code></li>
+<li class="fragment">Dengan asumsi <em>strong invariance</em> ekuivalensi variabel laten lebih didukung bukti yang kuat</li>
+<li class="fragment">Untuk mengeksekusinya di <code>jamovi</code>, klik opsi <code>Multi-group analysis</code>, tambahkan data pengelompokan di <code>factor for multi-group analysis</code> dan centang pilihan <code>loadings</code> dan <code>intercepts</code> pada <code>equality constraints</code></li>
 </ul></li>
 </ul>
 </section>
 <section id="jenis-jenis-measurement-invariance-4" class="slide level2">
 <h2>Jenis-jenis <em>measurement invariance</em> 4️⃣</h2>
 <ul>
-<li><em>Strict</em>/<em>residuals</em>
+<li class="fragment"><em>Strict</em>/<em>residuals</em>
 <ul>
-<li><strong>Selain <em>factor loading</em> dan <em>intercept</em> harus sama</strong>, <em>strict invariance</em> mensyaratkan <strong><em>varians error</em>/<em>residual</em> sama juga</strong></li>
-<li>Biasanya asumsi ini <strong>tidak terlalu diperlukan</strong> untuk membandingkan variabel laten di masing-masing kelompok</li>
-<li>Untuk mengeksekusinya di <code>jamovi</code>, klik opsi <code>Multi-group analysis</code>, tambahkan data pengelompokan di <code>factor for multi-group analysis</code> dan centang pilihan <code>loadings</code>, <code>intercepts</code> dan <code>residuals</code> pada <code>equality constraints</code></li>
+<li class="fragment"><strong>Selain <em>factor loading</em> dan <em>intercept</em> harus sama</strong>, <em>strict invariance</em> mensyaratkan <strong><em>varians error</em>/<em>residual</em> sama juga</strong></li>
+<li class="fragment">Biasanya asumsi ini <strong>tidak terlalu diperlukan</strong> untuk membandingkan variabel laten di masing-masing kelompok</li>
+<li class="fragment">Untuk mengeksekusinya di <code>jamovi</code>, klik opsi <code>Multi-group analysis</code>, tambahkan data pengelompokan di <code>factor for multi-group analysis</code> dan centang pilihan <code>loadings</code>, <code>intercepts</code> dan <code>residuals</code> pada <code>equality constraints</code></li>
 </ul></li>
 </ul>
 </section>

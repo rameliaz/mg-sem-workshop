@@ -18,7 +18,14 @@
     "href": "slides/bagian-6.html#means-dan-intercept",
     "title": "Multigroup Structural Equation Modeling (MGSEM)",
     "section": "Means dan intercept",
-    "text": "Means dan intercept\n\n\n\nKalau kita masukkan mean variabel laten ke dalam model, maka intercept-nya juga harus dimasukkan dalam model\nMean dan intercept adalah ukuran lokasi variabel, dimana…\n\nMean variabel laten adalah komponen yang dibagi bersama oleh semua indikator\nIntercept adalah nilai dasar/baseline yang berbeda untuk masing-masing item — yaitu expected score ketika nilai variabel laten = 0\n\nDalam model pengukuran: skor kasar (observed) = intercept + (factor loading × mean variabel laten) + error\n\nArtinya, skor yang kita ukur dipengaruhi dua hal sekaligus: intercept item dan mean variabel laten — keduanya harus dimasukkan bersama agar model bisa memisahkan kontribusi masing-masing\n\nIntercept disimbolkan dengan segitiga dan\n\nHanya boleh “ketemu” dengan panah uni-directional dan sifatnya backwards"
+    "text": "Means dan intercept\n\n\n\nKalau kita masukkan mean variabel laten ke dalam model, maka intercept-nya juga harus dimasukkan dalam model\nMean dan intercept adalah ukuran lokasi variabel, dimana…\n\nMean variabel laten adalah komponen yang dibagi bersama oleh semua indikator\nIntercept adalah nilai dasar/baseline yang berbeda untuk masing-masing item — yaitu expected score ketika nilai variabel laten = 0"
+  },
+  {
+    "objectID": "slides/bagian-6.html#means-dan-intercept-1",
+    "href": "slides/bagian-6.html#means-dan-intercept-1",
+    "title": "Multigroup Structural Equation Modeling (MGSEM)",
+    "section": "Means dan intercept",
+    "text": "Means dan intercept\n\n\n\nDalam model pengukuran: skor kasar (observed) = intercept + (factor loading × mean variabel laten) + error\n\nArtinya, skor yang kita ukur dipengaruhi dua hal sekaligus: intercept item dan mean variabel laten — keduanya harus dimasukkan bersama agar model bisa memisahkan kontribusi masing-masing\n\nIntercept disimbolkan dengan segitiga dan\n\nHanya boleh “ketemu” dengan panah uni-directional dan sifatnya backwards"
   },
   {
     "objectID": "slides/bagian-6.html#jenis-jenis-measurement-invariance-1",
@@ -39,7 +46,7 @@
     "href": "slides/bagian-6.html#jenis-jenis-measurement-invariance-3",
     "title": "Multigroup Structural Equation Modeling (MGSEM)",
     "section": "Jenis-jenis measurement invariance 3️⃣",
-    "text": "Jenis-jenis measurement invariance 3️⃣\n\nStrong/scalar\n\nSelain factor loading harus sama, strong invariance mensyaratkan intercept harus sama juga\nKetika membatasi/constraining intercept, maka latent means boleh bervariasi (dan dibandingkan) di berbagai kelompok\nMengapa?\n\nBayangkan dua termometer mengukur suhu ruangan yang sama (e.g., termometer celcius dan fahrenheit).\nJika termometer fahrenheit dikalibrasi 32° lebih tinggi dari celcius (intercept berbeda), keduanya menunjukkan angka berbeda — bukan karena suhunya beda, tapi karena baseline-nya beda.\nJika intercept tidak disetarakan antar kelompok, perbedaan skor bisa berasal dari perbedaan baseline item, bukan perbedaan konstruk yang sebenarnya\n\nDengan asumsi strong invariance ekuivalensi variabel laten lebih didukung bukti yang kuat\nUntuk mengeksekusinya di jamovi, klik opsi Multi-group analysis, tambahkan data pengelompokan di factor for multi-group analysis dan centang pilihan loadings dan intercepts pada equality constraints"
+    "text": "Jenis-jenis measurement invariance 3️⃣\n\nStrong/scalar\n\nSelain factor loading harus sama, strong invariance mensyaratkan intercept harus sama juga\nKetika membatasi/constraining intercept, maka latent means boleh bervariasi (dan dibandingkan) di berbagai kelompok\nMengapa? Bayangkan dua termometer mengukur suhu ruangan yang sama (e.g., termometer celcius dan fahrenheit).\n\nJika termometer fahrenheit dikalibrasi 32° lebih tinggi dari celcius (intercept berbeda), keduanya menunjukkan angka berbeda — bukan karena suhunya beda, tapi karena baseline-nya beda.\nJika intercept tidak disetarakan antar kelompok, perbedaan skor bisa berasal dari perbedaan baseline item, bukan perbedaan konstruk yang sebenarnya\n\nDengan asumsi strong invariance ekuivalensi variabel laten lebih didukung bukti yang kuat\nUntuk mengeksekusinya di jamovi, klik opsi Multi-group analysis, tambahkan data pengelompokan di factor for multi-group analysis dan centang pilihan loadings dan intercepts pada equality constraints"
   },
   {
     "objectID": "slides/bagian-6.html#jenis-jenis-measurement-invariance-4",

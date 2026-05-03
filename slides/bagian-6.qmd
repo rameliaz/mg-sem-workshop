@@ -48,6 +48,7 @@ execute:
 
 ::: {.columns}
 ::: {.column width="50%"}
+::: {.incremental}
 
 * Kalau kita masukkan *mean* variabel laten ke dalam model, maka **_intercept_-nya juga harus dimasukkan dalam model**
 
@@ -55,12 +56,28 @@ execute:
   - ***Mean*** variabel laten adalah komponen yang **dibagi bersama** oleh semua indikator
   - ***Intercept*** adalah **nilai dasar/*baseline*** yang berbeda untuk masing-masing item — yaitu *expected score* ketika nilai variabel laten = 0
 
+:::
+:::
+::: {.column width="50%"}
+
+![](libs/meansintercept.png){fig-align="center" width="100%"}
+
+:::
+:::
+
+## *Means* dan *intercept*
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.incremental}
+
 * Dalam model pengukuran: **skor kasar (*observed*) = *intercept* + (*factor loading* × *mean* variabel laten) + *error***
   - Artinya, skor yang kita ukur dipengaruhi **dua hal sekaligus**: *intercept* item dan *mean* variabel laten — keduanya harus dimasukkan bersama agar model bisa memisahkan kontribusi masing-masing
 
 * *Intercept* disimbolkan dengan segitiga dan
   - **Hanya boleh "ketemu"** dengan panah *uni-directional* dan sifatnya *backwards*
 
+:::
 :::
 ::: {.column width="50%"}
 
@@ -71,6 +88,8 @@ execute:
 
 ## Jenis-jenis *measurement invariance* 1️⃣
 
+::: {.incremental}
+
 * *Configural*
   - Jenis ini adalah yang paling dasar, yang mengasumsikan bahwa **model memiliki struktur yang sama** di **semua kelompok**
   - Karena hanya struktur faktor yang sama, sehingga belum ada yang bisa dibandingkan secara bermakna antar kelompok.
@@ -78,7 +97,11 @@ execute:
   - **Tidak ada ketentuan** bahwa parameter di dalam model harus setara di semua kelompok {{< fa circle-arrow-right >}} tidak ada *between-group comparison*
   - Untuk mengeksekusi *configural invariance* tinggal menambahkan `grouping variable` di `jamovi` pada bagian **options**
 
+:::
+
 ## Jenis-jenis *measurement invariance* 2️⃣
+
+::: {.incremental}
 
 * *Weak*/*metric*
   - **_Factor loading_ harus sama** pada setiap kelompok, tetapi **varians variabel laten boleh bervariasi**
@@ -86,24 +109,33 @@ execute:
   - Hubungan antar variabel laten (misalnya korelasi atau regresi) bisa dibandingkan
   - Untuk mengeksekusinya di `jamovi`, klik opsi `Multi-group analysis`, tambahkan data pengelompokan di `factor for multi-group analysis` dan centang pilihan `loadings` pada `equality constraints`
 
+:::
+
 ## Jenis-jenis *measurement invariance* 3️⃣
+
+::: {.incremental}
 
 * *Strong*/*scalar*
   - **Selain *factor loading* harus sama**, *strong invariance* mensyaratkan **_intercept_ harus sama juga**
   - Ketika membatasi/*constraining* *intercept*, maka *latent means* boleh bervariasi (dan dibandingkan) di berbagai kelompok
-  - **Mengapa?** 
-    - Bayangkan dua termometer mengukur suhu ruangan yang sama (e.g., termometer celcius dan fahrenheit). 
+  - **Mengapa?** Bayangkan dua termometer mengukur suhu ruangan yang sama (e.g., termometer celcius dan fahrenheit). 
     - Jika termometer fahrenheit dikalibrasi 32° lebih tinggi dari celcius (*intercept* berbeda), keduanya menunjukkan angka berbeda — bukan karena suhunya beda, tapi karena *baseline*-nya beda. 
     - Jika *intercept* tidak disetarakan antar kelompok, perbedaan skor bisa berasal dari perbedaan *baseline item*, bukan perbedaan konstruk yang sebenarnya
   - Dengan asumsi *strong invariance* ekuivalensi variabel laten lebih didukung bukti yang kuat
   - Untuk mengeksekusinya di `jamovi`, klik opsi `Multi-group analysis`, tambahkan data pengelompokan di `factor for multi-group analysis` dan centang pilihan `loadings` dan `intercepts` pada `equality constraints`
 
+:::
+
 ## Jenis-jenis *measurement invariance* 4️⃣
+
+::: {.incremental}
 
 * *Strict*/*residuals*
   - **Selain *factor loading* dan *intercept* harus sama**, *strict invariance* mensyaratkan **_varians error_/_residual_ sama juga**
   - Biasanya asumsi ini **tidak terlalu diperlukan** untuk membandingkan variabel laten di masing-masing kelompok
   - Untuk mengeksekusinya di `jamovi`, klik opsi `Multi-group analysis`, tambahkan data pengelompokan di `factor for multi-group analysis` dan centang pilihan `loadings`, `intercepts` dan `residuals` pada `equality constraints`
+
+:::
 
 ## Jenis-jenis *measurement invariance*
 
