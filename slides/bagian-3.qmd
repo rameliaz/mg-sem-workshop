@@ -102,10 +102,13 @@ Marimar heran sekaligus penasaran, mengapa tiap anak **memberikan respon yang be
 
 | Nama Variabel/Koefisien | Huruf Yunani | Huruf Latin |
 | :-------------------------------------- | :------------: | :----------: |
-| *Error* pengukuran dari variabel X | δ | Delta |
-| *Error* pengukuran dari variabel Y | ε | Epsilon |
 | Variabel eksogen | ξ | Ksi |
 | Variabel endogen | η | Eta |
+| *Error* pengukuran dari variabel X | δ | Delta |
+| *Error* pengukuran dari variabel Y | ε | Epsilon |
+| *Direct effect* antara variabel laten dan indikatornya (*loading factor*) | λ | Lambda |
+| *Direct effect* antara variabel endogen dan eksogen | γ | Gamma |
+| *Direct effect* antara dua variabel laten **endogen** | β | Beta |
 
 : {tbl-colwidths="[70,15,15]"}
 
@@ -113,9 +116,6 @@ Marimar heran sekaligus penasaran, mengapa tiap anak **memberikan respon yang be
 
 | Nama Variabel/Koefisien | Huruf Yunani | Huruf Latin |
 | :-------------------------------------- | :------------: | :----------: |
-| *Direct effect* antara variabel laten dan indikatornya (*loading factor*) | λ | Lambda |
-| *Direct effect* antara variabel endogen dan eksogen | γ | Gamma |
-| *Direct effect* antara dua variabel laten **endogen** | β | Beta |
 | Korelasi (*covariance*) antara dua variabel laten **eksogen** | φ | Phi |
 | Residual/*disturbance* dari variabel laten endogen (varians yang tidak dijelaskan oleh prediktornya) | ζ | Zeta |
 

@@ -228,7 +228,7 @@ Rizqy Amelia Zein
 </ul></li>
 <li>Representasi visual model jalur menggunakan diagram jalur (<em>path diagram</em>)</li>
 <li>Menggambarkan hubungan antar-variabel dengan menggunakan diagram jalur</li>
-<li><em>Syntax</em> <code>lavaan</code> untuk spesifikasi model jalur</li>
+<li><em>Script</em> <code>lavaan</code> untuk spesifikasi model jalur</li>
 <li>Asumsi kausalitas dan limitasi</li>
 </ul>
 </section>
@@ -326,6 +326,16 @@ Rizqy Amelia Zein
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: left;">Variabel eksogen</td>
+<td style="text-align: center;">ξ</td>
+<td style="text-align: center;">Ksi</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Variabel endogen</td>
+<td style="text-align: center;">η</td>
+<td style="text-align: center;">Eta</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;"><em>Error</em> pengukuran dari variabel X</td>
 <td style="text-align: center;">δ</td>
 <td style="text-align: center;">Delta</td>
@@ -336,14 +346,19 @@ Rizqy Amelia Zein
 <td style="text-align: center;">Epsilon</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Variabel eksogen</td>
-<td style="text-align: center;">ξ</td>
-<td style="text-align: center;">Ksi</td>
+<td style="text-align: left;"><em>Direct effect</em> antara variabel laten dan indikatornya (<em>loading factor</em>)</td>
+<td style="text-align: center;">λ</td>
+<td style="text-align: center;">Lambda</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Variabel endogen</td>
-<td style="text-align: center;">η</td>
-<td style="text-align: center;">Eta</td>
+<td style="text-align: left;"><em>Direct effect</em> antara variabel endogen dan eksogen</td>
+<td style="text-align: center;">γ</td>
+<td style="text-align: center;">Gamma</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><em>Direct effect</em> antara dua variabel laten <strong>endogen</strong></td>
+<td style="text-align: center;">β</td>
+<td style="text-align: center;">Beta</td>
 </tr>
 </tbody>
 </table>
@@ -365,26 +380,11 @@ Rizqy Amelia Zein
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><em>Direct effect</em> antara variabel laten dan indikatornya (<em>loading factor</em>)</td>
-<td style="text-align: center;">λ</td>
-<td style="text-align: center;">Lambda</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><em>Direct effect</em> antara variabel endogen dan eksogen</td>
-<td style="text-align: center;">γ</td>
-<td style="text-align: center;">Gamma</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><em>Direct effect</em> antara dua variabel laten <strong>endogen</strong></td>
-<td style="text-align: center;">β</td>
-<td style="text-align: center;">Beta</td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">Korelasi (<em>covariance</em>) antara dua variabel laten <strong>eksogen</strong></td>
 <td style="text-align: center;">φ</td>
 <td style="text-align: center;">Phi</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Residual/<em>disturbance</em> dari variabel laten endogen (varians yang tidak dijelaskan oleh prediktornya)</td>
 <td style="text-align: center;">ζ</td>
 <td style="text-align: center;">Zeta</td>
@@ -430,22 +430,22 @@ Rizqy Amelia Zein
 </div>
 <h4 id="klik-disini-untuk-mengumpulkan-tugas"><a href="https://padlet.com/ameliazein/tugas-mandiri-workshop-multigroup-sem-8p34daek2641aic8">Klik disini untuk mengumpulkan tugas</a></h4>
 </section>
-<section id="lavaan-syntax" class="slide level2">
-<h2><code>lavaan</code> <em>Syntax</em></h2>
+<section id="lavaan-script" class="slide level2">
+<h2><code>lavaan</code> <em>Script</em></h2>
 <ul>
-<li class="fragment"><p><a href="https://semlj.github.io/"><code>SEMLj</code></a> menyediakan dua opsi: fitur <em>syntax</em> atau <em>interactive</em></p>
+<li class="fragment"><p><a href="https://semlj.github.io/"><code>SEMLj</code></a> menyediakan dua opsi: fitur <em>script</em> atau <em>interactive</em></p>
 <ul>
 <li class="fragment">Kalau memilih fitur <em>interactive</em>, maka tampilan antarmukanya berupa <em>drag &amp; drop</em> (seperti <code>SPSS</code>).</li>
-<li class="fragment">Untuk fitur <em>syntax</em>, maka tampilan antarmukanya meminta pengguna untuk menspesifikasi model dengan <em>syntax</em>.</li>
+<li class="fragment">Untuk fitur <em>script</em>, maka tampilan antarmukanya meminta pengguna untuk menspesifikasi model dengan <em>script</em>.</li>
 </ul></li>
-<li class="fragment"><p><code>jamovi</code> dan <code>JASP</code> mengadopsi <em>syntax</em> dari <i class="fa-brands fa-r-project" aria-label="r-project"></i> <em>package</em> <a href="http://lavaan.ugent.be/tutorial/index.html"><code>lavaan</code></a>, sehingga untuk menspesifikasi model, kita harus memasukkan <strong>serangkaian perintah</strong>.</p></li>
-<li class="fragment"><p>Meskipun begitu, <em>syntax</em> <code>lavaan</code> <strong>sangat sederhana</strong> dan familiar dengan <em>syntax</em> <code>lavaan</code> memberikan <strong>banyak keuntungan</strong>.</p></li>
-<li class="fragment"><p>Menjalankan perintah dengan <em>syntax</em> juga membantu peneliti untuk mereka-ulang hasil analisis datanya, serta mempermudah kolaborasi dengan peneliti yang terbiasa menggunakan perangkat lunak yang berbeda dengan kita.</p></li>
-<li class="fragment"><p>Oleh karena itu, dalam <em>workshop</em> ini peserta juga harus berlatih menulis <em>syntax</em>.</p></li>
+<li class="fragment"><p><code>jamovi</code> dan <code>JASP</code> mengadopsi <em>script</em> dari <i class="fa-brands fa-r-project" aria-label="r-project"></i> <em>package</em> <a href="http://lavaan.ugent.be/tutorial/index.html"><code>lavaan</code></a>, sehingga untuk menspesifikasi model, kita harus memasukkan <strong>serangkaian perintah</strong>.</p></li>
+<li class="fragment"><p>Meskipun begitu, <em>script</em> <code>lavaan</code> <strong>sangat sederhana</strong> dan familiar dengan <em>script</em> <code>lavaan</code> memberikan <strong>banyak keuntungan</strong>.</p></li>
+<li class="fragment"><p>Menjalankan perintah dengan <em>script</em> juga membantu peneliti untuk mereka-ulang hasil analisis datanya, serta mempermudah kolaborasi dengan peneliti yang terbiasa menggunakan perangkat lunak yang berbeda dengan kita.</p></li>
+<li class="fragment"><p>Oleh karena itu, dalam <em>workshop</em> ini peserta juga harus berlatih menulis <em>script</em>.</p></li>
 </ul>
 </section>
-<section id="dasar-syntax-lavaan" class="slide level2">
-<h2>Dasar <em>syntax</em> <code>lavaan</code></h2>
+<section id="dasar-script-lavaan" class="slide level2">
+<h2>Dasar <em>script</em> <code>lavaan</code></h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="libs/lavaan.png" class="quarto-figure quarto-figure-center" style="width:55.0%"></p>
@@ -527,9 +527,9 @@ Rizqy Amelia Zein
 <span id="cb4-20"><a></a>mandiri <span class="sc">~</span><span class="er">~</span> mandiri</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="latihan-mandiri-3-menulis-syntax-lavaan" class="slide level2">
-<h2>Latihan mandiri 3️⃣: Menulis <em>syntax</em> <code>lavaan</code></h2>
-<p>Tulislah <em>syntax</em> <code>lavaan</code> dari diagram jalur yang sudah dibuat di Latihan mandiri 2️⃣</p>
+<section id="latihan-mandiri-3-menulis-script-lavaan" class="slide level2">
+<h2>Latihan mandiri 3️⃣: Menulis <em>script</em> <code>lavaan</code></h2>
+<p>Tulislah <em>script</em> <code>lavaan</code> dari diagram jalur yang sudah dibuat di Latihan mandiri 2️⃣</p>
 <h4 id="klik-disini-untuk-mengumpulkan-tugas-1"><a href="https://padlet.com/ameliazein/tugas-mandiri-workshop-multigroup-sem-8p34daek2641aic8">Klik disini untuk mengumpulkan tugas</a></h4>
 </section>
 <section id="ada-pertanyaan" class="slide level2">
