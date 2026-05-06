@@ -273,7 +273,7 @@ Setiap modifikasi **harus dijustifikasi secara teori**, bukan semata-mata didoro
   - Oleh karena itu, **gagal menolak *H*~0~** (*p* > 0.05) menunjukkan bahwa model "*close-fitting*"
   - `RMSEA` sangat dipengaruhi oleh kompleksitas model dan *sample size*, dan dapat menunjukkan *misfiting* bahkan untuk kesalahan spesifikasi yang kecil ketika sampelnya besar
 * ***Standardized Root Mean Square Residual* (`SRMR`)** {{< fa circle-arrow-right >}} akar kuadrat dari rata-rata kuadrat selisih antara *observed* dan *model-implied correlation matrix*, nilai **< 0.08** menunjukkan *acceptable fit*
-  - `SRMR` (vs. `RMSEA`) relatif kurang dipengaruhi oleh *sample size* dan secara langsung mencerminkan selisih rata-rata antara -*observed* dan *model-implied correlation matrix*
+  - `SRMR` (vs. `RMSEA`) relatif kurang dipengaruhi oleh *sample size* dan secara langsung mencerminkan selisih rata-rata antara *observed* dan *model-implied correlation matrix*
   - [Hu & Bentler (1999)](https://www.tandfonline.com/doi/abs/10.1080/10705519909540118) merekomendasikan melaporkan **keduanya** (*dual cutoff*): CFI ≥ 0.95 **dan** SRMR ≤ 0.08
 
 ## *Absolute index*
@@ -296,15 +296,25 @@ Setiap modifikasi **harus dijustifikasi secara teori**, bukan semata-mata didoro
 * Parameter jalur bisa ditolak meskipun hasil *omnibus test*/*global fit* memuaskan, sehingga menginterpretasi koefisien jalur adalah proses yang juga harus dilakukan.
 
 * Berikut ini adalah beberapa prosedur yang direkomendasikan:
-  - Lihat tanda *factor loading*, apakah **arahnya sudah benar** (negatif/positif)
+  - Lihat tanda *factor loading*, apakah **arahnya sudah benar** (negatif/positif) dan *p-value*nya 
 
   - Lihat *standardized parameter estimates* untuk tahu apakah ada *factor loading* yang **nilainya diatas kewajaran**
 
-  - Lihat *p-value* untuk mempertimbangkan **menolak *H*~0~**
+  - Lakukan pengujian *measurement invariance* dengan mengasumsikan beberapa *factor loading* sama di berbagai kelompok yang berbeda {{< fa circle-arrow-right >}} akan kita lakukan di [Bagian 6](/slides/bagian-6.html)
 
-  - Lakukan pengujian *measurement invariance* dengan mengasumsikan beberapa *factor loading* sama di berbagai kelompok yang berbeda {{< fa circle-arrow-right >}} akan kita lakukan di [Bagian 6](slides/bagian-6.html)
+  - Cek *error variance*. Apabila *error variance* mendekati nol, hal tsb lebih mungkin disebabkan oleh adanya *outlier*, kurangnya jumlah sampel, atau kurangnya jumlah indikator
 
-  - Apabila *error variance* mendekati nol, hal tsb lebih mungkin disebabkan oleh adanya *outlier*, kurangnya jumlah sampel, atau kurangnya jumlah indikator
+:::
+
+## *Global* vs. *local fit*
+
+::: {.incremental}
+
+* Bagaimana kalau *global fit* ditolak (e.g., uji χ² dengan *p* < 0.05)
+  - [Kline (2024)](https://onlinelibrary.wiley.com/doi/full/10.1002/ijop.13252) menyarankan untuk mengecek korelasi residual antar *item* (*local fit*) 
+  - Ketika korelasi residual menunjukkan **tidak ada** *paired correlation* > 0.3, maka model dapat dikatakan tepat menggambarkan data (*fit*) meskipun hasil uji χ² menyatakan sebaliknya (i.e., ada perbedaan signifikan antara *observed* dan *implied model*)
+  - Ini berkaitan dengan asumsi *local independence* dalam teori pengukuran psikologi - Artinya, model dapat "diterima" meskipun *global fit* ditolak **hanya dalam kondisi** ketika *local independence* dapat dipertahankan
+  - `jamovi` bisa menyimpan *residual correlation* sebagai *output* yang bisa disimpan - klik ***Output options*** {{< fa circle-arrow-right >}} ***covariances and correlations*** {{< fa circle-arrow-right >}} centang ***Residual***
 
 :::
 

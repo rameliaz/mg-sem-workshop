@@ -457,7 +457,7 @@ Rizqy Amelia Zein
 </ul></li>
 <li><strong><em>Standardized Root Mean Square Residual</em> (<code>SRMR</code>)</strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> akar kuadrat dari rata-rata kuadrat selisih antara <em>observed</em> dan <em>model-implied correlation matrix</em>, nilai <strong>&lt; 0.08</strong> menunjukkan <em>acceptable fit</em>
 <ul>
-<li><code>SRMR</code> (vs.&nbsp;<code>RMSEA</code>) relatif kurang dipengaruhi oleh <em>sample size</em> dan secara langsung mencerminkan selisih rata-rata antara -<em>observed</em> dan <em>model-implied correlation matrix</em></li>
+<li><code>SRMR</code> (vs.&nbsp;<code>RMSEA</code>) relatif kurang dipengaruhi oleh <em>sample size</em> dan secara langsung mencerminkan selisih rata-rata antara <em>observed</em> dan <em>model-implied correlation matrix</em></li>
 <li><a href="https://www.tandfonline.com/doi/abs/10.1080/10705519909540118">Hu &amp; Bentler (1999)</a> merekomendasikan melaporkan <strong>keduanya</strong> (<em>dual cutoff</em>): CFI ≥ 0.95 <strong>dan</strong> SRMR ≤ 0.08</li>
 </ul></li>
 </ul>
@@ -483,11 +483,22 @@ Rizqy Amelia Zein
 <li class="fragment"><p>Parameter jalur bisa ditolak meskipun hasil <em>omnibus test</em>/<em>global fit</em> memuaskan, sehingga menginterpretasi koefisien jalur adalah proses yang juga harus dilakukan.</p></li>
 <li class="fragment"><p>Berikut ini adalah beberapa prosedur yang direkomendasikan:</p>
 <ul>
-<li class="fragment"><p>Lihat tanda <em>factor loading</em>, apakah <strong>arahnya sudah benar</strong> (negatif/positif)</p></li>
+<li class="fragment"><p>Lihat tanda <em>factor loading</em>, apakah <strong>arahnya sudah benar</strong> (negatif/positif) dan <em>p-value</em>nya</p></li>
 <li class="fragment"><p>Lihat <em>standardized parameter estimates</em> untuk tahu apakah ada <em>factor loading</em> yang <strong>nilainya diatas kewajaran</strong></p></li>
-<li class="fragment"><p>Lihat <em>p-value</em> untuk mempertimbangkan <strong>menolak <em>H</em><sub>0</sub></strong></p></li>
-<li class="fragment"><p>Lakukan pengujian <em>measurement invariance</em> dengan mengasumsikan beberapa <em>factor loading</em> sama di berbagai kelompok yang berbeda <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> akan kita lakukan di <a href="slides/bagian-6.html">Bagian 6</a></p></li>
-<li class="fragment"><p>Apabila <em>error variance</em> mendekati nol, hal tsb lebih mungkin disebabkan oleh adanya <em>outlier</em>, kurangnya jumlah sampel, atau kurangnya jumlah indikator</p></li>
+<li class="fragment"><p>Lakukan pengujian <em>measurement invariance</em> dengan mengasumsikan beberapa <em>factor loading</em> sama di berbagai kelompok yang berbeda <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> akan kita lakukan di <a href="..\slides/bagian-6.html">Bagian 6</a></p></li>
+<li class="fragment"><p>Cek <em>error variance</em>. Apabila <em>error variance</em> mendekati nol, hal tsb lebih mungkin disebabkan oleh adanya <em>outlier</em>, kurangnya jumlah sampel, atau kurangnya jumlah indikator</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="global-vs.-local-fit-1" class="slide level2">
+<h2><em>Global</em> vs.&nbsp;<em>local fit</em></h2>
+<ul>
+<li class="fragment">Bagaimana kalau <em>global fit</em> ditolak (e.g., uji χ² dengan <em>p</em> &lt; 0.05)
+<ul>
+<li class="fragment"><a href="https://onlinelibrary.wiley.com/doi/full/10.1002/ijop.13252">Kline (2024)</a> menyarankan untuk mengecek korelasi residual antar <em>item</em> (<em>local fit</em>)</li>
+<li class="fragment">Ketika korelasi residual menunjukkan <strong>tidak ada</strong> <em>paired correlation</em> &gt; 0.3, maka model dapat dikatakan tepat menggambarkan data (<em>fit</em>) meskipun hasil uji χ² menyatakan sebaliknya (i.e., ada perbedaan signifikan antara <em>observed</em> dan <em>implied model</em>)</li>
+<li class="fragment">Ini berkaitan dengan asumsi <em>local independence</em> dalam teori pengukuran psikologi - Artinya, model dapat “diterima” meskipun <em>global fit</em> ditolak <strong>hanya dalam kondisi</strong> ketika <em>local independence</em> dapat dipertahankan</li>
+<li class="fragment"><code>jamovi</code> bisa menyimpan <em>residual correlation</em> sebagai <em>output</em> yang bisa disimpan - klik <strong><em>Output options</em></strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> <strong><em>covariances and correlations</em></strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> centang <strong><em>Residual</em></strong></li>
 </ul></li>
 </ul>
 </section>
@@ -922,7 +933,7 @@ Rizqy Amelia Zein
           slide.querySelectorAll('.slide-logo').forEach(logo => logo.remove());
           if (!slide.querySelector('.title-slide-logo')) {
             const titleLogo = document.createElement('img');
-            titleLogo.src = '../img/logo.png';
+            titleLogo.src = '../_extensions/rameliaz/unair/logo.png';
             titleLogo.className = 'title-slide-logo';
             titleLogo.alt = 'Universitas Airlangga Logo';
             slide.insertBefore(titleLogo, slide.firstChild);
@@ -933,8 +944,8 @@ Rizqy Amelia Zein
 
         const bgColor = slide.getAttribute('data-background-color');
         const logoSrc = (bgColor === '#14497F' || bgColor === '#14497f')
-          ? '../img/logo_white.png'
-          : '../img/logo.png';
+          ? '../_extensions/rameliaz/unair/logo_white.png'
+          : '../_extensions/rameliaz/unair/logo.png';
 
         const existingLogos = slide.querySelectorAll('.slide-logo');
 
