@@ -76,7 +76,7 @@ execute:
 
 # Unduh dataset contoh {background-color="#14497F"}
 
-Silahkan unduh dan buka [**Dataset Korelasi**](https://rameliaz.github.io/mg-sem-workshop/corr.jasp), untuk melihat contoh.
+Silahkan unduh dan buka [**Dataset Korelasi**](https://rameliaz.github.io/mg-sem-workshop/materials/corr.jasp), untuk melihat contoh.
 
 ## *Variance-covariance* & *correlation matrix* 1️⃣
 
@@ -183,10 +183,10 @@ Silahkan unduh dan buka [**Dataset Korelasi**](https://rameliaz.github.io/mg-sem
 
 ### Demonstrasi
 
-Menggunakan [Dataset Contoh Korelasi](https://rameliaz.github.io/mg-sem-workshop/corr.csv)
+Menggunakan [Dataset Contoh Korelasi](https://rameliaz.github.io/mg-sem-workshop/materials/corr.csv)
 
-[[Dataset]](https://rameliaz.github.io/mg-sem-workshop/corr.omv) 
-[[Matriks di Excel]](https://rameliaz.github.io/mg-sem-workshop/contoh-atenuasi.xlsx)
+[[Dataset]](https://rameliaz.github.io/mg-sem-workshop/materials/corr.omv)
+[[Matriks di Excel]](https://rameliaz.github.io/mg-sem-workshop/materials/contoh-atenuasi.xlsx)
 
 ### Latihan mandiri 1️⃣: Koreksi Atenuasi
 
@@ -195,7 +195,7 @@ Menggunakan [Dataset Contoh Korelasi](https://rameliaz.github.io/mg-sem-workshop
 * Apakah matriksnya *non-positive definite*? Variabel apa saja yang terlibat?
 * Apa kira-kira yang menyebabkan kedua variabel tsb korelasinya *non-positive definite*?
 
-[[Unduh Dataset]](https://rameliaz.github.io/mg-sem-workshop/latihancorr.csv) 
+[[Unduh Dataset]](https://rameliaz.github.io/mg-sem-workshop/materials/latihancorr.csv)
 
 ## Ada pertanyaan❓
 

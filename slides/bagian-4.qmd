@@ -178,7 +178,7 @@ Ada tiga macam model pengukuran:
   - **Variabel *observed* menjelaskan** mengapa **variabel laten bervariasi**
   - Misalnya {{< fa circle-arrow-right >}} gengsi sebuah mobil ditentukan oleh usia mobil, kondisi, harga, dan intensitas pemakaian
   - Korelasi antara variabel *observed* tidak diketahui
-  - Biasanya digunakan untuk menentukan indeks pada konstruk yang *orthogonal* (contoh {{< fa circle-arrow-right >}} kepribadian pada *Five Factor model*)
+  - Biasanya digunakan untuk menentukan indeks pada konstruk yang *orthogonal* (contoh {{< fa circle-arrow-right >}} contohnya, [*adverse childhood experience*](https://www.sciencedirect.com/science/article/abs/pii/S0145213421003434))
   - Tetapi, **sangat jarang** konstruk psikologi yang mengasumsikan model formatif
 
 :::
@@ -324,7 +324,7 @@ Karena `SEMLj` juga menggunakan `semTools`, maka AVE tersedia bersama *composite
 
 # Demonstrasi CFA {background-color="#14497F" .center}
 
-[**Unduh Dataset Contoh CFA**](https://rameliaz.github.io/mg-sem-workshop/contoh-cfa.omv)
+[**Unduh Dataset Contoh CFA**](https://rameliaz.github.io/mg-sem-workshop/materials/contoh-cfa.omv)
 
 ## Latihan mandiri 4️⃣: Mencoba *confirmatory factor analysis*
 

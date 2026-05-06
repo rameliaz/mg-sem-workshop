@@ -212,9 +212,9 @@ Estimator _weighted least squares_ biasanya membutuhkan jumlah sampel lebih besa
 ::: {.incremental}
 * _Partial least squares_ (PLS) mengestimasi skor variabel endogen dengan asumsi bahwa variabel endogen adalah _weighted composite_, kemudian melakukan regresi atas komposit-komposit tersebut satu sama lain.
 * Asumsi PLS **_sangat berbeda_** dengan CB-SEM - variabel endogen adalah **komposit** bukan faktor laten.
-* PLS menggunakan model pengukuran **formatif**.
+* PLS juga bisa digunakan untuk menguji model reflektif, **TETAPI** PLS mengestimasi variabel laten sebagai ***weighted composite*** (bukan *common factor*), sehingga berbeda secara fundamental dari CB-SEM.
 * PLS sering "dijual" sebagai teknik alternatif dari CB-SEM yang "lebih praktis" karena bisa dieksekusi dengan sampel kecil, mampu menangani variabel endogen yang tidak berdistribusi normal, atau ketika menangani model yang sangat kompleks.
-* Padahal sebenarnya, CB-SEM dan PLS adalah dua teknik dengan **_asumsi ontologis yang berbeda_** ([Rönkkö & Everman, 2013](https://doi.org/10.1177/1094428112474693); [Henseler, et al., 2014](https://doi.org/10.1177/1094428114526928)), sehingga membandingkan kedua teknik ini saja sudah sangat **tidak tepat** ([Rigdon et al., 2017](https://www.jstor.org/stable/26426850)).
+* Padahal sebenarnya, CB-SEM dan PLS adalah dua teknik dengan **_asumsi ontologis yang berbeda_** ([Rönkkö & Everman, 2013](https://doi.org/10.1177/1094428112474693); [Henseler, et al., 2014](https://doi.org/10.1177/1094428114526928)), sehingga membandingkan kedua teknik ini saja sudah **tidak tepat** ([Rigdon et al., 2017](https://www.jstor.org/stable/26426850)).
 :::
 
 ## Reflektif vs. Formatif
