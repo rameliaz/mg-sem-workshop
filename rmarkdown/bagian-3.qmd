@@ -169,17 +169,17 @@ Ia menduga temannya yang lebih *conscientious* dan lebih tua akan lebih kecil ke
 
 ---
 
-## `lavaan` *Syntax*
+## `lavaan` *Script*
 
-* `JASP` mengadopsi *syntax* dari *package* [`lavaan`](http://lavaan.ugent.be/tutorial/index.html), sehingga untuk menjalankan programnya, kita harus memasukkan serangkaian perintah.
+* `JASP` mengadopsi *script* dari *package* [`lavaan`](http://lavaan.ugent.be/tutorial/index.html), sehingga untuk menjalankan programnya, kita harus memasukkan serangkaian perintah.
 
-* Meskipun begitu, *syntax* `lavaan` sangat sederhana dan familiar dengan *syntax* `lavaan` memberikan banyak keuntungan.
+* Meskipun begitu, *script* `lavaan` sangat sederhana dan familiar dengan *script* `lavaan` memberikan banyak keuntungan.
 
-* Menjalankan perintah dengan *syntax* juga membantu peneliti untuk mereka-ulang hasil analisis datanya, serta mempermudah kolaborasi dengan peneliti yang terbiasa menggunakan perangkat lunak yang berbeda dengan kita.
+* Menjalankan perintah dengan *script* juga membantu peneliti untuk mereka-ulang hasil analisis datanya, serta mempermudah kolaborasi dengan peneliti yang terbiasa menggunakan perangkat lunak yang berbeda dengan kita.
 
 ---
 
-## Dasar *syntax* `lavaan`
+## Dasar *script* `lavaan`
 
 ![](libs/lavaan.png){fig-align="center" width="55%"}
 
@@ -295,9 +295,9 @@ mandiri ~ trust
 
 ---
 
-## TUGAS 3: Menulis *syntax* `lavaan`
+## TUGAS 3: Menulis *script* `lavaan`
 
-### Tulislah *syntax* `lavaan` dari diagram jalur yang sudah dibuat di TUGAS 2
+### Tulislah *script* `lavaan` dari diagram jalur yang sudah dibuat di TUGAS 2
 
 #### [Klik disini untuk mengisi lembar kerja](https://forms.gle/ARMzU4trUgqRv8hj9)
 

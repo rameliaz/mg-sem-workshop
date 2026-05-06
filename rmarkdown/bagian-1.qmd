@@ -93,7 +93,7 @@ Materi dalam paparan ini berlisensi CC 4.0 dan tersedia di <https://rameliaz.git
   * δ (delta), ε (epsilon), ξ (ksi), η (eta), λ (lambda), γ (gamma), β (beta), φ (phi), ζ (zeta)
 * Representasi visual model jalur menggunakan diagram jalur (*path diagram*)
 * Menggambarkan hubungan antar-variabel dengan menggunakan diagram jalur
-* *Syntax* `lavaan` untuk spesifikasi model jalur
+* *Script* `lavaan` untuk spesifikasi model jalur
 * Asumsi kausalitas (?) dan limitasi
 
 :::

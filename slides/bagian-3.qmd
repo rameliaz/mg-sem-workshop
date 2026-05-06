@@ -24,7 +24,7 @@ execute:
   * δ (delta), ε (epsilon), ξ (ksi), η (eta), λ (lambda), γ (gamma), β (beta), φ (phi), ζ (zeta)
 * Representasi visual model jalur menggunakan diagram jalur (*path diagram*)
 * Menggambarkan hubungan antar-variabel dengan menggunakan diagram jalur
-* *Syntax* `lavaan` untuk spesifikasi model jalur
+* *Script* `lavaan` untuk spesifikasi model jalur
 * Asumsi kausalitas dan limitasi
 
 ## Analisis jalur
@@ -159,25 +159,25 @@ Anda bisa menggunakan MS Power Point atau *software* yang lain (misalnya, [draw.
 
 #### [Klik disini untuk mengumpulkan tugas](https://padlet.com/ameliazein/tugas-mandiri-workshop-multigroup-sem-8p34daek2641aic8)
 
-## `lavaan` *Syntax*
+## `lavaan` *Script*
 
 ::: {.incremental}
 
-* [`SEMLj`](https://semlj.github.io/) menyediakan dua opsi: fitur _syntax_ atau _interactive_
+* [`SEMLj`](https://semlj.github.io/) menyediakan dua opsi: fitur _script_ atau _interactive_
   - Kalau memilih fitur _interactive_, maka tampilan antarmukanya berupa _drag & drop_ (seperti `SPSS`).
-  - Untuk fitur _syntax_, maka tampilan antarmukanya meminta pengguna untuk menspesifikasi model dengan _syntax_.
+  - Untuk fitur _script_, maka tampilan antarmukanya meminta pengguna untuk menspesifikasi model dengan _script_.
 
-* `jamovi` dan `JASP` mengadopsi *syntax* dari {{< fa brands r-project >}} *package* [`lavaan`](http://lavaan.ugent.be/tutorial/index.html), sehingga untuk menspesifikasi model, kita harus memasukkan **serangkaian perintah**.
+* `jamovi` dan `JASP` mengadopsi *script* dari {{< fa brands r-project >}} *package* [`lavaan`](http://lavaan.ugent.be/tutorial/index.html), sehingga untuk menspesifikasi model, kita harus memasukkan **serangkaian perintah**.
 
-* Meskipun begitu, *syntax* `lavaan` **sangat sederhana** dan familiar dengan *syntax* `lavaan` memberikan **banyak keuntungan**.
+* Meskipun begitu, *script* `lavaan` **sangat sederhana** dan familiar dengan *script* `lavaan` memberikan **banyak keuntungan**.
 
-* Menjalankan perintah dengan *syntax* juga membantu peneliti untuk mereka-ulang hasil analisis datanya, serta mempermudah kolaborasi dengan peneliti yang terbiasa menggunakan perangkat lunak yang berbeda dengan kita.
+* Menjalankan perintah dengan *script* juga membantu peneliti untuk mereka-ulang hasil analisis datanya, serta mempermudah kolaborasi dengan peneliti yang terbiasa menggunakan perangkat lunak yang berbeda dengan kita.
 
-* Oleh karena itu, dalam _workshop_ ini peserta juga harus berlatih menulis _syntax_.
+* Oleh karena itu, dalam _workshop_ ini peserta juga harus berlatih menulis _script_.
 
 :::
 
-## Dasar *syntax* `lavaan`
+## Dasar *script* `lavaan`
 
 ![](libs/lavaan.png){fig-align="center" width="55%"}
 
@@ -269,9 +269,9 @@ trust ~~ trust
 mandiri ~~ mandiri
 ```
 
-## Latihan mandiri 3️⃣: Menulis *syntax* `lavaan`
+## Latihan mandiri 3️⃣: Menulis *script* `lavaan`
 
-Tulislah *syntax* `lavaan` dari diagram jalur yang sudah dibuat di Latihan mandiri 2️⃣
+Tulislah *script* `lavaan` dari diagram jalur yang sudah dibuat di Latihan mandiri 2️⃣
 
 #### [Klik disini untuk mengumpulkan tugas](https://padlet.com/ameliazein/tugas-mandiri-workshop-multigroup-sem-8p34daek2641aic8)
 
