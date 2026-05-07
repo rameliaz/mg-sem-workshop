@@ -38,9 +38,10 @@ execute:
 
 * *Measurement invariance* <i class="fa-solid fa-circle-arrow-right"></i> dua atau lebih kelompok memiliki properti psikometrik yang sama, yaitu variabel laten dalam model pengukuran adalah konstruk yang sama
 
-* Ketika membandingkan model pengukuran di dua atau lebih kelompok yang berbeda, untuk menyimpulkan terjadinya *invariance*, maka peneliti akan menginginkan **perubahan *chi-square*** (Δχ²) yang *p-value*nya **> α** — artinya, menambah *constraint* tidak memperburuk *fit* model secara signifikan
+* Ketika membandingkan model pengukuran di dua atau lebih kelompok yang berbeda, untuk menyimpulkan terjadinya *invariance*, maka peneliti akan menginginkan **perubahan *chi-square*** (Δχ²) yang *p-value*nya **> α** 
+  — Artinya, menambah *constraint invariance* tidak memperburuk *fit* model secara signifikan
 
-* Kalau kita berniat melakukan perbandingan performa alat ukur di dua kelompok sampel yang berbeda, maka kita lebih baik menggunakan ***means-covariance matrix*** bukan *variance-covariance matrix* <i class="fa-solid fa-circle-arrow-right"></i> ingat *t-test* dan *anova*
+* Kalau kita berniat melakukan perbandingan performa alat ukur di dua kelompok sampel yang berbeda, maka kita lebih baik menggunakan ***means-covariance matrix*** bukan *variance-covariance matrix* <i class="fa-solid fa-circle-arrow-right"></i> ingat logika *t-test* dan *anova*
 
 :::
 
@@ -54,7 +55,7 @@ execute:
 
 * *Mean* dan *intercept* adalah ukuran *lokasi variabel*, dimana...
   - ***Mean*** variabel laten adalah komponen yang **dibagi bersama** oleh semua indikator
-  - ***Intercept*** adalah **nilai dasar/*baseline*** yang berbeda untuk masing-masing item — yaitu *expected score* ketika nilai variabel laten = 0
+  - ***Intercept*** adalah **nilai dasar/*baseline*** yang berbeda untuk masing-masing item, yaitu *expected score* ketika nilai variabel laten = 0
 
 :::
 :::
@@ -71,11 +72,11 @@ execute:
 ::: {.column width="50%"}
 ::: {.incremental}
 
-* Dalam model pengukuran: **skor kasar (*observed*) = *intercept* + (*factor loading* × *mean* variabel laten) + *error***
-  - Artinya, skor yang kita ukur dipengaruhi **dua hal sekaligus**: *intercept* item dan *mean* variabel laten — keduanya harus dimasukkan bersama agar model bisa memisahkan kontribusi masing-masing
+* Dalam model pengukuran: **skor kasar (*observed*) = *intercept* + (*factor loading* × *mean* variabel laten) + *error*** <i class="fa-solid fa-circle-arrow-right"></i> ingat logika regresi linear
+  - Artinya, skor yang kita ukur ditentukan **dua hal sekaligus**: *intercept* item dan *mean* variabel laten, yang keduanya harus dimasukkan bersama agar model bisa memisahkan kontribusi masing-masing
 
-* *Intercept* disimbolkan dengan segitiga dan
-  - **Hanya boleh "ketemu"** dengan panah *uni-directional* dan sifatnya *backwards*
+* *Intercept* disimbolkan dengan segitiga dan..
+  - **Hanya bisa memberikan** *direct effect* pada *item*/*observed variable*
 
 :::
 :::
@@ -118,9 +119,9 @@ execute:
 * *Strong*/*scalar*
   - **Selain *factor loading* harus sama**, *strong invariance* mensyaratkan **_intercept_ harus sama juga**
   - Ketika membatasi/*constraining* *intercept*, maka *latent means* boleh bervariasi (dan dibandingkan) di berbagai kelompok
-  - **Mengapa?** Bayangkan dua termometer mengukur suhu ruangan yang sama (e.g., termometer celcius dan fahrenheit). 
-    - Jika termometer fahrenheit dikalibrasi 32° lebih tinggi dari celcius (*intercept* berbeda), keduanya menunjukkan angka berbeda — bukan karena suhunya beda, tapi karena *baseline*-nya beda. 
-    - Jika *intercept* tidak disetarakan antar kelompok, perbedaan skor bisa berasal dari perbedaan *baseline item*, bukan perbedaan konstruk yang sebenarnya
+  - **Mengapa *intercept* harus di*constraint* agar setara di semua *item*?** Bayangkan dua termometer mengukur suhu ruangan yang sama (e.g., termometer celcius dan fahrenheit) 
+    - Termometer fahrenheit dikalibrasi 32° lebih tinggi dari celcius (*intercept* berbeda), sehingga ketika kedua termometer menunjukkan angka berbeda pada temperatur/suhu yang sama, bukan karena suhunya *substantively* berbeda tetapi karena ***baseline*-nya yang berbeda**
+    - Jika *intercept* tidak dibuat setara antar kelompok, perbedaan skor bisa berasal dari perbedaan *baseline*, bukan perbedaan konstruk yang sebenarnya
   - Dengan asumsi *strong invariance* ekuivalensi variabel laten lebih didukung bukti yang kuat
   - Untuk mengeksekusinya di `jamovi`, klik opsi `Multi-group analysis`, tambahkan data pengelompokan di `factor for multi-group analysis` dan centang pilihan `loadings` dan `intercepts` pada `equality constraints`
 

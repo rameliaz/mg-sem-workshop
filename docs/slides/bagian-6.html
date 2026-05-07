@@ -173,8 +173,8 @@ Rizqy Amelia Zein
 <ul>
 <li class="fragment"><p><em>Invariance</em> <i class="fa-solid fa-circle-arrow-right"></i> apakah dalam kondisi di subkelompok yang beragam ketika melakukan pengukuran, alat ukur selalu mengukur atribut ukur yang sama</p></li>
 <li class="fragment"><p><em>Measurement invariance</em> <i class="fa-solid fa-circle-arrow-right"></i> dua atau lebih kelompok memiliki properti psikometrik yang sama, yaitu variabel laten dalam model pengukuran adalah konstruk yang sama</p></li>
-<li class="fragment"><p>Ketika membandingkan model pengukuran di dua atau lebih kelompok yang berbeda, untuk menyimpulkan terjadinya <em>invariance</em>, maka peneliti akan menginginkan <strong>perubahan <em>chi-square</em></strong> (Δχ²) yang <em>p-value</em>nya <strong>&gt; α</strong> — artinya, menambah <em>constraint</em> tidak memperburuk <em>fit</em> model secara signifikan</p></li>
-<li class="fragment"><p>Kalau kita berniat melakukan perbandingan performa alat ukur di dua kelompok sampel yang berbeda, maka kita lebih baik menggunakan <strong><em>means-covariance matrix</em></strong> bukan <em>variance-covariance matrix</em> <i class="fa-solid fa-circle-arrow-right"></i> ingat <em>t-test</em> dan <em>anova</em></p></li>
+<li class="fragment"><p>Ketika membandingkan model pengukuran di dua atau lebih kelompok yang berbeda, untuk menyimpulkan terjadinya <em>invariance</em>, maka peneliti akan menginginkan <strong>perubahan <em>chi-square</em></strong> (Δχ²) yang <em>p-value</em>nya <strong>&gt; α</strong> — Artinya, menambah <em>constraint invariance</em> tidak memperburuk <em>fit</em> model secara signifikan</p></li>
+<li class="fragment"><p>Kalau kita berniat melakukan perbandingan performa alat ukur di dua kelompok sampel yang berbeda, maka kita lebih baik menggunakan <strong><em>means-covariance matrix</em></strong> bukan <em>variance-covariance matrix</em> <i class="fa-solid fa-circle-arrow-right"></i> ingat logika <em>t-test</em> dan <em>anova</em></p></li>
 </ul>
 </section>
 <section id="means-dan-intercept" class="slide level2">
@@ -186,7 +186,7 @@ Rizqy Amelia Zein
 <li class="fragment"><p><em>Mean</em> dan <em>intercept</em> adalah ukuran <em>lokasi variabel</em>, dimana…</p>
 <ul>
 <li class="fragment"><strong><em>Mean</em></strong> variabel laten adalah komponen yang <strong>dibagi bersama</strong> oleh semua indikator</li>
-<li class="fragment"><strong><em>Intercept</em></strong> adalah <strong>nilai dasar/<em>baseline</em></strong> yang berbeda untuk masing-masing item — yaitu <em>expected score</em> ketika nilai variabel laten = 0</li>
+<li class="fragment"><strong><em>Intercept</em></strong> adalah <strong>nilai dasar/<em>baseline</em></strong> yang berbeda untuk masing-masing item, yaitu <em>expected score</em> ketika nilai variabel laten = 0</li>
 </ul></li>
 </ul>
 </div><div class="column" style="width:50%;">
@@ -202,13 +202,13 @@ Rizqy Amelia Zein
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
-<li class="fragment">Dalam model pengukuran: <strong>skor kasar (<em>observed</em>) = <em>intercept</em> + (<em>factor loading</em> × <em>mean</em> variabel laten) + <em>error</em></strong>
+<li class="fragment">Dalam model pengukuran: <strong>skor kasar (<em>observed</em>) = <em>intercept</em> + (<em>factor loading</em> × <em>mean</em> variabel laten) + <em>error</em></strong> <i class="fa-solid fa-circle-arrow-right"></i> ingat logika regresi linear
 <ul>
-<li class="fragment">Artinya, skor yang kita ukur dipengaruhi <strong>dua hal sekaligus</strong>: <em>intercept</em> item dan <em>mean</em> variabel laten — keduanya harus dimasukkan bersama agar model bisa memisahkan kontribusi masing-masing</li>
+<li class="fragment">Artinya, skor yang kita ukur ditentukan <strong>dua hal sekaligus</strong>: <em>intercept</em> item dan <em>mean</em> variabel laten, yang keduanya harus dimasukkan bersama agar model bisa memisahkan kontribusi masing-masing</li>
 </ul></li>
-<li class="fragment"><em>Intercept</em> disimbolkan dengan segitiga dan
+<li class="fragment"><em>Intercept</em> disimbolkan dengan segitiga dan..
 <ul>
-<li class="fragment"><strong>Hanya boleh “ketemu”</strong> dengan panah <em>uni-directional</em> dan sifatnya <em>backwards</em></li>
+<li class="fragment"><strong>Hanya bisa memberikan</strong> <em>direct effect</em> pada <em>item</em>/<em>observed variable</em></li>
 </ul></li>
 </ul>
 </div><div class="column" style="width:50%;">
@@ -251,10 +251,10 @@ Rizqy Amelia Zein
 <ul>
 <li class="fragment"><strong>Selain <em>factor loading</em> harus sama</strong>, <em>strong invariance</em> mensyaratkan <strong><em>intercept</em> harus sama juga</strong></li>
 <li class="fragment">Ketika membatasi/<em>constraining</em> <em>intercept</em>, maka <em>latent means</em> boleh bervariasi (dan dibandingkan) di berbagai kelompok</li>
-<li class="fragment"><strong>Mengapa?</strong> Bayangkan dua termometer mengukur suhu ruangan yang sama (e.g., termometer celcius dan fahrenheit).
+<li class="fragment"><strong>Mengapa <em>intercept</em> harus di<em>constraint</em> agar setara di semua <em>item</em>?</strong> Bayangkan dua termometer mengukur suhu ruangan yang sama (e.g., termometer celcius dan fahrenheit)
 <ul>
-<li class="fragment">Jika termometer fahrenheit dikalibrasi 32° lebih tinggi dari celcius (<em>intercept</em> berbeda), keduanya menunjukkan angka berbeda — bukan karena suhunya beda, tapi karena <em>baseline</em>-nya beda.</li>
-<li class="fragment">Jika <em>intercept</em> tidak disetarakan antar kelompok, perbedaan skor bisa berasal dari perbedaan <em>baseline item</em>, bukan perbedaan konstruk yang sebenarnya</li>
+<li class="fragment">Termometer fahrenheit dikalibrasi 32° lebih tinggi dari celcius (<em>intercept</em> berbeda), sehingga ketika kedua termometer menunjukkan angka berbeda pada temperatur/suhu yang sama, bukan karena suhunya <em>substantively</em> berbeda tetapi karena <strong><em>baseline</em>-nya yang berbeda</strong></li>
+<li class="fragment">Jika <em>intercept</em> tidak dibuat setara antar kelompok, perbedaan skor bisa berasal dari perbedaan <em>baseline</em>, bukan perbedaan konstruk yang sebenarnya</li>
 </ul></li>
 <li class="fragment">Dengan asumsi <em>strong invariance</em> ekuivalensi variabel laten lebih didukung bukti yang kuat</li>
 <li class="fragment">Untuk mengeksekusinya di <code>jamovi</code>, klik opsi <code>Multi-group analysis</code>, tambahkan data pengelompokan di <code>factor for multi-group analysis</code> dan centang pilihan <code>loadings</code> dan <code>intercepts</code> pada <code>equality constraints</code></li>
