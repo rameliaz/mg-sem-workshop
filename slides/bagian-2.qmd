@@ -60,8 +60,8 @@ execute:
   - Sehingga berdampak pada **variabilitas** (*restriction range*) dan **normalitas data**
 * **Linearitas**
   - Semua teknik korelasi mengasumsikan korelasi antar-variabel linier, sehingga korelasi yang tidak linier akan memberikan informasi **tidak adanya korelasi** (padahal tidak selalu).
-* **Adanya data *outlier*** {{< fa circle-arrow-right >}} adanya data yang *outlier* membuat estimasi korelasi menjadi *inflated*.
-* **Koreksi atenuasi** {{< fa circle-arrow-right >}} akan dibahas di bagian selanjutnya.
+* **Adanya data *outlier*** <i class="fa-solid fa-circle-arrow-right"></i> adanya data yang *outlier* membuat estimasi korelasi menjadi *inflated*.
+* **Koreksi atenuasi** <i class="fa-solid fa-circle-arrow-right"></i> akan dibahas di bagian selanjutnya.
 
 ## Faktor-faktor yang mempengaruhi arah dan _magnitude_ korelasi 2️⃣
 
@@ -71,8 +71,8 @@ execute:
   - Yang kemudian berefek pada *confidence interval*, *effect size*, dan *statistical power*
 * ***Missing data***
   - Kalau data tidak lengkap, estimasi koefisien korelasi akan langsung terdampak.
-  - Ada beberapa pilihan: {{< fa circle-arrow-right >}} *listwise deletion*, *pairwise deletion*, dan *data imputation*.
-  - *Listwise deletion* tidak disarankan karena membuat jumlah sampel turun drastis {{< fa circle-arrow-right >}} mengurangi *statistical power*.
+  - Ada beberapa pilihan: <i class="fa-solid fa-circle-arrow-right"></i> *listwise deletion*, *pairwise deletion*, dan *data imputation*.
+  - *Listwise deletion* tidak disarankan karena membuat jumlah sampel turun drastis <i class="fa-solid fa-circle-arrow-right"></i> mengurangi *statistical power*.
 
 # Unduh dataset contoh {background-color="#14497F"}
 
@@ -130,7 +130,7 @@ Silahkan unduh dan buka [**Dataset Korelasi**](https://rameliaz.github.io/mg-sem
   - Data didapatkan dari observasi yang **tidak independen** (*linear dependency*)
   - Terjadi **multikolinearitas**
   - **Jumlah sampel** lebih **sedikit** dari jumlah variabel yang diuji dalam model
-  - Sepasang variabel berbagi **varians negatif** atau **tidak sama sekali** (0) {{< fa circle-arrow-right >}} *Heywood case*
+  - Sepasang variabel berbagi **varians negatif** atau **tidak sama sekali** (0) <i class="fa-solid fa-circle-arrow-right"></i> *Heywood case*
   - Varians, kovarians, dan korelasi nilainya diluar batas kewajaran
   - Kesalahan mengatur pembatasan (*constraint*) pada parameter tertentu
 
@@ -202,6 +202,6 @@ Menggunakan [Dataset Contoh Korelasi](https://rameliaz.github.io/mg-sem-workshop
 ![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDFtaDh5ZjZ2eXJ3dmJmZmFmYzBtNHEwdzlqZmZtdGtmbnE0bXZidiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/igB2Th9e4nW6s/giphy.gif){fig-align="center"}
 
 ::: {.callout-note}
-* Paparan disusun dengan menggunakan {{< fa brands r-project >}} dan [**Quarto**](https://quarto.org) dengan *template* dari [UNAIR Theme](https://github.com/rameliaz/quarto-unair-theme).
+* Paparan disusun dengan menggunakan <i class="fa-brands fa-r-project"></i> dan [**Quarto**](https://quarto.org) dengan *template* dari [UNAIR Theme](https://github.com/rameliaz/quarto-unair-theme).
 * Kontak saya via <i class="fas fa-paper-plane"></i> <a href="mailto:amelia.zein@psikologi.unair.ac.id">amelia.zein@psikologi.unair.ac.id</a>
 :::

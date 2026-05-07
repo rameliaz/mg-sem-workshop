@@ -32,14 +32,14 @@ execute:
 
 ::: {.incremental}
 
-* SEM adalah *full model* {{< fa circle-arrow-right >}} menggabungkan **model pengukuran** dengan **model jalur/struktural**
+* SEM adalah *full model* <i class="fa-solid fa-circle-arrow-right"></i> menggabungkan **model pengukuran** dengan **model jalur/struktural**
 
 * Ada beberapa pendekatan dalam SEM [(Jöreskog, 1993)](https://psycnet.apa.org/record/1993-97481-000)
-  - ***Strictly confirmatory*** {{< fa circle-arrow-right >}} menguji apakah ***variance-covariance matrix*** yang dihipotesiskan (*implied*) sama dengan/didukung oleh data (***observed variance-covariance matrix***)
+  - ***Strictly confirmatory*** <i class="fa-solid fa-circle-arrow-right"></i> menguji apakah ***variance-covariance matrix*** yang dihipotesiskan (*implied*) sama dengan/didukung oleh data (***observed variance-covariance matrix***)
 
-  - ***Alternative model*** {{< fa circle-arrow-right >}} menguji beberapa **model yang saling bersaing** (*competing models*) pada dataset yang sama, kemudian memilih yang paling baik menggambarkan data — model-model tersebut bisa berjenjang (*nested*) maupun tidak (*non-nested*)
+  - ***Alternative model*** <i class="fa-solid fa-circle-arrow-right"></i> menguji beberapa **model yang saling bersaing** (*competing models*) pada dataset yang sama, kemudian memilih yang paling baik menggambarkan data — model-model tersebut bisa berjenjang (*nested*) maupun tidak (*non-nested*)
 
-  - ***Model generating*** {{< fa circle-arrow-right >}} dimulai dari model yang dihipotesiskan, kemudian **dimodifikasi secara iteratif** berdasarkan indikasi data (*specification search*) hingga *fit statistics* membaik
+  - ***Model generating*** <i class="fa-solid fa-circle-arrow-right"></i> dimulai dari model yang dihipotesiskan, kemudian **dimodifikasi secara iteratif** berdasarkan indikasi data (*specification search*) hingga *fit statistics* membaik
 
 :::
 
@@ -103,7 +103,7 @@ Setiap modifikasi **harus dijustifikasi secara teori**, bukan semata-mata didoro
 * Model yang dapat diidentifikasi adalah *over-identified model* dimana **jumlah parameter *variance-covariance matrix* lebih banyak daripada jumlah parameter jalur yang diestimasi** (sehingga *df* ≥ 1)
   - Lebih banyak **'informasi yang diketahui'** daripada yang **'tidak diketahui'**
 
-* *Degree of freedom* {{< fa circle-arrow-right >}} dihitung dengan mengurangi jumlah nilai unik (*non-redundant information*) dalam *variance-covariance matrix* dengan jumlah parameter jalur yang hendak diestimasi
+* *Degree of freedom* <i class="fa-solid fa-circle-arrow-right"></i> dihitung dengan mengurangi jumlah nilai unik (*non-redundant information*) dalam *variance-covariance matrix* dengan jumlah parameter jalur yang hendak diestimasi
 
 :::
 
@@ -205,18 +205,19 @@ Setiap modifikasi **harus dijustifikasi secara teori**, bukan semata-mata didoro
 
 * Metode estimasi ini yang akan menghitung *standard error* yang tepat sesuai dengan karakteristik model
 
-* Apabila metode estimasi yang dipilih tidak tepat dan tidak sesuai dengan kompatibilitas datanya, maka estimasi *standard error* menjadi bias {{< fa circle-arrow-right >}} sehingga model parameter memberikan informasi yang menyesatkan
+* Apabila metode estimasi yang dipilih tidak tepat dan tidak sesuai dengan kompatibilitas datanya, maka estimasi *standard error* menjadi bias <i class="fa-solid fa-circle-arrow-right"></i> sehingga model parameter memberikan informasi yang menyesatkan
 
 ## Menguji ketepatan model
 
 ::: {.incremental}
 
 * Umumnya peneliti ingin mendapatkan 3 informasi
-  - ***Chi-square* sebagai *global fit measure***. *Chi-square* menguji perbedaan antara *model-implied* dengan *sample covariance matrix*. Apabila *p-value* dari *Chi-square* ≥ α (dengan α=0.05), maka **tidak ada perbedaan** antara keduanya {{< fa circle-arrow-right >}} data mendukung model
+  - ***χ² sebagai *global fit measure***. χ² menguji perbedaan antara *model-implied* dengan *sample covariance matrix*. 
+  - Apabila *p-value* dari χ² ≥ α (dengan α=0.05), maka **tidak ada perbedaan** antara keduanya <i class="fa-solid fa-circle-arrow-right"></i> artinya, **data mendukung model**
 
-  - ***p-value* dari *factor loading*** untuk setiap variabel dalam model.
+  - ***p-value* dari *factor loading*** untuk setiap variabel dalam model
 
-  - **Besar dan arah *factor loading***. Besar *factor loading* memberikan informasi mengenai *magnitude* dan kontribusi variabel tersebut dalam menjelaskan variabel lainnya. Sedangkan arah *factor loading* (positif/negatif) memberikan informasi mengenai arah hubungan
+  - **Besar dan arah *factor loading*** - besar *factor loading* memberikan informasi mengenai *magnitude* dan kontribusi variabel tersebut dalam menjelaskan variabel lainnya. Sedangkan arah *factor loading* (positif/negatif) memberikan informasi mengenai arah hubungan.
 
 :::
 
@@ -225,8 +226,10 @@ Setiap modifikasi **harus dijustifikasi secara teori**, bukan semata-mata didoro
 ::: {.columns}
 ::: {.column width="50%"}
 
-* Dihitung dengan cara membandingkan **model yang dihipotesiskan (*implied model*)** dengan ***saturated model*** (model dengan *fit* sempurna — semua parameter dibebaskan)
+* Dihitung dengan cara membandingkan **model yang dihipotesiskan (*implied model*)** dengan ***saturated model*** (model dengan *fit* sempurna, yang mana semua parameter dibebaskan tanpa *constraint*)
   - *Indeks inkremental* seperti CFI dan NFI-lah yang membandingkan *implied model* dengan *baseline*/*null model* (model tanpa jalur sama sekali)
+
+* Umumnya, model dengan jumlah sampel yang besar akan memberikan hasil uji χ² yang signifikan, tetapi **uji χ² yang signifikan ini tidak boleh diabaikan** begitu saja❗
 
 * Selain χ², kita bisa menggunakan *alternative fit indices* yang terdiri dari
   - *Incremental index*
@@ -241,53 +244,50 @@ Setiap modifikasi **harus dijustifikasi secara teori**, bukan semata-mata didoro
 :::
 :::
 
-
 ## *Incremental (comparative/relative) index*
 
 * Didapatkan dengan membandingkan *implied model* dengan *baseline model*, meliputi
-  - ***Comparative Fit Index*** {{< fa circle-arrow-right >}} mendekati 1 = *closer fit*
+  - ***Comparative Fit Index*** <i class="fa-solid fa-circle-arrow-right"></i> mendekati 1 = *closer fit*
 
-  - ***Normed Fit Index*** {{< fa circle-arrow-right >}} mendekati 1 = *better fit*
+  - ***Normed Fit Index*** <i class="fa-solid fa-circle-arrow-right"></i> mendekati 1 = *better fit*
 
-  - ***Parsimonious Normed Fit Index*** {{< fa circle-arrow-right >}} NFI yang mempertimbangkan *parsimony* model, mendekati 1 = *better fit*
+  - ***Incremental Fit Index*/*Bollen's Nonnormed Fit Index*** <i class="fa-solid fa-circle-arrow-right"></i> mendekati 1 = *better fit*
 
-  - ***Incremental Fit Index*/*Bollen's Nonnormed Fit Index*** {{< fa circle-arrow-right >}} mendekati 1 = *better fit*
-
-  - ***Tucker Lewis Index*/*Bentler-Bonnet Non-Normed Fit Index*** {{< fa circle-arrow-right >}} mendekati 1 = *better fit*
+  - ***Tucker Lewis Index*/*Bentler-Bonnet Non-Normed Fit Index*** <i class="fa-solid fa-circle-arrow-right"></i> mendekati 1 = *better fit*
 
 
-## *Parsimony index* 1️⃣
+## *Parsimony index* 
 
-* Indeks ini secara khusus memberikan pinalti pada kompleksitas model
+* Indeks ini secara khusus memberikan pinalti pada kompleksitas model, yang meliputi:
 
-* Indeks-indeksnya meliputi
-  - ***Expected Cross Validation Index*** {{< fa circle-arrow-right >}} digunakan untuk membandingkan dua model atau lebih. Nilai yang lebih kecil menunjukkan model yang lebih baik
-  - ***Information-Theoretic Criterion*** {{< fa circle-arrow-right >}} meliputi AIC, BIC, dan SABIC. Nilai yang kecil menunjukkan model yang lebih baik
-  - ***Noncentrality Parameter-based Index*** {{< fa circle-arrow-right >}} mendekati 1 = *better fit*
-  - ***McDonald's Noncentrality Index*** {{< fa circle-arrow-right >}} mendekati 1 = *better fit*
+* ***Expected Cross Validation Index*** <i class="fa-solid fa-circle-arrow-right"></i> digunakan untuk membandingkan dua model atau lebih. Nilai yang lebih kecil menunjukkan model yang lebih baik
+* ***Information-Theoretic Criterion*** <i class="fa-solid fa-circle-arrow-right"></i> meliputi AIC, BIC, dan SABIC. Nilai yang kecil menunjukkan model yang lebih baik
+* ***Noncentrality Parameter-based Index*** <i class="fa-solid fa-circle-arrow-right"></i> mendekati 1 = *better fit*
+* ***McDonald's Noncentrality Index*** <i class="fa-solid fa-circle-arrow-right"></i> mendekati 1 = *better fit*
+* ***Parsimonious Normed Fit Index*** <i class="fa-solid fa-circle-arrow-right"></i> NFI yang mempertimbangkan *parsimony* model, mendekati 1 = *better fit*
+* ***Parsimony Goodness of Fit Index*** <i class="fa-solid fa-circle-arrow-right"></i> mendekati 1 = *better fit*
 
-## *Parsimony index* 2️⃣
+## *Absolute index* 1️⃣
 
-* ***Root Mean Square Error of Approximation* (`RMSEA`)** {{< fa circle-arrow-right >}} merupakan estimasi seberapa besar *approximation error* per *degree of freedom* yang diperkirakan terjadi di populasi — *close fit* ketika nilainya **< 0.05**, *acceptable fit* ketika **0.05 – 0.08**, *poor fit* ketika **> 0.10**
-  - *P-value* dapat digunakan untuk menguji *H*~0~: `RMSEA` ≤ 0.05 (*close fit*)
+* Indeks ini dihitung tanpa melakukan perbandingan dengan *baseline*, yang meliputi:
+
+* ***Root Mean Square Error of Approximation* (`RMSEA`)** <i class="fa-solid fa-circle-arrow-right"></i> merupakan estimasi seberapa besar *approximation error* per *degree of freedom* yang diperkirakan terjadi di populasi — *close fit* ketika nilainya **< 0.05**, *acceptable fit* ketika **0.05 – 0.08**, *poor fit* ketika **> 0.10**
+  - *p-value* dapat digunakan untuk menguji *H*~0~: `RMSEA` ≤ 0.05 (*close fit*)
   - Oleh karena itu, **gagal menolak *H*~0~** (*p* > 0.05) menunjukkan bahwa model "*close-fitting*"
   - `RMSEA` sangat dipengaruhi oleh kompleksitas model dan *sample size*, dan dapat menunjukkan *misfiting* bahkan untuk kesalahan spesifikasi yang kecil ketika sampelnya besar
-* ***Standardized Root Mean Square Residual* (`SRMR`)** {{< fa circle-arrow-right >}} akar kuadrat dari rata-rata kuadrat selisih antara *observed* dan *model-implied correlation matrix*, nilai **< 0.08** menunjukkan *acceptable fit*
+* ***Standardized Root Mean Square Residual* (`SRMR`)** <i class="fa-solid fa-circle-arrow-right"></i> akar kuadrat dari rata-rata kuadrat selisih antara *observed* dan *model-implied correlation matrix*, nilai **< 0.08** menunjukkan *acceptable fit*
   - `SRMR` (vs. `RMSEA`) relatif kurang dipengaruhi oleh *sample size* dan secara langsung mencerminkan selisih rata-rata antara *observed* dan *model-implied correlation matrix*
   - [Hu & Bentler (1999)](https://www.tandfonline.com/doi/abs/10.1080/10705519909540118) merekomendasikan melaporkan **keduanya** (*dual cutoff*): CFI ≥ 0.95 **dan** SRMR ≤ 0.08
 
-## *Absolute index*
+## *Absolute index* 2️⃣
 
-* Indeks ini dihitung tanpa melakukan perbandingan dengan *baseline*
+* **χ²**/*df* ratio
 
-* Meliputi
-  - ***Chi-square*** (χ²)/*df* ratio
-  - ***Goodness of Fit Index*** {{< fa circle-arrow-right >}} mendekati 1 = *better fit*
-  - ***Adjusted Goodness of Fit Index*** {{< fa circle-arrow-right >}} merupakan *parsimony adjustment* dari GFI, mendekati 1 = *better fit*
-  - ***Parsimony Goodness of Fit Index*** {{< fa circle-arrow-right >}} mendekati 1 = *better fit*
-  - ***Hoelter's Critical n*** {{< fa circle-arrow-right >}} nilainya sebaiknya > 200
-  - ***Standardized Root Mean Square Residual*** (SRMR/RMR) {{< fa circle-arrow-right >}} nilai **< 0.08** menunjukkan *acceptable fit* (konsisten dengan kriteria pada *parsimony index* di atas)
+* ***Goodness of Fit Index*** <i class="fa-solid fa-circle-arrow-right"></i> mendekati 1 = *better fit*
 
+* ***Adjusted Goodness of Fit Index*** <i class="fa-solid fa-circle-arrow-right"></i> merupakan *parsimony adjustment* dari GFI, mendekati 1 = *better fit*
+
+* ***Hoelter's Critical n*** <i class="fa-solid fa-circle-arrow-right"></i> nilainya sebaiknya > 200
 
 ## *Global* vs. *local fit*
 
@@ -300,7 +300,7 @@ Setiap modifikasi **harus dijustifikasi secara teori**, bukan semata-mata didoro
 
   - Lihat *standardized parameter estimates* untuk tahu apakah ada *factor loading* yang **nilainya diatas kewajaran**
 
-  - Lakukan pengujian *measurement invariance* dengan mengasumsikan beberapa *factor loading* sama di berbagai kelompok yang berbeda {{< fa circle-arrow-right >}} akan kita lakukan di [Bagian 6](/slides/bagian-6.html)
+  - Lakukan pengujian *measurement invariance* dengan mengasumsikan beberapa *factor loading* sama di berbagai kelompok yang berbeda <i class="fa-solid fa-circle-arrow-right"></i> akan kita lakukan di [Bagian 6](/slides/bagian-6.html)
 
   - Cek *error variance*. Apabila *error variance* mendekati nol, hal tsb lebih mungkin disebabkan oleh adanya *outlier*, kurangnya jumlah sampel, atau kurangnya jumlah indikator
 
@@ -314,7 +314,7 @@ Setiap modifikasi **harus dijustifikasi secara teori**, bukan semata-mata didoro
   - [Kline (2024)](https://onlinelibrary.wiley.com/doi/full/10.1002/ijop.13252) menyarankan untuk mengecek korelasi residual antar *item* (*local fit*) 
   - Ketika korelasi residual menunjukkan **tidak ada** *paired correlation* > 0.3, maka model dapat dikatakan tepat menggambarkan data (*fit*) meskipun hasil uji χ² menyatakan sebaliknya (i.e., ada perbedaan signifikan antara *observed* dan *implied model*)
   - Ini berkaitan dengan asumsi *local independence* dalam teori pengukuran psikologi - Artinya, model dapat "diterima" meskipun *global fit* ditolak **hanya dalam kondisi** ketika *local independence* dapat dipertahankan
-  - `jamovi` bisa menyimpan *residual correlation* sebagai *output* yang bisa disimpan - klik ***Output options*** {{< fa circle-arrow-right >}} ***covariances and correlations*** {{< fa circle-arrow-right >}} centang ***Residual***
+  - `jamovi` bisa menyimpan *residual correlation* sebagai *output* yang bisa disimpan - klik ***Output options*** <i class="fa-solid fa-circle-arrow-right"></i> ***covariances and correlations*** <i class="fa-solid fa-circle-arrow-right"></i> centang ***Residual***
 
 :::
 
@@ -322,19 +322,20 @@ Setiap modifikasi **harus dijustifikasi secara teori**, bukan semata-mata didoro
 
 ::: {.incremental}
 
-* *Statistical power* dalam pengujian hipotesis dalam SEM {{< fa circle-arrow-right >}} peluang **menolak *H*~0~** apabila *H*~0~ **salah** (power = 1 − β)
-  - Peluang peneliti secara tepat menyimpulkan bahwa **ada perbedaan antara *implied model* dengan *observed model*** ketika memang **benar-benar ada perbedaan** diantara keduanya
-  - _Power_ yang lebih spesifik dalam konteks SEM adalah peluang peneliti secara tepat menyimpulkan bahwa **suatu koefisien** (misalnya koefisien jalur struktural) **berbeda dari nol**, ketika **memang benar-benar berbeda dari nol di populasi**.
+* *Statistical power* dalam pengujian hipotesis dalam SEM <i class="fa-solid fa-circle-arrow-right"></i> peluang **menolak *H*~0~** apabila *H*~0~ **salah** (power = 1 − β)
+  - *Power* di **level model (global)** <i class="fa-solid fa-circle-arrow-right"></i> Apakah sampel cukup besar untuk mendeteksi bahwa model gagal memenuhi standar *close fit* (RMSEA ≥ 0.08), jika standar *close fit* yang ingin dipertahankan adalah RMSEA ≤ 0.05? <i class="fa-solid fa-circle-arrow-right"></i> **H~0~: RMSEA = 0.05, H~1~: RMSEA = 0.08**
+  - *Power* di **level jalur (lokal)** <i class="fa-solid fa-circle-arrow-right"></i> Apakah sampel cukup besar untuk mendeteksi bahwa koefisien jalur tertentu (misalnya, γ) secara signifikan berbeda dari nol, berdasarkan perbandingan model dengan dan tanpa koefisien tersebut? <i class="fa-solid fa-circle-arrow-right"></i> **H~0~: γ = 0, H~1~: γ ≠ 0**
+  - Intinya: di level global kita berharap **gagal menolak** H~0~ (model dianggap *fit*), sedangkan di level jalur kita berharap **berhasil menolak** H~0~ (koefisien jalur signifikan)
 
 * *Statistical power* ditentukan oleh
-  - ***true population model*** (yang kita tidak mungkin tahu, karena sifatnya selalu *unknown parameter*) {{< fa circle-arrow-right >}} sehingga untuk mengestimasi jumlah sampel, kita asumsikan bahwa model memang "tepat" menggambarkan data
+  - ***true population model*** (yang kita tidak mungkin tahu, karena sifatnya selalu *unknown parameter*) <i class="fa-solid fa-circle-arrow-right"></i> sehingga untuk mengestimasi jumlah sampel, kita asumsikan bahwa model memang "tepat" menggambarkan data
   - **probabilitas melakukan kesalahan tipe 1** (α)
   - ***degree of freedom*** model
   - **jumlah sampel**
 
 :::
 
-## Mengestimasi jumlah sampel (`semTools` {{< fa brands r-project >}})
+## Mengestimasi jumlah sampel (`semTools` <i class="fa-brands fa-r-project"></i>)
 
 ::: {.columns}
 ::: {.column width="50%"}
@@ -396,11 +397,11 @@ Pendekatan `findRMSEAsamplesize` dengan `semTools` di atas menguji kecocokan mod
 
 * **Pendekatan 4️⃣ langkah** idealnya dieksekusi dengan **tiga dataset yang berbeda** untuk menghindari [*capitalization on chance*](https://pubmed.ncbi.nlm.nih.gov/16250105/) — karena setiap tahap yang melibatkan respesifikasi atau modifikasi akan "menghabiskan" dataset tersebut [(MacCallum, Roznowski & Necowitz, 1992)](https://pubmed.ncbi.nlm.nih.gov/16250105/):
 
-  - **Langkah 1 (EFA)** {{< fa circle-arrow-right >}} **dataset pertama**: mengeksplorasi struktur faktor secara bebas. Langkah ini penting utamanya ketika model melibatkan konstruk yang belum _established_ bukti empiriknya
+  - **Langkah 1 (EFA)** <i class="fa-solid fa-circle-arrow-right"></i> **dataset pertama**: mengeksplorasi struktur faktor secara bebas. Langkah ini penting utamanya ketika model melibatkan konstruk yang belum _established_ bukti empiriknya
 
-  - **Langkah 2 (CFA)** {{< fa circle-arrow-right >}} **dataset kedua**: mengkonfirmasi dan merespesifikasi model pengukuran, memastikan *construct validity* — hasilnya (*df*, struktur faktor, indeks *fit*) menjadi dasar *a priori power analysis* sebelum pengujian model lengkap
+  - **Langkah 2 (CFA)** <i class="fa-solid fa-circle-arrow-right"></i> **dataset kedua**: mengkonfirmasi dan merespesifikasi model pengukuran, memastikan *construct validity* — hasilnya (*df*, struktur faktor, indeks *fit*) menjadi dasar *a priori power analysis* sebelum pengujian model lengkap
 
-  - **Langkah 3–4 (model struktural)** {{< fa circle-arrow-right >}} **dataset ketiga**: karena dataset kedua sudah "terpakai" untuk respesifikasi pengukuran, pengujian model struktural (*unrestricted* lalu *restricted*) dilakukan pada data yang benar-benar independen
+  - **Langkah 3–4 (model struktural)** <i class="fa-solid fa-circle-arrow-right"></i> **dataset ketiga**: karena dataset kedua sudah "terpakai" untuk respesifikasi pengukuran, pengujian model struktural (*unrestricted* lalu *restricted*) dilakukan pada data yang benar-benar independen
 
 * Dalam praktiknya, apabila hanya tersedia satu dataset, peneliti dapat membaginya secara acak menjadi tiga bagian (tiga _holdout sample_) — meskipun tentu saja ada risiko mengurangi *statistical power* di setiap tahapannya
 
@@ -434,13 +435,13 @@ Pendekatan `findRMSEAsamplesize` dengan `semTools` di atas menguji kecocokan mod
 
 * **Hasil penelitian**
 
-  - ***Data diagnostics*** {{< fa circle-arrow-right >}} % data *missing*, distribusi data *missing* di semua variabel
+  - ***Data diagnostics*** <i class="fa-solid fa-circle-arrow-right"></i> % data *missing*, distribusi data *missing* di semua variabel
 
-  - ***Missingness*** {{< fa circle-arrow-right >}} apabila ada data *missing*, maka peneliti harus menganalisis apakah data *missing*nya MCAR, MAR atau MNAR, kemudian bagaimana cara peneliti menangani data *missing*
+  - ***Missingness*** <i class="fa-solid fa-circle-arrow-right"></i> apabila ada data *missing*, maka peneliti harus menganalisis apakah data *missing*nya MCAR, MAR atau MNAR, kemudian bagaimana cara peneliti menangani data *missing*
 
-  - **Distribusi data** {{< fa circle-arrow-right >}} data normal/non-normal? Laporkan *multivariate normality* (_Mardia's coefficient_)
+  - **Distribusi data** <i class="fa-solid fa-circle-arrow-right"></i> data normal/non-normal? Laporkan *multivariate normality* (_Mardia's coefficient_)
 
-  - ***Data summary*** {{< fa circle-arrow-right >}} *summary statistics* yang bisa digunakan orang lain untuk melakukan replikasi, bisa ***variance-covariance*** atau ***correlation matrix***
+  - ***Data summary*** <i class="fa-solid fa-circle-arrow-right"></i> *summary statistics* yang bisa digunakan orang lain untuk melakukan replikasi, bisa ***variance-covariance*** atau ***correlation matrix***
 
 
 ## [JARS APA](https://apastyle.apa.org/jars/quant-table-7.pdf)
@@ -494,6 +495,6 @@ Pendekatan `findRMSEAsamplesize` dengan `semTools` di atas menguji kecocokan mod
 ![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDFtaDh5ZjZ2eXJ3dmJmZmFmYzBtNHEwdzlqZmZtdGtmbnE0bXZidiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zws/giphy.gif){fig-align="center"}
 
 ::: {.callout-note}
-* Paparan disusun dengan menggunakan {{< fa brands r-project >}} dan [**Quarto**](https://quarto.org) dengan *template* dari [UNAIR Theme](https://github.com/rameliaz/quarto-unair-theme).
+* Paparan disusun dengan menggunakan <i class="fa-brands fa-r-project"></i> dan [**Quarto**](https://quarto.org) dengan *template* dari [UNAIR Theme](https://github.com/rameliaz/quarto-unair-theme).
 * Kontak saya via <i class="fas fa-paper-plane"></i> <a href="mailto:amelia.zein@psikologi.unair.ac.id">amelia.zein@psikologi.unair.ac.id</a>
 :::

@@ -6,4 +6,5 @@ contributes:
   formats:
     revealjs:
       theme: airlangga.scss
+      include-in-header: header.html
       include-after-body: theme.html

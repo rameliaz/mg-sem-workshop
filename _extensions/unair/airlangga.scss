@@ -40,30 +40,17 @@ $code-color: $unair-blue;
   padding-top: 0 !important;
 }
 
-// Move logo to left for section divider slides
+// Move logo to top-left for section divider slides
 .reveal section[data-background-color] .slide-logo {
   left: 15px !important;
   right: auto !important;
+  top: 15px !important;
 }
 
 // Title slide styling
 .reveal .title-slide {
   text-align: left;
   padding-top: 150px; // Make room for logo
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 300px;
-    height: 120px;
-    background-image: url('img/logo.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
   
   h1.title {
     color: $unair-blue;

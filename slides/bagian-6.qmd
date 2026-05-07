@@ -34,13 +34,13 @@ execute:
 
 ::: {.incremental}
 
-* *Invariance* {{< fa circle-arrow-right >}} apakah dalam kondisi di subkelompok yang beragam ketika melakukan pengukuran, alat ukur selalu mengukur atribut ukur yang sama
+* *Invariance* <i class="fa-solid fa-circle-arrow-right"></i> apakah dalam kondisi di subkelompok yang beragam ketika melakukan pengukuran, alat ukur selalu mengukur atribut ukur yang sama
 
-* *Measurement invariance* {{< fa circle-arrow-right >}} dua atau lebih kelompok memiliki properti psikometrik yang sama, yaitu variabel laten dalam model pengukuran adalah konstruk yang sama
+* *Measurement invariance* <i class="fa-solid fa-circle-arrow-right"></i> dua atau lebih kelompok memiliki properti psikometrik yang sama, yaitu variabel laten dalam model pengukuran adalah konstruk yang sama
 
 * Ketika membandingkan model pengukuran di dua atau lebih kelompok yang berbeda, untuk menyimpulkan terjadinya *invariance*, maka peneliti akan menginginkan **perubahan *chi-square*** (Δχ²) yang *p-value*nya **> α** — artinya, menambah *constraint* tidak memperburuk *fit* model secara signifikan
 
-* Kalau kita berniat melakukan perbandingan performa alat ukur di dua kelompok sampel yang berbeda, maka kita lebih baik menggunakan ***means-covariance matrix*** bukan *variance-covariance matrix* {{< fa circle-arrow-right >}} ingat *t-test* dan *anova*
+* Kalau kita berniat melakukan perbandingan performa alat ukur di dua kelompok sampel yang berbeda, maka kita lebih baik menggunakan ***means-covariance matrix*** bukan *variance-covariance matrix* <i class="fa-solid fa-circle-arrow-right"></i> ingat *t-test* dan *anova*
 
 :::
 
@@ -94,7 +94,7 @@ execute:
   - Jenis ini adalah yang paling dasar, yang mengasumsikan bahwa **model memiliki struktur yang sama** di **semua kelompok**
   - Karena hanya struktur faktor yang sama, sehingga belum ada yang bisa dibandingkan secara bermakna antar kelompok.
   - Oleh karena itu, semua kelompok **harus** memiliki **jumlah faktor/variabel laten** dan **jumlah variabel indikator/*observed* yang sama**
-  - **Tidak ada ketentuan** bahwa parameter di dalam model harus setara di semua kelompok {{< fa circle-arrow-right >}} tidak ada *between-group comparison*
+  - **Tidak ada ketentuan** bahwa parameter di dalam model harus setara di semua kelompok <i class="fa-solid fa-circle-arrow-right"></i> tidak ada *between-group comparison*
   - Untuk mengeksekusi *configural invariance* tinggal menambahkan `grouping variable` di `jamovi` pada bagian **options**
 
 :::
@@ -211,6 +211,6 @@ Baujean, A.A. (2014). Latent Variable Modeling Using R: A step-by-step guide. Ne
 ![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDFtaDh5ZjZ2eXJ3dmJmZmFmYzBtNHEwdzlqZmZtdGtmbnE0bXZidiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/igB2Th9e4nW6s/giphy.gif){fig-align="center"}
 
 ::: {.callout-note}
-* Paparan disusun dengan menggunakan {{< fa brands r-project >}} dan [**Quarto**](https://quarto.org) dengan *template* dari [UNAIR Theme](https://github.com/rameliaz/quarto-unair-theme).
+* Paparan disusun dengan menggunakan <i class="fa-brands fa-r-project"></i> dan [**Quarto**](https://quarto.org) dengan *template* dari [UNAIR Theme](https://github.com/rameliaz/quarto-unair-theme).
 * Kontak saya via <i class="fas fa-paper-plane"></i> <a href="mailto:amelia.zein@psikologi.unair.ac.id">amelia.zein@psikologi.unair.ac.id</a>
 :::

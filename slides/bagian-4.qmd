@@ -44,7 +44,7 @@ execute:
 
 * Analisis faktor digunakan untuk menguji model *common variance*
 
-* Mengasumsikan bahwa dua atau lebih *observed variable* memiliki *shared/common variance* (*commonality* atau *common factor*) {{< fa circle-arrow-right >}} ditunjukkan dengan ***factor loading***
+* Mengasumsikan bahwa dua atau lebih *observed variable* memiliki *shared/common variance* (*commonality* atau *common factor*) <i class="fa-solid fa-circle-arrow-right"></i> ditunjukkan dengan ***factor loading***
 
 :::
 :::
@@ -116,7 +116,7 @@ Ada tiga macam model pengukuran:
 
 * Model yang paling moderat dan *default* di berbagai perangkat lunak SEM
 * Asumsinya, **skala, *error variance*, dan *factor loading* boleh berbeda (dibebaskan)**
-* **Koefisien reliabilitas skala** yang mengasumsikan model pengukuran *congeneric* {{< fa circle-arrow-right >}} ω, McDonald's ω, ω total (ω~*t*~), Revelle's ω, *composite reliability*.
+* **Koefisien reliabilitas skala** yang mengasumsikan model pengukuran *congeneric* <i class="fa-solid fa-circle-arrow-right"></i> ω, McDonald's ω, ω total (ω~*t*~), Revelle's ω, *composite reliability*.
 
 :::
 :::
@@ -170,15 +170,15 @@ Ada tiga macam model pengukuran:
 
 * Reflektif
   - **Variabel laten menjelaskan** mengapa **variabel indikator bervariasi**
-  - Misalnya {{< fa circle-arrow-right >}} individu dengan intelegensi yang tinggi akan mendapatkan nilai yang berbeda dalam tes matematika
-  - Biasanya mengasumsikan bahwa **kovariansi antar-*error* (*residual*) variabel indikator = 0** (*local independence*) {{< fa circle-arrow-right >}} artinya, korelasi antar-indikator sepenuhnya dijelaskan oleh variabel laten, tidak ada sumber varians bersama lain di luar model
+  - Misalnya <i class="fa-solid fa-circle-arrow-right"></i> individu dengan intelegensi yang tinggi akan mendapatkan nilai yang berbeda dalam tes matematika
+  - Biasanya mengasumsikan bahwa **kovariansi antar-*error* (*residual*) variabel indikator = 0** (*local independence*) <i class="fa-solid fa-circle-arrow-right"></i> artinya, korelasi antar-indikator sepenuhnya dijelaskan oleh variabel laten, tidak ada sumber varians bersama lain di luar model
   - Mayoritas konstruk psikologis mengasumsikan model pengukuran reflektif
 
 * Formatif
   - **Variabel *observed* menjelaskan** mengapa **variabel laten bervariasi**
-  - Misalnya {{< fa circle-arrow-right >}} gengsi sebuah mobil ditentukan oleh usia mobil, kondisi, harga, dan intensitas pemakaian
+  - Misalnya <i class="fa-solid fa-circle-arrow-right"></i> gengsi sebuah mobil ditentukan oleh usia mobil, kondisi, harga, dan intensitas pemakaian
   - Korelasi antara variabel *observed* tidak diketahui
-  - Biasanya digunakan untuk menentukan indeks pada konstruk yang *orthogonal* (contoh {{< fa circle-arrow-right >}} contohnya, [*adverse childhood experience*](https://www.sciencedirect.com/science/article/abs/pii/S0145213421003434))
+  - Biasanya digunakan untuk menentukan indeks pada konstruk yang *orthogonal* (contoh <i class="fa-solid fa-circle-arrow-right"></i> contohnya, [*adverse childhood experience*](https://www.sciencedirect.com/science/article/abs/pii/S0145213421003434))
   - Tetapi, **sangat jarang** konstruk psikologi yang mengasumsikan model formatif
 
 :::
@@ -204,16 +204,16 @@ Ada tiga macam model pengukuran:
 
 ::: {.incremental}
 
-* Apabila kita memiliki informasi tentang *factor loading*, maka kita bisa menghitung *factor scores* {{< fa circle-arrow-right >}} **estimasi** (*fitted*) skor variabel laten
+* Apabila kita memiliki informasi tentang *factor loading*, maka kita bisa menghitung *factor scores* <i class="fa-solid fa-circle-arrow-right"></i> **estimasi** (*fitted*) skor variabel laten
 
-* Caranya dengan mengali *factor loading* dengan skor kasar {{< fa circle-arrow-right >}} metode regresi
+* Caranya dengan mengali *factor loading* dengan skor kasar <i class="fa-solid fa-circle-arrow-right"></i> metode regresi
 
 * Namun ingat, mengalikan *factor loading* dengan skor kasar **masih berisiko mendapatkan estimasi yang bias**. Itulah yang menyebabkan *factor scores* akan berubah ketika model diujikan pada kelompok sampel yang berbeda.
 
 * Ada tiga cara yang bisa digunakan untuk menghitung *factor scores*:
-  - **Metode Regresi** {{< fa circle-arrow-right >}} dengan mengoptimalisasi validitas konstruk (*variance explained*)
-  - **Metode Bartlett** {{< fa circle-arrow-right >}} mengasumsikan variabel indikator **tidak saling berkorelasi**
-  - **Metode Anderson-Rubin** {{< fa circle-arrow-right >}} mengasumsikan variabel indikator **saling berkorelasi**
+  - **Metode Regresi** <i class="fa-solid fa-circle-arrow-right"></i> dengan mengoptimalisasi validitas konstruk (*variance explained*)
+  - **Metode Bartlett** <i class="fa-solid fa-circle-arrow-right"></i> mengasumsikan variabel indikator **tidak saling berkorelasi**
+  - **Metode Anderson-Rubin** <i class="fa-solid fa-circle-arrow-right"></i> mengasumsikan variabel indikator **saling berkorelasi**
 
 :::
 
@@ -221,14 +221,14 @@ Ada tiga macam model pengukuran:
 
 ::: {.incremental}
 
-* *Maximum Likelihood* {{< fa circle-arrow-right >}} distribusi data (*multivariate*) normal, level pengukuran harus interval/*continuous*, tidak ada data *missing*
+* *Maximum Likelihood* <i class="fa-solid fa-circle-arrow-right"></i> distribusi data (*multivariate*) normal, level pengukuran harus interval/*continuous*, tidak ada data *missing*
   - Gunakan _Robust Maximum Likelihood_ (MLR) ketika asumsi _multivariate normality_ tidak terpenuhi
 
-* *Generalized-least squares* {{< fa circle-arrow-right >}} menggunakan asumsi yang sama dengan `ML` namun performanya kurang baik apabila dibandingkan dengan `ML`
+* *Generalized-least squares* <i class="fa-solid fa-circle-arrow-right"></i> menggunakan asumsi yang sama dengan `ML` namun performanya kurang baik apabila dibandingkan dengan `ML`
 
-* *Weighted-least squares* {{< fa circle-arrow-right >}} dapat digunakan pada data kategorikal (nominal dan ordinal), estimasi menggunakan *polychoric correlation matrix*. Varian WLS, misalnya: WLSM, WLSMV, WLSMVS.
+* *Weighted-least squares* <i class="fa-solid fa-circle-arrow-right"></i> dapat digunakan pada data kategorikal (nominal dan ordinal), estimasi menggunakan *polychoric correlation matrix*. Varian WLS, misalnya: WLSM, WLSMV, WLSMVS.
 
-* *Diagonally weighted-least squares* {{< fa circle-arrow-right >}} dapat digunakan pada data kategorikal, bekerja dengan baik pada sampel yang relatif kecil dan data yang tidak berdistribusi normal
+* *Diagonally weighted-least squares* <i class="fa-solid fa-circle-arrow-right"></i> dapat digunakan pada data kategorikal, bekerja dengan baik pada sampel yang relatif kecil dan data yang tidak berdistribusi normal
 
 :::
 
@@ -249,8 +249,8 @@ $$AVE = \frac{\sum \lambda_i^2}{\sum \lambda_i^2 + \sum (1 - \lambda_i^2)}$$
 
 * Intinya: dari seluruh varians indikator, berapa proporsinya yang merupakan benar-benar "sinyal" dari konstruk dan bukan *noise*?
 
-* **Kriteria** {{< fa circle-arrow-right >}} AVE ≥ 0.50 ([Fornell & Larcker, 1981](https://doi.org/10.2307/3151312))
-  - AVE < 0.50 berarti *error variance* lebih besar daripada *construct variance* {{< fa circle-arrow-right >}} validitas konvergen **tidak terpenuhi**
+* **Kriteria** <i class="fa-solid fa-circle-arrow-right"></i> AVE ≥ 0.50 ([Fornell & Larcker, 1981](https://doi.org/10.2307/3151312))
+  - AVE < 0.50 berarti *error variance* lebih besar daripada *construct variance* <i class="fa-solid fa-circle-arrow-right"></i> validitas konvergen **tidak terpenuhi**
 
 :::
 
@@ -282,7 +282,7 @@ $$AVE_A > r^2_{AB} \quad \text{dan} \quad AVE_B > r^2_{AB}$$
 
 * Artinya: konstruk A **berbagi lebih banyak varians dengan indikatornya sendiri** daripada dengan konstruk B
 
-* Apabila kriteria ini tidak terpenuhi {{< fa circle-arrow-right >}} kemungkinan dua konstruk terlalu mirip dan **tidak dapat dibedakan** secara empiris
+* Apabila kriteria ini tidak terpenuhi <i class="fa-solid fa-circle-arrow-right"></i> kemungkinan dua konstruk terlalu mirip dan **tidak dapat dibedakan** secara empiris
 
 :::
 
@@ -291,7 +291,7 @@ $$AVE_A > r^2_{AB} \quad \text{dan} \quad AVE_B > r^2_{AB}$$
 Letakkan √AVE tiap konstruk di diagonal tabel korelasi antar-konstruk. Validitas diskriminan terpenuhi apabila **nilai diagonal (√AVE) lebih besar dari semua nilai di baris dan kolom yang sama**.
 :::
 
-## Menggunakan `semTools`{{< fa brands r-project >}} untuk menghitung AVE
+## Menggunakan `semTools`<i class="fa-brands fa-r-project"></i> untuk menghitung AVE
 
 Setelah menjalankan model CFA, gunakan `semTools::reliability()` untuk menghitung AVE dan CR sekaligus:
 
@@ -304,7 +304,7 @@ fit <- cfa(model, data = data_anda, estimator = "MLR")
 reliability(fit)
 ```
 
-## Menggunakan `semTools`{{< fa brands r-project >}} untuk menghitung AVE
+## Menggunakan `semTools`<i class="fa-brands fa-r-project"></i> untuk menghitung AVE
 
 Output yang dihasilkan mencakup informasi berikut ini:
 
@@ -344,6 +344,6 @@ Karena `SEMLj` juga menggunakan `semTools`, maka AVE tersedia bersama *composite
 ![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDFtaDh5ZjZ2eXJ3dmJmZmFmYzBtNHEwdzlqZmZtdGtmbnE0bXZidiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/igB2Th9e4nW6s/giphy.gif){fig-align="center"}
 
 ::: {.callout-note}
-* Paparan disusun dengan menggunakan {{< fa brands r-project >}} dan [**Quarto**](https://quarto.org) dengan *template* dari [UNAIR Theme](https://github.com/rameliaz/quarto-unair-theme).
+* Paparan disusun dengan menggunakan <i class="fa-brands fa-r-project"></i> dan [**Quarto**](https://quarto.org) dengan *template* dari [UNAIR Theme](https://github.com/rameliaz/quarto-unair-theme).
 * Kontak saya via <i class="fas fa-paper-plane"></i> <a href="mailto:amelia.zein@psikologi.unair.ac.id">amelia.zein@psikologi.unair.ac.id</a>
 :::

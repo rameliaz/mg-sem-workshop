@@ -1,15 +1,15 @@
 <script>
 // Single unified function to manage all logos
 function manageLogos() {
-  const slides = document.querySelectorAll('.reveal .slides section');
-  
+  const slides = Reveal.getSlides();
+
   slides.forEach(function(slide, index) {
     // Handle title slide (first slide)
     if (index === 0) {
       slide.querySelectorAll('.slide-logo').forEach(logo => logo.remove());
       if (!slide.querySelector('.title-slide-logo')) {
         const titleLogo = document.createElement('img');
-        titleLogo.src = '../_extensions/rameliaz/unair/logo.png';
+        titleLogo.src = '../img/logo.png';
         titleLogo.className = 'title-slide-logo';
         titleLogo.alt = 'Universitas Airlangga Logo';
         slide.insertBefore(titleLogo, slide.firstChild);
@@ -20,8 +20,8 @@ function manageLogos() {
 
     const bgColor = slide.getAttribute('data-background-color');
     const logoSrc = (bgColor === '#14497F' || bgColor === '#14497f')
-      ? '../_extensions/rameliaz/unair/logo_white.png'
-      : '../_extensions/rameliaz/unair/logo.png';
+      ? '../img/logo_white.png'
+      : '../img/logo.png';
 
     const existingLogos = slide.querySelectorAll('.slide-logo');
 
@@ -67,6 +67,13 @@ document.addEventListener('DOMContentLoaded', function() {
 /* Ensure title slide doesn't have logo overlap */
 .reveal .title-slide {
   padding-right: 220px;
+}
+
+/* Section divider slides - logo top-left, fully visible */
+.reveal section[data-background-color] .slide-logo {
+  left: 15px !important;
+  right: auto !important;
+  top: 15px !important;
 }
 
 /* Section title slide styling */

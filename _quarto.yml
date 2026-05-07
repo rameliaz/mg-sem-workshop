@@ -6,8 +6,6 @@ project:
     - img/
     - materials/
     - articles/
-    - _extensions/
-    - .nojekyll
   render:
     - index.qmd
     - slides/bagian-1.qmd
@@ -71,10 +69,12 @@ website:
             href: materials/codebook-pilpres2024.csv
           - text: "Demonstrasi _Power Analysis_"
             href: materials/power.omv
-      - text: "Interaksi dalam SEM"
+      - text: "Extra"
         menu:
-          - text: "Tabel Perbandingan Pendekatan"
+          - text: "Interaksi dalam SEM"
             href: materials/latent_interaction_SEM.xlsx
+          - text: "Soper's calculator vs. semPower PAMLj"
+            href: materials/soper_vs_PAMLj-semPower.xlsx  
       - text: "Survei"
         menu:
           - text: "Evaluasi Workshop"

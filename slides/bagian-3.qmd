@@ -20,12 +20,12 @@ execute:
 ## _Outline_
 
 * Definisi *path model*
+* Asumsi kausalitas
 * Nama variabel dan koefisien jalur (*path coefficients*)
   * δ (delta), ε (epsilon), ξ (ksi), η (eta), λ (lambda), γ (gamma), β (beta), φ (phi), ζ (zeta)
 * Representasi visual model jalur menggunakan diagram jalur (*path diagram*)
 * Menggambarkan hubungan antar-variabel dengan menggunakan diagram jalur
 * *Script* `lavaan` untuk spesifikasi model jalur
-* Asumsi kausalitas dan limitasi
 
 ## Analisis jalur
 
@@ -54,9 +54,9 @@ execute:
 **Correlation does not imply causation**
 :::
 
-Yang harus dipenuhi sebagai bukti kausalitas (X {{< fa circle-arrow-right >}} Y):
+Yang harus dipenuhi sebagai bukti kausalitas (X <i class="fa-solid fa-circle-arrow-right"></i> Y):
 
-* Ada **urut-urutan waktu kejadian** (*temporal order*) {{< fa circle-arrow-right >}} desain penelitian *panel*/*longitudinal*/*time series*
+* Ada **urut-urutan waktu kejadian** (*temporal order*) <i class="fa-solid fa-circle-arrow-right"></i> desain penelitian *panel*/*longitudinal*/*time series*
 * Adanya **korelasi** antara kedua variabel
 * Peneliti harus melakukan **kontrol** atas variabel lain (_confounding_)
   - ...yaitu dengan cara melakukan **manipulasi** (_random assignment_) pada prediktor (X)
@@ -86,7 +86,7 @@ Marimar heran sekaligus penasaran, mengapa tiap anak **memberikan respon yang be
 
 * **trust** (variabel independen) = Kepercayaan ibu bahwa perkembangan anak dapat berlangsung secara natural ([**trust in organismic development**](https://link.springer.com/article/10.1007/s11031-008-9092-2)). 
   - Makin tinggi skor, ibu makin percaya anaknya bisa berkembang secara natural. 
-  - Diukur dengan skala *likert* yang terdiri dari 5 _item_ dengan 7 pilihan respon {{< fa circle-arrow-right >}} dari **sangat tidak setuju** sampai **sangat setuju**.
+  - Diukur dengan skala *likert* yang terdiri dari 5 _item_ dengan 7 pilihan respon <i class="fa-solid fa-circle-arrow-right"></i> dari **sangat tidak setuju** sampai **sangat setuju**.
 
 * **mandiri** (variabel dependen) = Tingkat kemandirian anak. Anak dengan skor yang tinggi semakin menunjukkan independensi dan lebih santai ketika ditinggal orangtuanya di sekolah. Beberapa indikator perilakunya adalah:
   - Tidak menangis ketika ditinggal orangtuanya
@@ -167,7 +167,7 @@ Anda bisa menggunakan MS Power Point atau *software* yang lain (misalnya, [draw.
   - Kalau memilih fitur _interactive_, maka tampilan antarmukanya berupa _drag & drop_ (seperti `SPSS`).
   - Untuk fitur _script_, maka tampilan antarmukanya meminta pengguna untuk menspesifikasi model dengan _script_.
 
-* `jamovi` dan `JASP` mengadopsi *script* dari {{< fa brands r-project >}} *package* [`lavaan`](http://lavaan.ugent.be/tutorial/index.html), sehingga untuk menspesifikasi model, kita harus memasukkan **serangkaian perintah**.
+* `jamovi` dan `JASP` mengadopsi *script* dari <i class="fa-brands fa-r-project"></i> *package* [`lavaan`](http://lavaan.ugent.be/tutorial/index.html), sehingga untuk menspesifikasi model, kita harus memasukkan **serangkaian perintah**.
 
 * Meskipun begitu, *script* `lavaan` **sangat sederhana** dan familiar dengan *script* `lavaan` memberikan **banyak keuntungan**.
 
@@ -280,6 +280,6 @@ Tulislah *script* `lavaan` dari diagram jalur yang sudah dibuat di Latihan mandi
 ![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDFtaDh5ZjZ2eXJ3dmJmZmFmYzBtNHEwdzlqZmZtdGtmbnE0bXZidiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/igB2Th9e4nW6s/giphy.gif){fig-align="center"}
 
 ::: {.callout-note}
-* Paparan disusun dengan menggunakan {{< fa brands r-project >}} dan [**Quarto**](https://quarto.org) dengan *template* dari [UNAIR Theme](https://github.com/rameliaz/quarto-unair-theme).
+* Paparan disusun dengan menggunakan <i class="fa-brands fa-r-project"></i> dan [**Quarto**](https://quarto.org) dengan *template* dari [UNAIR Theme](https://github.com/rameliaz/quarto-unair-theme).
 * Kontak saya via <i class="fas fa-paper-plane"></i> <a href="mailto:amelia.zein@psikologi.unair.ac.id">amelia.zein@psikologi.unair.ac.id</a>
 :::

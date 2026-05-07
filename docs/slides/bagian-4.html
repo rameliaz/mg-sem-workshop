@@ -6,12 +6,11 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e44360b8a8db1e130c7792fece1c8032.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e44360b8a8db1e130c7792fece1c8032.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.10.3">
 
   <meta name="author" content="Rizqy Amelia Zein">
-  <meta name="dcterms.date" content="2026-05-06">
+  <meta name="dcterms.date" content="2026-05-07">
   <title>Multigroup SEM Workshop – Confirmatory Factor Analysis (CFA)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -100,7 +99,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-14c7313e0bd1a6ac1391ac8d6dd3db46.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-64a35699270489a3f5121f59aefdeda0.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -192,7 +191,7 @@
       margin-right: 0; 
     }
   </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -216,7 +215,7 @@ Rizqy Amelia Zein
     </div>
 </div>
 
-  <p class="date">2026-05-06</p>
+  <p class="date">2026-05-07</p>
 </section>
 <section id="outline" class="slide level2">
 <h2><em>Outline</em></h2>
@@ -245,7 +244,7 @@ Rizqy Amelia Zein
 <li class="fragment"><em>Confirmatory factor analysis</em> (CFA)</li>
 </ul></li>
 <li class="fragment"><p>Analisis faktor digunakan untuk menguji model <em>common variance</em></p></li>
-<li class="fragment"><p>Mengasumsikan bahwa dua atau lebih <em>observed variable</em> memiliki <em>shared/common variance</em> (<em>commonality</em> atau <em>common factor</em>) <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> ditunjukkan dengan <strong><em>factor loading</em></strong></p></li>
+<li class="fragment"><p>Mengasumsikan bahwa dua atau lebih <em>observed variable</em> memiliki <em>shared/common variance</em> (<em>commonality</em> atau <em>common factor</em>) <i class="fa-solid fa-circle-arrow-right"></i> ditunjukkan dengan <strong><em>factor loading</em></strong></p></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <p><img data-src="https://media.giphy.com/media/l0IyjeA5mmMZjhyPm/giphy.gif"></p>
@@ -329,7 +328,7 @@ Rizqy Amelia Zein
 <ul>
 <li class="fragment">Model yang paling moderat dan <em>default</em> di berbagai perangkat lunak SEM</li>
 <li class="fragment">Asumsinya, <strong>skala, <em>error variance</em>, dan <em>factor loading</em> boleh berbeda (dibebaskan)</strong></li>
-<li class="fragment"><strong>Koefisien reliabilitas skala</strong> yang mengasumsikan model pengukuran <em>congeneric</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> ω, McDonald’s ω, ω total (ω<sub><em>t</em></sub>), Revelle’s ω, <em>composite reliability</em>.</li>
+<li class="fragment"><strong>Koefisien reliabilitas skala</strong> yang mengasumsikan model pengukuran <em>congeneric</em> <i class="fa-solid fa-circle-arrow-right"></i> ω, McDonald’s ω, ω total (ω<sub><em>t</em></sub>), Revelle’s ω, <em>composite reliability</em>.</li>
 </ul>
 </div><div class="column">
 <div class="quarto-figure quarto-figure-center">
@@ -385,16 +384,16 @@ Rizqy Amelia Zein
 <li class="fragment">Reflektif
 <ul>
 <li class="fragment"><strong>Variabel laten menjelaskan</strong> mengapa <strong>variabel indikator bervariasi</strong></li>
-<li class="fragment">Misalnya <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> individu dengan intelegensi yang tinggi akan mendapatkan nilai yang berbeda dalam tes matematika</li>
-<li class="fragment">Biasanya mengasumsikan bahwa <strong>kovariansi antar-<em>error</em> (<em>residual</em>) variabel indikator = 0</strong> (<em>local independence</em>) <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> artinya, korelasi antar-indikator sepenuhnya dijelaskan oleh variabel laten, tidak ada sumber varians bersama lain di luar model</li>
+<li class="fragment">Misalnya <i class="fa-solid fa-circle-arrow-right"></i> individu dengan intelegensi yang tinggi akan mendapatkan nilai yang berbeda dalam tes matematika</li>
+<li class="fragment">Biasanya mengasumsikan bahwa <strong>kovariansi antar-<em>error</em> (<em>residual</em>) variabel indikator = 0</strong> (<em>local independence</em>) <i class="fa-solid fa-circle-arrow-right"></i> artinya, korelasi antar-indikator sepenuhnya dijelaskan oleh variabel laten, tidak ada sumber varians bersama lain di luar model</li>
 <li class="fragment">Mayoritas konstruk psikologis mengasumsikan model pengukuran reflektif</li>
 </ul></li>
 <li class="fragment">Formatif
 <ul>
 <li class="fragment"><strong>Variabel <em>observed</em> menjelaskan</strong> mengapa <strong>variabel laten bervariasi</strong></li>
-<li class="fragment">Misalnya <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> gengsi sebuah mobil ditentukan oleh usia mobil, kondisi, harga, dan intensitas pemakaian</li>
+<li class="fragment">Misalnya <i class="fa-solid fa-circle-arrow-right"></i> gengsi sebuah mobil ditentukan oleh usia mobil, kondisi, harga, dan intensitas pemakaian</li>
 <li class="fragment">Korelasi antara variabel <em>observed</em> tidak diketahui</li>
-<li class="fragment">Biasanya digunakan untuk menentukan indeks pada konstruk yang <em>orthogonal</em> (contoh <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> contohnya, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0145213421003434"><em>adverse childhood experience</em></a>)</li>
+<li class="fragment">Biasanya digunakan untuk menentukan indeks pada konstruk yang <em>orthogonal</em> (contoh <i class="fa-solid fa-circle-arrow-right"></i> contohnya, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0145213421003434"><em>adverse childhood experience</em></a>)</li>
 <li class="fragment">Tetapi, <strong>sangat jarang</strong> konstruk psikologi yang mengasumsikan model formatif</li>
 </ul></li>
 </ul>
@@ -420,27 +419,27 @@ Rizqy Amelia Zein
 <section id="skor-faktor-factor-scores" class="slide level2">
 <h2>Skor faktor (<em>factor scores</em>)</h2>
 <ul>
-<li class="fragment"><p>Apabila kita memiliki informasi tentang <em>factor loading</em>, maka kita bisa menghitung <em>factor scores</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> <strong>estimasi</strong> (<em>fitted</em>) skor variabel laten</p></li>
-<li class="fragment"><p>Caranya dengan mengali <em>factor loading</em> dengan skor kasar <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> metode regresi</p></li>
+<li class="fragment"><p>Apabila kita memiliki informasi tentang <em>factor loading</em>, maka kita bisa menghitung <em>factor scores</em> <i class="fa-solid fa-circle-arrow-right"></i> <strong>estimasi</strong> (<em>fitted</em>) skor variabel laten</p></li>
+<li class="fragment"><p>Caranya dengan mengali <em>factor loading</em> dengan skor kasar <i class="fa-solid fa-circle-arrow-right"></i> metode regresi</p></li>
 <li class="fragment"><p>Namun ingat, mengalikan <em>factor loading</em> dengan skor kasar <strong>masih berisiko mendapatkan estimasi yang bias</strong>. Itulah yang menyebabkan <em>factor scores</em> akan berubah ketika model diujikan pada kelompok sampel yang berbeda.</p></li>
 <li class="fragment"><p>Ada tiga cara yang bisa digunakan untuk menghitung <em>factor scores</em>:</p>
 <ul>
-<li class="fragment"><strong>Metode Regresi</strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> dengan mengoptimalisasi validitas konstruk (<em>variance explained</em>)</li>
-<li class="fragment"><strong>Metode Bartlett</strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> mengasumsikan variabel indikator <strong>tidak saling berkorelasi</strong></li>
-<li class="fragment"><strong>Metode Anderson-Rubin</strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> mengasumsikan variabel indikator <strong>saling berkorelasi</strong></li>
+<li class="fragment"><strong>Metode Regresi</strong> <i class="fa-solid fa-circle-arrow-right"></i> dengan mengoptimalisasi validitas konstruk (<em>variance explained</em>)</li>
+<li class="fragment"><strong>Metode Bartlett</strong> <i class="fa-solid fa-circle-arrow-right"></i> mengasumsikan variabel indikator <strong>tidak saling berkorelasi</strong></li>
+<li class="fragment"><strong>Metode Anderson-Rubin</strong> <i class="fa-solid fa-circle-arrow-right"></i> mengasumsikan variabel indikator <strong>saling berkorelasi</strong></li>
 </ul></li>
 </ul>
 </section>
 <section id="memilih-metode-estimasi" class="slide level2">
 <h2>Memilih metode estimasi</h2>
 <ul>
-<li class="fragment"><p><em>Maximum Likelihood</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> distribusi data (<em>multivariate</em>) normal, level pengukuran harus interval/<em>continuous</em>, tidak ada data <em>missing</em></p>
+<li class="fragment"><p><em>Maximum Likelihood</em> <i class="fa-solid fa-circle-arrow-right"></i> distribusi data (<em>multivariate</em>) normal, level pengukuran harus interval/<em>continuous</em>, tidak ada data <em>missing</em></p>
 <ul>
 <li class="fragment">Gunakan <em>Robust Maximum Likelihood</em> (MLR) ketika asumsi <em>multivariate normality</em> tidak terpenuhi</li>
 </ul></li>
-<li class="fragment"><p><em>Generalized-least squares</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> menggunakan asumsi yang sama dengan <code>ML</code> namun performanya kurang baik apabila dibandingkan dengan <code>ML</code></p></li>
-<li class="fragment"><p><em>Weighted-least squares</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> dapat digunakan pada data kategorikal (nominal dan ordinal), estimasi menggunakan <em>polychoric correlation matrix</em>. Varian WLS, misalnya: WLSM, WLSMV, WLSMVS.</p></li>
-<li class="fragment"><p><em>Diagonally weighted-least squares</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> dapat digunakan pada data kategorikal, bekerja dengan baik pada sampel yang relatif kecil dan data yang tidak berdistribusi normal</p></li>
+<li class="fragment"><p><em>Generalized-least squares</em> <i class="fa-solid fa-circle-arrow-right"></i> menggunakan asumsi yang sama dengan <code>ML</code> namun performanya kurang baik apabila dibandingkan dengan <code>ML</code></p></li>
+<li class="fragment"><p><em>Weighted-least squares</em> <i class="fa-solid fa-circle-arrow-right"></i> dapat digunakan pada data kategorikal (nominal dan ordinal), estimasi menggunakan <em>polychoric correlation matrix</em>. Varian WLS, misalnya: WLSM, WLSMV, WLSMVS.</p></li>
+<li class="fragment"><p><em>Diagonally weighted-least squares</em> <i class="fa-solid fa-circle-arrow-right"></i> dapat digunakan pada data kategorikal, bekerja dengan baik pada sampel yang relatif kecil dan data yang tidak berdistribusi normal</p></li>
 </ul>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
@@ -465,9 +464,9 @@ Rizqy Amelia Zein
 <p><span class="math display">\[AVE = \frac{\sum \lambda_i^2}{\sum \lambda_i^2 + \sum (1 - \lambda_i^2)}\]</span></p>
 <ul>
 <li class="fragment"><p>Intinya: dari seluruh varians indikator, berapa proporsinya yang merupakan benar-benar “sinyal” dari konstruk dan bukan <em>noise</em>?</p></li>
-<li class="fragment"><p><strong>Kriteria</strong> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> AVE ≥ 0.50 (<a href="https://doi.org/10.2307/3151312">Fornell &amp; Larcker, 1981</a>)</p>
+<li class="fragment"><p><strong>Kriteria</strong> <i class="fa-solid fa-circle-arrow-right"></i> AVE ≥ 0.50 (<a href="https://doi.org/10.2307/3151312">Fornell &amp; Larcker, 1981</a>)</p>
 <ul>
-<li class="fragment">AVE &lt; 0.50 berarti <em>error variance</em> lebih besar daripada <em>construct variance</em> <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> validitas konvergen <strong>tidak terpenuhi</strong></li>
+<li class="fragment">AVE &lt; 0.50 berarti <em>error variance</em> lebih besar daripada <em>construct variance</em> <i class="fa-solid fa-circle-arrow-right"></i> validitas konvergen <strong>tidak terpenuhi</strong></li>
 </ul></li>
 </ul>
 </section>
@@ -532,7 +531,7 @@ Rizqy Amelia Zein
 <p><span class="math display">\[AVE_A &gt; r^2_{AB} \quad \text{dan} \quad AVE_B &gt; r^2_{AB}\]</span></p>
 <ul>
 <li class="fragment"><p>Artinya: konstruk A <strong>berbagi lebih banyak varians dengan indikatornya sendiri</strong> daripada dengan konstruk B</p></li>
-<li class="fragment"><p>Apabila kriteria ini tidak terpenuhi <i class="fa-solid fa-circle-arrow-right" aria-label="circle-arrow-right"></i> kemungkinan dua konstruk terlalu mirip dan <strong>tidak dapat dibedakan</strong> secara empiris</p></li>
+<li class="fragment"><p>Apabila kriteria ini tidak terpenuhi <i class="fa-solid fa-circle-arrow-right"></i> kemungkinan dua konstruk terlalu mirip dan <strong>tidak dapat dibedakan</strong> secara empiris</p></li>
 </ul>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
@@ -548,8 +547,8 @@ Rizqy Amelia Zein
 </div>
 </div>
 </section>
-<section id="menggunakan-semtoolsb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206272616e647320722d70726f6a656374203e7d7d-untuk-menghitung-ave" class="slide level2">
-<h2>Menggunakan <code>semTools</code><i class="fa-brands fa-r-project" aria-label="r-project"></i> untuk menghitung AVE</h2>
+<section id="menggunakan-semtools-untuk-menghitung-ave" class="slide level2">
+<h2>Menggunakan <code>semTools</code><i class="fa-brands fa-r-project"></i> untuk menghitung AVE</h2>
 <p>Setelah menjalankan model CFA, gunakan <code>semTools::reliability()</code> untuk menghitung AVE dan CR sekaligus:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(lavaan); <span class="fu">library</span>(semTools)</span>
@@ -559,8 +558,8 @@ Rizqy Amelia Zein
 <span id="cb1-5"><a></a><span class="fu">reliability</span>(fit)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="menggunakan-semtoolsb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206272616e647320722d70726f6a656374203e7d7d-untuk-menghitung-ave-1" class="slide level2">
-<h2>Menggunakan <code>semTools</code><i class="fa-brands fa-r-project" aria-label="r-project"></i> untuk menghitung AVE</h2>
+<section id="menggunakan-semtools-untuk-menghitung-ave-1" class="slide level2">
+<h2>Menggunakan <code>semTools</code><i class="fa-brands fa-r-project"></i> untuk menghitung AVE</h2>
 <p>Output yang dihasilkan mencakup informasi berikut ini:</p>
 <table class="caption-top">
 <colgroup>
@@ -637,7 +636,7 @@ Rizqy Amelia Zein
 </div>
 <div class="callout-content">
 <ul>
-<li>Paparan disusun dengan menggunakan <i class="fa-brands fa-r-project" aria-label="r-project"></i> dan <a href="https://quarto.org"><strong>Quarto</strong></a> dengan <em>template</em> dari <a href="https://github.com/rameliaz/quarto-unair-theme">UNAIR Theme</a>.</li>
+<li>Paparan disusun dengan menggunakan <i class="fa-brands fa-r-project"></i> dan <a href="https://quarto.org"><strong>Quarto</strong></a> dengan <em>template</em> dari <a href="https://github.com/rameliaz/quarto-unair-theme">UNAIR Theme</a>.</li>
 <li>Kontak saya via <i class="fas fa-paper-plane"></i> <a href="mailto:amelia.zein@psikologi.unair.ac.id">amelia.zein@psikologi.unair.ac.id</a></li>
 </ul>
 </div>
@@ -864,15 +863,15 @@ Rizqy Amelia Zein
     <script>
     // Single unified function to manage all logos
     function manageLogos() {
-      const slides = document.querySelectorAll('.reveal .slides section');
-      
+      const slides = Reveal.getSlides();
+
       slides.forEach(function(slide, index) {
         // Handle title slide (first slide)
         if (index === 0) {
           slide.querySelectorAll('.slide-logo').forEach(logo => logo.remove());
           if (!slide.querySelector('.title-slide-logo')) {
             const titleLogo = document.createElement('img');
-            titleLogo.src = '../_extensions/rameliaz/unair/logo.png';
+            titleLogo.src = '../img/logo.png';
             titleLogo.className = 'title-slide-logo';
             titleLogo.alt = 'Universitas Airlangga Logo';
             slide.insertBefore(titleLogo, slide.firstChild);
@@ -883,8 +882,8 @@ Rizqy Amelia Zein
 
         const bgColor = slide.getAttribute('data-background-color');
         const logoSrc = (bgColor === '#14497F' || bgColor === '#14497f')
-          ? '../_extensions/rameliaz/unair/logo_white.png'
-          : '../_extensions/rameliaz/unair/logo.png';
+          ? '../img/logo_white.png'
+          : '../img/logo.png';
 
         const existingLogos = slide.querySelectorAll('.slide-logo');
 
@@ -930,6 +929,13 @@ Rizqy Amelia Zein
     /* Ensure title slide doesn't have logo overlap */
     .reveal .title-slide {
       padding-right: 220px;
+    }
+
+    /* Section divider slides - logo top-left, fully visible */
+    .reveal section[data-background-color] .slide-logo {
+      left: 15px !important;
+      right: auto !important;
+      top: 15px !important;
     }
 
     /* Section title slide styling */

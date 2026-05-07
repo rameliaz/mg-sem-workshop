@@ -231,15 +231,15 @@
     "text": "Validitas Diskriminan\n\nSelain validitas konvergen, AVE juga digunakan untuk menguji validitas diskriminan — apakah setiap konstruk benar-benar berbeda dari konstruk lainnya\nKriteria Fornell-Larcker: AVE setiap konstruk harus lebih besar dari kuadrat korelasi antara konstruk tersebut dengan konstruk lain mana pun\n\n\\[AVE_A &gt; r^2_{AB} \\quad \\text{dan} \\quad AVE_B &gt; r^2_{AB}\\]\n\nArtinya: konstruk A berbagi lebih banyak varians dengan indikatornya sendiri daripada dengan konstruk B\nApabila kriteria ini tidak terpenuhi  kemungkinan dua konstruk terlalu mirip dan tidak dapat dibedakan secara empiris\n\n\n\n\n\n\n\nCara membaca tabel Fornell-Larcker\n\n\nLetakkan √AVE tiap konstruk di diagonal tabel korelasi antar-konstruk. Validitas diskriminan terpenuhi apabila nilai diagonal (√AVE) lebih besar dari semua nilai di baris dan kolom yang sama."
   },
   {
-    "objectID": "slides/bagian-4.html#menggunakan-semtoolsb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206272616e647320722d70726f6a656374203e7d7d-untuk-menghitung-ave",
-    "href": "slides/bagian-4.html#menggunakan-semtoolsb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206272616e647320722d70726f6a656374203e7d7d-untuk-menghitung-ave",
+    "objectID": "slides/bagian-4.html#menggunakan-semtools-untuk-menghitung-ave",
+    "href": "slides/bagian-4.html#menggunakan-semtools-untuk-menghitung-ave",
     "title": "Confirmatory Factor Analysis (CFA)",
     "section": "Menggunakan semTools untuk menghitung AVE",
     "text": "Menggunakan semTools untuk menghitung AVE\nSetelah menjalankan model CFA, gunakan semTools::reliability() untuk menghitung AVE dan CR sekaligus:\n\nlibrary(lavaan); library(semTools)\n\nfit &lt;- cfa(model, data = data_anda, estimator = \"MLR\")\n\nreliability(fit)"
   },
   {
-    "objectID": "slides/bagian-4.html#menggunakan-semtoolsb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206272616e647320722d70726f6a656374203e7d7d-untuk-menghitung-ave-1",
-    "href": "slides/bagian-4.html#menggunakan-semtoolsb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206272616e647320722d70726f6a656374203e7d7d-untuk-menghitung-ave-1",
+    "objectID": "slides/bagian-4.html#menggunakan-semtools-untuk-menghitung-ave-1",
+    "href": "slides/bagian-4.html#menggunakan-semtools-untuk-menghitung-ave-1",
     "title": "Confirmatory Factor Analysis (CFA)",
     "section": "Menggunakan semTools untuk menghitung AVE",
     "text": "Menggunakan semTools untuk menghitung AVE\nOutput yang dihasilkan mencakup informasi berikut ini:\n\n\n\n\n\n\n\nBaris output\nKeterangan\n\n\n\n\nalpha\nCronbach’s α (mengasumsikan tau equivalence)\n\n\nomega\nMcDonald’s ω (congeneric)\n\n\nomega2 / omega3\nVarian ω untuk model yang lebih kompleks\n\n\nave\nAVE per faktor laten\n\n\n\n\n\n\n\n\n\njamovi menyediakan perhitungan AVE + composite reliability\n\n\nKarena SEMLj juga menggunakan semTools, maka AVE tersedia bersama composite reliability."
@@ -522,7 +522,7 @@
     "href": "slides/bagian-1.html#perangkat-lunak-untuk-mengeksekusi-sem",
     "title": "Pengantar",
     "section": "Perangkat lunak untuk mengeksekusi SEM",
-    "text": "Perangkat lunak untuk mengeksekusi SEM\n\nPerangkat lunak SEM sudah cukup user-friendly\n\njamovi dan JASP adalah perangkat lunak SEM yang hanya memerlukan coding yang sangat minimal.\nNamun jamovi dan JASP fungsinya terbatas, terutama ketika peneliti menguji model yang sangat kompleks.\nSelain itu, peneliti dapat menggunakan Ωnyx, LISREL, SPSS AMOS, EQX, Mplus, STATA, lavaan (+ semTools) di  atau semopy di  dsb."
+    "text": "Perangkat lunak untuk mengeksekusi SEM\n\nPerangkat lunak SEM sudah cukup user-friendly\n\njamovi dan JASP adalah perangkat lunak SEM yang hanya memerlukan coding yang sangat minimal.\nNamun jamovi dan JASP fungsinya terbatas, terutama ketika peneliti menguji model yang sangat kompleks.\nSelain itu, peneliti dapat menggunakan Ωnyx, LISREL, SPSS AMOS, EQX, Mplus, STATA, lavaan, atau sem (+ semTools dan semPower) di  atau semopy di  dsb."
   },
   {
     "objectID": "slides/bagian-1.html#asumsi-sem-1",
@@ -585,7 +585,7 @@
     "href": "slides/bagian-3.html#outline",
     "title": "Model Jalur",
     "section": "Outline",
-    "text": "Outline\n\nDefinisi path model\nNama variabel dan koefisien jalur (path coefficients)\n\nδ (delta), ε (epsilon), ξ (ksi), η (eta), λ (lambda), γ (gamma), β (beta), φ (phi), ζ (zeta)\n\nRepresentasi visual model jalur menggunakan diagram jalur (path diagram)\nMenggambarkan hubungan antar-variabel dengan menggunakan diagram jalur\nScript lavaan untuk spesifikasi model jalur\nAsumsi kausalitas dan limitasi"
+    "text": "Outline\n\nDefinisi path model\nAsumsi kausalitas\nNama variabel dan koefisien jalur (path coefficients)\n\nδ (delta), ε (epsilon), ξ (ksi), η (eta), λ (lambda), γ (gamma), β (beta), φ (phi), ζ (zeta)\n\nRepresentasi visual model jalur menggunakan diagram jalur (path diagram)\nMenggambarkan hubungan antar-variabel dengan menggunakan diagram jalur\nScript lavaan untuk spesifikasi model jalur"
   },
   {
     "objectID": "slides/bagian-3.html#analisis-jalur",
@@ -802,42 +802,42 @@
     "href": "slides/bagian-5.html#menguji-ketepatan-model",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Menguji ketepatan model",
-    "text": "Menguji ketepatan model\n\nUmumnya peneliti ingin mendapatkan 3 informasi\n\nChi-square sebagai global fit measure. Chi-square menguji perbedaan antara model-implied dengan sample covariance matrix. Apabila p-value dari Chi-square ≥ α (dengan α=0.05), maka tidak ada perbedaan antara keduanya  data mendukung model\np-value dari factor loading untuk setiap variabel dalam model.\nBesar dan arah factor loading. Besar factor loading memberikan informasi mengenai magnitude dan kontribusi variabel tersebut dalam menjelaskan variabel lainnya. Sedangkan arah factor loading (positif/negatif) memberikan informasi mengenai arah hubungan"
+    "text": "Menguji ketepatan model\n\nUmumnya peneliti ingin mendapatkan 3 informasi\n\nχ² sebagai global fit measure. χ² menguji perbedaan antara model-implied* dengan sample covariance matrix.\nApabila p-value dari χ² ≥ α (dengan α=0.05), maka tidak ada perbedaan antara keduanya  artinya, data mendukung model\np-value dari factor loading untuk setiap variabel dalam model\nBesar dan arah factor loading - besar factor loading memberikan informasi mengenai magnitude dan kontribusi variabel tersebut dalam menjelaskan variabel lainnya. Sedangkan arah factor loading (positif/negatif) memberikan informasi mengenai arah hubungan."
   },
   {
     "objectID": "slides/bagian-5.html#menguji-ketepatan-model-chi-square-χ²",
     "href": "slides/bagian-5.html#menguji-ketepatan-model-chi-square-χ²",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Menguji ketepatan model: Chi-square (χ²)",
-    "text": "Menguji ketepatan model: Chi-square (χ²)\n\n\n\nDihitung dengan cara membandingkan model yang dihipotesiskan (implied model) dengan saturated model (model dengan fit sempurna — semua parameter dibebaskan)\n\nIndeks inkremental seperti CFI dan NFI-lah yang membandingkan implied model dengan baseline/null model (model tanpa jalur sama sekali)\n\nSelain χ², kita bisa menggunakan alternative fit indices yang terdiri dari\n\nIncremental index\nParsimony index\nAbsolute (standalone) index"
+    "text": "Menguji ketepatan model: Chi-square (χ²)\n\n\n\nDihitung dengan cara membandingkan model yang dihipotesiskan (implied model) dengan saturated model (model dengan fit sempurna, yang mana semua parameter dibebaskan tanpa constraint)\n\nIndeks inkremental seperti CFI dan NFI-lah yang membandingkan implied model dengan baseline/null model (model tanpa jalur sama sekali)\n\nUmumnya, model dengan jumlah sampel yang besar akan memberikan hasil uji χ² yang signifikan, tetapi uji χ² yang signifikan ini tidak boleh diabaikan begitu saja❗\nSelain χ², kita bisa menggunakan alternative fit indices yang terdiri dari\n\nIncremental index\nParsimony index\nAbsolute (standalone) index"
   },
   {
     "objectID": "slides/bagian-5.html#incremental-comparativerelative-index",
     "href": "slides/bagian-5.html#incremental-comparativerelative-index",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Incremental (comparative/relative) index",
-    "text": "Incremental (comparative/relative) index\n\nDidapatkan dengan membandingkan implied model dengan baseline model, meliputi\n\nComparative Fit Index  mendekati 1 = closer fit\nNormed Fit Index  mendekati 1 = better fit\nParsimonious Normed Fit Index  NFI yang mempertimbangkan parsimony model, mendekati 1 = better fit\nIncremental Fit Index/Bollen’s Nonnormed Fit Index  mendekati 1 = better fit\nTucker Lewis Index/Bentler-Bonnet Non-Normed Fit Index  mendekati 1 = better fit"
+    "text": "Incremental (comparative/relative) index\n\nDidapatkan dengan membandingkan implied model dengan baseline model, meliputi\n\nComparative Fit Index  mendekati 1 = closer fit\nNormed Fit Index  mendekati 1 = better fit\nIncremental Fit Index/Bollen’s Nonnormed Fit Index  mendekati 1 = better fit\nTucker Lewis Index/Bentler-Bonnet Non-Normed Fit Index  mendekati 1 = better fit"
   },
   {
-    "objectID": "slides/bagian-5.html#parsimony-index-1",
-    "href": "slides/bagian-5.html#parsimony-index-1",
+    "objectID": "slides/bagian-5.html#parsimony-index",
+    "href": "slides/bagian-5.html#parsimony-index",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
-    "section": "Parsimony index 1️⃣",
-    "text": "Parsimony index 1️⃣\n\nIndeks ini secara khusus memberikan pinalti pada kompleksitas model\nIndeks-indeksnya meliputi\n\nExpected Cross Validation Index  digunakan untuk membandingkan dua model atau lebih. Nilai yang lebih kecil menunjukkan model yang lebih baik\nInformation-Theoretic Criterion  meliputi AIC, BIC, dan SABIC. Nilai yang kecil menunjukkan model yang lebih baik\nNoncentrality Parameter-based Index  mendekati 1 = better fit\nMcDonald’s Noncentrality Index  mendekati 1 = better fit"
+    "section": "Parsimony index",
+    "text": "Parsimony index\n\nIndeks ini secara khusus memberikan pinalti pada kompleksitas model, yang meliputi:\nExpected Cross Validation Index  digunakan untuk membandingkan dua model atau lebih. Nilai yang lebih kecil menunjukkan model yang lebih baik\nInformation-Theoretic Criterion  meliputi AIC, BIC, dan SABIC. Nilai yang kecil menunjukkan model yang lebih baik\nNoncentrality Parameter-based Index  mendekati 1 = better fit\nMcDonald’s Noncentrality Index  mendekati 1 = better fit\nParsimonious Normed Fit Index  NFI yang mempertimbangkan parsimony model, mendekati 1 = better fit\nParsimony Goodness of Fit Index  mendekati 1 = better fit"
   },
   {
-    "objectID": "slides/bagian-5.html#parsimony-index-2",
-    "href": "slides/bagian-5.html#parsimony-index-2",
+    "objectID": "slides/bagian-5.html#absolute-index-1",
+    "href": "slides/bagian-5.html#absolute-index-1",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
-    "section": "Parsimony index 2️⃣",
-    "text": "Parsimony index 2️⃣\n\nRoot Mean Square Error of Approximation (RMSEA)  merupakan estimasi seberapa besar approximation error per degree of freedom yang diperkirakan terjadi di populasi — close fit ketika nilainya &lt; 0.05, acceptable fit ketika 0.05 – 0.08, poor fit ketika &gt; 0.10\n\nP-value dapat digunakan untuk menguji H0: RMSEA ≤ 0.05 (close fit)\nOleh karena itu, gagal menolak H0 (p &gt; 0.05) menunjukkan bahwa model “close-fitting”\nRMSEA sangat dipengaruhi oleh kompleksitas model dan sample size, dan dapat menunjukkan misfiting bahkan untuk kesalahan spesifikasi yang kecil ketika sampelnya besar\n\nStandardized Root Mean Square Residual (SRMR)  akar kuadrat dari rata-rata kuadrat selisih antara observed dan model-implied correlation matrix, nilai &lt; 0.08 menunjukkan acceptable fit\n\nSRMR (vs. RMSEA) relatif kurang dipengaruhi oleh sample size dan secara langsung mencerminkan selisih rata-rata antara observed dan model-implied correlation matrix\nHu & Bentler (1999) merekomendasikan melaporkan keduanya (dual cutoff): CFI ≥ 0.95 dan SRMR ≤ 0.08"
+    "section": "Absolute index 1️⃣",
+    "text": "Absolute index 1️⃣\n\nIndeks ini dihitung tanpa melakukan perbandingan dengan baseline, yang meliputi:\nRoot Mean Square Error of Approximation (RMSEA)  merupakan estimasi seberapa besar approximation error per degree of freedom yang diperkirakan terjadi di populasi — close fit ketika nilainya &lt; 0.05, acceptable fit ketika 0.05 – 0.08, poor fit ketika &gt; 0.10\n\np-value dapat digunakan untuk menguji H0: RMSEA ≤ 0.05 (close fit)\nOleh karena itu, gagal menolak H0 (p &gt; 0.05) menunjukkan bahwa model “close-fitting”\nRMSEA sangat dipengaruhi oleh kompleksitas model dan sample size, dan dapat menunjukkan misfiting bahkan untuk kesalahan spesifikasi yang kecil ketika sampelnya besar\n\nStandardized Root Mean Square Residual (SRMR)  akar kuadrat dari rata-rata kuadrat selisih antara observed dan model-implied correlation matrix, nilai &lt; 0.08 menunjukkan acceptable fit\n\nSRMR (vs. RMSEA) relatif kurang dipengaruhi oleh sample size dan secara langsung mencerminkan selisih rata-rata antara observed dan model-implied correlation matrix\nHu & Bentler (1999) merekomendasikan melaporkan keduanya (dual cutoff): CFI ≥ 0.95 dan SRMR ≤ 0.08"
   },
   {
-    "objectID": "slides/bagian-5.html#absolute-index",
-    "href": "slides/bagian-5.html#absolute-index",
+    "objectID": "slides/bagian-5.html#absolute-index-2",
+    "href": "slides/bagian-5.html#absolute-index-2",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
-    "section": "Absolute index",
-    "text": "Absolute index\n\nIndeks ini dihitung tanpa melakukan perbandingan dengan baseline\nMeliputi\n\nChi-square (χ²)/df ratio\nGoodness of Fit Index  mendekati 1 = better fit\nAdjusted Goodness of Fit Index  merupakan parsimony adjustment dari GFI, mendekati 1 = better fit\nParsimony Goodness of Fit Index  mendekati 1 = better fit\nHoelter’s Critical n  nilainya sebaiknya &gt; 200\nStandardized Root Mean Square Residual (SRMR/RMR)  nilai &lt; 0.08 menunjukkan acceptable fit (konsisten dengan kriteria pada parsimony index di atas)"
+    "section": "Absolute index 2️⃣",
+    "text": "Absolute index 2️⃣\n\nχ²/df ratio\nGoodness of Fit Index  mendekati 1 = better fit\nAdjusted Goodness of Fit Index  merupakan parsimony adjustment dari GFI, mendekati 1 = better fit\nHoelter’s Critical n  nilainya sebaiknya &gt; 200"
   },
   {
     "objectID": "slides/bagian-5.html#global-vs.-local-fit",
@@ -858,11 +858,11 @@
     "href": "slides/bagian-5.html#statistical-power",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Statistical power",
-    "text": "Statistical power\n\nStatistical power dalam pengujian hipotesis dalam SEM  peluang menolak H0 apabila H0 salah (power = 1 − β)\n\nPeluang peneliti secara tepat menyimpulkan bahwa ada perbedaan antara implied model dengan observed model ketika memang benar-benar ada perbedaan diantara keduanya\nPower yang lebih spesifik dalam konteks SEM adalah peluang peneliti secara tepat menyimpulkan bahwa suatu koefisien (misalnya koefisien jalur struktural) berbeda dari nol, ketika memang benar-benar berbeda dari nol di populasi.\n\nStatistical power ditentukan oleh\n\ntrue population model (yang kita tidak mungkin tahu, karena sifatnya selalu unknown parameter)  sehingga untuk mengestimasi jumlah sampel, kita asumsikan bahwa model memang “tepat” menggambarkan data\nprobabilitas melakukan kesalahan tipe 1 (α)\ndegree of freedom model\njumlah sampel"
+    "text": "Statistical power\n\nStatistical power dalam pengujian hipotesis dalam SEM  peluang menolak H0 apabila H0 salah (power = 1 − β)\n\nPower di level model (global)  Apakah sampel cukup besar untuk mendeteksi bahwa model gagal memenuhi standar close fit (RMSEA ≥ 0.08), jika standar close fit yang ingin dipertahankan adalah RMSEA ≤ 0.05?  H0: RMSEA = 0.05, H1: RMSEA = 0.08\nPower di level jalur (lokal)  Apakah sampel cukup besar untuk mendeteksi bahwa koefisien jalur tertentu (misalnya, γ) secara signifikan berbeda dari nol, berdasarkan perbandingan model dengan dan tanpa koefisien tersebut?  H0: γ = 0, H1: γ ≠ 0\nIntinya: di level global kita berharap gagal menolak H0 (model dianggap fit), sedangkan di level jalur kita berharap berhasil menolak H0 (koefisien jalur signifikan)\n\nStatistical power ditentukan oleh\n\ntrue population model (yang kita tidak mungkin tahu, karena sifatnya selalu unknown parameter)  sehingga untuk mengestimasi jumlah sampel, kita asumsikan bahwa model memang “tepat” menggambarkan data\nprobabilitas melakukan kesalahan tipe 1 (α)\ndegree of freedom model\njumlah sampel"
   },
   {
-    "objectID": "slides/bagian-5.html#mengestimasi-jumlah-sampel-semtools-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206272616e647320722d70726f6a656374203e7d7d",
-    "href": "slides/bagian-5.html#mengestimasi-jumlah-sampel-semtools-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206272616e647320722d70726f6a656374203e7d7d",
+    "objectID": "slides/bagian-5.html#mengestimasi-jumlah-sampel-semtools",
+    "href": "slides/bagian-5.html#mengestimasi-jumlah-sampel-semtools",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Mengestimasi jumlah sampel (semTools )",
     "text": "Mengestimasi jumlah sampel (semTools )\n\n\n\n\n\n\n\n\n\nsemTools::findRMSEAsamplesize(\n  rmsea0 = 0.05,  # RMSEA di bawah H0 (batas close fit)\n  rmseaA = 0.08,  # RMSEA sesungguhnya (true model, acceptable fit)\n  df = 4,         # df model yang dihipotesiskan\n  power = 0.90,   # power yang diinginkan (1 - β)\n  alpha = 0.05    # probabilitas kesalahan tipe 1 (α)\n)\n\n\n\n\n\n\n\nPeringatan\n\n\nPendekatan findRMSEAsamplesize dengan semTools di atas menguji kecocokan model secara global, yaitu apakah model kita secara keseluruhan cukup baik merepresentasikan data, dengan membandingkan dua nilai RMSEA (misalnya, 0.05 vs 0.08), tanpa memperhatikan parameter spesifik dalam model.\n\n\n\n\n\n\n\n\n\nDemonstrasi power analysis dengan PAMLj\n\n\nA priori power analysis dengan mempertimbangkan parameter spesifik dalam model dapat dilakukan dengan module PAMLj. Unduh demonstrasinya di sini."
