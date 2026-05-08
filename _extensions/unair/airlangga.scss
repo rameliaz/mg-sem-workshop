@@ -40,6 +40,15 @@ $code-color: $unair-blue;
   padding-top: 0 !important;
 }
 
+// Create headroom above h2 on regular slides so the logo clears the heading.
+// Needed because center:false places content at y=0, leaving no natural margin
+// above the heading for the logo (unlike center:true which pads automatically).
+// Value: logo starts at top:10px, rendered height ~60px → bottom ~70px.
+// 45px extra padding puts the heading at ~85px, giving ~15px clearance.
+.reveal .slides section:not(.title-slide):not([data-background-color]) {
+  padding-top: 45px;
+}
+
 // Move logo to top-left for section divider slides
 .reveal section[data-background-color] .slide-logo {
   left: 15px !important;

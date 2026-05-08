@@ -753,7 +753,14 @@
     "href": "slides/bagian-5.html#identifikasi-model",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Identifikasi model",
-    "text": "Identifikasi model\n\nModel dapat diidentifikasi apabila degree of freedom (df) ≥ 0\nApabila df = 0, maka model tsb adalah saturated model atau just-identified model\n\nJumlah ‘informasi yang diketahui’ dan ‘tidak diketahui’ sama persis\nTidak bisa difalsifikasi, hampir ‘selalu tepat’, tetapi ‘selalu salah’\n\nApabila df bernilai negatif, maka model tsb under-identified karena jumlah parameter jalur yang harus diestimasi lebih banyak daripada jumlah nilai unik (non-redundant information) di variance-covariance matrix\n\nLebih banyak ‘informasi yang tidak diketahui’ daripada yang ‘diketahui’\nModel ‘misterius’ dan ‘ambisius’😄\n\nModel yang dapat diidentifikasi adalah over-identified model dimana jumlah parameter variance-covariance matrix lebih banyak daripada jumlah parameter jalur yang diestimasi (sehingga df ≥ 1)\n\nLebih banyak ‘informasi yang diketahui’ daripada yang ‘tidak diketahui’\n\nDegree of freedom  dihitung dengan mengurangi jumlah nilai unik dalam variance-covariance matrix dengan jumlah parameter jalur yang hendak diestimasi"
+    "text": "Identifikasi model\n\nModel dapat diidentifikasi apabila degree of freedom (df) ≥ 0\nApabila df = 0, maka model tsb adalah saturated model atau just-identified model\n\nJumlah ‘informasi yang diketahui’ dan ‘tidak diketahui’ sama persis\nTidak bisa difalsifikasi, hampir ‘selalu tepat’, tetapi ‘selalu salah’\n\nApabila df bernilai negatif, maka model tsb under-identified karena jumlah parameter jalur yang harus diestimasi lebih banyak daripada jumlah nilai unik (non-redundant information) di variance-covariance matrix\n\nLebih banyak ‘informasi yang tidak diketahui’ daripada yang ‘diketahui’\nModel ‘misterius’ dan ‘ambisius’😄"
+  },
+  {
+    "objectID": "slides/bagian-5.html#identifikasi-model-1",
+    "href": "slides/bagian-5.html#identifikasi-model-1",
+    "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
+    "section": "Identifikasi model",
+    "text": "Identifikasi model\n\nModel yang dapat diidentifikasi adalah over-identified model dimana jumlah parameter variance-covariance matrix lebih banyak daripada jumlah parameter jalur yang diestimasi (sehingga df ≥ 1)\n\nLebih banyak ‘informasi yang diketahui’ daripada yang ‘tidak diketahui’\n\nDegree of freedom  dihitung dengan mengurangi jumlah nilai unik dalam variance-covariance matrix dengan jumlah parameter jalur yang hendak diestimasi"
   },
   {
     "objectID": "slides/bagian-5.html#over-identified-model",
@@ -858,7 +865,7 @@
     "href": "slides/bagian-5.html#statistical-power",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Statistical power",
-    "text": "Statistical power\n\nStatistical power dalam pengujian hipotesis dalam SEM  peluang menolak H0 apabila H0 salah (power = 1 − β)\n\nPower di level model (global)  Apakah sampel cukup besar untuk mendeteksi bahwa model gagal memenuhi standar close fit (RMSEA ≥ 0.08), jika standar close fit yang ingin dipertahankan adalah RMSEA ≤ 0.05?  H0: RMSEA = 0.05, H1: RMSEA = 0.08\nPower di level jalur (lokal)  Apakah sampel cukup besar untuk mendeteksi bahwa koefisien jalur tertentu (misalnya, γ) secara signifikan berbeda dari nol, berdasarkan perbandingan model dengan dan tanpa koefisien tersebut?  H0: γ = 0, H1: γ ≠ 0\nIntinya: di level model kita berharap gagal menolak H0 (model dianggap fit), sedangkan di level jalur kita berharap berhasil menolak H0 (koefisien jalur signifikan)"
+    "text": "Statistical power\n\nStatistical power dalam pengujian hipotesis dalam SEM  peluang menolak H0 apabila H0 salah (power = 1 − β)\n\nPower di level model (global)  Apakah sampel cukup besar untuk mendeteksi bahwa model gagal memenuhi standar poor fit (RMSEA ≥ 0.08), jika standar close fit yang ingin dipertahankan adalah RMSEA ≤ 0.05?  H0: RMSEA = 0.05, H1: RMSEA = 0.08\nPower di level jalur (lokal)  Apakah sampel cukup besar untuk mendeteksi bahwa koefisien jalur tertentu (misalnya, γ) secara signifikan berbeda dari nol, berdasarkan perbandingan model dengan dan tanpa koefisien tersebut?  H0: γ = 0, H1: γ ≠ 0\nIntinya: di level model kita berharap gagal menolak H0 (model dianggap fit), sedangkan di level jalur kita berharap berhasil menolak H0 (koefisien jalur signifikan)"
   },
   {
     "objectID": "slides/bagian-5.html#statistical-power-1",

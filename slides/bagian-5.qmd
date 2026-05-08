@@ -100,6 +100,12 @@ Setiap modifikasi **harus dijustifikasi secara teori**, bukan semata-mata didoro
   - Lebih banyak **'informasi yang tidak diketahui'** daripada yang **'diketahui'**
   - Model '*misterius*' dan '*ambisius*'😄
 
+:::
+
+## Identifikasi model
+
+::: {.incremental}
+
 * Model yang dapat diidentifikasi adalah *over-identified model* dimana **jumlah parameter *variance-covariance matrix* lebih banyak daripada jumlah parameter jalur yang diestimasi** (sehingga *df* ≥ 1)
   - Lebih banyak **'informasi yang diketahui'** daripada yang **'tidak diketahui'**
 
@@ -232,6 +238,7 @@ Setiap modifikasi **harus dijustifikasi secara teori**, bukan semata-mata didoro
 
 ::: {.columns}
 ::: {.column width="60%"}
+::: {.incremental}
 
 * Dihitung dengan cara membandingkan **model yang dihipotesiskan (*implied model*)** dengan ***saturated model*** (model dengan *fit* sempurna, yang mana semua parameter dibebaskan tanpa *constraint*)
   - *Indeks inkremental* seperti CFI dan NFI-lah yang membandingkan *implied model* dengan *baseline*/*null model* (model tanpa jalur sama sekali)
@@ -240,6 +247,7 @@ Setiap modifikasi **harus dijustifikasi secara teori**, bukan semata-mata didoro
 
 * Selain χ², kita bisa menggunakan *alternative fit indices* yang terdiri atas: *Incremental index*, *Parsimony index*, dan *Absolute (standalone) index*.
 
+:::
 :::
 ::: {.column width="40%"}
 
@@ -330,7 +338,7 @@ Indeks ini dihitung tanpa melakukan perbandingan dengan *baseline*, yang meliput
 ::: {.incremental}
 
 * *Statistical power* dalam pengujian hipotesis dalam SEM <i class="fa-solid fa-circle-arrow-right"></i> peluang **menolak *H*~0~** apabila *H*~0~ **salah** (power = 1 − β)
-  - *Power* di **level model (global)** <i class="fa-solid fa-circle-arrow-right"></i> Apakah sampel cukup besar untuk mendeteksi bahwa model gagal memenuhi standar *close fit* (RMSEA ≥ 0.08), jika standar *close fit* yang ingin dipertahankan adalah RMSEA ≤ 0.05? <i class="fa-solid fa-circle-arrow-right"></i> **H~0~: RMSEA = 0.05, H~1~: RMSEA = 0.08**
+  - *Power* di **level model (global)** <i class="fa-solid fa-circle-arrow-right"></i> Apakah sampel cukup besar untuk mendeteksi bahwa model gagal memenuhi standar *poor fit* (RMSEA ≥ 0.08), jika standar *close fit* yang ingin dipertahankan adalah RMSEA ≤ 0.05? <i class="fa-solid fa-circle-arrow-right"></i> **H~0~: RMSEA = 0.05, H~1~: RMSEA = 0.08**
   - *Power* di **level jalur (lokal)** <i class="fa-solid fa-circle-arrow-right"></i> Apakah sampel cukup besar untuk mendeteksi bahwa koefisien jalur tertentu (misalnya, γ) secara signifikan berbeda dari nol, berdasarkan perbandingan model dengan dan tanpa koefisien tersebut? <i class="fa-solid fa-circle-arrow-right"></i> **H~0~: γ = 0, H~1~: γ ≠ 0**
   - Intinya: di level model kita berharap **gagal menolak** H~0~ (model dianggap *fit*), sedangkan di level jalur kita berharap **berhasil menolak** H~0~ (koefisien jalur signifikan)
 

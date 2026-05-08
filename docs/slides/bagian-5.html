@@ -99,7 +99,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-7e8b0591f6dfdbe15e0c3349355bdcd8.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-24f44515a16433b8b61c79790062873e.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -292,11 +292,16 @@ Rizqy Amelia Zein
 <li class="fragment">Lebih banyak <strong>‘informasi yang tidak diketahui’</strong> daripada yang <strong>‘diketahui’</strong></li>
 <li class="fragment">Model ‘<em>misterius</em>’ dan ‘<em>ambisius</em>’😄</li>
 </ul></li>
-<li class="fragment"><p>Model yang dapat diidentifikasi adalah <em>over-identified model</em> dimana <strong>jumlah parameter <em>variance-covariance matrix</em> lebih banyak daripada jumlah parameter jalur yang diestimasi</strong> (sehingga <em>df</em> ≥ 1)</p>
+</ul>
+</section>
+<section id="identifikasi-model-1" class="slide level2">
+<h2>Identifikasi model</h2>
+<ul>
+<li class="fragment">Model yang dapat diidentifikasi adalah <em>over-identified model</em> dimana <strong>jumlah parameter <em>variance-covariance matrix</em> lebih banyak daripada jumlah parameter jalur yang diestimasi</strong> (sehingga <em>df</em> ≥ 1)
 <ul>
 <li class="fragment">Lebih banyak <strong>‘informasi yang diketahui’</strong> daripada yang <strong>‘tidak diketahui’</strong></li>
 </ul></li>
-<li class="fragment"><p><em>Degree of freedom</em> <i class="fa-solid fa-circle-arrow-right"></i> dihitung dengan mengurangi <strong>jumlah nilai unik</strong> dalam <em>variance-covariance matrix</em> dengan <strong>jumlah parameter jalur</strong> yang hendak diestimasi</p></li>
+<li class="fragment"><em>Degree of freedom</em> <i class="fa-solid fa-circle-arrow-right"></i> dihitung dengan mengurangi <strong>jumlah nilai unik</strong> dalam <em>variance-covariance matrix</em> dengan <strong>jumlah parameter jalur</strong> yang hendak diestimasi</li>
 </ul>
 </section>
 <section id="over-identified-model" class="slide level2">
@@ -409,12 +414,12 @@ Rizqy Amelia Zein
 <div class="columns">
 <div class="column" style="width:60%;">
 <ul>
-<li><p>Dihitung dengan cara membandingkan <strong>model yang dihipotesiskan (<em>implied model</em>)</strong> dengan <strong><em>saturated model</em></strong> (model dengan <em>fit</em> sempurna, yang mana semua parameter dibebaskan tanpa <em>constraint</em>)</p>
+<li class="fragment"><p>Dihitung dengan cara membandingkan <strong>model yang dihipotesiskan (<em>implied model</em>)</strong> dengan <strong><em>saturated model</em></strong> (model dengan <em>fit</em> sempurna, yang mana semua parameter dibebaskan tanpa <em>constraint</em>)</p>
 <ul>
-<li><em>Indeks inkremental</em> seperti CFI dan NFI-lah yang membandingkan <em>implied model</em> dengan <em>baseline</em>/<em>null model</em> (model tanpa jalur sama sekali)</li>
+<li class="fragment"><em>Indeks inkremental</em> seperti CFI dan NFI-lah yang membandingkan <em>implied model</em> dengan <em>baseline</em>/<em>null model</em> (model tanpa jalur sama sekali)</li>
 </ul></li>
-<li><p>Umumnya, model dengan jumlah sampel yang besar akan memberikan hasil uji χ² yang signifikan, tetapi <strong>uji χ² yang signifikan ini tidak boleh diabaikan</strong> begitu saja❗</p></li>
-<li><p>Selain χ², kita bisa menggunakan <em>alternative fit indices</em> yang terdiri atas: <em>Incremental index</em>, <em>Parsimony index</em>, dan <em>Absolute (standalone) index</em>.</p></li>
+<li class="fragment"><p>Umumnya, model dengan jumlah sampel yang besar akan memberikan hasil uji χ² yang signifikan, tetapi <strong>uji χ² yang signifikan ini tidak boleh diabaikan</strong> begitu saja❗</p></li>
+<li class="fragment"><p>Selain χ², kita bisa menggunakan <em>alternative fit indices</em> yang terdiri atas: <em>Incremental index</em>, <em>Parsimony index</em>, dan <em>Absolute (standalone) index</em>.</p></li>
 </ul>
 </div><div class="column" style="width:40%;">
 <p><img data-src="https://media.giphy.com/media/xT0xeuOy2Fcl9vDGiA/giphy.gif"></p>
@@ -500,7 +505,7 @@ Rizqy Amelia Zein
 <ul>
 <li class="fragment"><em>Statistical power</em> dalam pengujian hipotesis dalam SEM <i class="fa-solid fa-circle-arrow-right"></i> peluang <strong>menolak <em>H</em><sub>0</sub></strong> apabila <em>H</em><sub>0</sub> <strong>salah</strong> (power = 1 − β)
 <ul>
-<li class="fragment"><em>Power</em> di <strong>level model (global)</strong> <i class="fa-solid fa-circle-arrow-right"></i> Apakah sampel cukup besar untuk mendeteksi bahwa model gagal memenuhi standar <em>close fit</em> (RMSEA ≥ 0.08), jika standar <em>close fit</em> yang ingin dipertahankan adalah RMSEA ≤ 0.05? <i class="fa-solid fa-circle-arrow-right"></i> <strong>H<sub>0</sub>: RMSEA = 0.05, H<sub>1</sub>: RMSEA = 0.08</strong></li>
+<li class="fragment"><em>Power</em> di <strong>level model (global)</strong> <i class="fa-solid fa-circle-arrow-right"></i> Apakah sampel cukup besar untuk mendeteksi bahwa model gagal memenuhi standar <em>poor fit</em> (RMSEA ≥ 0.08), jika standar <em>close fit</em> yang ingin dipertahankan adalah RMSEA ≤ 0.05? <i class="fa-solid fa-circle-arrow-right"></i> <strong>H<sub>0</sub>: RMSEA = 0.05, H<sub>1</sub>: RMSEA = 0.08</strong></li>
 <li class="fragment"><em>Power</em> di <strong>level jalur (lokal)</strong> <i class="fa-solid fa-circle-arrow-right"></i> Apakah sampel cukup besar untuk mendeteksi bahwa koefisien jalur tertentu (misalnya, γ) secara signifikan berbeda dari nol, berdasarkan perbandingan model dengan dan tanpa koefisien tersebut? <i class="fa-solid fa-circle-arrow-right"></i> <strong>H<sub>0</sub>: γ = 0, H<sub>1</sub>: γ ≠ 0</strong></li>
 <li class="fragment">Intinya: di level model kita berharap <strong>gagal menolak</strong> H<sub>0</sub> (model dianggap <em>fit</em>), sedangkan di level jalur kita berharap <strong>berhasil menolak</strong> H<sub>0</sub> (koefisien jalur signifikan)</li>
 </ul></li>
