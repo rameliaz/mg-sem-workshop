@@ -260,11 +260,11 @@ Rizqy Amelia Zein
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
-<li class="fragment"><p>Spesifikasi model</p></li>
-<li class="fragment"><p>Identifikasi model</p></li>
-<li class="fragment"><p>Estimasi model</p></li>
-<li class="fragment"><p>Menguji model</p></li>
-<li class="fragment"><p>Memodifikasi model</p></li>
+<li><p>Spesifikasi model</p></li>
+<li><p>Identifikasi model</p></li>
+<li><p>Estimasi model</p></li>
+<li><p>Menguji model</p></li>
+<li><p>Memodifikasi model</p></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <p><img data-src="https://media.giphy.com/media/3o752ogcifnC3MECt2/giphy.gif"></p>
@@ -358,12 +358,12 @@ Rizqy Amelia Zein
 </ul>
 </div></div>
 </section>
-<section id="kesimpulan" class="slide level2">
-<h2>Kesimpulan 🏫</h2>
+<section id="berapa-banyak-item-dibutuhkan-agar-model-diidentifikasi" class="slide level2">
+<h2>Berapa banyak <em>item</em> dibutuhkan agar model diidentifikasi?</h2>
 <ul>
-<li><p>Untuk satu faktor/variabel laten, kita perlu <strong>sedikitnya 4 variabel indikator</strong> karena apabila ≤3, maka model akan <em>just-identified</em> atau <em>under-identified</em></p></li>
-<li><p>Tapi meskipun kita punya 4 variabel indikator untuk 1 variabel laten, kita masih mungkin memiliki model yang <em>just-identified</em>, ketika <em>error</em>nya berkorelasi</p></li>
-<li><p>Apakah bisa 1 variabel laten diukur oleh 1 <em>observed variable</em>?</p></li>
+<li class="fragment"><p>Untuk satu faktor/variabel laten, kita perlu <strong>sedikitnya 4 variabel indikator</strong> karena apabila ≤3, maka model akan <em>just-identified</em> atau <em>under-identified</em></p></li>
+<li class="fragment"><p>Tapi meskipun kita punya 4 variabel indikator untuk 1 variabel laten, kita masih mungkin memiliki model yang <em>just-identified</em>, ketika <em>error</em>nya berkorelasi</p></li>
+<li class="fragment"><p>Apakah bisa 1 variabel laten diukur oleh 1 <em>observed variable</em>?</p></li>
 </ul>
 </section>
 <section id="variabel-laten-dengan-1-indikator" class="slide level2">
@@ -402,10 +402,10 @@ Rizqy Amelia Zein
 <ul>
 <li class="fragment">Umumnya peneliti ingin mendapatkan 3 informasi
 <ul>
-<li class="fragment"><p><strong><em>χ² sebagai </em>global fit measure</strong><em>. χ² menguji perbedaan antara </em>model-implied* dengan <em>sample covariance matrix</em>.</p></li>
-<li class="fragment"><p>Apabila <em>p-value</em> dari χ² ≥ α (dengan α=0.05), maka <strong>tidak ada perbedaan</strong> antara keduanya <i class="fa-solid fa-circle-arrow-right"></i> artinya, <strong>data mendukung model</strong></p></li>
+<li class="fragment"><p><strong>χ² sebagai <em>global fit measure</em></strong>. χ² menguji perbedaan antara <em>model-implied</em> dengan <em>variance-covariance matrix</em> dari data.</p></li>
+<li class="fragment"><p>Apabila <em>p-value</em> dari χ² ≥ α (dengan α = 0.05), maka <strong>tidak ada perbedaan</strong> antara keduanya <i class="fa-solid fa-circle-arrow-right"></i> interpretasinya, <strong>data mendukung model</strong></p></li>
 <li class="fragment"><p><strong><em>p-value</em> dari <em>factor loading</em></strong> untuk setiap variabel dalam model</p></li>
-<li class="fragment"><p><strong>Besar dan arah <em>factor loading</em></strong> - besar <em>factor loading</em> memberikan informasi mengenai <em>magnitude</em> dan kontribusi variabel tersebut dalam menjelaskan variabel lainnya. Sedangkan arah <em>factor loading</em> (positif/negatif) memberikan informasi mengenai arah hubungan.</p></li>
+<li class="fragment"><p><strong>Besar dan arah <em>factor loading</em></strong>, yang memberikan informasi mengenai <em>magnitude</em> dan kontribusi variabel tersebut dalam menjelaskan variabel lainnya. Sedangkan arah <em>factor loading</em> (positif/negatif) memberikan informasi mengenai arah hubungan.</p></li>
 </ul></li>
 </ul>
 </section>
@@ -414,12 +414,12 @@ Rizqy Amelia Zein
 <div class="columns">
 <div class="column" style="width:60%;">
 <ul>
-<li class="fragment"><p>Dihitung dengan cara membandingkan <strong>model yang dihipotesiskan (<em>implied model</em>)</strong> dengan <strong><em>saturated model</em></strong> (model dengan <em>fit</em> sempurna, yang mana semua parameter dibebaskan tanpa <em>constraint</em>)</p>
+<li class="fragment"><p>Dihitung dengan cara membandingkan <strong>model yang dihipotesiskan (<em>implied model</em>)</strong> dengan <strong><em>saturated model</em></strong> (model dengan <em>fit</em> sempurna, <em>df</em> = 0, yang mana semua parameter dibebaskan tanpa <em>constraint</em>)</p>
 <ul>
-<li class="fragment"><em>Indeks inkremental</em> seperti CFI dan NFI-lah yang membandingkan <em>implied model</em> dengan <em>baseline</em>/<em>null model</em> (model tanpa jalur sama sekali)</li>
+<li class="fragment"><em>Incremental index</em> seperti CFI dan NFI-lah yang membandingkan <em>implied model</em> dengan <em>baseline</em>/<em>null model</em> (model tanpa jalur sama sekali)</li>
 </ul></li>
 <li class="fragment"><p>Umumnya, model dengan jumlah sampel yang besar akan memberikan hasil uji χ² yang signifikan, tetapi <strong>uji χ² yang signifikan ini tidak boleh diabaikan</strong> begitu saja❗</p></li>
-<li class="fragment"><p>Selain χ², kita bisa menggunakan <em>alternative fit indices</em> yang terdiri atas: <em>Incremental index</em>, <em>Parsimony index</em>, dan <em>Absolute (standalone) index</em>.</p></li>
+<li class="fragment"><p>Selain χ², kita bisa mengevaluasi model dengan melihat <em>alternative fit indices</em>: <em>Incremental index</em>, <em>Parsimony index</em>, dan <em>Absolute (standalone) index</em>.</p></li>
 </ul>
 </div><div class="column" style="width:40%;">
 <p><img data-src="https://media.giphy.com/media/xT0xeuOy2Fcl9vDGiA/giphy.gif"></p>
@@ -457,6 +457,11 @@ Rizqy Amelia Zein
 <li>Oleh karena itu, <strong>gagal menolak <em>H</em><sub>0</sub></strong> (<em>p</em> &gt; 0.05) menunjukkan bahwa model “<em>close-fitting</em>”</li>
 <li><code>RMSEA</code> sangat dipengaruhi oleh kompleksitas model dan <em>sample size</em>, dan dapat menunjukkan <em>misfiting</em> bahkan untuk kesalahan spesifikasi yang kecil ketika sampelnya besar</li>
 </ul></li>
+</ul>
+</section>
+<section id="absolute-index-2" class="slide level2">
+<h2><em>Absolute index</em> 2️⃣</h2>
+<ul>
 <li><strong><em>Standardized Root Mean Square Residual</em> (<code>SRMR</code>)</strong> <i class="fa-solid fa-circle-arrow-right"></i> akar kuadrat dari rata-rata kuadrat selisih antara <em>observed</em> dan <em>model-implied correlation matrix</em>, nilai <strong>&lt; 0.08</strong> menunjukkan <em>acceptable fit</em>
 <ul>
 <li><code>SRMR</code> (vs.&nbsp;<code>RMSEA</code>) relatif kurang dipengaruhi oleh <em>sample size</em> dan secara langsung mencerminkan selisih rata-rata antara <em>observed</em> dan <em>model-implied correlation matrix</em></li>
@@ -464,8 +469,8 @@ Rizqy Amelia Zein
 </ul></li>
 </ul>
 </section>
-<section id="absolute-index-2" class="slide level2">
-<h2><em>Absolute index</em> 2️⃣</h2>
+<section id="absolute-index-3" class="slide level2">
+<h2><em>Absolute index</em> 3️⃣</h2>
 <ul>
 <li><p><strong>χ²</strong>/<em>df</em> ratio</p></li>
 <li><p><strong><em>Goodness of Fit Index</em></strong> <i class="fa-solid fa-circle-arrow-right"></i> mendekati 1 = <em>better fit</em></p></li>
@@ -496,7 +501,7 @@ Rizqy Amelia Zein
 <li class="fragment">Ini berkaitan dengan asumsi <em>local independence</em> dalam teori pengukuran psikologi</li>
 <li class="fragment">Artinya, model dapat “diterima” meskipun <em>global fit</em> ditolak <strong>hanya dalam kondisi</strong> ketika asumsi <em>local independence</em> dapat dipertahankan</li>
 <li class="fragment"><code>jamovi</code> bisa menyimpan <em>residual correlation</em> sebagai <em>output</em> yang bisa disimpan - klik <strong><em>Output options</em></strong> <i class="fa-solid fa-circle-arrow-right"></i> <strong><em>covariances and correlations</em></strong> <i class="fa-solid fa-circle-arrow-right"></i> centang <strong><em>Residual</em></strong></li>
-<li class="fragment"><em>Reviewer</em> yang familiar dengan SEM akan selalu menanyakan justifikasi keputusan peneliti untuk mempertahakan model ketika uji χ² nonsignifikan</li>
+<li class="fragment"><em>Reviewer</em> yang familiar dengan SEM akan selalu menanyakan justifikasi keputusan peneliti untuk mempertahakan model ketika uji χ² signifikan</li>
 </ul></li>
 </ul>
 </section>
@@ -526,13 +531,13 @@ Rizqy Amelia Zein
 <section id="mengestimasi-jumlah-sampel-semtools" class="slide level2">
 <h2>Mengestimasi jumlah sampel (<code>semTools</code> <i class="fa-brands fa-r-project"></i>)</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:40%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="libs/over.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
-</div><div class="column" style="width:50%;">
+</div><div class="column" style="width:60%;">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>semTools<span class="sc">::</span><span class="fu">findRMSEAsamplesize</span>(</span>
 <span id="cb1-2"><a></a>  <span class="at">rmsea0 =</span> <span class="fl">0.05</span>,  <span class="co"># RMSEA di bawah H0 (batas close fit)</span></span>
@@ -576,8 +581,7 @@ Rizqy Amelia Zein
 <li class="fragment">2️⃣ langkah menyusun model <a href="https://psycnet.apa.org/record/1989-14190-001">(Anderson &amp; Gerbing, 1988)</a>
 <ul>
 <li class="fragment">Estimasi dulu <em>measurement</em> model</li>
-<li class="fragment">Kemudian baru <em>structural</em> model</li>
-<li class="fragment">…pada dataset yang sama</li>
+<li class="fragment">Kemudian baru <em>structural</em> model… pada dataset yang sama</li>
 </ul></li>
 <li class="fragment">4️⃣ langkah menyusun model <a href="https://www.tandfonline.com/doi/abs/10.1207/S15328007SEM0701_02">(Mulaik &amp; Millsap, 2000)</a>
 <ul>
@@ -588,17 +592,20 @@ Rizqy Amelia Zein
 </ul></li>
 </ul>
 </section>
-<section id="apakah-keempat-langkah-bisa-menggunakan-dataset-yang-sama" class="slide level2">
-<h2>Apakah keempat langkah bisa menggunakan dataset yang sama?</h2>
+<section id="apakah-4-langkah-bisa-menggunakan-dataset-yang-sama" class="slide level2">
+<h2>Apakah 4️⃣ langkah bisa menggunakan dataset yang sama?</h2>
 <ul>
 <li class="fragment"><p><strong>Seharusnya, tidak</strong>.</p></li>
-<li class="fragment"><p><strong>Pendekatan 4️⃣ langkah</strong> idealnya dieksekusi dengan <strong>tiga dataset yang berbeda</strong> untuk menghindari <a href="https://pubmed.ncbi.nlm.nih.gov/16250105/"><em>capitalization on chance</em></a> — karena setiap tahap yang melibatkan respesifikasi atau modifikasi akan “menghabiskan” dataset tersebut <a href="https://pubmed.ncbi.nlm.nih.gov/16250105/">(MacCallum, Roznowski &amp; Necowitz, 1992)</a>:</p>
+<li class="fragment"><p><strong>Pendekatan 4️⃣ langkah</strong> idealnya dieksekusi dengan <strong>3️⃣ dataset yang berbeda</strong> untuk menghindari <a href="https://pubmed.ncbi.nlm.nih.gov/16250105/"><em>capitalization on chance</em></a>, karena setiap tahap yang melibatkan respesifikasi atau modifikasi akan “menghabiskan” dataset tersebut <a href="https://pubmed.ncbi.nlm.nih.gov/16250105/">(MacCallum, Roznowski &amp; Necowitz, 1992)</a>.</p></li>
+</ul>
+</section>
+<section id="apakah-4-langkah-bisa-menggunakan-dataset-yang-sama-1" class="slide level2">
+<h2>Apakah 4️⃣ langkah bisa menggunakan dataset yang sama?</h2>
 <ul>
-<li class="fragment"><p><strong>Langkah 1 (EFA)</strong> <i class="fa-solid fa-circle-arrow-right"></i> <strong>dataset pertama</strong>: mengeksplorasi struktur faktor secara bebas. Langkah ini penting utamanya ketika model melibatkan konstruk yang belum <em>established</em> bukti empiriknya</p></li>
-<li class="fragment"><p><strong>Langkah 2 (CFA)</strong> <i class="fa-solid fa-circle-arrow-right"></i> <strong>dataset kedua</strong>: mengkonfirmasi dan merespesifikasi model pengukuran, memastikan <em>construct validity</em> — hasilnya (<em>df</em>, struktur faktor, indeks <em>fit</em>) menjadi dasar <em>a priori power analysis</em> sebelum pengujian model lengkap</p></li>
-<li class="fragment"><p><strong>Langkah 3–4 (model struktural)</strong> <i class="fa-solid fa-circle-arrow-right"></i> <strong>dataset ketiga</strong>: karena dataset kedua sudah “terpakai” untuk respesifikasi pengukuran, pengujian model struktural (<em>unrestricted</em> lalu <em>restricted</em>) dilakukan pada data yang benar-benar independen</p></li>
-</ul></li>
-<li class="fragment"><p>Dalam praktiknya, apabila hanya tersedia satu dataset, peneliti dapat membaginya secara acak menjadi tiga bagian (tiga <em>holdout sample</em>) — meskipun tentu saja ada risiko mengurangi <em>statistical power</em> di setiap tahapannya</p></li>
+<li class="fragment"><p><strong>Langkah 1️⃣ (EFA)</strong> <i class="fa-solid fa-circle-arrow-right"></i> <strong>dataset pertama</strong>: mengeksplorasi struktur faktor secara bebas. Langkah ini penting utamanya ketika model melibatkan konstruk yang belum <em>established</em> bukti empiriknya</p></li>
+<li class="fragment"><p><strong>Langkah 2️⃣ (CFA)</strong> <i class="fa-solid fa-circle-arrow-right"></i> <strong>dataset kedua</strong>: mengkonfirmasi dan merespesifikasi model pengukuran, memastikan <em>construct validity</em> — hasilnya (<em>df</em>, struktur faktor, indeks <em>fit</em>) menjadi dasar <em>a priori power analysis</em> sebelum pengujian model lengkap</p></li>
+<li class="fragment"><p><strong>Langkah 3️⃣–4️⃣ (model struktural)</strong> <i class="fa-solid fa-circle-arrow-right"></i> <strong>dataset ketiga</strong>: karena dataset kedua sudah “terpakai” untuk respesifikasi pengukuran, pengujian model struktural (<em>unrestricted</em> lalu <em>restricted</em>) dilakukan pada data yang benar-benar independen</p></li>
+<li class="fragment"><p>Dalam praktiknya, apabila hanya tersedia satu dataset, peneliti dapat membaginya <strong>secara acak</strong> menjadi tiga bagian (tiga <em>holdout sample</em>) — meskipun tentu saja ada risiko mengurangi <em>statistical power</em> di setiap tahapannya</p></li>
 </ul>
 </section>
 <section id="mari-kita-renungkan" class="slide level2">

@@ -39,7 +39,7 @@ execute:
 * *Measurement invariance* <i class="fa-solid fa-circle-arrow-right"></i> dua atau lebih kelompok memiliki properti psikometrik yang sama, yaitu variabel laten dalam model pengukuran adalah konstruk yang sama
 
 * Ketika membandingkan model pengukuran di dua atau lebih kelompok yang berbeda, untuk menyimpulkan terjadinya *invariance*, maka peneliti akan menginginkan **perubahan *chi-square*** (Δχ²) yang *p-value*nya **> α** 
-  — Artinya, menambah *constraint invariance* tidak memperburuk *fit* model secara signifikan
+  - Artinya, menambah *constraint invariance* seharusnya tidak memperburuk *fit* model secara signifikan
 
 * Kalau kita berniat melakukan perbandingan performa alat ukur di dua kelompok sampel yang berbeda, maka kita lebih baik menggunakan ***means-covariance matrix*** bukan *variance-covariance matrix* <i class="fa-solid fa-circle-arrow-right"></i> ingat logika *t-test* dan *anova*
 
@@ -93,7 +93,7 @@ execute:
 
 * *Configural*
   - Jenis ini adalah yang paling dasar, yang mengasumsikan bahwa **model memiliki struktur yang sama** di **semua kelompok**
-  - Karena hanya struktur faktor yang sama, sehingga belum ada yang bisa dibandingkan secara bermakna antar kelompok.
+  - Karena hanya struktur faktor (laten) yang sama, sehingga belum ada yang bisa dibandingkan secara bermakna antar kelompok.
   - Oleh karena itu, semua kelompok **harus** memiliki **jumlah faktor/variabel laten** dan **jumlah variabel indikator/*observed* yang sama**
   - **Tidak ada ketentuan** bahwa parameter di dalam model harus setara di semua kelompok <i class="fa-solid fa-circle-arrow-right"></i> tidak ada *between-group comparison*
   - Untuk mengeksekusi *configural invariance* tinggal menambahkan `grouping variable` di `jamovi` pada bagian **options**
@@ -122,6 +122,14 @@ execute:
   - **Mengapa *intercept* harus di*constraint* agar setara di semua *item*?** Bayangkan dua termometer mengukur suhu ruangan yang sama (e.g., termometer celcius dan fahrenheit) 
     - Termometer fahrenheit dikalibrasi 32° lebih tinggi dari celcius (*intercept* berbeda), sehingga ketika kedua termometer menunjukkan angka berbeda pada temperatur/suhu yang sama, bukan karena suhunya *substantively* berbeda tetapi karena ***baseline*-nya yang berbeda**
     - Jika *intercept* tidak dibuat setara antar kelompok, perbedaan skor bisa berasal dari perbedaan *baseline*, bukan perbedaan konstruk yang sebenarnya
+
+:::
+
+## Jenis-jenis *measurement invariance* 3️⃣
+
+::: {.incremental}
+
+* *Strong*/*scalar*
   - Dengan asumsi *strong invariance* ekuivalensi variabel laten lebih didukung bukti yang kuat
   - Untuk mengeksekusinya di `jamovi`, klik opsi `Multi-group analysis`, tambahkan data pengelompokan di `factor for multi-group analysis` dan centang pilihan `loadings` dan `intercepts` pada `equality constraints`
 
@@ -138,7 +146,7 @@ execute:
 
 :::
 
-## Jenis-jenis *measurement invariance*
+## Jenis-jenis *measurement invariance* 5️⃣
 
 ::: {.incremental}
 
@@ -149,7 +157,7 @@ execute:
 
 * Homogenitas *factor means*
   - Untuk melihat **apakah ada perbedaan *mean* variabel laten** di masing-masing kelompok
-  - Prosedur yang sama dengan `anova` atau `t-test`
+  - Prosedur yang sama dengan `anova` atau `t-test`, i.e., membandingkan *mean* antarkelompok
   - Untuk mengeksekusinya klik opsi `Multi-group analysis`, tambahkan data pengelompokan di `factor for multi-group analysis` dan centang pilihan `means` pada `equality constraints`
 
 :::

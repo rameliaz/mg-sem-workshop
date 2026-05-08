@@ -173,7 +173,10 @@ Rizqy Amelia Zein
 <ul>
 <li class="fragment"><p><em>Invariance</em> <i class="fa-solid fa-circle-arrow-right"></i> apakah dalam kondisi di subkelompok yang beragam ketika melakukan pengukuran, alat ukur selalu mengukur atribut ukur yang sama</p></li>
 <li class="fragment"><p><em>Measurement invariance</em> <i class="fa-solid fa-circle-arrow-right"></i> dua atau lebih kelompok memiliki properti psikometrik yang sama, yaitu variabel laten dalam model pengukuran adalah konstruk yang sama</p></li>
-<li class="fragment"><p>Ketika membandingkan model pengukuran di dua atau lebih kelompok yang berbeda, untuk menyimpulkan terjadinya <em>invariance</em>, maka peneliti akan menginginkan <strong>perubahan <em>chi-square</em></strong> (Δχ²) yang <em>p-value</em>nya <strong>&gt; α</strong> — Artinya, menambah <em>constraint invariance</em> tidak memperburuk <em>fit</em> model secara signifikan</p></li>
+<li class="fragment"><p>Ketika membandingkan model pengukuran di dua atau lebih kelompok yang berbeda, untuk menyimpulkan terjadinya <em>invariance</em>, maka peneliti akan menginginkan <strong>perubahan <em>chi-square</em></strong> (Δχ²) yang <em>p-value</em>nya <strong>&gt; α</strong></p>
+<ul>
+<li class="fragment">Artinya, menambah <em>constraint invariance</em> seharusnya tidak memperburuk <em>fit</em> model secara signifikan</li>
+</ul></li>
 <li class="fragment"><p>Kalau kita berniat melakukan perbandingan performa alat ukur di dua kelompok sampel yang berbeda, maka kita lebih baik menggunakan <strong><em>means-covariance matrix</em></strong> bukan <em>variance-covariance matrix</em> <i class="fa-solid fa-circle-arrow-right"></i> ingat logika <em>t-test</em> dan <em>anova</em></p></li>
 </ul>
 </section>
@@ -225,7 +228,7 @@ Rizqy Amelia Zein
 <li class="fragment"><em>Configural</em>
 <ul>
 <li class="fragment">Jenis ini adalah yang paling dasar, yang mengasumsikan bahwa <strong>model memiliki struktur yang sama</strong> di <strong>semua kelompok</strong></li>
-<li class="fragment">Karena hanya struktur faktor yang sama, sehingga belum ada yang bisa dibandingkan secara bermakna antar kelompok.</li>
+<li class="fragment">Karena hanya struktur faktor (laten) yang sama, sehingga belum ada yang bisa dibandingkan secara bermakna antar kelompok.</li>
 <li class="fragment">Oleh karena itu, semua kelompok <strong>harus</strong> memiliki <strong>jumlah faktor/variabel laten</strong> dan <strong>jumlah variabel indikator/<em>observed</em> yang sama</strong></li>
 <li class="fragment"><strong>Tidak ada ketentuan</strong> bahwa parameter di dalam model harus setara di semua kelompok <i class="fa-solid fa-circle-arrow-right"></i> tidak ada <em>between-group comparison</em></li>
 <li class="fragment">Untuk mengeksekusi <em>configural invariance</em> tinggal menambahkan <code>grouping variable</code> di <code>jamovi</code> pada bagian <strong>options</strong></li>
@@ -256,6 +259,14 @@ Rizqy Amelia Zein
 <li class="fragment">Termometer fahrenheit dikalibrasi 32° lebih tinggi dari celcius (<em>intercept</em> berbeda), sehingga ketika kedua termometer menunjukkan angka berbeda pada temperatur/suhu yang sama, bukan karena suhunya <em>substantively</em> berbeda tetapi karena <strong><em>baseline</em>-nya yang berbeda</strong></li>
 <li class="fragment">Jika <em>intercept</em> tidak dibuat setara antar kelompok, perbedaan skor bisa berasal dari perbedaan <em>baseline</em>, bukan perbedaan konstruk yang sebenarnya</li>
 </ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="jenis-jenis-measurement-invariance-3-1" class="slide level2">
+<h2>Jenis-jenis <em>measurement invariance</em> 3️⃣</h2>
+<ul>
+<li class="fragment"><em>Strong</em>/<em>scalar</em>
+<ul>
 <li class="fragment">Dengan asumsi <em>strong invariance</em> ekuivalensi variabel laten lebih didukung bukti yang kuat</li>
 <li class="fragment">Untuk mengeksekusinya di <code>jamovi</code>, klik opsi <code>Multi-group analysis</code>, tambahkan data pengelompokan di <code>factor for multi-group analysis</code> dan centang pilihan <code>loadings</code> dan <code>intercepts</code> pada <code>equality constraints</code></li>
 </ul></li>
@@ -272,8 +283,8 @@ Rizqy Amelia Zein
 </ul></li>
 </ul>
 </section>
-<section id="jenis-jenis-measurement-invariance" class="slide level2">
-<h2>Jenis-jenis <em>measurement invariance</em></h2>
+<section id="jenis-jenis-measurement-invariance-5" class="slide level2">
+<h2>Jenis-jenis <em>measurement invariance</em> 5️⃣</h2>
 <ul>
 <li class="fragment">Homogenitas varians variabel laten
 <ul>
@@ -284,7 +295,7 @@ Rizqy Amelia Zein
 <li class="fragment">Homogenitas <em>factor means</em>
 <ul>
 <li class="fragment">Untuk melihat <strong>apakah ada perbedaan <em>mean</em> variabel laten</strong> di masing-masing kelompok</li>
-<li class="fragment">Prosedur yang sama dengan <code>anova</code> atau <code>t-test</code></li>
+<li class="fragment">Prosedur yang sama dengan <code>anova</code> atau <code>t-test</code>, i.e., membandingkan <em>mean</em> antarkelompok</li>
 <li class="fragment">Untuk mengeksekusinya klik opsi <code>Multi-group analysis</code>, tambahkan data pengelompokan di <code>factor for multi-group analysis</code> dan centang pilihan <code>means</code> pada <code>equality constraints</code></li>
 </ul></li>
 </ul>

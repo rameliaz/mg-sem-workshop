@@ -53,7 +53,6 @@ Setiap modifikasi **harus dijustifikasi secara teori**, bukan semata-mata didoro
 ::: {.columns}
 ::: {.column width="50%"}
 
-::: {.incremental}
 * Spesifikasi model
 
 * Identifikasi model
@@ -65,7 +64,6 @@ Setiap modifikasi **harus dijustifikasi secara teori**, bukan semata-mata didoro
 * Memodifikasi model
 :::
 
-:::
 ::: {.column width="50%"}
 
 ![](https://media.giphy.com/media/3o752ogcifnC3MECt2/giphy.gif)
@@ -177,7 +175,9 @@ Setiap modifikasi **harus dijustifikasi secara teori**, bukan semata-mata didoro
 :::
 
 
-## Kesimpulan 🏫
+## Berapa banyak *item* dibutuhkan agar model diidentifikasi?
+
+::: {.incremental}
 
 * Untuk satu faktor/variabel laten, kita perlu **sedikitnya 4 variabel indikator** karena apabila ≤3, maka model akan *just-identified* atau *under-identified*
 
@@ -185,6 +185,7 @@ Setiap modifikasi **harus dijustifikasi secara teori**, bukan semata-mata didoro
 
 * Apakah bisa 1 variabel laten diukur oleh 1 *observed variable*?
 
+:::
 
 ## Variabel laten dengan 1 indikator
 
@@ -225,12 +226,12 @@ Setiap modifikasi **harus dijustifikasi secara teori**, bukan semata-mata didoro
 ::: {.incremental}
 
 * Umumnya peneliti ingin mendapatkan 3 informasi
-  - ***χ² sebagai *global fit measure***. χ² menguji perbedaan antara *model-implied* dengan *sample covariance matrix*. 
-  - Apabila *p-value* dari χ² ≥ α (dengan α=0.05), maka **tidak ada perbedaan** antara keduanya <i class="fa-solid fa-circle-arrow-right"></i> artinya, **data mendukung model**
+  - **χ² sebagai *global fit measure***. χ² menguji perbedaan antara *model-implied* dengan *variance-covariance matrix* dari data. 
+  - Apabila *p-value* dari χ² ≥ α (dengan α = 0.05), maka **tidak ada perbedaan** antara keduanya <i class="fa-solid fa-circle-arrow-right"></i> interpretasinya, **data mendukung model**
 
   - ***p-value* dari *factor loading*** untuk setiap variabel dalam model
 
-  - **Besar dan arah *factor loading*** - besar *factor loading* memberikan informasi mengenai *magnitude* dan kontribusi variabel tersebut dalam menjelaskan variabel lainnya. Sedangkan arah *factor loading* (positif/negatif) memberikan informasi mengenai arah hubungan.
+  - **Besar dan arah *factor loading***, yang memberikan informasi mengenai *magnitude* dan kontribusi variabel tersebut dalam menjelaskan variabel lainnya. Sedangkan arah *factor loading* (positif/negatif) memberikan informasi mengenai arah hubungan.
 
 :::
 
@@ -240,12 +241,12 @@ Setiap modifikasi **harus dijustifikasi secara teori**, bukan semata-mata didoro
 ::: {.column width="60%"}
 ::: {.incremental}
 
-* Dihitung dengan cara membandingkan **model yang dihipotesiskan (*implied model*)** dengan ***saturated model*** (model dengan *fit* sempurna, yang mana semua parameter dibebaskan tanpa *constraint*)
-  - *Indeks inkremental* seperti CFI dan NFI-lah yang membandingkan *implied model* dengan *baseline*/*null model* (model tanpa jalur sama sekali)
+* Dihitung dengan cara membandingkan **model yang dihipotesiskan (*implied model*)** dengan ***saturated model*** (model dengan *fit* sempurna, *df* = 0, yang mana semua parameter dibebaskan tanpa *constraint*)
+  - *Incremental index* seperti CFI dan NFI-lah yang membandingkan *implied model* dengan *baseline*/*null model* (model tanpa jalur sama sekali) 
 
 * Umumnya, model dengan jumlah sampel yang besar akan memberikan hasil uji χ² yang signifikan, tetapi **uji χ² yang signifikan ini tidak boleh diabaikan** begitu saja❗
 
-* Selain χ², kita bisa menggunakan *alternative fit indices* yang terdiri atas: *Incremental index*, *Parsimony index*, dan *Absolute (standalone) index*.
+* Selain χ², kita bisa mengevaluasi model dengan melihat *alternative fit indices*: *Incremental index*, *Parsimony index*, dan *Absolute (standalone) index*.
 
 :::
 :::
@@ -288,11 +289,14 @@ Indeks ini dihitung tanpa melakukan perbandingan dengan *baseline*, yang meliput
   - *p-value* dapat digunakan untuk menguji *H*~0~: `RMSEA` ≤ 0.05 (*close fit*)
   - Oleh karena itu, **gagal menolak *H*~0~** (*p* > 0.05) menunjukkan bahwa model "*close-fitting*"
   - `RMSEA` sangat dipengaruhi oleh kompleksitas model dan *sample size*, dan dapat menunjukkan *misfiting* bahkan untuk kesalahan spesifikasi yang kecil ketika sampelnya besar
+
+## *Absolute index* 2️⃣
+
 * ***Standardized Root Mean Square Residual* (`SRMR`)** <i class="fa-solid fa-circle-arrow-right"></i> akar kuadrat dari rata-rata kuadrat selisih antara *observed* dan *model-implied correlation matrix*, nilai **< 0.08** menunjukkan *acceptable fit*
   - `SRMR` (vs. `RMSEA`) relatif kurang dipengaruhi oleh *sample size* dan secara langsung mencerminkan selisih rata-rata antara *observed* dan *model-implied correlation matrix*
   - [Hu & Bentler (1999)](https://www.tandfonline.com/doi/abs/10.1080/10705519909540118) merekomendasikan melaporkan **keduanya** (*dual cutoff*): CFI ≥ 0.95 **dan** SRMR ≤ 0.08
 
-## *Absolute index* 2️⃣
+## *Absolute index* 3️⃣ 
 
 * **χ²**/*df* ratio
 
@@ -329,7 +333,7 @@ Indeks ini dihitung tanpa melakukan perbandingan dengan *baseline*, yang meliput
   - Ini berkaitan dengan asumsi *local independence* dalam teori pengukuran psikologi
   - Artinya, model dapat "diterima" meskipun *global fit* ditolak **hanya dalam kondisi** ketika asumsi *local independence* dapat dipertahankan
   - `jamovi` bisa menyimpan *residual correlation* sebagai *output* yang bisa disimpan - klik ***Output options*** <i class="fa-solid fa-circle-arrow-right"></i> ***covariances and correlations*** <i class="fa-solid fa-circle-arrow-right"></i> centang ***Residual***
-  - *Reviewer* yang familiar dengan SEM akan selalu menanyakan justifikasi keputusan peneliti untuk mempertahakan model ketika uji χ² nonsignifikan
+  - *Reviewer* yang familiar dengan SEM akan selalu menanyakan justifikasi keputusan peneliti untuk mempertahakan model ketika uji χ² signifikan
 
 :::
 
@@ -355,12 +359,12 @@ Indeks ini dihitung tanpa melakukan perbandingan dengan *baseline*, yang meliput
 ## Mengestimasi jumlah sampel (`semTools` <i class="fa-brands fa-r-project"></i>)
 
 ::: {.columns}
-::: {.column width="50%"}
+::: {.column width="40%"}
 
 ![](libs/over.png){fig-align="center"}
 
 :::
-::: {.column width="50%"}
+::: {.column width="60%"}
 
 ```{r}
 #| eval: false
@@ -395,8 +399,7 @@ Pendekatan `findRMSEAsamplesize` dengan `semTools` di atas menguji kecocokan mod
 
 * 2️⃣ langkah menyusun model [(Anderson & Gerbing, 1988)](https://psycnet.apa.org/record/1989-14190-001)
   - Estimasi dulu *measurement* model
-  - Kemudian baru *structural* model
-  - ...pada dataset yang sama
+  - Kemudian baru *structural* model... pada dataset yang sama
 
 * 4️⃣ langkah menyusun model [(Mulaik & Millsap, 2000)](https://www.tandfonline.com/doi/abs/10.1207/S15328007SEM0701_02)
   - Spesifikasikan **model pengukuran yang *unrestricted*** dengan **melakukan EFA** untuk **mengidentifikasi jumlah faktor** (sepenuhnya bebas, tanpa asumsi teori apapun - utamanya ketika asumsi teori masih rapuh)
@@ -406,21 +409,27 @@ Pendekatan `findRMSEAsamplesize` dengan `semTools` di atas menguji kecocokan mod
 
 :::
 
-## Apakah keempat langkah bisa menggunakan dataset yang sama?
+## Apakah 4️⃣ langkah bisa menggunakan dataset yang sama?
 
 ::: {.incremental}
 
 * **Seharusnya, tidak**.
 
-* **Pendekatan 4️⃣ langkah** idealnya dieksekusi dengan **tiga dataset yang berbeda** untuk menghindari [*capitalization on chance*](https://pubmed.ncbi.nlm.nih.gov/16250105/) — karena setiap tahap yang melibatkan respesifikasi atau modifikasi akan "menghabiskan" dataset tersebut [(MacCallum, Roznowski & Necowitz, 1992)](https://pubmed.ncbi.nlm.nih.gov/16250105/):
+* **Pendekatan 4️⃣ langkah** idealnya dieksekusi dengan **3️⃣ dataset yang berbeda** untuk menghindari [*capitalization on chance*](https://pubmed.ncbi.nlm.nih.gov/16250105/), karena setiap tahap yang melibatkan respesifikasi atau modifikasi akan "menghabiskan" dataset tersebut [(MacCallum, Roznowski & Necowitz, 1992)](https://pubmed.ncbi.nlm.nih.gov/16250105/).
 
-  - **Langkah 1 (EFA)** <i class="fa-solid fa-circle-arrow-right"></i> **dataset pertama**: mengeksplorasi struktur faktor secara bebas. Langkah ini penting utamanya ketika model melibatkan konstruk yang belum _established_ bukti empiriknya
+:::
 
-  - **Langkah 2 (CFA)** <i class="fa-solid fa-circle-arrow-right"></i> **dataset kedua**: mengkonfirmasi dan merespesifikasi model pengukuran, memastikan *construct validity* — hasilnya (*df*, struktur faktor, indeks *fit*) menjadi dasar *a priori power analysis* sebelum pengujian model lengkap
+## Apakah 4️⃣ langkah bisa menggunakan dataset yang sama?
 
-  - **Langkah 3–4 (model struktural)** <i class="fa-solid fa-circle-arrow-right"></i> **dataset ketiga**: karena dataset kedua sudah "terpakai" untuk respesifikasi pengukuran, pengujian model struktural (*unrestricted* lalu *restricted*) dilakukan pada data yang benar-benar independen
+::: {.incremental}
 
-* Dalam praktiknya, apabila hanya tersedia satu dataset, peneliti dapat membaginya secara acak menjadi tiga bagian (tiga _holdout sample_) — meskipun tentu saja ada risiko mengurangi *statistical power* di setiap tahapannya
+* **Langkah 1️⃣ (EFA)** <i class="fa-solid fa-circle-arrow-right"></i> **dataset pertama**: mengeksplorasi struktur faktor secara bebas. Langkah ini penting utamanya ketika model melibatkan konstruk yang belum _established_ bukti empiriknya
+
+* **Langkah 2️⃣ (CFA)** <i class="fa-solid fa-circle-arrow-right"></i> **dataset kedua**: mengkonfirmasi dan merespesifikasi model pengukuran, memastikan *construct validity* — hasilnya (*df*, struktur faktor, indeks *fit*) menjadi dasar *a priori power analysis* sebelum pengujian model lengkap
+
+* **Langkah 3️⃣–4️⃣ (model struktural)** <i class="fa-solid fa-circle-arrow-right"></i> **dataset ketiga**: karena dataset kedua sudah "terpakai" untuk respesifikasi pengukuran, pengujian model struktural (*unrestricted* lalu *restricted*) dilakukan pada data yang benar-benar independen
+
+* Dalam praktiknya, apabila hanya tersedia satu dataset, peneliti dapat membaginya **secara acak** menjadi tiga bagian (tiga _holdout sample_) — meskipun tentu saja ada risiko mengurangi *statistical power* di setiap tahapannya
 
 :::
 
