@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.10.3">
 
   <meta name="author" content="Rizqy Amelia Zein">
-  <meta name="dcterms.date" content="2026-05-07">
+  <meta name="dcterms.date" content="2026-05-08">
   <title>Multigroup SEM Workshop – Dasar-Dasar Structural Equation Modeling (SEM)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -99,7 +99,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-64a35699270489a3f5121f59aefdeda0.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-7e8b0591f6dfdbe15e0c3349355bdcd8.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -215,7 +215,7 @@ Rizqy Amelia Zein
     </div>
 </div>
 
-  <p class="date">2026-05-07</p>
+  <p class="date">2026-05-08</p>
 </section>
 <section id="outline" class="slide level2">
 <h2><em>Outline</em></h2>
@@ -275,7 +275,7 @@ Rizqy Amelia Zein
 <ul>
 <li class="fragment"><p>Peneliti menyusun model pengukuran dan model jalur dengan menggambar diagram jalur <em>path diagram</em></p></li>
 <li class="fragment"><p>Dalam SEM, justifikasi teori adalah suatu yang <strong>tidak bisa ditawar-tawar</strong> karena tanpa basis teori yang kuat, <em>model testing</em> akan selalu memberikan hasil yang mengecewakan (<em>poor fit</em>)</p></li>
-<li class="fragment"><p>Sebelum melakukan SEM, peneliti sangat disarankan melakukan <em>preliminary study</em>, atau setidaknya <em>systematic review</em> yang dapat membantu peneliti menyusun hipotesis model yang baik</p></li>
+<li class="fragment"><p>Sebelum melakukan SEM, peneliti sangat disarankan melakukan <em>pilot study</em>, atau setidaknya <em>meta studies</em> (e.g., <em>systematic review</em>, <em>scoping review</em>, <em>meta analysis</em>, studi replikasi, dsb.) yang dapat membantu peneliti menyusun hipotesis model yang baik</p></li>
 </ul>
 </section>
 <section id="identifikasi-model" class="slide level2">
@@ -287,16 +287,16 @@ Rizqy Amelia Zein
 <li class="fragment">Jumlah <strong>‘informasi yang diketahui’</strong> dan <strong>‘tidak diketahui’</strong> sama persis</li>
 <li class="fragment">Tidak bisa difalsifikasi, hampir ‘selalu tepat’, tetapi ‘selalu salah’</li>
 </ul></li>
-<li class="fragment"><p>Apabila <em>df</em> bernilai negatif, maka model tsb <em>under-identified</em> karena jumlah parameter jalur yang harus diestimasi lebih banyak daripada jumlah parameter di <em>variance-covariance matrix</em></p>
+<li class="fragment"><p>Apabila <em>df</em> bernilai negatif, maka model tsb <em>under-identified</em> karena jumlah parameter jalur yang harus diestimasi <em>lebih banyak</em> daripada jumlah nilai unik (<em>non-redundant information</em>) di <em>variance-covariance matrix</em></p>
 <ul>
 <li class="fragment">Lebih banyak <strong>‘informasi yang tidak diketahui’</strong> daripada yang <strong>‘diketahui’</strong></li>
-<li class="fragment">Model ‘misterius’ 😄</li>
+<li class="fragment">Model ‘<em>misterius</em>’ dan ‘<em>ambisius</em>’😄</li>
 </ul></li>
 <li class="fragment"><p>Model yang dapat diidentifikasi adalah <em>over-identified model</em> dimana <strong>jumlah parameter <em>variance-covariance matrix</em> lebih banyak daripada jumlah parameter jalur yang diestimasi</strong> (sehingga <em>df</em> ≥ 1)</p>
 <ul>
 <li class="fragment">Lebih banyak <strong>‘informasi yang diketahui’</strong> daripada yang <strong>‘tidak diketahui’</strong></li>
 </ul></li>
-<li class="fragment"><p><em>Degree of freedom</em> <i class="fa-solid fa-circle-arrow-right"></i> dihitung dengan mengurangi jumlah nilai unik (<em>non-redundant information</em>) dalam <em>variance-covariance matrix</em> dengan jumlah parameter jalur yang hendak diestimasi</p></li>
+<li class="fragment"><p><em>Degree of freedom</em> <i class="fa-solid fa-circle-arrow-right"></i> dihitung dengan mengurangi <strong>jumlah nilai unik</strong> dalam <em>variance-covariance matrix</em> dengan <strong>jumlah parameter jalur</strong> yang hendak diestimasi</p></li>
 </ul>
 </section>
 <section id="over-identified-model" class="slide level2">
@@ -383,9 +383,13 @@ Rizqy Amelia Zein
 <section id="mengestimasi-menguji-model" class="slide level2">
 <h2>Mengestimasi &amp; Menguji model</h2>
 <ul>
-<li><p>Pilih <strong>metode estimasi</strong> yang paling cocok dengan karakteristik data (<code>ML</code>, <code>ULS</code>, <code>GLS</code>, <code>WLS</code>, <code>DWLS</code> atau <em>robust</em> <code>DWLS</code>)</p></li>
-<li><p>Metode estimasi ini yang akan menghitung <em>standard error</em> yang tepat sesuai dengan karakteristik model</p></li>
-<li><p>Apabila metode estimasi yang dipilih tidak tepat dan tidak sesuai dengan kompatibilitas datanya, maka estimasi <em>standard error</em> menjadi bias <i class="fa-solid fa-circle-arrow-right"></i> sehingga model parameter memberikan informasi yang menyesatkan</p></li>
+<li class="fragment"><p>Pilih <strong>metode estimasi</strong> yang paling cocok dengan karakteristik data (<code>ML</code>, <code>ULS</code>, <code>GLS</code>, <code>WLS</code>, <code>DWLS</code> atau <em>robust</em> <code>DWLS</code>)</p></li>
+<li class="fragment"><p>Metode estimasi ini yang akan menghitung <em>standard error</em> yang tepat sesuai dengan karakteristik model</p></li>
+<li class="fragment"><p>Apabila metode estimasi yang dipilih tidak tepat dan tidak sesuai dengan kompatibilitas datanya, maka estimasi <em>standard error</em> menjadi bias <i class="fa-solid fa-circle-arrow-right"></i> sehingga model parameter memberikan informasi yang menyesatkan</p></li>
+<li class="fragment"><p>Lihat Beaujean (2014), appendix A untuk perbandingan berbagai macam estimator yang opsinya tersedia di <code>lavaan</code> dan <code>SEMLj</code></p>
+<ul>
+<li class="fragment">Atau cek di <a href="https://lavaan.ugent.be/tutorial/est.html">laman web <code>lavaan</code></a></li>
+</ul></li>
 </ul>
 </section>
 <section id="menguji-ketepatan-model" class="slide level2">
@@ -403,59 +407,52 @@ Rizqy Amelia Zein
 <section id="menguji-ketepatan-model-chi-square-χ²" class="slide level2">
 <h2>Menguji ketepatan model: <em>Chi-square</em> (χ²)</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:60%;">
 <ul>
 <li><p>Dihitung dengan cara membandingkan <strong>model yang dihipotesiskan (<em>implied model</em>)</strong> dengan <strong><em>saturated model</em></strong> (model dengan <em>fit</em> sempurna, yang mana semua parameter dibebaskan tanpa <em>constraint</em>)</p>
 <ul>
 <li><em>Indeks inkremental</em> seperti CFI dan NFI-lah yang membandingkan <em>implied model</em> dengan <em>baseline</em>/<em>null model</em> (model tanpa jalur sama sekali)</li>
 </ul></li>
 <li><p>Umumnya, model dengan jumlah sampel yang besar akan memberikan hasil uji χ² yang signifikan, tetapi <strong>uji χ² yang signifikan ini tidak boleh diabaikan</strong> begitu saja❗</p></li>
-<li><p>Selain χ², kita bisa menggunakan <em>alternative fit indices</em> yang terdiri dari</p>
-<ul>
-<li><em>Incremental index</em></li>
-<li><em>Parsimony index</em></li>
-<li><em>Absolute (standalone) index</em></li>
-</ul></li>
+<li><p>Selain χ², kita bisa menggunakan <em>alternative fit indices</em> yang terdiri atas: <em>Incremental index</em>, <em>Parsimony index</em>, dan <em>Absolute (standalone) index</em>.</p></li>
 </ul>
-</div><div class="column" style="width:50%;">
+</div><div class="column" style="width:40%;">
 <p><img data-src="https://media.giphy.com/media/xT0xeuOy2Fcl9vDGiA/giphy.gif"></p>
 </div></div>
 </section>
 <section id="incremental-comparativerelative-index" class="slide level2">
 <h2><em>Incremental (comparative/relative) index</em></h2>
-<ul>
-<li>Didapatkan dengan membandingkan <em>implied model</em> dengan <em>baseline model</em>, meliputi
+<p>Didapatkan dengan membandingkan <em>implied model</em> dengan <em>baseline model</em>, yang meliputi:</p>
 <ul>
 <li><p><strong><em>Comparative Fit Index</em></strong> <i class="fa-solid fa-circle-arrow-right"></i> mendekati 1 = <em>closer fit</em></p></li>
 <li><p><strong><em>Normed Fit Index</em></strong> <i class="fa-solid fa-circle-arrow-right"></i> mendekati 1 = <em>better fit</em></p></li>
 <li><p><strong><em>Incremental Fit Index</em>/<em>Bollen’s Nonnormed Fit Index</em></strong> <i class="fa-solid fa-circle-arrow-right"></i> mendekati 1 = <em>better fit</em></p></li>
 <li><p><strong><em>Tucker Lewis Index</em>/<em>Bentler-Bonnet Non-Normed Fit Index</em></strong> <i class="fa-solid fa-circle-arrow-right"></i> mendekati 1 = <em>better fit</em></p></li>
-</ul></li>
 </ul>
 </section>
 <section id="parsimony-index" class="slide level2">
 <h2><em>Parsimony index</em></h2>
+<p>Indeks ini secara khusus memberikan pinalti pada kompleksitas model, yang meliputi:</p>
 <ul>
-<li><p>Indeks ini secara khusus memberikan pinalti pada kompleksitas model, yang meliputi:</p></li>
-<li><p><strong><em>Expected Cross Validation Index</em></strong> <i class="fa-solid fa-circle-arrow-right"></i> digunakan untuk membandingkan dua model atau lebih. Nilai yang lebih kecil menunjukkan model yang lebih baik</p></li>
-<li><p><strong><em>Information-Theoretic Criterion</em></strong> <i class="fa-solid fa-circle-arrow-right"></i> meliputi AIC, BIC, dan SABIC. Nilai yang kecil menunjukkan model yang lebih baik</p></li>
-<li><p><strong><em>Noncentrality Parameter-based Index</em></strong> <i class="fa-solid fa-circle-arrow-right"></i> mendekati 1 = <em>better fit</em></p></li>
-<li><p><strong><em>McDonald’s Noncentrality Index</em></strong> <i class="fa-solid fa-circle-arrow-right"></i> mendekati 1 = <em>better fit</em></p></li>
-<li><p><strong><em>Parsimonious Normed Fit Index</em></strong> <i class="fa-solid fa-circle-arrow-right"></i> NFI yang mempertimbangkan <em>parsimony</em> model, mendekati 1 = <em>better fit</em></p></li>
-<li><p><strong><em>Parsimony Goodness of Fit Index</em></strong> <i class="fa-solid fa-circle-arrow-right"></i> mendekati 1 = <em>better fit</em></p></li>
+<li><strong><em>Expected Cross Validation Index</em></strong> <i class="fa-solid fa-circle-arrow-right"></i> digunakan untuk membandingkan dua model atau lebih. Nilai yang lebih kecil menunjukkan model yang lebih baik</li>
+<li><strong><em>Information-Theoretic Criterion</em></strong> <i class="fa-solid fa-circle-arrow-right"></i> meliputi AIC, BIC, dan SABIC. Nilai yang kecil menunjukkan model yang lebih baik</li>
+<li><strong><em>Noncentrality Parameter-based Index</em></strong> <i class="fa-solid fa-circle-arrow-right"></i> mendekati 1 = <em>better fit</em></li>
+<li><strong><em>McDonald’s Noncentrality Index</em></strong> <i class="fa-solid fa-circle-arrow-right"></i> mendekati 1 = <em>better fit</em></li>
+<li><strong><em>Parsimonious Normed Fit Index</em></strong> <i class="fa-solid fa-circle-arrow-right"></i> NFI yang mempertimbangkan <em>parsimony</em> model, mendekati 1 = <em>better fit</em></li>
+<li><strong><em>Parsimony Goodness of Fit Index</em></strong> <i class="fa-solid fa-circle-arrow-right"></i> mendekati 1 = <em>better fit</em></li>
 </ul>
 </section>
 <section id="absolute-index-1" class="slide level2">
 <h2><em>Absolute index</em> 1️⃣</h2>
+<p>Indeks ini dihitung tanpa melakukan perbandingan dengan <em>baseline</em>, yang meliputi:</p>
 <ul>
-<li><p>Indeks ini dihitung tanpa melakukan perbandingan dengan <em>baseline</em>, yang meliputi:</p></li>
-<li><p><strong><em>Root Mean Square Error of Approximation</em> (<code>RMSEA</code>)</strong> <i class="fa-solid fa-circle-arrow-right"></i> merupakan estimasi seberapa besar <em>approximation error</em> per <em>degree of freedom</em> yang diperkirakan terjadi di populasi — <em>close fit</em> ketika nilainya <strong>&lt; 0.05</strong>, <em>acceptable fit</em> ketika <strong>0.05 – 0.08</strong>, <em>poor fit</em> ketika <strong>&gt; 0.10</strong></p>
+<li><strong><em>Root Mean Square Error of Approximation</em> (<code>RMSEA</code>)</strong> <i class="fa-solid fa-circle-arrow-right"></i> merupakan estimasi seberapa besar <em>approximation error</em> per <em>degree of freedom</em> yang diperkirakan terjadi di populasi — <em>close fit</em> ketika nilainya <strong>&lt; 0.05</strong>, <em>acceptable fit</em> ketika <strong>0.05 – 0.08</strong>, <em>poor fit</em> ketika <strong>&gt; 0.10</strong>
 <ul>
 <li><em>p-value</em> dapat digunakan untuk menguji <em>H</em><sub>0</sub>: <code>RMSEA</code> ≤ 0.05 (<em>close fit</em>)</li>
 <li>Oleh karena itu, <strong>gagal menolak <em>H</em><sub>0</sub></strong> (<em>p</em> &gt; 0.05) menunjukkan bahwa model “<em>close-fitting</em>”</li>
 <li><code>RMSEA</code> sangat dipengaruhi oleh kompleksitas model dan <em>sample size</em>, dan dapat menunjukkan <em>misfiting</em> bahkan untuk kesalahan spesifikasi yang kecil ketika sampelnya besar</li>
 </ul></li>
-<li><p><strong><em>Standardized Root Mean Square Residual</em> (<code>SRMR</code>)</strong> <i class="fa-solid fa-circle-arrow-right"></i> akar kuadrat dari rata-rata kuadrat selisih antara <em>observed</em> dan <em>model-implied correlation matrix</em>, nilai <strong>&lt; 0.08</strong> menunjukkan <em>acceptable fit</em></p>
+<li><strong><em>Standardized Root Mean Square Residual</em> (<code>SRMR</code>)</strong> <i class="fa-solid fa-circle-arrow-right"></i> akar kuadrat dari rata-rata kuadrat selisih antara <em>observed</em> dan <em>model-implied correlation matrix</em>, nilai <strong>&lt; 0.08</strong> menunjukkan <em>acceptable fit</em>
 <ul>
 <li><code>SRMR</code> (vs.&nbsp;<code>RMSEA</code>) relatif kurang dipengaruhi oleh <em>sample size</em> dan secara langsung mencerminkan selisih rata-rata antara <em>observed</em> dan <em>model-implied correlation matrix</em></li>
 <li><a href="https://www.tandfonline.com/doi/abs/10.1080/10705519909540118">Hu &amp; Bentler (1999)</a> merekomendasikan melaporkan <strong>keduanya</strong> (<em>dual cutoff</em>): CFI ≥ 0.95 <strong>dan</strong> SRMR ≤ 0.08</li>
@@ -489,10 +486,12 @@ Rizqy Amelia Zein
 <ul>
 <li class="fragment">Bagaimana kalau <em>global fit</em> ditolak (e.g., uji χ² dengan <em>p</em> &lt; 0.05)
 <ul>
-<li class="fragment"><a href="https://onlinelibrary.wiley.com/doi/full/10.1002/ijop.13252">Kline (2024)</a> menyarankan untuk mengecek korelasi residual antar <em>item</em> (<em>local fit</em>)</li>
+<li class="fragment"><a href="https://onlinelibrary.wiley.com/doi/full/10.1002/ijop.13252">Kline (2024)</a> menyarankan untuk <em>tentatively</em> menolak model, tetapi cek korelasi residual antar <em>item</em> (<em>local fit</em>)</li>
 <li class="fragment">Ketika korelasi residual menunjukkan <strong>tidak ada</strong> <em>paired correlation</em> &gt; 0.3, maka model dapat dikatakan tepat menggambarkan data (<em>fit</em>) meskipun hasil uji χ² menyatakan sebaliknya (i.e., ada perbedaan signifikan antara <em>observed</em> dan <em>implied model</em>)</li>
-<li class="fragment">Ini berkaitan dengan asumsi <em>local independence</em> dalam teori pengukuran psikologi - Artinya, model dapat “diterima” meskipun <em>global fit</em> ditolak <strong>hanya dalam kondisi</strong> ketika <em>local independence</em> dapat dipertahankan</li>
+<li class="fragment">Ini berkaitan dengan asumsi <em>local independence</em> dalam teori pengukuran psikologi</li>
+<li class="fragment">Artinya, model dapat “diterima” meskipun <em>global fit</em> ditolak <strong>hanya dalam kondisi</strong> ketika asumsi <em>local independence</em> dapat dipertahankan</li>
 <li class="fragment"><code>jamovi</code> bisa menyimpan <em>residual correlation</em> sebagai <em>output</em> yang bisa disimpan - klik <strong><em>Output options</em></strong> <i class="fa-solid fa-circle-arrow-right"></i> <strong><em>covariances and correlations</em></strong> <i class="fa-solid fa-circle-arrow-right"></i> centang <strong><em>Residual</em></strong></li>
+<li class="fragment"><em>Reviewer</em> yang familiar dengan SEM akan selalu menanyakan justifikasi keputusan peneliti untuk mempertahakan model ketika uji χ² nonsignifikan</li>
 </ul></li>
 </ul>
 </section>
@@ -503,14 +502,19 @@ Rizqy Amelia Zein
 <ul>
 <li class="fragment"><em>Power</em> di <strong>level model (global)</strong> <i class="fa-solid fa-circle-arrow-right"></i> Apakah sampel cukup besar untuk mendeteksi bahwa model gagal memenuhi standar <em>close fit</em> (RMSEA ≥ 0.08), jika standar <em>close fit</em> yang ingin dipertahankan adalah RMSEA ≤ 0.05? <i class="fa-solid fa-circle-arrow-right"></i> <strong>H<sub>0</sub>: RMSEA = 0.05, H<sub>1</sub>: RMSEA = 0.08</strong></li>
 <li class="fragment"><em>Power</em> di <strong>level jalur (lokal)</strong> <i class="fa-solid fa-circle-arrow-right"></i> Apakah sampel cukup besar untuk mendeteksi bahwa koefisien jalur tertentu (misalnya, γ) secara signifikan berbeda dari nol, berdasarkan perbandingan model dengan dan tanpa koefisien tersebut? <i class="fa-solid fa-circle-arrow-right"></i> <strong>H<sub>0</sub>: γ = 0, H<sub>1</sub>: γ ≠ 0</strong></li>
-<li class="fragment">Intinya: di level global kita berharap <strong>gagal menolak</strong> H<sub>0</sub> (model dianggap <em>fit</em>), sedangkan di level jalur kita berharap <strong>berhasil menolak</strong> H<sub>0</sub> (koefisien jalur signifikan)</li>
+<li class="fragment">Intinya: di level model kita berharap <strong>gagal menolak</strong> H<sub>0</sub> (model dianggap <em>fit</em>), sedangkan di level jalur kita berharap <strong>berhasil menolak</strong> H<sub>0</sub> (koefisien jalur signifikan)</li>
 </ul></li>
-<li class="fragment"><em>Statistical power</em> ditentukan oleh
+</ul>
+</section>
+<section id="statistical-power-1" class="slide level2">
+<h2><em>Statistical power</em></h2>
 <ul>
-<li class="fragment"><strong><em>true population model</em></strong> (yang kita tidak mungkin tahu, karena sifatnya selalu <em>unknown parameter</em>) <i class="fa-solid fa-circle-arrow-right"></i> sehingga untuk mengestimasi jumlah sampel, kita asumsikan bahwa model memang “tepat” menggambarkan data</li>
-<li class="fragment"><strong>probabilitas melakukan kesalahan tipe 1</strong> (α)</li>
-<li class="fragment"><strong><em>degree of freedom</em></strong> model</li>
-<li class="fragment"><strong>jumlah sampel</strong></li>
+<li><em>Statistical power</em> ditentukan oleh
+<ul>
+<li><strong><em>true population model</em></strong> (yang kita tidak mungkin tahu, karena sifatnya selalu <em>unknown parameter</em>) <i class="fa-solid fa-circle-arrow-right"></i> sehingga untuk mengestimasi jumlah sampel, kita asumsikan bahwa model memang “tepat” menggambarkan data</li>
+<li><strong>probabilitas melakukan kesalahan tipe 1</strong> (α)</li>
+<li><strong><em>degree of freedom</em></strong> model</li>
+<li><strong>jumlah sampel</strong></li>
 </ul></li>
 </ul>
 </section>
@@ -555,7 +559,7 @@ Rizqy Amelia Zein
 <p><strong>Demonstrasi <em>power analysis</em> dengan <a href="https://pamlj.github.io/index.html"><code>PAMLj</code></a></strong></p>
 </div>
 <div class="callout-content">
-<p><em>A priori power analysis</em> dengan mempertimbangkan parameter spesifik dalam model dapat dilakukan dengan <em>module</em> <a href="https://pamlj.github.io/index.html"><code>PAMLj</code></a>. <a href="..\materials/power.omv">Unduh demonstrasinya di sini</a>.</p>
+<p><em>A priori power analysis</em> dengan mempertimbangkan parameter spesifik dalam model dapat dilakukan dengan <em>module</em> <a href="https://pamlj.github.io/index.html"><code>PAMLj</code></a>, yang asalnya menggunakan <a href="https://moshagen.github.io/semPower/"><code>semPower</code></a> di <i class="fa-brands fa-r-project"></i>. <a href="..\materials/power.omv">Unduh demonstrasinya di sini</a>.</p>
 </div>
 </div>
 </div>
@@ -918,16 +922,25 @@ Rizqy Amelia Zein
       });
     </script>
     <script>
-    // Single unified function to manage all logos
+    // Return only leaf <section> elements — sections that do NOT contain child sections.
+    // This avoids relying on Reveal.js adding the .stack class (which is timing-dependent).
+    function getLeafSlides() {
+      var all = document.querySelectorAll('.reveal .slides section');
+      return Array.from(all).filter(function(s) {
+        return s.querySelectorAll(':scope > section').length === 0;
+      });
+    }
+
     function manageLogos() {
-      const slides = Reveal.getSlides();
+      var slides = getLeafSlides();
+      if (slides.length === 0) return;
 
       slides.forEach(function(slide, index) {
-        // Handle title slide (first slide)
+        // Handle title slide (first leaf slide)
         if (index === 0) {
-          slide.querySelectorAll('.slide-logo').forEach(logo => logo.remove());
+          slide.querySelectorAll('.slide-logo').forEach(function(l) { l.remove(); });
           if (!slide.querySelector('.title-slide-logo')) {
-            const titleLogo = document.createElement('img');
+            var titleLogo = document.createElement('img');
             titleLogo.src = '../img/logo.png';
             titleLogo.className = 'title-slide-logo';
             titleLogo.alt = 'Universitas Airlangga Logo';
@@ -936,21 +949,18 @@ Rizqy Amelia Zein
           return;
         }
 
-
-        const bgColor = slide.getAttribute('data-background-color');
-        const logoSrc = (bgColor === '#14497F' || bgColor === '#14497f')
+        var bgColor = slide.getAttribute('data-background-color');
+        var logoSrc = (bgColor === '#14497F' || bgColor === '#14497f')
           ? '../img/logo_white.png'
           : '../img/logo.png';
 
-        const existingLogos = slide.querySelectorAll('.slide-logo');
+        var existingLogos = slide.querySelectorAll('.slide-logo');
 
         if (existingLogos.length === 1) {
-          // Just update the source
           existingLogos[0].src = logoSrc;
         } else {
-          // Remove all (handles both 0 and >1 cases), then add one fresh logo
-          existingLogos.forEach(logo => logo.remove());
-          const logo = document.createElement('img');
+          existingLogos.forEach(function(l) { l.remove(); });
+          var logo = document.createElement('img');
           logo.src = logoSrc;
           logo.className = 'slide-logo';
           logo.alt = 'Universitas Airlangga Logo';
@@ -959,23 +969,28 @@ Rizqy Amelia Zein
       });
     }
 
-    // Initialize on page load and register slide-change listener inside DOMContentLoaded
-    // so Reveal is guaranteed to be available
-    document.addEventListener('DOMContentLoaded', function() {
+    function initLogoManager() {
       if (typeof Reveal !== 'undefined') {
         Reveal.on('ready', manageLogos);
         Reveal.on('slidechanged', manageLogos);
-      } else {
-        setTimeout(manageLogos, 500);
       }
-    });
+      // Fallback: always run after a short delay in case events were already fired
+      setTimeout(manageLogos, 500);
+    }
+
+    // Handle both cases: script runs before or after DOMContentLoaded
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initLogoManager);
+    } else {
+      initLogoManager();
+    }
     </script>
 
     <style>
     /* Additional inline styles for logo */
     .reveal .slide-logo {
       position: absolute !important;
-      top: -1em !important;  /* Aligns with title */
+      top: 10px !important;
       right: 15px !important;
       max-height: 80px !important;
       max-width: 200px !important;

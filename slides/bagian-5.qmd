@@ -82,7 +82,7 @@ Setiap modifikasi **harus dijustifikasi secara teori**, bukan semata-mata didoro
 
 * Dalam SEM, justifikasi teori adalah suatu yang **tidak bisa ditawar-tawar** karena tanpa basis teori yang kuat, *model testing* akan selalu memberikan hasil yang mengecewakan (*poor fit*)
 
-* Sebelum melakukan SEM, peneliti sangat disarankan melakukan *preliminary study*, atau setidaknya *systematic review* yang dapat membantu peneliti menyusun hipotesis model yang baik
+* Sebelum melakukan SEM, peneliti sangat disarankan melakukan *pilot study*, atau setidaknya *meta studies* (e.g., *systematic review*, *scoping review*, *meta analysis*, studi replikasi, dsb.) yang dapat membantu peneliti menyusun hipotesis model yang baik
 
 :::
 
@@ -96,14 +96,14 @@ Setiap modifikasi **harus dijustifikasi secara teori**, bukan semata-mata didoro
   - Jumlah **'informasi yang diketahui'** dan **'tidak diketahui'** sama persis
   - Tidak bisa difalsifikasi, hampir 'selalu tepat', tetapi 'selalu salah'
 
-* Apabila *df* bernilai negatif, maka model tsb *under-identified* karena jumlah parameter jalur yang harus diestimasi lebih banyak daripada jumlah parameter di *variance-covariance matrix*
+* Apabila *df* bernilai negatif, maka model tsb *under-identified* karena jumlah parameter jalur yang harus diestimasi *lebih banyak* daripada jumlah nilai unik (*non-redundant information*) di *variance-covariance matrix*
   - Lebih banyak **'informasi yang tidak diketahui'** daripada yang **'diketahui'**
-  - Model 'misterius' 😄
+  - Model '*misterius*' dan '*ambisius*'😄
 
 * Model yang dapat diidentifikasi adalah *over-identified model* dimana **jumlah parameter *variance-covariance matrix* lebih banyak daripada jumlah parameter jalur yang diestimasi** (sehingga *df* ≥ 1)
   - Lebih banyak **'informasi yang diketahui'** daripada yang **'tidak diketahui'**
 
-* *Degree of freedom* <i class="fa-solid fa-circle-arrow-right"></i> dihitung dengan mengurangi jumlah nilai unik (*non-redundant information*) dalam *variance-covariance matrix* dengan jumlah parameter jalur yang hendak diestimasi
+* *Degree of freedom* <i class="fa-solid fa-circle-arrow-right"></i> dihitung dengan mengurangi **jumlah nilai unik** dalam *variance-covariance matrix* dengan **jumlah parameter jalur** yang hendak diestimasi
 
 :::
 
@@ -201,11 +201,18 @@ Setiap modifikasi **harus dijustifikasi secara teori**, bukan semata-mata didoro
 
 ## Mengestimasi & Menguji model
 
+::: {.incremental}
+
 * Pilih **metode estimasi** yang paling cocok dengan karakteristik data (`ML`, `ULS`, `GLS`, `WLS`, `DWLS` atau *robust* `DWLS`)
 
 * Metode estimasi ini yang akan menghitung *standard error* yang tepat sesuai dengan karakteristik model
 
 * Apabila metode estimasi yang dipilih tidak tepat dan tidak sesuai dengan kompatibilitas datanya, maka estimasi *standard error* menjadi bias <i class="fa-solid fa-circle-arrow-right"></i> sehingga model parameter memberikan informasi yang menyesatkan
+
+* Lihat Beaujean (2014), appendix A untuk perbandingan berbagai macam estimator yang opsinya tersedia di `lavaan` dan `SEMLj`
+  - Atau cek di [laman web `lavaan`](https://lavaan.ugent.be/tutorial/est.html)
+
+:::
 
 ## Menguji ketepatan model
 
@@ -224,20 +231,17 @@ Setiap modifikasi **harus dijustifikasi secara teori**, bukan semata-mata didoro
 ## Menguji ketepatan model: *Chi-square* (χ²)
 
 ::: {.columns}
-::: {.column width="50%"}
+::: {.column width="60%"}
 
 * Dihitung dengan cara membandingkan **model yang dihipotesiskan (*implied model*)** dengan ***saturated model*** (model dengan *fit* sempurna, yang mana semua parameter dibebaskan tanpa *constraint*)
   - *Indeks inkremental* seperti CFI dan NFI-lah yang membandingkan *implied model* dengan *baseline*/*null model* (model tanpa jalur sama sekali)
 
 * Umumnya, model dengan jumlah sampel yang besar akan memberikan hasil uji χ² yang signifikan, tetapi **uji χ² yang signifikan ini tidak boleh diabaikan** begitu saja❗
 
-* Selain χ², kita bisa menggunakan *alternative fit indices* yang terdiri dari
-  - *Incremental index*
-  - *Parsimony index*
-  - *Absolute (standalone) index*
+* Selain χ², kita bisa menggunakan *alternative fit indices* yang terdiri atas: *Incremental index*, *Parsimony index*, dan *Absolute (standalone) index*.
 
 :::
-::: {.column width="50%"}
+::: {.column width="40%"}
 
 ![](https://media.giphy.com/media/xT0xeuOy2Fcl9vDGiA/giphy.gif)
 
@@ -246,19 +250,20 @@ Setiap modifikasi **harus dijustifikasi secara teori**, bukan semata-mata didoro
 
 ## *Incremental (comparative/relative) index*
 
-* Didapatkan dengan membandingkan *implied model* dengan *baseline model*, meliputi
-  - ***Comparative Fit Index*** <i class="fa-solid fa-circle-arrow-right"></i> mendekati 1 = *closer fit*
+Didapatkan dengan membandingkan *implied model* dengan *baseline model*, yang meliputi:
 
-  - ***Normed Fit Index*** <i class="fa-solid fa-circle-arrow-right"></i> mendekati 1 = *better fit*
+* ***Comparative Fit Index*** <i class="fa-solid fa-circle-arrow-right"></i> mendekati 1 = *closer fit*
 
-  - ***Incremental Fit Index*/*Bollen's Nonnormed Fit Index*** <i class="fa-solid fa-circle-arrow-right"></i> mendekati 1 = *better fit*
+* ***Normed Fit Index*** <i class="fa-solid fa-circle-arrow-right"></i> mendekati 1 = *better fit*
 
-  - ***Tucker Lewis Index*/*Bentler-Bonnet Non-Normed Fit Index*** <i class="fa-solid fa-circle-arrow-right"></i> mendekati 1 = *better fit*
+* ***Incremental Fit Index*/*Bollen's Nonnormed Fit Index*** <i class="fa-solid fa-circle-arrow-right"></i> mendekati 1 = *better fit*
+
+* ***Tucker Lewis Index*/*Bentler-Bonnet Non-Normed Fit Index*** <i class="fa-solid fa-circle-arrow-right"></i> mendekati 1 = *better fit*
 
 
 ## *Parsimony index* 
 
-* Indeks ini secara khusus memberikan pinalti pada kompleksitas model, yang meliputi:
+Indeks ini secara khusus memberikan pinalti pada kompleksitas model, yang meliputi:
 
 * ***Expected Cross Validation Index*** <i class="fa-solid fa-circle-arrow-right"></i> digunakan untuk membandingkan dua model atau lebih. Nilai yang lebih kecil menunjukkan model yang lebih baik
 * ***Information-Theoretic Criterion*** <i class="fa-solid fa-circle-arrow-right"></i> meliputi AIC, BIC, dan SABIC. Nilai yang kecil menunjukkan model yang lebih baik
@@ -269,7 +274,7 @@ Setiap modifikasi **harus dijustifikasi secara teori**, bukan semata-mata didoro
 
 ## *Absolute index* 1️⃣
 
-* Indeks ini dihitung tanpa melakukan perbandingan dengan *baseline*, yang meliputi:
+Indeks ini dihitung tanpa melakukan perbandingan dengan *baseline*, yang meliputi:
 
 * ***Root Mean Square Error of Approximation* (`RMSEA`)** <i class="fa-solid fa-circle-arrow-right"></i> merupakan estimasi seberapa besar *approximation error* per *degree of freedom* yang diperkirakan terjadi di populasi — *close fit* ketika nilainya **< 0.05**, *acceptable fit* ketika **0.05 – 0.08**, *poor fit* ketika **> 0.10**
   - *p-value* dapat digunakan untuk menguji *H*~0~: `RMSEA` ≤ 0.05 (*close fit*)
@@ -311,10 +316,12 @@ Setiap modifikasi **harus dijustifikasi secara teori**, bukan semata-mata didoro
 ::: {.incremental}
 
 * Bagaimana kalau *global fit* ditolak (e.g., uji χ² dengan *p* < 0.05)
-  - [Kline (2024)](https://onlinelibrary.wiley.com/doi/full/10.1002/ijop.13252) menyarankan untuk mengecek korelasi residual antar *item* (*local fit*) 
+  - [Kline (2024)](https://onlinelibrary.wiley.com/doi/full/10.1002/ijop.13252) menyarankan untuk *tentatively* menolak model, tetapi cek korelasi residual antar *item* (*local fit*) 
   - Ketika korelasi residual menunjukkan **tidak ada** *paired correlation* > 0.3, maka model dapat dikatakan tepat menggambarkan data (*fit*) meskipun hasil uji χ² menyatakan sebaliknya (i.e., ada perbedaan signifikan antara *observed* dan *implied model*)
-  - Ini berkaitan dengan asumsi *local independence* dalam teori pengukuran psikologi - Artinya, model dapat "diterima" meskipun *global fit* ditolak **hanya dalam kondisi** ketika *local independence* dapat dipertahankan
+  - Ini berkaitan dengan asumsi *local independence* dalam teori pengukuran psikologi
+  - Artinya, model dapat "diterima" meskipun *global fit* ditolak **hanya dalam kondisi** ketika asumsi *local independence* dapat dipertahankan
   - `jamovi` bisa menyimpan *residual correlation* sebagai *output* yang bisa disimpan - klik ***Output options*** <i class="fa-solid fa-circle-arrow-right"></i> ***covariances and correlations*** <i class="fa-solid fa-circle-arrow-right"></i> centang ***Residual***
+  - *Reviewer* yang familiar dengan SEM akan selalu menanyakan justifikasi keputusan peneliti untuk mempertahakan model ketika uji χ² nonsignifikan
 
 :::
 
@@ -325,15 +332,17 @@ Setiap modifikasi **harus dijustifikasi secara teori**, bukan semata-mata didoro
 * *Statistical power* dalam pengujian hipotesis dalam SEM <i class="fa-solid fa-circle-arrow-right"></i> peluang **menolak *H*~0~** apabila *H*~0~ **salah** (power = 1 − β)
   - *Power* di **level model (global)** <i class="fa-solid fa-circle-arrow-right"></i> Apakah sampel cukup besar untuk mendeteksi bahwa model gagal memenuhi standar *close fit* (RMSEA ≥ 0.08), jika standar *close fit* yang ingin dipertahankan adalah RMSEA ≤ 0.05? <i class="fa-solid fa-circle-arrow-right"></i> **H~0~: RMSEA = 0.05, H~1~: RMSEA = 0.08**
   - *Power* di **level jalur (lokal)** <i class="fa-solid fa-circle-arrow-right"></i> Apakah sampel cukup besar untuk mendeteksi bahwa koefisien jalur tertentu (misalnya, γ) secara signifikan berbeda dari nol, berdasarkan perbandingan model dengan dan tanpa koefisien tersebut? <i class="fa-solid fa-circle-arrow-right"></i> **H~0~: γ = 0, H~1~: γ ≠ 0**
-  - Intinya: di level global kita berharap **gagal menolak** H~0~ (model dianggap *fit*), sedangkan di level jalur kita berharap **berhasil menolak** H~0~ (koefisien jalur signifikan)
+  - Intinya: di level model kita berharap **gagal menolak** H~0~ (model dianggap *fit*), sedangkan di level jalur kita berharap **berhasil menolak** H~0~ (koefisien jalur signifikan)
+
+:::
+
+## *Statistical power*
 
 * *Statistical power* ditentukan oleh
   - ***true population model*** (yang kita tidak mungkin tahu, karena sifatnya selalu *unknown parameter*) <i class="fa-solid fa-circle-arrow-right"></i> sehingga untuk mengestimasi jumlah sampel, kita asumsikan bahwa model memang "tepat" menggambarkan data
   - **probabilitas melakukan kesalahan tipe 1** (α)
   - ***degree of freedom*** model
   - **jumlah sampel**
-
-:::
 
 ## Mengestimasi jumlah sampel (`semTools` <i class="fa-brands fa-r-project"></i>)
 
@@ -365,7 +374,7 @@ Pendekatan `findRMSEAsamplesize` dengan `semTools` di atas menguji kecocokan mod
 
 ::: {.callout-tip}
 #### Demonstrasi *power analysis* dengan [`PAMLj`](https://pamlj.github.io/index.html)
-*A priori power analysis* dengan mempertimbangkan parameter spesifik dalam model dapat dilakukan dengan *module* [`PAMLj`](https://pamlj.github.io/index.html). [Unduh demonstrasinya di sini](/materials/power.omv).
+*A priori power analysis* dengan mempertimbangkan parameter spesifik dalam model dapat dilakukan dengan *module* [`PAMLj`](https://pamlj.github.io/index.html), yang asalnya menggunakan [`semPower`](https://moshagen.github.io/semPower/) di <i class="fa-brands fa-r-project"></i>. [Unduh demonstrasinya di sini](/materials/power.omv).
 
 :::
 
