@@ -284,7 +284,14 @@
     "href": "slides/bagian-2.html#jenis-jenis-korelasi",
     "title": "Korelasi",
     "section": "Jenis-jenis korelasi",
-    "text": "Jenis-jenis korelasi\n\n\n\nKoefisien Korelasi\nLevel Pengukuran\n\n\n\n\nPearson’s product moment\nKedua variabel setidaknya interval\n\n\nSpearman’s rank dan Kendall’s tau\nKedua variabel ordinal\n\n\nPhi, contingency table\nKedua variabel nominal\n\n\nPoint biserial\nVariabel interval dengan nominal\n\n\nGamma, rank biserial\nVariabel ordinal dengan nominal\n\n\nBiserial\nVariabel interval dengan dummy\n\n\nPolyserial\nVariabel interval dengan variabel underlying continuity\n\n\nTetrachoric\nKedua variabel dummy (dikotomis)\n\n\nPolychoric\nKedua variabel ordinal (dengan kontinuitas implisit)"
+    "text": "Jenis-jenis korelasi\n\n\n\nKoefisien Korelasi\nLevel Pengukuran\n\n\n\n\nPearson’s product moment\nKedua variabel setidaknya interval\n\n\nSpearman’s rank dan Kendall’s tau\nKedua variabel ordinal\n\n\nPhi, contingency table\nKedua variabel nominal\n\n\nPoint biserial\nVariabel interval dengan nominal\n\n\nGamma, rank biserial\nVariabel ordinal dengan nominal\n\n\nBiserial\nVariabel interval dengan dummy"
+  },
+  {
+    "objectID": "slides/bagian-2.html#jenis-jenis-korelasi-1",
+    "href": "slides/bagian-2.html#jenis-jenis-korelasi-1",
+    "title": "Korelasi",
+    "section": "Jenis-jenis korelasi",
+    "text": "Jenis-jenis korelasi\n\n\n\nKoefisien Korelasi\nLevel Pengukuran\n\n\n\n\nPolyserial\nVariabel interval dengan variabel underlying continuity\n\n\nTetrachoric\nKedua variabel dummy (dikotomis)\n\n\nPolychoric\nKedua variabel ordinal (dengan kontinuitas implisit)"
   },
   {
     "objectID": "slides/bagian-2.html#faktor-faktor-yang-mempengaruhi-arah-dan-magnitude-korelasi-1",

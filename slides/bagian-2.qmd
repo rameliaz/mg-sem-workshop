@@ -50,6 +50,11 @@ execute:
 | *Point biserial* | Variabel interval dengan nominal |
 | *Gamma*, *rank biserial* | Variabel ordinal dengan nominal |
 | *Biserial* | Variabel interval dengan *dummy* |
+
+## Jenis-jenis korelasi
+
+| Koefisien Korelasi | Level Pengukuran |
+| ------------------ | ---------------- |
 | [*Polyserial*](https://link.springer.com/article/10.1007/BF02294164) | Variabel interval dengan variabel *underlying continuity* |
 | *Tetrachoric* | Kedua variabel *dummy* (dikotomis) |
 | *Polychoric* | Kedua variabel ordinal (dengan kontinuitas implisit) |
@@ -76,7 +81,7 @@ execute:
 
 # Unduh dataset contoh {background-color="#14497F"}
 
-Silahkan unduh dan buka [**Dataset Korelasi**](https://rameliaz.github.io/mg-sem-workshop/materials/corr.jasp), untuk melihat contoh.
+Silahkan unduh dan buka **Dataset Contoh Korelasi**, untuk melihat contoh.
 
 ## *Variance-covariance* & *correlation matrix* 1️⃣
 

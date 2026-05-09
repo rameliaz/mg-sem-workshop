@@ -32,7 +32,7 @@ $code-color: $unair-blue;
 // Logo positioning in top-right corner
 .reveal .slide-logo {
   position: absolute !important;
-  top: 10px !important;
+  top: 8px !important;
   right: 15px !important;
   max-height: 80px;
   z-index: 100;
@@ -43,10 +43,10 @@ $code-color: $unair-blue;
 // Create headroom above h2 on regular slides so the logo clears the heading.
 // Needed because center:false places content at y=0, leaving no natural margin
 // above the heading for the logo (unlike center:true which pads automatically).
-// Value: logo starts at top:10px, rendered height ~60px → bottom ~70px.
+// Value: logo starts at top:8px, rendered height ~60px → bottom ~70px.
 // 45px extra padding puts the heading at ~85px, giving ~15px clearance.
 .reveal .slides section:not(.title-slide):not([data-background-color]) {
-  padding-top: 45px;
+  padding-top: 20px;
 }
 
 // Move logo to top-left for section divider slides
