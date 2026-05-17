@@ -16,7 +16,7 @@ project:
     - slides/bagian-6.qmd
 
 website:
-  title: "Multigroup SEM Workshop"
+  title: "Multigroup SEM"
   navbar:
     left:
       - href: https://rameliaz.github.io/
@@ -79,10 +79,6 @@ website:
         menu:
           - text: "Evaluasi Workshop"
             href: https://www.soscisurvey.de/fb-workshop-amel/
-      - text: "Pre-Test"
-        menu:
-          - text: "Kuis Pre-Test"
-            href: https://forms.cloud.microsoft/r/G6yrJKduRe
       - icon: envelope
         href: "mailto:amelia.zein@psikologi.unair.ac.id"
       - icon: github
