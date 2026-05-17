@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  SoSci Survey XML Import
+  Pretest: Korelasi & Regresi OLS
+  Workshop MG-SEM — Universitas Airlangga
+  Author: Rizqy Amelia Zein
+
+  Import via: Develop > Questions > Import Questions (XML)
+  Question type used: SA (Single Answer / single-choice radio buttons)
+  Correct answers are marked with response attribute correct="1"
+  (used if you enable "Evaluate Answers" / quiz mode in SoSci)
+-->
+<SoSciSurvey version="3">
+  <questions>
+
+    <!-- ==================== BAGIAN A: KORELASI ==================== -->
+
+    <question id="PRETEST01" type="SA">
+      <label>PRETEST01</label>
+      <title>Soal 1 – Jenis koefisien korelasi</title>
+      <text>Seorang peneliti ingin mengetahui hubungan antara jenis kelamin (laki-laki/perempuan) dan skor kecemasan (skala interval). Koefisien korelasi manakah yang paling tepat digunakan?</text>
+      <responses randomize="0">
+        <response id="1" value="1">Pearson&apos;s product moment</response>
+        <response id="2" value="2" correct="1">Point biserial</response>
+        <response id="3" value="3">Spearman&apos;s rank</response>
+        <response id="4" value="4">Phi coefficient</response>
+      </responses>
+    </question>
+
+    <question id="PRETEST02" type="SA">
+      <label>PRETEST02</label>
+      <title>Soal 2 – Interpretasi koefisien korelasi</title>
+      <text>Pernyataan manakah yang paling tepat menggambarkan koefisien korelasi Pearson r = 0,85?</text>
+      <responses randomize="0">
+        <response id="1" value="1">Variabel X menyebabkan perubahan pada variabel Y</response>
+        <response id="2" value="2">85% varians variabel Y dapat dijelaskan oleh variabel X</response>
+        <response id="3" value="3" correct="1">Terdapat hubungan linear positif yang kuat antara variabel X dan Y</response>
+        <response id="4" value="4">72,25% varians variabel Y dapat dijelaskan oleh variabel X</response>
+      </responses>
+    </question>
+
+    <question id="PRETEST03" type="SA">
+      <label>PRETEST03</label>
+      <title>Soal 3 – Asumsi Pearson</title>
+      <text>Asumsi yang HARUS dipenuhi untuk menggunakan koefisien korelasi Pearson&apos;s product moment adalah:</text>
+      <responses randomize="0">
+        <response id="1" value="1">Kedua variabel harus berskala rasio</response>
+        <response id="2" value="2" correct="1">Distribusi kedua variabel setidaknya mendekati normal dan hubungan keduanya bersifat linear</response>
+        <response id="3" value="3">Ukuran sampel harus lebih dari 100 orang</response>
+        <response id="4" value="4">Kedua variabel harus memiliki varians yang sama (homoskedastis)</response>
+      </responses>
+    </question>
+
+    <question id="PRETEST04" type="SA">
+      <label>PRETEST04</label>
+      <title>Soal 4 – Nilai unik variance-covariance matrix</title>
+      <text>Sebuah variance-covariance matrix terdiri dari p = 4 variabel. Berapa jumlah nilai unik (non-redundant information) yang terkandung di dalamnya?</text>
+      <responses randomize="0">
+        <response id="1" value="1">8</response>
+        <response id="2" value="2" correct="1">10</response>
+        <response id="3" value="3">12</response>
+        <response id="4" value="4">16</response>
+      </responses>
+    </question>
+
+    <question id="PRETEST05" type="SA">
+      <label>PRETEST05</label>
+      <title>Soal 5 – Koreksi atenuasi</title>
+      <text>Teknik koreksi atenuasi (attenuation correction) digunakan untuk:</text>
+      <responses randomize="0">
+        <response id="1" value="1">Mengurangi jumlah kesalahan dalam proses pengumpulan data</response>
+        <response id="2" value="2">Meningkatkan reliabilitas instrumen pengukuran</response>
+        <response id="3" value="3" correct="1">Mengestimasi korelasi antar true scores dengan membuang pengaruh measurement error</response>
+        <response id="4" value="4">Mengatasi masalah matriks yang non-positive definite</response>
+      </responses>
+    </question>
+
+    <question id="PRETEST06" type="SA">
+      <label>PRETEST06</label>
+      <title>Soal 6 – Non-positive definite matrix</title>
+      <text>Matriks korelasi dapat menjadi non-positive definite apabila:</text>
+      <responses randomize="0">
+        <response id="1" value="1">Nilai korelasi antar variabel sangat rendah (mendekati 0)</response>
+        <response id="2" value="2" correct="1">Terdapat multikolinearitas yang tinggi antar variabel sehingga observasi tidak independen</response>
+        <response id="3" value="3">Ukuran sampel terlalu besar</response>
+        <response id="4" value="4">Semua koefisien korelasi dalam matriks bernilai positif</response>
+      </responses>
+    </question>
+
+    <question id="PRETEST07" type="SA">
+      <label>PRETEST07</label>
+      <title>Soal 7 – Partial vs part correlation</title>
+      <text>Perbedaan utama antara partial correlation dan part (semi-partial) correlation adalah:</text>
+      <responses randomize="0">
+        <response id="1" value="1" correct="1">Partial correlation mengontrol variabel ketiga dari kedua variabel, sedangkan part correlation hanya mengontrol dari salah satu variabel</response>
+        <response id="2" value="2">Partial correlation hanya dapat digunakan untuk variabel interval, sedangkan part correlation dapat digunakan untuk semua skala pengukuran</response>
+        <response id="3" value="3">Partial correlation menggunakan standardized scores, sedangkan part correlation tidak</response>
+        <response id="4" value="4">Tidak ada perbedaan; keduanya selalu menghasilkan nilai yang identik</response>
+      </responses>
+    </question>
+
+    <question id="PRETEST08" type="SA">
+      <label>PRETEST08</label>
+      <title>Soal 8 – Koreksi atenuasi &gt; 1</title>
+      <text>Apabila hasil koreksi atenuasi menghasilkan koefisien korelasi yang nilainya melebihi 1,0, hal ini paling mungkin menunjukkan:</text>
+      <responses randomize="0">
+        <response id="1" value="1">Korelasi yang sangat kuat dan bermakna antara kedua variabel</response>
+        <response id="2" value="2" correct="1">Adanya masalah pada reliabilitas instrumen yang digunakan (reliabilitas terlalu rendah)</response>
+        <response id="3" value="3">Kesalahan sistematis dalam proses pengumpulan data</response>
+        <response id="4" value="4">Pemilihan metode statistik yang tidak tepat</response>
+      </responses>
+    </question>
+
+    <!-- ==================== BAGIAN B: REGRESI OLS & ANALISIS JALUR ==================== -->
+
+    <question id="PRETEST09" type="SA">
+      <label>PRETEST09</label>
+      <title>Soal 9 – Koefisien regresi b</title>
+      <text>Dalam persamaan regresi Y&#770; = a + bX, apa interpretasi dari koefisien b?</text>
+      <responses randomize="0">
+        <response id="1" value="1">Nilai Y&#770; ketika X = 0 (intercept)</response>
+        <response id="2" value="2" correct="1">Perubahan rata-rata Y&#770; untuk setiap peningkatan satu unit X, dengan asumsi variabel lain konstan</response>
+        <response id="3" value="3">Proporsi varians Y yang mampu dijelaskan oleh X</response>
+        <response id="4" value="4">Nilai rata-rata Y dalam sampel penelitian</response>
+      </responses>
+    </question>
+
+    <question id="PRETEST10" type="SA">
+      <label>PRETEST10</label>
+      <title>Soal 10 – Interpretasi R²</title>
+      <text>Seorang peneliti memperoleh nilai R² = 0,64 dalam analisis regresinya. Interpretasi yang paling tepat adalah:</text>
+      <responses randomize="0">
+        <response id="1" value="1">Koefisien korelasi antara prediktor dan outcome sebesar 0,64</response>
+        <response id="2" value="2" correct="1">64% varians variabel dependen dapat dijelaskan oleh variabel independen dalam model</response>
+        <response id="3" value="3">Variabel independen memprediksi variabel dependen dengan tingkat akurasi 64%</response>
+        <response id="4" value="4">Terdapat hubungan linear antar variabel sebesar 64%</response>
+      </responses>
+    </question>
+
+    <question id="PRETEST11" type="SA">
+      <label>PRETEST11</label>
+      <title>Soal 11 – Homoskedastisitas</title>
+      <text>Asumsi homoskedastisitas dalam regresi OLS menyatakan bahwa:</text>
+      <responses randomize="0">
+        <response id="1" value="1">Variabel-variabel independen tidak boleh berkorelasi satu sama lain</response>
+        <response id="2" value="2">Residual model harus berdistribusi normal</response>
+        <response id="3" value="3" correct="1">Varians residual bersifat konstan di semua level variabel independen</response>
+        <response id="4" value="4">Hubungan antara variabel independen dan dependen harus bersifat linear</response>
+      </responses>
+    </question>
+
+    <question id="PRETEST12" type="SA">
+      <label>PRETEST12</label>
+      <title>Soal 12 – Multikolinearitas</title>
+      <text>Dalam regresi berganda, multikolinearitas terjadi apabila:</text>
+      <responses randomize="0">
+        <response id="1" value="1">Variabel dependen berkorelasi tinggi dengan residual model</response>
+        <response id="2" value="2" correct="1">Variabel-variabel independen berkorelasi sangat tinggi satu sama lain</response>
+        <response id="3" value="3">Residual model tidak berdistribusi normal</response>
+        <response id="4" value="4">Nilai R² terlalu tinggi sehingga model overfit</response>
+      </responses>
+    </question>
+
+    <question id="PRETEST13" type="SA">
+      <label>PRETEST13</label>
+      <title>Soal 13 – Standardized vs unstandardized</title>
+      <text>Keuntungan utama menggunakan standardized koefisien regresi (&#946;) dibandingkan unstandardized (B) adalah:</text>
+      <responses randomize="0">
+        <response id="1" value="1">Koefisien standardized lebih akurat secara statistik</response>
+        <response id="2" value="2" correct="1">Koefisien standardized memungkinkan perbandingan kontribusi relatif antar prediktor meskipun memiliki satuan pengukuran yang berbeda</response>
+        <response id="3" value="3">Koefisien unstandardized digunakan untuk variabel nominal, standardized untuk variabel interval</response>
+        <response id="4" value="4">Keduanya selalu menghasilkan nilai yang identik dalam model yang sama</response>
+      </responses>
+    </question>
+
+    <question id="PRETEST14" type="SA">
+      <label>PRETEST14</label>
+      <title>Soal 14 – Kausalitas dalam path analysis</title>
+      <text>Pernyataan manakah yang BENAR mengenai syarat pembuktian kausalitas dalam analisis jalur?</text>
+      <responses randomize="0">
+        <response id="1" value="1">Koefisien jalur yang secara statistik signifikan sudah cukup membuktikan hubungan kausal</response>
+        <response id="2" value="2">Analisis jalur dengan desain cross-sectional dapat membuktikan kausalitas secara penuh</response>
+        <response id="3" value="3" correct="1">Pembuktian kausalitas memerlukan urutan waktu (temporal order), adanya korelasi, serta kontrol atas variabel confounding</response>
+        <response id="4" value="4">Analisis jalur tidak dapat digunakan untuk menguji hipotesis kausal sama sekali</response>
+      </responses>
+    </question>
+
+    <question id="PRETEST15" type="SA">
+      <label>PRETEST15</label>
+      <title>Soal 15 – Definisi residual</title>
+      <text>Dalam regresi OLS, residual (e) didefinisikan sebagai:</text>
+      <responses randomize="0">
+        <response id="1" value="1">Nilai prediksi (Y&#770;) yang dihasilkan oleh model regresi</response>
+        <response id="2" value="2" correct="1">Selisih antara nilai observasi (Y) dan nilai prediksi (Y&#770;) variabel dependen</response>
+        <response id="3" value="3">Koefisien korelasi antara variabel independen dan dependen</response>
+        <response id="4" value="4">Nilai rata-rata variabel dependen di dalam sampel penelitian</response>
+      </responses>
+    </question>
+
+  </questions>
+</SoSciSurvey>

@@ -16,7 +16,7 @@ project:
     - slides/bagian-6.qmd
 
 website:
-  title: "Multigroup SEM"
+  title: "Multi-group SEM"
   navbar:
     left:
       - href: https://rameliaz.github.io/

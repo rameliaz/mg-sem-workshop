@@ -11,7 +11,7 @@
 
   <meta name="author" content="Rizqy Amelia Zein">
   <meta name="dcterms.date" content="2026-05-17">
-  <title>Multigroup SEM – Korelasi</title>
+  <title>Multi-group SEM – Korelasi</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -33,7 +33,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-15e6dc11564d7f06176c6a11911364d2.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-14c7313e0bd1a6ac1391ac8d6dd3db46.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -125,7 +125,6 @@
       margin-right: 0; 
     }
   </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -638,45 +637,49 @@ Rizqy Amelia Zein
       });
     </script>
     <script>
-    // Return only leaf <section> elements — sections that do NOT contain child sections.
-    // This avoids relying on Reveal.js adding the .stack class (which is timing-dependent).
-    function getLeafSlides() {
-      var all = document.querySelectorAll('.reveal .slides section');
-      return Array.from(all).filter(function(s) {
-        return s.querySelectorAll(':scope > section').length === 0;
-      });
-    }
-
+    // Single unified function to manage all logos
     function manageLogos() {
-      var slides = getLeafSlides();
-      if (slides.length === 0) return;
-
+      const slides = document.querySelectorAll('.reveal .slides section');
+      
       slides.forEach(function(slide, index) {
-        // Handle title slide (first leaf slide)
+        // Handle title slide (first slide)
         if (index === 0) {
-          slide.querySelectorAll('.slide-logo').forEach(function(l) { l.remove(); });
+          // Remove any regular logos from title slide
+          const regularLogos = slide.querySelectorAll('.slide-logo');
+          regularLogos.forEach(logo => logo.remove());
+          
+          // Add centered logo if it doesn't exist
           if (!slide.querySelector('.title-slide-logo')) {
-            var titleLogo = document.createElement('img');
-            titleLogo.src = '../img/logo.png';
+            const titleLogo = document.createElement('img');
+            titleLogo.src = 'libs/logo.png';
             titleLogo.className = 'title-slide-logo';
             titleLogo.alt = 'Universitas Airlangga Logo';
             slide.insertBefore(titleLogo, slide.firstChild);
           }
           return;
         }
-
-        var bgColor = slide.getAttribute('data-background-color');
-        var logoSrc = (bgColor === '#14497F' || bgColor === '#14497f')
-          ? '../img/logo_white.png'
-          : '../img/logo.png';
-
-        var existingLogos = slide.querySelectorAll('.slide-logo');
-
+        
+        // For all other slides, ensure only ONE logo exists
+        const existingLogos = slide.querySelectorAll('.slide-logo');
+        
+        // If multiple logos exist, remove all and start fresh
+        if (existingLogos.length > 1) {
+          existingLogos.forEach(logo => logo.remove());
+        }
+        
+        // Check background color
+        const bgColor = slide.getAttribute('data-background-color');
+        const logoSrc = (bgColor === '#14497F' || bgColor === '#14497f') 
+          ? 'libs/logo_white.png' 
+          : 'libs/logo.png';
+        
+        // If exactly one logo exists, just update its source
         if (existingLogos.length === 1) {
           existingLogos[0].src = logoSrc;
-        } else {
-          existingLogos.forEach(function(l) { l.remove(); });
-          var logo = document.createElement('img');
+        } 
+        // If no logo exists, create one
+        else if (existingLogos.length === 0) {
+          const logo = document.createElement('img');
           logo.src = logoSrc;
           logo.className = 'slide-logo';
           logo.alt = 'Universitas Airlangga Logo';
@@ -685,20 +688,22 @@ Rizqy Amelia Zein
       });
     }
 
-    function initLogoManager() {
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', function() {
       if (typeof Reveal !== 'undefined') {
-        Reveal.on('ready', manageLogos);
-        Reveal.on('slidechanged', manageLogos);
+        Reveal.on('ready', function() {
+          manageLogos();
+        });
+      } else {
+        setTimeout(manageLogos, 500);
       }
-      // Fallback: always run after a short delay in case events were already fired
-      setTimeout(manageLogos, 500);
-    }
+    });
 
-    // Handle both cases: script runs before or after DOMContentLoaded
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initLogoManager);
-    } else {
-      initLogoManager();
+    // Update when slides change
+    if (typeof Reveal !== 'undefined') {
+      Reveal.on('slidechanged', function() {
+        manageLogos();
+      });
     }
     </script>
 
@@ -706,7 +711,7 @@ Rizqy Amelia Zein
     /* Additional inline styles for logo */
     .reveal .slide-logo {
       position: absolute !important;
-      top: 8px !important;
+      top: -1em !important;  /* Aligns with title */
       right: 15px !important;
       max-height: 80px !important;
       max-width: 200px !important;
@@ -717,13 +722,6 @@ Rizqy Amelia Zein
     /* Ensure title slide doesn't have logo overlap */
     .reveal .title-slide {
       padding-right: 220px;
-    }
-
-    /* Section divider slides - logo top-left, fully visible */
-    .reveal section[data-background-color] .slide-logo {
-      left: 15px !important;
-      right: auto !important;
-      top: 15px !important;
     }
 
     /* Section title slide styling */

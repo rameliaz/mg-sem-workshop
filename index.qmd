@@ -1,6 +1,8 @@
 ---
-title: "Multigroup Structural Equation Modeling"
+title: "Multi-group Structural Equation Modeling (MG-SEM)"
 ---
+
+Laman web ini memuat materi tentang ***Multi-group Structural Equation Modeling*** (MG-SEM).
 
 ## *Outline* materi
 
