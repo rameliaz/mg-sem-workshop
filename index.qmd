@@ -52,12 +52,12 @@ Untuk menggambar diagram jalur, peserta dapat menggunakan MS Power Point, Canva,
 * Definisi *factor analysis*
 * *Exploratory* vs *confirmatory factor analysis*
 * Kapan menggunakan CFA?
-* [*Constraining parameter* model](https://psycnet.apa.org/record/2008-06808-005)
-* Model pengukuran (paralel, *tau equivalence*, dan *congeneric*)
-* Variabel indikator (reflektif vs formatif)
+* Model pengukuran reflektif vs formatif
+* Model pengukuran *congeneric*, *tau equivalence*, dan paralel
+* [*Constraining parameter* dalam model CFA](https://psycnet.apa.org/record/2008-06808-005)
 * *Correlated error variances*
 * Metode estimasi
-* _Average variance extracted_ (AVE)
+* *Average Variance Extracted* (AVE) dan validitas diskriminan
 * Menuliskan hasil analisis CFA dalam laporan penelitian
 
 [<i class="fa-solid fa-file-powerpoint"></i> Buka Materi CFA](slides/bagian-4.html){.btn .btn-primary}
