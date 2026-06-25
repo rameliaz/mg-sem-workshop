@@ -12,6 +12,7 @@ format:
     progress: true
     transition: slide
     center: false
+    chalkboard: true
 execute:
   eval: false
   echo: true
