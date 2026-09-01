@@ -6,9 +6,13 @@ Laman web ini memuat materi tentang ***Multi-group Structural Equation Modeling*
 
 ## *Outline* materi
 
-::: {.callout-note}
-#### Unduh materi dalam bentuk PDF 
-Klik _navigation bar_ yang mengarah pada PDF materi, kemudian tekan `ctrl` dan `p` bersamaan. Setelah _window_ untuk _print_ muncul, pilih `Save to PDF` dan klik `Save`.
+::: {.callout-tip}
+### Petunjuk mengunduh *slide* 🖨️
+Klik *icon* ☰ yang ada di pojok kiri bawah *slide* → `Tools` di pojok kiri atas → pilih `PDF Export Mode` → tekan tombol `ctrl` + `p` hingga keluar *pop-up window* untuk mencetak *slide*, kemudian *print* sebagai *file* `PDF`.
+
+Alternatifnya, Anda bisa menekan tombol `e` sebagai *shortcut*, lalu mencetak *slide* sebagai *file* `PDF`.
+
+‼️**Saya akan selalu memperbarui konten dalam *slide deck* di atas**. Oleh karena itu, sebaiknya perlakukan *slide* ini sebagai dokumen hidup (*living document*). Apabila Anda menyimpan versi `PDF` yang sifatnya statis, maka perubahan dan pembaruan yang saya lakukan setelah Anda menyimpan versi statisnya, tidak akan terlihat dalam *file* yang Anda unduh.
 :::
 
 ### Bagian 1️⃣: Pengantar
