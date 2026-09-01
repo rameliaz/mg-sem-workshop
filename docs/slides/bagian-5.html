@@ -6,11 +6,11 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e44360b8a8db1e130c7792fece1c8032.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.10.3">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="Rizqy Amelia Zein">
-  <meta name="dcterms.date" content="2026-06-25">
+  <meta name="dcterms.date" content="2026-09-01">
   <title>Multi-group SEM – Dasar-Dasar Structural Equation Modeling (SEM)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -21,10 +21,13 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -205,7 +208,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Rizqy Amelia Zein 
+Rizqy Amelia Zein
 </div>
         <p class="quarto-title-affiliation">
             <a href="https://psikologi.unair.ac.id/dosen-rizqy-amelia-zein/"><em>Departemen Psikologi, Universitas Airlangga</em></a>
@@ -216,7 +219,7 @@ Rizqy Amelia Zein
     </div>
 </div>
 
-  <p class="date">2026-06-25</p>
+  <p class="date">2026-09-01</p>
 </section>
 <section id="outline" class="slide level2">
 <h2><em>Outline</em></h2>
@@ -487,7 +490,7 @@ Rizqy Amelia Zein
 <ul>
 <li class="fragment"><p>Lihat tanda <em>factor loading</em>, apakah <strong>arahnya sudah benar</strong> (negatif/positif) dan <em>p-value</em>nya</p></li>
 <li class="fragment"><p>Lihat <em>standardized parameter estimates</em> untuk tahu apakah ada <em>factor loading</em> yang <strong>nilainya diatas kewajaran</strong></p></li>
-<li class="fragment"><p>Lakukan pengujian <em>measurement invariance</em> dengan mengasumsikan beberapa <em>factor loading</em> sama di berbagai kelompok yang berbeda <i class="fa-solid fa-circle-arrow-right"></i> akan kita lakukan di <a href="..\slides/bagian-6.html">Bagian 6</a></p></li>
+<li class="fragment"><p>Lakukan pengujian <em>measurement invariance</em> dengan mengasumsikan beberapa <em>factor loading</em> sama di berbagai kelompok yang berbeda <i class="fa-solid fa-circle-arrow-right"></i> akan kita lakukan di <a href="../slides/bagian-6.html">Bagian 6</a></p></li>
 <li class="fragment"><p>Cek <em>error variance</em>. Apabila <em>error variance</em> mendekati nol, hal tsb lebih mungkin disebabkan oleh adanya <em>outlier</em>, kurangnya jumlah sampel, atau kurangnya jumlah indikator</p></li>
 </ul></li>
 </ul>
@@ -540,13 +543,13 @@ Rizqy Amelia Zein
 </div>
 </div><div class="column" style="width:60%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>semTools<span class="sc">::</span><span class="fu">findRMSEAsamplesize</span>(</span>
-<span id="cb1-2"><a></a>  <span class="at">rmsea0 =</span> <span class="fl">0.05</span>,  <span class="co"># RMSEA di bawah H0 (batas close fit)</span></span>
-<span id="cb1-3"><a></a>  <span class="at">rmseaA =</span> <span class="fl">0.08</span>,  <span class="co"># RMSEA sesungguhnya (true model, acceptable fit)</span></span>
-<span id="cb1-4"><a></a>  <span class="at">df =</span> <span class="dv">4</span>,         <span class="co"># df model yang dihipotesiskan</span></span>
-<span id="cb1-5"><a></a>  <span class="at">power =</span> <span class="fl">0.90</span>,   <span class="co"># power yang diinginkan (1 - β)</span></span>
-<span id="cb1-6"><a></a>  <span class="at">alpha =</span> <span class="fl">0.05</span>    <span class="co"># probabilitas kesalahan tipe 1 (α)</span></span>
-<span id="cb1-7"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a>semTools<span class="sc">::</span><span class="fu">findRMSEAsamplesize</span>(</span>
+<span id="cb1-2"><a aria-label="2"></a>  <span class="at">rmsea0 =</span> <span class="fl">0.05</span>,  <span class="co"># RMSEA di bawah H0 (batas close fit)</span></span>
+<span id="cb1-3"><a aria-label="3"></a>  <span class="at">rmseaA =</span> <span class="fl">0.08</span>,  <span class="co"># RMSEA sesungguhnya (true model, acceptable fit)</span></span>
+<span id="cb1-4"><a aria-label="4"></a>  <span class="at">df =</span> <span class="dv">4</span>,         <span class="co"># df model yang dihipotesiskan</span></span>
+<span id="cb1-5"><a aria-label="5"></a>  <span class="at">power =</span> <span class="fl">0.90</span>,   <span class="co"># power yang diinginkan (1 - β)</span></span>
+<span id="cb1-6"><a aria-label="6"></a>  <span class="at">alpha =</span> <span class="fl">0.05</span>    <span class="co"># probabilitas kesalahan tipe 1 (α)</span></span>
+<span id="cb1-7"><a aria-label="7"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="callout callout-caution callout-titled callout-style-default">
 <div class="callout-body">
@@ -570,7 +573,7 @@ Rizqy Amelia Zein
 <p><strong>Demonstrasi <em>power analysis</em> dengan <a href="https://pamlj.github.io/index.html"><code>PAMLj</code></a></strong></p>
 </div>
 <div class="callout-content">
-<p><em>A priori power analysis</em> dengan mempertimbangkan parameter spesifik dalam model dapat dilakukan dengan <em>module</em> <a href="https://pamlj.github.io/index.html"><code>PAMLj</code></a>, yang asalnya menggunakan <a href="https://moshagen.github.io/semPower/"><code>semPower</code></a> di <i class="fa-brands fa-r-project"></i>. <a href="..\materials/power.omv">Unduh demonstrasinya di sini</a>.</p>
+<p><em>A priori power analysis</em> dengan mempertimbangkan parameter spesifik dalam model dapat dilakukan dengan <em>module</em> <a href="https://pamlj.github.io/index.html"><code>PAMLj</code></a>, yang asalnya menggunakan <a href="https://moshagen.github.io/semPower/"><code>semPower</code></a> di <i class="fa-brands fa-r-project"></i>. <a href="../materials/power.omv">Unduh demonstrasinya di sini</a>.</p>
 </div>
 </div>
 </div>
@@ -700,7 +703,7 @@ Rizqy Amelia Zein
 <section id="ada-pertanyaan" class="slide level2">
 <h2>Ada pertanyaan❓</h2>
 
-<img data-src="..\slides/libs/closing.JPG" class="quarto-figure quarto-figure-center r-stretch"><div class="callout callout-note callout-titled callout-style-default">
+<img data-src="../slides/libs/closing.JPG" class="quarto-figure quarto-figure-center r-stretch"><div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">

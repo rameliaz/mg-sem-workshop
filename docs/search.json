@@ -4,979 +4,1670 @@
     "href": "slides/bagian-6.html#outline",
     "title": "Multigroup Structural Equation Modeling (MGSEM)",
     "section": "Outline",
-    "text": "Outline\n\nKapan perlu menggunakan MG-SEM?\nMeasurement invariance\n\nConfigural invariance\nWeak/metric invariance\nStrong/scalar invariance\nStrict/residual invariance\nHomogeneity of latent variable variances\nHomogeneity of factor means\n\nMengevaluasi measurement invariance\nMenuliskan hasil analisis MG-SEM dalam laporan penelitian"
+    "text": "Outline\n\nKapan perlu menggunakan MG-SEM?\nMeasurement invariance\n\nConfigural invariance\nWeak/metric invariance\nStrong/scalar invariance\nStrict/residual invariance\nHomogeneity of latent variable variances\nHomogeneity of factor means\n\nMengevaluasi measurement invariance\nMenuliskan hasil analisis MG-SEM dalam laporan penelitian",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 6: MG SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-6.html#multigroup-sem-untuk-apa",
     "href": "slides/bagian-6.html#multigroup-sem-untuk-apa",
     "title": "Multigroup Structural Equation Modeling (MGSEM)",
     "section": "Multigroup SEM: untuk apa?",
-    "text": "Multigroup SEM: untuk apa?\n\nInvariance  apakah dalam kondisi di subkelompok yang beragam ketika melakukan pengukuran, alat ukur selalu mengukur atribut ukur yang sama\nMeasurement invariance  dua atau lebih kelompok memiliki properti psikometrik yang sama, yaitu variabel laten dalam model pengukuran adalah konstruk yang sama\nKetika membandingkan model pengukuran di dua atau lebih kelompok yang berbeda, untuk menyimpulkan terjadinya invariance, maka peneliti akan menginginkan perubahan chi-square (Δχ²) yang p-valuenya &gt; α\n\nArtinya, menambah constraint invariance seharusnya tidak memperburuk fit model secara signifikan\n\nKalau kita berniat melakukan perbandingan performa alat ukur di dua kelompok sampel yang berbeda, maka kita lebih baik menggunakan means-covariance matrix bukan variance-covariance matrix  ingat logika t-test dan anova"
+    "text": "Multigroup SEM: untuk apa?\n\nInvariance  apakah dalam kondisi di subkelompok yang beragam ketika melakukan pengukuran, alat ukur selalu mengukur atribut ukur yang sama\nMeasurement invariance  dua atau lebih kelompok memiliki properti psikometrik yang sama, yaitu variabel laten dalam model pengukuran adalah konstruk yang sama\nKetika membandingkan model pengukuran di dua atau lebih kelompok yang berbeda, untuk menyimpulkan terjadinya invariance, maka peneliti akan menginginkan perubahan chi-square (Δχ²) yang p-valuenya &gt; α\n\nArtinya, menambah constraint invariance seharusnya tidak memperburuk fit model secara signifikan\n\nKalau kita berniat melakukan perbandingan performa alat ukur di dua kelompok sampel yang berbeda, maka kita lebih baik menggunakan means-covariance matrix bukan variance-covariance matrix  ingat logika t-test dan anova",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 6: MG SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-6.html#means-dan-intercept",
     "href": "slides/bagian-6.html#means-dan-intercept",
     "title": "Multigroup Structural Equation Modeling (MGSEM)",
     "section": "Means dan intercept",
-    "text": "Means dan intercept\n\n\n\nKalau kita masukkan mean variabel laten ke dalam model, maka intercept-nya juga harus dimasukkan dalam model\nMean dan intercept adalah ukuran lokasi variabel, dimana…\n\nMean variabel laten adalah komponen yang dibagi bersama oleh semua indikator\nIntercept adalah nilai dasar/baseline yang berbeda untuk masing-masing item, yaitu expected score ketika nilai variabel laten = 0"
+    "text": "Means dan intercept\n\n\n\nKalau kita masukkan mean variabel laten ke dalam model, maka intercept-nya juga harus dimasukkan dalam model\nMean dan intercept adalah ukuran lokasi variabel, dimana…\n\nMean variabel laten adalah komponen yang dibagi bersama oleh semua indikator\nIntercept adalah nilai dasar/baseline yang berbeda untuk masing-masing item, yaitu expected score ketika nilai variabel laten = 0",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 6: MG SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-6.html#means-dan-intercept-1",
     "href": "slides/bagian-6.html#means-dan-intercept-1",
     "title": "Multigroup Structural Equation Modeling (MGSEM)",
     "section": "Means dan intercept",
-    "text": "Means dan intercept\n\n\n\nDalam model pengukuran: skor kasar (observed) = intercept + (factor loading × mean variabel laten) + error  ingat logika regresi linear\n\nArtinya, skor yang kita ukur ditentukan dua hal sekaligus: intercept item dan mean variabel laten, yang keduanya harus dimasukkan bersama agar model bisa memisahkan kontribusi masing-masing\n\nIntercept disimbolkan dengan segitiga dan..\n\nHanya bisa memberikan direct effect pada item/observed variable"
+    "text": "Means dan intercept\n\n\n\nDalam model pengukuran: skor kasar (observed) = intercept + (factor loading × mean variabel laten) + error  ingat logika regresi linear\n\nArtinya, skor yang kita ukur ditentukan dua hal sekaligus: intercept item dan mean variabel laten, yang keduanya harus dimasukkan bersama agar model bisa memisahkan kontribusi masing-masing\n\nIntercept disimbolkan dengan segitiga dan..\n\nHanya bisa memberikan direct effect pada item/observed variable",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 6: MG SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-6.html#jenis-jenis-measurement-invariance-1",
     "href": "slides/bagian-6.html#jenis-jenis-measurement-invariance-1",
     "title": "Multigroup Structural Equation Modeling (MGSEM)",
     "section": "Jenis-jenis measurement invariance 1️⃣",
-    "text": "Jenis-jenis measurement invariance 1️⃣\n\nConfigural\n\nJenis ini adalah yang paling dasar, yang mengasumsikan bahwa model memiliki struktur yang sama di semua kelompok\nKarena hanya struktur faktor (laten) yang sama, sehingga belum ada yang bisa dibandingkan secara bermakna antar kelompok.\nOleh karena itu, semua kelompok harus memiliki jumlah faktor/variabel laten dan jumlah variabel indikator/observed yang sama\nTidak ada ketentuan bahwa parameter di dalam model harus setara di semua kelompok  tidak ada between-group comparison\nUntuk mengeksekusi configural invariance tinggal menambahkan grouping variable di jamovi pada bagian options"
+    "text": "Jenis-jenis measurement invariance 1️⃣\n\nConfigural\n\nJenis ini adalah yang paling dasar, yang mengasumsikan bahwa model memiliki struktur yang sama di semua kelompok\nKarena hanya struktur faktor (laten) yang sama, sehingga belum ada yang bisa dibandingkan secara bermakna antar kelompok.\nOleh karena itu, semua kelompok harus memiliki jumlah faktor/variabel laten dan jumlah variabel indikator/observed yang sama\nTidak ada ketentuan bahwa parameter di dalam model harus setara di semua kelompok  tidak ada between-group comparison\nUntuk mengeksekusi configural invariance tinggal menambahkan grouping variable di jamovi pada bagian options",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 6: MG SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-6.html#jenis-jenis-measurement-invariance-2",
     "href": "slides/bagian-6.html#jenis-jenis-measurement-invariance-2",
     "title": "Multigroup Structural Equation Modeling (MGSEM)",
     "section": "Jenis-jenis measurement invariance 2️⃣",
-    "text": "Jenis-jenis measurement invariance 2️⃣\n\nWeak/metric\n\nFactor loading harus sama pada setiap kelompok, tetapi varians variabel laten boleh bervariasi\nDinamai weak karena asumsinya masih lemah untuk menyimpulkan bahwa faktor laten ekuivalen di semua kelompok\nHubungan antar variabel laten (misalnya korelasi atau regresi) bisa dibandingkan\nUntuk mengeksekusinya di jamovi, klik opsi Multi-group analysis, tambahkan data pengelompokan di factor for multi-group analysis dan centang pilihan loadings pada equality constraints"
+    "text": "Jenis-jenis measurement invariance 2️⃣\n\nWeak/metric\n\nFactor loading harus sama pada setiap kelompok, tetapi varians variabel laten boleh bervariasi\nDinamai weak karena asumsinya masih lemah untuk menyimpulkan bahwa faktor laten ekuivalen di semua kelompok\nHubungan antar variabel laten (misalnya korelasi atau regresi) bisa dibandingkan\nUntuk mengeksekusinya di jamovi, klik opsi Multi-group analysis, tambahkan data pengelompokan di factor for multi-group analysis dan centang pilihan loadings pada equality constraints",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 6: MG SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-6.html#jenis-jenis-measurement-invariance-3",
     "href": "slides/bagian-6.html#jenis-jenis-measurement-invariance-3",
     "title": "Multigroup Structural Equation Modeling (MGSEM)",
     "section": "Jenis-jenis measurement invariance 3️⃣",
-    "text": "Jenis-jenis measurement invariance 3️⃣\n\nStrong/scalar\n\nSelain factor loading harus sama, strong invariance mensyaratkan intercept harus sama juga\nKetika membatasi/constraining intercept, maka latent means boleh bervariasi (dan dibandingkan) di berbagai kelompok\nMengapa intercept harus diconstraint agar setara di semua item? Bayangkan dua termometer mengukur suhu ruangan yang sama (e.g., termometer celcius dan fahrenheit)\n\nTermometer fahrenheit dikalibrasi 32° lebih tinggi dari celcius (intercept berbeda), sehingga ketika kedua termometer menunjukkan angka berbeda pada temperatur/suhu yang sama, bukan karena suhunya substantively berbeda tetapi karena baseline-nya yang berbeda\nJika intercept tidak dibuat setara antar kelompok, perbedaan skor bisa berasal dari perbedaan baseline, bukan perbedaan konstruk yang sebenarnya"
+    "text": "Jenis-jenis measurement invariance 3️⃣\n\nStrong/scalar\n\nSelain factor loading harus sama, strong invariance mensyaratkan intercept harus sama juga\nKetika membatasi/constraining intercept, maka latent means boleh bervariasi (dan dibandingkan) di berbagai kelompok\nMengapa intercept harus diconstraint agar setara di semua item? Bayangkan dua termometer mengukur suhu ruangan yang sama (e.g., termometer celcius dan fahrenheit)\n\nTermometer fahrenheit dikalibrasi 32° lebih tinggi dari celcius (intercept berbeda), sehingga ketika kedua termometer menunjukkan angka berbeda pada temperatur/suhu yang sama, bukan karena suhunya substantively berbeda tetapi karena baseline-nya yang berbeda\nJika intercept tidak dibuat setara antar kelompok, perbedaan skor bisa berasal dari perbedaan baseline, bukan perbedaan konstruk yang sebenarnya",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 6: MG SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-6.html#jenis-jenis-measurement-invariance-3-1",
     "href": "slides/bagian-6.html#jenis-jenis-measurement-invariance-3-1",
     "title": "Multigroup Structural Equation Modeling (MGSEM)",
     "section": "Jenis-jenis measurement invariance 3️⃣",
-    "text": "Jenis-jenis measurement invariance 3️⃣\n\nStrong/scalar\n\nDengan asumsi strong invariance ekuivalensi variabel laten lebih didukung bukti yang kuat\nUntuk mengeksekusinya di jamovi, klik opsi Multi-group analysis, tambahkan data pengelompokan di factor for multi-group analysis dan centang pilihan loadings dan intercepts pada equality constraints"
+    "text": "Jenis-jenis measurement invariance 3️⃣\n\nStrong/scalar\n\nDengan asumsi strong invariance ekuivalensi variabel laten lebih didukung bukti yang kuat\nUntuk mengeksekusinya di jamovi, klik opsi Multi-group analysis, tambahkan data pengelompokan di factor for multi-group analysis dan centang pilihan loadings dan intercepts pada equality constraints",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 6: MG SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-6.html#jenis-jenis-measurement-invariance-4",
     "href": "slides/bagian-6.html#jenis-jenis-measurement-invariance-4",
     "title": "Multigroup Structural Equation Modeling (MGSEM)",
     "section": "Jenis-jenis measurement invariance 4️⃣",
-    "text": "Jenis-jenis measurement invariance 4️⃣\n\nStrict/residuals\n\nSelain factor loading dan intercept harus sama, strict invariance mensyaratkan varians error/residual sama juga\nBiasanya asumsi ini tidak terlalu diperlukan untuk membandingkan variabel laten di masing-masing kelompok\nUntuk mengeksekusinya di jamovi, klik opsi Multi-group analysis, tambahkan data pengelompokan di factor for multi-group analysis dan centang pilihan loadings, intercepts dan residuals pada equality constraints"
+    "text": "Jenis-jenis measurement invariance 4️⃣\n\nStrict/residuals\n\nSelain factor loading dan intercept harus sama, strict invariance mensyaratkan varians error/residual sama juga\nBiasanya asumsi ini tidak terlalu diperlukan untuk membandingkan variabel laten di masing-masing kelompok\nUntuk mengeksekusinya di jamovi, klik opsi Multi-group analysis, tambahkan data pengelompokan di factor for multi-group analysis dan centang pilihan loadings, intercepts dan residuals pada equality constraints",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 6: MG SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-6.html#jenis-jenis-measurement-invariance-5",
     "href": "slides/bagian-6.html#jenis-jenis-measurement-invariance-5",
     "title": "Multigroup Structural Equation Modeling (MGSEM)",
     "section": "Jenis-jenis measurement invariance 5️⃣",
-    "text": "Jenis-jenis measurement invariance 5️⃣\n\nHomogenitas varians variabel laten\n\nUntuk melihat apakah varians variabel laten setara di masing-masing kelompok\nKalau tidak terpenuhi berarti kelompok dengan varians variabel laten yang lebih kecil menggunakan rentang konstruk yang lebih sempit\nUntuk mengeksekusinya klik opsi Multi-group analysis, tambahkan data pengelompokan di factor for multi-group analysis dan centang pilihan latent variances pada equality constraints\n\nHomogenitas factor means\n\nUntuk melihat apakah ada perbedaan mean variabel laten di masing-masing kelompok\nProsedur yang sama dengan anova atau t-test, i.e., membandingkan mean antarkelompok\nUntuk mengeksekusinya klik opsi Multi-group analysis, tambahkan data pengelompokan di factor for multi-group analysis dan centang pilihan means pada equality constraints"
+    "text": "Jenis-jenis measurement invariance 5️⃣\n\nHomogenitas varians variabel laten\n\nUntuk melihat apakah varians variabel laten setara di masing-masing kelompok\nKalau tidak terpenuhi berarti kelompok dengan varians variabel laten yang lebih kecil menggunakan rentang konstruk yang lebih sempit\nUntuk mengeksekusinya klik opsi Multi-group analysis, tambahkan data pengelompokan di factor for multi-group analysis dan centang pilihan latent variances pada equality constraints\n\nHomogenitas factor means\n\nUntuk melihat apakah ada perbedaan mean variabel laten di masing-masing kelompok\nProsedur yang sama dengan anova atau t-test, i.e., membandingkan mean antarkelompok\nUntuk mengeksekusinya klik opsi Multi-group analysis, tambahkan data pengelompokan di factor for multi-group analysis dan centang pilihan means pada equality constraints",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 6: MG SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-6.html#evaluasi-measurement-invariance",
     "href": "slides/bagian-6.html#evaluasi-measurement-invariance",
     "title": "Multigroup Structural Equation Modeling (MGSEM)",
     "section": "Evaluasi measurement invariance",
-    "text": "Evaluasi measurement invariance\nUmumnya ada dua cara yaitu\n\nPendekatan statistik\n\nKarena struktur data yang hirarkis, maka untuk mengevaluasi invariance perlu beberapa langkah\nDalam pendekatan statistik, peneliti dapat mengevaluasi perubahan χ² (Δχ²) ketika membandingkan model antar kelompok\nSeharusnya ketika constraint model ditambah, maka Δχ² tidak signifikan, sehingga diperoleh p-value dari Δχ² &gt; α (misalnya 0.05)\n\nPendekatan modeling\n\nPendekatan modeling menggunakan approximate fit indices (AFI) untuk menyimpulkan invariance\nYang bisa digunakan adalah comparative fit index (CFI) dan McDonald’s noncentrality fit index (MFI), sehingga ketika perubahan (Δ) CFI dan MFI antar model sangat kecil (ΔCFI ≤ 0.01; Cheung & Rensvold, 2002), kita dapat simpulkan model invariance ✅"
+    "text": "Evaluasi measurement invariance\nUmumnya ada dua cara yaitu\n\nPendekatan statistik\n\nKarena struktur data yang hirarkis, maka untuk mengevaluasi invariance perlu beberapa langkah\nDalam pendekatan statistik, peneliti dapat mengevaluasi perubahan χ² (Δχ²) ketika membandingkan model antar kelompok\nSeharusnya ketika constraint model ditambah, maka Δχ² tidak signifikan, sehingga diperoleh p-value dari Δχ² &gt; α (misalnya 0.05)\n\nPendekatan modeling\n\nPendekatan modeling menggunakan approximate fit indices (AFI) untuk menyimpulkan invariance\nYang bisa digunakan adalah comparative fit index (CFI) dan McDonald’s noncentrality fit index (MFI), sehingga ketika perubahan (Δ) CFI dan MFI antar model sangat kecil (ΔCFI ≤ 0.01; Cheung & Rensvold, 2002), kita dapat simpulkan model invariance ✅",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 6: MG SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-6.html#perbandingannya",
     "href": "slides/bagian-6.html#perbandingannya",
     "title": "Multigroup Structural Equation Modeling (MGSEM)",
     "section": "Perbandingannya",
-    "text": "Perbandingannya\n\n\n\n\n\n\n\nBaujean, A.A. (2014). Latent Variable Modeling Using R: A step-by-step guide. New York: Routledge."
+    "text": "Perbandingannya\n\n\n\n\n\n\n\nBaujean, A.A. (2014). Latent Variable Modeling Using R: A step-by-step guide. New York: Routledge.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 6: MG SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-6.html#demonstrasi-multigroup-sem",
     "href": "slides/bagian-6.html#demonstrasi-multigroup-sem",
     "title": "Multigroup Structural Equation Modeling (MGSEM)",
     "section": "Demonstrasi multigroup SEM",
-    "text": "Demonstrasi multigroup SEM\n\nMari kita lihat contoh penggunaan MGSEM\nUnduh datasetnya disini"
+    "text": "Demonstrasi multigroup SEM\n\nMari kita lihat contoh penggunaan MGSEM\nUnduh datasetnya disini",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 6: MG SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-6.html#latihan-mandiri-6-terakhir-mencoba-multigroup-sem",
     "href": "slides/bagian-6.html#latihan-mandiri-6-terakhir-mencoba-multigroup-sem",
     "title": "Multigroup Structural Equation Modeling (MGSEM)",
     "section": "Latihan mandiri 6️⃣ (terakhir 🙏): Mencoba multigroup SEM",
-    "text": "Latihan mandiri 6️⃣ (terakhir 🙏): Mencoba multigroup SEM\n\n\n\nUnduh Dataset Latihan SEM\nUnduh Kamus Data disini\nSilahkan buat hipotesisnya, lalu spesifikasi model SEM dari variabel yang tersedia di dataset. Satu model sedikitnya mengandung 2 variabel laten.\nLakukan MGSEM dengan membandingkan model laki-laki dan perempuan"
+    "text": "Latihan mandiri 6️⃣ (terakhir 🙏): Mencoba multigroup SEM\n\n\n\nUnduh Dataset Latihan SEM\nUnduh Kamus Data disini\nSilahkan buat hipotesisnya, lalu spesifikasi model SEM dari variabel yang tersedia di dataset. Satu model sedikitnya mengandung 2 variabel laten.\nLakukan MGSEM dengan membandingkan model laki-laki dan perempuan",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 6: MG SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-6.html#ada-pertanyaan",
     "href": "slides/bagian-6.html#ada-pertanyaan",
     "title": "Multigroup Structural Equation Modeling (MGSEM)",
     "section": "Ada pertanyaan❓",
-    "text": "Ada pertanyaan❓\n\n\n\n\n\n\n\nNote\n\n\n\nPaparan disusun dengan menggunakan  dan Quarto dengan template dari UNAIR Theme.\nKontak saya via  amelia.zein@psikologi.unair.ac.id"
+    "text": "Ada pertanyaan❓\n\n\n\n\n\n\n\nNote\n\n\n\nPaparan disusun dengan menggunakan  dan Quarto dengan template dari UNAIR Theme.\nKontak saya via  amelia.zein@psikologi.unair.ac.id",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 6: MG SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-4.html#outline",
     "href": "slides/bagian-4.html#outline",
     "title": "Confirmatory Factor Analysis (CFA)",
     "section": "Outline",
-    "text": "Outline\n\nDefinisi factor analysis\nExploratory vs confirmatory factor analysis\nKapan menggunakan CFA?\nModel pengukuran reflektif vs formatif\nModel pengukuran congeneric, tau equivalence, dan paralel\nConstraining parameter dalam model CFA\nCorrelated error variances\nMetode estimasi\nAverage Variance Extracted (AVE) dan validitas diskriminan\nMenuliskan hasil analisis CFA dalam laporan penelitian"
+    "text": "Outline\n\nDefinisi factor analysis\nExploratory vs confirmatory factor analysis\nKapan menggunakan CFA?\nModel pengukuran reflektif vs formatif\nModel pengukuran congeneric, tau equivalence, dan paralel\nConstraining parameter dalam model CFA\nCorrelated error variances\nMetode estimasi\nAverage Variance Extracted (AVE) dan validitas diskriminan\nMenuliskan hasil analisis CFA dalam laporan penelitian",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 4: CFA"
+    ]
   },
   {
     "objectID": "slides/bagian-4.html#analisis-faktor",
     "href": "slides/bagian-4.html#analisis-faktor",
     "title": "Confirmatory Factor Analysis (CFA)",
     "section": "Analisis faktor",
-    "text": "Analisis faktor\n\n\n\nAwalnya dikembangkan oleh Charles Spearman (1904) untuk menyelidiki g factor theory of intelligence\nTerdiri dari:\n\nExploratory factor analysis (EFA)\nConfirmatory factor analysis (CFA)\n\nAnalisis faktor digunakan untuk menguji model common variance\nMengasumsikan bahwa dua atau lebih observed variable memiliki shared/common variance (commonality atau common factor)  ditunjukkan dengan factor loading"
+    "text": "Analisis faktor\n\n\n\nAwalnya dikembangkan oleh Charles Spearman (1904) untuk menyelidiki g factor theory of intelligence\nTerdiri dari:\n\nExploratory factor analysis (EFA)\nConfirmatory factor analysis (CFA)\n\nAnalisis faktor digunakan untuk menguji model common variance\nMengasumsikan bahwa dua atau lebih observed variable memiliki shared/common variance (commonality atau common factor)  ditunjukkan dengan factor loading",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 4: CFA"
+    ]
   },
   {
     "objectID": "slides/bagian-4.html#efa-vs.-cfa",
     "href": "slides/bagian-4.html#efa-vs.-cfa",
     "title": "Confirmatory Factor Analysis (CFA)",
     "section": "EFA vs. CFA",
-    "text": "EFA vs. CFA\n\n\n\n\n\n\n\nExploratory Factor Analysis\nConfirmatory Factor Analysis\n\n\n\n\nMencari model yang cocok menggambarkan data, sehingga peneliti mengeksplorasi berbagai pilihan model yang cocok kemudian mencari rasionalisasi teoritisnya\nMenguji hipotesis yang sudah ditentukan sebelumnya, sehingga peneliti ingin tahu apakah hipotesisnya didukung oleh data\n\n\nJumlah faktor belum diketahui sampai peneliti melakukan analisisnya\nJumlah faktor sudah ditentukan sebelum mengambil data\n\n\nPeneliti tidak memiliki model yang dihipotesiskan a priori\nPeneliti sudah memiliki model hipotesis yang ditentukan a priori"
+    "text": "EFA vs. CFA\n\n\n\n\n\n\n\nExploratory Factor Analysis\nConfirmatory Factor Analysis\n\n\n\n\nMencari model yang cocok menggambarkan data, sehingga peneliti mengeksplorasi berbagai pilihan model yang cocok kemudian mencari rasionalisasi teoritisnya\nMenguji hipotesis yang sudah ditentukan sebelumnya, sehingga peneliti ingin tahu apakah hipotesisnya didukung oleh data\n\n\nJumlah faktor belum diketahui sampai peneliti melakukan analisisnya\nJumlah faktor sudah ditentukan sebelum mengambil data\n\n\nPeneliti tidak memiliki model yang dihipotesiskan a priori\nPeneliti sudah memiliki model hipotesis yang ditentukan a priori",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 4: CFA"
+    ]
   },
   {
     "objectID": "slides/bagian-4.html#confirmatory-factor-analysis",
     "href": "slides/bagian-4.html#confirmatory-factor-analysis",
     "title": "Confirmatory Factor Analysis (CFA)",
     "section": "Confirmatory factor analysis",
-    "text": "Confirmatory factor analysis\n\nMenyediakan solusi untuk mengkoreksi bias karena measurement error ketika mengestimasi korelasi antar-variabel\nCara kerjanya adalah dengan membandingkan variance-covariance matrix yang dihipotesiskan dengan variance-covariance matrix pada data (sampel)\nPerhatian 📢\n\nSangat tidak disarankan untuk melakukan EFA kemudian CFA pada sampel yang sama\nKarena generating hypothesis dengan testing hypothesis adalah dua proses yang berbeda yang tidak seharusnya dilakukan pada sampel yang sama\nKalau hal tsb dilakukan, maka tentu saja peneliti akan mendapatkan hasil yang ‘sesuai prediksinya’\nIngat Texas Sharpshooter Fallacy"
+    "text": "Confirmatory factor analysis\n\nMenyediakan solusi untuk mengkoreksi bias karena measurement error ketika mengestimasi korelasi antar-variabel\nCara kerjanya adalah dengan membandingkan variance-covariance matrix yang dihipotesiskan dengan variance-covariance matrix pada data (sampel)\nPerhatian 📢\n\nSangat tidak disarankan untuk melakukan EFA kemudian CFA pada sampel yang sama\nKarena generating hypothesis dengan testing hypothesis adalah dua proses yang berbeda yang tidak seharusnya dilakukan pada sampel yang sama\nKalau hal tsb dilakukan, maka tentu saja peneliti akan mendapatkan hasil yang ‘sesuai prediksinya’\nIngat Texas Sharpshooter Fallacy",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 4: CFA"
+    ]
   },
   {
     "objectID": "slides/bagian-4.html#texas-sharpshooter-fallacy",
     "href": "slides/bagian-4.html#texas-sharpshooter-fallacy",
     "title": "Confirmatory Factor Analysis (CFA)",
     "section": "Texas sharpshooter fallacy",
-    "text": "Texas sharpshooter fallacy"
+    "text": "Texas sharpshooter fallacy",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 4: CFA"
+    ]
   },
   {
     "objectID": "slides/bagian-4.html#model-reflektif-vs.-formatif",
     "href": "slides/bagian-4.html#model-reflektif-vs.-formatif",
     "title": "Confirmatory Factor Analysis (CFA)",
     "section": "Model Reflektif vs. Formatif",
-    "text": "Model Reflektif vs. Formatif\n\n\nReflektif\n\nVariabel laten menjelaskan mengapa variabel indikator bervariasi\nMisalnya  individu dengan intelegensi yang tinggi akan mendapatkan nilai yang berbeda dalam tes matematika\nBiasanya mengasumsikan bahwa kovariansi antar-error (residual) variabel indikator = 0 (local independence)  artinya, korelasi antar-indikator sepenuhnya dijelaskan oleh variabel laten, tidak ada sumber varians bersama lain di luar model\nMayoritas konstruk psikologis mengasumsikan model pengukuran reflektif\n\n\nFormatif\n\nVariabel observed menjelaskan mengapa variabel laten bervariasi\nMisalnya  gengsi sebuah mobil ditentukan oleh usia mobil, kondisi, harga, dan intensitas pemakaian\nKorelasi antara variabel observed tidak diketahui\nBiasanya digunakan untuk menentukan indeks pada konstruk yang orthogonal (contoh  contohnya, adverse childhood experience)\nTetapi, sangat jarang konstruk psikologi yang mengasumsikan model formatif"
+    "text": "Model Reflektif vs. Formatif\n\n\nReflektif\n\nVariabel laten menjelaskan mengapa variabel indikator bervariasi\nMisalnya  individu dengan intelegensi yang tinggi akan mendapatkan nilai yang berbeda dalam tes matematika\nBiasanya mengasumsikan bahwa kovariansi antar-error (residual) variabel indikator = 0 (local independence)  artinya, korelasi antar-indikator sepenuhnya dijelaskan oleh variabel laten, tidak ada sumber varians bersama lain di luar model\nMayoritas konstruk psikologis mengasumsikan model pengukuran reflektif\n\n\nFormatif\n\nVariabel observed menjelaskan mengapa variabel laten bervariasi\nMisalnya  gengsi sebuah mobil ditentukan oleh usia mobil, kondisi, harga, dan intensitas pemakaian\nKorelasi antara variabel observed tidak diketahui\nBiasanya digunakan untuk menentukan indeks pada konstruk yang orthogonal (contoh  contohnya, adverse childhood experience)\nTetapi, sangat jarang konstruk psikologi yang mengasumsikan model formatif",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 4: CFA"
+    ]
   },
   {
     "objectID": "slides/bagian-4.html#model-reflektif",
     "href": "slides/bagian-4.html#model-reflektif",
     "title": "Confirmatory Factor Analysis (CFA)",
     "section": "Model Reflektif",
-    "text": "Model Reflektif"
+    "text": "Model Reflektif",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 4: CFA"
+    ]
   },
   {
     "objectID": "slides/bagian-4.html#model-formatif",
     "href": "slides/bagian-4.html#model-formatif",
     "title": "Confirmatory Factor Analysis (CFA)",
     "section": "Model Formatif",
-    "text": "Model Formatif"
+    "text": "Model Formatif",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 4: CFA"
+    ]
   },
   {
     "objectID": "slides/bagian-4.html#jenis-jenis-model-pengukuran",
     "href": "slides/bagian-4.html#jenis-jenis-model-pengukuran",
     "title": "Confirmatory Factor Analysis (CFA)",
     "section": "Jenis-jenis model pengukuran",
-    "text": "Jenis-jenis model pengukuran\nAda tiga macam model pengukuran:\n\nModel congeneric\nModel tau equivalence\nModel parallel"
+    "text": "Jenis-jenis model pengukuran\nAda tiga macam model pengukuran:\n\nModel congeneric\nModel tau equivalence\nModel parallel",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 4: CFA"
+    ]
   },
   {
     "objectID": "slides/bagian-4.html#model-congeneric",
     "href": "slides/bagian-4.html#model-congeneric",
     "title": "Confirmatory Factor Analysis (CFA)",
     "section": "Model congeneric",
-    "text": "Model congeneric\n\n\n\nModel yang paling longgar asumsunya dan secara default untuk mengestimasi reliabilitas untuk analisis SEM di berbagai perangkat lunak\nAsumsinya, skala, error variance, dan factor loading boleh berbeda (dibebaskan)\nKoefisien reliabilitas skala yang mengasumsikan model pengukuran congeneric  ω, McDonald’s ω, ω total (ωt), Revelle’s ω, composite reliability."
+    "text": "Model congeneric\n\n\n\nModel yang paling longgar asumsunya dan secara default untuk mengestimasi reliabilitas untuk analisis SEM di berbagai perangkat lunak\nAsumsinya, skala, error variance, dan factor loading boleh berbeda (dibebaskan)\nKoefisien reliabilitas skala yang mengasumsikan model pengukuran congeneric  ω, McDonald’s ω, ω total (ωt), Revelle’s ω, composite reliability.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 4: CFA"
+    ]
   },
   {
     "objectID": "slides/bagian-4.html#model-tau-equivalence",
     "href": "slides/bagian-4.html#model-tau-equivalence",
     "title": "Confirmatory Factor Analysis (CFA)",
     "section": "Model tau equivalence",
-    "text": "Model tau equivalence\n\n\n\nModel yang sedikit lebih rigid daripada congeneric\nAsumsinya, skala dan error variance boleh berbeda (dibebaskan), namun factor loading harus sama (dibatasi)\nKetika asumsi tau equivalence dipenuhi, maka Cronbach’s α dapat digunakan\nKoefisien reliabilitas: Formula Rulon, KR-20, Flanagan-Rulon, Guttman’s λ3, λ4, Hoyt method\n\nPada kebanyakan kasus, jarang sekali ada konstruk psikologi yang memenuhi asumsi tau equivalence, sehingga sangat disarankan untuk tidak menggunakan koefisien reliabilitas yang mengasumsikan tau equivalence"
+    "text": "Model tau equivalence\n\n\n\nModel yang sedikit lebih rigid daripada congeneric\nAsumsinya, skala dan error variance boleh berbeda (dibebaskan), namun factor loading harus sama (dibatasi)\nKetika asumsi tau equivalence dipenuhi, maka Cronbach’s α dapat digunakan\nKoefisien reliabilitas: Formula Rulon, KR-20, Flanagan-Rulon, Guttman’s λ3, λ4, Hoyt method\n\nPada kebanyakan kasus, jarang sekali ada konstruk psikologi yang memenuhi asumsi tau equivalence, sehingga sangat disarankan untuk tidak menggunakan koefisien reliabilitas yang mengasumsikan tau equivalence",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 4: CFA"
+    ]
   },
   {
     "objectID": "slides/bagian-4.html#model-parallel",
     "href": "slides/bagian-4.html#model-parallel",
     "title": "Confirmatory Factor Analysis (CFA)",
     "section": "Model parallel",
-    "text": "Model parallel\n\n\n\nModel yang paling rigid\nAsumsinya, skala, error variance, dan factor loading harus sama (dibatasi)\n\nKoefisien reliabilitas: Spearman-Brown’s Formula, Standardized α."
+    "text": "Model parallel\n\n\n\nModel yang paling rigid\nAsumsinya, skala, error variance, dan factor loading harus sama (dibatasi)\n\nKoefisien reliabilitas: Spearman-Brown’s Formula, Standardized α.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 4: CFA"
+    ]
   },
   {
     "objectID": "slides/bagian-4.html#constraining-parameter-model",
     "href": "slides/bagian-4.html#constraining-parameter-model",
     "title": "Confirmatory Factor Analysis (CFA)",
     "section": "Constraining parameter model",
-    "text": "Constraining parameter model\n\nMembatasi/menentukan varians untuk setiap variabel/faktor laten\n\nDilakukan untuk mengeluarkan standardized estimates\nFactor loading di z-scorekan\nSehingga defaultnya, mean variabel laten = 0, variance = 1\n\nMembatasi/menentukan error covariance untuk setiap variabel/faktor laten = 0\n\nDilakukan agar error variance bebas diestimasi"
+    "text": "Constraining parameter model\n\nMembatasi/menentukan varians untuk setiap variabel/faktor laten\n\nDilakukan untuk mengeluarkan standardized estimates\nFactor loading di z-scorekan\nSehingga defaultnya, mean variabel laten = 0, variance = 1\n\nMembatasi/menentukan error covariance untuk setiap variabel/faktor laten = 0\n\nDilakukan agar error variance bebas diestimasi",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 4: CFA"
+    ]
   },
   {
     "objectID": "slides/bagian-4.html#apa-yang-terjadi-ketika-error-variance-berkorelasi",
     "href": "slides/bagian-4.html#apa-yang-terjadi-ketika-error-variance-berkorelasi",
     "title": "Confirmatory Factor Analysis (CFA)",
     "section": "Apa yang terjadi ketika error variance berkorelasi?",
-    "text": "Apa yang terjadi ketika error variance berkorelasi?\n\n\nKedua variabel indikator tersebut mengukur variabel laten lain di luar model (unique factor)\nBisa jadi karena ada item unfavourable dalam skala\nKemungkinan konstruk laten bukan konstruk tunggal (multidimensi)\nPerhatikan justifikasi teori ketika menambah error covariance"
+    "text": "Apa yang terjadi ketika error variance berkorelasi?\n\n\nKedua variabel indikator tersebut mengukur variabel laten lain di luar model (unique factor)\nBisa jadi karena ada item unfavourable dalam skala\nKemungkinan konstruk laten bukan konstruk tunggal (multidimensi)\nPerhatikan justifikasi teori ketika menambah error covariance",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 4: CFA"
+    ]
   },
   {
     "objectID": "slides/bagian-4.html#skor-faktor-factor-scores",
     "href": "slides/bagian-4.html#skor-faktor-factor-scores",
     "title": "Confirmatory Factor Analysis (CFA)",
     "section": "Skor faktor (factor scores)",
-    "text": "Skor faktor (factor scores)\n\nApabila kita memiliki informasi tentang factor loading, maka kita bisa menghitung factor scores  estimasi (fitted) skor variabel laten\nCaranya dengan mengali factor loading dengan skor kasar  metode regresi\nNamun ingat, mengalikan factor loading dengan skor kasar masih berisiko mendapatkan estimasi yang bias. Itulah yang menyebabkan factor scores akan berubah ketika model diujikan pada kelompok sampel yang berbeda.\nAda tiga cara yang bisa digunakan untuk menghitung factor scores:\n\nMetode Regresi  dengan mengoptimalisasi validitas konstruk (variance explained)\nMetode Bartlett  mengasumsikan variabel indikator tidak saling berkorelasi\nMetode Anderson-Rubin  mengasumsikan variabel indikator saling berkorelasi"
+    "text": "Skor faktor (factor scores)\n\nApabila kita memiliki informasi tentang factor loading, maka kita bisa menghitung factor scores  estimasi (fitted) skor variabel laten\nCaranya dengan mengali factor loading dengan skor kasar  metode regresi\nNamun ingat, mengalikan factor loading dengan skor kasar masih berisiko mendapatkan estimasi yang bias. Itulah yang menyebabkan factor scores akan berubah ketika model diujikan pada kelompok sampel yang berbeda.\nAda tiga cara yang bisa digunakan untuk menghitung factor scores:\n\nMetode Regresi  dengan mengoptimalisasi validitas konstruk (variance explained)\nMetode Bartlett  mengasumsikan variabel indikator tidak saling berkorelasi\nMetode Anderson-Rubin  mengasumsikan variabel indikator saling berkorelasi",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 4: CFA"
+    ]
   },
   {
     "objectID": "slides/bagian-4.html#memilih-metode-estimasi",
     "href": "slides/bagian-4.html#memilih-metode-estimasi",
     "title": "Confirmatory Factor Analysis (CFA)",
     "section": "Memilih metode estimasi",
-    "text": "Memilih metode estimasi\n\nMaximum Likelihood  distribusi data (multivariate) normal, level pengukuran harus interval/continuous, tidak ada data missing\n\nGunakan Robust Maximum Likelihood (MLR) ketika asumsi multivariate normality tidak terpenuhi\n\nGeneralized-least squares  menggunakan asumsi yang sama dengan ML namun performanya kurang baik apabila dibandingkan dengan ML\nWeighted-least squares  dapat digunakan pada data kategorikal (nominal dan ordinal), estimasi menggunakan polychoric correlation matrix. Varian WLS, misalnya: WLSM, WLSMV, WLSMVS.\nDiagonally weighted-least squares  dapat digunakan pada data kategorikal, bekerja dengan baik pada sampel yang relatif kecil dan data yang tidak berdistribusi normal\n\n\n\n\n\n\n\nTips memilih estimator\n\n\nUntuk skala Likert dengan 6–7 pilihan, dengan respons yang relatif simetris, MLR sudah baik performanya. Untuk skala Likert 4 pilihan dengan distribusi yang sangat juling (skew), WLSMV merupakan pilihan yang lebih aman (Rhemtulla, Brosseau-Liard & Savalei, 2012)."
+    "text": "Memilih metode estimasi\n\nMaximum Likelihood  distribusi data (multivariate) normal, level pengukuran harus interval/continuous, tidak ada data missing\n\nGunakan Robust Maximum Likelihood (MLR) ketika asumsi multivariate normality tidak terpenuhi\n\nGeneralized-least squares  menggunakan asumsi yang sama dengan ML namun performanya kurang baik apabila dibandingkan dengan ML\nWeighted-least squares  dapat digunakan pada data kategorikal (nominal dan ordinal), estimasi menggunakan polychoric correlation matrix. Varian WLS, misalnya: WLSM, WLSMV, WLSMVS.\nDiagonally weighted-least squares  dapat digunakan pada data kategorikal, bekerja dengan baik pada sampel yang relatif kecil dan data yang tidak berdistribusi normal\n\n\n\n\n\n\n\nTips memilih estimator\n\n\nUntuk skala Likert dengan 6–7 pilihan, dengan respons yang relatif simetris, MLR sudah baik performanya. Untuk skala Likert 4 pilihan dengan distribusi yang sangat juling (skew), WLSMV merupakan pilihan yang lebih aman (Rhemtulla, Brosseau-Liard & Savalei, 2012).",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 4: CFA"
+    ]
   },
   {
     "objectID": "slides/bagian-4.html#average-variance-extracted-ave",
     "href": "slides/bagian-4.html#average-variance-extracted-ave",
     "title": "Confirmatory Factor Analysis (CFA)",
     "section": "Average Variance Extracted (AVE)",
-    "text": "Average Variance Extracted (AVE)\n\nAVE mengukur seberapa besar varians pada variabel indikator yang dijelaskan oleh faktor laten, dibandingkan dengan varians yang berasal dari error\nFormula AVE (dengan λᵢ = standardized factor loading tiap indikator):\n\n\\[AVE = \\frac{\\sum \\lambda_i^2}{\\sum \\lambda_i^2 + \\sum (1 - \\lambda_i^2)}\\]\n\nIntinya: dari seluruh varians indikator, berapa proporsinya yang merupakan benar-benar “sinyal” dari konstruk dan bukan noise?\nKriteria  AVE ≥ 0.50 (Fornell & Larcker, 1981)\n\nAVE &lt; 0.50 berarti error variance lebih besar daripada construct variance  validitas konvergen tidak terpenuhi"
+    "text": "Average Variance Extracted (AVE)\n\nAVE mengukur seberapa besar varians pada variabel indikator yang dijelaskan oleh faktor laten, dibandingkan dengan varians yang berasal dari error\nFormula AVE (dengan λᵢ = standardized factor loading tiap indikator):\n\n\\[AVE = \\frac{\\sum \\lambda_i^2}{\\sum \\lambda_i^2 + \\sum (1 - \\lambda_i^2)}\\]\n\nIntinya: dari seluruh varians indikator, berapa proporsinya yang merupakan benar-benar “sinyal” dari konstruk dan bukan noise?\nKriteria  AVE ≥ 0.50 (Fornell & Larcker, 1981)\n\nAVE &lt; 0.50 berarti error variance lebih besar daripada construct variance  validitas konvergen tidak terpenuhi",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 4: CFA"
+    ]
   },
   {
     "objectID": "slides/bagian-4.html#ave-vs.-composite-reliability-cr",
     "href": "slides/bagian-4.html#ave-vs.-composite-reliability-cr",
     "title": "Confirmatory Factor Analysis (CFA)",
     "section": "AVE vs. Composite Reliability (CR)",
-    "text": "AVE vs. Composite Reliability (CR)\n\n\n\n\n\n\n\n\n\nAVE\nCR\n\n\n\n\nYang diukur\nRasio sinyal (common variance) dibandingkan total varians per indikator\nKonsistensi internal skala\n\n\nSensitif terhadap\nLoading rendah sangat menekan nilai AVE\nKurang sensitif — loading tinggi dapat mengompensasi\n\n\nKriteria\n≥ 0.50\n≥ 0.70\n\n\nKegunaan utama\nValiditas konvergen & diskriminan\nReliabilitas (alternatif Cronbach’s α)\n\n\n\n\n\n\n\n\n\nCR tinggi belum tentu AVE tinggi\n\n\nSkala dengan loading sedang (misalnya semua λ = 0.60, 5 item) bisa menghasilkan CR ≈ 0.78 namun AVE ≈ 0.36. CR fokus pada “apakah item-item saling berkaitan?”; AVE fokus pada “apakah item-item benar-benar mewakili konstruknya?”"
+    "text": "AVE vs. Composite Reliability (CR)\n\n\n\n\n\n\n\n\n\nAVE\nCR\n\n\n\n\nYang diukur\nRasio sinyal (common variance) dibandingkan total varians per indikator\nKonsistensi internal skala\n\n\nSensitif terhadap\nLoading rendah sangat menekan nilai AVE\nKurang sensitif — loading tinggi dapat mengompensasi\n\n\nKriteria\n≥ 0.50\n≥ 0.70\n\n\nKegunaan utama\nValiditas konvergen & diskriminan\nReliabilitas (alternatif Cronbach’s α)\n\n\n\n\n\n\n\n\n\nCR tinggi belum tentu AVE tinggi\n\n\nSkala dengan loading sedang (misalnya semua λ = 0.60, 5 item) bisa menghasilkan CR ≈ 0.78 namun AVE ≈ 0.36. CR fokus pada “apakah item-item saling berkaitan?”; AVE fokus pada “apakah item-item benar-benar mewakili konstruknya?”",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 4: CFA"
+    ]
   },
   {
     "objectID": "slides/bagian-4.html#validitas-diskriminan",
     "href": "slides/bagian-4.html#validitas-diskriminan",
     "title": "Confirmatory Factor Analysis (CFA)",
     "section": "Validitas Diskriminan",
-    "text": "Validitas Diskriminan\n\nSelain validitas konvergen, AVE juga digunakan untuk menguji validitas diskriminan — apakah setiap konstruk benar-benar berbeda dari konstruk lainnya\nKriteria Fornell-Larcker: AVE setiap konstruk harus lebih besar dari kuadrat korelasi antara konstruk tersebut dengan konstruk lain mana pun\n\n\\[AVE_A &gt; r^2_{AB} \\quad \\text{dan} \\quad AVE_B &gt; r^2_{AB}\\]\n\nArtinya: konstruk A berbagi lebih banyak varians dengan indikatornya sendiri daripada dengan konstruk B\nApabila kriteria ini tidak terpenuhi  kemungkinan dua konstruk terlalu mirip dan tidak dapat dibedakan secara empiris\n\n\n\n\n\n\n\nCara membaca tabel Fornell-Larcker\n\n\nLetakkan √AVE tiap konstruk di diagonal tabel korelasi antar-konstruk. Validitas diskriminan terpenuhi apabila nilai diagonal (√AVE) lebih besar dari semua nilai di baris dan kolom yang sama."
+    "text": "Validitas Diskriminan\n\nSelain validitas konvergen, AVE juga digunakan untuk menguji validitas diskriminan — apakah setiap konstruk benar-benar berbeda dari konstruk lainnya\nKriteria Fornell-Larcker: AVE setiap konstruk harus lebih besar dari kuadrat korelasi antara konstruk tersebut dengan konstruk lain mana pun\n\n\\[AVE_A &gt; r^2_{AB} \\quad \\text{dan} \\quad AVE_B &gt; r^2_{AB}\\]\n\nArtinya: konstruk A berbagi lebih banyak varians dengan indikatornya sendiri daripada dengan konstruk B\nApabila kriteria ini tidak terpenuhi  kemungkinan dua konstruk terlalu mirip dan tidak dapat dibedakan secara empiris\n\n\n\n\n\n\n\nCara membaca tabel Fornell-Larcker\n\n\nLetakkan √AVE tiap konstruk di diagonal tabel korelasi antar-konstruk. Validitas diskriminan terpenuhi apabila nilai diagonal (√AVE) lebih besar dari semua nilai di baris dan kolom yang sama.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 4: CFA"
+    ]
   },
   {
     "objectID": "slides/bagian-4.html#menggunakan-semtoolsb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206272616e647320722d70726f6a656374203e7d7d-untuk-menghitung-ave",
     "href": "slides/bagian-4.html#menggunakan-semtoolsb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206272616e647320722d70726f6a656374203e7d7d-untuk-menghitung-ave",
     "title": "Confirmatory Factor Analysis (CFA)",
     "section": "Menggunakan semTools untuk menghitung AVE",
-    "text": "Menggunakan semTools untuk menghitung AVE\nSetelah menjalankan model CFA, gunakan semTools::reliability() untuk menghitung AVE dan CR sekaligus:\n\nlibrary(lavaan); library(semTools)\n\nfit &lt;- cfa(model, data = data_anda, estimator = \"MLR\")\n\nreliability(fit)"
+    "text": "Menggunakan semTools untuk menghitung AVE\nSetelah menjalankan model CFA, gunakan semTools::reliability() untuk menghitung AVE dan CR sekaligus:\n\nlibrary(lavaan); library(semTools)\n\nfit &lt;- cfa(model, data = data_anda, estimator = \"MLR\")\n\nreliability(fit)",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 4: CFA"
+    ]
   },
   {
     "objectID": "slides/bagian-4.html#menggunakan-semtoolsb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206272616e647320722d70726f6a656374203e7d7d-untuk-menghitung-ave-1",
     "href": "slides/bagian-4.html#menggunakan-semtoolsb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206272616e647320722d70726f6a656374203e7d7d-untuk-menghitung-ave-1",
     "title": "Confirmatory Factor Analysis (CFA)",
     "section": "Menggunakan semTools untuk menghitung AVE",
-    "text": "Menggunakan semTools untuk menghitung AVE\nOutput yang dihasilkan mencakup informasi berikut ini:\n\n\n\n\n\n\n\nBaris output\nKeterangan\n\n\n\n\nalpha\nCronbach’s α (mengasumsikan tau equivalence)\n\n\nomega\nMcDonald’s ω (congeneric)\n\n\nomega2 / omega3\nVarian ω untuk model yang lebih kompleks\n\n\nave\nAVE per faktor laten\n\n\n\n\n\n\n\n\n\njamovi menyediakan perhitungan AVE + composite reliability\n\n\nKarena SEMLj juga menggunakan semTools, maka AVE tersedia bersama composite reliability."
+    "text": "Menggunakan semTools untuk menghitung AVE\nOutput yang dihasilkan mencakup informasi berikut ini:\n\n\n\n\n\n\n\nBaris output\nKeterangan\n\n\n\n\nalpha\nCronbach’s α (mengasumsikan tau equivalence)\n\n\nomega\nMcDonald’s ω (congeneric)\n\n\nomega2 / omega3\nVarian ω untuk model yang lebih kompleks\n\n\nave\nAVE per faktor laten\n\n\n\n\n\n\n\n\n\njamovi menyediakan perhitungan AVE + composite reliability\n\n\nKarena SEMLj juga menggunakan semTools, maka AVE tersedia bersama composite reliability.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 4: CFA"
+    ]
   },
   {
     "objectID": "slides/bagian-4.html#latihan-mandiri-mencoba-confirmatory-factor-analysis",
     "href": "slides/bagian-4.html#latihan-mandiri-mencoba-confirmatory-factor-analysis",
     "title": "Confirmatory Factor Analysis (CFA)",
     "section": "Latihan mandiri: Mencoba confirmatory factor analysis",
-    "text": "Latihan mandiri: Mencoba confirmatory factor analysis\n\nUnduh Dataset Latihan\nUnduh Kamus Data disini\nLakukan CFA pada skala social dominance orientation\n\nDiukur dengan skala Likert, 6 item dengan 7 pilihan jawaban\n\nLaporkan model fit, factor loading, dan multivariate normality\nLakukan penyesuaian apabila perlu"
+    "text": "Latihan mandiri: Mencoba confirmatory factor analysis\n\nUnduh Dataset Latihan\nUnduh Kamus Data disini\nLakukan CFA pada skala social dominance orientation\n\nDiukur dengan skala Likert, 6 item dengan 7 pilihan jawaban\n\nLaporkan model fit, factor loading, dan multivariate normality\nLakukan penyesuaian apabila perlu",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 4: CFA"
+    ]
   },
   {
     "objectID": "slides/bagian-4.html#ada-pertanyaan",
     "href": "slides/bagian-4.html#ada-pertanyaan",
     "title": "Confirmatory Factor Analysis (CFA)",
     "section": "Ada pertanyaan❓",
-    "text": "Ada pertanyaan❓\n\n\n\n\n\n\n\nNote\n\n\n\nPaparan disusun dengan menggunakan  dan Quarto dengan template dari UNAIR Theme.\nKontak saya via  amelia.zein@psikologi.unair.ac.id"
+    "text": "Ada pertanyaan❓\n\n\n\n\n\n\n\nNote\n\n\n\nPaparan disusun dengan menggunakan  dan Quarto dengan template dari UNAIR Theme.\nKontak saya via  amelia.zein@psikologi.unair.ac.id",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 4: CFA"
+    ]
   },
   {
     "objectID": "slides/bagian-2.html#outline",
     "href": "slides/bagian-2.html#outline",
     "title": "Korelasi",
     "section": "Outline",
-    "text": "Outline\n\nJenis-jenis koefisien korelasi\nFaktor-faktor yang membuat koefisien korelasi bervariasi\nKoreksi atenuasi dan measurement error\nVariance-covariance dan correlation matrix\nWARNING! Covariance/correlation matrix is not positive definite\nHeywood dan ultra-Heywood case\nBivariat, part, dan partial correlation\nMetrik variabel (standardized vs unstandardized)"
+    "text": "Outline\n\nJenis-jenis koefisien korelasi\nFaktor-faktor yang membuat koefisien korelasi bervariasi\nKoreksi atenuasi dan measurement error\nVariance-covariance dan correlation matrix\nWARNING! Covariance/correlation matrix is not positive definite\nHeywood dan ultra-Heywood case\nBivariat, part, dan partial correlation\nMetrik variabel (standardized vs unstandardized)",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 2: Korelasi"
+    ]
   },
   {
     "objectID": "slides/bagian-2.html#mengapa-memulai-dari-korelasi-1",
     "href": "slides/bagian-2.html#mengapa-memulai-dari-korelasi-1",
     "title": "Korelasi",
     "section": "Mengapa memulai dari korelasi?",
-    "text": "Mengapa memulai dari korelasi?\n\nSEM merupakan teknik yang digunakan untuk mengestimasi korelasi antar-variabel\nUntuk melakukan SEM, peneliti tidak harus menginput data kasar (raw data), tetapi ada pilihan untuk menginput correlation atau matriks variance-covariance.\nKalaupun yang tersedia adalah raw data, maka software akan membuat matriks variance-covariance sebelum mengestimasi parameter model."
+    "text": "Mengapa memulai dari korelasi?\n\nSEM merupakan teknik yang digunakan untuk mengestimasi korelasi antar-variabel\nUntuk melakukan SEM, peneliti tidak harus menginput data kasar (raw data), tetapi ada pilihan untuk menginput correlation atau matriks variance-covariance.\nKalaupun yang tersedia adalah raw data, maka software akan membuat matriks variance-covariance sebelum mengestimasi parameter model.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 2: Korelasi"
+    ]
   },
   {
     "objectID": "slides/bagian-2.html#jenis-jenis-korelasi",
     "href": "slides/bagian-2.html#jenis-jenis-korelasi",
     "title": "Korelasi",
     "section": "Jenis-jenis korelasi",
-    "text": "Jenis-jenis korelasi\n\n\n\nKoefisien Korelasi\nLevel Pengukuran\n\n\n\n\nPearson’s product moment\nKedua variabel setidaknya interval\n\n\nSpearman’s rank dan Kendall’s tau\nKedua variabel ordinal\n\n\nPhi, contingency table\nKedua variabel nominal\n\n\nPoint biserial\nVariabel interval dengan nominal\n\n\nGamma, rank biserial\nVariabel ordinal dengan nominal\n\n\nBiserial\nVariabel interval dengan dummy"
+    "text": "Jenis-jenis korelasi\n\n\n\nKoefisien Korelasi\nLevel Pengukuran\n\n\n\n\nPearson’s product moment\nKedua variabel setidaknya interval\n\n\nSpearman’s rank dan Kendall’s tau\nKedua variabel ordinal\n\n\nPhi, contingency table\nKedua variabel nominal\n\n\nPoint biserial\nVariabel interval dengan nominal\n\n\nGamma, rank biserial\nVariabel ordinal dengan nominal\n\n\nBiserial\nVariabel interval dengan dummy",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 2: Korelasi"
+    ]
   },
   {
     "objectID": "slides/bagian-2.html#jenis-jenis-korelasi-1",
     "href": "slides/bagian-2.html#jenis-jenis-korelasi-1",
     "title": "Korelasi",
     "section": "Jenis-jenis korelasi",
-    "text": "Jenis-jenis korelasi\n\n\n\nKoefisien Korelasi\nLevel Pengukuran\n\n\n\n\nPolyserial\nVariabel interval dengan variabel underlying continuity\n\n\nTetrachoric\nKedua variabel dummy (dikotomis)\n\n\nPolychoric\nKedua variabel ordinal (dengan kontinuitas implisit)"
+    "text": "Jenis-jenis korelasi\n\n\n\nKoefisien Korelasi\nLevel Pengukuran\n\n\n\n\nPolyserial\nVariabel interval dengan variabel underlying continuity\n\n\nTetrachoric\nKedua variabel dummy (dikotomis)\n\n\nPolychoric\nKedua variabel ordinal (dengan kontinuitas implisit)",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 2: Korelasi"
+    ]
   },
   {
     "objectID": "slides/bagian-2.html#faktor-faktor-yang-mempengaruhi-arah-dan-magnitude-korelasi-1",
     "href": "slides/bagian-2.html#faktor-faktor-yang-mempengaruhi-arah-dan-magnitude-korelasi-1",
     "title": "Korelasi",
     "section": "Faktor-faktor yang mempengaruhi arah dan magnitude korelasi 1️⃣",
-    "text": "Faktor-faktor yang mempengaruhi arah dan magnitude korelasi 1️⃣\n\nLevel pengukuran (apakah variabel tersebut nominal, ordinal, interval, atau rasio)\n\nSehingga berdampak pada variabilitas (restriction range) dan normalitas data\n\nLinearitas\n\nSemua teknik korelasi mengasumsikan korelasi antar-variabel linier, sehingga korelasi yang tidak linier akan memberikan informasi tidak adanya korelasi (padahal tidak selalu).\n\nAdanya data outlier  adanya data yang outlier membuat estimasi korelasi menjadi inflated.\nKoreksi atenuasi  akan dibahas di bagian selanjutnya."
+    "text": "Faktor-faktor yang mempengaruhi arah dan magnitude korelasi 1️⃣\n\nLevel pengukuran (apakah variabel tersebut nominal, ordinal, interval, atau rasio)\n\nSehingga berdampak pada variabilitas (restriction range) dan normalitas data\n\nLinearitas\n\nSemua teknik korelasi mengasumsikan korelasi antar-variabel linier, sehingga korelasi yang tidak linier akan memberikan informasi tidak adanya korelasi (padahal tidak selalu).\n\nAdanya data outlier  adanya data yang outlier membuat estimasi korelasi menjadi inflated.\nKoreksi atenuasi  akan dibahas di bagian selanjutnya.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 2: Korelasi"
+    ]
   },
   {
     "objectID": "slides/bagian-2.html#faktor-faktor-yang-mempengaruhi-arah-dan-magnitude-korelasi-2",
     "href": "slides/bagian-2.html#faktor-faktor-yang-mempengaruhi-arah-dan-magnitude-korelasi-2",
     "title": "Korelasi",
     "section": "Faktor-faktor yang mempengaruhi arah dan magnitude korelasi 2️⃣",
-    "text": "Faktor-faktor yang mempengaruhi arah dan magnitude korelasi 2️⃣\n\nJumlah sampel\n\nJumlah sampel yang terlalu sedikit akan memberikan estimasi yang kurang akurat (karena standard errornya besar)\n\nSampling variance\n\nYang kemudian berefek pada confidence interval, effect size, dan statistical power\n\nMissing data\n\nKalau data tidak lengkap, estimasi koefisien korelasi akan langsung terdampak.\nAda beberapa pilihan:  listwise deletion, pairwise deletion, dan data imputation.\nListwise deletion tidak disarankan karena membuat jumlah sampel turun drastis  mengurangi statistical power."
+    "text": "Faktor-faktor yang mempengaruhi arah dan magnitude korelasi 2️⃣\n\nJumlah sampel\n\nJumlah sampel yang terlalu sedikit akan memberikan estimasi yang kurang akurat (karena standard errornya besar)\n\nSampling variance\n\nYang kemudian berefek pada confidence interval, effect size, dan statistical power\n\nMissing data\n\nKalau data tidak lengkap, estimasi koefisien korelasi akan langsung terdampak.\nAda beberapa pilihan:  listwise deletion, pairwise deletion, dan data imputation.\nListwise deletion tidak disarankan karena membuat jumlah sampel turun drastis  mengurangi statistical power.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 2: Korelasi"
+    ]
   },
   {
     "objectID": "slides/bagian-2.html#variance-covariance-correlation-matrix-1",
     "href": "slides/bagian-2.html#variance-covariance-correlation-matrix-1",
     "title": "Korelasi",
     "section": "Variance-covariance & correlation matrix 1️⃣",
-    "text": "Variance-covariance & correlation matrix 1️⃣\n\nUntuk melakukan SEM, maka perangkat lunak membutuhkan variance-covariance matrix untuk mengestimasi parameter model\nPada bagian diagonal variance-covariance matrix menunjukkan varians, sedangkan sisanya adalah covariance\n\n\n\nJumlah nilai unik (non-redundant information) dalam variance-covariance matrix adalah p(p+1)/2\n\ndimana p adalah jumlah observed variable\nSehingga dengan contoh di atas maka jumlah nilai unik adalah 3(3+1)/2=6, yaitu 3 varians (diagonal) dan 3 covariance (sisanya)"
+    "text": "Variance-covariance & correlation matrix 1️⃣\n\nUntuk melakukan SEM, maka perangkat lunak membutuhkan variance-covariance matrix untuk mengestimasi parameter model\nPada bagian diagonal variance-covariance matrix menunjukkan varians, sedangkan sisanya adalah covariance\n\n\n\nJumlah nilai unik (non-redundant information) dalam variance-covariance matrix adalah p(p+1)/2\n\ndimana p adalah jumlah observed variable\nSehingga dengan contoh di atas maka jumlah nilai unik adalah 3(3+1)/2=6, yaitu 3 varians (diagonal) dan 3 covariance (sisanya)",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 2: Korelasi"
+    ]
   },
   {
     "objectID": "slides/bagian-2.html#variance-covariance-correlation-matrix-2",
     "href": "slides/bagian-2.html#variance-covariance-correlation-matrix-2",
     "title": "Korelasi",
     "section": "Variance-covariance & correlation matrix 2️⃣",
-    "text": "Variance-covariance & correlation matrix 2️⃣\n\nSebagian besar perangkat lunak SEM menggunakan variance-covariance matrix bukan correlation matrix\n\nIngat❗ korelasi pada dasarnya adalah standardized covariance.\n\nTETAPI, menggunakan correlation matrix sebagai input SEM biasanya lebih sering menghasilkan parameter yang statistically significant tapi standard error-nya tidak akurat.\nOleh karena itu, meskipun user menginput correlation matrix, maka perangkat lunak akan mengubahnya dulu menjadi variance-covariance matrix, baru parameter model dapat diestimasi."
+    "text": "Variance-covariance & correlation matrix 2️⃣\n\nSebagian besar perangkat lunak SEM menggunakan variance-covariance matrix bukan correlation matrix\n\nIngat❗ korelasi pada dasarnya adalah standardized covariance.\n\nTETAPI, menggunakan correlation matrix sebagai input SEM biasanya lebih sering menghasilkan parameter yang statistically significant tapi standard error-nya tidak akurat.\nOleh karena itu, meskipun user menginput correlation matrix, maka perangkat lunak akan mengubahnya dulu menjadi variance-covariance matrix, baru parameter model dapat diestimasi.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 2: Korelasi"
+    ]
   },
   {
     "objectID": "slides/bagian-2.html#koreksi-atenuasi",
     "href": "slides/bagian-2.html#koreksi-atenuasi",
     "title": "Korelasi",
     "section": "Koreksi Atenuasi",
-    "text": "Koreksi Atenuasi\n\nAsumsi dasar dalam Psikometri adalah skor kasar (observed score) mengandung skor murni (true score) dan measurement error, sehingga dalam mengestimasi korelasi, measurement error perlu “dikontrol secara statistik” agar estimasi korelasi lebih akurat.\nDengan teknik koreksi atenuasi, kita dapat ‘mengontrol’ measurement error, sehingga kita dapat mengestimasi korelasi antar-variabel menggunakan true score-nya.\nTetapi apabila reliabilitas skala kita kurang baik, maka setelah dikoreksi koefisien korelasi bisa lebih dari 1 ❗\nMisalnya diketahui bahwa korelasi observed scores antar dua variabel (rab) adalah 0.9 dan reliabilitas skala a (Cronbach’s α) adalah 0.6 dan skala b adalah 0.7, maka:"
+    "text": "Koreksi Atenuasi\n\nAsumsi dasar dalam Psikometri adalah skor kasar (observed score) mengandung skor murni (true score) dan measurement error, sehingga dalam mengestimasi korelasi, measurement error perlu “dikontrol secara statistik” agar estimasi korelasi lebih akurat.\nDengan teknik koreksi atenuasi, kita dapat ‘mengontrol’ measurement error, sehingga kita dapat mengestimasi korelasi antar-variabel menggunakan true score-nya.\nTetapi apabila reliabilitas skala kita kurang baik, maka setelah dikoreksi koefisien korelasi bisa lebih dari 1 ❗\nMisalnya diketahui bahwa korelasi observed scores antar dua variabel (rab) adalah 0.9 dan reliabilitas skala a (Cronbach’s α) adalah 0.6 dan skala b adalah 0.7, maka:",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 2: Korelasi"
+    ]
   },
   {
     "objectID": "slides/bagian-2.html#warning-covariancecorrelation-matrix-is-not-positive-definite",
     "href": "slides/bagian-2.html#warning-covariancecorrelation-matrix-is-not-positive-definite",
     "title": "Korelasi",
     "section": "WARNING! Covariance/correlation matrix is not positive definite",
-    "text": "WARNING! Covariance/correlation matrix is not positive definite\n\nApa yang terjadi?\nPerangkat lunak akan menghentikan proses estimasi dan memberikan pesan non-positive definite"
+    "text": "WARNING! Covariance/correlation matrix is not positive definite\n\nApa yang terjadi?\nPerangkat lunak akan menghentikan proses estimasi dan memberikan pesan non-positive definite",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 2: Korelasi"
+    ]
   },
   {
     "objectID": "slides/bagian-2.html#matrik-korelasi-dengan-non-positive-definite",
     "href": "slides/bagian-2.html#matrik-korelasi-dengan-non-positive-definite",
     "title": "Korelasi",
     "section": "Matrik korelasi dengan non-positive definite",
-    "text": "Matrik korelasi dengan non-positive definite\n\nKoefisien korelasi yang nilainya ≥1 menyebabkan matriks korelasi menjadi non-positive definite\n\nArtinya, parameter model tidak mungkin diestimasi\n\nMengapa terjadi?\n\nData didapatkan dari observasi yang tidak independen (linear dependency)\nTerjadi multikolinearitas\nJumlah sampel lebih sedikit dari jumlah variabel yang diuji dalam model\nSepasang variabel berbagi varians negatif atau tidak sama sekali (0)  Heywood case\nVarians, kovarians, dan korelasi nilainya diluar batas kewajaran\nKesalahan mengatur pembatasan (constraint) pada parameter tertentu"
+    "text": "Matrik korelasi dengan non-positive definite\n\nKoefisien korelasi yang nilainya ≥1 menyebabkan matriks korelasi menjadi non-positive definite\n\nArtinya, parameter model tidak mungkin diestimasi\n\nMengapa terjadi?\n\nData didapatkan dari observasi yang tidak independen (linear dependency)\nTerjadi multikolinearitas\nJumlah sampel lebih sedikit dari jumlah variabel yang diuji dalam model\nSepasang variabel berbagi varians negatif atau tidak sama sekali (0)  Heywood case\nVarians, kovarians, dan korelasi nilainya diluar batas kewajaran\nKesalahan mengatur pembatasan (constraint) pada parameter tertentu",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 2: Korelasi"
+    ]
   },
   {
     "objectID": "slides/bagian-2.html#heywood-dan-ultra-heywood-case",
     "href": "slides/bagian-2.html#heywood-dan-ultra-heywood-case",
     "title": "Korelasi",
     "section": "Heywood dan ultra-Heywood case",
-    "text": "Heywood dan ultra-Heywood case\n\nTerjadi ketika communalities = 1 (Heywood) atau ≥1 (ultra-Heywood), atau terjadi ketika varians measurement error bernilai negatif\n\nCommunalities adalah kuadrat dari koefisien korelasi (R2)\nApabila terjadi, maka ada yang salah dengan spesifikasi model (hipotesis)\n\nTerjadi karena\n\nCommon factor terlalu banyak/terlalu sedikit\nUkuran sampel tidak memadai\nModel SEM bukan model yang cocok untuk menguji hipotesis (alternatifnya Principal Component Analysis)\n\nYang bisa dilakukan\n\nTinjau kembali hipotesis modelnya\nKurangi jumlah faktor laten dengan ‘membuang’ jalur/korelasi yang bermasalah\nIdentifikasi variabel yang terlibat multikolinearitas"
+    "text": "Heywood dan ultra-Heywood case\n\nTerjadi ketika communalities = 1 (Heywood) atau ≥1 (ultra-Heywood), atau terjadi ketika varians measurement error bernilai negatif\n\nCommunalities adalah kuadrat dari koefisien korelasi (R2)\nApabila terjadi, maka ada yang salah dengan spesifikasi model (hipotesis)\n\nTerjadi karena\n\nCommon factor terlalu banyak/terlalu sedikit\nUkuran sampel tidak memadai\nModel SEM bukan model yang cocok untuk menguji hipotesis (alternatifnya Principal Component Analysis)\n\nYang bisa dilakukan\n\nTinjau kembali hipotesis modelnya\nKurangi jumlah faktor laten dengan ‘membuang’ jalur/korelasi yang bermasalah\nIdentifikasi variabel yang terlibat multikolinearitas",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 2: Korelasi"
+    ]
   },
   {
     "objectID": "slides/bagian-2.html#korelasi-bivariat-part-dan-partial-correlation",
     "href": "slides/bagian-2.html#korelasi-bivariat-part-dan-partial-correlation",
     "title": "Korelasi",
     "section": "Korelasi Bivariat: Part dan partial correlation",
-    "text": "Korelasi Bivariat: Part dan partial correlation"
+    "text": "Korelasi Bivariat: Part dan partial correlation",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 2: Korelasi"
+    ]
   },
   {
     "objectID": "slides/bagian-2.html#parameter-model-standardized-vs-unstandardized",
     "href": "slides/bagian-2.html#parameter-model-standardized-vs-unstandardized",
     "title": "Korelasi",
     "section": "Parameter model (standardized vs unstandardized)",
-    "text": "Parameter model (standardized vs unstandardized)\n\nUnstandardized solution/estimates\n\nDapat dibandingkan antar kelompok sampel\nMerupakan parameter yang digunakan oleh perangkat lunak untuk menghitung standard error dan taraf signifikansi (p-value)\nMembandingkan unstandardized factor loading harus melihat standard errornya juga\n\nStandardized solution/estimates\n\nHanya interpretable untuk kelompok sampel yang diuji — tidak bisa dibandingkan dengan kelompok sampel yang lain.\nBerguna untuk membandingkan factor loading antar-variabel di dalam model\nApabila variabel dalam model memiliki unit pengukuran yang berbeda, maka standardized estimates akan sangat membantu\n\nAda banyak perbedaan pendapat mengenai parameter mana yang harus dilaporkan, tetapi…\n\nSelalu laporkan unstandardized solution/estimates dan standard errornya"
+    "text": "Parameter model (standardized vs unstandardized)\n\nUnstandardized solution/estimates\n\nDapat dibandingkan antar kelompok sampel\nMerupakan parameter yang digunakan oleh perangkat lunak untuk menghitung standard error dan taraf signifikansi (p-value)\nMembandingkan unstandardized factor loading harus melihat standard errornya juga\n\nStandardized solution/estimates\n\nHanya interpretable untuk kelompok sampel yang diuji — tidak bisa dibandingkan dengan kelompok sampel yang lain.\nBerguna untuk membandingkan factor loading antar-variabel di dalam model\nApabila variabel dalam model memiliki unit pengukuran yang berbeda, maka standardized estimates akan sangat membantu\n\nAda banyak perbedaan pendapat mengenai parameter mana yang harus dilaporkan, tetapi…\n\nSelalu laporkan unstandardized solution/estimates dan standard errornya",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 2: Korelasi"
+    ]
   },
   {
     "objectID": "slides/bagian-2.html#tugas-1-membuat-correlation-matrix-dan-melakukan-koreksi-atenuasi",
     "href": "slides/bagian-2.html#tugas-1-membuat-correlation-matrix-dan-melakukan-koreksi-atenuasi",
     "title": "Korelasi",
     "section": "TUGAS 1: Membuat correlation matrix dan melakukan koreksi atenuasi",
-    "text": "TUGAS 1: Membuat correlation matrix dan melakukan koreksi atenuasi\nDemonstrasi\nMenggunakan Dataset Contoh Korelasi\n[Dataset] [Matriks di Excel]\nLatihan mandiri 1️⃣: Koreksi Atenuasi\n\nApabila diketahui reliabilitas skala masing-masing dimensi Big 5 (neu=0.78, con=0.76, agr=0.34, ext=0.45, op=0.67), buatkan matriks korelasi antar-dimensi\nLakukan koreksi atenuasi\nApakah matriksnya non-positive definite? Variabel apa saja yang terlibat?\nApa kira-kira yang menyebabkan kedua variabel tsb korelasinya non-positive definite?\n\n[Unduh Dataset]"
+    "text": "TUGAS 1: Membuat correlation matrix dan melakukan koreksi atenuasi\nDemonstrasi\nMenggunakan Dataset Contoh Korelasi\n[Dataset] [Matriks di Excel]\nLatihan mandiri 1️⃣: Koreksi Atenuasi\n\nApabila diketahui reliabilitas skala masing-masing dimensi Big 5 (neu=0.78, con=0.76, agr=0.34, ext=0.45, op=0.67), buatkan matriks korelasi antar-dimensi\nLakukan koreksi atenuasi\nApakah matriksnya non-positive definite? Variabel apa saja yang terlibat?\nApa kira-kira yang menyebabkan kedua variabel tsb korelasinya non-positive definite?\n\n[Unduh Dataset]",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 2: Korelasi"
+    ]
   },
   {
     "objectID": "slides/bagian-2.html#ada-pertanyaan",
     "href": "slides/bagian-2.html#ada-pertanyaan",
     "title": "Korelasi",
     "section": "Ada pertanyaan❓",
-    "text": "Ada pertanyaan❓\n\n\n\n\n\n\n\nNote\n\n\n\nPaparan disusun dengan menggunakan  dan Quarto dengan template dari UNAIR Theme.\nKontak saya via  amelia.zein@psikologi.unair.ac.id"
+    "text": "Ada pertanyaan❓\n\n\n\n\n\n\n\nNote\n\n\n\nPaparan disusun dengan menggunakan  dan Quarto dengan template dari UNAIR Theme.\nKontak saya via  amelia.zein@psikologi.unair.ac.id",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 2: Korelasi"
+    ]
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Multi-group Structural Equation Modeling (MG-SEM)",
     "section": "",
-    "text": "Laman web ini memuat materi tentang Multi-group Structural Equation Modeling (MG-SEM)."
+    "text": "Laman web ini memuat materi tentang Multi-group Structural Equation Modeling (MG-SEM).",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Beranda"
+    ]
   },
   {
     "objectID": "index.html#outline-materi",
     "href": "index.html#outline-materi",
     "title": "Multi-group Structural Equation Modeling (MG-SEM)",
     "section": "Outline materi",
-    "text": "Outline materi\n\n\n\n\n\n\nNoteUnduh materi dalam bentuk PDF\n\n\n\nKlik navigation bar yang mengarah pada PDF materi, kemudian tekan ctrl dan p bersamaan. Setelah window untuk print muncul, pilih Save to PDF dan klik Save.\n\n\n\nBagian 1️⃣: Pengantar\n\nApa itu structural equation modeling (SEM)?\nMengapa dan pada kondisi seperti apa SEM diperlukan?\nBeberapa pilihan perangkat lunak untuk mengeksekusi SEM\nSEM atau PLS?\nYang tidak dicakup dalam workshop serta keterbatasan jamovi\n\n Buka Materi Pengantar\n\n\nBagian 2️⃣: Korelasi\n\nJenis-jenis koefisien korelasi\nFaktor-faktor yang membuat koefisien korelasi bervariasi\nKoreksi atenuasi dan measurement error\nVariance-covariance dan correlation matrix\nWARNING! Covariance/correlation matrix is not positive definite\nHeywood dan Ultra-Heywood case\nBivariat, part, dan partial correlation\nMetrik variabel (standardized vs unstandardized)\n\n Buka Materi Korelasi\n\n\nBagian 3️⃣: Model Jalur (Path Model) dan Model Regresi\n\nDefinisi path model\nNama variabel dan koefisien jalur (path coefficients)\n\nδ (delta), ε (epsilon), ξ (ksi), η (eta), λ (lambda), γ (gamma), β (beta), φ (phi), ζ (zeta)\n\nRepresentasi visual model jalur menggunakan diagram jalur (path diagram)\nMenggambarkan hubungan antar-variabel dengan menggunakan diagram jalur\nSpesifikasi model dengan script lavaan untuk spesifikasi model jalur di module SEMLj\nAsumsi kausalitas (?) dan limitasi\n\n\n\n\n\n\n\nTipMenggambar diagram jalur\n\n\n\nUntuk menggambar diagram jalur, peserta dapat menggunakan MS Power Point, Canva, atau software lainnya yang serupa. Rekomendasi saya: gunakan draw.io yang merupakan software open source dan sangat unggul untuk menggambar berbagai macam diagram, termasuk flowchart.\n\n\n Buka Materi Path Model\n\n\nBagian 4️⃣: Confirmatory Factor Analysis (CFA)\n\nDefinisi factor analysis\nExploratory vs confirmatory factor analysis\nKapan menggunakan CFA?\nModel pengukuran reflektif vs formatif\nModel pengukuran congeneric, tau equivalence, dan paralel\nConstraining parameter dalam model CFA\nCorrelated error variances\nMetode estimasi\nAverage Variance Extracted (AVE) dan validitas diskriminan\nMenuliskan hasil analisis CFA dalam laporan penelitian\n\n Buka Materi CFA\n\n\nBagian 5️⃣: Dasar-dasar Structural Equation Modeling (SEM)\n\nDasar-Dasar SEM: Model struktural & pengukuran\nTahapan modeling dengan menggunakan SEM\n\nSpesifikasi model\nIdentifikasi model\nEstimasi model\nMenguji model\nMemodifikasi model\n\nDegree of freedom\nUnderidentified, just-identified, dan overidentified model\nJenis-jenis kriteria untuk menilai ketepatan model (model fit)\n\nModel fit\nModel comparison/Incremental fit indices\nModel parsimony\nParameter fit\n\nMenguji hipotesis\n\nStatistical power\nUkuran sampel\n\nMembedakan antara pendekatan dua-langkah dengan empat-langkah modeling dengan SEM\nMenuliskan hasil analisis SEM dalam laporan penelitian\n\n Buka Materi Dasar SEM\n\n\nBagian 6️⃣: Multigroup SEM (MG-SEM)\n\nKapan perlu menggunakan MG-SEM?\nMeasurement invariance\n\nConfigural invariance\nWeak/metric invariance\nStrong/scalar invariance\nStrict/residual invariance\nHomogeneity of latent variable variances\nHomogeneity of factor means\n\nMengevaluasi measurement invariance\nMenuliskan hasil analisis MG-SEM dalam laporan penelitian\n\n Buka Materi Multi-group SEM"
+    "text": "Outline materi\n\n\n\n\n\n\nNoteUnduh materi dalam bentuk PDF\n\n\n\nKlik navigation bar yang mengarah pada PDF materi, kemudian tekan ctrl dan p bersamaan. Setelah window untuk print muncul, pilih Save to PDF dan klik Save.\n\n\n\nBagian 1️⃣: Pengantar\n\nApa itu structural equation modeling (SEM)?\nMengapa dan pada kondisi seperti apa SEM diperlukan?\nBeberapa pilihan perangkat lunak untuk mengeksekusi SEM\nSEM atau PLS?\nYang tidak dicakup dalam workshop serta keterbatasan jamovi\n\n Buka Materi Pengantar\n\n\nBagian 2️⃣: Korelasi\n\nJenis-jenis koefisien korelasi\nFaktor-faktor yang membuat koefisien korelasi bervariasi\nKoreksi atenuasi dan measurement error\nVariance-covariance dan correlation matrix\nWARNING! Covariance/correlation matrix is not positive definite\nHeywood dan Ultra-Heywood case\nBivariat, part, dan partial correlation\nMetrik variabel (standardized vs unstandardized)\n\n Buka Materi Korelasi\n\n\nBagian 3️⃣: Model Jalur (Path Model) dan Model Regresi\n\nDefinisi path model\nNama variabel dan koefisien jalur (path coefficients)\n\nδ (delta), ε (epsilon), ξ (ksi), η (eta), λ (lambda), γ (gamma), β (beta), φ (phi), ζ (zeta)\n\nRepresentasi visual model jalur menggunakan diagram jalur (path diagram)\nMenggambarkan hubungan antar-variabel dengan menggunakan diagram jalur\nSpesifikasi model dengan script lavaan untuk spesifikasi model jalur di module SEMLj\nAsumsi kausalitas (?) dan limitasi\n\n\n\n\n\n\n\nTipMenggambar diagram jalur\n\n\n\nUntuk menggambar diagram jalur, peserta dapat menggunakan MS Power Point, Canva, atau software lainnya yang serupa. Rekomendasi saya: gunakan draw.io yang merupakan software open source dan sangat unggul untuk menggambar berbagai macam diagram, termasuk flowchart.\n\n\n Buka Materi Path Model\n\n\nBagian 4️⃣: Confirmatory Factor Analysis (CFA)\n\nDefinisi factor analysis\nExploratory vs confirmatory factor analysis\nKapan menggunakan CFA?\nModel pengukuran reflektif vs formatif\nModel pengukuran congeneric, tau equivalence, dan paralel\nConstraining parameter dalam model CFA\nCorrelated error variances\nMetode estimasi\nAverage Variance Extracted (AVE) dan validitas diskriminan\nMenuliskan hasil analisis CFA dalam laporan penelitian\n\n Buka Materi CFA\n\n\nBagian 5️⃣: Dasar-dasar Structural Equation Modeling (SEM)\n\nDasar-Dasar SEM: Model struktural & pengukuran\nTahapan modeling dengan menggunakan SEM\n\nSpesifikasi model\nIdentifikasi model\nEstimasi model\nMenguji model\nMemodifikasi model\n\nDegree of freedom\nUnderidentified, just-identified, dan overidentified model\nJenis-jenis kriteria untuk menilai ketepatan model (model fit)\n\nModel fit\nModel comparison/Incremental fit indices\nModel parsimony\nParameter fit\n\nMenguji hipotesis\n\nStatistical power\nUkuran sampel\n\nMembedakan antara pendekatan dua-langkah dengan empat-langkah modeling dengan SEM\nMenuliskan hasil analisis SEM dalam laporan penelitian\n\n Buka Materi Dasar SEM\n\n\nBagian 6️⃣: Multigroup SEM (MG-SEM)\n\nKapan perlu menggunakan MG-SEM?\nMeasurement invariance\n\nConfigural invariance\nWeak/metric invariance\nStrong/scalar invariance\nStrict/residual invariance\nHomogeneity of latent variable variances\nHomogeneity of factor means\n\nMengevaluasi measurement invariance\nMenuliskan hasil analisis MG-SEM dalam laporan penelitian\n\n Buka Materi Multi-group SEM",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Beranda"
+    ]
   },
   {
     "objectID": "index.html#referensi",
     "href": "index.html#referensi",
     "title": "Multi-group Structural Equation Modeling (MG-SEM)",
     "section": "Referensi",
-    "text": "Referensi\n\nBaujean, A.A. (2014). Latent Variable Modeling Using R: A step-by-step guide. New York: Routledge.\nGalluci, M. (2025). SEMLj: A Suite for Structural Equation Models for jamovi (v1.2.5). https://semlj.github.io/index.html\nKline, R.B. (2023). Principles and practice of structural equation modeling 5^th edition. New York: The Guildford Press.\nSchumacker, R.E. & Lomax, R.G. (2016). A Beginner’s Guide to Structural Equation Modeling (4th edition). New York: Routledge.\nVan De Schoot, R., Schmidt, P., De Beuckelaer, A., Lek, K., & Zondervan-Zwijnenburg, M. (2015). Measurement invariance. Frontiers in psychology, 6, 1064.\nPutnick, D. L., & Bornstein, M. H. (2016). Measurement invariance conventions and reporting: The state of the art and future directions for psychological research. Developmental review, 41, 71-90."
+    "text": "Referensi\n\nBaujean, A.A. (2014). Latent Variable Modeling Using R: A step-by-step guide. New York: Routledge.\nGalluci, M. (2025). SEMLj: A Suite for Structural Equation Models for jamovi (v1.2.5). https://semlj.github.io/index.html\nKline, R.B. (2023). Principles and practice of structural equation modeling 5^th edition. New York: The Guildford Press.\nSchumacker, R.E. & Lomax, R.G. (2016). A Beginner’s Guide to Structural Equation Modeling (4th edition). New York: Routledge.\nVan De Schoot, R., Schmidt, P., De Beuckelaer, A., Lek, K., & Zondervan-Zwijnenburg, M. (2015). Measurement invariance. Frontiers in psychology, 6, 1064.\nPutnick, D. L., & Bornstein, M. H. (2016). Measurement invariance conventions and reporting: The state of the art and future directions for psychological research. Developmental review, 41, 71-90.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Beranda"
+    ]
   },
   {
     "objectID": "index.html#contoh-penelitian-dengan-mg-sem",
     "href": "index.html#contoh-penelitian-dengan-mg-sem",
     "title": "Multi-group Structural Equation Modeling (MG-SEM)",
     "section": "Contoh penelitian dengan MG-SEM",
-    "text": "Contoh penelitian dengan MG-SEM\n\nRodriguez, V. J., Radusky, P. D., Kumar, M., Nemeroff, C. B., & Jones, D. (2018). Measurement invariance of the Childhood Trauma Questionnaire by gender, poverty level, and HIV status. Personalized Medicine in Psychiatry, 11, 16-22.\nLiu, Y., Millsap, R. E., West, S. G., Tein, J. Y., Tanaka, R., & Grimm, K. J. (2017). Testing measurement invariance in longitudinal data with ordered-categorical measures. Psychological methods, 22(3), 486.\nBowden, S. C., Saklofske, D. H., Van de Vijver, F. J. R., Sudarshan, N. J., & Eysenck, S. B. G. (2016). Cross-cultural measurement invariance of the Eysenck Personality Questionnaire across 33 countries. Personality and Individual Differences, 103, 53-60.\nBieda, A., Hirschfeld, G., Schönfeld, P., Brailovskaia, J., Zhang, X. C., & Margraf, J. (2017). Universal happiness? Cross-cultural measurement invariance of scales assessing positive mental health. Psychological assessment, 29(4), 408."
+    "text": "Contoh penelitian dengan MG-SEM\n\nRodriguez, V. J., Radusky, P. D., Kumar, M., Nemeroff, C. B., & Jones, D. (2018). Measurement invariance of the Childhood Trauma Questionnaire by gender, poverty level, and HIV status. Personalized Medicine in Psychiatry, 11, 16-22.\nLiu, Y., Millsap, R. E., West, S. G., Tein, J. Y., Tanaka, R., & Grimm, K. J. (2017). Testing measurement invariance in longitudinal data with ordered-categorical measures. Psychological methods, 22(3), 486.\nBowden, S. C., Saklofske, D. H., Van de Vijver, F. J. R., Sudarshan, N. J., & Eysenck, S. B. G. (2016). Cross-cultural measurement invariance of the Eysenck Personality Questionnaire across 33 countries. Personality and Individual Differences, 103, 53-60.\nBieda, A., Hirschfeld, G., Schönfeld, P., Brailovskaia, J., Zhang, X. C., & Margraf, J. (2017). Universal happiness? Cross-cultural measurement invariance of scales assessing positive mental health. Psychological assessment, 29(4), 408.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Beranda"
+    ]
   },
   {
     "objectID": "index.html#sumber-belajar-lainnya",
     "href": "index.html#sumber-belajar-lainnya",
     "title": "Multi-group Structural Equation Modeling (MG-SEM)",
     "section": "Sumber belajar lainnya",
-    "text": "Sumber belajar lainnya\n\nLearning Statistics with jamovi\nVideo tutorial jamovi dari Datalab\nMateri workshop SEM: Sacha Epskamp\nCho, E. (2016). Making Reliability Reliable: A Systematic approach to reliability coefficients. Organizational Research Methods, 19(4), 651-682."
+    "text": "Sumber belajar lainnya\n\nLearning Statistics with jamovi\nVideo tutorial jamovi dari Datalab\nMateri workshop SEM: Sacha Epskamp\nCho, E. (2016). Making Reliability Reliable: A Systematic approach to reliability coefficients. Organizational Research Methods, 19(4), 651-682.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Beranda"
+    ]
   },
   {
     "objectID": "index.html#sebelum-mulai-workshop",
     "href": "index.html#sebelum-mulai-workshop",
     "title": "Multi-group Structural Equation Modeling (MG-SEM)",
     "section": "Sebelum mulai workshop",
-    "text": "Sebelum mulai workshop\n\nSebaiknya semua peserta sudah memasang jamovi pada perangkatnya masing-masing, untuk menghindari terlalu banyaknya waktu untuk menyelesaikan troubleshooting instalasi ketika workshop.\nPeserta sangat disarankan untuk menonton video tutorial jamovi sebelum workshop untuk belajar menavigasikan menu dan fitur yang ada dalam jamovi. Cukup hanya dengan menonton bagian Welcome, Installing jamovi, dan Navigating jamovi (total durasi kurang lebih hanya 7 menit)."
+    "text": "Sebelum mulai workshop\n\nSebaiknya semua peserta sudah memasang jamovi pada perangkatnya masing-masing, untuk menghindari terlalu banyaknya waktu untuk menyelesaikan troubleshooting instalasi ketika workshop.\nPeserta sangat disarankan untuk menonton video tutorial jamovi sebelum workshop untuk belajar menavigasikan menu dan fitur yang ada dalam jamovi. Cukup hanya dengan menonton bagian Welcome, Installing jamovi, dan Navigating jamovi (total durasi kurang lebih hanya 7 menit).",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Beranda"
+    ]
   },
   {
     "objectID": "index.html#cara-instalasi-module-semlj-v1.2.5",
     "href": "index.html#cara-instalasi-module-semlj-v1.2.5",
     "title": "Multi-group Structural Equation Modeling (MG-SEM)",
     "section": "Cara instalasi module SEMLj v1.2.5",
-    "text": "Cara instalasi module SEMLj v1.2.5\nGunakan jamovi versi stabil yang terbaru (2.6.44) untuk Windows atau MacOS.\nMohon untuk menyimak video cara mengelola modules di jamovi berikut ini. Di video ini saya mencontohkan cara instalasi module GAMLj. Instalasi modules SEMj v1.2.5 mengikuti prosedur yang persis sama."
+    "text": "Cara instalasi module SEMLj v1.2.5\nGunakan jamovi versi stabil yang terbaru (2.6.44) untuk Windows atau MacOS.\nMohon untuk menyimak video cara mengelola modules di jamovi berikut ini. Di video ini saya mencontohkan cara instalasi module GAMLj. Instalasi modules SEMj v1.2.5 mengikuti prosedur yang persis sama.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Beranda"
+    ]
   },
   {
     "objectID": "index.html#tutorial-jamovi-modules",
     "href": "index.html#tutorial-jamovi-modules",
     "title": "Multi-group Structural Equation Modeling (MG-SEM)",
     "section": "Tutorial jamovi + modules",
-    "text": "Tutorial jamovi + modules\nSaat ini, sudah cukup banyak tutorial jamovi yang tersedia. Salah satu yang paling populer dan komperhensif adalah tutorial di bawah ini ⬇️\n\nSimak seluruh video tutorial di  playlist."
+    "text": "Tutorial jamovi + modules\nSaat ini, sudah cukup banyak tutorial jamovi yang tersedia. Salah satu yang paling populer dan komperhensif adalah tutorial di bawah ini ⬇️\n\nSimak seluruh video tutorial di  playlist.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Beranda"
+    ]
   },
   {
     "objectID": "index.html#evaluasi-workshop",
     "href": "index.html#evaluasi-workshop",
     "title": "Multi-group Structural Equation Modeling (MG-SEM)",
     "section": "Evaluasi workshop",
-    "text": "Evaluasi workshop\nSetelah workshop, peserta dimohon untuk mengisi kuesioner evaluasi yang dapat diakses di menu bar Survei bagian pojok kanan atas sebagai bahan evaluasi untuk meningkatkan kualitas materi workshop di masa depan."
+    "text": "Evaluasi workshop\nSetelah workshop, peserta dimohon untuk mengisi kuesioner evaluasi yang dapat diakses di menu bar Survei bagian pojok kanan atas sebagai bahan evaluasi untuk meningkatkan kualitas materi workshop di masa depan.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Beranda"
+    ]
   },
   {
     "objectID": "slides/bagian-1.html#outline",
     "href": "slides/bagian-1.html#outline",
     "title": "Pengantar",
     "section": "Outline",
-    "text": "Outline\n\nApa itu structural equation modeling (SEM)?\nMengapa dan pada kondisi seperti apa SEM diperlukan?\nBeberapa pilihan perangkat lunak untuk mengeksekusi SEM\nSEM atau PLS?\nYang tidak dicakup dalam workshop serta keterbatasan jamovi"
+    "text": "Outline\n\nApa itu structural equation modeling (SEM)?\nMengapa dan pada kondisi seperti apa SEM diperlukan?\nBeberapa pilihan perangkat lunak untuk mengeksekusi SEM\nSEM atau PLS?\nYang tidak dicakup dalam workshop serta keterbatasan jamovi",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 1: Pengantar"
+    ]
   },
   {
     "objectID": "slides/bagian-1.html#penggunaan-sem",
     "href": "slides/bagian-1.html#penggunaan-sem",
     "title": "Pengantar",
     "section": "Penggunaan SEM ",
-    "text": "Penggunaan SEM \n\nPernahkah ibu/bapak menggunakan SEM sebelumnya?\nUntuk apa SEM digunakan?"
+    "text": "Penggunaan SEM \n\nPernahkah ibu/bapak menggunakan SEM sebelumnya?\nUntuk apa SEM digunakan?",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 1: Pengantar"
+    ]
   },
   {
     "objectID": "slides/bagian-1.html#sem-adalah-1",
     "href": "slides/bagian-1.html#sem-adalah-1",
     "title": "Pengantar",
     "section": "SEM adalah… 1️⃣",
-    "text": "SEM adalah… 1️⃣\n\nModel yang mencakup hubungan antara observed dan latent variables dalam berbagai bentuk model teoritis.\nSEM memungkinkan peneliti untuk melakukan pengujian hipotesis yang berkaitan dengan model tersebut.\nModel SEM mengasumsikan (hipotesis) bahwa seperangkat variabel (observed) mendefinisikan sebuah konstruk laten, dan menggambarkan bagaimana hubungan antara konstruk-konstruk laten ini.\nSEM adalah teknik yang lebih sophisticated untuk menggambarkan hubungan antar-variabel karena mengontrol error pengukuran dari estimasi korelasi."
+    "text": "SEM adalah… 1️⃣\n\nModel yang mencakup hubungan antara observed dan latent variables dalam berbagai bentuk model teoritis.\nSEM memungkinkan peneliti untuk melakukan pengujian hipotesis yang berkaitan dengan model tersebut.\nModel SEM mengasumsikan (hipotesis) bahwa seperangkat variabel (observed) mendefinisikan sebuah konstruk laten, dan menggambarkan bagaimana hubungan antara konstruk-konstruk laten ini.\nSEM adalah teknik yang lebih sophisticated untuk menggambarkan hubungan antar-variabel karena mengontrol error pengukuran dari estimasi korelasi.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 1: Pengantar"
+    ]
   },
   {
     "objectID": "slides/bagian-1.html#sem-adalah-2",
     "href": "slides/bagian-1.html#sem-adalah-2",
     "title": "Pengantar",
     "section": "SEM adalah… 2️⃣",
-    "text": "SEM adalah… 2️⃣\n\nTujuan SEM adalah untuk mengetahui apakah model teoritik yang diuji peneliti didukung oleh data\n\nApabila data memberikan bukti yang mendukung bahwa hubungan antar konstruk/variabel terjadi, maka mungkin hubungan tersebut memang benar-benar ada di populasi.\nApabila data tidak memberikan bukti yang mendukung korelasi yang dihipotesiskan, maka peneliti dapat melakukan re-spesifikasi model dan menguji kembali model yang sudah dire-spesifikasi tersebut, atau menyusun ulang model yang baru untuk kemudian diuji kembali.\n\n\n\n\n\n\n\n\nPenting\n\n\nSEM adalah teknik yang theory-driven sehingga modifikasi/re-spesifikasi model harus memiliki alasan teoritis."
+    "text": "SEM adalah… 2️⃣\n\nTujuan SEM adalah untuk mengetahui apakah model teoritik yang diuji peneliti didukung oleh data\n\nApabila data memberikan bukti yang mendukung bahwa hubungan antar konstruk/variabel terjadi, maka mungkin hubungan tersebut memang benar-benar ada di populasi.\nApabila data tidak memberikan bukti yang mendukung korelasi yang dihipotesiskan, maka peneliti dapat melakukan re-spesifikasi model dan menguji kembali model yang sudah dire-spesifikasi tersebut, atau menyusun ulang model yang baru untuk kemudian diuji kembali.\n\n\n\n\n\n\n\n\nPenting\n\n\nSEM adalah teknik yang theory-driven sehingga modifikasi/re-spesifikasi model harus memiliki alasan teoritis.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 1: Pengantar"
+    ]
   },
   {
     "objectID": "slides/bagian-1.html#jenis-jenis-variabel-dalam-model-sem-1",
     "href": "slides/bagian-1.html#jenis-jenis-variabel-dalam-model-sem-1",
     "title": "Pengantar",
     "section": "Jenis-jenis variabel dalam model SEM 1️⃣",
-    "text": "Jenis-jenis variabel dalam model SEM 1️⃣\n\n\n\nVariabel observed\n\nVariabel yang dapat diukur langsung dengan berbagai cara/strategi (e.g., self-report, behavioral checklist, dsb.).\nDalam pengukuran Psikologi, item pernyataan (dalam skala Psikologi) adalah variabel observed.\n\nVariabel latent\n\nKonstruk/variabel yang tidak dapat diukur/diamati secara langsung.\nOleh karena itu, membutuhkan variabel observed untuk mengukurnya."
+    "text": "Jenis-jenis variabel dalam model SEM 1️⃣\n\n\n\nVariabel observed\n\nVariabel yang dapat diukur langsung dengan berbagai cara/strategi (e.g., self-report, behavioral checklist, dsb.).\nDalam pengukuran Psikologi, item pernyataan (dalam skala Psikologi) adalah variabel observed.\n\nVariabel latent\n\nKonstruk/variabel yang tidak dapat diukur/diamati secara langsung.\nOleh karena itu, membutuhkan variabel observed untuk mengukurnya.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 1: Pengantar"
+    ]
   },
   {
     "objectID": "slides/bagian-1.html#jenis-jenis-variabel-dalam-model-sem-2",
     "href": "slides/bagian-1.html#jenis-jenis-variabel-dalam-model-sem-2",
     "title": "Pengantar",
     "section": "Jenis-jenis variabel dalam model SEM 2️⃣",
-    "text": "Jenis-jenis variabel dalam model SEM 2️⃣\n\n\n\nVariabel eksogen\n\nVariabel yang tidak menerima direct effect dari variabel lain di dalam model — hanya memberi efek pada variabel lain\n\nVariabel endogen\n\nVariabel yang menerima direct effect dari variabel lain di dalam model — bisa sekaligus memberi efek pada variabel endogen lainnya (misalnya variabel mediator)"
+    "text": "Jenis-jenis variabel dalam model SEM 2️⃣\n\n\n\nVariabel eksogen\n\nVariabel yang tidak menerima direct effect dari variabel lain di dalam model — hanya memberi efek pada variabel lain\n\nVariabel endogen\n\nVariabel yang menerima direct effect dari variabel lain di dalam model — bisa sekaligus memberi efek pada variabel endogen lainnya (misalnya variabel mediator)",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 1: Pengantar"
+    ]
   },
   {
     "objectID": "slides/bagian-1.html#model-sem-terdiri-atas",
     "href": "slides/bagian-1.html#model-sem-terdiri-atas",
     "title": "Pengantar",
     "section": "Model SEM terdiri atas…",
-    "text": "Model SEM terdiri atas…\n\nModel regresi (linear/OLS)\n\nMenguji hubungan antar variabel observed\n\nModel jalur (path model)\n\nMenguji hubungan antara dua (atau lebih) variabel observed dan latent\nBisa juga menguji hubungan antara dua (atau lebih) variabel latent\n\nModel pengukuran (measurement model/confirmatory factor analysis)\n\nMenguji apakah item-item dari skala Psikologi (biasanya variabel observed) memang mengukur konstruk yang dihipotesiskan (biasanya variabel latent)  validitas konstruk.\n\nSEM biasanya mengandung setidaknya dua model, yaitu model pengukuran dan model struktural (regresi/jalur)."
+    "text": "Model SEM terdiri atas…\n\nModel regresi (linear/OLS)\n\nMenguji hubungan antar variabel observed\n\nModel jalur (path model)\n\nMenguji hubungan antara dua (atau lebih) variabel observed dan latent\nBisa juga menguji hubungan antara dua (atau lebih) variabel latent\n\nModel pengukuran (measurement model/confirmatory factor analysis)\n\nMenguji apakah item-item dari skala Psikologi (biasanya variabel observed) memang mengukur konstruk yang dihipotesiskan (biasanya variabel latent)  validitas konstruk.\n\nSEM biasanya mengandung setidaknya dua model, yaitu model pengukuran dan model struktural (regresi/jalur).",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 1: Pengantar"
+    ]
   },
   {
     "objectID": "slides/bagian-1.html#contoh-model-sem",
     "href": "slides/bagian-1.html#contoh-model-sem",
     "title": "Pengantar",
     "section": "Contoh model SEM",
-    "text": "Contoh model SEM"
+    "text": "Contoh model SEM",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 1: Pengantar"
+    ]
   },
   {
     "objectID": "slides/bagian-1.html#model-struktural",
     "href": "slides/bagian-1.html#model-struktural",
     "title": "Pengantar",
     "section": "Model struktural",
-    "text": "Model struktural"
+    "text": "Model struktural",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 1: Pengantar"
+    ]
   },
   {
     "objectID": "slides/bagian-1.html#model-pengukuran",
     "href": "slides/bagian-1.html#model-pengukuran",
     "title": "Pengantar",
     "section": "Model pengukuran",
-    "text": "Model pengukuran"
+    "text": "Model pengukuran",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 1: Pengantar"
+    ]
   },
   {
     "objectID": "slides/bagian-1.html#mengapa-sem",
     "href": "slides/bagian-1.html#mengapa-sem",
     "title": "Pengantar",
     "section": "Mengapa SEM?",
-    "text": "Mengapa SEM?\n\nPeneliti sudah memiliki kesadaran bahwa ia harus menyelidiki beberapa variabel penelitian secara bersamaan untuk menjawab pertanyaan penelitiannya.\nAda kesadaran bahwa peneliti selama ini mengabaikan faktor error pengukuran. SEM membantu peneliti untuk mengurangi efek measurement error terhadap estimasi korelasi antar dua (atau lebih) variabel yang diteliti.\nSelama beberapa dekade kebelakang, SEM termasuk teknik analisis data yang sudah cukup matang pengembangannya, dan dapat mudah dilakukan dengan bantuan perangkat lunak."
+    "text": "Mengapa SEM?\n\nPeneliti sudah memiliki kesadaran bahwa ia harus menyelidiki beberapa variabel penelitian secara bersamaan untuk menjawab pertanyaan penelitiannya.\nAda kesadaran bahwa peneliti selama ini mengabaikan faktor error pengukuran. SEM membantu peneliti untuk mengurangi efek measurement error terhadap estimasi korelasi antar dua (atau lebih) variabel yang diteliti.\nSelama beberapa dekade kebelakang, SEM termasuk teknik analisis data yang sudah cukup matang pengembangannya, dan dapat mudah dilakukan dengan bantuan perangkat lunak.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 1: Pengantar"
+    ]
   },
   {
     "objectID": "slides/bagian-1.html#contoh-aplikasi-sem",
     "href": "slides/bagian-1.html#contoh-aplikasi-sem",
     "title": "Pengantar",
     "section": "Contoh aplikasi SEM",
-    "text": "Contoh aplikasi SEM\n\nSeorang peneliti psikometri ingin melihat efek latar belakang sosioekonomi terhadap kepribadian partisipan dengan menggunakan pendekatan Five-Factor Model (Big 5). Maka, jenis kelamin, tingkat pendidikan, dan item dalam skala kepribadian adalah observed variable, sedangkan dimensi dari Big 5 adalah latent variable.\nSeorang peneliti psikologi pendidikan ingin tahu apakah kepercayaan orang tua bahwa anaknya dapat berkembang secara natural (trust in organismic development — independent latent variable) berkorelasi dengan tingkat kemandirian anak (dependent latent variable).\nDalam konteks psikologi klinis, seorang psikolog klinis ingin tahu apakah personality trait (independent latent variable) dan status sosioekonomi (observed independent variable) dapat berdampak pada kecenderungan depresi dan kecemasan pada individu (dependent latent variable).\nDalam sebuah penelitian psikologi sosial, peneliti ingin tahu apakah personality trait (independent latent variable) dapat menjelaskan mengapa orang merespon pelanggaran moral secara berbeda (dependent latent variable)."
+    "text": "Contoh aplikasi SEM\n\nSeorang peneliti psikometri ingin melihat efek latar belakang sosioekonomi terhadap kepribadian partisipan dengan menggunakan pendekatan Five-Factor Model (Big 5). Maka, jenis kelamin, tingkat pendidikan, dan item dalam skala kepribadian adalah observed variable, sedangkan dimensi dari Big 5 adalah latent variable.\nSeorang peneliti psikologi pendidikan ingin tahu apakah kepercayaan orang tua bahwa anaknya dapat berkembang secara natural (trust in organismic development — independent latent variable) berkorelasi dengan tingkat kemandirian anak (dependent latent variable).\nDalam konteks psikologi klinis, seorang psikolog klinis ingin tahu apakah personality trait (independent latent variable) dan status sosioekonomi (observed independent variable) dapat berdampak pada kecenderungan depresi dan kecemasan pada individu (dependent latent variable).\nDalam sebuah penelitian psikologi sosial, peneliti ingin tahu apakah personality trait (independent latent variable) dapat menjelaskan mengapa orang merespon pelanggaran moral secara berbeda (dependent latent variable).",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 1: Pengantar"
+    ]
   },
   {
     "objectID": "slides/bagian-1.html#perangkat-lunak-untuk-mengeksekusi-sem",
     "href": "slides/bagian-1.html#perangkat-lunak-untuk-mengeksekusi-sem",
     "title": "Pengantar",
     "section": "Perangkat lunak untuk mengeksekusi SEM",
-    "text": "Perangkat lunak untuk mengeksekusi SEM\n\nPerangkat lunak SEM sudah cukup user-friendly\n\njamovi dan JASP adalah perangkat lunak SEM yang hanya memerlukan coding yang sangat minimal.\nNamun jamovi dan JASP fungsinya terbatas, terutama ketika peneliti menguji model yang sangat kompleks.\nSelain itu, peneliti dapat menggunakan Ωnyx, LISREL, SPSS AMOS, EQX, Mplus, STATA, lavaan, atau sem (+ semTools dan semPower) di  atau semopy di  dsb."
+    "text": "Perangkat lunak untuk mengeksekusi SEM\n\nPerangkat lunak SEM sudah cukup user-friendly\n\njamovi dan JASP adalah perangkat lunak SEM yang hanya memerlukan coding yang sangat minimal.\nNamun jamovi dan JASP fungsinya terbatas, terutama ketika peneliti menguji model yang sangat kompleks.\nSelain itu, peneliti dapat menggunakan Ωnyx, LISREL, SPSS AMOS, EQX, Mplus, STATA, lavaan, atau sem (+ semTools dan semPower) di  atau semopy di  dsb.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 1: Pengantar"
+    ]
   },
   {
     "objectID": "slides/bagian-1.html#asumsi-sem-1",
     "href": "slides/bagian-1.html#asumsi-sem-1",
     "title": "Pengantar",
     "section": "Asumsi SEM",
-    "text": "Asumsi SEM\n\n\n\n\n\n\nPenting\n\n\nSEM merupakan teknik statistik yang theory-driven, sehingga asumsi teoritis yang melandasi model jauh lebih penting daripada asumsi statistiknya.\n\n\n\n\nVariabel endogen berdistribusi normal (multivariate normality)\nKorelasi antar variabel sifatnya linier"
+    "text": "Asumsi SEM\n\n\n\n\n\n\nPenting\n\n\nSEM merupakan teknik statistik yang theory-driven, sehingga asumsi teoritis yang melandasi model jauh lebih penting daripada asumsi statistiknya.\n\n\n\n\nVariabel endogen berdistribusi normal (multivariate normality)\nKorelasi antar variabel sifatnya linier",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 1: Pengantar"
+    ]
   },
   {
     "objectID": "slides/bagian-1.html#normalitas-data",
     "href": "slides/bagian-1.html#normalitas-data",
     "title": "Pengantar",
     "section": "Normalitas data",
-    "text": "Normalitas data\n\nMengapa distribusi variabel endogen tidak berdistribusi normal?\n\nBisa jadi bentuk datanya ordinal/nominal, sehingga kalau menggunakan skala Likert, maka kemungkinan besar distribusi data menjadi tidak normal.\nJumlah sampel terlalu sedikit.\nDistribusi data yang tidak normal akan berdampak pada variance-covariance matrix."
+    "text": "Normalitas data\n\nMengapa distribusi variabel endogen tidak berdistribusi normal?\n\nBisa jadi bentuk datanya ordinal/nominal, sehingga kalau menggunakan skala Likert, maka kemungkinan besar distribusi data menjadi tidak normal.\nJumlah sampel terlalu sedikit.\nDistribusi data yang tidak normal akan berdampak pada variance-covariance matrix.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 1: Pengantar"
+    ]
   },
   {
     "objectID": "slides/bagian-1.html#apa-yang-harus-dilakukan",
     "href": "slides/bagian-1.html#apa-yang-harus-dilakukan",
     "title": "Pengantar",
     "section": "Apa yang harus dilakukan?",
-    "text": "Apa yang harus dilakukan?\n\nUntuk mengkoreksi distribusi data yang juling (skewness), probit transformation merupakan strategi yang terbaik.\nUntuk mengkoreksi kurtosis yang tidak sesuai, membutuhkan prosedur yang agak lebih rumit.\n\nBeberapa diantaranya adalah dengan menambah jumlah responden, melakukan estimasi standard error dengan metode bootstrapping\nBisa juga dengan menggunakan metode estimasi model parameter yang khusus untuk data yang tidak berdistribusi normal (e.g., robust methods seperti robust maximum likelihood (ML), atau weighted least squares).\n\n\n\n\n\n\n\n\nHati-hati\n\n\nEstimator weighted least squares biasanya membutuhkan jumlah sampel lebih besar."
+    "text": "Apa yang harus dilakukan?\n\nUntuk mengkoreksi distribusi data yang juling (skewness), probit transformation merupakan strategi yang terbaik.\nUntuk mengkoreksi kurtosis yang tidak sesuai, membutuhkan prosedur yang agak lebih rumit.\n\nBeberapa diantaranya adalah dengan menambah jumlah responden, melakukan estimasi standard error dengan metode bootstrapping\nBisa juga dengan menggunakan metode estimasi model parameter yang khusus untuk data yang tidak berdistribusi normal (e.g., robust methods seperti robust maximum likelihood (ML), atau weighted least squares).\n\n\n\n\n\n\n\n\nHati-hati\n\n\nEstimator weighted least squares biasanya membutuhkan jumlah sampel lebih besar.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 1: Pengantar"
+    ]
   },
   {
     "objectID": "slides/bagian-1.html#sem-atau-pls-1",
     "href": "slides/bagian-1.html#sem-atau-pls-1",
     "title": "Pengantar",
     "section": "SEM atau PLS? 1️⃣",
-    "text": "SEM atau PLS? 1️⃣\n\nCovariance-based SEM (yang kita pelajari saat ini) merupakan teknik statistik yang mengestimasi parameter model dengan cara meminimalisasi diskrepansi antara data (observed covariance matrix) dengan spesifikasi model yang dihipotesiskan (implied model).\nCB-SEM berakar dari tradisi common factor theory, bahwa variabel laten (konstruk psikologis) yang menyebabkan indikator (item di skala psikologis) bervariasi, dan indikator-indikator ini berbagi varians hanya melalui variabel laten tsb.\nCB-SEM menggunakan model pengukuran reflektif.\nMayoritas konstruk psikologi menggunakan model pengukuran reflektif, bukan formatif."
+    "text": "SEM atau PLS? 1️⃣\n\nCovariance-based SEM (yang kita pelajari saat ini) merupakan teknik statistik yang mengestimasi parameter model dengan cara meminimalisasi diskrepansi antara data (observed covariance matrix) dengan spesifikasi model yang dihipotesiskan (implied model).\nCB-SEM berakar dari tradisi common factor theory, bahwa variabel laten (konstruk psikologis) yang menyebabkan indikator (item di skala psikologis) bervariasi, dan indikator-indikator ini berbagi varians hanya melalui variabel laten tsb.\nCB-SEM menggunakan model pengukuran reflektif.\nMayoritas konstruk psikologi menggunakan model pengukuran reflektif, bukan formatif.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 1: Pengantar"
+    ]
   },
   {
     "objectID": "slides/bagian-1.html#sem-atau-pls-2",
     "href": "slides/bagian-1.html#sem-atau-pls-2",
     "title": "Pengantar",
     "section": "SEM atau PLS? 2️⃣",
-    "text": "SEM atau PLS? 2️⃣\n\nPartial least squares (PLS) mengestimasi skor variabel endogen dengan asumsi bahwa variabel endogen adalah weighted composite, kemudian melakukan regresi atas komposit-komposit tersebut satu sama lain.\nAsumsi PLS sangat berbeda dengan CB-SEM - variabel endogen adalah komposit bukan faktor laten.\nPLS juga bisa digunakan untuk menguji model reflektif, TETAPI PLS mengestimasi variabel laten sebagai weighted composite (bukan common factor), sehingga berbeda secara fundamental dari CB-SEM.\nPLS sering “dijual” sebagai teknik alternatif dari CB-SEM yang “lebih praktis” karena bisa dieksekusi dengan sampel kecil, mampu menangani variabel endogen yang tidak berdistribusi normal, atau ketika menangani model yang sangat kompleks.\nPadahal sebenarnya, CB-SEM dan PLS adalah dua teknik dengan asumsi ontologis yang berbeda (Rönkkö & Everman, 2013; Henseler, et al., 2014), sehingga membandingkan kedua teknik ini saja sudah tidak tepat (Rigdon et al., 2017)."
+    "text": "SEM atau PLS? 2️⃣\n\nPartial least squares (PLS) mengestimasi skor variabel endogen dengan asumsi bahwa variabel endogen adalah weighted composite, kemudian melakukan regresi atas komposit-komposit tersebut satu sama lain.\nAsumsi PLS sangat berbeda dengan CB-SEM - variabel endogen adalah komposit bukan faktor laten.\nPLS juga bisa digunakan untuk menguji model reflektif, TETAPI PLS mengestimasi variabel laten sebagai weighted composite (bukan common factor), sehingga berbeda secara fundamental dari CB-SEM.\nPLS sering “dijual” sebagai teknik alternatif dari CB-SEM yang “lebih praktis” karena bisa dieksekusi dengan sampel kecil, mampu menangani variabel endogen yang tidak berdistribusi normal, atau ketika menangani model yang sangat kompleks.\nPadahal sebenarnya, CB-SEM dan PLS adalah dua teknik dengan asumsi ontologis yang berbeda (Rönkkö & Everman, 2013; Henseler, et al., 2014), sehingga membandingkan kedua teknik ini saja sudah tidak tepat (Rigdon et al., 2017).",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 1: Pengantar"
+    ]
   },
   {
     "objectID": "slides/bagian-1.html#reflektif-vs.-formatif",
     "href": "slides/bagian-1.html#reflektif-vs.-formatif",
     "title": "Pengantar",
     "section": "Reflektif vs. Formatif",
-    "text": "Reflektif vs. Formatif\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSelengkapnya, baca di materi confirmatory factor analysis."
+    "text": "Reflektif vs. Formatif\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSelengkapnya, baca di materi confirmatory factor analysis.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 1: Pengantar"
+    ]
   },
   {
     "objectID": "slides/bagian-1.html#yang-tidak-dicakup-oleh-workshop-ini",
     "href": "slides/bagian-1.html#yang-tidak-dicakup-oleh-workshop-ini",
     "title": "Pengantar",
     "section": "Yang tidak dicakup oleh workshop ini",
-    "text": "Yang tidak dicakup oleh workshop ini\n\nExploratory factor analysis (EFA)\nA priori power analysis, Monte Carlo simulation, dan accuracy in parameter estimation (AIPE) untuk merencanakan jumlah sampel\nSensitivity analysis untuk SEM\nMixture model  untuk mengungkap subpopulasi berdasarkan distribusi variabel laten (person-centered methods, e.g., latent categorical analysis (LCA) dan latent profile analysis (LPA))\nLatent growth curve\nModel SEM dengan missing data\nModel SEM dengan variabel moderator/mediator\nModel SEM ketika variabel eksogen (indikator) dichotomous\nHierarchical latent variable model (second-order CFA)\nExploratory SEM (ESEM)\nPartial least square (PLS)\nMultiple indicators, multiple causes model (MIMIC)"
+    "text": "Yang tidak dicakup oleh workshop ini\n\nExploratory factor analysis (EFA)\nA priori power analysis, Monte Carlo simulation, dan accuracy in parameter estimation (AIPE) untuk merencanakan jumlah sampel\nSensitivity analysis untuk SEM\nMixture model  untuk mengungkap subpopulasi berdasarkan distribusi variabel laten (person-centered methods, e.g., latent categorical analysis (LCA) dan latent profile analysis (LPA))\nLatent growth curve\nModel SEM dengan missing data\nModel SEM dengan variabel moderator/mediator\nModel SEM ketika variabel eksogen (indikator) dichotomous\nHierarchical latent variable model (second-order CFA)\nExploratory SEM (ESEM)\nPartial least square (PLS)\nMultiple indicators, multiple causes model (MIMIC)",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 1: Pengantar"
+    ]
   },
   {
     "objectID": "slides/bagian-1.html#ada-pertanyaan",
     "href": "slides/bagian-1.html#ada-pertanyaan",
     "title": "Pengantar",
     "section": "Ada pertanyaan❓",
-    "text": "Ada pertanyaan❓\n\n\n\n\n\n\n\nNote\n\n\n\nPaparan disusun dengan menggunakan  dan Quarto dengan template dari UNAIR Theme.\nKontak saya via  amelia.zein@psikologi.unair.ac.id"
+    "text": "Ada pertanyaan❓\n\n\n\n\n\n\n\nNote\n\n\n\nPaparan disusun dengan menggunakan  dan Quarto dengan template dari UNAIR Theme.\nKontak saya via  amelia.zein@psikologi.unair.ac.id",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 1: Pengantar"
+    ]
   },
   {
     "objectID": "slides/bagian-3.html#outline",
     "href": "slides/bagian-3.html#outline",
     "title": "Model Jalur",
     "section": "Outline",
-    "text": "Outline\n\nDefinisi path model\nAsumsi kausalitas\nNama variabel dan koefisien jalur (path coefficients)\n\nδ (delta), ε (epsilon), ξ (ksi), η (eta), λ (lambda), γ (gamma), β (beta), φ (phi), ζ (zeta)\n\nRepresentasi visual model jalur menggunakan diagram jalur (path diagram)\nMenggambarkan hubungan antar-variabel dengan menggunakan diagram jalur\nScript lavaan untuk spesifikasi model jalur"
+    "text": "Outline\n\nDefinisi path model\nAsumsi kausalitas\nNama variabel dan koefisien jalur (path coefficients)\n\nδ (delta), ε (epsilon), ξ (ksi), η (eta), λ (lambda), γ (gamma), β (beta), φ (phi), ζ (zeta)\n\nRepresentasi visual model jalur menggunakan diagram jalur (path diagram)\nMenggambarkan hubungan antar-variabel dengan menggunakan diagram jalur\nScript lavaan untuk spesifikasi model jalur",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 3: Model Jalur"
+    ]
   },
   {
     "objectID": "slides/bagian-3.html#analisis-jalur",
     "href": "slides/bagian-3.html#analisis-jalur",
     "title": "Model Jalur",
     "section": "Analisis jalur",
-    "text": "Analisis jalur\n\nPath model merupakan kelanjutan dari model regresi karena terdiri dari beberapa model regresi sekaligus dapat digunakan untuk menguji direct, indirect, dan correlated effects.\nPath model disusun secara visual dengan aturan tertentu, yang mengikuti konsensus\n\nGaris satu arah menggambarkan direct effects, yang merefleksikan keterkaitan langsung antara satu variabel dengan variabel lainnya. Asumsinya, tidak ada variabel lain diluar model yang berkorelasi dengan variabel tersebut.\nGaris dua arah menggambarkan covariance/korelasi, yang mengimplikasikan bahwa keterkaitan antar-variabel masih mungkin ditentukan oleh variabel lain yang tidak ada di dalam model.\nGaris error terms yang menunjukkan varians observed variable yang menjelaskan variabel lain yang tidak dapat dijelaskan/di luar model, yang juga mewakili measurement error."
+    "text": "Analisis jalur\n\nPath model merupakan kelanjutan dari model regresi karena terdiri dari beberapa model regresi sekaligus dapat digunakan untuk menguji direct, indirect, dan correlated effects.\nPath model disusun secara visual dengan aturan tertentu, yang mengikuti konsensus\n\nGaris satu arah menggambarkan direct effects, yang merefleksikan keterkaitan langsung antara satu variabel dengan variabel lainnya. Asumsinya, tidak ada variabel lain diluar model yang berkorelasi dengan variabel tersebut.\nGaris dua arah menggambarkan covariance/korelasi, yang mengimplikasikan bahwa keterkaitan antar-variabel masih mungkin ditentukan oleh variabel lain yang tidak ada di dalam model.\nGaris error terms yang menunjukkan varians observed variable yang menjelaskan variabel lain yang tidak dapat dijelaskan/di luar model, yang juga mewakili measurement error.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 3: Model Jalur"
+    ]
   },
   {
     "objectID": "slides/bagian-3.html#diagram-jalur",
     "href": "slides/bagian-3.html#diagram-jalur",
     "title": "Model Jalur",
     "section": "Diagram jalur",
-    "text": "Diagram jalur"
+    "text": "Diagram jalur",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 3: Model Jalur"
+    ]
   },
   {
     "objectID": "slides/bagian-3.html#korelasi-kausalitas",
     "href": "slides/bagian-3.html#korelasi-kausalitas",
     "title": "Model Jalur",
     "section": "Korelasi = kausalitas?",
-    "text": "Korelasi = kausalitas?\n\nAnalisis jalur sebenarnya adalah bentuk yang lebih sophisticated dari korelasi, sehingga\n\n\n\n\n\n\n\nPenting diingat\n\n\nCorrelation does not imply causation\n\n\n\nYang harus dipenuhi sebagai bukti kausalitas (X  Y):\n\nAda urut-urutan waktu kejadian (temporal order)  desain penelitian panel/longitudinal/time series\nAdanya korelasi antara kedua variabel\nPeneliti harus melakukan kontrol atas variabel lain (confounding)\n\n…yaitu dengan cara melakukan manipulasi (random assignment) pada prediktor (X)"
+    "text": "Korelasi = kausalitas?\n\nAnalisis jalur sebenarnya adalah bentuk yang lebih sophisticated dari korelasi, sehingga\n\n\n\n\n\n\n\nPenting diingat\n\n\nCorrelation does not imply causation\n\n\n\nYang harus dipenuhi sebagai bukti kausalitas (X  Y):\n\nAda urut-urutan waktu kejadian (temporal order)  desain penelitian panel/longitudinal/time series\nAdanya korelasi antara kedua variabel\nPeneliti harus melakukan kontrol atas variabel lain (confounding)\n\n…yaitu dengan cara melakukan manipulasi (random assignment) pada prediktor (X)",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 3: Model Jalur"
+    ]
   },
   {
     "objectID": "slides/bagian-3.html#ilustrasi-use-case",
     "href": "slides/bagian-3.html#ilustrasi-use-case",
     "title": "Model Jalur",
     "section": "Ilustrasi use case",
-    "text": "Ilustrasi use case\n\n\nMarimar adalah seorang wali murid di sebuah PAUD di Kota Surabaya. Pada suatu hari, ia mengamati seorang anak (dan orangtua) yang perilakunya menarik perhatiannya.\nIbu anak tersebut bersikeras untuk menunggui anaknya di sekolah, padahal guru kelas meminta agar Ibu pulang saja, mempercayakan anak pada guru, dengan tujuan melatih kemandirian anaknya.\nMelihat ibunya yang menggerutu karena diminta bu Guru pulang, si anak menangis meraung-raung tidak mau ditinggalkan. Akhirnya, terpaksa bu Guru membiarkan si Ibu menunggu di sekolah.\nMarimar heran sekaligus penasaran, mengapa tiap anak memberikan respon yang berbeda ketika ditinggal orangtuanya di sekolah. Ada yang menangis meraung-raung, ada yang lebih santai dengan langsung bermain. Apakah ada kaitan antara kemandirian anak dengan karakteristik orangtuanya?"
+    "text": "Ilustrasi use case\n\n\nMarimar adalah seorang wali murid di sebuah PAUD di Kota Surabaya. Pada suatu hari, ia mengamati seorang anak (dan orangtua) yang perilakunya menarik perhatiannya.\nIbu anak tersebut bersikeras untuk menunggui anaknya di sekolah, padahal guru kelas meminta agar Ibu pulang saja, mempercayakan anak pada guru, dengan tujuan melatih kemandirian anaknya.\nMelihat ibunya yang menggerutu karena diminta bu Guru pulang, si anak menangis meraung-raung tidak mau ditinggalkan. Akhirnya, terpaksa bu Guru membiarkan si Ibu menunggu di sekolah.\nMarimar heran sekaligus penasaran, mengapa tiap anak memberikan respon yang berbeda ketika ditinggal orangtuanya di sekolah. Ada yang menangis meraung-raung, ada yang lebih santai dengan langsung bermain. Apakah ada kaitan antara kemandirian anak dengan karakteristik orangtuanya?",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 3: Model Jalur"
+    ]
   },
   {
     "objectID": "slides/bagian-3.html#variabel-yang-diukur-marimar",
     "href": "slides/bagian-3.html#variabel-yang-diukur-marimar",
     "title": "Model Jalur",
     "section": "Variabel yang diukur Marimar",
-    "text": "Variabel yang diukur Marimar\n\ntrust (variabel independen) = Kepercayaan ibu bahwa perkembangan anak dapat berlangsung secara natural (trust in organismic development).\n\nMakin tinggi skor, ibu makin percaya anaknya bisa berkembang secara natural.\nDiukur dengan skala likert yang terdiri dari 5 item dengan 7 pilihan respon  dari sangat tidak setuju sampai sangat setuju.\n\nmandiri (variabel dependen) = Tingkat kemandirian anak. Anak dengan skor yang tinggi semakin menunjukkan independensi dan lebih santai ketika ditinggal orangtuanya di sekolah. Beberapa indikator perilakunya adalah:\n\nTidak menangis ketika ditinggal orangtuanya\nTidak merengek atau merajuk ketika ditinggal\nMasuk ke dalam kelas tanpa ditemani\nMenaruh tas dalam loker yang disediakan tanpa bantuan orangtua"
+    "text": "Variabel yang diukur Marimar\n\ntrust (variabel independen) = Kepercayaan ibu bahwa perkembangan anak dapat berlangsung secara natural (trust in organismic development).\n\nMakin tinggi skor, ibu makin percaya anaknya bisa berkembang secara natural.\nDiukur dengan skala likert yang terdiri dari 5 item dengan 7 pilihan respon  dari sangat tidak setuju sampai sangat setuju.\n\nmandiri (variabel dependen) = Tingkat kemandirian anak. Anak dengan skor yang tinggi semakin menunjukkan independensi dan lebih santai ketika ditinggal orangtuanya di sekolah. Beberapa indikator perilakunya adalah:\n\nTidak menangis ketika ditinggal orangtuanya\nTidak merengek atau merajuk ketika ditinggal\nMasuk ke dalam kelas tanpa ditemani\nMenaruh tas dalam loker yang disediakan tanpa bantuan orangtua",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 3: Model Jalur"
+    ]
   },
   {
     "objectID": "slides/bagian-3.html#bagaimana-bentuk-diagram-jalurnya",
     "href": "slides/bagian-3.html#bagaimana-bentuk-diagram-jalurnya",
     "title": "Model Jalur",
     "section": "Bagaimana bentuk diagram jalurnya?",
-    "text": "Bagaimana bentuk diagram jalurnya?"
+    "text": "Bagaimana bentuk diagram jalurnya?",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 3: Model Jalur"
+    ]
   },
   {
     "objectID": "slides/bagian-3.html#nama-variabel-dan-koefisien-jalur",
     "href": "slides/bagian-3.html#nama-variabel-dan-koefisien-jalur",
     "title": "Model Jalur",
     "section": "Nama variabel dan koefisien jalur",
-    "text": "Nama variabel dan koefisien jalur\n\n\n\n\n\n\n\n\nNama Variabel/Koefisien\nHuruf Yunani\nHuruf Latin\n\n\n\n\nVariabel eksogen\nξ\nKsi\n\n\nVariabel endogen\nη\nEta\n\n\nError pengukuran dari variabel X\nδ\nDelta\n\n\nError pengukuran dari variabel Y\nε\nEpsilon\n\n\nDirect effect antara variabel laten dan indikatornya (loading factor)\nλ\nLambda\n\n\nDirect effect antara variabel endogen dan eksogen\nγ\nGamma\n\n\nDirect effect antara dua variabel laten endogen\nβ\nBeta"
+    "text": "Nama variabel dan koefisien jalur\n\n\n\n\n\n\n\n\nNama Variabel/Koefisien\nHuruf Yunani\nHuruf Latin\n\n\n\n\nVariabel eksogen\nξ\nKsi\n\n\nVariabel endogen\nη\nEta\n\n\nError pengukuran dari variabel X\nδ\nDelta\n\n\nError pengukuran dari variabel Y\nε\nEpsilon\n\n\nDirect effect antara variabel laten dan indikatornya (loading factor)\nλ\nLambda\n\n\nDirect effect antara variabel endogen dan eksogen\nγ\nGamma\n\n\nDirect effect antara dua variabel laten endogen\nβ\nBeta",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 3: Model Jalur"
+    ]
   },
   {
     "objectID": "slides/bagian-3.html#nama-variabel-dan-koefisien-jalur-1",
     "href": "slides/bagian-3.html#nama-variabel-dan-koefisien-jalur-1",
     "title": "Model Jalur",
     "section": "Nama variabel dan koefisien jalur",
-    "text": "Nama variabel dan koefisien jalur\n\n\n\n\n\n\n\n\nNama Variabel/Koefisien\nHuruf Yunani\nHuruf Latin\n\n\n\n\nKorelasi (covariance) antara dua variabel laten eksogen\nφ\nPhi\n\n\nResidual/disturbance dari variabel laten endogen (varians yang tidak dijelaskan oleh prediktornya)\nζ\nZeta"
+    "text": "Nama variabel dan koefisien jalur\n\n\n\n\n\n\n\n\nNama Variabel/Koefisien\nHuruf Yunani\nHuruf Latin\n\n\n\n\nKorelasi (covariance) antara dua variabel laten eksogen\nφ\nPhi\n\n\nResidual/disturbance dari variabel laten endogen (varians yang tidak dijelaskan oleh prediktornya)\nζ\nZeta",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 3: Model Jalur"
+    ]
   },
   {
     "objectID": "slides/bagian-3.html#contoh-model-dengan-koefisien-jalur",
     "href": "slides/bagian-3.html#contoh-model-dengan-koefisien-jalur",
     "title": "Model Jalur",
     "section": "Contoh model dengan koefisien jalur",
-    "text": "Contoh model dengan koefisien jalur"
+    "text": "Contoh model dengan koefisien jalur",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 3: Model Jalur"
+    ]
   },
   {
     "objectID": "slides/bagian-3.html#latihan-mandiri-2-membuat-diagram-jalur",
     "href": "slides/bagian-3.html#latihan-mandiri-2-membuat-diagram-jalur",
     "title": "Model Jalur",
     "section": "Latihan mandiri 2️⃣: Membuat diagram jalur",
-    "text": "Latihan mandiri 2️⃣: Membuat diagram jalur\n\n\nFernando Jose sebal sekali karena ia kembali kehilangan pengokotnya dan ini kali ketiga ia kehilangan pengokot yang baru dibelinya seminggu yang lalu.\nTeman-teman kerjanya memang punya kebiasaan buruk meminjam barang tanpa seijinnya. Ia akhirnya bertanya, apa ya yang menyebabkan teman-temannya berperilaku seperti itu?\nAkhirnya ia menduga, mungkin ada kaitannya dengan faktor kepribadian (conscientiousness) dan faktor situasional di tempat kerjanya.\nUntuk faktor situasi, ia mengamati sepertinya persepsi atas kondisi kerja yang informal dan relasi formal antara senior-junior mungkin juga berkaitan dengan timbulnya perilaku tersebut."
+    "text": "Latihan mandiri 2️⃣: Membuat diagram jalur\n\n\nFernando Jose sebal sekali karena ia kembali kehilangan pengokotnya dan ini kali ketiga ia kehilangan pengokot yang baru dibelinya seminggu yang lalu.\nTeman-teman kerjanya memang punya kebiasaan buruk meminjam barang tanpa seijinnya. Ia akhirnya bertanya, apa ya yang menyebabkan teman-temannya berperilaku seperti itu?\nAkhirnya ia menduga, mungkin ada kaitannya dengan faktor kepribadian (conscientiousness) dan faktor situasional di tempat kerjanya.\nUntuk faktor situasi, ia mengamati sepertinya persepsi atas kondisi kerja yang informal dan relasi formal antara senior-junior mungkin juga berkaitan dengan timbulnya perilaku tersebut.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 3: Model Jalur"
+    ]
   },
   {
     "objectID": "slides/bagian-3.html#yang-diukur",
     "href": "slides/bagian-3.html#yang-diukur",
     "title": "Model Jalur",
     "section": "Yang diukur 📏",
-    "text": "Yang diukur 📏\n\ncon = Kecenderungan conscientiousness karyawan. Makin tinggi skornya, karyawan lebih mungkin menunjukkan kehati-hatian dan keteraturan dalam bekerja. Diukur dengan skala Likert berisi 6 item dengan 10 pilihan jawaban.\nincivil = Intensitas perilaku tidak beradab. Makin besar skornya, karyawan akan lebih mungkin emotionally abusive, suka mengambil barang teman tanpa ijin, dan perilaku tidak pantas yang lain. Diukur dengan skala Likert berisi 4 item dengan 10 pilihan jawaban.\nusia = Usia partisipan\n\n\n\n\n\n\n\nTugas Mandiri\n\n\nRumuskan hipotesis penelitiannya kemudian buatlah diagram jalur beserta koefisien jalurnya. Anda bisa menggunakan MS Power Point atau software yang lain (misalnya, draw.io atau Canva).\n\n\n\nKlik disini untuk mengumpulkan tugas"
+    "text": "Yang diukur 📏\n\ncon = Kecenderungan conscientiousness karyawan. Makin tinggi skornya, karyawan lebih mungkin menunjukkan kehati-hatian dan keteraturan dalam bekerja. Diukur dengan skala Likert berisi 6 item dengan 10 pilihan jawaban.\nincivil = Intensitas perilaku tidak beradab. Makin besar skornya, karyawan akan lebih mungkin emotionally abusive, suka mengambil barang teman tanpa ijin, dan perilaku tidak pantas yang lain. Diukur dengan skala Likert berisi 4 item dengan 10 pilihan jawaban.\nusia = Usia partisipan\n\n\n\n\n\n\n\nTugas Mandiri\n\n\nRumuskan hipotesis penelitiannya kemudian buatlah diagram jalur beserta koefisien jalurnya. Anda bisa menggunakan MS Power Point atau software yang lain (misalnya, draw.io atau Canva).\n\n\n\nKlik disini untuk mengumpulkan tugas",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 3: Model Jalur"
+    ]
   },
   {
     "objectID": "slides/bagian-3.html#lavaan-script",
     "href": "slides/bagian-3.html#lavaan-script",
     "title": "Model Jalur",
     "section": "lavaan Script",
-    "text": "lavaan Script\n\nSEMLj menyediakan dua opsi: fitur script atau interactive\n\nKalau memilih fitur interactive, maka tampilan antarmukanya berupa drag & drop (seperti SPSS).\nUntuk fitur script, maka tampilan antarmukanya meminta pengguna untuk menspesifikasi model dengan script.\n\njamovi dan JASP mengadopsi script dari  package lavaan, sehingga untuk menspesifikasi model, kita harus memasukkan serangkaian perintah.\nMeskipun begitu, script lavaan sangat sederhana dan familiar dengan script lavaan memberikan banyak keuntungan.\nMenjalankan perintah dengan script juga membantu peneliti untuk mereka-ulang hasil analisis datanya, serta mempermudah kolaborasi dengan peneliti yang terbiasa menggunakan perangkat lunak yang berbeda dengan kita.\nOleh karena itu, dalam workshop ini peserta juga harus berlatih menulis script."
+    "text": "lavaan Script\n\nSEMLj menyediakan dua opsi: fitur script atau interactive\n\nKalau memilih fitur interactive, maka tampilan antarmukanya berupa drag & drop (seperti SPSS).\nUntuk fitur script, maka tampilan antarmukanya meminta pengguna untuk menspesifikasi model dengan script.\n\njamovi dan JASP mengadopsi script dari  package lavaan, sehingga untuk menspesifikasi model, kita harus memasukkan serangkaian perintah.\nMeskipun begitu, script lavaan sangat sederhana dan familiar dengan script lavaan memberikan banyak keuntungan.\nMenjalankan perintah dengan script juga membantu peneliti untuk mereka-ulang hasil analisis datanya, serta mempermudah kolaborasi dengan peneliti yang terbiasa menggunakan perangkat lunak yang berbeda dengan kita.\nOleh karena itu, dalam workshop ini peserta juga harus berlatih menulis script.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 3: Model Jalur"
+    ]
   },
   {
     "objectID": "slides/bagian-3.html#dasar-script-lavaan",
     "href": "slides/bagian-3.html#dasar-script-lavaan",
     "title": "Model Jalur",
     "section": "Dasar script lavaan",
-    "text": "Dasar script lavaan\n\n\n\n\n\n\n\nBaujean, A.A. (2014). Latent Variable Modeling Using R: A step-by-step guide. New York: Routledge."
+    "text": "Dasar script lavaan\n\n\n\n\n\n\n\nBaujean, A.A. (2014). Latent Variable Modeling Using R: A step-by-step guide. New York: Routledge.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 3: Model Jalur"
+    ]
   },
   {
     "objectID": "slides/bagian-3.html#contoh-cfa-1",
     "href": "slides/bagian-3.html#contoh-cfa-1",
     "title": "Model Jalur",
     "section": "Contoh CFA 1️⃣",
-    "text": "Contoh CFA 1️⃣\n\n\n# CFA\ntrust =~ trust1 + trust2 + trust3 + trust4 + trust5\n\n# Measurement error (residual)\n# Residual biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit\ntrust1 ~~ trust1\ntrust2 ~~ trust2\ntrust3 ~~ trust3\ntrust4 ~~ trust4\ntrust5 ~~ trust5\ntrust ~~ trust"
+    "text": "Contoh CFA 1️⃣\n\n\n# CFA\ntrust =~ trust1 + trust2 + trust3 + trust4 + trust5\n\n# Measurement error (residual)\n# Residual biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit\ntrust1 ~~ trust1\ntrust2 ~~ trust2\ntrust3 ~~ trust3\ntrust4 ~~ trust4\ntrust5 ~~ trust5\ntrust ~~ trust",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 3: Model Jalur"
+    ]
   },
   {
     "objectID": "slides/bagian-3.html#contoh-cfa-2",
     "href": "slides/bagian-3.html#contoh-cfa-2",
     "title": "Model Jalur",
     "section": "Contoh CFA 2️⃣",
-    "text": "Contoh CFA 2️⃣\n\n\n# CFA\nmandiri =~ mandiri1 + mandiri2 + mandiri3 + mandiri4\n\n# Measurement error (residual)\n# Residual biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit\nmandiri1 ~~ mandiri1\nmandiri2 ~~ mandiri2\nmandiri3 ~~ mandiri3\nmandiri4 ~~ mandiri4\nmandiri ~~ mandiri"
+    "text": "Contoh CFA 2️⃣\n\n\n# CFA\nmandiri =~ mandiri1 + mandiri2 + mandiri3 + mandiri4\n\n# Measurement error (residual)\n# Residual biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit\nmandiri1 ~~ mandiri1\nmandiri2 ~~ mandiri2\nmandiri3 ~~ mandiri3\nmandiri4 ~~ mandiri4\nmandiri ~~ mandiri",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 3: Model Jalur"
+    ]
   },
   {
     "objectID": "slides/bagian-3.html#contoh-path-analysis",
     "href": "slides/bagian-3.html#contoh-path-analysis",
     "title": "Model Jalur",
     "section": "Contoh path analysis",
-    "text": "Contoh path analysis\n\n\n# Model Struktural\nmandiri ~ trust\n\n# Measurement error (residual)\n# Bagian ini biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit\nmandiri ~~ mandiri\ntrust ~~ trust"
+    "text": "Contoh path analysis\n\n\n# Model Struktural\nmandiri ~ trust\n\n# Measurement error (residual)\n# Bagian ini biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit\nmandiri ~~ mandiri\ntrust ~~ trust",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 3: Model Jalur"
+    ]
   },
   {
     "objectID": "slides/bagian-3.html#contoh-full-model",
     "href": "slides/bagian-3.html#contoh-full-model",
     "title": "Model Jalur",
     "section": "Contoh full model",
-    "text": "Contoh full model\n\n\n# CFA\nmandiri =~ mandiri1 + mandiri2 + mandiri3 + mandiri4\ntrust =~ trust1 + trust2 + trust3 + trust4 + trust5\n\n# Model Struktural\nmandiri ~ trust\n\n# Measurement error (residual)\n# Residual biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit\nmandiri1 ~~ mandiri1\nmandiri2 ~~ mandiri2\nmandiri3 ~~ mandiri3\nmandiri4 ~~ mandiri4\ntrust1 ~~ trust1\ntrust2 ~~ trust2\ntrust3 ~~ trust3\ntrust4 ~~ trust4\ntrust5 ~~ trust5\ntrust ~~ trust\nmandiri ~~ mandiri"
+    "text": "Contoh full model\n\n\n# CFA\nmandiri =~ mandiri1 + mandiri2 + mandiri3 + mandiri4\ntrust =~ trust1 + trust2 + trust3 + trust4 + trust5\n\n# Model Struktural\nmandiri ~ trust\n\n# Measurement error (residual)\n# Residual biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit\nmandiri1 ~~ mandiri1\nmandiri2 ~~ mandiri2\nmandiri3 ~~ mandiri3\nmandiri4 ~~ mandiri4\ntrust1 ~~ trust1\ntrust2 ~~ trust2\ntrust3 ~~ trust3\ntrust4 ~~ trust4\ntrust5 ~~ trust5\ntrust ~~ trust\nmandiri ~~ mandiri",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 3: Model Jalur"
+    ]
   },
   {
     "objectID": "slides/bagian-3.html#latihan-mandiri-3-menulis-script-lavaan",
     "href": "slides/bagian-3.html#latihan-mandiri-3-menulis-script-lavaan",
     "title": "Model Jalur",
     "section": "Latihan mandiri 3️⃣: Menulis script lavaan",
-    "text": "Latihan mandiri 3️⃣: Menulis script lavaan\nTulislah script lavaan dari diagram jalur yang sudah dibuat di Latihan mandiri 2️⃣\nKlik disini untuk mengumpulkan tugas"
+    "text": "Latihan mandiri 3️⃣: Menulis script lavaan\nTulislah script lavaan dari diagram jalur yang sudah dibuat di Latihan mandiri 2️⃣\nKlik disini untuk mengumpulkan tugas",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 3: Model Jalur"
+    ]
   },
   {
     "objectID": "slides/bagian-3.html#ada-pertanyaan",
     "href": "slides/bagian-3.html#ada-pertanyaan",
     "title": "Model Jalur",
     "section": "Ada pertanyaan❓",
-    "text": "Ada pertanyaan❓\n\n\n\n\n\n\n\nNote\n\n\n\nPaparan disusun dengan menggunakan  dan Quarto dengan template dari UNAIR Theme.\nKontak saya via  amelia.zein@psikologi.unair.ac.id"
+    "text": "Ada pertanyaan❓\n\n\n\n\n\n\n\nNote\n\n\n\nPaparan disusun dengan menggunakan  dan Quarto dengan template dari UNAIR Theme.\nKontak saya via  amelia.zein@psikologi.unair.ac.id",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 3: Model Jalur"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#outline",
     "href": "slides/bagian-5.html#outline",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Outline",
-    "text": "Outline\n\nDasar-Dasar SEM: Model struktural & pengukuran\nTahapan modeling dengan menggunakan SEM\nDegree of freedom\nUnderidentified, just-identified, dan overidentified model\nJenis-jenis kriteria untuk menilai ketepatan model (model fit)\nMenguji hipotesis (statistical power, ukuran sampel)\nMembandingkan pendekatan dua-langkah vs empat-langkah\nMenuliskan hasil analisis SEM dalam laporan penelitian"
+    "text": "Outline\n\nDasar-Dasar SEM: Model struktural & pengukuran\nTahapan modeling dengan menggunakan SEM\nDegree of freedom\nUnderidentified, just-identified, dan overidentified model\nJenis-jenis kriteria untuk menilai ketepatan model (model fit)\nMenguji hipotesis (statistical power, ukuran sampel)\nMembandingkan pendekatan dua-langkah vs empat-langkah\nMenuliskan hasil analisis SEM dalam laporan penelitian",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#pengantar-sem",
     "href": "slides/bagian-5.html#pengantar-sem",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Pengantar SEM",
-    "text": "Pengantar SEM\n\nSEM adalah full model  menggabungkan model pengukuran dengan model jalur/struktural\nAda beberapa pendekatan dalam SEM (Jöreskog, 1993)\n\nStrictly confirmatory  menguji apakah variance-covariance matrix yang dihipotesiskan (implied) sama dengan/didukung oleh data (observed variance-covariance matrix)\nAlternative model  menguji beberapa model yang saling bersaing (competing models) pada dataset yang sama, kemudian memilih yang paling baik menggambarkan data — model-model tersebut bisa berjenjang (nested) maupun tidak (non-nested)\nModel generating  dimulai dari model yang dihipotesiskan, kemudian dimodifikasi secara iteratif berdasarkan indikasi data (specification search) hingga fit statistics membaik\n\n\n\n\n\n\n\n\nModel generating harus dilakukan dengan sangat hati-hati\n\n\nSetiap modifikasi harus dijustifikasi secara teori, bukan semata-mata didorong oleh data. Pendekatan ini rentan terhadap capitalization on chance. Model yang tampak fit di satu sampel sering kali gagal direplikasi di sampel lain (MacCallum, Roznowski & Necowitz, 1992). Apabila modifikasi dilakukan, validasi hasilnya pada sampel yang berbeda."
+    "text": "Pengantar SEM\n\nSEM adalah full model  menggabungkan model pengukuran dengan model jalur/struktural\nAda beberapa pendekatan dalam SEM (Jöreskog, 1993)\n\nStrictly confirmatory  menguji apakah variance-covariance matrix yang dihipotesiskan (implied) sama dengan/didukung oleh data (observed variance-covariance matrix)\nAlternative model  menguji beberapa model yang saling bersaing (competing models) pada dataset yang sama, kemudian memilih yang paling baik menggambarkan data — model-model tersebut bisa berjenjang (nested) maupun tidak (non-nested)\nModel generating  dimulai dari model yang dihipotesiskan, kemudian dimodifikasi secara iteratif berdasarkan indikasi data (specification search) hingga fit statistics membaik\n\n\n\n\n\n\n\n\nModel generating harus dilakukan dengan sangat hati-hati\n\n\nSetiap modifikasi harus dijustifikasi secara teori, bukan semata-mata didorong oleh data. Pendekatan ini rentan terhadap capitalization on chance. Model yang tampak fit di satu sampel sering kali gagal direplikasi di sampel lain (MacCallum, Roznowski & Necowitz, 1992). Apabila modifikasi dilakukan, validasi hasilnya pada sampel yang berbeda.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#langkah-langkah-melakukan-analisis-sem",
     "href": "slides/bagian-5.html#langkah-langkah-melakukan-analisis-sem",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Langkah-langkah melakukan analisis SEM",
-    "text": "Langkah-langkah melakukan analisis SEM\n\n\n\nSpesifikasi model\nIdentifikasi model\nEstimasi model\nMenguji model\nMemodifikasi model"
+    "text": "Langkah-langkah melakukan analisis SEM\n\n\n\nSpesifikasi model\nIdentifikasi model\nEstimasi model\nMenguji model\nMemodifikasi model",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#spesifikasi-model",
     "href": "slides/bagian-5.html#spesifikasi-model",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Spesifikasi model",
-    "text": "Spesifikasi model\n\nPeneliti menyusun model pengukuran dan model jalur dengan menggambar diagram jalur path diagram\nDalam SEM, justifikasi teori adalah suatu yang tidak bisa ditawar-tawar karena tanpa basis teori yang kuat, model testing akan selalu memberikan hasil yang mengecewakan (poor fit)\nSebelum melakukan SEM, peneliti sangat disarankan melakukan pilot study, atau setidaknya meta studies (e.g., systematic review, scoping review, meta analysis, studi replikasi, dsb.) yang dapat membantu peneliti menyusun hipotesis model yang baik"
+    "text": "Spesifikasi model\n\nPeneliti menyusun model pengukuran dan model jalur dengan menggambar diagram jalur path diagram\nDalam SEM, justifikasi teori adalah suatu yang tidak bisa ditawar-tawar karena tanpa basis teori yang kuat, model testing akan selalu memberikan hasil yang mengecewakan (poor fit)\nSebelum melakukan SEM, peneliti sangat disarankan melakukan pilot study, atau setidaknya meta studies (e.g., systematic review, scoping review, meta analysis, studi replikasi, dsb.) yang dapat membantu peneliti menyusun hipotesis model yang baik",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#identifikasi-model",
     "href": "slides/bagian-5.html#identifikasi-model",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Identifikasi model",
-    "text": "Identifikasi model\n\nModel dapat diidentifikasi apabila degree of freedom (df) ≥ 0\nApabila df = 0, maka model tsb adalah saturated model atau just-identified model\n\nJumlah ‘informasi yang diketahui’ dan ‘tidak diketahui’ sama persis\nTidak bisa difalsifikasi, hampir ‘selalu tepat’, tetapi ‘selalu salah’\n\nApabila df bernilai negatif, maka model tsb under-identified karena jumlah parameter jalur yang harus diestimasi lebih banyak daripada jumlah nilai unik (non-redundant information) di variance-covariance matrix\n\nLebih banyak ‘informasi yang tidak diketahui’ daripada yang ‘diketahui’\nModel ‘misterius’ dan ‘ambisius’😄"
+    "text": "Identifikasi model\n\nModel dapat diidentifikasi apabila degree of freedom (df) ≥ 0\nApabila df = 0, maka model tsb adalah saturated model atau just-identified model\n\nJumlah ‘informasi yang diketahui’ dan ‘tidak diketahui’ sama persis\nTidak bisa difalsifikasi, hampir ‘selalu tepat’, tetapi ‘selalu salah’\n\nApabila df bernilai negatif, maka model tsb under-identified karena jumlah parameter jalur yang harus diestimasi lebih banyak daripada jumlah nilai unik (non-redundant information) di variance-covariance matrix\n\nLebih banyak ‘informasi yang tidak diketahui’ daripada yang ‘diketahui’\nModel ‘misterius’ dan ‘ambisius’😄",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#identifikasi-model-1",
     "href": "slides/bagian-5.html#identifikasi-model-1",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Identifikasi model",
-    "text": "Identifikasi model\n\nModel yang dapat diidentifikasi adalah over-identified model dimana jumlah parameter variance-covariance matrix lebih banyak daripada jumlah parameter jalur yang diestimasi (sehingga df ≥ 1)\n\nLebih banyak ‘informasi yang diketahui’ daripada yang ‘tidak diketahui’\n\nDegree of freedom  dihitung dengan mengurangi jumlah nilai unik dalam variance-covariance matrix dengan jumlah parameter jalur yang hendak diestimasi"
+    "text": "Identifikasi model\n\nModel yang dapat diidentifikasi adalah over-identified model dimana jumlah parameter variance-covariance matrix lebih banyak daripada jumlah parameter jalur yang diestimasi (sehingga df ≥ 1)\n\nLebih banyak ‘informasi yang diketahui’ daripada yang ‘tidak diketahui’\n\nDegree of freedom  dihitung dengan mengurangi jumlah nilai unik dalam variance-covariance matrix dengan jumlah parameter jalur yang hendak diestimasi",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#over-identified-model",
     "href": "slides/bagian-5.html#over-identified-model",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Over-identified model",
-    "text": "Over-identified model\n\n\n\n\n\n\n\n\n\nPada model ini jumlah nilai unik (non-redundant information) dalam variance-covariance matrix = 5(5+1)/2 = 15\nSedangkan jumlah parameter jalur yang akan diestimasi adalah 11 (5 factor loading, 6 error variance), sehingga\ndf = 15-11 = 4 🥇\nModel dapat diidentifikasi karena memenuhi syarat (over-identified)"
+    "text": "Over-identified model\n\n\n\n\n\n\n\n\n\nPada model ini jumlah nilai unik (non-redundant information) dalam variance-covariance matrix = 5(5+1)/2 = 15\nSedangkan jumlah parameter jalur yang akan diestimasi adalah 11 (5 factor loading, 6 error variance), sehingga\ndf = 15-11 = 4 🥇\nModel dapat diidentifikasi karena memenuhi syarat (over-identified)",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#under-identified-model",
     "href": "slides/bagian-5.html#under-identified-model",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Under-identified model",
-    "text": "Under-identified model\n\n\n\n\n\n\n\n\n\nPada model ini jumlah nilai unik (non-redundant information) dalam variance-covariance matrix = 3(3+1)/2 = 6\nSedangkan jumlah parameter jalur yang akan diestimasi adalah 7 (3 factor loading, 4 error variance), sehingga\ndf = 6-7 = -1 😢\nModel tidak dapat diidentifikasi karena tidak memenuhi syarat (under-identified)"
+    "text": "Under-identified model\n\n\n\n\n\n\n\n\n\nPada model ini jumlah nilai unik (non-redundant information) dalam variance-covariance matrix = 3(3+1)/2 = 6\nSedangkan jumlah parameter jalur yang akan diestimasi adalah 7 (3 factor loading, 4 error variance), sehingga\ndf = 6-7 = -1 😢\nModel tidak dapat diidentifikasi karena tidak memenuhi syarat (under-identified)",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#just-identified-model",
     "href": "slides/bagian-5.html#just-identified-model",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Just-identified model",
-    "text": "Just-identified model\n\n\n\n\n\n\n\n\n\nPada model ini jumlah nilai unik (non-redundant information) dalam variance-covariance matrix = 3(3+1)/2 = 6\nSedangkan jumlah parameter jalur yang akan diestimasi adalah 6 (3 factor loading, 3 error variance), sehingga\ndf = 6-6 = 0 😢\nModel tidak dapat diidentifikasi karena tidak ada ruang tersisa untuk melakukan estimasi (just-identified/saturated model)"
+    "text": "Just-identified model\n\n\n\n\n\n\n\n\n\nPada model ini jumlah nilai unik (non-redundant information) dalam variance-covariance matrix = 3(3+1)/2 = 6\nSedangkan jumlah parameter jalur yang akan diestimasi adalah 6 (3 factor loading, 3 error variance), sehingga\ndf = 6-6 = 0 😢\nModel tidak dapat diidentifikasi karena tidak ada ruang tersisa untuk melakukan estimasi (just-identified/saturated model)",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#berapa-banyak-item-dibutuhkan-agar-model-diidentifikasi",
     "href": "slides/bagian-5.html#berapa-banyak-item-dibutuhkan-agar-model-diidentifikasi",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Berapa banyak item dibutuhkan agar model diidentifikasi?",
-    "text": "Berapa banyak item dibutuhkan agar model diidentifikasi?\n\nUntuk satu faktor/variabel laten, kita perlu sedikitnya 4 variabel indikator karena apabila ≤3, maka model akan just-identified atau under-identified\nTapi meskipun kita punya 4 variabel indikator untuk 1 variabel laten, kita masih mungkin memiliki model yang just-identified, ketika errornya berkorelasi\nApakah bisa 1 variabel laten diukur oleh 1 observed variable?"
+    "text": "Berapa banyak item dibutuhkan agar model diidentifikasi?\n\nUntuk satu faktor/variabel laten, kita perlu sedikitnya 4 variabel indikator karena apabila ≤3, maka model akan just-identified atau under-identified\nTapi meskipun kita punya 4 variabel indikator untuk 1 variabel laten, kita masih mungkin memiliki model yang just-identified, ketika errornya berkorelasi\nApakah bisa 1 variabel laten diukur oleh 1 observed variable?",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#variabel-laten-dengan-1-indikator",
     "href": "slides/bagian-5.html#variabel-laten-dengan-1-indikator",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Variabel laten dengan 1 indikator",
-    "text": "Variabel laten dengan 1 indikator\n\n\n\nMasih bisa diestimasi dengan asumsi\n\nItem diasumsikan memiliki reliabilitas sempurna, sehingga varians error diconstraint = 0\nReliabilitas diukur dengan test-retest, kemudian varians error diconstraint dengan mempertimbangkan reliabilitas dan standar deviasi"
+    "text": "Variabel laten dengan 1 indikator\n\n\n\nMasih bisa diestimasi dengan asumsi\n\nItem diasumsikan memiliki reliabilitas sempurna, sehingga varians error diconstraint = 0\nReliabilitas diukur dengan test-retest, kemudian varians error diconstraint dengan mempertimbangkan reliabilitas dan standar deviasi",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#mengestimasi-menguji-model",
     "href": "slides/bagian-5.html#mengestimasi-menguji-model",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Mengestimasi & Menguji model",
-    "text": "Mengestimasi & Menguji model\n\nPilih metode estimasi yang paling cocok dengan karakteristik data (ML, ULS, GLS, WLS, DWLS atau robust DWLS)\nMetode estimasi ini yang akan menghitung standard error yang tepat sesuai dengan karakteristik model\nApabila metode estimasi yang dipilih tidak tepat dan tidak sesuai dengan kompatibilitas datanya, maka estimasi standard error menjadi bias  sehingga model parameter memberikan informasi yang menyesatkan\nLihat Beaujean (2014), appendix A untuk perbandingan berbagai macam estimator yang opsinya tersedia di lavaan dan SEMLj\n\nAtau cek di laman web lavaan"
+    "text": "Mengestimasi & Menguji model\n\nPilih metode estimasi yang paling cocok dengan karakteristik data (ML, ULS, GLS, WLS, DWLS atau robust DWLS)\nMetode estimasi ini yang akan menghitung standard error yang tepat sesuai dengan karakteristik model\nApabila metode estimasi yang dipilih tidak tepat dan tidak sesuai dengan kompatibilitas datanya, maka estimasi standard error menjadi bias  sehingga model parameter memberikan informasi yang menyesatkan\nLihat Beaujean (2014), appendix A untuk perbandingan berbagai macam estimator yang opsinya tersedia di lavaan dan SEMLj\n\nAtau cek di laman web lavaan",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#menguji-ketepatan-model",
     "href": "slides/bagian-5.html#menguji-ketepatan-model",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Menguji ketepatan model",
-    "text": "Menguji ketepatan model\n\nUmumnya peneliti ingin mendapatkan 3 informasi\n\nχ² sebagai global fit measure. χ² menguji perbedaan antara model-implied dengan variance-covariance matrix dari data.\nApabila p-value dari χ² ≥ α (dengan α = 0.05), maka tidak ada perbedaan antara keduanya  interpretasinya, data mendukung model\np-value dari factor loading untuk setiap variabel dalam model\nBesar dan arah factor loading, yang memberikan informasi mengenai magnitude dan kontribusi variabel tersebut dalam menjelaskan variabel lainnya. Sedangkan arah factor loading (positif/negatif) memberikan informasi mengenai arah hubungan."
+    "text": "Menguji ketepatan model\n\nUmumnya peneliti ingin mendapatkan 3 informasi\n\nχ² sebagai global fit measure. χ² menguji perbedaan antara model-implied dengan variance-covariance matrix dari data.\nApabila p-value dari χ² ≥ α (dengan α = 0.05), maka tidak ada perbedaan antara keduanya  interpretasinya, data mendukung model\np-value dari factor loading untuk setiap variabel dalam model\nBesar dan arah factor loading, yang memberikan informasi mengenai magnitude dan kontribusi variabel tersebut dalam menjelaskan variabel lainnya. Sedangkan arah factor loading (positif/negatif) memberikan informasi mengenai arah hubungan.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#menguji-ketepatan-model-chi-square-χ²",
     "href": "slides/bagian-5.html#menguji-ketepatan-model-chi-square-χ²",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Menguji ketepatan model: Chi-square (χ²)",
-    "text": "Menguji ketepatan model: Chi-square (χ²)\n\n\n\nDihitung dengan cara membandingkan model yang dihipotesiskan (implied model) dengan saturated model (model dengan fit sempurna, df = 0, yang mana semua parameter dibebaskan tanpa constraint)\n\nIncremental index seperti CFI dan NFI-lah yang membandingkan implied model dengan baseline/null model (model tanpa jalur sama sekali)\n\nUmumnya, model dengan jumlah sampel yang besar akan memberikan hasil uji χ² yang signifikan, tetapi uji χ² yang signifikan ini tidak boleh diabaikan begitu saja❗\nSelain χ², kita bisa mengevaluasi model dengan melihat alternative fit indices: Incremental index, Parsimony index, dan Absolute (standalone) index."
+    "text": "Menguji ketepatan model: Chi-square (χ²)\n\n\n\nDihitung dengan cara membandingkan model yang dihipotesiskan (implied model) dengan saturated model (model dengan fit sempurna, df = 0, yang mana semua parameter dibebaskan tanpa constraint)\n\nIncremental index seperti CFI dan NFI-lah yang membandingkan implied model dengan baseline/null model (model tanpa jalur sama sekali)\n\nUmumnya, model dengan jumlah sampel yang besar akan memberikan hasil uji χ² yang signifikan, tetapi uji χ² yang signifikan ini tidak boleh diabaikan begitu saja❗\nSelain χ², kita bisa mengevaluasi model dengan melihat alternative fit indices: Incremental index, Parsimony index, dan Absolute (standalone) index.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#incremental-comparativerelative-index",
     "href": "slides/bagian-5.html#incremental-comparativerelative-index",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Incremental (comparative/relative) index",
-    "text": "Incremental (comparative/relative) index\nDidapatkan dengan membandingkan implied model dengan baseline model, yang meliputi:\n\nComparative Fit Index  mendekati 1 = closer fit\nNormed Fit Index  mendekati 1 = better fit\nIncremental Fit Index/Bollen’s Nonnormed Fit Index  mendekati 1 = better fit\nTucker Lewis Index/Bentler-Bonnet Non-Normed Fit Index  mendekati 1 = better fit"
+    "text": "Incremental (comparative/relative) index\nDidapatkan dengan membandingkan implied model dengan baseline model, yang meliputi:\n\nComparative Fit Index  mendekati 1 = closer fit\nNormed Fit Index  mendekati 1 = better fit\nIncremental Fit Index/Bollen’s Nonnormed Fit Index  mendekati 1 = better fit\nTucker Lewis Index/Bentler-Bonnet Non-Normed Fit Index  mendekati 1 = better fit",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#parsimony-index",
     "href": "slides/bagian-5.html#parsimony-index",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Parsimony index",
-    "text": "Parsimony index\nIndeks ini secara khusus memberikan pinalti pada kompleksitas model, yang meliputi:\n\nExpected Cross Validation Index  digunakan untuk membandingkan dua model atau lebih. Nilai yang lebih kecil menunjukkan model yang lebih baik\nInformation-Theoretic Criterion  meliputi AIC, BIC, dan SABIC. Nilai yang kecil menunjukkan model yang lebih baik\nNoncentrality Parameter-based Index  mendekati 1 = better fit\nMcDonald’s Noncentrality Index  mendekati 1 = better fit\nParsimonious Normed Fit Index  NFI yang mempertimbangkan parsimony model, mendekati 1 = better fit\nParsimony Goodness of Fit Index  mendekati 1 = better fit"
+    "text": "Parsimony index\nIndeks ini secara khusus memberikan pinalti pada kompleksitas model, yang meliputi:\n\nExpected Cross Validation Index  digunakan untuk membandingkan dua model atau lebih. Nilai yang lebih kecil menunjukkan model yang lebih baik\nInformation-Theoretic Criterion  meliputi AIC, BIC, dan SABIC. Nilai yang kecil menunjukkan model yang lebih baik\nNoncentrality Parameter-based Index  mendekati 1 = better fit\nMcDonald’s Noncentrality Index  mendekati 1 = better fit\nParsimonious Normed Fit Index  NFI yang mempertimbangkan parsimony model, mendekati 1 = better fit\nParsimony Goodness of Fit Index  mendekati 1 = better fit",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#absolute-index-1",
     "href": "slides/bagian-5.html#absolute-index-1",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Absolute index 1️⃣",
-    "text": "Absolute index 1️⃣\nIndeks ini dihitung tanpa melakukan perbandingan dengan baseline, yang meliputi:\n\nRoot Mean Square Error of Approximation (RMSEA)  merupakan estimasi seberapa besar approximation error per degree of freedom yang diperkirakan terjadi di populasi — close fit ketika nilainya &lt; 0.05, acceptable fit ketika 0.05 – 0.08, poor fit ketika &gt; 0.10\n\np-value dapat digunakan untuk menguji H0: RMSEA ≤ 0.05 (close fit)\nOleh karena itu, gagal menolak H0 (p &gt; 0.05) menunjukkan bahwa model “close-fitting”\nRMSEA sangat dipengaruhi oleh kompleksitas model dan sample size, dan dapat menunjukkan misfiting bahkan untuk kesalahan spesifikasi yang kecil ketika sampelnya besar"
+    "text": "Absolute index 1️⃣\nIndeks ini dihitung tanpa melakukan perbandingan dengan baseline, yang meliputi:\n\nRoot Mean Square Error of Approximation (RMSEA)  merupakan estimasi seberapa besar approximation error per degree of freedom yang diperkirakan terjadi di populasi — close fit ketika nilainya &lt; 0.05, acceptable fit ketika 0.05 – 0.08, poor fit ketika &gt; 0.10\n\np-value dapat digunakan untuk menguji H0: RMSEA ≤ 0.05 (close fit)\nOleh karena itu, gagal menolak H0 (p &gt; 0.05) menunjukkan bahwa model “close-fitting”\nRMSEA sangat dipengaruhi oleh kompleksitas model dan sample size, dan dapat menunjukkan misfiting bahkan untuk kesalahan spesifikasi yang kecil ketika sampelnya besar",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#absolute-index-2",
     "href": "slides/bagian-5.html#absolute-index-2",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Absolute index 2️⃣",
-    "text": "Absolute index 2️⃣\n\nStandardized Root Mean Square Residual (SRMR)  akar kuadrat dari rata-rata kuadrat selisih antara observed dan model-implied correlation matrix, nilai &lt; 0.08 menunjukkan acceptable fit\n\nSRMR (vs. RMSEA) relatif kurang dipengaruhi oleh sample size dan secara langsung mencerminkan selisih rata-rata antara observed dan model-implied correlation matrix\nHu & Bentler (1999) merekomendasikan melaporkan keduanya (dual cutoff): CFI ≥ 0.95 dan SRMR ≤ 0.08"
+    "text": "Absolute index 2️⃣\n\nStandardized Root Mean Square Residual (SRMR)  akar kuadrat dari rata-rata kuadrat selisih antara observed dan model-implied correlation matrix, nilai &lt; 0.08 menunjukkan acceptable fit\n\nSRMR (vs. RMSEA) relatif kurang dipengaruhi oleh sample size dan secara langsung mencerminkan selisih rata-rata antara observed dan model-implied correlation matrix\nHu & Bentler (1999) merekomendasikan melaporkan keduanya (dual cutoff): CFI ≥ 0.95 dan SRMR ≤ 0.08",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#absolute-index-3",
     "href": "slides/bagian-5.html#absolute-index-3",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Absolute index 3️⃣",
-    "text": "Absolute index 3️⃣\n\nχ²/df ratio\nGoodness of Fit Index  mendekati 1 = better fit\nAdjusted Goodness of Fit Index  merupakan parsimony adjustment dari GFI, mendekati 1 = better fit\nHoelter’s Critical n  nilainya sebaiknya &gt; 200"
+    "text": "Absolute index 3️⃣\n\nχ²/df ratio\nGoodness of Fit Index  mendekati 1 = better fit\nAdjusted Goodness of Fit Index  merupakan parsimony adjustment dari GFI, mendekati 1 = better fit\nHoelter’s Critical n  nilainya sebaiknya &gt; 200",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#global-vs.-local-fit",
     "href": "slides/bagian-5.html#global-vs.-local-fit",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Global vs. local fit",
-    "text": "Global vs. local fit\n\nParameter jalur bisa ditolak meskipun hasil omnibus test/global fit memuaskan, sehingga menginterpretasi koefisien jalur adalah proses yang juga harus dilakukan.\nBerikut ini adalah beberapa prosedur yang direkomendasikan:\n\nLihat tanda factor loading, apakah arahnya sudah benar (negatif/positif) dan p-valuenya\nLihat standardized parameter estimates untuk tahu apakah ada factor loading yang nilainya diatas kewajaran\nLakukan pengujian measurement invariance dengan mengasumsikan beberapa factor loading sama di berbagai kelompok yang berbeda  akan kita lakukan di Bagian 6\nCek error variance. Apabila error variance mendekati nol, hal tsb lebih mungkin disebabkan oleh adanya outlier, kurangnya jumlah sampel, atau kurangnya jumlah indikator"
+    "text": "Global vs. local fit\n\nParameter jalur bisa ditolak meskipun hasil omnibus test/global fit memuaskan, sehingga menginterpretasi koefisien jalur adalah proses yang juga harus dilakukan.\nBerikut ini adalah beberapa prosedur yang direkomendasikan:\n\nLihat tanda factor loading, apakah arahnya sudah benar (negatif/positif) dan p-valuenya\nLihat standardized parameter estimates untuk tahu apakah ada factor loading yang nilainya diatas kewajaran\nLakukan pengujian measurement invariance dengan mengasumsikan beberapa factor loading sama di berbagai kelompok yang berbeda  akan kita lakukan di Bagian 6\nCek error variance. Apabila error variance mendekati nol, hal tsb lebih mungkin disebabkan oleh adanya outlier, kurangnya jumlah sampel, atau kurangnya jumlah indikator",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#global-vs.-local-fit-1",
     "href": "slides/bagian-5.html#global-vs.-local-fit-1",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Global vs. local fit",
-    "text": "Global vs. local fit\n\nBagaimana kalau global fit ditolak (e.g., uji χ² dengan p &lt; 0.05)\n\nKline (2024) menyarankan untuk tentatively menolak model, tetapi cek korelasi residual antar item (local fit)\nKetika korelasi residual menunjukkan tidak ada paired correlation &gt; 0.3, maka model dapat dikatakan tepat menggambarkan data (fit) meskipun hasil uji χ² menyatakan sebaliknya (i.e., ada perbedaan signifikan antara observed dan implied model)\nIni berkaitan dengan asumsi local independence dalam teori pengukuran psikologi\nArtinya, model dapat “diterima” meskipun global fit ditolak hanya dalam kondisi ketika asumsi local independence dapat dipertahankan\njamovi bisa menyimpan residual correlation sebagai output yang bisa disimpan - klik Output options  covariances and correlations  centang Residual\nReviewer yang familiar dengan SEM akan selalu menanyakan justifikasi keputusan peneliti untuk mempertahakan model ketika uji χ² signifikan"
+    "text": "Global vs. local fit\n\nBagaimana kalau global fit ditolak (e.g., uji χ² dengan p &lt; 0.05)\n\nKline (2024) menyarankan untuk tentatively menolak model, tetapi cek korelasi residual antar item (local fit)\nKetika korelasi residual menunjukkan tidak ada paired correlation &gt; 0.3, maka model dapat dikatakan tepat menggambarkan data (fit) meskipun hasil uji χ² menyatakan sebaliknya (i.e., ada perbedaan signifikan antara observed dan implied model)\nIni berkaitan dengan asumsi local independence dalam teori pengukuran psikologi\nArtinya, model dapat “diterima” meskipun global fit ditolak hanya dalam kondisi ketika asumsi local independence dapat dipertahankan\njamovi bisa menyimpan residual correlation sebagai output yang bisa disimpan - klik Output options  covariances and correlations  centang Residual\nReviewer yang familiar dengan SEM akan selalu menanyakan justifikasi keputusan peneliti untuk mempertahakan model ketika uji χ² signifikan",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#statistical-power",
     "href": "slides/bagian-5.html#statistical-power",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Statistical power",
-    "text": "Statistical power\n\nStatistical power dalam pengujian hipotesis dalam SEM  peluang menolak H0 apabila H0 salah (power = 1 − β)\n\nPower di level model (global)  Apakah sampel cukup besar untuk mendeteksi bahwa model gagal memenuhi standar poor fit (RMSEA ≥ 0.08), jika standar close fit yang ingin dipertahankan adalah RMSEA ≤ 0.05?  H0: RMSEA = 0.05, H1: RMSEA = 0.08\nPower di level jalur (lokal)  Apakah sampel cukup besar untuk mendeteksi bahwa koefisien jalur tertentu (misalnya, γ) secara signifikan berbeda dari nol, berdasarkan perbandingan model dengan dan tanpa koefisien tersebut?  H0: γ = 0, H1: γ ≠ 0\nIntinya: di level model kita berharap gagal menolak H0 (model dianggap fit), sedangkan di level jalur kita berharap berhasil menolak H0 (koefisien jalur signifikan)"
+    "text": "Statistical power\n\nStatistical power dalam pengujian hipotesis dalam SEM  peluang menolak H0 apabila H0 salah (power = 1 − β)\n\nPower di level model (global)  Apakah sampel cukup besar untuk mendeteksi bahwa model gagal memenuhi standar poor fit (RMSEA ≥ 0.08), jika standar close fit yang ingin dipertahankan adalah RMSEA ≤ 0.05?  H0: RMSEA = 0.05, H1: RMSEA = 0.08\nPower di level jalur (lokal)  Apakah sampel cukup besar untuk mendeteksi bahwa koefisien jalur tertentu (misalnya, γ) secara signifikan berbeda dari nol, berdasarkan perbandingan model dengan dan tanpa koefisien tersebut?  H0: γ = 0, H1: γ ≠ 0\nIntinya: di level model kita berharap gagal menolak H0 (model dianggap fit), sedangkan di level jalur kita berharap berhasil menolak H0 (koefisien jalur signifikan)",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#statistical-power-1",
     "href": "slides/bagian-5.html#statistical-power-1",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Statistical power",
-    "text": "Statistical power\n\nStatistical power ditentukan oleh\n\ntrue population model (yang kita tidak mungkin tahu, karena sifatnya selalu unknown parameter)  sehingga untuk mengestimasi jumlah sampel, kita asumsikan bahwa model memang “tepat” menggambarkan data\nprobabilitas melakukan kesalahan tipe 1 (α)\ndegree of freedom model\njumlah sampel"
+    "text": "Statistical power\n\nStatistical power ditentukan oleh\n\ntrue population model (yang kita tidak mungkin tahu, karena sifatnya selalu unknown parameter)  sehingga untuk mengestimasi jumlah sampel, kita asumsikan bahwa model memang “tepat” menggambarkan data\nprobabilitas melakukan kesalahan tipe 1 (α)\ndegree of freedom model\njumlah sampel",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#mengestimasi-jumlah-sampel-semtools",
     "href": "slides/bagian-5.html#mengestimasi-jumlah-sampel-semtools",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Mengestimasi jumlah sampel (semTools )",
-    "text": "Mengestimasi jumlah sampel (semTools )\n\n\n\n\n\n\n\n\n\nsemTools::findRMSEAsamplesize(\n  rmsea0 = 0.05,  # RMSEA di bawah H0 (batas close fit)\n  rmseaA = 0.08,  # RMSEA sesungguhnya (true model, acceptable fit)\n  df = 4,         # df model yang dihipotesiskan\n  power = 0.90,   # power yang diinginkan (1 - β)\n  alpha = 0.05    # probabilitas kesalahan tipe 1 (α)\n)\n\n\n\n\n\n\n\nPeringatan\n\n\nPendekatan findRMSEAsamplesize dengan semTools di atas menguji kecocokan model secara global, yaitu apakah model kita secara keseluruhan cukup baik merepresentasikan data, dengan membandingkan dua nilai RMSEA (misalnya, 0.05 vs 0.08), tanpa memperhatikan parameter spesifik dalam model.\n\n\n\n\n\n\n\n\n\nDemonstrasi power analysis dengan PAMLj\n\n\nA priori power analysis dengan mempertimbangkan parameter spesifik dalam model dapat dilakukan dengan module PAMLj, yang asalnya menggunakan semPower di . Unduh demonstrasinya di sini."
+    "text": "Mengestimasi jumlah sampel (semTools )\n\n\n\n\n\n\n\n\n\nsemTools::findRMSEAsamplesize(\n  rmsea0 = 0.05,  # RMSEA di bawah H0 (batas close fit)\n  rmseaA = 0.08,  # RMSEA sesungguhnya (true model, acceptable fit)\n  df = 4,         # df model yang dihipotesiskan\n  power = 0.90,   # power yang diinginkan (1 - β)\n  alpha = 0.05    # probabilitas kesalahan tipe 1 (α)\n)\n\n\n\n\n\n\n\nPeringatan\n\n\nPendekatan findRMSEAsamplesize dengan semTools di atas menguji kecocokan model secara global, yaitu apakah model kita secara keseluruhan cukup baik merepresentasikan data, dengan membandingkan dua nilai RMSEA (misalnya, 0.05 vs 0.08), tanpa memperhatikan parameter spesifik dalam model.\n\n\n\n\n\n\n\n\n\nDemonstrasi power analysis dengan PAMLj\n\n\nA priori power analysis dengan mempertimbangkan parameter spesifik dalam model dapat dilakukan dengan module PAMLj, yang asalnya menggunakan semPower di . Unduh demonstrasinya di sini.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#vs.-4-langkah-estimasi-model",
     "href": "slides/bagian-5.html#vs.-4-langkah-estimasi-model",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "2️⃣ vs. 4️⃣ langkah estimasi model",
-    "text": "2️⃣ vs. 4️⃣ langkah estimasi model\n\n2️⃣ langkah menyusun model (Anderson & Gerbing, 1988)\n\nEstimasi dulu measurement model\nKemudian baru structural model… pada dataset yang sama\n\n4️⃣ langkah menyusun model (Mulaik & Millsap, 2000)\n\nSpesifikasikan model pengukuran yang unrestricted dengan melakukan EFA untuk mengidentifikasi jumlah faktor (sepenuhnya bebas, tanpa asumsi teori apapun - utamanya ketika asumsi teori masih rapuh)\nSpesifikasikan model CFA yang restricted (confirmatory) — tentukan indikator mana yang mengukur faktor mana, lalu uji apakah model pengukuran sudah cocok dengan data\nSpesifikasikan model struktural yang unrestricted — semua jalur antar-variabel laten dibiarkan bebas (saturated structural model) untuk memeriksa apakah model pengukuran tetap fit sebelum hipotesis jalur struktural diterapkan\nSpesifikasikan model struktural yang restricted — terapkan batasan sesuai hipotesis teori (jalur mana yang ada/tidak ada), kemudian uji apakah model yang telah di-constraint ini masih tepat menggambarkan data"
+    "text": "2️⃣ vs. 4️⃣ langkah estimasi model\n\n2️⃣ langkah menyusun model (Anderson & Gerbing, 1988)\n\nEstimasi dulu measurement model\nKemudian baru structural model… pada dataset yang sama\n\n4️⃣ langkah menyusun model (Mulaik & Millsap, 2000)\n\nSpesifikasikan model pengukuran yang unrestricted dengan melakukan EFA untuk mengidentifikasi jumlah faktor (sepenuhnya bebas, tanpa asumsi teori apapun - utamanya ketika asumsi teori masih rapuh)\nSpesifikasikan model CFA yang restricted (confirmatory) — tentukan indikator mana yang mengukur faktor mana, lalu uji apakah model pengukuran sudah cocok dengan data\nSpesifikasikan model struktural yang unrestricted — semua jalur antar-variabel laten dibiarkan bebas (saturated structural model) untuk memeriksa apakah model pengukuran tetap fit sebelum hipotesis jalur struktural diterapkan\nSpesifikasikan model struktural yang restricted — terapkan batasan sesuai hipotesis teori (jalur mana yang ada/tidak ada), kemudian uji apakah model yang telah di-constraint ini masih tepat menggambarkan data",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#apakah-4-langkah-bisa-menggunakan-dataset-yang-sama",
     "href": "slides/bagian-5.html#apakah-4-langkah-bisa-menggunakan-dataset-yang-sama",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Apakah 4️⃣ langkah bisa menggunakan dataset yang sama?",
-    "text": "Apakah 4️⃣ langkah bisa menggunakan dataset yang sama?\n\nSeharusnya, tidak.\nPendekatan 4️⃣ langkah idealnya dieksekusi dengan 3️⃣ dataset yang berbeda untuk menghindari capitalization on chance, karena setiap tahap yang melibatkan respesifikasi atau modifikasi akan “menghabiskan” dataset tersebut (MacCallum, Roznowski & Necowitz, 1992)."
+    "text": "Apakah 4️⃣ langkah bisa menggunakan dataset yang sama?\n\nSeharusnya, tidak.\nPendekatan 4️⃣ langkah idealnya dieksekusi dengan 3️⃣ dataset yang berbeda untuk menghindari capitalization on chance, karena setiap tahap yang melibatkan respesifikasi atau modifikasi akan “menghabiskan” dataset tersebut (MacCallum, Roznowski & Necowitz, 1992).",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#apakah-4-langkah-bisa-menggunakan-dataset-yang-sama-1",
     "href": "slides/bagian-5.html#apakah-4-langkah-bisa-menggunakan-dataset-yang-sama-1",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Apakah 4️⃣ langkah bisa menggunakan dataset yang sama?",
-    "text": "Apakah 4️⃣ langkah bisa menggunakan dataset yang sama?\n\nLangkah 1️⃣ (EFA)  dataset pertama: mengeksplorasi struktur faktor secara bebas. Langkah ini penting utamanya ketika model melibatkan konstruk yang belum established bukti empiriknya\nLangkah 2️⃣ (CFA)  dataset kedua: mengkonfirmasi dan merespesifikasi model pengukuran, memastikan construct validity — hasilnya (df, struktur faktor, indeks fit) menjadi dasar a priori power analysis sebelum pengujian model lengkap\nLangkah 3️⃣–4️⃣ (model struktural)  dataset ketiga: karena dataset kedua sudah “terpakai” untuk respesifikasi pengukuran, pengujian model struktural (unrestricted lalu restricted) dilakukan pada data yang benar-benar independen\nDalam praktiknya, apabila hanya tersedia satu dataset, peneliti dapat membaginya secara acak menjadi tiga bagian (tiga holdout sample) — meskipun tentu saja ada risiko mengurangi statistical power di setiap tahapannya"
+    "text": "Apakah 4️⃣ langkah bisa menggunakan dataset yang sama?\n\nLangkah 1️⃣ (EFA)  dataset pertama: mengeksplorasi struktur faktor secara bebas. Langkah ini penting utamanya ketika model melibatkan konstruk yang belum established bukti empiriknya\nLangkah 2️⃣ (CFA)  dataset kedua: mengkonfirmasi dan merespesifikasi model pengukuran, memastikan construct validity — hasilnya (df, struktur faktor, indeks fit) menjadi dasar a priori power analysis sebelum pengujian model lengkap\nLangkah 3️⃣–4️⃣ (model struktural)  dataset ketiga: karena dataset kedua sudah “terpakai” untuk respesifikasi pengukuran, pengujian model struktural (unrestricted lalu restricted) dilakukan pada data yang benar-benar independen\nDalam praktiknya, apabila hanya tersedia satu dataset, peneliti dapat membaginya secara acak menjadi tiga bagian (tiga holdout sample) — meskipun tentu saja ada risiko mengurangi statistical power di setiap tahapannya",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#mari-kita-renungkan",
     "href": "slides/bagian-5.html#mari-kita-renungkan",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Mari kita renungkan 🧘",
-    "text": "Mari kita renungkan 🧘"
+    "text": "Mari kita renungkan 🧘",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#mari-kita-renungkan-1",
     "href": "slides/bagian-5.html#mari-kita-renungkan-1",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Mari kita renungkan 🧘",
-    "text": "Mari kita renungkan 🧘\n\n\nBaca “Cargo Cult Science” (Feynman, 1974) di sini"
+    "text": "Mari kita renungkan 🧘\n\n\nBaca “Cargo Cult Science” (Feynman, 1974) di sini",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#jars-apa-apa-saja-yang-harus-dilaporkan",
     "href": "slides/bagian-5.html#jars-apa-apa-saja-yang-harus-dilaporkan",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "JARS APA: Apa saja yang harus dilaporkan?",
-    "text": "JARS APA: Apa saja yang harus dilaporkan?\n\nAbstrak\n\nLaporkan setidaknya 2 global fit statistics (χ² [df, p-value], RMSEA/GFI/AGFI/TLI, BIC, AIC, dll)\n\nMetode\n\nDeskripsikan variabel endogen dan eksogennya\nBerikan penjelasan, untuk setiap instrumen/variabel, apakah indikator atau kalaupun total skor, apakah skor diperoleh dari item yang homogen (e.g., dengan item parceling)\nBerikan penjelasan bagaimana skala/instrumen disusun, laporkan properti psikometriknya, serta penjelasan mengenai level pengukuran\nLaporkan bagaimana cara peneliti menentukan jumlah sampel (misalnya, dengan rule of thumb, a priori power analysis atau simulasi Monte Carlo)"
+    "text": "JARS APA: Apa saja yang harus dilaporkan?\n\nAbstrak\n\nLaporkan setidaknya 2 global fit statistics (χ² [df, p-value], RMSEA/GFI/AGFI/TLI, BIC, AIC, dll)\n\nMetode\n\nDeskripsikan variabel endogen dan eksogennya\nBerikan penjelasan, untuk setiap instrumen/variabel, apakah indikator atau kalaupun total skor, apakah skor diperoleh dari item yang homogen (e.g., dengan item parceling)\nBerikan penjelasan bagaimana skala/instrumen disusun, laporkan properti psikometriknya, serta penjelasan mengenai level pengukuran\nLaporkan bagaimana cara peneliti menentukan jumlah sampel (misalnya, dengan rule of thumb, a priori power analysis atau simulasi Monte Carlo)",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#jars-apa",
     "href": "slides/bagian-5.html#jars-apa",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "JARS APA",
-    "text": "JARS APA\n\nHasil penelitian\n\nData diagnostics  % data missing, distribusi data missing di semua variabel\nMissingness  apabila ada data missing, maka peneliti harus menganalisis apakah data missingnya MCAR, MAR atau MNAR, kemudian bagaimana cara peneliti menangani data missing\nDistribusi data  data normal/non-normal? Laporkan multivariate normality (Mardia’s coefficient)\nData summary  summary statistics yang bisa digunakan orang lain untuk melakukan replikasi, bisa variance-covariance atau correlation matrix"
+    "text": "JARS APA\n\nHasil penelitian\n\nData diagnostics  % data missing, distribusi data missing di semua variabel\nMissingness  apabila ada data missing, maka peneliti harus menganalisis apakah data missingnya MCAR, MAR atau MNAR, kemudian bagaimana cara peneliti menangani data missing\nDistribusi data  data normal/non-normal? Laporkan multivariate normality (Mardia’s coefficient)\nData summary  summary statistics yang bisa digunakan orang lain untuk melakukan replikasi, bisa variance-covariance atau correlation matrix",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#jars-apa-1",
     "href": "slides/bagian-5.html#jars-apa-1",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "JARS APA",
-    "text": "JARS APA\n\nSpesifikasi model\n\nJelaskan apakah model strictly confirmatory, comparison, atau model generation\nBuat diagram jalur. Bedakan antara variabel constrained, fixed/free, observed dan latent variables\nKalau model yang diuji adalah bagian dari model yang lebih besar, jelaskan rasionalisasinya\nKalau ada residual correlation pada error, interaction effect atau nonindependence, jelaskan rasionalisasinya\nKalau membandingkan model, jelaskan parameter yang akan digunakan untuk membandingkan"
+    "text": "JARS APA\n\nSpesifikasi model\n\nJelaskan apakah model strictly confirmatory, comparison, atau model generation\nBuat diagram jalur. Bedakan antara variabel constrained, fixed/free, observed dan latent variables\nKalau model yang diuji adalah bagian dari model yang lebih besar, jelaskan rasionalisasinya\nKalau ada residual correlation pada error, interaction effect atau nonindependence, jelaskan rasionalisasinya\nKalau membandingkan model, jelaskan parameter yang akan digunakan untuk membandingkan",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#jars-apa-2",
     "href": "slides/bagian-5.html#jars-apa-2",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "JARS APA",
-    "text": "JARS APA\n\nEstimasi\n\nJelaskan software dan versi yang digunakan, dan jelaskan metode estimasi yang digunakan\nJelaskan default criteria di software yang digunakan\n\nModel fit\n\nLaporkan omnibus (global) fit statisticsnya dan diinterpretasikan artinya.\nLaporkan local fit dan indicator estimates (factor loading)\nKalau membandingkan antara dua model, jelaskan parameter yang digunakan\n\nRespesifikasi\n\nJelaskan prosedur modifikasi model\nJelaskan rasionalisasi teorinya ketika peneliti melakukan modifikasi dan bandingkan dengan model yang sebelumnya"
+    "text": "JARS APA\n\nEstimasi\n\nJelaskan software dan versi yang digunakan, dan jelaskan metode estimasi yang digunakan\nJelaskan default criteria di software yang digunakan\n\nModel fit\n\nLaporkan omnibus (global) fit statisticsnya dan diinterpretasikan artinya.\nLaporkan local fit dan indicator estimates (factor loading)\nKalau membandingkan antara dua model, jelaskan parameter yang digunakan\n\nRespesifikasi\n\nJelaskan prosedur modifikasi model\nJelaskan rasionalisasi teorinya ketika peneliti melakukan modifikasi dan bandingkan dengan model yang sebelumnya",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#demonstrasi-sem",
     "href": "slides/bagian-5.html#demonstrasi-sem",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Demonstrasi SEM",
-    "text": "Demonstrasi SEM\n\nMari kita lihat contoh penggunaan SEM\nUnduh datasetnya disini"
+    "text": "Demonstrasi SEM\n\nMari kita lihat contoh penggunaan SEM\nUnduh datasetnya disini",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#latihan-mandiri-5-membuat-dan-melaporkan-sem",
     "href": "slides/bagian-5.html#latihan-mandiri-5-membuat-dan-melaporkan-sem",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Latihan mandiri 5️⃣: Membuat dan melaporkan SEM",
-    "text": "Latihan mandiri 5️⃣: Membuat dan melaporkan SEM\n\nUnduh Dataset Latihan SEM\nUnduh Kamus Data disini\nSilahkan buat hipotesisnya, lalu spesifikasi model SEM dari variabel yang tersedia di dataset. Satu model sedikitnya mengandung 2 variabel laten."
+    "text": "Latihan mandiri 5️⃣: Membuat dan melaporkan SEM\n\nUnduh Dataset Latihan SEM\nUnduh Kamus Data disini\nSilahkan buat hipotesisnya, lalu spesifikasi model SEM dari variabel yang tersedia di dataset. Satu model sedikitnya mengandung 2 variabel laten.",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   },
   {
     "objectID": "slides/bagian-5.html#ada-pertanyaan",
     "href": "slides/bagian-5.html#ada-pertanyaan",
     "title": "Dasar-Dasar Structural Equation Modeling (SEM)",
     "section": "Ada pertanyaan❓",
-    "text": "Ada pertanyaan❓\n\n\n\n\n\n\n\nNote\n\n\n\nPaparan disusun dengan menggunakan  dan Quarto dengan template dari UNAIR Theme.\nKontak saya via  amelia.zein@psikologi.unair.ac.id"
+    "text": "Ada pertanyaan❓\n\n\n\n\n\n\n\nNote\n\n\n\nPaparan disusun dengan menggunakan  dan Quarto dengan template dari UNAIR Theme.\nKontak saya via  amelia.zein@psikologi.unair.ac.id",
+    "crumbs": [
+      "oleh Rizqy Amelia Zein",
+      "Materi",
+      "Bagian 5: Dasar SEM"
+    ]
   }
 ]

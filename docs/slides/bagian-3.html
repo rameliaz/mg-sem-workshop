@@ -6,11 +6,11 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e44360b8a8db1e130c7792fece1c8032.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.10.3">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="Rizqy Amelia Zein">
-  <meta name="dcterms.date" content="2026-06-25">
+  <meta name="dcterms.date" content="2026-09-01">
   <title>Multi-group SEM – Model Jalur</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -21,10 +21,13 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -205,7 +208,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Rizqy Amelia Zein 
+Rizqy Amelia Zein
 </div>
         <p class="quarto-title-affiliation">
             <a href="https://psikologi.unair.ac.id/dosen-rizqy-amelia-zein/"><em>Departemen Psikologi, Universitas Airlangga</em></a>
@@ -216,7 +219,7 @@ Rizqy Amelia Zein
     </div>
 </div>
 
-  <p class="date">2026-06-25</p>
+  <p class="date">2026-09-01</p>
 </section>
 <section id="outline" class="slide level2">
 <h2><em>Outline</em></h2>
@@ -459,72 +462,72 @@ Rizqy Amelia Zein
 <h2>Contoh CFA 1️⃣</h2>
 
 <img data-src="libs/path-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># CFA</span></span>
-<span id="cb1-2"><a></a>trust <span class="ot">=</span><span class="er">~</span> trust1 <span class="sc">+</span> trust2 <span class="sc">+</span> trust3 <span class="sc">+</span> trust4 <span class="sc">+</span> trust5</span>
-<span id="cb1-3"><a></a></span>
-<span id="cb1-4"><a></a><span class="co"># Measurement error (residual)</span></span>
-<span id="cb1-5"><a></a><span class="co"># Residual biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit</span></span>
-<span id="cb1-6"><a></a>trust1 <span class="sc">~</span><span class="er">~</span> trust1</span>
-<span id="cb1-7"><a></a>trust2 <span class="sc">~</span><span class="er">~</span> trust2</span>
-<span id="cb1-8"><a></a>trust3 <span class="sc">~</span><span class="er">~</span> trust3</span>
-<span id="cb1-9"><a></a>trust4 <span class="sc">~</span><span class="er">~</span> trust4</span>
-<span id="cb1-10"><a></a>trust5 <span class="sc">~</span><span class="er">~</span> trust5</span>
-<span id="cb1-11"><a></a>trust <span class="sc">~</span><span class="er">~</span> trust</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a><span class="co"># CFA</span></span>
+<span id="cb1-2"><a aria-label="2"></a>trust <span class="ot">=</span><span class="er">~</span> trust1 <span class="sc">+</span> trust2 <span class="sc">+</span> trust3 <span class="sc">+</span> trust4 <span class="sc">+</span> trust5</span>
+<span id="cb1-3"><a aria-label="3"></a></span>
+<span id="cb1-4"><a aria-label="4"></a><span class="co"># Measurement error (residual)</span></span>
+<span id="cb1-5"><a aria-label="5"></a><span class="co"># Residual biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit</span></span>
+<span id="cb1-6"><a aria-label="6"></a>trust1 <span class="sc">~</span><span class="er">~</span> trust1</span>
+<span id="cb1-7"><a aria-label="7"></a>trust2 <span class="sc">~</span><span class="er">~</span> trust2</span>
+<span id="cb1-8"><a aria-label="8"></a>trust3 <span class="sc">~</span><span class="er">~</span> trust3</span>
+<span id="cb1-9"><a aria-label="9"></a>trust4 <span class="sc">~</span><span class="er">~</span> trust4</span>
+<span id="cb1-10"><a aria-label="10"></a>trust5 <span class="sc">~</span><span class="er">~</span> trust5</span>
+<span id="cb1-11"><a aria-label="11"></a>trust <span class="sc">~</span><span class="er">~</span> trust</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="contoh-cfa-2" class="slide level2">
 <h2>Contoh CFA 2️⃣</h2>
 
 <img data-src="libs/path-2.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># CFA</span></span>
-<span id="cb2-2"><a></a>mandiri <span class="ot">=</span><span class="er">~</span> mandiri1 <span class="sc">+</span> mandiri2 <span class="sc">+</span> mandiri3 <span class="sc">+</span> mandiri4</span>
-<span id="cb2-3"><a></a></span>
-<span id="cb2-4"><a></a><span class="co"># Measurement error (residual)</span></span>
-<span id="cb2-5"><a></a><span class="co"># Residual biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit</span></span>
-<span id="cb2-6"><a></a>mandiri1 <span class="sc">~</span><span class="er">~</span> mandiri1</span>
-<span id="cb2-7"><a></a>mandiri2 <span class="sc">~</span><span class="er">~</span> mandiri2</span>
-<span id="cb2-8"><a></a>mandiri3 <span class="sc">~</span><span class="er">~</span> mandiri3</span>
-<span id="cb2-9"><a></a>mandiri4 <span class="sc">~</span><span class="er">~</span> mandiri4</span>
-<span id="cb2-10"><a></a>mandiri <span class="sc">~</span><span class="er">~</span> mandiri</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-label="1"></a><span class="co"># CFA</span></span>
+<span id="cb2-2"><a aria-label="2"></a>mandiri <span class="ot">=</span><span class="er">~</span> mandiri1 <span class="sc">+</span> mandiri2 <span class="sc">+</span> mandiri3 <span class="sc">+</span> mandiri4</span>
+<span id="cb2-3"><a aria-label="3"></a></span>
+<span id="cb2-4"><a aria-label="4"></a><span class="co"># Measurement error (residual)</span></span>
+<span id="cb2-5"><a aria-label="5"></a><span class="co"># Residual biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit</span></span>
+<span id="cb2-6"><a aria-label="6"></a>mandiri1 <span class="sc">~</span><span class="er">~</span> mandiri1</span>
+<span id="cb2-7"><a aria-label="7"></a>mandiri2 <span class="sc">~</span><span class="er">~</span> mandiri2</span>
+<span id="cb2-8"><a aria-label="8"></a>mandiri3 <span class="sc">~</span><span class="er">~</span> mandiri3</span>
+<span id="cb2-9"><a aria-label="9"></a>mandiri4 <span class="sc">~</span><span class="er">~</span> mandiri4</span>
+<span id="cb2-10"><a aria-label="10"></a>mandiri <span class="sc">~</span><span class="er">~</span> mandiri</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="contoh-path-analysis" class="slide level2">
 <h2>Contoh <em>path analysis</em></h2>
 
 <img data-src="libs/path-3.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># Model Struktural</span></span>
-<span id="cb3-2"><a></a>mandiri <span class="sc">~</span> trust</span>
-<span id="cb3-3"><a></a></span>
-<span id="cb3-4"><a></a><span class="co"># Measurement error (residual)</span></span>
-<span id="cb3-5"><a></a><span class="co"># Bagian ini biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit</span></span>
-<span id="cb3-6"><a></a>mandiri <span class="sc">~</span><span class="er">~</span> mandiri</span>
-<span id="cb3-7"><a></a>trust <span class="sc">~</span><span class="er">~</span> trust</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a><span class="co"># Model Struktural</span></span>
+<span id="cb3-2"><a aria-label="2"></a>mandiri <span class="sc">~</span> trust</span>
+<span id="cb3-3"><a aria-label="3"></a></span>
+<span id="cb3-4"><a aria-label="4"></a><span class="co"># Measurement error (residual)</span></span>
+<span id="cb3-5"><a aria-label="5"></a><span class="co"># Bagian ini biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit</span></span>
+<span id="cb3-6"><a aria-label="6"></a>mandiri <span class="sc">~</span><span class="er">~</span> mandiri</span>
+<span id="cb3-7"><a aria-label="7"></a>trust <span class="sc">~</span><span class="er">~</span> trust</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="contoh-full-model" class="slide level2">
 <h2>Contoh <em>full model</em></h2>
 
 <img data-src="libs/contoh-path.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># CFA</span></span>
-<span id="cb4-2"><a></a>mandiri <span class="ot">=</span><span class="er">~</span> mandiri1 <span class="sc">+</span> mandiri2 <span class="sc">+</span> mandiri3 <span class="sc">+</span> mandiri4</span>
-<span id="cb4-3"><a></a>trust <span class="ot">=</span><span class="er">~</span> trust1 <span class="sc">+</span> trust2 <span class="sc">+</span> trust3 <span class="sc">+</span> trust4 <span class="sc">+</span> trust5</span>
-<span id="cb4-4"><a></a></span>
-<span id="cb4-5"><a></a><span class="co"># Model Struktural</span></span>
-<span id="cb4-6"><a></a>mandiri <span class="sc">~</span> trust</span>
-<span id="cb4-7"><a></a></span>
-<span id="cb4-8"><a></a><span class="co"># Measurement error (residual)</span></span>
-<span id="cb4-9"><a></a><span class="co"># Residual biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit</span></span>
-<span id="cb4-10"><a></a>mandiri1 <span class="sc">~</span><span class="er">~</span> mandiri1</span>
-<span id="cb4-11"><a></a>mandiri2 <span class="sc">~</span><span class="er">~</span> mandiri2</span>
-<span id="cb4-12"><a></a>mandiri3 <span class="sc">~</span><span class="er">~</span> mandiri3</span>
-<span id="cb4-13"><a></a>mandiri4 <span class="sc">~</span><span class="er">~</span> mandiri4</span>
-<span id="cb4-14"><a></a>trust1 <span class="sc">~</span><span class="er">~</span> trust1</span>
-<span id="cb4-15"><a></a>trust2 <span class="sc">~</span><span class="er">~</span> trust2</span>
-<span id="cb4-16"><a></a>trust3 <span class="sc">~</span><span class="er">~</span> trust3</span>
-<span id="cb4-17"><a></a>trust4 <span class="sc">~</span><span class="er">~</span> trust4</span>
-<span id="cb4-18"><a></a>trust5 <span class="sc">~</span><span class="er">~</span> trust5</span>
-<span id="cb4-19"><a></a>trust <span class="sc">~</span><span class="er">~</span> trust</span>
-<span id="cb4-20"><a></a>mandiri <span class="sc">~</span><span class="er">~</span> mandiri</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-label="1"></a><span class="co"># CFA</span></span>
+<span id="cb4-2"><a aria-label="2"></a>mandiri <span class="ot">=</span><span class="er">~</span> mandiri1 <span class="sc">+</span> mandiri2 <span class="sc">+</span> mandiri3 <span class="sc">+</span> mandiri4</span>
+<span id="cb4-3"><a aria-label="3"></a>trust <span class="ot">=</span><span class="er">~</span> trust1 <span class="sc">+</span> trust2 <span class="sc">+</span> trust3 <span class="sc">+</span> trust4 <span class="sc">+</span> trust5</span>
+<span id="cb4-4"><a aria-label="4"></a></span>
+<span id="cb4-5"><a aria-label="5"></a><span class="co"># Model Struktural</span></span>
+<span id="cb4-6"><a aria-label="6"></a>mandiri <span class="sc">~</span> trust</span>
+<span id="cb4-7"><a aria-label="7"></a></span>
+<span id="cb4-8"><a aria-label="8"></a><span class="co"># Measurement error (residual)</span></span>
+<span id="cb4-9"><a aria-label="9"></a><span class="co"># Residual biasanya sudah langsung diestimasi oleh software tanpa harus dispesifikasikan secara eksplisit</span></span>
+<span id="cb4-10"><a aria-label="10"></a>mandiri1 <span class="sc">~</span><span class="er">~</span> mandiri1</span>
+<span id="cb4-11"><a aria-label="11"></a>mandiri2 <span class="sc">~</span><span class="er">~</span> mandiri2</span>
+<span id="cb4-12"><a aria-label="12"></a>mandiri3 <span class="sc">~</span><span class="er">~</span> mandiri3</span>
+<span id="cb4-13"><a aria-label="13"></a>mandiri4 <span class="sc">~</span><span class="er">~</span> mandiri4</span>
+<span id="cb4-14"><a aria-label="14"></a>trust1 <span class="sc">~</span><span class="er">~</span> trust1</span>
+<span id="cb4-15"><a aria-label="15"></a>trust2 <span class="sc">~</span><span class="er">~</span> trust2</span>
+<span id="cb4-16"><a aria-label="16"></a>trust3 <span class="sc">~</span><span class="er">~</span> trust3</span>
+<span id="cb4-17"><a aria-label="17"></a>trust4 <span class="sc">~</span><span class="er">~</span> trust4</span>
+<span id="cb4-18"><a aria-label="18"></a>trust5 <span class="sc">~</span><span class="er">~</span> trust5</span>
+<span id="cb4-19"><a aria-label="19"></a>trust <span class="sc">~</span><span class="er">~</span> trust</span>
+<span id="cb4-20"><a aria-label="20"></a>mandiri <span class="sc">~</span><span class="er">~</span> mandiri</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="latihan-mandiri-3-menulis-script-lavaan" class="slide level2">
@@ -535,7 +538,7 @@ Rizqy Amelia Zein
 <section id="ada-pertanyaan" class="slide level2">
 <h2>Ada pertanyaan❓</h2>
 
-<img data-src="..\slides/libs/closing.JPG" class="quarto-figure quarto-figure-center r-stretch"><div class="callout callout-note callout-titled callout-style-default">
+<img data-src="../slides/libs/closing.JPG" class="quarto-figure quarto-figure-center r-stretch"><div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">

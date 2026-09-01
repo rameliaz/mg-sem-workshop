@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.3">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -39,14 +42,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-eb3626f408cec11013137802264cf11e.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-4c2283852bc260e422464edd9bff7a01.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-eb3626f408cec11013137802264cf11e.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-5a1953863e1f72ef3b996ef827f01ca7.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9cdbd49fb92a4d7f9d8c4f710986121f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-5471fee98bb1022e344fa01fd8cd8237.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-9cdbd49fb92a4d7f9d8c4f710986121f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-be2a57e332cf8e7a5449a9ad5f65c80c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-887c638389b00f914c22583327272674.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-be2a57e332cf8e7a5449a9ad5f65c80c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -78,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -258,140 +261,12 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="https://rameliaz.github.io/"> <i class="bi bi-house" role="img">
+    <a class="nav-link" href="https://rameliaz.github.io/"> <i class="bi bi-house-heart" role="img">
 </i> 
 <span class="menu-text">oleh Rizqy Amelia Zein</span></a>
   </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/rameliaz/mg-sem-workshop"> <i class="bi bi-github" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-materi-(html" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Materi (html)</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-materi-(html">    
-        <li>
-    <a class="dropdown-item" href="./slides/bagian-1.html">
- <span class="dropdown-text">Bagian 1: Pengantar</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./slides/bagian-2.html">
- <span class="dropdown-text">Bagian 2: Korelasi</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./slides/bagian-3.html">
- <span class="dropdown-text">Bagian 3: Model Jalur</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./slides/bagian-4.html">
- <span class="dropdown-text">Bagian 4: CFA</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./slides/bagian-5.html">
- <span class="dropdown-text">Bagian 5: Dasar SEM</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./slides/bagian-6.html">
- <span class="dropdown-text">Bagian 6: MG SEM</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-materi-(pdf" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Materi (pdf)</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-materi-(pdf">    
-        <li>
-    <a class="dropdown-item" href="./slides/bagian-1.html?print-pdf">
- <span class="dropdown-text">Bagian 1: Pengantar</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./slides/bagian-2.html?print-pdf">
- <span class="dropdown-text">Bagian 2: Korelasi</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./slides/bagian-3.html?print-pdf">
- <span class="dropdown-text">Bagian 3: Model Jalur</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./slides/bagian-4.html?print-pdf">
- <span class="dropdown-text">Bagian 4: CFA</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./slides/bagian-5.html?print-pdf">
- <span class="dropdown-text">Bagian 5: Dasar SEM</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./slides/bagian-6.html?print-pdf">
- <span class="dropdown-text">Bagian 6: MG SEM</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-dataset" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Dataset</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-dataset">    
-        <li>
-    <a class="dropdown-item" href="./materials/corr.omv">
- <span class="dropdown-text">Dataset Contoh Korelasi</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./materials/latihancorr.csv">
- <span class="dropdown-text">Dataset Latihan Korelasi</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./materials/contoh-cfa.omv">
- <span class="dropdown-text">Dataset Contoh CFA</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./materials/dataset-asi.omv">
- <span class="dropdown-text">Dataset Contoh SEM dan MGSEM</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./materials/dataset-pilpres2024.csv">
- <span class="dropdown-text">Dataset Latihan SEM dan MGSEM</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./materials/codebook-pilpres2024.csv">
- <span class="dropdown-text">Kamus Data Dataset Latihan</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./materials/power.omv">
- <span class="dropdown-text">Demonstrasi <em>Power Analysis</em></span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bonus" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Bonus</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bonus">    
-        <li>
-    <a class="dropdown-item" href="./materials/latent_interaction_SEM.xlsx">
- <span class="dropdown-text">Interaksi dalam SEM</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./materials/soper_vs_PAMLj-semPower.xlsx">
- <span class="dropdown-text">Soper’s calculator vs.&nbsp;semPower PAMLj</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-survei" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Survei</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-survei">    
-        <li>
-    <a class="dropdown-item" href="https://www.soscisurvey.de/fb-workshop-amel/">
- <span class="dropdown-text">Evaluasi Workshop</span></a>
-  </li>  
-    </ul>
-  </li>
   <li class="nav-item compact">
     <a class="nav-link" href="mailto:amelia.zein@psikologi.unair.ac.id"> <i class="bi bi-envelope" role="img">
 </i> 
@@ -414,10 +289,173 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Beranda</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Beranda</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Materi</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./slides/bagian-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bagian 1: Pengantar</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./slides/bagian-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bagian 2: Korelasi</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./slides/bagian-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bagian 3: Model Jalur</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./slides/bagian-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bagian 4: CFA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./slides/bagian-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bagian 5: Dasar SEM</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./slides/bagian-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bagian 6: MG SEM</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Dataset</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./materials/corr.omv" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dataset Contoh Korelasi</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./materials/latihancorr.csv" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dataset Latihan Korelasi</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./materials/contoh-cfa.omv" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dataset Contoh CFA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./materials/dataset-asi.omv" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dataset Contoh SEM dan MGSEM</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./materials/dataset-pilpres2024.csv" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dataset Latihan SEM dan MGSEM</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./materials/codebook-pilpres2024.csv" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Kamus Data Dataset Latihan</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./materials/power.omv" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Demonstrasi <em>Power Analysis</em></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Pendalaman Materi</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./materials/latent_interaction_SEM.xlsx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Interaksi dalam SEM</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./materials/soper_vs_PAMLj-semPower.xlsx" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Soper’s calculator vs.&nbsp;semPower PAMLj</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Survei</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://www.soscisurvey.de/fb-workshop-amel/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Evaluasi Workshop</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -441,7 +479,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#tutorial-jamovi-modules" id="toc-tutorial-jamovi-modules" class="nav-link" data-scroll-target="#tutorial-jamovi-modules">Tutorial jamovi + <em>modules</em></a></li>
   <li><a href="#evaluasi-workshop" id="toc-evaluasi-workshop" class="nav-link" data-scroll-target="#evaluasi-workshop">Evaluasi <em>workshop</em></a></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/rameliaz/mg-sem-workshop/edit/master/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/rameliaz/mg-sem-workshop/blob/master/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/rameliaz/mg-sem-workshop/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -1074,13 +1112,13 @@ ul.task-list li input[type="checkbox"] {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2026 Rizqy Amelia Zein</p>
+<p>Laman web dibuat dengan <a href="https://quarto.org/"><img src="https://quarto.org/quarto.png" class="img-fluid" alt="Quarto" width="65"></a></p>
 </div>   
     <div class="nav-footer-center">
 <p><a class="link-dark me-1" href="https://github.com/rameliaz" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a> <a class="link-dark me-1" href="mailto:amelia.zein@psikologi.unair.ac.id" title="Email" target="_blank" rel="noopener"><i class="fa-solid fa-envelope"></i></a> <a class="link-dark me-1" href="https://bsky.app/profile/ameliazein.bsky.social" title="Bluesky" target="_blank" rel="noopener"><i class="fa-brands fa-bluesky"></i></a> <a class="link-dark me-1" href="https://discord.com/users/807046335613632555" title="Discord" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i></a></p>
-</div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/rameliaz/mg-sem-workshop/edit/master/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/rameliaz/mg-sem-workshop/blob/master/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/rameliaz/mg-sem-workshop/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
-<p><a class="link-dark me-1" href="https://github.com/rameliaz/mg-sem-workshop"><i class="fa-brands fa-github"></i> Source</a></p>
+<p>© 2026 Rizqy Amelia Zein</p>
 </div>
   </div>
 </footer>

@@ -17,16 +17,16 @@ project:
 
 website:
   title: "Multi-group SEM"
-  navbar:
-    left:
-      - href: https://rameliaz.github.io/
-        icon: house
-        text: "oleh Rizqy Amelia Zein"
-      - icon: github
-        href: https://github.com/rameliaz/mg-sem-workshop
-    right:
-      - text: "Materi (html)"
-        menu:
+  repo-url: https://github.com/rameliaz/mg-sem-workshop
+  repo-actions: [edit, source, issue]  
+  repo-branch: master
+  sidebar:
+    style: docked
+    contents:
+      - text: "Beranda"
+        href: index.qmd  
+      - section: "Materi"
+        contents:
           - text: "Bagian 1: Pengantar"
             href: slides/bagian-1.html
           - text: "Bagian 2: Korelasi"
@@ -38,23 +38,9 @@ website:
           - text: "Bagian 5: Dasar SEM"
             href: slides/bagian-5.html
           - text: "Bagian 6: MG SEM"
-            href: slides/bagian-6.html
-      - text: "Materi (pdf)"
-        menu:
-          - text: "Bagian 1: Pengantar"
-            href: "slides/bagian-1.html?print-pdf"
-          - text: "Bagian 2: Korelasi"
-            href: "slides/bagian-2.html?print-pdf"
-          - text: "Bagian 3: Model Jalur"
-            href: "slides/bagian-3.html?print-pdf"
-          - text: "Bagian 4: CFA"
-            href: "slides/bagian-4.html?print-pdf"
-          - text: "Bagian 5: Dasar SEM"
-            href: "slides/bagian-5.html?print-pdf"
-          - text: "Bagian 6: MG SEM"
-            href: "slides/bagian-6.html?print-pdf"
-      - text: "Dataset"
-        menu:
+            href: slides/bagian-6.html    
+      - section: "Dataset"
+        contents:
           - text: "Dataset Contoh Korelasi"
             href: materials/corr.omv
           - text: "Dataset Latihan Korelasi"
@@ -67,18 +53,25 @@ website:
             href: materials/dataset-pilpres2024.csv
           - text: "Kamus Data Dataset Latihan"
             href: materials/codebook-pilpres2024.csv
-          - text: "Demonstrasi _Power Analysis_"
+          - text: "Demonstrasi *Power Analysis*"
             href: materials/power.omv
-      - text: "Bonus"
-        menu:
+      - section: "Pendalaman Materi"
+        contents:
           - text: "Interaksi dalam SEM"
             href: materials/latent_interaction_SEM.xlsx
           - text: "Soper's calculator vs. semPower PAMLj"
             href: materials/soper_vs_PAMLj-semPower.xlsx  
-      - text: "Survei"
-        menu:
+      - section: "Survei"
+        contents: 
           - text: "Evaluasi Workshop"
             href: https://www.soscisurvey.de/fb-workshop-amel/
+
+  navbar:
+    left:
+      - href: https://rameliaz.github.io/
+        icon: house-heart
+        text: "oleh Rizqy Amelia Zein"
+    right:
       - icon: envelope
         href: "mailto:amelia.zein@psikologi.unair.ac.id"
       - icon: github
@@ -89,14 +82,15 @@ website:
     location: navbar
     type: overlay
   page-footer:
-      left: "&#169; 2026 Rizqy Amelia Zein"
+      left: |
+        Laman web dibuat dengan [![](https://quarto.org/quarto.png){fig-alt="Quarto" width=65px}](https://quarto.org/)
       center: |
         <a class="link-dark me-1" href="https://github.com/rameliaz" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
         <a class="link-dark me-1" href="mailto:amelia.zein@psikologi.unair.ac.id" title="Email" target="_blank" rel="noopener"><i class="fa-solid fa-envelope"></i></a>
         <a class="link-dark me-1" href="https://bsky.app/profile/ameliazein.bsky.social" title="Bluesky" target="_blank" rel="noopener"><i class="fa-brands fa-bluesky"></i></a>
         <a class="link-dark me-1" href="https://discord.com/users/807046335613632555" title="Discord" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i></a>
-      right: |
-        <a class="link-dark me-1" href="https://github.com/rameliaz/mg-sem-workshop"><i class="fa-brands fa-github"></i> Source</a>
+      right: | 
+         &#169; 2026 Rizqy Amelia Zein
 format:
   html:
     theme:
